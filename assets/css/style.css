@@ -30,6 +30,7 @@ a { color: inherit; }
 .site-header {
   position: sticky; top: 0; z-index: 20;
   padding: 20px var(--gutter) 0;
+  background: var(--navy);   /* verhindert, dass Inhalt beim Scrollen über der Pille durchscheint */
 }
 .site-header__inner {
   max-width: var(--container); margin: 0 auto;
@@ -203,6 +204,44 @@ a { color: inherit; }
   font-size: 17px; font-weight: 500; line-height: 1.5;
 }
 
+/* ---------- Ablauf der Zusammenarbeit (Original Startseite) ---------- */
+.section--ablauf { padding: 50px var(--gutter); }
+.ablauf__title { margin: 0 0 40px; text-align: center; font-size: 32px; line-height: 1.24; font-weight: 700; }
+.ablauf__row { display: grid; }
+/* Spaltenraster entspricht den Kreis-Positionen der Lottie-Timeline (11,5 % · 31 % · 50 % · 69 % · 88 %) */
+.ablauf__row--top { grid-template-columns: 18% 26% 10.5% 29% 1fr; align-items: end; margin-bottom: 8px; }
+.ablauf__row--bottom { grid-template-columns: 27% 9.3% 28% 9.7% 26%; align-items: start; margin-top: 8px; }
+.ablauf__step { text-align: center; }
+.ablauf__step h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.24; font-weight: 700; }
+.ablauf__step p { margin: 0 0 14px; font-size: 14px; line-height: 1.64; }
+.ablauf__lottie { width: 100%; aspect-ratio: 1440 / 179; }
+.ablauf__lottie svg { width: 100% !important; height: 100% !important; }
+.ablauf--mobile { display: none; }
+
+/* Einblend-Animationen wie Elementor fadeInDown / fadeInUp */
+.reveal { opacity: 0; transition: opacity .9s ease, transform .9s ease; }
+.reveal--down { transform: translateY(-40px); }
+.reveal--up { transform: translateY(40px); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Mobile Timeline (wie EA Content Timeline auf der Liveseite) */
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before {
+  content: ""; position: absolute; left: 26px; top: 0; bottom: 0; width: 5px; background: #172446;
+}
+.timeline__fill { position: absolute; left: 26px; top: 0; width: 5px; height: 0; background: var(--yellow); }
+.timeline__item { position: relative; display: flex; gap: 22px; padding-bottom: 32px; }
+.timeline__item:last-child { padding-bottom: 0; }
+.timeline__dot {
+  position: relative; z-index: 1; flex: 0 0 58px; width: 58px; height: 58px; border-radius: 50%;
+  display: grid; place-items: center; background: #172446; transition: background .3s ease;
+}
+.timeline__dot svg { width: 16px; height: 16px; fill: var(--white); transition: fill .3s ease; }
+.timeline__item.is-active .timeline__dot { background: var(--yellow); }
+.timeline__item.is-active .timeline__dot svg { fill: #000d30; }
+.timeline__content h3 { margin: 4px 0 6px; font-size: 20px; line-height: 1.24; font-weight: 700; }
+.timeline__content p { margin: 0; font-size: 14px; line-height: 1.6; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .site-nav { display: none; }
@@ -235,4 +274,9 @@ a { color: inherit; }
   .diff__icon svg { width: 28px; height: 28px; }
   .diff__body h3 { font-size: 20px; }
   .section__cta { margin-top: 40px; display: flex; justify-content: center; }
+
+  .section--ablauf { padding: 30px var(--gutter) 60px; }
+  .ablauf__title { font-size: 22px; }
+  .ablauf--desktop { display: none; }
+  .ablauf--mobile { display: block; }
 }

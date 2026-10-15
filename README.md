@@ -14,7 +14,9 @@ python3 -m http.server 8080
 
 - `index.html` – Seite (aktuell: Header + Hero, weitere Sektionen folgen)
 - `assets/css/style.css` – Styles (Farben/Schrift wie Liveseite: Navy #010d30, Gelb #fbc91b, Poppins)
-- `assets/js/main.js` – Hero-Video-Steuerung, mobile Navigation
+- `assets/js/main.js` – Hero-Video-Steuerung, mobile Navigation, Scroll-Animationen der Ablauf-Sektion
+- `assets/js/lottie.min.js` – lottie-web 5.12.2 (Timeline-Animation)
+- `assets/js/ablauf-timeline.json` – Lottie-Timeline der Startseite (Ablauf der Zusammenarbeit)
 - `assets/video/hero.mp4` – Hero-Hintergrundvideo (siehe `assets/video/README.md`)
 - `assets/img/` – Logo, Google-Icon
 

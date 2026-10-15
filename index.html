@@ -271,8 +271,91 @@
     </div>
   </section>
 
-  <!-- Weitere Sektionen (Ablauf, Über uns, FAQ) folgen -->
+  <!--
+    ABLAUF DER ZUSAMMENARBEIT (Original von der Startseite)
+    Desktop: Lottie-Timeline (assets/js/ablauf-timeline.json), an den Scroll gebunden wie auf der Liveseite
+             (Elementor "bind_to_scroll", Viewport 0–100 %). Texte im Zickzack, Einblendung fadeInDown / fadeInUp.
+    Mobil:   vertikale Timeline mit Häkchen, Linie füllt sich beim Scrollen gelb.
+  -->
+  <section id="arbeiten" class="section section--ablauf">
+    <div class="container">
+      <h2 class="ablauf__title">Ablauf der Zusammenarbeit</h2>
 
+      <!-- Desktop -->
+      <div class="ablauf ablauf--desktop">
+        <div class="ablauf__row ablauf__row--top">
+          <div class="ablauf__step reveal reveal--down" style="grid-column: 2">
+            <h3>Termin vor Ort</h3>
+            <p>Wir gehen gemeinsam durch dein Gebäude und schauen uns an, wie deine Zugänge aktuell organisiert sind. Dabei nehmen wir direkt Aufmaß von deinen Türen und Zutrittspunkten. Du bekommst direkt eine Einschätzung zum Kostenrahmen und eine Handlungsempfehlung.</p>
+          </div>
+          <div class="ablauf__step reveal reveal--down" style="grid-column: 4">
+            <h3>Umsetzung</h3>
+            <p>Hier konfigurieren wir die Software, programmieren die Hardware und montieren alles im Objekt. Danach erfolgt die Inbetriebnahme und Übergabe an dich.</p>
+          </div>
+        </div>
+
+        <div class="ablauf__lottie" data-lottie="assets/js/ablauf-timeline.json" aria-hidden="true"></div>
+
+        <div class="ablauf__row ablauf__row--bottom">
+          <div class="ablauf__step reveal reveal--up" style="grid-column: 1">
+            <h3>Erstgespräch</h3>
+            <p>Für eine Ersteinschätzung telefonieren wir kurz und schauen uns deine Situation an: Welche Probleme bestehen aktuell? Wo benötigst du Unterstützung? Wie schnell brauchst du deine Lösung?</p>
+          </div>
+          <div class="ablauf__step reveal reveal--up" style="grid-column: 3">
+            <h3>Planung deines Systems</h3>
+            <p>Auf Basis des Termins erstellen unsere Experten dir ein fertiges Zutrittskonzept mit allen Komponenten und unserem Angebot, passend zu deinem Budget. Du möchtest noch etwas ändern? Wir passen deine Wünsche direkt gemeinsam im Termin an! Am Ende des Termins treffen wir gemeinsam die Entscheidung. Starten wir gemeinsam oder nicht?</p>
+          </div>
+          <div class="ablauf__step reveal reveal--up" style="grid-column: 5">
+            <h3>Übergabe &amp; Betreuung</h3>
+            <p>Du bekommst eine kurze Einweisung und kannst das System direkt nutzen. Wenn du willst, übernehmen wir danach auch die Verwaltung für dich!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobil -->
+      <ol class="timeline ablauf--mobile">
+        <li class="timeline__item">
+          <span class="timeline__dot" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+          <div class="timeline__content">
+            <h3>Erstgespräch</h3>
+            <p>Für eine Ersteinschätzung telefonieren wir kurz und schauen uns deine Situation an: Welche Probleme bestehen aktuell? Wo benötigst du Unterstützung? Wie schnell brauchst du deine Lösung?</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+          <div class="timeline__content">
+            <h3>Termin vor Ort</h3>
+            <p>Wir gehen gemeinsam durch dein Gebäude und schauen uns an, wie deine Zugänge aktuell organisiert sind. Dabei nehmen wir direkt Aufmaß von deinen Türen und Zutrittspunkten. Du bekommst direkt eine Einschätzung zum Kostenrahmen und eine Handlungsempfehlung.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+          <div class="timeline__content">
+            <h3>Planung deines Systems</h3>
+            <p>Auf Basis des Termins erstellen unsere Experten dir ein fertiges Zutrittskonzept mit allen Komponenten und unserem Angebot, passend zu deinem Budget. Du möchtest noch etwas ändern? Wir passen deine Wünsche direkt gemeinsam im Termin an! Am Ende des Termins treffen wir gemeinsam die Entscheidung. Starten wir gemeinsam oder nicht?</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+          <div class="timeline__content">
+            <h3>Umsetzung</h3>
+            <p>Hier konfigurieren wir die Software, programmieren die Hardware und montieren alles im Objekt. Danach erfolgt die Inbetriebnahme und Übergabe an dich.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot" aria-hidden="true"><svg viewBox="0 0 512 512"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg></span>
+          <div class="timeline__content">
+            <h3>Übergabe &amp; Betreuung</h3>
+            <p>Du bekommst eine kurze Einweisung und kannst das System direkt nutzen. Wenn du willst, übernehmen wir danach auch die Verwaltung für dich!</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Weitere Sektionen (Über uns, FAQ) folgen -->
+
+  <script src="assets/js/lottie.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
