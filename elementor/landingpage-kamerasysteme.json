@@ -394,7 +394,7 @@
               "id": "7f451ff",
               "elType": "widget",
               "settings": {
-                "title": "<strong>Eine Kamera montieren kann jeder.</strong> Dass sie im entscheidenden Moment das Richtige aufzeichnet, ist unsere Arbeit.",
+                "title": "<strong>Eine Kamera montieren kann jeder.</strong> Dass sie im Ernstfall das Richtige zeigt, ist unsere Arbeit.",
                 "header_size": "h2",
                 "_css_classes": "pv-claim-title"
               },
@@ -405,7 +405,7 @@
               "id": "7521bf9",
               "elType": "widget",
               "settings": {
-                "editor": "<p>Wir planen Videoüberwachung mit klar definierten Schutzzielen, richten sie vollständig ein und prüfen dokumentiert, ob sie leistet, was vereinbart war. Damit du weißt, was dein Sicherheitssystem im Ernstfall kann.</p>",
+                "editor": "<p>Der Einbruch passiert nachts um drei. Morgens siehst du eine Aufnahme, auf der niemand zu erkennen ist. Die Versicherung fragt trotzdem nach Belegen. Genau diesen Moment planen wir von Anfang an mit.</p>",
                 "_css_classes": "pv-claim-text"
               },
               "elements": [],
@@ -418,7 +418,7 @@
       "isInner": false
     },
     {
-      "id": "ae309aa",
+      "id": "49a6ffb",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -452,7 +452,7 @@
           "id": "5e454c6",
           "elType": "widget",
           "settings": {
-            "title": "Fünf Unterschiede, <strong>die du spürst</strong>",
+            "title": "Fünf Unterschiede, <strong>die du im Ernstfall spürst</strong>",
             "header_size": "h2",
             "_css_classes": "pv-sec-title"
           },
@@ -463,7 +463,7 @@
           "id": "ba29d3e",
           "elType": "widget",
           "settings": {
-            "editor": "<p>„Alles aus einer Hand“ verspricht jeder Sicherheitsbetrieb. Was uns unterscheidet, erlebst du an Stellen, an denen andere längst fertig sind.</p>",
+            "editor": "<p>„Alles aus einer Hand“ steht auf jeder Website. Ob es stimmt, merkst du erst, wenn etwas passiert.</p>",
             "_css_classes": "pv-sec-intro"
           },
           "elements": [],
@@ -581,7 +581,7 @@
                   "id": "7356281",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>Am Anfang steht keine Produktliste, sondern eine Begehung mit klaren Fragen. Wo kommt jemand ungesehen aufs Gelände, und welche Werte stehen dort auf dem Spiel? Welche Bereiche müssen deshalb erfasst werden, und welche lässt man bewusst weg? Erst daraus ergibt sich die Zahl der Kameras. Oft sind es weniger, als du erwartet hast.</p>",
+                    "editor": "<p>Wer dir ohne Begehung ein Angebot schickt, verkauft Technik. Wir gehen erst mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt. Oft brauchst du weniger Kameras, als du denkst.</p>",
                     "_css_classes": "pv-card-text"
                   },
                   "elements": [],
@@ -591,7 +591,7 @@
                   "id": "ff1578d",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>„Wir verkaufen dir keine Kameras auf Vorrat. Wir planen die Absicherung, die dein Objekt tatsächlich braucht.“</p>",
+                    "editor": "<p>„Wir verkaufen dir keine Kameras auf Vorrat.“</p>",
                     "_css_classes": "pv-quote"
                   },
                   "elements": [],
@@ -715,7 +715,7 @@
                   "id": "165d526",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>Eine Kamera zeichnet einen Einbruch bestenfalls auf. Verhindert wird er durch eine Schließanlage, die den Zutritt erschwert, und durch eine Alarmierung, die im richtigen Moment Druck macht. Bei uns greifen diese Bausteine ineinander, weil wir sie von Anfang an gemeinsam planen.</p>",
+                    "editor": "<p>Eine Kamera filmt den Einbruch. Verhindern kann sie ihn nicht. Erst wenn Schließanlage und Alarm mitspielen, bekommt der Täter ein Problem. Deshalb planen wir alles zusammen.</p>",
                     "_css_classes": "pv-card-text"
                   },
                   "elements": [],
@@ -725,7 +725,7 @@
                   "id": "74ad172",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>„Wir denken Sicherheit vom ersten Zutrittsversuch bis zur verwertbaren Aufzeichnung.“</p>",
+                    "editor": "<p>„Vom ersten Zutrittsversuch bis zur verwertbaren Aufnahme.“</p>",
                     "_css_classes": "pv-quote"
                   },
                   "elements": [],
@@ -849,7 +849,7 @@
                   "id": "4284790",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>Montiert ist eine Kamera schnell. Die eigentliche Arbeit steckt in der Einrichtung: Fernzugriff auf dem Handy, Benachrichtigungen, die nicht bei jedem Blatt im Wind auslösen, Aufzeichnungszeiten und Zugriffsrechte für deine Mitarbeiter. All das übernehmen wir und zeigen es dir persönlich am Gerät.</p>",
+                    "editor": "<p>Viele Anlagen hängen an der Wand und melden nichts, weil nie jemand die App eingerichtet hat. Bei uns verlässt niemand das Gebäude, bevor dein Handy Alarm schlägt und du das System selbst bedienen kannst.</p>",
                     "_css_classes": "pv-card-text"
                   },
                   "elements": [],
@@ -983,7 +983,7 @@
                   "id": "f6eb936",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>Ein Kamerasystem altert. Festplatten füllen sich, Software braucht Updates, ein Objektiv verschmutzt oder eine Hecke wächst ins Bild. Deshalb bieten wir regelmäßige Funktionsprüfungen und einen festen Ansprechpartner bei Störungen an. Wer das verbindlich möchte, bekommt es als Wartungsvertrag.</p>",
+                    "editor": "<p>Festplatten laufen voll, und irgendwann wächst eine Hecke ins Bild. Fällt das erst nach dem Einbruch auf, ist es zu spät. Wir prüfen deine Anlage regelmäßig, auf Wunsch per Wartungsvertrag.</p>",
                     "_css_classes": "pv-card-text"
                   },
                   "elements": [],
@@ -993,7 +993,7 @@
                   "id": "28b3c3d",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>„Wir kümmern uns auch Jahre nach der Installation darum, dass deine Anlage zuverlässig läuft.“</p>",
+                    "editor": "<p>„Wir sind auch Jahre später noch für dich da.“</p>",
                     "_css_classes": "pv-quote"
                   },
                   "elements": [],
@@ -1117,7 +1117,7 @@
                   "id": "4bbbfea",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>Zum Abschluss prüfen wir gemeinsam mit dir, was die Anlage wirklich leistet, und halten das schriftlich fest. Dazu gehören das Kamerabild bei Tag und bei Nacht, Aufzeichnung und Wiedergabe, die Benachrichtigungen auf deinem Handy sowie die wichtigsten Systemeinstellungen. Dieses Protokoll bekommst du ausgehändigt.</p>",
+                    "editor": "<p>„Läuft“ reicht nicht. Bei der Übergabe prüfen wir mit dir, ob Gesichter auch nachts erkennbar sind und ob dein Handy wirklich Alarm schlägt. Das Ergebnis bekommst du schriftlich.</p>",
                     "_css_classes": "pv-card-text"
                   },
                   "elements": [],
@@ -1127,7 +1127,7 @@
                   "id": "e27ba7b",
                   "elType": "widget",
                   "settings": {
-                    "editor": "<p>„Wir zeigen dir nicht, dass die Kamera läuft. Wir belegen, dass sie ihre Aufgabe erfüllt.“</p>",
+                    "editor": "<p>„Wir belegen, dass die Kamera ihre Aufgabe erfüllt.“</p>",
                     "_css_classes": "pv-quote"
                   },
                   "elements": [],
@@ -1140,7 +1140,7 @@
           "isInner": true
         },
         {
-          "id": "30a8df2",
+          "id": "ae309aa",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1157,6 +1157,16 @@
           "elements": [
             {
               "id": "7136a5b",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>Im Erstgespräch sagen wir dir in 15 Minuten, wo dein Gebäude angreifbar ist.</p>",
+                "_css_classes": "pv-cta-lead"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "30a8df2",
               "elType": "widget",
               "settings": {
                 "text": "Unverbindliches Erstgespräch vereinbaren",
@@ -1185,7 +1195,7 @@
       "isInner": false
     },
     {
-      "id": "dcc7b35",
+      "id": "b5304dc",
       "elType": "container",
       "settings": {
         "content_width": "boxed",
@@ -1210,7 +1220,7 @@
       },
       "elements": [
         {
-          "id": "73f1f8e",
+          "id": "dcc7b35",
           "elType": "widget",
           "settings": {
             "title": "Ablauf der Zusammenarbeit",
@@ -1221,7 +1231,7 @@
           "widgetType": "heading"
         },
         {
-          "id": "0294284",
+          "id": "8456f75",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1236,7 +1246,7 @@
           },
           "elements": [
             {
-              "id": "fec48ad",
+              "id": "552b048",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1251,7 +1261,7 @@
               },
               "elements": [
                 {
-                  "id": "49a6ffb",
+                  "id": "6bc6ad1",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1265,7 +1275,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "68a4f1a",
+                  "id": "2a138ae",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1285,7 +1295,7 @@
                   },
                   "elements": [
                     {
-                      "id": "6bc6ad1",
+                      "id": "7a6d957",
                       "elType": "widget",
                       "settings": {
                         "title": "Termin vor Ort",
@@ -1296,10 +1306,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "7a6d957",
+                      "id": "68a4f1a",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Wir gehen gemeinsam durch dein Gebäude und schauen uns an, wie deine Zugänge aktuell organisiert sind. Dabei nehmen wir direkt Aufmaß von deinen Türen und Zutrittspunkten. Du bekommst direkt eine Einschätzung zum Kostenrahmen und eine Handlungsempfehlung.</p>",
+                        "editor": "<p>Wir gehen mit dir über das Gelände und schauen, wo jemand ungesehen reinkommt. Noch vor Ort nennen wir dir den Kostenrahmen.</p>",
                         "_css_classes": "pv-step-text"
                       },
                       "elements": [],
@@ -1309,7 +1319,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "2a138ae",
+                  "id": "0016094",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1323,7 +1333,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "28d60de",
+                  "id": "fec48ad",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1343,7 +1353,7 @@
                   },
                   "elements": [
                     {
-                      "id": "0016094",
+                      "id": "8adc5e2",
                       "elType": "widget",
                       "settings": {
                         "title": "Umsetzung",
@@ -1354,10 +1364,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "8adc5e2",
+                      "id": "28d60de",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Hier konfigurieren wir die Software, programmieren die Hardware und montieren alles im Objekt. Danach erfolgt die Inbetriebnahme und Übergabe an dich.</p>",
+                        "editor": "<p>Wir montieren die Kameras und richten Aufzeichnung und App komplett ein. Du musst nichts selbst konfigurieren.</p>",
                         "_css_classes": "pv-step-text"
                       },
                       "elements": [],
@@ -1370,7 +1380,7 @@
               "isInner": true
             },
             {
-              "id": "552b048",
+              "id": "779461a",
               "elType": "widget",
               "settings": {
                 "source": "media_file",
@@ -1409,7 +1419,7 @@
               "widgetType": "lottie"
             },
             {
-              "id": "6e8a8ca",
+              "id": "0294284",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1424,7 +1434,7 @@
               },
               "elements": [
                 {
-                  "id": "3030567",
+                  "id": "1d50680",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1444,7 +1454,7 @@
                   },
                   "elements": [
                     {
-                      "id": "779461a",
+                      "id": "561f83d",
                       "elType": "widget",
                       "settings": {
                         "title": "Erstgespräch",
@@ -1455,10 +1465,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "561f83d",
+                      "id": "3030567",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Für eine Ersteinschätzung telefonieren wir kurz und schauen uns deine Situation an: Welche Probleme bestehen aktuell? Wo benötigst du Unterstützung? Wie schnell brauchst du deine Lösung?</p>",
+                        "editor": "<p>Ein kurzes Telefonat: Was ist passiert, oder was soll nie passieren? Welche Bereiche machen dir Sorgen? Du bekommst eine erste ehrliche Einschätzung.</p>",
                         "_css_classes": "pv-step-text"
                       },
                       "elements": [],
@@ -1468,7 +1478,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "1d50680",
+                  "id": "c02be7e",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1482,7 +1492,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "4b68ca0",
+                  "id": "a572f2b",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1502,7 +1512,7 @@
                   },
                   "elements": [
                     {
-                      "id": "c02be7e",
+                      "id": "7b495a0",
                       "elType": "widget",
                       "settings": {
                         "title": "Planung deines Systems",
@@ -1513,10 +1523,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "7b495a0",
+                      "id": "4b68ca0",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Auf Basis des Termins erstellen unsere Experten dir ein fertiges Zutrittskonzept mit allen Komponenten und unserem Angebot, passend zu deinem Budget. Du möchtest noch etwas ändern? Wir passen deine Wünsche direkt gemeinsam im Termin an! Am Ende des Termins treffen wir gemeinsam die Entscheidung. Starten wir gemeinsam oder nicht?</p>",
+                        "editor": "<p>Du bekommst ein Konzept mit Kamerastandorten und Angebot, passend zu deinem Budget. Änderungswünsche bauen wir direkt ein. Dann entscheidest du.</p>",
                         "_css_classes": "pv-step-text"
                       },
                       "elements": [],
@@ -1526,7 +1536,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "a572f2b",
+                  "id": "7e4061b",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1540,7 +1550,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "c4a34d2",
+                  "id": "6e8a8ca",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1560,7 +1570,7 @@
                   },
                   "elements": [
                     {
-                      "id": "7e4061b",
+                      "id": "a09f682",
                       "elType": "widget",
                       "settings": {
                         "title": "Übergabe &amp; Betreuung",
@@ -1571,10 +1581,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "a09f682",
+                      "id": "c4a34d2",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Du bekommst eine kurze Einweisung und kannst das System direkt nutzen. Wenn du willst, übernehmen wir danach auch die Verwaltung für dich!</p>",
+                        "editor": "<p>Wir prüfen gemeinsam, ob die Anlage leistet, was vereinbart war, und halten das schriftlich fest. Danach bleiben wir erreichbar.</p>",
                         "_css_classes": "pv-step-text"
                       },
                       "elements": [],
@@ -1590,7 +1600,7 @@
           "isInner": true
         },
         {
-          "id": "61d14d7",
+          "id": "73f1f8e",
           "elType": "container",
           "settings": {
             "content_width": "full",
@@ -1609,7 +1619,7 @@
           },
           "elements": [
             {
-              "id": "e3de901",
+              "id": "516f061",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1633,7 +1643,7 @@
               },
               "elements": [
                 {
-                  "id": "ad66555",
+                  "id": "405bb4b",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1645,7 +1655,7 @@
                   },
                   "elements": [
                     {
-                      "id": "8456f75",
+                      "id": "ad66555",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -1662,7 +1672,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "76d56b3",
+                  "id": "e3de901",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1680,7 +1690,7 @@
                   },
                   "elements": [
                     {
-                      "id": "405bb4b",
+                      "id": "ff27ee9",
                       "elType": "widget",
                       "settings": {
                         "title": "Erstgespräch",
@@ -1691,10 +1701,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "ff27ee9",
+                      "id": "76d56b3",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Für eine Ersteinschätzung telefonieren wir kurz und schauen uns deine Situation an: Welche Probleme bestehen aktuell? Wo benötigst du Unterstützung? Wie schnell brauchst du deine Lösung?</p>",
+                        "editor": "<p>Ein kurzes Telefonat: Was ist passiert, oder was soll nie passieren? Welche Bereiche machen dir Sorgen? Du bekommst eine erste ehrliche Einschätzung.</p>",
                         "_css_classes": "pv-tl-text"
                       },
                       "elements": [],
@@ -1707,7 +1717,7 @@
               "isInner": true
             },
             {
-              "id": "593c45f",
+              "id": "d3e8c4e",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1731,7 +1741,7 @@
               },
               "elements": [
                 {
-                  "id": "967c7eb",
+                  "id": "02d07b1",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1743,7 +1753,7 @@
                   },
                   "elements": [
                     {
-                      "id": "516f061",
+                      "id": "967c7eb",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -1760,7 +1770,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "bd902c3",
+                  "id": "593c45f",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1778,7 +1788,7 @@
                   },
                   "elements": [
                     {
-                      "id": "02d07b1",
+                      "id": "a5e3b8d",
                       "elType": "widget",
                       "settings": {
                         "title": "Termin vor Ort",
@@ -1789,10 +1799,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "a5e3b8d",
+                      "id": "bd902c3",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Wir gehen gemeinsam durch dein Gebäude und schauen uns an, wie deine Zugänge aktuell organisiert sind. Dabei nehmen wir direkt Aufmaß von deinen Türen und Zutrittspunkten. Du bekommst direkt eine Einschätzung zum Kostenrahmen und eine Handlungsempfehlung.</p>",
+                        "editor": "<p>Wir gehen mit dir über das Gelände und schauen, wo jemand ungesehen reinkommt. Noch vor Ort nennen wir dir den Kostenrahmen.</p>",
                         "_css_classes": "pv-tl-text"
                       },
                       "elements": [],
@@ -1805,7 +1815,7 @@
               "isInner": true
             },
             {
-              "id": "6557b42",
+              "id": "5733055",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1829,7 +1839,7 @@
               },
               "elements": [
                 {
-                  "id": "4fe1062",
+                  "id": "45cfdd7",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1841,7 +1851,7 @@
                   },
                   "elements": [
                     {
-                      "id": "d3e8c4e",
+                      "id": "4fe1062",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -1858,7 +1868,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "52bd156",
+                  "id": "6557b42",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1876,7 +1886,7 @@
                   },
                   "elements": [
                     {
-                      "id": "45cfdd7",
+                      "id": "67a6ddd",
                       "elType": "widget",
                       "settings": {
                         "title": "Planung deines Systems",
@@ -1887,10 +1897,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "67a6ddd",
+                      "id": "52bd156",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Auf Basis des Termins erstellen unsere Experten dir ein fertiges Zutrittskonzept mit allen Komponenten und unserem Angebot, passend zu deinem Budget. Du möchtest noch etwas ändern? Wir passen deine Wünsche direkt gemeinsam im Termin an! Am Ende des Termins treffen wir gemeinsam die Entscheidung. Starten wir gemeinsam oder nicht?</p>",
+                        "editor": "<p>Du bekommst ein Konzept mit Kamerastandorten und Angebot, passend zu deinem Budget. Änderungswünsche bauen wir direkt ein. Dann entscheidest du.</p>",
                         "_css_classes": "pv-tl-text"
                       },
                       "elements": [],
@@ -1903,7 +1913,7 @@
               "isInner": true
             },
             {
-              "id": "02bb4a8",
+              "id": "efa0d08",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -1927,7 +1937,7 @@
               },
               "elements": [
                 {
-                  "id": "2e6508c",
+                  "id": "b6e0765",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1939,7 +1949,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5733055",
+                      "id": "2e6508c",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -1956,7 +1966,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "db63c8f",
+                  "id": "02bb4a8",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -1974,7 +1984,7 @@
                   },
                   "elements": [
                     {
-                      "id": "b6e0765",
+                      "id": "553c432",
                       "elType": "widget",
                       "settings": {
                         "title": "Umsetzung",
@@ -1985,10 +1995,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "553c432",
+                      "id": "db63c8f",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Hier konfigurieren wir die Software, programmieren die Hardware und montieren alles im Objekt. Danach erfolgt die Inbetriebnahme und Übergabe an dich.</p>",
+                        "editor": "<p>Wir montieren die Kameras und richten Aufzeichnung und App komplett ein. Du musst nichts selbst konfigurieren.</p>",
                         "_css_classes": "pv-tl-text"
                       },
                       "elements": [],
@@ -2001,7 +2011,7 @@
               "isInner": true
             },
             {
-              "id": "dfc94cc",
+              "id": "61d14d7",
               "elType": "container",
               "settings": {
                 "content_width": "full",
@@ -2025,7 +2035,7 @@
               },
               "elements": [
                 {
-                  "id": "46fc87c",
+                  "id": "2b10011",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2037,7 +2047,7 @@
                   },
                   "elements": [
                     {
-                      "id": "efa0d08",
+                      "id": "46fc87c",
                       "elType": "widget",
                       "settings": {
                         "selected_icon": {
@@ -2054,7 +2064,7 @@
                   "isInner": true
                 },
                 {
-                  "id": "5592e0d",
+                  "id": "dfc94cc",
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
@@ -2072,7 +2082,7 @@
                   },
                   "elements": [
                     {
-                      "id": "2b10011",
+                      "id": "9e59f04",
                       "elType": "widget",
                       "settings": {
                         "title": "Übergabe &amp; Betreuung",
@@ -2083,10 +2093,10 @@
                       "widgetType": "heading"
                     },
                     {
-                      "id": "9e59f04",
+                      "id": "5592e0d",
                       "elType": "widget",
                       "settings": {
-                        "editor": "<p>Du bekommst eine kurze Einweisung und kannst das System direkt nutzen. Wenn du willst, übernehmen wir danach auch die Verwaltung für dich!</p>",
+                        "editor": "<p>Wir prüfen gemeinsam, ob die Anlage leistet, was vereinbart war, und halten das schriftlich fest. Danach bleiben wir erreichbar.</p>",
                         "_css_classes": "pv-tl-text"
                       },
                       "elements": [],
@@ -2100,13 +2110,66 @@
             }
           ],
           "isInner": true
+        },
+        {
+          "id": "99422ad",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "css_classes": "pv-sec-cta pv-sec-cta--center",
+            "flex_align_items": "center",
+            "margin": {
+              "unit": "px",
+              "top": "48",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "6c220bd",
+              "elType": "widget",
+              "settings": {
+                "editor": "<p>Der erste Schritt ist ein Telefonat. Unverbindlich, ohne Verkaufsdruck.</p>",
+                "_css_classes": "pv-cta-lead"
+              },
+              "elements": [],
+              "widgetType": "text-editor"
+            },
+            {
+              "id": "189fd84",
+              "elType": "widget",
+              "settings": {
+                "text": "Unverbindliches Erstgespräch vereinbaren",
+                "link": {
+                  "url": "https://provision-infra.de/kontakt",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "size": "sm",
+                "selected_icon": {
+                  "value": "fas fa-video",
+                  "library": "fa-solid"
+                },
+                "icon_align": "right",
+                "hover_animation": "grow",
+                "_css_classes": "pv-btn"
+              },
+              "elements": [],
+              "widgetType": "button"
+            }
+          ],
+          "isInner": true
         }
       ],
       "isInner": false
     }
   ],
   "page_settings": {
-    "custom_css": "/* ProVision Infra – Landingpage Kamera- & Videoüberwachung\n   Styling für die Elementor-Vorlage. Liegt in den Seiteneinstellungen → Erweitert → Benutzerdefiniertes CSS.\n   Farben/Schrift wie Startseite: Navy #010d30, Gelb #fbc91b, Poppins. */\n\n.pv-sec, .pv-sec .elementor-heading-title, .pv-sec .elementor-widget-text-editor { font-family: \"Poppins\", sans-serif; color: #fff; }\n.pv-sec .elementor-heading-title { overflow-wrap: anywhere; }\n.pv-sec .elementor-widget-text-editor p:last-child { margin-bottom: 0; }\n\n/* Hero */\n.pv-hero-content { max-width: 100%; }\n.pv-h1 .elementor-heading-title { font-size: 40px; line-height: 1.24; font-weight: 400; max-width: 640px; margin-bottom: 20px; }\n.pv-hero-text .elementor-widget-container { font-size: 17px; line-height: 1.55; max-width: min(700px, 50vw); }\n.pv-hero-text p { margin-bottom: 24px; }\n.pv-hero-cta { margin-top: 12px; }\n.pv-trust { margin-top: 44px; }\n.pv-google img { width: 54px; height: auto; }\n.pv-score .elementor-heading-title { font-size: 15px; }\n.pv-score strong { font-size: 30px; font-weight: 700; margin: 0 4px; }\n.pv-trust-label .elementor-heading-title { font-size: 14px; opacity: .9; }\n.pv-count .elementor-heading-title { font-size: 34px; font-weight: 700; }\n.pv-proven img { width: 162px; height: auto; border-radius: 4px; }\n.pv-mvideo { margin-top: 36px; width: calc(100% + 40px); margin-left: -20px; }\n.pv-mvideo .elementor-wrapper { padding-bottom: 0 !important; height: auto; }\n.pv-mvideo video { position: static !important; width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: 100% 50%; }\n\n/* Button (wie Startseite) */\n.pv-btn .elementor-button { background: #fbc91b; color: #2b2b2b; border-radius: 100px; padding: 16px 16px 16px 32px; font-size: 17px; font-weight: 500; font-family: \"Poppins\", sans-serif; }\n.pv-btn .elementor-button-content-wrapper { gap: 18px; align-items: center; }\n.pv-btn .elementor-button-icon { width: 36px; height: 36px; border-radius: 50%; background: #0f2a7a; color: #fff; display: inline-grid; place-items: center; }\n.pv-btn .elementor-button-icon svg { width: 18px; height: 18px; fill: #fff; }\n\n/* Kernbotschaft */\n.pv-claim { border: 1px solid rgba(251,201,27,.55); border-radius: 28px; background: linear-gradient(135deg, rgba(251,201,27,.07), rgba(255,255,255,.02) 60%); }\n.pv-eyebrow .elementor-heading-title { font-size: 14px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #fbc91b; margin-bottom: 16px; }\n.pv-claim-title .elementor-heading-title { font-size: 34px; line-height: 1.3; font-weight: 400; max-width: 980px; margin-bottom: 20px; }\n.pv-claim-text .elementor-widget-container { font-size: 17px; line-height: 1.6; max-width: 820px; opacity: .92; }\n\n/* Fünf Unterschiede */\n.pv-sec-title .elementor-heading-title { font-size: 36px; line-height: 1.25; font-weight: 400; margin-bottom: 20px; }\n.pv-sec-title strong { font-weight: 700; }\n.pv-sec-intro .elementor-widget-container { font-size: 17px; line-height: 1.6; max-width: 760px; opacity: .92; margin-bottom: 36px; }\n.pv-card { border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: rgba(255,255,255,.025); }\n.pv-card-icon .elementor-icon { width: 72px; height: 72px; border-radius: 18px; display: grid; place-items: center; background: linear-gradient(160deg, #ffd84a, #e8b400); color: #010d30; box-shadow: 0 10px 30px rgba(251,201,27,.22); font-size: 34px; }\n.pv-card-icon .elementor-icon svg { width: 34px; height: 34px; fill: #010d30; }\n.pv-num .elementor-heading-title { font-size: 13px; font-weight: 600; letter-spacing: .14em; color: #fbc91b; margin-bottom: 6px; }\n.pv-card-title .elementor-heading-title { font-size: 22px; line-height: 1.3; font-weight: 700; margin-bottom: 12px; }\n.pv-card-text .elementor-widget-container { font-size: 16px; line-height: 1.65; opacity: .92; max-width: 900px; margin-bottom: 18px; }\n.pv-quote .elementor-widget-container { border-left: 3px solid #fbc91b; padding: 4px 0 4px 18px; font-size: 17px; font-weight: 500; line-height: 1.5; }\n\n/* Ablauf der Zusammenarbeit */\n.pv-ablauf-title .elementor-heading-title { font-size: 32px; line-height: 1.24; font-weight: 700; text-align: center; margin-bottom: 40px; }\n.pv-step-title .elementor-heading-title { font-size: 20px; line-height: 1.24; font-weight: 700; text-align: center; margin-bottom: 8px; }\n.pv-step-text .elementor-widget-container { font-size: 14px; line-height: 1.64; text-align: center; }\n.pv-lottie { width: 100%; }\n.pv-tl { position: relative; }\n.pv-tl::before { content: \"\"; position: absolute; left: 26px; top: 0; bottom: 32px; width: 5px; background: #fbc91b; }\n.pv-tl-item { position: relative; }\n.pv-tl-dot .elementor-icon { width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: #fbc91b; color: #000d30; font-size: 16px; position: relative; z-index: 1; }\n.pv-tl-dot .elementor-icon svg { width: 16px; height: 16px; fill: #000d30; }\n.pv-tl-title .elementor-heading-title { font-size: 20px; line-height: 1.24; font-weight: 700; margin: 4px 0 6px; }\n.pv-tl-text .elementor-widget-container { font-size: 14px; line-height: 1.6; }\n\n/* Bis 1280 px (Tablet, kleine Laptops, Mobil): kein Hintergrundvideo hinter dem Text, Video-Block unter dem Button */\n@media (max-width: 1280px) {\n  .pv-hero .elementor-background-video-container, .pv-hero > .elementor-background-overlay { display: none !important; }\n  .pv-hero { background-color: #010d30 !important; }\n  .pv-h1 .elementor-heading-title, .pv-hero-text .elementor-widget-container { text-align: center; margin-left: auto; margin-right: auto; }\n  .pv-hero-cta { justify-content: center; align-items: center; }\n  .pv-trust { justify-content: center; }\n  .pv-mvideo video { aspect-ratio: 16 / 9; object-position: 70% 50%; }\n  .pv-hero-text .elementor-widget-container { max-width: 700px; }\n}\n\n/* Mobil */\n@media (max-width: 767px) {\n  .pv-mvideo video { aspect-ratio: 5 / 4; object-position: 100% 50%; }\n  .pv-h1 .elementor-heading-title { font-size: 32px; text-align: center; margin: 0 auto 20px; }\n  .pv-hero-text .elementor-widget-container { font-size: 18px; text-align: center; margin: 0 auto; }\n  .pv-hero-cta { justify-content: center; align-items: center; }\n  .pv-claim-title .elementor-heading-title { font-size: 26px; }\n  .pv-sec-title .elementor-heading-title { font-size: 28px; }\n  .pv-card-icon .elementor-icon { width: 60px; height: 60px; border-radius: 14px; }\n  .pv-card-icon .elementor-icon svg { width: 28px; height: 28px; }\n  .pv-card-title .elementor-heading-title { font-size: 20px; }\n  .pv-sec-cta { align-items: center; }\n  .pv-ablauf-title .elementor-heading-title { font-size: 22px; }\n}\n\n/* Sehr schmale Geräte */\n@media (max-width: 360px) {\n  .pv-h1 .elementor-heading-title { font-size: 28px; hyphens: auto; -webkit-hyphens: auto; }\n}\n",
+    "custom_css": "/* ProVision Infra – Landingpage Kamera- & Videoüberwachung\n   Styling für die Elementor-Vorlage. Liegt in den Seiteneinstellungen → Erweitert → Benutzerdefiniertes CSS.\n   Farben/Schrift wie Startseite: Navy #010d30, Gelb #fbc91b, Poppins. */\n\n.pv-sec, .pv-sec .elementor-heading-title, .pv-sec .elementor-widget-text-editor { font-family: \"Poppins\", sans-serif; color: #fff; }\n.pv-sec .elementor-heading-title { overflow-wrap: anywhere; }\n.pv-sec .elementor-widget-text-editor p:last-child { margin-bottom: 0; }\n\n/* Hero */\n.pv-hero-content { max-width: 100%; }\n.pv-h1 .elementor-heading-title { font-size: 40px; line-height: 1.24; font-weight: 400; max-width: 640px; margin-bottom: 20px; }\n.pv-hero-text .elementor-widget-container { font-size: 17px; line-height: 1.55; max-width: min(700px, 50vw); }\n.pv-hero-text p { margin-bottom: 24px; }\n.pv-hero-cta { margin-top: 12px; }\n.pv-trust { margin-top: 44px; }\n.pv-google img { width: 54px; height: auto; }\n.pv-score .elementor-heading-title { font-size: 15px; }\n.pv-score strong { font-size: 30px; font-weight: 700; margin: 0 4px; }\n.pv-trust-label .elementor-heading-title { font-size: 14px; opacity: .9; }\n.pv-count .elementor-heading-title { font-size: 34px; font-weight: 700; }\n.pv-proven img { width: 162px; height: auto; border-radius: 4px; }\n.pv-mvideo { margin-top: 36px; width: calc(100% + 40px); margin-left: -20px; }\n.pv-mvideo .elementor-wrapper { padding-bottom: 0 !important; height: auto; }\n.pv-mvideo video { position: static !important; width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: 100% 50%; }\n\n/* Button (wie Startseite) */\n.pv-btn .elementor-button { background: #fbc91b; color: #2b2b2b; border-radius: 100px; padding: 16px 16px 16px 32px; font-size: 17px; font-weight: 500; font-family: \"Poppins\", sans-serif; }\n.pv-btn .elementor-button-content-wrapper { gap: 18px; align-items: center; }\n.pv-btn .elementor-button-icon { width: 36px; height: 36px; border-radius: 50%; background: #0f2a7a; color: #fff; display: inline-grid; place-items: center; }\n.pv-btn .elementor-button-icon svg { width: 18px; height: 18px; fill: #fff; }\n\n/* Kernbotschaft */\n.pv-claim { border: 1px solid rgba(251,201,27,.55); border-radius: 28px; background: linear-gradient(135deg, rgba(251,201,27,.07), rgba(255,255,255,.02) 60%); }\n.pv-eyebrow .elementor-heading-title { font-size: 14px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #fbc91b; margin-bottom: 16px; }\n.pv-claim-title .elementor-heading-title { font-size: 34px; line-height: 1.3; font-weight: 400; max-width: 980px; margin-bottom: 20px; }\n.pv-claim-text .elementor-widget-container { font-size: 17px; line-height: 1.6; max-width: 820px; opacity: .92; }\n\n/* Fünf Unterschiede */\n.pv-sec-title .elementor-heading-title { font-size: 36px; line-height: 1.25; font-weight: 400; margin-bottom: 20px; }\n.pv-sec-title strong { font-weight: 700; }\n.pv-sec-intro .elementor-widget-container { font-size: 17px; line-height: 1.6; max-width: 760px; opacity: .92; margin-bottom: 36px; }\n.pv-card { border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: rgba(255,255,255,.025); }\n.pv-card-icon .elementor-icon { width: 72px; height: 72px; border-radius: 18px; display: grid; place-items: center; background: linear-gradient(160deg, #ffd84a, #e8b400); color: #010d30; box-shadow: 0 10px 30px rgba(251,201,27,.22); font-size: 34px; }\n.pv-card-icon .elementor-icon svg { width: 34px; height: 34px; fill: #010d30; }\n.pv-num .elementor-heading-title { font-size: 13px; font-weight: 600; letter-spacing: .14em; color: #fbc91b; margin-bottom: 6px; }\n.pv-card-title .elementor-heading-title { font-size: 22px; line-height: 1.3; font-weight: 700; margin-bottom: 12px; }\n.pv-card-text .elementor-widget-container { font-size: 16px; line-height: 1.65; opacity: .92; max-width: 900px; margin-bottom: 18px; }\n.pv-quote .elementor-widget-container { border-left: 3px solid #fbc91b; padding: 4px 0 4px 18px; font-size: 17px; font-weight: 500; line-height: 1.5; }\n\n.pv-cta-lead .elementor-widget-container { font-size: 18px; font-weight: 500; max-width: 760px; margin-bottom: 6px; }\n.pv-sec-cta--center .elementor-widget-text-editor { text-align: center; }\n\n/* Ablauf der Zusammenarbeit */\n.pv-ablauf-title .elementor-heading-title { font-size: 32px; line-height: 1.24; font-weight: 700; text-align: center; margin-bottom: 40px; }\n.pv-step-title .elementor-heading-title { font-size: 20px; line-height: 1.24; font-weight: 700; text-align: center; margin-bottom: 8px; }\n.pv-step-text .elementor-widget-container { font-size: 14px; line-height: 1.64; text-align: center; }\n.pv-lottie { width: 100%; }\n.pv-tl { position: relative; }\n.pv-tl::before { content: \"\"; position: absolute; left: 26px; top: 0; bottom: 32px; width: 5px; background: #fbc91b; }\n.pv-tl-item { position: relative; }\n.pv-tl-dot .elementor-icon { width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: #fbc91b; color: #000d30; font-size: 16px; position: relative; z-index: 1; }\n.pv-tl-dot .elementor-icon svg { width: 16px; height: 16px; fill: #000d30; }\n.pv-tl-title .elementor-heading-title { font-size: 20px; line-height: 1.24; font-weight: 700; margin: 4px 0 6px; }\n.pv-tl-text .elementor-widget-container { font-size: 14px; line-height: 1.6; }\n\n/* Bis 1280 px (Tablet, kleine Laptops, Mobil): kein Hintergrundvideo hinter dem Text, Video-Block unter dem Button */\n@media (max-width: 1280px) {\n  .pv-hero .elementor-background-video-container, .pv-hero > .elementor-background-overlay { display: none !important; }\n  .pv-hero { background-color: #010d30 !important; }\n  .pv-h1 .elementor-heading-title, .pv-hero-text .elementor-widget-container { text-align: center; margin-left: auto; margin-right: auto; }\n  .pv-hero-cta { justify-content: center; align-items: center; }\n  .pv-trust { justify-content: center; }\n  .pv-mvideo video { aspect-ratio: 16 / 9; object-position: 70% 50%; }\n  .pv-hero-text .elementor-widget-container { max-width: 700px; }\n}\n\n/* Mobil */\n@media (max-width: 767px) {\n  .pv-mvideo video { aspect-ratio: 5 / 4; object-position: 100% 50%; }\n  .pv-h1 .elementor-heading-title { font-size: 32px; text-align: center; margin: 0 auto 20px; }\n  .pv-hero-text .elementor-widget-container { font-size: 18px; text-align: center; margin: 0 auto; }\n  .pv-hero-cta { justify-content: center; align-items: center; }\n  .pv-claim-title .elementor-heading-title { font-size: 26px; }\n  .pv-sec-title .elementor-heading-title { font-size: 28px; }\n  .pv-card-icon .elementor-icon { width: 60px; height: 60px; border-radius: 14px; }\n  .pv-card-icon .elementor-icon svg { width: 28px; height: 28px; }\n  .pv-card-title .elementor-heading-title { font-size: 20px; }\n  .pv-sec-cta { align-items: center; }\n  .pv-ablauf-title .elementor-heading-title { font-size: 22px; }\n}\n\n/* Sehr schmale Geräte */\n@media (max-width: 360px) {\n  .pv-h1 .elementor-heading-title { font-size: 28px; hyphens: auto; -webkit-hyphens: auto; }\n}\n",
     "hide_title": "yes",
     "background_background": "classic",
     "background_color": "#010D30"

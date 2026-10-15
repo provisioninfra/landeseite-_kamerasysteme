@@ -177,6 +177,8 @@ a { color: inherit; }
 .section__title strong { font-weight: 700; }
 .section__intro { max-width: 760px; margin: 0 0 56px; font-size: 17px; line-height: 1.6; opacity: .92; }
 .section__cta { margin-top: 56px; }
+.section__cta-lead { margin: 0 0 18px; font-size: 18px; font-weight: 500; max-width: 760px; }
+.section__cta--center { margin-top: 48px; text-align: center; display: flex; flex-direction: column; align-items: center; }
 
 /* Kernbotschaft */
 .section--claim { padding-top: 72px; padding-bottom: 72px; }
@@ -318,7 +320,7 @@ a { color: inherit; }
   .diff__icon { width: 60px; height: 60px; border-radius: 14px; }
   .diff__icon svg { width: 28px; height: 28px; }
   .diff__body h3 { font-size: 20px; }
-  .section__cta { margin-top: 40px; display: flex; justify-content: center; }
+  .section__cta { margin-top: 40px; display: flex; flex-direction: column; align-items: center; text-align: center; }
 
   .section--ablauf { padding: 30px var(--gutter) 60px; }
   .ablauf__title { font-size: 22px; }

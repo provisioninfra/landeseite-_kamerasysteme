@@ -137,29 +137,29 @@ claim = container(
     [container({"css_classes": "pv-claim", "padding": {"unit": "px", "top": "56", "right": "48", "bottom": "56", "left": "48", "isLinked": False},
                 "padding_mobile": {"unit": "px", "top": "32", "right": "22", "bottom": "32", "left": "22", "isLinked": False}}, [
         heading("Unser Anspruch", "p", "pv-eyebrow"),
-        heading("<strong>Eine Kamera montieren kann jeder.</strong> Dass sie im entscheidenden Moment das Richtige aufzeichnet, ist unsere Arbeit.", "h2", "pv-claim-title"),
-        text("<p>Wir planen Videoüberwachung mit klar definierten Schutzzielen, richten sie vollständig ein und prüfen dokumentiert, ob sie leistet, was vereinbart war. Damit du weißt, was dein Sicherheitssystem im Ernstfall kann.</p>", "pv-claim-text"),
+        heading("<strong>Eine Kamera montieren kann jeder.</strong> Dass sie im Ernstfall das Richtige zeigt, ist unsere Arbeit.", "h2", "pv-claim-title"),
+        text("<p>Der Einbruch passiert nachts um drei. Morgens siehst du eine Aufnahme, auf der niemand zu erkennen ist. Die Versicherung fragt trotzdem nach Belegen. Genau diesen Moment planen wir von Anfang an mit.</p>", "pv-claim-text"),
     ])],
 )
 claim["isInner"] = False
 
 # ---------------------------------------------------------------- FÜNF UNTERSCHIEDE
 DIFFS = [
-    ("fas fa-shield-alt", "Sicherheitsanalyse statt Kameraverkauf",
-     "Am Anfang steht keine Produktliste, sondern eine Begehung mit klaren Fragen. Wo kommt jemand ungesehen aufs Gelände, und welche Werte stehen dort auf dem Spiel? Welche Bereiche müssen deshalb erfasst werden, und welche lässt man bewusst weg? Erst daraus ergibt sich die Zahl der Kameras. Oft sind es weniger, als du erwartet hast.",
-     "„Wir verkaufen dir keine Kameras auf Vorrat. Wir planen die Absicherung, die dein Objekt tatsächlich braucht.“"),
-    ("fas fa-layer-group", "Sicherheitskonzept statt isolierter Technik",
-     "Eine Kamera zeichnet einen Einbruch bestenfalls auf. Verhindert wird er durch eine Schließanlage, die den Zutritt erschwert, und durch eine Alarmierung, die im richtigen Moment Druck macht. Bei uns greifen diese Bausteine ineinander, weil wir sie von Anfang an gemeinsam planen.",
-     "„Wir denken Sicherheit vom ersten Zutrittsversuch bis zur verwertbaren Aufzeichnung.“"),
-    ("fas fa-mobile-alt", "Fertig eingerichtet statt nur montiert",
-     "Montiert ist eine Kamera schnell. Die eigentliche Arbeit steckt in der Einrichtung: Fernzugriff auf dem Handy, Benachrichtigungen, die nicht bei jedem Blatt im Wind auslösen, Aufzeichnungszeiten und Zugriffsrechte für deine Mitarbeiter. All das übernehmen wir und zeigen es dir persönlich am Gerät.",
-     "„Wir gehen erst, wenn du dein System selbst bedienen kannst.“"),
-    ("fas fa-wrench", "Langfristige Betreuung statt einmaliger Installation",
-     "Ein Kamerasystem altert. Festplatten füllen sich, Software braucht Updates, ein Objektiv verschmutzt oder eine Hecke wächst ins Bild. Deshalb bieten wir regelmäßige Funktionsprüfungen und einen festen Ansprechpartner bei Störungen an. Wer das verbindlich möchte, bekommt es als Wartungsvertrag.",
-     "„Wir kümmern uns auch Jahre nach der Installation darum, dass deine Anlage zuverlässig läuft.“"),
-    ("fas fa-clipboard-check", "Nachweisbare Übergabe statt bloßem Funktionstest",
-     "Zum Abschluss prüfen wir gemeinsam mit dir, was die Anlage wirklich leistet, und halten das schriftlich fest. Dazu gehören das Kamerabild bei Tag und bei Nacht, Aufzeichnung und Wiedergabe, die Benachrichtigungen auf deinem Handy sowie die wichtigsten Systemeinstellungen. Dieses Protokoll bekommst du ausgehändigt.",
-     "„Wir zeigen dir nicht, dass die Kamera läuft. Wir belegen, dass sie ihre Aufgabe erfüllt.“"),
+    ('fas fa-shield-alt', 'Sicherheitsanalyse statt Kameraverkauf',
+     'Wer dir ohne Begehung ein Angebot schickt, verkauft Technik. Wir gehen erst mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt. Oft brauchst du weniger Kameras, als du denkst.',
+     '„Wir verkaufen dir keine Kameras auf Vorrat.“'),
+    ('fas fa-layer-group', 'Sicherheitskonzept statt isolierter Technik',
+     'Eine Kamera filmt den Einbruch. Verhindern kann sie ihn nicht. Erst wenn Schließanlage und Alarm mitspielen, bekommt der Täter ein Problem. Deshalb planen wir alles zusammen.',
+     '„Vom ersten Zutrittsversuch bis zur verwertbaren Aufnahme.“'),
+    ('fas fa-mobile-alt', 'Fertig eingerichtet statt nur montiert',
+     'Viele Anlagen hängen an der Wand und melden nichts, weil nie jemand die App eingerichtet hat. Bei uns verlässt niemand das Gebäude, bevor dein Handy Alarm schlägt und du das System selbst bedienen kannst.',
+     '„Wir gehen erst, wenn du dein System selbst bedienen kannst.“'),
+    ('fas fa-wrench', 'Langfristige Betreuung statt einmaliger Installation',
+     'Festplatten laufen voll, und irgendwann wächst eine Hecke ins Bild. Fällt das erst nach dem Einbruch auf, ist es zu spät. Wir prüfen deine Anlage regelmäßig, auf Wunsch per Wartungsvertrag.',
+     '„Wir sind auch Jahre später noch für dich da.“'),
+    ('fas fa-clipboard-check', 'Nachweisbare Übergabe statt bloßem Funktionstest',
+     '„Läuft“ reicht nicht. Bei der Übergabe prüfen wir mit dir, ob Gesichter auch nachts erkennbar sind und ob dein Handy wirklich Alarm schlägt. Das Ergebnis bekommst du schriftlich.',
+     '„Wir belegen, dass die Kamera ihre Aufgabe erfüllt.“'),
 ]
 cards = []
 for i, (fa, title, body, quote) in enumerate(DIFFS, 1):
@@ -184,21 +184,21 @@ diff = container(
      "padding_mobile": {"unit": "px", "top": "64", "right": "0", "bottom": "64", "left": "0", "isLinked": False},
      "flex_gap": {"column": "20", "row": "20", "unit": "px", "size": 20}},
     [
-        heading("Fünf Unterschiede, <strong>die du spürst</strong>", "h2", "pv-sec-title"),
-        text("<p>„Alles aus einer Hand“ verspricht jeder Sicherheitsbetrieb. Was uns unterscheidet, erlebst du an Stellen, an denen andere längst fertig sind.</p>", "pv-sec-intro"),
+        heading("Fünf Unterschiede, <strong>die du im Ernstfall spürst</strong>", "h2", "pv-sec-title"),
+        text("<p>„Alles aus einer Hand“ steht auf jeder Website. Ob es stimmt, merkst du erst, wenn etwas passiert.</p>", "pv-sec-intro"),
         *cards,
-        container({"css_classes": "pv-sec-cta", "margin": {"unit": "px", "top": "36", "right": "0", "bottom": "0", "left": "0", "isLinked": False}}, [button()]),
+        container({"css_classes": "pv-sec-cta", "margin": {"unit": "px", "top": "36", "right": "0", "bottom": "0", "left": "0", "isLinked": False}}, [text("<p>Im Erstgespräch sagen wir dir in 15 Minuten, wo dein Gebäude angreifbar ist.</p>", "pv-cta-lead"), button()]),
     ],
 )
 diff["isInner"] = False
 
 # ---------------------------------------------------------------- ABLAUF DER ZUSAMMENARBEIT (Original Startseite)
 STEPS = {
-    "Erstgespräch": "Für eine Ersteinschätzung telefonieren wir kurz und schauen uns deine Situation an: Welche Probleme bestehen aktuell? Wo benötigst du Unterstützung? Wie schnell brauchst du deine Lösung?",
-    "Termin vor Ort": "Wir gehen gemeinsam durch dein Gebäude und schauen uns an, wie deine Zugänge aktuell organisiert sind. Dabei nehmen wir direkt Aufmaß von deinen Türen und Zutrittspunkten. Du bekommst direkt eine Einschätzung zum Kostenrahmen und eine Handlungsempfehlung.",
-    "Planung deines Systems": "Auf Basis des Termins erstellen unsere Experten dir ein fertiges Zutrittskonzept mit allen Komponenten und unserem Angebot, passend zu deinem Budget. Du möchtest noch etwas ändern? Wir passen deine Wünsche direkt gemeinsam im Termin an! Am Ende des Termins treffen wir gemeinsam die Entscheidung. Starten wir gemeinsam oder nicht?",
-    "Umsetzung": "Hier konfigurieren wir die Software, programmieren die Hardware und montieren alles im Objekt. Danach erfolgt die Inbetriebnahme und Übergabe an dich.",
-    "Übergabe &amp; Betreuung": "Du bekommst eine kurze Einweisung und kannst das System direkt nutzen. Wenn du willst, übernehmen wir danach auch die Verwaltung für dich!",
+    'Erstgespräch': 'Ein kurzes Telefonat: Was ist passiert, oder was soll nie passieren? Welche Bereiche machen dir Sorgen? Du bekommst eine erste ehrliche Einschätzung.',
+    'Termin vor Ort': 'Wir gehen mit dir über das Gelände und schauen, wo jemand ungesehen reinkommt. Noch vor Ort nennen wir dir den Kostenrahmen.',
+    'Planung deines Systems': 'Du bekommst ein Konzept mit Kamerastandorten und Angebot, passend zu deinem Budget. Änderungswünsche bauen wir direkt ein. Dann entscheidest du.',
+    'Umsetzung': 'Wir montieren die Kameras und richten Aufzeichnung und App komplett ein. Du musst nichts selbst konfigurieren.',
+    'Übergabe &amp; Betreuung': 'Wir prüfen gemeinsam, ob die Anlage leistet, was vereinbart war, und halten das schriftlich fest. Danach bleiben wir erreichbar.',
 }
 def step(title, anim, pct):
     return container({"width": {"unit": "%", "size": pct, "sizes": []}, "animation": anim, "css_classes": "pv-step",
@@ -235,7 +235,8 @@ ablauf = container(
     {"content_width": "boxed", "css_classes": "pv-sec pv-ablauf", "_element_id": "arbeiten",
      "padding": {"unit": "px", "top": "50", "right": "0", "bottom": "50", "left": "0", "isLinked": False},
      "padding_mobile": {"unit": "px", "top": "30", "right": "0", "bottom": "60", "left": "0", "isLinked": False}},
-    [heading("Ablauf der Zusammenarbeit", "h2", "pv-ablauf-title"), ablauf_desktop, ablauf_mobile],
+    [heading("Ablauf der Zusammenarbeit", "h2", "pv-ablauf-title"), ablauf_desktop, ablauf_mobile,
+     container({"css_classes": "pv-sec-cta pv-sec-cta--center", "flex_align_items": "center", "margin": {"unit": "px", "top": "48", "right": "0", "bottom": "0", "left": "0", "isLinked": False}}, [text("<p>Der erste Schritt ist ein Telefonat. Unverbindlich, ohne Verkaufsdruck.</p>", "pv-cta-lead"), button()])],
 )
 ablauf["isInner"] = False
 

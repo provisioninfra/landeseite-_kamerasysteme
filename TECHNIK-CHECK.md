@@ -135,10 +135,10 @@ Geprüft wurden gezielt Fehlerfälle und Randbedingungen, die beim normalen Betr
 
 ## Offene Punkte (inhaltlich, keine Technik)
 
-1. Zwei Texte in „Ablauf der Zusammenarbeit“ stammen unverändert von der Startseite und sprechen vom
-   Schließsystem („Türen und Zutrittspunkte“, „Zutrittskonzept“). Für die Kamera-Seite anpassen?
-2. Die Sektionen „Über uns“ und „FAQ“ aus dem Menü sind noch nicht gebaut. Die Menüpunkte zeigen
+1. Die Sektionen „Über uns“ und „FAQ“ aus dem Menü sind noch nicht gebaut. Die Menüpunkte zeigen
    derzeit ins Leere. Entweder Sektionen ergänzen oder Menüpunkte entfernen.
+2. Die Texte ab „Unser Anspruch“ wurden gekürzt und auf Kameras angepasst (Stand 15.10.2026);
+   die Ablauf-Texte weichen damit bewusst vom Original der Startseite ab.
 
 ## Elementor-Vorlage
 
