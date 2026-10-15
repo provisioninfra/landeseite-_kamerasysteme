@@ -174,9 +174,7 @@ selector { min-height: 470px; }
 }
 @media (max-width: 767px) {
 selector video.elementor-background-video-hosted {
-  left: auto !important;
-  right: 0 !important;
-  transform: translateY(-50%) !important;
+  object-position: 100% 50% !important;
 }
 }"""
 page.append(mvideo)

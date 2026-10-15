@@ -1697,7 +1697,7 @@
     "background_background": "video",
     "background_video_link": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video.mp4",
     "background_play_on_mobile": "yes",
-    "custom_css": "@media (min-width: 475px) and (max-width: 767px) {\nselector { min-height: 470px; }\n}\n@media (max-width: 767px) {\nselector video.elementor-background-video-hosted {\n  left: auto !important;\n  right: 0 !important;\n  transform: translateY(-50%) !important;\n}\n}",
+    "custom_css": "@media (min-width: 475px) and (max-width: 767px) {\nselector { min-height: 470px; }\n}\n@media (max-width: 767px) {\nselector video.elementor-background-video-hosted {\n  object-position: 100% 50% !important;\n}\n}",
     "margin_mobile": {
      "unit": "px",
      "top": "-50",
