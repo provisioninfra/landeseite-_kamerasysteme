@@ -34,28 +34,22 @@ Falls das Video nicht geladen werden kann, läuft eine animierte SVG-Szene (Kame
 - `ANLEITUNG-WORDPRESS.md` – Schritt-für-Schritt-Anleitung für Laien: Seite als Unterseite auf provision-infra.de veröffentlichen
 - `TECHNIK-CHECK.md` – Ergebnis des Technik- und Skalierungs-Checks vor dem Livegang
 
-## In WordPress / Elementor einbinden
+## WordPress: die eigentliche Seite
 
-Im Ordner `elementor/` liegt eine importierbare Elementor-Vorlage, in der jeder Text ein eigenes
-Elementor-Widget ist (Überschrift, Texteditor, Button) und sich nach dem Import direkt im Editor
-bearbeiten lässt.
+Die Landingpage liegt als unveröffentlichter Entwurf in WordPress („Kamera- & Videoüberwachung“,
+Seiten-ID 4313). Sie wurde aus den Original-Bausteinen der Startseite zusammengesetzt und über den
+Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-Elemente.
 
-- `elementor/landingpage-kamerasysteme.json` – die Vorlage (Hero, Kernbotschaft, fünf Unterschiede, Ablauf)
-- `elementor/custom.css` – ergänzendes CSS; liegt in der Vorlage am jeweiligen Sektions-Container (Erweitert → Benutzerdefiniertes CSS) und zusätzlich in den Seiteneinstellungen. Farben, Schriften, Rahmen und Abstände sind außerdem als native Elementor-Einstellungen an jedem Widget hinterlegt, das Design hängt also nicht am Seiten-CSS
-- `tools/build_elementor_template.py` – erzeugt die JSON-Datei neu (`python3 tools/build_elementor_template.py`)
+- `tools/build_from_homepage.py` – baut die Seite aus den Startseiten-Bausteinen zusammen
+- `elementor/quelle-startseite.json` – Elementor-Daten der Startseite (per WordPress-Export gelesen, nur Quelle)
+- `elementor/medien.json`, `elementor/icons.json` – IDs/URLs der hochgeladenen Kamera-Medien und Icons
+- `elementor/kamera-seite.elements.json` – Elemente + Seiteneinstellungen (Stand, der in WordPress gespeichert ist)
+- `elementor/landingpage-kamerasysteme.json` – dieselbe Seite als importierbare Elementor-Vorlage (Sicherung)
 
-### Import, Schritt für Schritt
+Neu erzeugen: `python3 tools/build_from_homepage.py`. Die Schritte bis zur Veröffentlichung stehen in
+`ANLEITUNG-WORDPRESS.md`.
 
-1. `assets/video/hero.mp4` in die WordPress-Mediathek hochladen und die URL kopieren.
-2. WordPress-Backend → Vorlagen (Elementor) → Gespeicherte Vorlagen → „Vorlagen importieren“ → die JSON-Datei hochladen.
-3. Neue Seite anlegen → „Mit Elementor bearbeiten“ → Ordner-Symbol „Vorlage hinzufügen“ → Reiter „Meine Vorlagen“ → „Landingpage Kamera- & Videoüberwachung“ einfügen.
-4. Hero-Container anklicken → Stil → Hintergrund → Video-Link: die Mediathek-URL aus Schritt 1 eintragen.
-   Ebenso im Video-Widget unter dem Button (nur mobil sichtbar) die gleiche URL eintragen.
-5. Seitenlayout auf „Elementor Volle Breite“ bzw. „Elementor Canvas“ stellen, je nachdem, ob Header und Footer
-   der Website erscheinen sollen. Mit „Volle Breite“ kommt der Header der Startseite automatisch mit.
+## Statische Version (index.html)
 
-Hinweise:
-- Das Lottie-Widget der Ablauf-Sektion verweist auf die bereits in der Mediathek vorhandene Animation der Startseite.
-- Die Ablauf-Sektion lässt sich alternativ auch direkt auf der Startseite im Elementor kopieren (Rechtsklick → Kopieren)
-  und auf der neuen Seite einfügen, dann ist auch die mobile Timeline exakt das Original.
-- Benutzerdefiniertes CSS pro Seite ist eine Elementor-Pro-Funktion (auf provision-infra.de vorhanden).
+Die statische HTML-Version ist eine eigenständige Vorschau mit gleichem Inhalt, aber eigenem Code.
+Maßgeblich für die Veröffentlichung ist die WordPress-Seite.

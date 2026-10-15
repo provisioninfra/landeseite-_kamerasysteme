@@ -156,3 +156,19 @@ ungültigen Werts, Lottie-Animation per URL statt über den Medien-Import, leere
 mobilen Video-Widget (eine nicht erreichbare URL würde beim Import durch ein Platzhalterbild ersetzt),
 Seitenlayout „Volle Breite“ in den Vorlagen-Einstellungen.
 Der Import konnte ohne Zugang zum WordPress nicht live getestet werden.
+
+## WordPress-Seite (Stand 15.10.2026, dritter Durchgang)
+
+Mit Testzugang direkt in WordPress gebaut und geprüft:
+
+- Seite 4313 „Kamera- & Videoüberwachung“ als Entwurf, zusammengesetzt aus den Original-Elementen der
+  Startseite (Header, Hero, Glas-Box, Kundenstimmen-Slider als Produkt-Slider, Icon-Zeilen, Ablauf mit
+  Lottie und EA-Timeline, Gründer, Partner, Standort, FAQ-Akkordeon, Footer).
+- Gespeichert über den Speicherweg des Elementor-Editors (kein Vorlagen-Import, keine doppelten Medien).
+- Geprüft in der Vorschau bei 1920, 1440, 1024, 768 und 390 px: kein horizontaler Überlauf, keine
+  JavaScript-Fehler, alle Widgets gerendert (2 Nested-Carousels, Lottie, EA-Timeline, Akkordeon).
+- Mobil: Text auf einfarbigem Hintergrund, Video als Block unter dem Button, Slider mit gelbem Rahmen
+  des aktiven Slides wie bei den Kundenstimmen.
+- Medien in der Mediathek: Hero-Video (ID 4305), Standbild (4306), sechs Platzhalter-Produktbilder
+  (4307–4312), fünf Icons im Stil der Startseiten-Kacheln (4318–4322).
+- Nicht verändert: Startseite, andere Seiten, Menüs, Einstellungen. Nichts veröffentlicht.
