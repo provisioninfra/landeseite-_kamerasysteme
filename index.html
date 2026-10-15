@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kamera- &amp; Videoüberwachung – ProVision Infra</title>
+  <meta name="description" content="ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung – damit dein Gebäude rund um die Uhr geschützt ist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="https://www.provision-infra.de/" aria-label="ProVision Infra GmbH – Startseite">
+        <img src="assets/img/logo.png" width="258" height="60" alt="ProVision Infra GmbH">
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#vorteile">Mit Videoüberwachung Schäden vermeiden</a></li>
+          <li><a href="#arbeiten">So arbeiten wir zusammen</a></li>
+          <li><a href="#ueber">Über uns</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <button class="site-nav__toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile Navigation" hidden>
+      <ul>
+        <li><a href="#vorteile">Mit Videoüberwachung Schäden vermeiden</a></li>
+        <li><a href="#arbeiten">So arbeiten wir zusammen</a></li>
+        <li><a href="#ueber">Über uns</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--
+    HERO
+    Animationslogik wie auf der Liveseite (Elementor-Container mit Video-Hintergrund):
+    - Video startet automatisch, stumm, einmalig, auch auf dem Handy
+    - Video stoppt bei data-video-end (Sekunden) und bleibt auf dem letzten Bild stehen
+    - Solange kein Video in assets/video/hero.mp4 liegt (oder bis es geladen ist),
+      läuft die animierte SVG-Szene: Kamera schwenkt, Status wechselt von Rot auf Grün.
+  -->
+  <section class="hero" data-video="assets/video/hero.mp4" data-video-end="3.5">
+    <div class="hero__media" aria-hidden="true">
+      <video class="hero__video" muted playsinline preload="auto"></video>
+
+      <!-- Animierte Ersatz-Szene (CSS/SVG) -->
+      <div class="hero__scene">
+        <svg class="scene" viewBox="0 0 1200 700" preserveAspectRatio="xMaxYMid slice" focusable="false">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0b1f5c"/>
+              <stop offset="1" stop-color="#010d30"/>
+            </linearGradient>
+            <linearGradient id="cone" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffffff" stop-opacity=".28"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1b2f6e"/>
+              <stop offset="1" stop-color="#0d1a4a"/>
+            </linearGradient>
+            <radialGradient id="glowRed" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#ff3b3b" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#ff3b3b" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="glowGreen" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#2dff8a" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#2dff8a" stop-opacity="0"/>
+            </radialGradient>
+            <clipPath id="facadeClip"><rect x="560" y="120" width="560" height="580"/></clipPath>
+          </defs>
+
+          <rect width="1200" height="700" fill="url(#sky)"/>
+          <g transform="translate(150 0)">
+
+          <!-- Gebäude -->
+          <g class="building">
+            <rect x="560" y="120" width="560" height="580" fill="url(#glass)"/>
+            <g clip-path="url(#facadeClip)" stroke="#2b3f85" stroke-width="2" opacity=".9">
+              <path d="M560 200H1120M560 280H1120M560 360H1120M560 440H1120M560 520H1120M560 600H1120"/>
+              <path d="M640 120V700M720 120V700M800 120V700M880 120V700M960 120V700M1040 120V700"/>
+            </g>
+            <!-- beleuchtete Fenster -->
+            <g class="windows" fill="#fbc91b" opacity=".16">
+              <rect x="652" y="212" width="56" height="56"/>
+              <rect x="892" y="292" width="56" height="56"/>
+              <rect x="732" y="452" width="56" height="56"/>
+              <rect x="1052" y="372" width="56" height="56"/>
+            </g>
+            <!-- Eingang -->
+            <rect x="760" y="560" width="160" height="140" fill="#06123a" stroke="#2b3f85" stroke-width="2"/>
+            <rect x="836" y="620" width="6" height="18" rx="3" fill="#fbc91b"/>
+          </g>
+
+          <!-- Lichtkegel der Kamera (schwenkt) -->
+          <g class="cam-cone" transform="translate(600 150)">
+            <path d="M0 0 L520 300 L520 560 Z" fill="url(#cone)"/>
+          </g>
+
+          <!-- Kamera -->
+          <g class="camera" transform="translate(600 150)">
+            <rect x="-60" y="-12" width="60" height="18" rx="4" fill="#d6dcee"/>
+            <rect x="-14" y="-34" width="12" height="26" rx="3" fill="#d6dcee"/>
+            <g class="cam-head">
+              <rect x="-10" y="-22" width="96" height="44" rx="10" fill="#e9edf8"/>
+              <rect x="70" y="-16" width="24" height="32" rx="6" fill="#c7cfe6"/>
+              <circle cx="82" cy="0" r="7" fill="#0b1f5c"/>
+              <circle class="cam-led" cx="4" cy="0" r="4"/>
+            </g>
+          </g>
+
+          <!-- Status-Glow + Badge (Rot -> Grün, wie das Schloss auf der Liveseite) -->
+          <circle class="status-glow status-glow--red" cx="840" cy="420" r="150" fill="url(#glowRed)"/>
+          <circle class="status-glow status-glow--green" cx="840" cy="420" r="150" fill="url(#glowGreen)"/>
+          <g class="status-badge" transform="translate(840 420)">
+            <circle class="status-badge__ring" r="56" fill="none" stroke-width="4"/>
+            <g class="shield" transform="translate(-26 -30)">
+              <path class="shield__fill" d="M26 0 L52 10 V30 C52 46 40 56 26 62 C12 56 0 46 0 30 V10 Z"/>
+              <path class="shield__check" d="M14 31 L23 40 L39 22" fill="none" stroke="#010d30" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="shield__alert" d="M26 16 V34 M26 42 V46" fill="none" stroke="#010d30" stroke-width="5" stroke-linecap="round"/>
+            </g>
+          </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <strong>Wir schützen dein Gebäude</strong> - mit Kamera- &amp; Videoüberwachung
+      </h1>
+
+      <p class="hero__text">
+        Ein Einbruch, Vandalismus oder Diebstahl &amp; deinem Unternehmen drohen schnell zehntausende Euro an Schaden.
+        <br><br>
+        ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung, mit der du dein Gebäude rund um die Uhr im Blick hast – per App, jederzeit und von überall.
+      </p>
+
+      <div class="hero__cta">
+        <a class="button" href="https://www.provision-infra.de/kontakt">
+          <span>Unverbindliches Erstgespräch vereinbaren</span>
+          <span class="button__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="hero__trust">
+        <div class="trust trust--google">
+          <img src="assets/img/google.png" width="68" height="60" alt="Google">
+          <div>
+            <div class="trust__score"><span class="trust__star" aria-hidden="true">★</span> <strong>5</strong> <small>von 5.0</small></div>
+            <div class="trust__label">Sternen auf Google</div>
+          </div>
+        </div>
+        <div class="trust trust--count">
+          <strong><span class="trust__plus">+</span>100</strong>
+          <span class="trust__label">zufriedene Kunden</span>
+        </div>
+        <a class="trust trust--proven" href="https://www.provenexpert.com/provision-infra/" target="_blank" rel="noopener">
+          <img src="https://images.provenexpert.com/96/14/0396ae496297f4d88e04693bdb8f/widget_landscape_300_de_0.png" width="162" height="138" alt="ProvenExpert Kundenbewertungen: Sehr gut">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weitere Sektionen (Vorteile, Ablauf, Über uns, FAQ) folgen -->
+  <section id="vorteile" class="placeholder"><p>Weitere Inhalte folgen.</p></section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

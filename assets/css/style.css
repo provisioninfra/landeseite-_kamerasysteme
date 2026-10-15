@@ -1,0 +1,177 @@
+/* ProVision Infra – Landingpage Kamera- & Videoüberwachung
+   Farben, Schrift und Abstände übernommen von www.provision-infra.de */
+
+:root {
+  --navy: #010d30;        /* Seitenhintergrund (Liveseite: rgb(1,13,48)) */
+  --navy-2: #1b2444;      /* Header-Pille */
+  --yellow: #fbc91b;      /* CTA (Liveseite: rgb(251,201,27)) */
+  --ink: #2b2b2b;         /* Text auf Gelb */
+  --white: #ffffff;
+  --red: #ff3b3b;
+  --green: #2dff8a;
+  --font: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --container: 1400px;
+  --gutter: 20px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--white);
+  background: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+img, svg, video { display: block; max-width: 100%; }
+a { color: inherit; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  padding: 20px var(--gutter) 0;
+}
+.site-header__inner {
+  max-width: var(--container); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 18px 40px;
+  background: var(--navy-2);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+}
+.site-header__logo img { height: 56px; width: auto; }
+.site-nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; }
+.site-nav a { text-decoration: none; font-size: 17px; white-space: nowrap; }
+.site-nav a:hover { color: var(--yellow); }
+.site-nav__toggle {
+  display: none; width: 56px; height: 56px; border: 0; border-radius: 10px;
+  background: rgba(255,255,255,.08); cursor: pointer; padding: 15px 12px;
+  flex-direction: column; justify-content: space-between;
+}
+.site-nav__toggle span { display: block; height: 4px; border-radius: 2px; background: var(--white); }
+.mobile-nav { margin: 10px auto 0; max-width: var(--container); padding: 10px 24px;
+  background: var(--navy-2); border-radius: 24px; border: 1px solid rgba(255,255,255,.18); }
+.mobile-nav ul { list-style: none; margin: 0; padding: 0; }
+.mobile-nav a { display: block; padding: 12px 0; text-decoration: none; font-size: 18px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.mobile-nav li:last-child a { border-bottom: 0; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  min-height: calc(100vh - 110px);
+  display: flex; align-items: center;
+}
+.hero__media { position: absolute; inset: 0; z-index: 0; }
+.hero__video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity .6s ease;
+}
+.hero.has-video .hero__video { opacity: 1; }
+.hero.has-video .hero__scene { opacity: 0; }
+.hero__scene { position: absolute; inset: 0; transition: opacity .6s ease; }
+.hero__scene .scene { width: 100%; height: 100%; }
+.hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(1,13,48,.96) 0%, rgba(1,13,48,.85) 45%, rgba(1,13,48,.35) 100%);
+}
+
+.hero__content {
+  position: relative; z-index: 1;
+  width: 100%; max-width: var(--container); margin: 0 auto;
+  padding: 48px var(--gutter) 64px;
+  animation: fadeIn 1s both;   /* Elementor: _animation = fadeIn */
+}
+.hero__title {
+  max-width: 640px; margin: 0 0 20px;
+  font-size: 40px; line-height: 1.24; font-weight: 400;
+}
+.hero__title strong { font-weight: 700; }
+.hero__text { max-width: 920px; margin: 0 0 36px; font-size: 17px; line-height: 1.55; }
+
+.button {
+  display: inline-flex; align-items: center; gap: 18px;
+  padding: 16px 16px 16px 32px;
+  background: var(--yellow); color: var(--ink);
+  border-radius: 100px; text-decoration: none; font-size: 17px; font-weight: 500;
+  transition: transform .3s ease;
+}
+.button:hover { transform: scale(1.06); }   /* Elementor: elementor-animation-grow */
+.button__icon {
+  display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  background: #0f2a7a; color: var(--white);
+}
+
+.hero__trust { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-top: 44px; }
+.trust { display: flex; align-items: center; gap: 16px; }
+.trust--google img { width: 54px; height: auto; }
+.trust__score { font-size: 15px; }
+.trust__score strong { font-size: 30px; font-weight: 700; margin: 0 4px; }
+.trust__star { color: var(--yellow); }
+.trust__label { font-size: 14px; opacity: .9; }
+.trust--count strong { font-size: 34px; font-weight: 700; }
+.trust__plus { color: var(--yellow); }
+.trust--proven img { width: 162px; height: auto; border-radius: 4px; }
+
+/* ---------- Animierte Ersatz-Szene ---------- */
+/* Kamera schwenkt, Lichtkegel folgt, Status springt von Rot (ungeschützt) auf Grün (geschützt).
+   Zeitlich angelehnt an das Live-Video: ca. 3,5 s bis zum "grünen" Endzustand, danach stehend. */
+.cam-head, .cam-cone { transform-box: fill-box; transform-origin: 0 50%; }
+.cam-head { animation: camSweep 3.5s cubic-bezier(.45,0,.2,1) both; }
+.cam-cone { animation: camSweep 3.5s cubic-bezier(.45,0,.2,1) both, coneFade 3.5s ease both; }
+.cam-led { fill: var(--red); animation: ledColor 3.5s steps(1, end) both; }
+.status-glow--red   { animation: glowRedOut 3.5s ease both; }
+.status-glow--green { opacity: 0; animation: glowGreenIn 3.5s ease both; }
+.status-badge__ring { stroke: var(--red); animation: ringColor 3.5s steps(1, end) both; }
+.shield__fill { fill: var(--red); animation: shieldColor 3.5s steps(1, end) both; }
+.shield__check { opacity: 0; animation: checkIn 3.5s steps(1, end) both; }
+.shield__alert { animation: alertOut 3.5s steps(1, end) both; }
+.windows rect { animation: windowFlicker 6s ease-in-out infinite alternate; }
+.windows rect:nth-child(2) { animation-delay: 1.3s; }
+.windows rect:nth-child(3) { animation-delay: 2.4s; }
+.windows rect:nth-child(4) { animation-delay: 3.1s; }
+
+@keyframes camSweep {
+  0%   { transform: rotate(-16deg); }
+  45%  { transform: rotate(24deg); }
+  100% { transform: rotate(8deg); }
+}
+@keyframes coneFade {
+  0% { opacity: .35; } 60% { opacity: .9; } 100% { opacity: .55; }
+}
+@keyframes ledColor { 0%, 70% { fill: var(--red); } 71%, 100% { fill: var(--green); } }
+@keyframes ringColor { 0%, 70% { stroke: var(--red); } 71%, 100% { stroke: var(--green); } }
+@keyframes shieldColor { 0%, 70% { fill: var(--red); } 71%, 100% { fill: var(--green); } }
+@keyframes checkIn { 0%, 70% { opacity: 0; } 71%, 100% { opacity: 1; } }
+@keyframes alertOut { 0%, 70% { opacity: 1; } 71%, 100% { opacity: 0; } }
+@keyframes glowRedOut { 0% { opacity: .9; } 60% { opacity: .9; } 85%, 100% { opacity: 0; } }
+@keyframes glowGreenIn { 0%, 65% { opacity: 0; } 90%, 100% { opacity: 1; } }
+@keyframes windowFlicker { from { opacity: .08; } to { opacity: .22; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .cam-head, .cam-cone, .cam-led, .status-glow--red, .status-glow--green,
+  .status-badge__ring, .shield__fill, .shield__check, .shield__alert, .windows rect, .hero__content {
+    animation-duration: .01s !important; animation-iteration-count: 1 !important;
+  }
+}
+
+/* ---------- Platzhalter ---------- */
+.placeholder { padding: 80px var(--gutter); text-align: center; opacity: .5; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .site-nav { display: none; }
+  .site-nav__toggle { display: flex; }
+  .site-header__inner { padding: 14px 24px; }
+}
+@media (max-width: 767px) {
+  .site-header { padding-top: 12px; }
+  .site-header__logo img { height: 44px; }
+  .hero { min-height: auto; }
+  .hero__overlay { background: linear-gradient(180deg, rgba(1,13,48,.92) 0%, rgba(1,13,48,.75) 60%, rgba(1,13,48,.35) 100%); }
+  .hero__content { padding: 32px var(--gutter) 56px; text-align: center; }
+  .hero__title { font-size: 32px; margin-left: auto; margin-right: auto; }
+  .hero__text { font-size: 18px; margin-left: auto; margin-right: auto; }
+  .hero__cta { display: flex; justify-content: center; }
+  .hero__trust { display: none; }  /* Liveseite blendet die Trust-Zeile mobil aus */
+}
