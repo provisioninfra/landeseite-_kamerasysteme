@@ -12,18 +12,24 @@ python3 -m http.server 8080
 
 ## Struktur
 
-- `index.html` – Seite (aktuell: Header + Hero, weitere Sektionen folgen)
+- `index.html` – Seite (Header, Hero, Kernbotschaft, fünf Unterschiede, Ablauf der Zusammenarbeit, Footer)
 - `assets/css/style.css` – Styles (Farben/Schrift wie Liveseite: Navy #010d30, Gelb #fbc91b, Poppins)
 - `assets/js/main.js` – Hero-Video-Steuerung, mobile Navigation, Scroll-Animationen der Ablauf-Sektion
-- `assets/js/lottie.min.js` – lottie-web 5.12.2 (Timeline-Animation)
+- `assets/js/lottie_light.min.js` – lottie-web 5.12.2, Light-Build (Timeline-Animation)
 - `assets/js/ablauf-timeline.json` – Lottie-Timeline der Startseite (Ablauf der Zusammenarbeit)
 - `assets/video/hero.mp4` – Hero-Hintergrundvideo (siehe `assets/video/README.md`)
-- `assets/img/` – Logo, Google-Icon
+- `assets/img/` – Logo, Google-Icon, Favicons
+- `assets/fonts/` – Poppins (lokal ausgeliefert, kein Abruf bei Google)
 
 ## Hero-Animation
 
 Wie auf der Liveseite: Hintergrundvideo, autoplay, stumm, einmalig, bleibt auf dem letzten Bild stehen.
 Falls das Video nicht geladen werden kann, läuft eine animierte SVG-Szene (Kamera schwenkt, Status Rot → Grün).
+
+## Dokumente
+
+- `ANLEITUNG-WORDPRESS.md` – Schritt-für-Schritt-Anleitung für Laien: Seite als Unterseite auf provision-infra.de veröffentlichen
+- `TECHNIK-CHECK.md` – Ergebnis des Technik- und Skalierungs-Checks vor dem Livegang
 
 ## In WordPress / Elementor einbinden
 

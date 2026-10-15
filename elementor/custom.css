@@ -59,8 +59,19 @@
 .pv-tl-title .elementor-heading-title { font-size: 20px; line-height: 1.24; font-weight: 700; margin: 4px 0 6px; }
 .pv-tl-text .elementor-widget-container { font-size: 14px; line-height: 1.6; }
 
+/* Tablet und Mobil: kein Hintergrundvideo hinter dem Text, Video-Block unter dem Button */
+@media (max-width: 1024px) {
+  .pv-hero .elementor-background-video-container, .pv-hero > .elementor-background-overlay { display: none !important; }
+  .pv-hero { background-color: #010d30 !important; }
+  .pv-h1 .elementor-heading-title, .pv-hero-text .elementor-widget-container { text-align: center; margin-left: auto; margin-right: auto; }
+  .pv-hero-cta { justify-content: center; align-items: center; }
+  .pv-trust { justify-content: center; }
+  .pv-mvideo video { aspect-ratio: 16 / 9; object-position: 70% 50%; }
+}
+
 /* Mobil */
 @media (max-width: 767px) {
+  .pv-mvideo video { aspect-ratio: 5 / 4; object-position: 100% 50%; }
   .pv-h1 .elementor-heading-title { font-size: 32px; text-align: center; margin: 0 auto 20px; }
   .pv-hero-text .elementor-widget-container { font-size: 18px; text-align: center; margin: 0 auto; }
   .pv-hero-cta { justify-content: center; align-items: center; }

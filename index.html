@@ -1,16 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kamera- &amp; Videoüberwachung – ProVision Infra</title>
   <meta name="description" content="ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung – damit dein Gebäude rund um die Uhr geschützt ist.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#010d30">
+  <!-- Canonical-URL nach Veröffentlichung eintragen, z. B. https://www.provision-infra.de/kamerasysteme/ -->
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ProVision Infra">
+  <meta property="og:title" content="Kamera- &amp; Videoüberwachung – ProVision Infra">
+  <meta property="og:description" content="ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung – damit dein Gebäude rund um die Uhr geschützt ist.">
+  <meta property="og:image" content="assets/video/hero-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="assets/img/favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <!-- Poppins wird lokal ausgeliefert (kein Abruf bei Google Fonts, DSGVO) -->
+  <link rel="preload" href="assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
     <div class="site-header__inner">
@@ -39,6 +52,7 @@
     </nav>
   </header>
 
+  <main id="inhalt">
   <!--
     HERO
     Animationslogik wie auf der Liveseite (Elementor-Container mit Video-Hintergrund):
@@ -171,7 +185,7 @@
           <span class="trust__label">zufriedene Kunden</span>
         </div>
         <a class="trust trust--proven" href="https://www.provenexpert.com/provision-infra/" target="_blank" rel="noopener">
-          <img src="https://images.provenexpert.com/96/14/0396ae496297f4d88e04693bdb8f/widget_landscape_300_de_0.png" width="162" height="138" alt="ProvenExpert Kundenbewertungen: Sehr gut">
+          <img src="https://images.provenexpert.com/96/14/0396ae496297f4d88e04693bdb8f/widget_landscape_300_de_0.png" width="162" height="138" loading="lazy" alt="ProvenExpert Kundenbewertungen: Sehr gut">
         </a>
       </div>
     </div>
@@ -354,8 +368,20 @@
   </section>
 
   <!-- Weitere Sektionen (Über uns, FAQ) folgen -->
+  </main>
 
-  <script src="assets/js/lottie.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__copy">© <span id="jahr">2026</span> ProVision Infra GmbH</p>
+      <nav class="site-footer__nav" aria-label="Rechtliches">
+        <a href="https://www.provision-infra.de/impressum/">Impressum</a>
+        <a href="https://www.provision-infra.de/datenschutz/">Datenschutz</a>
+        <a href="https://www.provision-infra.de/agb">AGB</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/lottie_light.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

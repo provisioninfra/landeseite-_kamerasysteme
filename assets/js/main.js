@@ -36,6 +36,10 @@
     video.load();
   }
 
+  /* Jahr im Footer */
+  var jahr = document.getElementById('jahr');
+  if (jahr) jahr.textContent = String(new Date().getFullYear());
+
   /* Mobile Navigation */
   var toggle = document.querySelector('.site-nav__toggle');
   var mobileNav = document.getElementById('mobile-nav');
@@ -95,9 +99,6 @@
   /* Ablauf mobil: Linie füllt sich beim Scrollen, Kreise werden gelb */
   var timeline = document.querySelector('.timeline');
   if (timeline) {
-    var fill = document.createElement('span');
-    fill.className = 'timeline__fill';
-    timeline.insertBefore(fill, timeline.firstChild);
     var items = timeline.querySelectorAll('.timeline__item');
     var tTick = false;
     var tUpdate = function () {
@@ -106,7 +107,7 @@
       var vh = window.innerHeight || document.documentElement.clientHeight;
       var line = vh * 0.6;                           // Füllstand: Punkt bei 60 % der Bildschirmhöhe
       var h = Math.max(0, Math.min(r.height, line - r.top));
-      fill.style.height = h + 'px';
+      timeline.style.setProperty('--tl-fill', h + 'px');
       items.forEach(function (it) {
         var d = it.querySelector('.timeline__dot').getBoundingClientRect();
         it.classList.toggle('is-active', d.top + d.height / 2 <= line);
@@ -114,7 +115,7 @@
     };
     var tScroll = function () { if (!tTick) { tTick = true; window.requestAnimationFrame(tUpdate); } };
     if (reduce) {
-      fill.style.height = '100%';
+      timeline.style.setProperty('--tl-fill', '100%');
       items.forEach(function (it) { it.classList.add('is-active'); });
     } else {
       tUpdate();

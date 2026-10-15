@@ -1,6 +1,12 @@
 /* ProVision Infra – Landingpage Kamera- & Videoüberwachung
    Farben, Schrift und Abstände übernommen von www.provision-infra.de */
 
+/* Poppins lokal (Dateien von provision-infra.de, Elementor Google-Fonts-Cache) */
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/poppins-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/poppins-500.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/poppins-600.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/poppins-700.woff2") format("woff2"); }
+
 :root {
   --navy: #010d30;        /* Seitenhintergrund (Liveseite: rgb(1,13,48)) */
   --navy-2: #1b2444;      /* Header-Pille */
@@ -25,6 +31,9 @@ body {
 }
 img, svg, video { display: block; max-width: 100%; }
 a { color: inherit; }
+
+.skip-link { position: absolute; left: -9999px; top: 8px; z-index: 100; padding: 10px 16px; background: var(--yellow); color: var(--ink); border-radius: 8px; font-weight: 600; }
+.skip-link:focus { left: 16px; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -229,7 +238,7 @@ a { color: inherit; }
 .timeline::before {
   content: ""; position: absolute; left: 26px; top: 0; bottom: 0; width: 5px; background: #172446;
 }
-.timeline__fill { position: absolute; left: 26px; top: 0; width: 5px; height: 0; background: var(--yellow); }
+.timeline::after { content: ""; position: absolute; left: 26px; top: 0; width: 5px; height: var(--tl-fill, 0px); background: var(--yellow); }
 .timeline__item { position: relative; display: flex; gap: 22px; padding-bottom: 32px; }
 .timeline__item:last-child { padding-bottom: 0; }
 .timeline__dot {
@@ -242,23 +251,40 @@ a { color: inherit; }
 .timeline__content h3 { margin: 4px 0 6px; font-size: 20px; line-height: 1.24; font-weight: 700; }
 .timeline__content p { margin: 0; font-size: 14px; line-height: 1.6; }
 
+/* ---------- Footer ---------- */
+.site-footer { padding: 32px var(--gutter) 40px; border-top: 1px solid rgba(255,255,255,.1); }
+.site-footer__inner { max-width: var(--container); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; font-size: 14px; }
+.site-footer__copy { margin: 0; opacity: .8; }
+.site-footer__nav { display: flex; gap: 24px; }
+.site-footer__nav a { text-decoration: none; opacity: .9; }
+.site-footer__nav a:hover { color: var(--yellow); }
+
 /* ---------- Responsive ---------- */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .site-nav { display: none; }
   .site-nav__toggle { display: flex; }
   .site-header__inner { padding: 14px 24px; }
 }
+/* Tablet und Handy: Video als eigener Block unter dem Button, Text auf einfarbigem Navy */
+@media (max-width: 1023px) {
+  .hero { min-height: auto; display: flex; flex-direction: column; background: var(--navy); }
+  .hero__content { order: 1; padding: 40px var(--gutter) 40px; text-align: center; }
+  .hero__media { order: 2; position: relative; inset: auto; width: 100%; aspect-ratio: 16 / 9; }
+  .hero__overlay { display: none; }
+  .hero__video { object-position: 70% 50%; }
+  .hero__title, .hero__text { margin-left: auto; margin-right: auto; }
+  .hero__cta { display: flex; justify-content: center; }
+  .hero__trust { justify-content: center; }
+}
+
 @media (max-width: 767px) {
   .site-header { padding-top: 12px; }
   .site-header__logo img { height: 44px; }
-  /* Video als eigener Block unter dem Button, Text auf einfarbigem Navy wie auf der Liveseite */
-  .hero { min-height: auto; display: flex; flex-direction: column; background: var(--navy); }
-  .hero__content { order: 1; padding: 32px var(--gutter) 36px; text-align: center; }
+  .hero__content { padding: 32px var(--gutter) 36px; }
   /* Ausschnitt 5:4 und rechtsbündig: Tür und Kameras stehen mittig, leerer Rand links wird abgeschnitten */
-  .hero__media { order: 2; position: relative; inset: auto; width: 100%; aspect-ratio: 5 / 4; }
-  .hero__overlay { display: none; }
+  .hero__media { aspect-ratio: 5 / 4; }
   .hero__video { object-position: 100% 50%; }
-  .hero__title { font-size: 32px; margin-left: auto; margin-right: auto; }
+  .hero__title { font-size: 32px; }
   .hero__text { font-size: 18px; margin-left: auto; margin-right: auto; }
   .hero__cta { display: flex; justify-content: center; }
   .hero__trust { display: none; }  /* Liveseite blendet die Trust-Zeile mobil aus */

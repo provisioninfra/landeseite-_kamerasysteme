@@ -68,6 +68,7 @@ def spacer_col(pct):
 
 HIDE_MOBILE = {"hide_mobile": "hidden-mobile"}
 HIDE_DESKTOP = {"hide_desktop": "hidden-desktop", "hide_tablet": "hidden-tablet", "hide_laptop": "hidden-laptop"}
+HIDE_DESKTOP_ONLY = {"hide_desktop": "hidden-desktop", "hide_laptop": "hidden-laptop"}
 
 # ---------------------------------------------------------------- HERO
 hero_content = container(
@@ -79,7 +80,7 @@ hero_content = container(
              "pv-hero-text"),
         container({"css_classes": "pv-hero-cta"}, [button()]),
         # Mobil: Video als eigener Block unter dem Button
-        container({"css_classes": "pv-mvideo", **HIDE_DESKTOP}, [
+        container({"css_classes": "pv-mvideo", **HIDE_DESKTOP_ONLY}, [
             widget("video", {"video_type": "hosted", "hosted_url": {"url": HERO_VIDEO, "id": ""}, "autoplay": "yes", "mute": "yes", "play_on_mobile": "yes", "controls": "", "loop": "", "_css_classes": "pv-mvideo-widget"}),
         ]),
         # Trust-Zeile (Desktop)
