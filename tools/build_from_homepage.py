@@ -135,6 +135,8 @@ for k, v in ICON_OVERRIDES.items():
     ICONS[k] = (v["id"], v["url"])
 
 VIDEO, POSTER, PRODUKTE = MEDIA["video"], MEDIA["poster"], MEDIA["produkte"]
+VIDEO_DESKTOP = MEDIA.get("video_4k", VIDEO)        # Desktop-Hero: 4K-Version (KI-hochskaliert), falls vorhanden
+VIDEO_MOBILE = MEDIA.get("video_mobile", VIDEO)     # Handy-Block: kleinere Version
 
 page = []
 
@@ -146,7 +148,7 @@ hero = clone(H[1])
 must(hero, "9dcea29")["settings"]["title"] = HERO_H1
 must(hero, "e429076")["settings"]["title"] = HERO_SUB
 hs = hero["settings"]
-hs["background_video_link"] = VIDEO["url"]
+hs["background_video_link"] = VIDEO_DESKTOP["url"]
 hs["background_video_start"] = ""
 hs["background_video_end"] = ""            # ganzes Video abspielen, danach stehen bleiben (background_play_once bleibt "yes")
 hs["background_play_on_mobile"] = ""       # mobil einfarbig (eigenes Custom-CSS des Hero), Video folgt als Block unter dem Button
@@ -156,7 +158,7 @@ page.append(hero)
 # ---------------------------------------------------------------- 3) Mobiler Video-Block (Original-Block der Startseite, nur mobil)
 mvideo = clone(H[2])
 ms = mvideo["settings"]
-ms["background_video_link"] = VIDEO["url"]
+ms["background_video_link"] = VIDEO_MOBILE["url"]
 ms["background_video_start"] = ""
 ms["background_video_end"] = ""
 ms["background_video_fallback"] = {"url": POSTER["url"], "id": POSTER["id"], "size": "", "alt": "", "source": "library"}
