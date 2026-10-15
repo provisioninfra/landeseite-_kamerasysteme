@@ -5,6 +5,9 @@ Unabhängig vom WordPress/Elementor-System der Hauptseite und von anderen Projek
 
 ## Lokal ansehen
 
+Die Datei `index.html` lässt sich per Doppelklick öffnen. Chrome zeigt dann wegen einer
+Browser-Einschränkung die Ersatzschrift statt Poppins; mit einem lokalen Server stimmt alles:
+
 ```bash
 python3 -m http.server 8080
 # dann http://localhost:8080 im Browser öffnen
@@ -16,7 +19,7 @@ python3 -m http.server 8080
 - `assets/css/style.css` – Styles (Farben/Schrift wie Liveseite: Navy #010d30, Gelb #fbc91b, Poppins)
 - `assets/js/main.js` – Hero-Video-Steuerung, mobile Navigation, Scroll-Animationen der Ablauf-Sektion
 - `assets/js/lottie_light.min.js` – lottie-web 5.12.2, Light-Build (Timeline-Animation)
-- `assets/js/ablauf-timeline.json` – Lottie-Timeline der Startseite (Ablauf der Zusammenarbeit)
+- `assets/js/ablauf-timeline.js` – Lottie-Timeline der Startseite (Ablauf der Zusammenarbeit), wird bei Bedarf nachgeladen
 - `assets/video/hero.mp4` – Hero-Hintergrundvideo (siehe `assets/video/README.md`)
 - `assets/img/` – Logo, Google-Icon, Favicons
 - `assets/fonts/` – Poppins (lokal ausgeliefert, kein Abruf bei Google)

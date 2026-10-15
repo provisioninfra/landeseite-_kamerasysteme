@@ -1,12 +1,13 @@
 # Technik- und Skalierungs-Check vor dem Livegang
 
-Stand: 15.10.2026 · Geprüft wurde die statische Version (`index.html`) mit Chromium (Playwright),
-axe-core 4.10 (Barrierefreiheit) und html-validate 9.5 (HTML-Validität).
+Stand: 15.10.2026, zwei Prüfdurchgänge · Geprüft wurde die statische Version (`index.html`) mit
+Chromium (Playwright), axe-core 4.10 (Barrierefreiheit), html-validate 9.5 (HTML-Validität) und
+css-tree 3.1 (CSS-Syntax).
 
 ## Ergebnis in Kürze
 
-Die Seite ist technisch bereit für den Livegang. Alle gefundenen Punkte wurden behoben.
-Offen bleiben nur zwei inhaltliche Entscheidungen (siehe „Offene Punkte“).
+Die Seite ist technisch bereit für den Livegang. Alle gefundenen Punkte aus beiden Durchgängen
+wurden behoben. Offen bleiben nur zwei inhaltliche Entscheidungen (siehe „Offene Punkte“).
 
 | Bereich | Ergebnis |
 |---|---|
@@ -16,7 +17,9 @@ Offen bleiben nur zwei inhaltliche Entscheidungen (siehe „Offene Punkte“).
 | Barrierefreiheit (WCAG 2.1 AA + Best Practice) | 0 Verstöße auf Desktop und Mobil |
 | HTML-Validität | 1 Hinweis zu `autoplay` am Hintergrundvideo (beabsichtigt, stumm) |
 | Layoutverschiebung (CLS) | 0,00 |
-| Seitengewicht beim ersten Aufruf | ca. 1,0 MB (Video 360 KB, Timeline-Bibliothek 168 KB, Animation 114 KB) |
+| Seitengewicht beim ersten Aufruf | ca. 0,55 MB (Video 360 KB, Standbild 39 KB, CSS 17 KB, Schriften 31 KB); Timeline-Bibliothek und Animation (282 KB) laden erst kurz vor der Sektion |
+| CSS-Syntax | fehlerfrei (beide Stylesheets) |
+| Fehlerpfade (Animation, Video, Netz) | alle mit sichtbarem Fallback, keine JavaScript-Fehler |
 | Externe Abrufe | nur das ProvenExpert-Siegel (wie auf der Startseite) |
 | Schriften | Poppins lokal ausgeliefert, kein Abruf bei Google Fonts |
 
@@ -86,6 +89,49 @@ Geprüfte Breiten: 320, 360, 390, 414, 600, 768, 834, 1024, 1180, 1280, 1366, 14
 
 - Markup ist valide. Einziger Hinweis des Validators: `autoplay` am Video. Das ist für ein stummes
   Hintergrundvideo gängige Praxis und beabsichtigt.
+
+## Zweiter Durchgang: Debugging und Härtung
+
+Geprüft wurden gezielt Fehlerfälle und Randbedingungen, die beim normalen Betrachten nicht auffallen.
+
+| Szenario | Ergebnis |
+|---|---|
+| Timeline-Bibliothek lädt nicht (z. B. Adblocker, Netzfehler) | Fallback: schlichte Linie mit fünf Punkten, keine Fehler |
+| Animationsdaten laden nicht | gleicher Fallback, keine Fehler |
+| Video blockiert oder nicht abspielbar | animierte SVG-Szene erscheint, Seite bleibt vollständig |
+| Systemeinstellung „Bewegung reduzieren“ | alle Texte sofort sichtbar, Timeline im Endzustand |
+| Nur Tastatur | Sprunglink als erstes Ziel, Burger-Menü per Enter, Escape schließt und setzt Fokus zurück |
+| Seite per Doppelklick geöffnet (ohne Server, `file://`) | läuft inklusive Animation; nur Chrome blockiert lokale Schriftdateien und zeigt Ersatzschrift (Browser-Einschränkung, betrifft den Livebetrieb nicht) |
+| Langsames Netz (simuliertes 3G) | Überschrift und Standbild nach 2,3 s sichtbar, keine Fehler |
+| Fenstergröße mehrfach ändern und scrollen | keine Fehler, Zustand bleibt konsistent |
+
+**Gefunden und behoben im zweiten Durchgang**
+
+- **Bug im Stylesheet (schwerwiegend):** Ein nachträglich eingefügter Media-Block für sehr schmale Geräte
+  hatte den 767-px-Block vorzeitig geschlossen. Folge: Zwischen 390 und 767 px wurde das Desktop-Raster
+  der Ablauf-Sektion statt der mobilen Timeline angezeigt. Blockreihenfolge korrigiert, alle 13 Breiten erneut geprüft.
+- **Überschrift bei 320 px:** „Videoüberwachung“ ragte aus dem Textblock. Bis 360 px greifen jetzt
+  28 px Schriftgröße und automatische Silbentrennung; auf größeren Bildschirmen bleibt der Umbruch wie bisher.
+- **Hero zwischen 1024 und 1199 px:** Text lag noch über der Tür im Video. Das gestapelte Layout gilt jetzt
+  bis 1199 px, ab 1200 px ist der Fließtext auf die halbe Bildschirmbreite begrenzt und endet vor der Tür.
+- **Animation ohne Server:** Die Timeline-Daten lagen als JSON und wurden per Fetch geladen, was beim
+  Öffnen der Datei ohne Server scheitert. Die Daten liegen jetzt als Skriptdatei vor; Bibliothek und Daten
+  werden erst nachgeladen, wenn die Sektion in die Nähe kommt. Das spart beim ersten Aufruf rund 280 KB.
+- **Inline-Styles entfernt:** Die Spaltenzuordnung der Schritte läuft über Klassen, damit auch eine strenge
+  Content-Security-Policy nichts blockiert.
+- **Fokus-Darstellung:** Sichtbarer gelber Fokusring für Tastaturnutzer auf allen Links und Buttons.
+- **Fallback für ältere Safari-Versionen (vor 15):** `aspect-ratio` hat eine Ersatzlösung.
+- **Open-Graph-Bild:** Muss eine absolute Adresse sein, Platzhalter mit Hinweis eingetragen (in WordPress
+  übernimmt Yoast SEO das Vorschaubild).
+- **Elementor-Vorlage:** Die Website nutzt die zusätzlichen Breakpoints „Tablet extra“ (1280 px) und
+  „Laptop“ (1440 px). Die Sichtbarkeitsregeln der Vorlage berücksichtigen jetzt alle Stufen, sonst wäre der
+  mobile Video-Block auch auf Laptops erschienen.
+
+**Nicht prüfbar in dieser Umgebung**
+
+- Firefox und Safari (WebKit) sind hier nicht installiert. Verwendete Techniken sind in beiden seit
+  mehreren Jahren unterstützt (Flex, Grid, `aspect-ratio` mit Fallback, IntersectionObserver, CSS-Variablen).
+  Vor dem Livegang einmal auf einem iPhone in Safari und auf einem Android-Gerät in Chrome öffnen.
 
 ## Offene Punkte (inhaltlich, keine Technik)
 

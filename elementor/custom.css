@@ -3,12 +3,13 @@
    Farben/Schrift wie Startseite: Navy #010d30, Gelb #fbc91b, Poppins. */
 
 .pv-sec, .pv-sec .elementor-heading-title, .pv-sec .elementor-widget-text-editor { font-family: "Poppins", sans-serif; color: #fff; }
+.pv-sec .elementor-heading-title { overflow-wrap: anywhere; }
 .pv-sec .elementor-widget-text-editor p:last-child { margin-bottom: 0; }
 
 /* Hero */
 .pv-hero-content { max-width: 100%; }
 .pv-h1 .elementor-heading-title { font-size: 40px; line-height: 1.24; font-weight: 400; max-width: 640px; margin-bottom: 20px; }
-.pv-hero-text .elementor-widget-container { font-size: 17px; line-height: 1.55; max-width: 700px; }
+.pv-hero-text .elementor-widget-container { font-size: 17px; line-height: 1.55; max-width: min(700px, 50vw); }
 .pv-hero-text p { margin-bottom: 24px; }
 .pv-hero-cta { margin-top: 12px; }
 .pv-trust { margin-top: 44px; }
@@ -59,14 +60,15 @@
 .pv-tl-title .elementor-heading-title { font-size: 20px; line-height: 1.24; font-weight: 700; margin: 4px 0 6px; }
 .pv-tl-text .elementor-widget-container { font-size: 14px; line-height: 1.6; }
 
-/* Tablet und Mobil: kein Hintergrundvideo hinter dem Text, Video-Block unter dem Button */
-@media (max-width: 1024px) {
+/* Bis 1280 px (Tablet, kleine Laptops, Mobil): kein Hintergrundvideo hinter dem Text, Video-Block unter dem Button */
+@media (max-width: 1280px) {
   .pv-hero .elementor-background-video-container, .pv-hero > .elementor-background-overlay { display: none !important; }
   .pv-hero { background-color: #010d30 !important; }
   .pv-h1 .elementor-heading-title, .pv-hero-text .elementor-widget-container { text-align: center; margin-left: auto; margin-right: auto; }
   .pv-hero-cta { justify-content: center; align-items: center; }
   .pv-trust { justify-content: center; }
   .pv-mvideo video { aspect-ratio: 16 / 9; object-position: 70% 50%; }
+  .pv-hero-text .elementor-widget-container { max-width: 700px; }
 }
 
 /* Mobil */
@@ -82,4 +84,9 @@
   .pv-card-title .elementor-heading-title { font-size: 20px; }
   .pv-sec-cta { align-items: center; }
   .pv-ablauf-title .elementor-heading-title { font-size: 22px; }
+}
+
+/* Sehr schmale Geräte */
+@media (max-width: 360px) {
+  .pv-h1 .elementor-heading-title { font-size: 28px; hyphens: auto; -webkit-hyphens: auto; }
 }

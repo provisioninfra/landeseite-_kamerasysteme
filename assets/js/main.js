@@ -50,20 +50,37 @@
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !mobileNav.hasAttribute('hidden')) {
+        mobileNav.setAttribute('hidden', ''); toggle.setAttribute('aria-expanded', 'false'); toggle.focus();
+      }
+    });
     mobileNav.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () { mobileNav.setAttribute('hidden', ''); toggle.setAttribute('aria-expanded', 'false'); });
     });
   }
 
-  /* Ablauf: Lottie-Timeline an den Scroll binden (wie Elementor bind_to_scroll, Viewport 0–100 %) */
+  /* Ablauf: Lottie-Timeline an den Scroll binden (wie Elementor bind_to_scroll, Viewport 0–100 %).
+     Bibliothek und Animationsdaten werden erst geladen, wenn die Sektion in die Nähe kommt. */
   var lottieBox = document.querySelector('.ablauf__lottie');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (lottieBox && window.lottie && getComputedStyle(lottieBox).display !== 'none') {
-    var anim = window.lottie.loadAnimation({
-      container: lottieBox, renderer: 'svg', loop: false, autoplay: false,
-      path: lottieBox.getAttribute('data-lottie'),
-      rendererSettings: { preserveAspectRatio: 'xMidYMid meet' }
-    });
+  var loadScript = function (src, cb) {
+    var el = document.createElement('script');
+    el.src = src; el.async = true;
+    el.onload = function () { cb(null); };
+    el.onerror = function () { cb(new Error('Laden fehlgeschlagen: ' + src)); };
+    document.head.appendChild(el);
+  };
+  var initLottie = function () {
+    if (!window.lottie || !window.ABLAUF_TIMELINE) { lottieBox.classList.add('is-failed'); return; }
+    var anim;
+    try {
+      anim = window.lottie.loadAnimation({
+        container: lottieBox, renderer: 'svg', loop: false, autoplay: false,
+        animationData: window.ABLAUF_TIMELINE,
+        rendererSettings: { preserveAspectRatio: 'xMidYMid meet' }
+      });
+    } catch (e) { lottieBox.classList.add('is-failed'); return; }
     var ticking = false;
     var update = function () {
       ticking = false;
@@ -75,12 +92,32 @@
       if (total) anim.goToAndStop(Math.round(p * (total - 1)), true);
     };
     var onScroll = function () { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } };
+    anim.addEventListener('data_failed', function () { lottieBox.classList.add('is-failed'); });
     anim.addEventListener('DOMLoaded', function () {
       if (reduce) { anim.goToAndStop(anim.totalFrames - 1, true); return; }
       update();
       window.addEventListener('scroll', onScroll, { passive: true });
       window.addEventListener('resize', onScroll);
     });
+  };
+  if (lottieBox && getComputedStyle(lottieBox).display !== 'none') {
+    var started = false;
+    var startLottie = function () {
+      if (started) return; started = true;
+      loadScript(lottieBox.getAttribute('data-lottie-lib'), function (err) {
+        if (err) { lottieBox.classList.add('is-failed'); return; }
+        loadScript(lottieBox.getAttribute('data-lottie-data'), function (err2) {
+          if (err2) { lottieBox.classList.add('is-failed'); return; }
+          initLottie();
+        });
+      });
+    };
+    if ('IntersectionObserver' in window) {
+      var lio = new IntersectionObserver(function (entries) {
+        if (entries.some(function (e) { return e.isIntersecting; })) { lio.disconnect(); startLottie(); }
+      }, { rootMargin: '800px 0px' });
+      lio.observe(lottieBox);
+    } else { startLottie(); }
   }
 
   /* Ablauf: Einblendung der Texte (fadeInDown / fadeInUp) */

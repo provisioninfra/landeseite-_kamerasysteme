@@ -12,7 +12,8 @@
   <meta property="og:site_name" content="ProVision Infra">
   <meta property="og:title" content="Kamera- &amp; Videoüberwachung – ProVision Infra">
   <meta property="og:description" content="ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung – damit dein Gebäude rund um die Uhr geschützt ist.">
-  <meta property="og:image" content="assets/video/hero-poster.jpg">
+  <!-- og:image muss eine absolute URL sein: nach Veröffentlichung auf das hochgeladene Standbild zeigen lassen -->
+  <meta property="og:image" content="https://www.provision-infra.de/wp-content/uploads/hero-poster.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
   <link rel="icon" href="assets/img/favicon-192.png" sizes="192x192">
@@ -287,8 +288,9 @@
 
   <!--
     ABLAUF DER ZUSAMMENARBEIT (Original von der Startseite)
-    Desktop: Lottie-Timeline (assets/js/ablauf-timeline.json), an den Scroll gebunden wie auf der Liveseite
-             (Elementor "bind_to_scroll", Viewport 0–100 %). Texte im Zickzack, Einblendung fadeInDown / fadeInUp.
+    Desktop: Lottie-Timeline (assets/js/ablauf-timeline.js), an den Scroll gebunden wie auf der Liveseite
+             (Elementor "bind_to_scroll", Viewport 0–100 %). Bibliothek und Daten werden erst geladen,
+             wenn die Sektion in die Nähe des Bildschirms kommt. Texte im Zickzack, Einblendung fadeInDown / fadeInUp.
     Mobil:   vertikale Timeline mit Häkchen, Linie füllt sich beim Scrollen gelb.
   -->
   <section id="arbeiten" class="section section--ablauf">
@@ -298,28 +300,28 @@
       <!-- Desktop -->
       <div class="ablauf ablauf--desktop">
         <div class="ablauf__row ablauf__row--top">
-          <div class="ablauf__step reveal reveal--down" style="grid-column: 2">
+          <div class="ablauf__step ablauf__step--c2 reveal reveal--down">
             <h3>Termin vor Ort</h3>
             <p>Wir gehen gemeinsam durch dein Gebäude und schauen uns an, wie deine Zugänge aktuell organisiert sind. Dabei nehmen wir direkt Aufmaß von deinen Türen und Zutrittspunkten. Du bekommst direkt eine Einschätzung zum Kostenrahmen und eine Handlungsempfehlung.</p>
           </div>
-          <div class="ablauf__step reveal reveal--down" style="grid-column: 4">
+          <div class="ablauf__step ablauf__step--c4 reveal reveal--down">
             <h3>Umsetzung</h3>
             <p>Hier konfigurieren wir die Software, programmieren die Hardware und montieren alles im Objekt. Danach erfolgt die Inbetriebnahme und Übergabe an dich.</p>
           </div>
         </div>
 
-        <div class="ablauf__lottie" data-lottie="assets/js/ablauf-timeline.json" aria-hidden="true"></div>
+        <div class="ablauf__lottie" data-lottie-lib="assets/js/lottie_light.min.js" data-lottie-data="assets/js/ablauf-timeline.js" aria-hidden="true"></div>
 
         <div class="ablauf__row ablauf__row--bottom">
-          <div class="ablauf__step reveal reveal--up" style="grid-column: 1">
+          <div class="ablauf__step ablauf__step--c1 reveal reveal--up">
             <h3>Erstgespräch</h3>
             <p>Für eine Ersteinschätzung telefonieren wir kurz und schauen uns deine Situation an: Welche Probleme bestehen aktuell? Wo benötigst du Unterstützung? Wie schnell brauchst du deine Lösung?</p>
           </div>
-          <div class="ablauf__step reveal reveal--up" style="grid-column: 3">
+          <div class="ablauf__step ablauf__step--c3 reveal reveal--up">
             <h3>Planung deines Systems</h3>
             <p>Auf Basis des Termins erstellen unsere Experten dir ein fertiges Zutrittskonzept mit allen Komponenten und unserem Angebot, passend zu deinem Budget. Du möchtest noch etwas ändern? Wir passen deine Wünsche direkt gemeinsam im Termin an! Am Ende des Termins treffen wir gemeinsam die Entscheidung. Starten wir gemeinsam oder nicht?</p>
           </div>
-          <div class="ablauf__step reveal reveal--up" style="grid-column: 5">
+          <div class="ablauf__step ablauf__step--c5 reveal reveal--up">
             <h3>Übergabe &amp; Betreuung</h3>
             <p>Du bekommst eine kurze Einweisung und kannst das System direkt nutzen. Wenn du willst, übernehmen wir danach auch die Verwaltung für dich!</p>
           </div>
@@ -381,7 +383,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/lottie_light.min.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

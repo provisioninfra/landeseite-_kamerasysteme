@@ -66,9 +66,12 @@ def icon(fa, cls, view="default"):
 def spacer_col(pct):
     return container({"width": {"unit": "%", "size": pct, "sizes": []}})
 
+# Aktive Breakpoints auf provision-infra.de: mobile, tablet, tablet_extra (1280), laptop (1440), widescreen.
+# "desktop" ist in Elementor die Basis oberhalb des größten aktiven Breakpoints – daher jede Stufe einzeln ausblenden.
 HIDE_MOBILE = {"hide_mobile": "hidden-mobile"}
-HIDE_DESKTOP = {"hide_desktop": "hidden-desktop", "hide_tablet": "hidden-tablet", "hide_laptop": "hidden-laptop"}
-HIDE_DESKTOP_ONLY = {"hide_desktop": "hidden-desktop", "hide_laptop": "hidden-laptop"}
+HIDE_LARGE = {"hide_widescreen": "hidden-widescreen", "hide_desktop": "hidden-desktop", "hide_laptop": "hidden-laptop", "hide_tablet_extra": "hidden-tablet_extra"}
+HIDE_DESKTOP = dict(HIDE_LARGE, hide_tablet="hidden-tablet")      # nur Mobil sichtbar
+HIDE_DESKTOP_ONLY = dict(HIDE_LARGE)                               # Tablet und Mobil sichtbar
 
 # ---------------------------------------------------------------- HERO
 hero_content = container(

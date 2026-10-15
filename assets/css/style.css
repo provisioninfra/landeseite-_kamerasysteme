@@ -21,6 +21,8 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+h1, h2, h3 { overflow-wrap: anywhere; hyphens: manual; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
@@ -96,7 +98,7 @@ a { color: inherit; }
   font-size: 40px; line-height: 1.24; font-weight: 400;
 }
 .hero__title strong { font-weight: 700; }
-.hero__text { max-width: 700px; margin: 0 0 36px; font-size: 17px; line-height: 1.55; }
+.hero__text { max-width: min(700px, 50vw); margin: 0 0 36px; font-size: 17px; line-height: 1.55; }  /* endet vor der Tür im Video */
 
 .button {
   display: inline-flex; align-items: center; gap: 18px;
@@ -221,9 +223,18 @@ a { color: inherit; }
 .ablauf__row--top { grid-template-columns: 18% 26% 10.5% 29% 1fr; align-items: end; margin-bottom: 8px; }
 .ablauf__row--bottom { grid-template-columns: 27% 9.3% 28% 9.7% 26%; align-items: start; margin-top: 8px; }
 .ablauf__step { text-align: center; }
+.ablauf__step--c1 { grid-column: 1; } .ablauf__step--c2 { grid-column: 2; } .ablauf__step--c3 { grid-column: 3; }
+.ablauf__step--c4 { grid-column: 4; } .ablauf__step--c5 { grid-column: 5; }
 .ablauf__step h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.24; font-weight: 700; }
 .ablauf__step p { margin: 0 0 14px; font-size: 14px; line-height: 1.64; }
-.ablauf__lottie { width: 100%; aspect-ratio: 1440 / 179; }
+.ablauf__lottie { width: 100%; aspect-ratio: 1440 / 179; position: relative; }
+/* Fallback, falls die Animation nicht geladen werden kann: schlichte Linie mit fünf Punkten */
+.ablauf__lottie.is-failed::before { content: ""; position: absolute; left: 11.5%; right: 12%; top: 50%; height: 4px; margin-top: -2px; background: #172446; }
+.ablauf__lottie.is-failed::after {
+  content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 24px; margin-top: -12px;
+  background-image: radial-gradient(circle, var(--yellow) 10px, transparent 11px);
+  background-size: 19.1% 24px; background-position: 2% 0; background-repeat: repeat-x;
+}
 .ablauf__lottie svg { width: 100% !important; height: 100% !important; }
 .ablauf--mobile { display: none; }
 
@@ -265,8 +276,8 @@ a { color: inherit; }
   .site-nav__toggle { display: flex; }
   .site-header__inner { padding: 14px 24px; }
 }
-/* Tablet und Handy: Video als eigener Block unter dem Button, Text auf einfarbigem Navy */
-@media (max-width: 1023px) {
+/* Bis 1199 px (Tablet, kleine Laptops, Handy): Video als eigener Block unter dem Button, Text auf einfarbigem Navy */
+@media (max-width: 1199px) {
   .hero { min-height: auto; display: flex; flex-direction: column; background: var(--navy); }
   .hero__content { order: 1; padding: 40px var(--gutter) 40px; text-align: center; }
   .hero__media { order: 2; position: relative; inset: auto; width: 100%; aspect-ratio: 16 / 9; }
@@ -275,6 +286,14 @@ a { color: inherit; }
   .hero__title, .hero__text { margin-left: auto; margin-right: auto; }
   .hero__cta { display: flex; justify-content: center; }
   .hero__trust { justify-content: center; }
+  .hero__text { max-width: 700px; }
+}
+/* Fallback für Browser ohne aspect-ratio (Safari < 15) */
+@supports not (aspect-ratio: 1 / 1) {
+  .hero__media { height: auto; }
+  .hero__media::before { content: ""; display: block; padding-top: 56.25%; }
+  @media (max-width: 767px) { .hero__media::before { padding-top: 80%; } }
+  .ablauf__lottie::before { content: ""; display: block; padding-top: 12.43%; }
 }
 
 @media (max-width: 767px) {
@@ -305,4 +324,10 @@ a { color: inherit; }
   .ablauf__title { font-size: 22px; }
   .ablauf--desktop { display: none; }
   .ablauf--mobile { display: block; }
+}
+
+/* Sehr schmale Geräte */
+@media (max-width: 360px) {
+  .hero__title { font-size: 28px; hyphens: auto; -webkit-hyphens: auto; }
+  .hero__text { font-size: 17px; }
 }
