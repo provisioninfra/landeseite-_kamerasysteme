@@ -1,8 +1,17 @@
 # Hero-Video
 
-Lege hier die Datei `hero.mp4` ab (Format wie auf der Liveseite: MP4/H.264, stumm, ca. 4 Sekunden).
-Die Seite spielt das Video automatisch einmal ab und stoppt bei 3,5 Sekunden
-(einstellbar über `data-video-end` am `<section class="hero">` in `index.html`).
+- `hero.mp4` – Hintergrundvideo des Hero (H.264, 1280×720, stumm, ca. 9 s, aus `gemini_generated_video_25A97AA7.mov` konvertiert)
+- `hero.webm` – gleiche Datei als VP9/WebM (Fallback für Browser ohne H.264)
+- `hero-poster.jpg` – Standbild (letzter Frame), wird gezeigt, bis das Video geladen ist
 
-Solange keine Datei vorhanden ist, zeigt die Seite die animierte SVG-Szene
-(Kamera schwenkt, Status wechselt von Rot auf Grün).
+Die Seite spielt das Video automatisch einmal ab und bleibt auf dem letzten Bild stehen.
+Über `data-video-end` am `<section class="hero">` in `index.html` lässt sich eine frühere
+Stopp-Sekunde setzen (0 = bis zum Ende abspielen).
+
+Neues Video einbauen (Konvertierung ins Web-Format):
+
+```bash
+ffmpeg -i quelle.mov -an -c:v libx264 -pix_fmt yuv420p -crf 23 -movflags +faststart assets/video/hero.mp4
+ffmpeg -i assets/video/hero.mp4 -an -c:v libvpx-vp9 -crf 33 -b:v 0 assets/video/hero.webm
+ffmpeg -sseof -0.1 -i assets/video/hero.mp4 -frames:v 1 assets/video/hero-poster.jpg
+```

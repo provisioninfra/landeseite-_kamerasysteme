@@ -15,13 +15,13 @@ python3 -m http.server 8080
 - `index.html` – Seite (aktuell: Header + Hero, weitere Sektionen folgen)
 - `assets/css/style.css` – Styles (Farben/Schrift wie Liveseite: Navy #010d30, Gelb #fbc91b, Poppins)
 - `assets/js/main.js` – Hero-Video-Steuerung, mobile Navigation
-- `assets/video/hero.mp4` – eigenes Hero-Video hier ablegen (siehe `assets/video/README.md`)
+- `assets/video/hero.mp4` – Hero-Hintergrundvideo (siehe `assets/video/README.md`)
 - `assets/img/` – Logo, Google-Icon
 
 ## Hero-Animation
 
-Wie auf der Liveseite: Hintergrundvideo, autoplay, stumm, einmalig, stoppt bei 3,5 s.
-Ohne Video läuft eine animierte SVG-Szene (Kamera schwenkt, Status Rot → Grün).
+Wie auf der Liveseite: Hintergrundvideo, autoplay, stumm, einmalig, bleibt auf dem letzten Bild stehen.
+Falls das Video nicht geladen werden kann, läuft eine animierte SVG-Szene (Kamera schwenkt, Status Rot → Grün).
 
 ## Später in WordPress einbinden (Optionen)
 

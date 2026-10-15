@@ -6,21 +6,25 @@
   if (!hero) return;
 
   var video = hero.querySelector('.hero__video');
-  var src = hero.getAttribute('data-video');
   var end = parseFloat(hero.getAttribute('data-video-end')) || 0;
 
-  if (video && src) {
+  if (video) {
     video.muted = true;
     video.playsInline = true;
     video.autoplay = true;
     video.loop = false;
 
+    // Video vorhanden: sofort anzeigen (Poster bis zum ersten Frame), SVG-Szene nur bei Ladefehler.
+    hero.classList.add('has-video');
     video.addEventListener('loadeddata', function () {
-      hero.classList.add('has-video');
       var p = video.play();
-      if (p && p.catch) p.catch(function () { hero.classList.remove('has-video'); });
+      if (p && p.catch) p.catch(function () { /* Autoplay blockiert: Poster bleibt sichtbar */ });
     });
-    video.addEventListener('error', function () { hero.classList.remove('has-video'); });
+    // Bei mehreren <source> meldet der Browser den Fehler an der letzten Quelle.
+    var sources = video.querySelectorAll('source');
+    var fallback = function () { hero.classList.remove('has-video'); };
+    video.addEventListener('error', fallback);
+    if (sources.length) sources[sources.length - 1].addEventListener('error', fallback);
 
     if (end > 0) {
       video.addEventListener('timeupdate', function () {
@@ -29,10 +33,7 @@
     }
     video.addEventListener('ended', function () { video.pause(); });
 
-    // Datei nur laden, wenn sie wirklich existiert – sonst bleibt die SVG-Szene sichtbar.
-    fetch(src, { method: 'HEAD' }).then(function (r) {
-      if (r.ok) { video.src = src; video.load(); }
-    }).catch(function () { /* kein Video vorhanden: SVG-Szene bleibt */ });
+    video.load();
   }
 
   /* Mobile Navigation */

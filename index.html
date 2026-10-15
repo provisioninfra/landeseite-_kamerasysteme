@@ -42,14 +42,17 @@
   <!--
     HERO
     Animationslogik wie auf der Liveseite (Elementor-Container mit Video-Hintergrund):
-    - Video startet automatisch, stumm, einmalig, auch auf dem Handy
-    - Video stoppt bei data-video-end (Sekunden) und bleibt auf dem letzten Bild stehen
-    - Solange kein Video in assets/video/hero.mp4 liegt (oder bis es geladen ist),
-      läuft die animierte SVG-Szene: Kamera schwenkt, Status wechselt von Rot auf Grün.
+    - Video (assets/video/hero.mp4, Fallback hero.webm) startet automatisch, stumm, einmalig, auch auf dem Handy
+    - data-video-end = Sekunde, bei der das Video stehen bleibt (0 = bis zum Ende abspielen)
+    - hero-poster.jpg wird gezeigt, bis das Video geladen ist bzw. falls Autoplay blockiert wird
+    - Nur wenn das Video nicht geladen werden kann, läuft die animierte SVG-Ersatzszene.
   -->
-  <section class="hero" data-video="assets/video/hero.mp4" data-video-end="3.5">
+  <section class="hero has-video" data-video-end="0">
     <div class="hero__media" aria-hidden="true">
-      <video class="hero__video" muted playsinline preload="auto"></video>
+      <video class="hero__video" muted playsinline autoplay preload="auto" poster="assets/video/hero-poster.jpg">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+        <source src="assets/video/hero.webm" type="video/webm">
+      </video>
 
       <!-- Animierte Ersatz-Szene (CSS/SVG) -->
       <div class="hero__scene">
