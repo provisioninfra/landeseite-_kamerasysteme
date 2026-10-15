@@ -28,9 +28,9 @@ a { color: inherit; }
 
 /* ---------- Header ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 20;
+  position: relative; z-index: 20;   /* bleibt oben auf der Seite, scrollt nicht mit (wie Startseite) */
   padding: 20px var(--gutter) 0;
-  background: var(--navy);   /* verhindert, dass Inhalt beim Scrollen über der Pille durchscheint */
+  background: var(--navy);
 }
 .site-header__inner {
   max-width: var(--container); margin: 0 auto;
