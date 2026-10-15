@@ -152,7 +152,7 @@ hs["background_video_link"] = VIDEO_DESKTOP["url"]
 hs["background_video_start"] = ""
 hs["background_video_end"] = ""            # ganzes Video abspielen, danach stehen bleiben (background_play_once bleibt "yes")
 hs["background_play_on_mobile"] = ""       # mobil einfarbig (eigenes Custom-CSS des Hero), Video folgt als Block unter dem Button
-hs["background_video_fallback"] = {"url": POSTER["url"], "id": POSTER["id"], "size": "", "alt": "", "source": "library"}  # Standbild, bis das Video geladen ist
+hs.pop("background_video_fallback", None)   # kein Ersatzbild: es würde mobil hinter dem Text erscheinen (einfarbig per Custom-CSS des Hero)
 page.append(hero)
 
 # ---------------------------------------------------------------- 3) Mobiler Video-Block (Original-Block der Startseite, nur mobil)
@@ -217,6 +217,11 @@ for i, img in enumerate(PRODUKTE, 1):
         },
     }]
     car["elements"].append(s)
+def slider_spacing(sec):
+    """Pfeile und Punkte liegen 136 px unter dem Carousel (Tablet/Handy): Sektion unten entsprechend auspolstern."""
+    sec["settings"]["padding_tablet"] = {"unit": "px", "top": "50", "right": "20", "bottom": "150", "left": "50", "isLinked": False}
+    sec["settings"]["padding_mobile"] = {"unit": "px", "top": "10", "right": "10", "bottom": "150", "left": "10", "isLinked": False}
+slider_spacing(slider)
 slider["settings"]["_element_id"] = "produkte"
 slider["settings"]["_title"] = "Produkt-Slider"
 reid(slider)
@@ -295,8 +300,10 @@ diff["settings"].update({"_element_id": "unterschiede", "_title": "Fünf Untersc
                          "flex_gap": {"column": "20", "row": "20", "isLinked": True, "unit": "px", "size": 20}})
 page.append(diff)
 
-# ---------------------------------------------------------------- 8) Kundenstimmen (Original)
-page.append(clone(H[5]))
+# ---------------------------------------------------------------- 8) Kundenstimmen (Original, mit Platz für die Pfeile)
+kunden = clone(H[5])
+slider_spacing(kunden)
+page.append(kunden)
 
 # ---------------------------------------------------------------- 9) Ablauf der Zusammenarbeit (Original, Kamera-Texte)
 ablauf = clone(H[14])

@@ -561,14 +561,7 @@
     "background_play_once": "yes",
     "background_video_end": "",
     "custom_css": "@media (max-width: 767px) {\n  .elementor-element-0f0c707 {\n    background: #000b2c; /* or your desired image/color */\n  }\n\n  .elementor-element-0f0c707 .elementor-background-video-container {\n    display: none !important;\n  }\n}",
-    "background_video_start": "",
-    "background_video_fallback": {
-     "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-standbild.jpg",
-     "id": 4306,
-     "size": "",
-     "alt": "",
-     "source": "library"
-    }
+    "background_video_start": ""
    },
    "elements": [
     {
@@ -3152,7 +3145,7 @@
      "unit": "px",
      "top": "50",
      "right": "20",
-     "bottom": "0",
+     "bottom": "150",
      "left": "50",
      "isLinked": false
     },
@@ -3165,7 +3158,7 @@
      "unit": "px",
      "top": "10",
      "right": "10",
-     "bottom": "0",
+     "bottom": "150",
      "left": "10",
      "isLinked": false
     },
@@ -6535,7 +6528,7 @@
      "unit": "px",
      "top": "50",
      "right": "20",
-     "bottom": "0",
+     "bottom": "150",
      "left": "50",
      "isLinked": false
     },
@@ -6548,7 +6541,7 @@
      "unit": "px",
      "top": "10",
      "right": "10",
-     "bottom": "0",
+     "bottom": "150",
      "left": "10",
      "isLinked": false
     },
