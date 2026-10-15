@@ -1691,13 +1691,13 @@
     },
     "min_height_mobile": {
      "unit": "px",
-     "size": 430,
+     "size": 330,
      "sizes": []
     },
     "background_background": "video",
     "background_video_link": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video.mp4",
     "background_play_on_mobile": "yes",
-    "custom_css": "@media (min-width: 475px) and (max-width: 787px) {\nselector{\n    min-height: 700px;\n}\n    \n    \n}",
+    "custom_css": "@media (min-width: 475px) and (max-width: 767px) {\nselector { min-height: 470px; }\n}\n@media (max-width: 767px) {\nselector video.elementor-background-video-hosted {\n  left: auto !important;\n  right: 0 !important;\n  transform: translateY(-50%) !important;\n}\n}",
     "margin_mobile": {
      "unit": "px",
      "top": "-50",
@@ -3145,7 +3145,7 @@
      "unit": "px",
      "top": "50",
      "right": "20",
-     "bottom": "150",
+     "bottom": "90",
      "left": "50",
      "isLinked": false
     },
@@ -3158,7 +3158,7 @@
      "unit": "px",
      "top": "10",
      "right": "10",
-     "bottom": "150",
+     "bottom": "90",
      "left": "10",
      "isLinked": false
     },
@@ -3870,13 +3870,13 @@
     },
     "padding_mobile": {
      "unit": "px",
-     "top": "40",
+     "top": "50",
      "right": "20",
-     "bottom": "40",
+     "bottom": "50",
      "left": "20",
      "isLinked": false
     },
-    "background_color": "#000B2E",
+    "background_color": "#010A2C",
     "background_color_stop_mobile": {
      "unit": "%",
      "size": 100
@@ -3886,10 +3886,9 @@
      "unit": "%",
      "size": 100
     },
-    "css_classes": "shadeup",
-    "custom_css": "@media (max-width: 767px) {\r\n  selector::before {\r\n    top: 0;\r\n    height: 100px;\r\n    background: linear-gradient(to bottom, #030F29, transparent) !important;\r\n  }\r\n}",
     "_element_id": "unterschiede",
     "_title": "Fünf Unterschiede",
+    "background_background": "classic",
     "flex_gap": {
      "column": "20",
      "row": "20",
@@ -3964,9 +3963,10 @@
       "align_mobile": "center",
       "_element_custom_width_mobile": {
        "unit": "%",
-       "size": 88,
+       "size": 100,
        "sizes": []
-      }
+      },
+      "_flex_align_self": "center"
      },
      "elements": [],
      "widgetType": "heading"
@@ -6528,7 +6528,7 @@
      "unit": "px",
      "top": "50",
      "right": "20",
-     "bottom": "150",
+     "bottom": "90",
      "left": "50",
      "isLinked": false
     },
@@ -6541,7 +6541,7 @@
      "unit": "px",
      "top": "10",
      "right": "10",
-     "bottom": "150",
+     "bottom": "90",
      "left": "10",
      "isLinked": false
     },
@@ -32398,6 +32398,49 @@
     }
    ],
    "isInner": false
+  },
+  {
+   "id": "766794d",
+   "elType": "container",
+   "isInner": false,
+   "elements": [
+    {
+     "id": "a202bdb",
+     "elType": "widget",
+     "widgetType": "html",
+     "elements": [],
+     "isInner": false,
+     "settings": {
+      "html": "<script>\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) return;\n  function steuern(id) {\n    var bereich = document.querySelector('.elementor-element-' + id);\n    if (!bereich) return;\n    var video = bereich.querySelector('video.elementor-background-video-hosted');\n    if (!video) return;\n    var warAusserhalb = false;\n    video.loop = false;\n    video.addEventListener('ended', function () {\n      // nach Elementors eigenem Ausblenden wieder einblenden: letztes Bild bleibt stehen\n      setTimeout(function () { video.style.display = ''; }, 0);\n    });\n    if (!('IntersectionObserver' in window)) return;\n    new IntersectionObserver(function (eintraege) {\n      eintraege.forEach(function (e) {\n        if (!e.isIntersecting) { warAusserhalb = true; return; }\n        if (!warAusserhalb) return;\n        warAusserhalb = false;\n        video.style.display = '';\n        try { video.currentTime = 0; } catch (err) {}\n        var p = video.play();\n        if (p && p.catch) p.catch(function () {});\n      });\n    }, { threshold: 0 }).observe(bereich);\n  }\n  function start() {\n    ['0f0c707', 'd135e80'].forEach(steuern);   // Hero (Desktop/Tablet) und Video-Block (Handy)\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();\n  // Elementor initialisiert Hintergrundvideos erst nach dem Laden seiner Skripte: Steuerung dann erneut anbinden\n  window.addEventListener('load', function () { setTimeout(start, 800); });\n})();\n</script>",
+      "_title": "Steuerung Hintergrundvideo"
+     }
+    }
+   ],
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": false
+    },
+    "margin": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": false
+    },
+    "min_height": {
+     "unit": "px",
+     "size": 0,
+     "sizes": []
+    },
+    "_title": "Steuerung Hintergrundvideo"
+   }
   }
  ],
  "page_settings": {
@@ -32407,7 +32450,7 @@
   "__globals__": {
    "background_color": ""
   },
-  "custom_css": "html, body {\n  max-width: 100%;\n  overflow-x: clip;\n}\n\n.shadeup {\n  position: relative;\n}\n\n.shadeup::before {\n  content: \"\";\n  position: absolute;\n  top: -10px;\n  left: 0;\n  width: 100%;\n  height: 30px;\n  background: linear-gradient(to bottom, transparent 0%, #010c2d 0%, transparent 100%);\n  pointer-events: none;\n  z-index: 10;\n}\n"
+  "custom_css": "html, body {\n  max-width: 100%;\n  overflow-x: clip;\n}\n\n.shadeup {\n  position: relative;\n}\n\n.shadeup::before {\n  content: \"\";\n  position: absolute;\n  top: -10px;\n  left: 0;\n  width: 100%;\n  height: 30px;\n  background: linear-gradient(to bottom, transparent 0%, #010c2d 0%, transparent 100%);\n  pointer-events: none;\n  z-index: 10;\n}\n\n/* Hintergrundvideo nach dem Ende nicht ausblenden: letztes Bild bleibt stehen */\n.elementor-element-0f0c707 video.elementor-background-video-hosted,\n.elementor-element-d135e80 video.elementor-background-video-hosted {\n  display: block !important;\n}\n"
  },
  "version": "0.4",
  "title": "Landingpage Kamera- & Videoüberwachung",

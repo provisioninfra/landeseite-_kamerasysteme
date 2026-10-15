@@ -167,6 +167,18 @@ for k in list(ms.keys()):
         del ms[k]
 ms.update(hide_all_but_mobile())
 ms["_title"] = "Hero-Video (nur mobil)"
+# Bildausschnitt: Video rechtsbündig, Blockhöhe so, dass Kameras und Tür komplett im Bild sind (Video ist 16:9).
+ms["min_height_mobile"] = {"unit": "px", "size": 330, "sizes": []}
+ms["custom_css"] = """@media (min-width: 475px) and (max-width: 767px) {
+selector { min-height: 470px; }
+}
+@media (max-width: 767px) {
+selector video.elementor-background-video-hosted {
+  left: auto !important;
+  right: 0 !important;
+  transform: translateY(-50%) !important;
+}
+}"""
 page.append(mvideo)
 
 # ---------------------------------------------------------------- 4) Mobile Bewertungszeile (Original)
@@ -219,8 +231,8 @@ for i, img in enumerate(PRODUKTE, 1):
     car["elements"].append(s)
 def slider_spacing(sec):
     """Pfeile und Punkte liegen 136 px unter dem Carousel (Tablet/Handy): Sektion unten entsprechend auspolstern."""
-    sec["settings"]["padding_tablet"] = {"unit": "px", "top": "50", "right": "20", "bottom": "150", "left": "50", "isLinked": False}
-    sec["settings"]["padding_mobile"] = {"unit": "px", "top": "10", "right": "10", "bottom": "150", "left": "10", "isLinked": False}
+    sec["settings"]["padding_tablet"] = {"unit": "px", "top": "50", "right": "20", "bottom": "90", "left": "50", "isLinked": False}
+    sec["settings"]["padding_mobile"] = {"unit": "px", "top": "10", "right": "10", "bottom": "90", "left": "10", "isLinked": False}
 slider_spacing(slider)
 slider["settings"]["_element_id"] = "produkte"
 slider["settings"]["_title"] = "Produkt-Slider"
@@ -236,6 +248,8 @@ col_tpl = must(H[4], "9148472")
 btn_tpl = must(H[12], "c7ed38d")
 
 d_heading = clone(heading_tpl); d_heading["settings"]["title"] = DIFF_H; d_heading["settings"]["_title"] = "Fünf Unterschiede"
+d_heading["settings"]["_element_custom_width_mobile"] = {"unit": "%", "size": 100, "sizes": []}   # mittig auf dem Handy
+d_heading["settings"]["_flex_align_self"] = "center"
 d_intro = clone(text_tpl)
 d_intro["settings"].update({"editor": DIFF_INTRO, "align": "center", "align_mobile": "center",
                             "_element_custom_width": {"unit": "%", "size": 70, "sizes": []},
@@ -295,8 +309,13 @@ cta = container({"flex_direction": "column", "flex_align_items": "center",
 
 diff = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(sec_tpl["settings"]),
         "elements": [reid(d_heading), reid(d_intro), col, cta]}
+# Kein Verlaufs-Overlay am oberen Rand (würde die Überschrift abdunkeln) und gleiche Hintergrundfarbe wie der Slider,
+# damit der Übergang ohne sichtbare Kante bleibt.
+diff["settings"].pop("custom_css", None)
+diff["settings"].pop("css_classes", None)
 diff["settings"].update({"_element_id": "unterschiede", "_title": "Fünf Unterschiede",
-                         "padding": box(60, 20, 60, 20), "padding_mobile": box(40, 20, 40, 20),
+                         "background_background": "classic", "background_color": "#010A2C",
+                         "padding": box(60, 20, 60, 20), "padding_mobile": box(50, 20, 50, 20),
                          "flex_gap": {"column": "20", "row": "20", "isLinked": True, "unit": "px", "size": 20}})
 page.append(diff)
 
@@ -339,6 +358,51 @@ page.append(faq)
 page.append(clone(H[21]))
 page.append(clone(H[22]))
 
+# ---------------------------------------------------------------- 13) Steuerung der Hintergrundvideos
+# Elementor blendet ein "einmal abgespieltes" Video nach dem Ende aus. Gewünscht: letztes Bild bleibt stehen,
+# und sobald der Bereich aus dem Bild gescrollt war und wieder sichtbar wird, läuft das Video erneut.
+VIDEO_SCRIPT = """<script>
+(function () {
+  if (document.body.classList.contains('elementor-editor-active')) return;
+  function steuern(id) {
+    var bereich = document.querySelector('.elementor-element-' + id);
+    if (!bereich) return;
+    var video = bereich.querySelector('video.elementor-background-video-hosted');
+    if (!video) return;
+    var warAusserhalb = false;
+    video.loop = false;
+    video.addEventListener('ended', function () {
+      // nach Elementors eigenem Ausblenden wieder einblenden: letztes Bild bleibt stehen
+      setTimeout(function () { video.style.display = ''; }, 0);
+    });
+    if (!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (eintraege) {
+      eintraege.forEach(function (e) {
+        if (!e.isIntersecting) { warAusserhalb = true; return; }
+        if (!warAusserhalb) return;
+        warAusserhalb = false;
+        video.style.display = '';
+        try { video.currentTime = 0; } catch (err) {}
+        var p = video.play();
+        if (p && p.catch) p.catch(function () {});
+      });
+    }, { threshold: 0 }).observe(bereich);
+  }
+  function start() {
+    ['0f0c707', 'd135e80'].forEach(steuern);   // Hero (Desktop/Tablet) und Video-Block (Handy)
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+  // Elementor initialisiert Hintergrundvideos erst nach dem Laden seiner Skripte: Steuerung dann erneut anbinden
+  window.addEventListener('load', function () { setTimeout(start, 800); });
+})();
+</script>"""
+steuerung = {"id": new_id(), "elType": "container", "isInner": False, "elements": [{
+    "id": new_id(), "elType": "widget", "widgetType": "html", "elements": [], "isInner": False,
+    "settings": {"html": VIDEO_SCRIPT, "_title": "Steuerung Hintergrundvideo"},
+}], "settings": {"content_width": "full", "padding": box(0, 0, 0, 0), "margin": box(0, 0, 0, 0),
+                 "min_height": {"unit": "px", "size": 0, "sizes": []}, "_title": "Steuerung Hintergrundvideo"}}
+page.append(steuerung)
+
 # ---------------------------------------------------------------- Seiteneinstellungen (wie Startseite)
 PAGE_CSS = """html, body {
   max-width: 100%;
@@ -359,6 +423,12 @@ PAGE_CSS = """html, body {
   background: linear-gradient(to bottom, transparent 0%, #010c2d 0%, transparent 100%);
   pointer-events: none;
   z-index: 10;
+}
+
+/* Hintergrundvideo nach dem Ende nicht ausblenden: letztes Bild bleibt stehen */
+.elementor-element-0f0c707 video.elementor-background-video-hosted,
+.elementor-element-d135e80 video.elementor-background-video-hosted {
+  display: block !important;
 }
 """
 settings = {"template": "default", "background_background": "classic", "background_color": "#010D30",
