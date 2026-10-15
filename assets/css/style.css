@@ -86,7 +86,7 @@ a { color: inherit; }
   font-size: 40px; line-height: 1.24; font-weight: 400;
 }
 .hero__title strong { font-weight: 700; }
-.hero__text { max-width: 920px; margin: 0 0 36px; font-size: 17px; line-height: 1.55; }
+.hero__text { max-width: 700px; margin: 0 0 36px; font-size: 17px; line-height: 1.55; }
 
 .button {
   display: inline-flex; align-items: center; gap: 18px;
@@ -167,9 +167,12 @@ a { color: inherit; }
 @media (max-width: 767px) {
   .site-header { padding-top: 12px; }
   .site-header__logo img { height: 44px; }
-  .hero { min-height: auto; }
-  .hero__overlay { background: linear-gradient(180deg, rgba(1,13,48,.92) 0%, rgba(1,13,48,.75) 60%, rgba(1,13,48,.35) 100%); }
-  .hero__content { padding: 32px var(--gutter) 56px; text-align: center; }
+  /* Video als eigener Block unter dem Button, Text auf einfarbigem Navy wie auf der Liveseite */
+  .hero { min-height: auto; display: flex; flex-direction: column; background: var(--navy); }
+  .hero__content { order: 1; padding: 32px var(--gutter) 36px; text-align: center; }
+  .hero__media { order: 2; position: relative; inset: auto; width: 100%; aspect-ratio: 16 / 9; }
+  .hero__overlay { display: none; }
+  .hero__video { object-position: 50% 50%; }
   .hero__title { font-size: 32px; margin-left: auto; margin-right: auto; }
   .hero__text { font-size: 18px; margin-left: auto; margin-right: auto; }
   .hero__cta { display: flex; justify-content: center; }
