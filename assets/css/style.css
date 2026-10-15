@@ -170,9 +170,10 @@ a { color: inherit; }
   /* Video als eigener Block unter dem Button, Text auf einfarbigem Navy wie auf der Liveseite */
   .hero { min-height: auto; display: flex; flex-direction: column; background: var(--navy); }
   .hero__content { order: 1; padding: 32px var(--gutter) 36px; text-align: center; }
-  .hero__media { order: 2; position: relative; inset: auto; width: 100%; aspect-ratio: 16 / 9; }
+  /* Ausschnitt 5:4 und rechtsbündig: Tür und Kameras stehen mittig, leerer Rand links wird abgeschnitten */
+  .hero__media { order: 2; position: relative; inset: auto; width: 100%; aspect-ratio: 5 / 4; }
   .hero__overlay { display: none; }
-  .hero__video { object-position: 50% 50%; }
+  .hero__video { object-position: 100% 50%; }
   .hero__title { font-size: 32px; margin-left: auto; margin-right: auto; }
   .hero__text { font-size: 18px; margin-left: auto; margin-right: auto; }
   .hero__cta { display: flex; justify-content: center; }
