@@ -50,9 +50,14 @@ nachfragen oder mir Bescheid geben.
 ## Schritt 3: Die Vorlage importieren (5 Minuten)
 
 1. Links im Menü auf **Vorlagen** (Menüpunkt von Elementor) → **Gespeicherte Vorlagen** klicken.
-2. Oben auf den Button **Vorlagen importieren** klicken.
-3. **Datei auswählen** → `landingpage-kamerasysteme.json` → **Jetzt importieren**.
-4. In der Liste erscheint jetzt der Eintrag **„Landingpage Kamera- & Videoüberwachung“**.
+2. Falls dort schon eine ältere Version von **„Landingpage Kamera- & Videoüberwachung“** liegt:
+   mit der Maus darüberfahren → **In den Papierkorb**. Sonst gibt es später zwei gleichnamige Einträge.
+3. Oben auf den Button **Vorlagen importieren** klicken.
+4. **Datei auswählen** → `landingpage-kamerasysteme.json` → **Jetzt importieren**.
+5. In der Liste erscheint jetzt der Eintrag **„Landingpage Kamera- & Videoüberwachung“**.
+
+Das Design (Farben, Schriften, Rahmen, Abstände) ist fest in den einzelnen Elementen der Vorlage
+hinterlegt. Es kommt also in jedem Fall mit, egal wie du die Nachfrage in Schritt 4 beantwortest.
 
 Wenn beim Import eine Fehlermeldung erscheint: Den genauen Text der Meldung abfotografieren oder
 kopieren und mir schicken. Dann passe ich die Datei an.
@@ -68,10 +73,13 @@ kopieren und mir schicken. Dann passe ich die Datei an.
    Darauf klicken.
 5. Im Fenster oben auf den Reiter **Meine Vorlagen** wechseln.
 6. Bei **„Landingpage Kamera- & Videoüberwachung“** auf **Einfügen** klicken.
-   Falls gefragt wird, ob die Dokumenteinstellungen übernommen werden sollen: **Ja** anklicken.
-   Dadurch kommt das Styling der Seite mit.
-7. Die Seite ist jetzt vollständig aufgebaut. Unten links auf **Aktualisieren** bzw.
-   **Als Entwurf speichern** klicken (der kleine Pfeil neben dem grünen Button zeigt die Option).
+   Falls gefragt wird, ob die Einstellungen der Vorlage übernommen werden sollen: **Ja** anklicken.
+   Damit kommen Seitenlayout „Volle Breite“ und der dunkle Seitenhintergrund gleich mit.
+7. Die Seite ist jetzt vollständig aufgebaut und sieht bereits so aus wie die Vorschau aus dem
+   Projekt. Unten links auf **Aktualisieren** bzw. **Als Entwurf speichern** klicken (der kleine
+   Pfeil neben dem grünen Button zeigt die Option).
+8. Wenn Texte zwar da sind, aber noch nicht im Design erscheinen: Im Backend unter
+   **Elementor → Werkzeuge → CSS regenerieren** klicken und die Seite neu laden.
 
 ---
 
@@ -86,7 +94,7 @@ Die Vorlage weiß noch nicht, wo dein Video liegt. Das trägst du jetzt an zwei 
    Auf dieses Griff-Symbol klicken. Links öffnet sich das Bedienfeld des Containers.
 2. Oben im Bedienfeld auf den Reiter **Stil** klicken.
 3. Unter **Hintergrund** ist der Typ **Video** bereits gewählt. Im Feld **Video-Link** steht ein
-   Platzhalter. Diesen durch die URL aus Schritt 2 ersetzen.
+   Platzhalter (`…/uploads/hero.mp4`). Diesen durch die URL aus Schritt 2 ersetzen.
 4. Darunter bleibt **Einmal abspielen** eingeschaltet. Das sorgt dafür, dass das Video wie auf der
    Startseite einmal durchläuft und dann stehen bleibt.
 
@@ -94,8 +102,8 @@ Die Vorlage weiß noch nicht, wo dein Video liegt. Das trägst du jetzt an zwei 
 
 1. Im Editor oben links auf das **Monitor-Symbol** (Responsive-Modus) klicken und **Mobil** wählen.
 2. Nun erscheint unter dem gelben Button ein **Video-Widget**. Darauf klicken.
-3. Links unter **Video → Quelle** steht **Selbst gehostet**. Im Feld **URL** wieder die URL aus
-   Schritt 2 eintragen.
+3. Links unter **Video → Quelle** steht **Selbst gehostet**. Das Feld **URL** ist noch leer.
+   Hier die URL aus Schritt 2 eintragen (oder über **Medien auswählen** das Video aus der Mediathek wählen).
 4. Wieder auf **Desktop** zurückschalten.
 
 Unten links auf **Aktualisieren** klicken.
@@ -201,7 +209,10 @@ und als Link die neue Adresse eintragen.
 |---|---|
 | Vorlage erscheint nicht unter „Meine Vorlagen“ | Seite im Browser neu laden. Falls weiterhin nicht: Import wiederholen. |
 | Video läuft nicht | URL in beiden Stellen prüfen (Schritt 5). Die URL muss mit `.mp4` enden. |
-| Texte sehen anders aus als in der Vorschau aus dem Projekt | Beim Einfügen der Vorlage wurde „Dokumenteinstellungen übernehmen“ verneint. Die Vorlage erneut einfügen und mit **Ja** bestätigen. |
+| Design fehlt komplett (weißer Hintergrund, Standardschrift) | Es wurde noch die alte Vorlagen-Datei verwendet. Alte Vorlage unter Gespeicherte Vorlagen löschen, aktuelle `landingpage-kamerasysteme.json` importieren, Seite neu einfügen. |
+| Texte sind da, Feinheiten fehlen (Icon-Kacheln, Timeline-Linie) | **Elementor → Werkzeuge → CSS regenerieren**, dann Seite neu laden. Falls weiterhin: beim Einfügen die Nachfrage mit **Ja** bestätigen. |
+| Seitenhintergrund ist weiß statt dunkelblau | Zahnrad unten links → **Stil** → **Hintergrund** → Farbe `#010D30`. Oder beim Einfügen die Nachfrage mit **Ja** bestätigen. |
+| Timeline-Animation im Ablauf fehlt | Das Lottie-Widget anklicken → Quelle **Externe URL** → Link prüfen. Er zeigt auf die Animationsdatei der Startseite in deiner Mediathek. |
 | Seite sieht auf dem Handy seltsam aus | Browser-Cache leeren oder privates Fenster nutzen. Zusätzlich im Backend unter **Elementor → Werkzeuge → CSS regenerieren** klicken. |
 | Logo und Menü fehlen oben | Schritt 6: Seitenlayout auf **Elementor Volle Breite** stellen. |
 

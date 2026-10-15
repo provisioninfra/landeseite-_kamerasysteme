@@ -17,11 +17,45 @@ OUT = ROOT / "elementor" / "landingpage-kamerasysteme.json"
 # --- Medien auf provision-infra.de (bereits in der WordPress-Mediathek vorhanden) ---
 SITE = "https://provision-infra.de"
 MEDIA_GOOGLE = {"url": f"{SITE}/wp-content/uploads/2026/05/Frame-8-e1779423443644.png", "id": 397}
-MEDIA_LOTTIE = {"url": f"{SITE}/wp-content/uploads/2026/05/lp10754-provision-infra-gmbh-L9-desktop-V01.json", "id": 1454, "source": "library"}
+LOTTIE_URL = f"{SITE}/wp-content/uploads/2026/05/lp10754-provision-infra-gmbh-L9-desktop-V01.json"  # liegt bereits in der Mediathek
 PROVEN_IMG = "https://images.provenexpert.com/96/14/0396ae496297f4d88e04693bdb8f/widget_landscape_300_de_0.png"
-# Hero-Video: nach dem Upload in die Mediathek hier bzw. im Editor die URL eintragen
+# Hero-Video: nach dem Upload in die Mediathek im Editor die URL eintragen (Hintergrund des Hero-Containers
+# und Video-Widget unter dem Button). Der Platzhalter unten gilt nur für den Hintergrund-Link.
 HERO_VIDEO = f"{SITE}/wp-content/uploads/hero.mp4"
 KONTAKT = f"{SITE}/kontakt"
+
+# ---------------------------------------------------------------- Design (Farben/Schrift wie Startseite)
+NAVY = "#010D30"; YELLOW = "#FBC91B"; INK = "#2B2B2B"; WHITE = "#FFFFFF"
+
+def typo(size=None, weight=None, lh=None, size_mobile=None, prefix=""):
+    """Typografie-Einstellungen eines Widgets (Poppins), optional mit Mobil-Größe."""
+    d = {f"{prefix}typography_typography": "custom", f"{prefix}typography_font_family": "Poppins"}
+    if size: d[f"{prefix}typography_font_size"] = {"unit": "px", "size": size, "sizes": []}
+    if size_mobile: d[f"{prefix}typography_font_size_mobile"] = {"unit": "px", "size": size_mobile, "sizes": []}
+    if weight: d[f"{prefix}typography_font_weight"] = str(weight)
+    if lh: d[f"{prefix}typography_line_height"] = {"unit": "em", "size": lh, "sizes": []}
+    return d
+
+def box(top, right, bottom, left, unit="px"):
+    return {"unit": unit, "top": str(top), "right": str(right), "bottom": str(bottom), "left": str(left), "isLinked": False}
+
+def border(color, radius, width=1):
+    return {"border_border": "solid", "border_width": box(width, width, width, width), "border_color": color,
+            "border_radius": box(radius, radius, radius, radius)}
+
+# CSS je Sektion: custom.css ist mit "/* @section name */" gegliedert; "common" wird jeder Sektion vorangestellt.
+def css_sections():
+    raw = (ROOT / "elementor" / "custom.css").read_text(encoding="utf-8")
+    parts, cur = {}, None
+    for line in raw.splitlines(keepends=True):
+        if line.startswith("/* @section "):
+            cur = line.split()[2]; parts.setdefault(cur, "")
+        elif cur:
+            parts[cur] += line
+    return parts
+CSS_PARTS = css_sections()
+def css_for(name):
+    return (CSS_PARTS.get("common", "") + "\n" + CSS_PARTS.get(name, "")).strip() + "\n"
 
 _counter = [0]
 def eid():
@@ -37,13 +71,17 @@ def container(settings=None, elements=None, **kw):
 def widget(wtype, settings):
     return {"id": eid(), "elType": "widget", "settings": settings, "elements": [], "widgetType": wtype}
 
-def heading(title, tag="h2", cls="", extra=None):
-    s = {"title": title, "header_size": tag, "_css_classes": cls}
+def heading(title, tag="h2", cls="", extra=None, size=None, weight=None, lh=1.25, align=None, color=WHITE, size_mobile=None):
+    s = {"title": title, "header_size": tag, "_css_classes": cls, "title_color": color}
+    s.update(typo(size, weight, lh, size_mobile))
+    if align: s["align"] = align
     s.update(extra or {})
     return widget("heading", s)
 
-def text(html, cls="", extra=None):
-    s = {"editor": html, "_css_classes": cls}
+def text(html, cls="", extra=None, size=16, lh=1.6, align=None, weight=None, color=WHITE):
+    s = {"editor": html, "_css_classes": cls, "text_color": color}
+    s.update(typo(size, weight, lh))
+    if align: s["align"] = align
     s.update(extra or {})
     return widget("text-editor", s)
 
@@ -56,12 +94,26 @@ def button(label=None, cls="pv-btn", extra=None):
         "icon_align": "right",
         "hover_animation": "grow",
         "_css_classes": cls,
+        "background_color": YELLOW, "button_text_color": INK,
+        "button_background_hover_color": YELLOW, "hover_color": INK,
+        "border_radius": box(100, 100, 100, 100),
+        "text_padding": box(16, 16, 16, 32),
+        "icon_indent": {"unit": "px", "size": 18, "sizes": []},
     }
+    s.update(typo(17, 500, 1.2))
     s.update(extra or {})
     return widget("button", s)
 
-def icon(fa, cls, view="default"):
-    return widget("icon", {"selected_icon": {"value": fa, "library": "fa-solid"}, "view": view, "_css_classes": cls})
+def icon(fa, cls, view="stacked", shape="square", size=34, bg=YELLOW, color=NAVY, padding=19, radius=18):
+    """Icon-Widget: gestapelt = farbige Kachel/Kreis mit Icon darin."""
+    return widget("icon", {
+        "selected_icon": {"value": fa, "library": "fa-solid"}, "view": view, "shape": shape, "_css_classes": cls,
+        "primary_color": bg, "secondary_color": color,
+        "size": {"unit": "px", "size": size, "sizes": []},
+        "icon_padding": {"unit": "px", "size": padding, "sizes": []},
+        "border_radius": box(radius, radius, radius, radius) if shape == "square" else box(50, 50, 50, 50, "%"),
+        "align": "center",
+    })
 
 def spacer_col(pct):
     return container({"width": {"unit": "%", "size": pct, "sizes": []}})
@@ -77,27 +129,27 @@ HIDE_DESKTOP_ONLY = dict(HIDE_LARGE)                               # Tablet und 
 hero_content = container(
     {"width": {"unit": "%", "size": 100, "sizes": []}, "css_classes": "pv-hero-content", "flex_gap": {"column": "0", "row": "0", "unit": "px", "size": 0}},
     [
-        heading('<span style="font-weight: 700">Wir schützen dein Gebäude</span> - mit Kamera- &amp; Videoüberwachung', "h1", "pv-h1"),
+        heading('<span style="font-weight: 700">Wir schützen dein Gebäude</span> - mit Kamera- &amp; Videoüberwachung', "h1", "pv-h1", size=40, weight=400, lh=1.24, size_mobile=32),
         text("<p>Ein Einbruch, Vandalismus oder Diebstahl &amp; deinem Unternehmen drohen schnell zehntausende Euro an Schaden.</p>"
              "<p>ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung, mit der du dein Gebäude rund um die Uhr im Blick hast – per App, jederzeit und von überall.</p>",
-             "pv-hero-text"),
+             "pv-hero-text", size=17, lh=1.55),
         container({"css_classes": "pv-hero-cta"}, [button()]),
         # Mobil: Video als eigener Block unter dem Button
         container({"css_classes": "pv-mvideo", **HIDE_DESKTOP_ONLY}, [
-            widget("video", {"video_type": "hosted", "hosted_url": {"url": HERO_VIDEO, "id": ""}, "autoplay": "yes", "mute": "yes", "play_on_mobile": "yes", "controls": "", "loop": "", "_css_classes": "pv-mvideo-widget"}),
+            widget("video", {"video_type": "hosted", "hosted_url": {"url": "", "id": ""}, "autoplay": "yes", "mute": "yes", "play_on_mobile": "yes", "controls": "", "loop": "", "_css_classes": "pv-mvideo-widget"}),
         ]),
         # Trust-Zeile (Desktop)
         container({"flex_direction": "row", "flex_align_items": "center", "flex_gap": {"column": "40", "row": "20", "unit": "px", "size": 40}, "css_classes": "pv-trust", **HIDE_MOBILE}, [
             container({"flex_direction": "row", "flex_align_items": "center", "width": {"unit": "auto", "size": "", "sizes": []}, "flex_gap": {"column": "16", "row": "0", "unit": "px", "size": 16}}, [
                 widget("image", {"image": MEDIA_GOOGLE, "image_size": "full", "_css_classes": "pv-google"}),
                 container({"width": {"unit": "auto", "size": "", "sizes": []}, "flex_gap": {"column": "0", "row": "0", "unit": "px", "size": 0}}, [
-                    heading('<span style="color:#fbc91b">★</span> <strong>5</strong> <small>von 5.0</small>', "div", "pv-score"),
-                    heading("Sternen auf Google", "div", "pv-trust-label"),
+                    heading('<span style="color:#fbc91b">★</span> <strong>5</strong> <small>von 5.0</small>', "div", "pv-score", size=15, weight=400),
+                    heading("Sternen auf Google", "div", "pv-trust-label", size=14, weight=400),
                 ]),
             ]),
             container({"flex_direction": "row", "flex_align_items": "center", "width": {"unit": "auto", "size": "", "sizes": []}, "flex_gap": {"column": "16", "row": "0", "unit": "px", "size": 16}}, [
-                heading('<span style="color:#fbc91b">+</span>100', "div", "pv-count"),
-                heading("zufriedene Kunden", "div", "pv-trust-label"),
+                heading('<span style="color:#fbc91b">+</span>100', "div", "pv-count", size=34, weight=700),
+                heading("zufriedene Kunden", "div", "pv-trust-label", size=14, weight=400),
             ]),
             widget("image", {"image": {"url": PROVEN_IMG, "id": ""}, "image_size": "full", "link_to": "custom", "link": {"url": "https://www.provenexpert.com/provision-infra/", "is_external": "on", "nofollow": ""}, "_css_classes": "pv-proven"}),
         ]),
@@ -117,14 +169,15 @@ hero = container(
         "background_play_once": "yes",
         "background_video_end": "",
         "background_overlay_background": "gradient",
-        "background_overlay_color": "#010D30F5",
-        "background_overlay_color_b": "#010D3059",
+        "background_overlay_color": "rgba(1,13,48,0.96)",
+        "background_overlay_color_b": "rgba(1,13,48,0.35)",
         "background_overlay_gradient_angle": {"unit": "deg", "size": 90, "sizes": []},
         "background_overlay_color_stop": {"unit": "%", "size": 0, "sizes": []},
         "background_overlay_color_b_stop": {"unit": "%", "size": 100, "sizes": []},
         "background_overlay_opacity": {"unit": "px", "size": 1, "sizes": []},
         "padding": {"unit": "px", "top": "48", "right": "0", "bottom": "64", "left": "0", "isLinked": False},
         "padding_mobile": {"unit": "px", "top": "32", "right": "0", "bottom": "0", "left": "0", "isLinked": False},
+        "custom_css": css_for("hero"),
     },
     [hero_content],
 )
@@ -133,12 +186,15 @@ hero["isInner"] = False
 # ---------------------------------------------------------------- KERNBOTSCHAFT
 claim = container(
     {"content_width": "boxed", "css_classes": "pv-sec pv-claim-sec", "_element_id": "vorteile",
-     "padding": {"unit": "px", "top": "72", "right": "0", "bottom": "72", "left": "0", "isLinked": False}},
+     "padding": {"unit": "px", "top": "72", "right": "0", "bottom": "72", "left": "0", "isLinked": False},
+     "custom_css": css_for("claim")},
     [container({"css_classes": "pv-claim", "padding": {"unit": "px", "top": "56", "right": "48", "bottom": "56", "left": "48", "isLinked": False},
-                "padding_mobile": {"unit": "px", "top": "32", "right": "22", "bottom": "32", "left": "22", "isLinked": False}}, [
-        heading("Unser Anspruch", "p", "pv-eyebrow"),
-        heading("<strong>Eine Kamera montieren kann jeder.</strong> Dass sie im Ernstfall das Richtige zeigt, ist unsere Arbeit.", "h2", "pv-claim-title"),
-        text("<p>Der Einbruch passiert nachts um drei. Morgens siehst du eine Aufnahme, auf der niemand zu erkennen ist. Die Versicherung fragt trotzdem nach Belegen. Genau diesen Moment planen wir von Anfang an mit.</p>", "pv-claim-text"),
+                "padding_mobile": {"unit": "px", "top": "32", "right": "22", "bottom": "32", "left": "22", "isLinked": False},
+                "background_background": "classic", "background_color": "rgba(251,201,27,0.07)", **border("rgba(251,201,27,0.55)", 28)}, [
+        heading("Unser Anspruch", "p", "pv-eyebrow", size=14, weight=600, color=YELLOW,
+                extra={"typography_text_transform": "uppercase", "typography_letter_spacing": {"unit": "px", "size": 1.7, "sizes": []}}),
+        heading("<strong>Eine Kamera montieren kann jeder.</strong> Dass sie im Ernstfall das Richtige zeigt, ist unsere Arbeit.", "h2", "pv-claim-title", size=34, weight=400, lh=1.3, size_mobile=26),
+        text("<p>Der Einbruch passiert nachts um drei. Morgens siehst du eine Aufnahme, auf der niemand zu erkennen ist. Die Versicherung fragt trotzdem nach Belegen. Genau diesen Moment planen wir von Anfang an mit.</p>", "pv-claim-text", size=17, lh=1.6),
     ])],
 )
 claim["isInner"] = False
@@ -166,14 +222,17 @@ for i, (fa, title, body, quote) in enumerate(DIFFS, 1):
     cards.append(container(
         {"flex_direction": "row", "flex_direction_mobile": "column", "flex_gap": {"column": "28", "row": "18", "unit": "px", "size": 28}, "css_classes": "pv-card",
          "padding": {"unit": "px", "top": "32", "right": "36", "bottom": "32", "left": "36", "isLinked": False},
-         "padding_mobile": {"unit": "px", "top": "24", "right": "20", "bottom": "24", "left": "20", "isLinked": False}},
+         "padding_mobile": {"unit": "px", "top": "24", "right": "20", "bottom": "24", "left": "20", "isLinked": False},
+         "background_background": "classic", "background_color": "rgba(255,255,255,0.025)", **border("rgba(255,255,255,0.12)", 20)},
         [
             container({"width": {"unit": "px", "size": 72, "sizes": []}, "width_mobile": {"unit": "px", "size": 60, "sizes": []}, "css_classes": "pv-card-iconcol"}, [icon(fa, "pv-card-icon")]),
             container({"width": {"unit": "%", "size": 100, "sizes": []}, "flex_gap": {"column": "0", "row": "0", "unit": "px", "size": 0}, "css_classes": "pv-card-body"}, [
-                heading(f"{i:02d}", "div", "pv-num"),
-                heading(title, "h3", "pv-card-title"),
-                text(f"<p>{body}</p>", "pv-card-text"),
-                text(f"<p>{quote}</p>", "pv-quote"),
+                heading(f"{i:02d}", "div", "pv-num", size=13, weight=600, color=YELLOW,
+                        extra={"typography_letter_spacing": {"unit": "px", "size": 1.8, "sizes": []}}),
+                heading(title, "h3", "pv-card-title", size=22, weight=700, lh=1.3, size_mobile=20),
+                text(f"<p>{body}</p>", "pv-card-text", size=16, lh=1.65),
+                text(f"<p>{quote}</p>", "pv-quote", size=17, weight=500, lh=1.5,
+                     extra={"_border_border": "solid", "_border_width": box(0, 0, 0, 3), "_border_color": YELLOW, "_padding": box(4, 0, 4, 18)}),
             ]),
         ],
     ))
@@ -182,12 +241,13 @@ diff = container(
     {"content_width": "boxed", "css_classes": "pv-sec pv-diff", "_element_id": "unterschiede",
      "padding": {"unit": "px", "top": "96", "right": "0", "bottom": "96", "left": "0", "isLinked": False},
      "padding_mobile": {"unit": "px", "top": "64", "right": "0", "bottom": "64", "left": "0", "isLinked": False},
-     "flex_gap": {"column": "20", "row": "20", "unit": "px", "size": 20}},
+     "flex_gap": {"column": "20", "row": "20", "unit": "px", "size": 20},
+     "custom_css": css_for("diff")},
     [
-        heading("Fünf Unterschiede, <strong>die du im Ernstfall spürst</strong>", "h2", "pv-sec-title"),
-        text("<p>„Alles aus einer Hand“ steht auf jeder Website. Ob es stimmt, merkst du erst, wenn etwas passiert.</p>", "pv-sec-intro"),
+        heading("Fünf Unterschiede, <strong>die du im Ernstfall spürst</strong>", "h2", "pv-sec-title", size=36, weight=400, lh=1.25, size_mobile=28),
+        text("<p>„Alles aus einer Hand“ steht auf jeder Website. Ob es stimmt, merkst du erst, wenn etwas passiert.</p>", "pv-sec-intro", size=17, lh=1.6),
         *cards,
-        container({"css_classes": "pv-sec-cta", "margin": {"unit": "px", "top": "36", "right": "0", "bottom": "0", "left": "0", "isLinked": False}}, [text("<p>Im Erstgespräch sagen wir dir in 15 Minuten, wo dein Gebäude angreifbar ist.</p>", "pv-cta-lead"), button()]),
+        container({"css_classes": "pv-sec-cta", "margin": {"unit": "px", "top": "36", "right": "0", "bottom": "0", "left": "0", "isLinked": False}}, [text("<p>Im Erstgespräch sagen wir dir in 15 Minuten, wo dein Gebäude angreifbar ist.</p>", "pv-cta-lead", size=18, weight=500, lh=1.5), button()]),
     ],
 )
 diff["isInner"] = False
@@ -203,13 +263,15 @@ STEPS = {
 def step(title, anim, pct):
     return container({"width": {"unit": "%", "size": pct, "sizes": []}, "animation": anim, "css_classes": "pv-step",
                       "flex_gap": {"column": "0", "row": "0", "unit": "px", "size": 0}},
-                     [heading(title, "h6", "pv-step-title"), text(f"<p>{STEPS[title]}</p>", "pv-step-text")])
+                     [heading(title, "h6", "pv-step-title", size=20, weight=700, lh=1.24, align="center"),
+                      text(f"<p>{STEPS[title]}</p>", "pv-step-text", size=14, lh=1.64, align="center")])
 
 row_top = container({"flex_direction": "row", "flex_align_items": "flex-end", "flex_gap": {"column": "0", "row": "0", "unit": "px", "size": 0}}, [
     spacer_col(18), step("Termin vor Ort", "fadeInDown", 26), spacer_col(10.5), step("Umsetzung", "fadeInDown", 29),
 ])
 lottie = widget("lottie", {
-    "source": "media_file", "source_json": MEDIA_LOTTIE, "caption_source": "none", "link_to": "none",
+    "source": "external_url", "source_external_url": {"url": LOTTIE_URL, "is_external": "", "nofollow": "", "custom_attributes": ""},
+    "caption_source": "none", "link_to": "none",
     "trigger": "bind_to_scroll", "effects_relative_to": "viewport",
     "viewport": {"unit": "%", "size": "", "sizes": {"start": 0, "end": 100}},
     "start_point": {"unit": "%", "size": 0, "sizes": []}, "end_point": {"unit": "%", "size": 100, "sizes": []},
@@ -224,9 +286,9 @@ tl_items = []
 for title in ["Erstgespräch", "Termin vor Ort", "Planung deines Systems", "Umsetzung", "Übergabe &amp; Betreuung"]:
     tl_items.append(container({"flex_direction": "row", "flex_align_items": "flex-start", "flex_gap": {"column": "22", "row": "0", "unit": "px", "size": 22}, "css_classes": "pv-tl-item",
                                "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": False}}, [
-        container({"width": {"unit": "px", "size": 58, "sizes": []}}, [icon("fas fa-check", "pv-tl-dot")]),
+        container({"width": {"unit": "px", "size": 58, "sizes": []}}, [icon("fas fa-check", "pv-tl-dot", shape="circle", size=16, padding=21)]),
         container({"width": {"unit": "%", "size": 100, "sizes": []}, "flex_gap": {"column": "0", "row": "0", "unit": "px", "size": 0}}, [
-            heading(title, "h3", "pv-tl-title"), text(f"<p>{STEPS[title]}</p>", "pv-tl-text"),
+            heading(title, "h3", "pv-tl-title", size=20, weight=700, lh=1.24), text(f"<p>{STEPS[title]}</p>", "pv-tl-text", size=14, lh=1.6),
         ]),
     ]))
 ablauf_mobile = container({"css_classes": "pv-tl", **HIDE_DESKTOP, "flex_gap": {"column": "0", "row": "0", "unit": "px", "size": 0}}, tl_items)
@@ -234,9 +296,10 @@ ablauf_mobile = container({"css_classes": "pv-tl", **HIDE_DESKTOP, "flex_gap": {
 ablauf = container(
     {"content_width": "boxed", "css_classes": "pv-sec pv-ablauf", "_element_id": "arbeiten",
      "padding": {"unit": "px", "top": "50", "right": "0", "bottom": "50", "left": "0", "isLinked": False},
-     "padding_mobile": {"unit": "px", "top": "30", "right": "0", "bottom": "60", "left": "0", "isLinked": False}},
-    [heading("Ablauf der Zusammenarbeit", "h2", "pv-ablauf-title"), ablauf_desktop, ablauf_mobile,
-     container({"css_classes": "pv-sec-cta pv-sec-cta--center", "flex_align_items": "center", "margin": {"unit": "px", "top": "48", "right": "0", "bottom": "0", "left": "0", "isLinked": False}}, [text("<p>Der erste Schritt ist ein Telefonat. Unverbindlich, ohne Verkaufsdruck.</p>", "pv-cta-lead"), button()])],
+     "padding_mobile": {"unit": "px", "top": "30", "right": "0", "bottom": "60", "left": "0", "isLinked": False},
+     "custom_css": css_for("ablauf")},
+    [heading("Ablauf der Zusammenarbeit", "h2", "pv-ablauf-title", size=32, weight=700, lh=1.24, align="center", size_mobile=22), ablauf_desktop, ablauf_mobile,
+     container({"css_classes": "pv-sec-cta pv-sec-cta--center", "flex_align_items": "center", "margin": {"unit": "px", "top": "48", "right": "0", "bottom": "0", "left": "0", "isLinked": False}}, [text("<p>Der erste Schritt ist ein Telefonat. Unverbindlich, ohne Verkaufsdruck.</p>", "pv-cta-lead", size=18, weight=500, lh=1.5, align="center"), button()])],
 )
 ablauf["isInner"] = False
 
@@ -246,6 +309,7 @@ CSS = (ROOT / "elementor" / "custom.css").read_text(encoding="utf-8")
 template = {
     "content": [hero, claim, diff, ablauf],
     "page_settings": {
+        "template": "elementor_header_footer",
         "custom_css": CSS,
         "hide_title": "yes",
         "background_background": "classic",

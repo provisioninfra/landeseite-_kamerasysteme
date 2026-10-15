@@ -145,4 +145,14 @@ Geprüft wurden gezielt Fehlerfälle und Randbedingungen, die beim normalen Betr
 Die Vorlage (`elementor/landingpage-kamerasysteme.json`) wurde entsprechend angepasst: Auf Tablet
 und Handy wird kein Hintergrundvideo hinter dem Text gezeigt, der Video-Block erscheint unter dem Button.
 In WordPress kommen Favicon, Schriften, Cookie-Banner, Header und Footer von der Hauptseite.
+
+**Nachbesserung nach erstem Import (Design fehlte):** Das Styling lag zunächst nur im
+„Benutzerdefinierten CSS“ der Seiteneinstellungen, das beim Einfügen einer Vorlage nur nach
+Bestätigung übernommen wird. Jetzt sind Farben, Schriften, Größen, Rahmen und Abstände als native
+Elementor-Einstellungen an jedem Widget und Container hinterlegt (54 Text-Widgets mit eigener
+Typografie), das ergänzende CSS hängt zusätzlich an jedem Sektions-Container. Außerdem korrigiert:
+Rahmen-Einstellungen von Widgets mit dem richtigen Präfix, Icon-Form „square“ statt eines
+ungültigen Werts, Lottie-Animation per URL statt über den Medien-Import, leere Video-URL im
+mobilen Video-Widget (eine nicht erreichbare URL würde beim Import durch ein Platzhalterbild ersetzt),
+Seitenlayout „Volle Breite“ in den Vorlagen-Einstellungen.
 Der Import konnte ohne Zugang zum WordPress nicht live getestet werden.

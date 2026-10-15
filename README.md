@@ -41,7 +41,7 @@ Elementor-Widget ist (Überschrift, Texteditor, Button) und sich nach dem Import
 bearbeiten lässt.
 
 - `elementor/landingpage-kamerasysteme.json` – die Vorlage (Hero, Kernbotschaft, fünf Unterschiede, Ablauf)
-- `elementor/custom.css` – das Styling, liegt in der Vorlage bereits im „Benutzerdefinierten CSS“ der Seite
+- `elementor/custom.css` – ergänzendes CSS; liegt in der Vorlage am jeweiligen Sektions-Container (Erweitert → Benutzerdefiniertes CSS) und zusätzlich in den Seiteneinstellungen. Farben, Schriften, Rahmen und Abstände sind außerdem als native Elementor-Einstellungen an jedem Widget hinterlegt, das Design hängt also nicht am Seiten-CSS
 - `tools/build_elementor_template.py` – erzeugt die JSON-Datei neu (`python3 tools/build_elementor_template.py`)
 
 ### Import, Schritt für Schritt
