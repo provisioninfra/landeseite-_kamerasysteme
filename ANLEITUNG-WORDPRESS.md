@@ -83,6 +83,10 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   Einträge** (Formular auswählen). Das Schritt-für-Schritt-Design (eine Frage pro Schritt, Button „Weiter“)
   steuert der Eintrag **Landeseiten Forms → Kontakt Kamerasysteme**; dort lassen sich Farben, Schriftgrößen und
   Button-Texte ändern.
+- **Terminbuchung:** Nach dem Absenden landet der Besucher auf /termin-kamerasysteme/ (bei Privat oder bis 50
+  Mitarbeitenden auf /termin-gebucht-kamerasysteme/). Beide Seiten zeigen den Calendly-Termintyp „Telefonisches
+  Erstgespräch Kamerasysteme“. Den Termintyp selbst (Dauer, Fragen, Weiterleitung nach der Buchung) pflegst du in
+  Calendly. Die Seiten „Termin“ und „Termin Gebucht“ der Startseite bleiben beim Schließsysteme-Termin.
 - **Ablauf der Zusammenarbeit:** Die fünf Schritte gibt es zweimal, einmal für Desktop (Texte über
   und unter dem Zeitstrahl) und einmal für das Handy (Timeline-Element). Änderungen bitte an beiden Stellen.
 - **FAQ:** Auf das Akkordeon klicken → links unter **Inhalt** die Fragen aufklappen und bearbeiten.

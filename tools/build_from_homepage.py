@@ -540,6 +540,25 @@ for e in page:
 
 out = ROOT / "elementor"
 (out / "kamera-seite.elements.json").write_text(json.dumps({"elements": page, "settings": settings}, ensure_ascii=False), encoding="utf-8")
+# Terminseiten für das Kamera-Formular: Kopien der Seiten „Termin“ (3617) und „Termin Gebucht“ (823) mit dem
+# Calendly-Termintyp „Telefonisches Erstgespräch Kamerasysteme“ statt „… Schließsysteme“ (medien.json: calendly_kamera_url).
+CALENDLY_KAMERA = MEDIA.get("calendly_kamera_url")
+for quelle, ziel in (("quelle-termin.json", "termin-kamerasysteme.elements.json"),
+                     ("quelle-termin-gebucht.json", "termin-gebucht-kamerasysteme.elements.json")):
+    if not CALENDLY_KAMERA or not (ROOT / "elementor" / quelle).exists():
+        continue
+    tdata = json.loads((ROOT / "elementor" / quelle).read_text(encoding="utf-8"))
+    tpage = [reid(clone(sec)) for sec in tdata]
+    def swap_calendly(el):
+        if el.get("widgetType") == "html" and "calendly.com/provision-infra/erstgespraech" in el["settings"].get("html", ""):
+            el["settings"]["html"] = el["settings"]["html"].replace("https://calendly.com/provision-infra/erstgespraech", CALENDLY_KAMERA)
+        for c in el.get("elements", []):
+            swap_calendly(c)
+    for sec in tpage:
+        sec["isInner"] = False
+        swap_calendly(sec)
+    assert CALENDLY_KAMERA in json.dumps(tpage), "Calendly-Link nicht ersetzt: " + quelle
+    (out / ziel).write_text(json.dumps({"elements": tpage, "settings": {"template": "default"}}, ensure_ascii=False), encoding="utf-8")
 (out / "kontakt-kamerasysteme.elements.json").write_text(json.dumps({"elements": kontakt_page, "settings": {"template": "default"}}, ensure_ascii=False), encoding="utf-8")
 (out / "landingpage-kamerasysteme.json").write_text(json.dumps({
     "content": page, "page_settings": settings, "version": "0.4",

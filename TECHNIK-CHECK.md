@@ -334,3 +334,25 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
   Tablet und Handy unverändert.
 - Live gemessen: Schloss beginnt 14 bis 36 px rechts vom Textende (1281 bis 1920 px), Kameras zwischen Menüleiste
   und Headline, Tür bei 1441 bis 1920 px komplett im Bild (rechte Kante 1467 bis 1766 px).
+
+---
+
+## Terminbuchung Kamerasysteme über Calendly (16.10.2026)
+
+- Calendly-Termintyp „Telefonisches Erstgespräch Kamerasysteme“ (30 Minuten) existiert im Konto provision-infra,
+  Slug `telefonisches-erstgesprach-kamerasysteme` (ohne ä). Über die öffentliche Profil-Schnittstelle von Calendly
+  ermittelt, Buchungsseite liefert HTTP 200.
+- Zwei neue Seiten als Kopien der bestehenden Terminseiten, nur der Calendly-Link ist getauscht (Elementor-Daten der
+  Originale in `elementor/quelle-termin.json` und `quelle-termin-gebucht.json`, Ausgabe des Composers in
+  `termin-kamerasysteme.elements.json` und `termin-gebucht-kamerasysteme.elements.json`, Link in `medien.json`):
+  „Termin Kamerasysteme“ (ID 4391, /termin-kamerasysteme/) und „Termin Gebucht Kamerasysteme“ (ID 4392,
+  /termin-gebucht-kamerasysteme/). Template „default“, Yoast noindex/nofollow wie die Originale. Das Widget übernimmt
+  wie bisher `first_name` und `email` aus der URL in Calendly.
+- Formular 4 „Anfrageformular Kamerasysteme“: Standard-Bestätigung → Seite 4391, „LQ form“ → Seite 4392 (über die
+  Bestätigungs-Einstellungen im Formular-Editor). Formulare 1 und 2 erneut per Export verglichen: unverändert. Die
+  Seiten „Termin“ (3617) und „Termin Gebucht“ (823) sind unverändert.
+- Tracking: Beide neuen URLs enthalten „termin“ bzw. „termin-gebucht“, die Tag-Manager-Auslöser (Google-Ads-Conversion,
+  Meta „Lead“, Meta „SubmitApplication“) greifen also wie beim Original.
+- Nicht prüfbar von außen: die Weiterleitung nach der Buchung, die Calendly je Termintyp speichert (beim
+  Schließsysteme-Termin vermutlich auf eine „danke“-Seite). Für den Kamera-Termin in Calendly gleich einstellen.
+
