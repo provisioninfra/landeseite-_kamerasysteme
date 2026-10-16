@@ -55,7 +55,12 @@ Der Abschnitt **„Technik, die wir verbauen“** enthält sechs Platzhalter-Bil
 Jeder Text ist ein eigenes Elementor-Element. Im Editor auf einen Text klicken, links im Bedienfeld
 schreiben, fertig. Diese Stellen lohnen einen Blick:
 
-- **Hero:** Überschrift und Einleitung.
+- **Hero:** Überschrift und Einleitung. In der Überschrift steht nach „Gebäude“ ein `<br>` (fester
+  Zeilenumbruch), damit „- mit Kamera- & Videoüberwachung“ auf jedem Bildschirm in der zweiten Zeile beginnt.
+  Beim Ändern des Textes das `<br>` stehen lassen. Die Schriftgröße steht unter **Stil → Typografie → Größe**;
+  für Tablet und Handy ist dort eine Formel wie `min(28px, 7vw - 2px)` hinterlegt. Die erste Zahl ist die
+  größte erlaubte Größe, der Rest hält die Zeilen bei schmalen Bildschirmen zusammen. Wer es größer möchte,
+  erhöht nur die erste Zahl.
 - **Unser Anspruch:** Glas-Box unter dem Hero.
 - **Fünf Unterschiede:** fünf Zeilen mit Überschrift, Text und gelbem Versprechen.
 - **Aufruf zum Erstgespräch:** „Im Erstgespräch sagen wir dir in 15 Minuten …“. Wenn 15 Minuten

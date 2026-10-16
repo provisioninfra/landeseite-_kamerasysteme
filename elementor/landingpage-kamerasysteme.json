@@ -621,12 +621,12 @@
        "id": "9dcea29",
        "elType": "widget",
        "settings": {
-        "title": "<span style=\"font-weight: 700;\">Wir schützen dein Gebäude</span> - mit Kamera- &amp; Videoüberwachung",
+        "title": "<span style=\"font-weight: 700;\">Wir schützen dein Gebäude</span><br>- mit Kamera- &amp; Videoüberwachung",
         "typography_typography": "custom",
         "typography_font_family": "Poppins",
         "typography_font_size": {
          "unit": "px",
-         "size": 60,
+         "size": 64,
          "sizes": []
         },
         "typography_font_weight": "400",
@@ -637,13 +637,13 @@
          "sizes": []
         },
         "typography_line_height_tablet": {
-         "unit": "px",
-         "size": 38,
+         "unit": "em",
+         "size": 1.25,
          "sizes": []
         },
         "typography_line_height_mobile": {
-         "unit": "px",
-         "size": 32,
+         "unit": "em",
+         "size": 1.23,
          "sizes": []
         },
         "typography_letter_spacing": {
@@ -664,7 +664,7 @@
         "_element_width": "initial",
         "_element_custom_width": {
          "unit": "%",
-         "size": 78,
+         "size": 88,
          "sizes": []
         },
         "__globals__": {
@@ -672,8 +672,8 @@
         },
         "header_size": "h1",
         "typography_font_size_tablet": {
-         "unit": "px",
-         "size": 29,
+         "unit": "custom",
+         "size": "min(36px, 4vw - 1.5px)",
          "sizes": []
         },
         "_element_custom_width_tablet": {
@@ -683,8 +683,8 @@
         },
         "align_mobile": "center",
         "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 26,
+         "unit": "custom",
+         "size": "min(28px, 7vw - 2px)",
          "sizes": []
         },
         "_padding": {
@@ -705,17 +705,17 @@
         },
         "typography_font_size_laptop": {
          "unit": "px",
-         "size": 46,
+         "size": 50,
          "sizes": []
         },
         "typography_font_size_tablet_extra": {
          "unit": "px",
-         "size": 40,
+         "size": 44,
          "sizes": []
         },
         "typography_line_height_tablet_extra": {
          "unit": "px",
-         "size": 48,
+         "size": 53,
          "sizes": []
         },
         "_padding_laptop": {
@@ -736,7 +736,7 @@
         },
         "_element_custom_width_laptop": {
          "unit": "px",
-         "size": 720,
+         "size": 940,
          "sizes": []
         },
         "_padding_mobile": {

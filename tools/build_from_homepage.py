@@ -65,7 +65,8 @@ def svg_icon(media_id, url):
     return {"value": {"url": url, "id": media_id}, "library": "svg"}
 
 # ---------------------------------------------------------------- Texte
-HERO_H1 = '<span style="font-weight: 700;">Wir schützen dein Gebäude</span> - mit Kamera- &amp; Videoüberwachung'
+# Fester Zeilenumbruch nach „Gebäude“: „- mit Kamera- & Videoüberwachung“ steht immer in der zweiten Zeile
+HERO_H1 = '<span style="font-weight: 700;">Wir schützen dein Gebäude</span><br>- mit Kamera- &amp; Videoüberwachung'
 HERO_SUB = ('Ein Einbruch, Vandalismus oder Diebstahl &amp; deinem Unternehmen drohen schnell zehntausende Euro an Schaden. <br>\n<br>\n'
             'ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung, mit der du dein Gebäude rund um die Uhr im Blick hast – per App, jederzeit und von überall.')
 
@@ -147,16 +148,19 @@ page.append(clone(H[0]))
 hero = clone(H[1])
 h1 = must(hero, "9dcea29")["settings"]
 h1["title"] = HERO_H1
-# Überschrift etwas größer als auf der Startseite (ca. 15 %)
-h1["typography_font_size"] = {"unit": "px", "size": 60, "sizes": []}
-h1["typography_font_size_laptop"] = {"unit": "px", "size": 46, "sizes": []}
-h1["typography_font_size_tablet_extra"] = {"unit": "px", "size": 40, "sizes": []}
-h1["typography_font_size_tablet"] = {"unit": "px", "size": 29, "sizes": []}
-h1["typography_font_size_mobile"] = {"unit": "px", "size": 26, "sizes": []}
-h1["typography_line_height_tablet_extra"] = {"unit": "px", "size": 48, "sizes": []}
-h1["typography_line_height_tablet"] = {"unit": "px", "size": 38, "sizes": []}
-h1["typography_line_height_mobile"] = {"unit": "px", "size": 32, "sizes": []}
-h1["_element_custom_width_laptop"] = {"unit": "px", "size": 720, "sizes": []}
+# Überschrift größer als auf der Startseite. Die zweite Zeile („- mit Kamera- & Videoüberwachung“, Poppins 400,
+# ca. 18,4 em breit) muss in jeder Breite in EINE Zeile passen; deshalb ist die Textbox breiter als auf der Startseite
+# und auf Tablet/Handy (Box skaliert mit der Bildschirmbreite) wird die Größe per min()-Formel gedeckelt.
+h1["typography_font_size"] = {"unit": "px", "size": 64, "sizes": []}                      # ab 1441 px, Box 88 % von 1400 px = 1232 px
+h1["typography_font_size_laptop"] = {"unit": "px", "size": 50, "sizes": []}               # 1281-1440 px, Box 940 px
+h1["typography_font_size_tablet_extra"] = {"unit": "px", "size": 44, "sizes": []}         # 1025-1280 px, Box 940 px
+h1["typography_font_size_tablet"] = {"unit": "custom", "size": "min(36px, 4vw - 1.5px)", "sizes": []}   # 768-1024 px: 29 px bei 768, 36 px ab 940
+h1["typography_font_size_mobile"] = {"unit": "custom", "size": "min(28px, 7vw - 2px)", "sizes": []}   # bis 767 px: 1. Zeile (fett) bleibt einzeilig
+h1["typography_line_height_tablet_extra"] = {"unit": "px", "size": 53, "sizes": []}
+h1["typography_line_height_tablet"] = {"unit": "em", "size": 1.25, "sizes": []}
+h1["typography_line_height_mobile"] = {"unit": "em", "size": 1.23, "sizes": []}
+h1["_element_custom_width"] = {"unit": "%", "size": 88, "sizes": []}
+h1["_element_custom_width_laptop"] = {"unit": "px", "size": 940, "sizes": []}
 must(hero, "e429076")["settings"]["title"] = HERO_SUB
 hs = hero["settings"]
 hs["background_video_link"] = VIDEO_DESKTOP["url"]
