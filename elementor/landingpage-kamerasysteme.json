@@ -3071,7 +3071,7 @@
    "isInner": false
   },
   {
-   "id": "65bcdd1",
+   "id": "78965cb",
    "elType": "container",
    "settings": {
     "flex_direction": "column",
@@ -3175,7 +3175,7 @@
    },
    "elements": [
     {
-     "id": "47ef5fe",
+     "id": "e38a5dc",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -3202,7 +3202,7 @@
      },
      "elements": [
       {
-       "id": "78459e1",
+       "id": "65bcdd1",
        "elType": "widget",
        "settings": {
         "typography_typography": "custom",
@@ -3277,7 +3277,7 @@
      "isInner": true
     },
     {
-     "id": "22705df",
+     "id": "47ef5fe",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -3292,7 +3292,7 @@
      },
      "elements": [
       {
-       "id": "0d5393f",
+       "id": "78459e1",
        "elType": "widget",
        "settings": {
         "image": {
@@ -3318,7 +3318,7 @@
      "isInner": true
     },
     {
-     "id": "3efeb2a",
+     "id": "22705df",
      "elType": "widget",
      "widgetType": "nested-carousel",
      "settings": {
@@ -3343,10 +3343,6 @@
        {
         "slide_title": "Produktbild 5",
         "_id": "8d9b4be"
-       },
-       {
-        "slide_title": "Produktbild 6",
-        "_id": "78965cb"
        }
       ],
       "arrow_normal_color": "#FFFFFF",
@@ -3489,10 +3485,10 @@
      },
      "elements": [
       {
-       "id": "bcec1a0",
+       "id": "0d5393f",
        "elType": "container",
        "settings": {
-        "_title": "Produktbild 1",
+        "_title": "TP-Link VIGI Bullet-Kamera mit WLAN-Antennen",
         "flex_justify_content": "space-between",
         "padding": {
          "unit": "px",
@@ -3505,17 +3501,17 @@
        },
        "elements": [
         {
-         "id": "9b2980b",
+         "id": "3efeb2a",
          "elType": "widget",
          "widgetType": "image",
          "elements": [],
          "isInner": false,
          "settings": {
           "image": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-1.jpg",
-           "id": 4307,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-1.png",
+           "id": 4352,
            "size": "",
-           "alt": "Produktbild 1",
+           "alt": "TP-Link VIGI Bullet-Kamera mit WLAN-Antennen",
            "source": "library"
           },
           "image_size": "large",
@@ -3541,10 +3537,10 @@
        "isLocked": true
       },
       {
-       "id": "405e8bb",
+       "id": "bcec1a0",
        "elType": "container",
        "settings": {
-        "_title": "Produktbild 2",
+        "_title": "TP-Link VIGI Bullet-Kamera",
         "flex_justify_content": "space-between",
         "padding": {
          "unit": "px",
@@ -3557,17 +3553,17 @@
        },
        "elements": [
         {
-         "id": "ad0b692",
+         "id": "9b2980b",
          "elType": "widget",
          "widgetType": "image",
          "elements": [],
          "isInner": false,
          "settings": {
           "image": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-2.jpg",
-           "id": 4308,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-2.png",
+           "id": 4353,
            "size": "",
-           "alt": "Produktbild 2",
+           "alt": "TP-Link VIGI Bullet-Kamera",
            "source": "library"
           },
           "image_size": "large",
@@ -3593,10 +3589,10 @@
        "isLocked": true
       },
       {
-       "id": "bc1ba89",
+       "id": "405e8bb",
        "elType": "container",
        "settings": {
-        "_title": "Produktbild 3",
+        "_title": "TP-Link VIGI Schwenk-Neige-Kamera mit WLAN-Antennen",
         "flex_justify_content": "space-between",
         "padding": {
          "unit": "px",
@@ -3609,17 +3605,17 @@
        },
        "elements": [
         {
-         "id": "6edaec7",
+         "id": "ad0b692",
          "elType": "widget",
          "widgetType": "image",
          "elements": [],
          "isInner": false,
          "settings": {
           "image": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-3.jpg",
-           "id": 4309,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-3.png",
+           "id": 4354,
            "size": "",
-           "alt": "Produktbild 3",
+           "alt": "TP-Link VIGI Schwenk-Neige-Kamera mit WLAN-Antennen",
            "source": "library"
           },
           "image_size": "large",
@@ -3645,10 +3641,10 @@
        "isLocked": true
       },
       {
-       "id": "15fc56b",
+       "id": "bc1ba89",
        "elType": "container",
        "settings": {
-        "_title": "Produktbild 4",
+        "_title": "TP-Link VIGI Bullet-Kamera mit vier Weißlicht-LEDs",
         "flex_justify_content": "space-between",
         "padding": {
          "unit": "px",
@@ -3661,17 +3657,17 @@
        },
        "elements": [
         {
-         "id": "2e72139",
+         "id": "6edaec7",
          "elType": "widget",
          "widgetType": "image",
          "elements": [],
          "isInner": false,
          "settings": {
           "image": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-4.jpg",
-           "id": 4310,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-4.png",
+           "id": 4355,
            "size": "",
-           "alt": "Produktbild 4",
+           "alt": "TP-Link VIGI Bullet-Kamera mit vier Weißlicht-LEDs",
            "source": "library"
           },
           "image_size": "large",
@@ -3697,10 +3693,10 @@
        "isLocked": true
       },
       {
-       "id": "b16478a",
+       "id": "15fc56b",
        "elType": "container",
        "settings": {
-        "_title": "Produktbild 5",
+        "_title": "TP-Link VIGI Dome-Kamera",
         "flex_justify_content": "space-between",
         "padding": {
          "unit": "px",
@@ -3713,17 +3709,17 @@
        },
        "elements": [
         {
-         "id": "19658cd",
+         "id": "2e72139",
          "elType": "widget",
          "widgetType": "image",
          "elements": [],
          "isInner": false,
          "settings": {
           "image": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-5.jpg",
-           "id": 4311,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-5.png",
+           "id": 4356,
            "size": "",
-           "alt": "Produktbild 5",
+           "alt": "TP-Link VIGI Dome-Kamera",
            "source": "library"
           },
           "image_size": "large",
@@ -3747,58 +3743,6 @@
        ],
        "isInner": true,
        "isLocked": true
-      },
-      {
-       "id": "f9348eb",
-       "elType": "container",
-       "settings": {
-        "_title": "Produktbild 6",
-        "flex_justify_content": "space-between",
-        "padding": {
-         "unit": "px",
-         "top": "0",
-         "right": "0",
-         "bottom": "0",
-         "left": "0",
-         "isLinked": false
-        }
-       },
-       "elements": [
-        {
-         "id": "f2ef768",
-         "elType": "widget",
-         "widgetType": "image",
-         "elements": [],
-         "isInner": false,
-         "settings": {
-          "image": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-6.jpg",
-           "id": 4312,
-           "size": "",
-           "alt": "Produktbild 6",
-           "source": "library"
-          },
-          "image_size": "large",
-          "align": "center",
-          "width": {
-           "unit": "%",
-           "size": 100,
-           "sizes": []
-          },
-          "image_border_radius": {
-           "unit": "px",
-           "top": "25",
-           "right": "25",
-           "bottom": "25",
-           "left": "25",
-           "isLinked": false
-          },
-          "_title": "Produktbild 6"
-         }
-        }
-       ],
-       "isInner": true,
-       "isLocked": true
       }
      ]
     }
@@ -3806,7 +3750,7 @@
    "isInner": false
   },
   {
-   "id": "8a6c2f8",
+   "id": "b488d07",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -3901,7 +3845,7 @@
    },
    "elements": [
     {
-     "id": "a94ee14",
+     "id": "58908e7",
      "elType": "widget",
      "settings": {
       "typography_typography": "custom",
@@ -3974,7 +3918,7 @@
      "widgetType": "heading"
     },
     {
-     "id": "8879a92",
+     "id": "56e5499",
      "elType": "widget",
      "settings": {
       "typography_font_size_tablet": {
@@ -4063,7 +4007,7 @@
      "widgetType": "text-editor"
     },
     {
-     "id": "b488d07",
+     "id": "ed08a6d",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -4109,7 +4053,7 @@
      },
      "elements": [
       {
-       "id": "d1d42a8",
+       "id": "b16478a",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -4249,7 +4193,7 @@
        },
        "elements": [
         {
-         "id": "a813ddf",
+         "id": "19658cd",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -4310,7 +4254,7 @@
          },
          "elements": [
           {
-           "id": "8080300",
+           "id": "f9348eb",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -4396,7 +4340,7 @@
            },
            "elements": [
             {
-             "id": "ecc59af",
+             "id": "f2ef768",
              "elType": "widget",
              "settings": {
               "selected_icon": {
@@ -4446,7 +4390,7 @@
            "isInner": true
           },
           {
-           "id": "8839702",
+           "id": "d1d42a8",
            "elType": "container",
            "settings": {
             "_flex_size": "custom",
@@ -4507,7 +4451,7 @@
            },
            "elements": [
             {
-             "id": "0b3c5ae",
+             "id": "a813ddf",
              "elType": "widget",
              "settings": {
               "header_size": "h3",
@@ -4581,7 +4525,7 @@
              "widgetType": "heading"
             },
             {
-             "id": "617c611",
+             "id": "8080300",
              "elType": "widget",
              "settings": {
               "typography_font_size_tablet": {
@@ -4655,7 +4599,7 @@
              "widgetType": "text-editor"
             },
             {
-             "id": "e13a0d6",
+             "id": "ecc59af",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -4743,7 +4687,7 @@
              },
              "elements": [
               {
-               "id": "81ba5b0",
+               "id": "8839702",
                "elType": "widget",
                "settings": {
                 "typography_font_size_tablet": {
@@ -4837,7 +4781,7 @@
        "isInner": true
       },
       {
-       "id": "f847bcc",
+       "id": "0b3c5ae",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -4977,7 +4921,7 @@
        },
        "elements": [
         {
-         "id": "ecb210a",
+         "id": "617c611",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -5038,7 +4982,7 @@
          },
          "elements": [
           {
-           "id": "ef018b2",
+           "id": "e13a0d6",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -5124,7 +5068,7 @@
            },
            "elements": [
             {
-             "id": "6e69ef7",
+             "id": "81ba5b0",
              "elType": "widget",
              "settings": {
               "selected_icon": {
@@ -5174,7 +5118,7 @@
            "isInner": true
           },
           {
-           "id": "0538e68",
+           "id": "f847bcc",
            "elType": "container",
            "settings": {
             "_flex_size": "custom",
@@ -5235,7 +5179,7 @@
            },
            "elements": [
             {
-             "id": "31bb61b",
+             "id": "ecb210a",
              "elType": "widget",
              "settings": {
               "header_size": "h3",
@@ -5309,7 +5253,7 @@
              "widgetType": "heading"
             },
             {
-             "id": "e3fb5d5",
+             "id": "ef018b2",
              "elType": "widget",
              "settings": {
               "typography_font_size_tablet": {
@@ -5383,7 +5327,7 @@
              "widgetType": "text-editor"
             },
             {
-             "id": "3de4855",
+             "id": "6e69ef7",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -5471,7 +5415,7 @@
              },
              "elements": [
               {
-               "id": "6bd3cf0",
+               "id": "0538e68",
                "elType": "widget",
                "settings": {
                 "typography_font_size_tablet": {
@@ -5565,7 +5509,7 @@
        "isInner": true
       },
       {
-       "id": "38e6fdf",
+       "id": "31bb61b",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -5705,7 +5649,7 @@
        },
        "elements": [
         {
-         "id": "2f2dd13",
+         "id": "e3fb5d5",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -5766,7 +5710,7 @@
          },
          "elements": [
           {
-           "id": "e20eb02",
+           "id": "3de4855",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -5852,7 +5796,7 @@
            },
            "elements": [
             {
-             "id": "1ead99c",
+             "id": "6bd3cf0",
              "elType": "widget",
              "settings": {
               "selected_icon": {
@@ -5902,7 +5846,7 @@
            "isInner": true
           },
           {
-           "id": "651d8d2",
+           "id": "38e6fdf",
            "elType": "container",
            "settings": {
             "_flex_size": "custom",
@@ -5963,7 +5907,7 @@
            },
            "elements": [
             {
-             "id": "331c1ac",
+             "id": "2f2dd13",
              "elType": "widget",
              "settings": {
               "header_size": "h3",
@@ -6037,7 +5981,7 @@
              "widgetType": "heading"
             },
             {
-             "id": "c8a01b6",
+             "id": "e20eb02",
              "elType": "widget",
              "settings": {
               "typography_font_size_tablet": {
@@ -6111,7 +6055,7 @@
              "widgetType": "text-editor"
             },
             {
-             "id": "5555294",
+             "id": "1ead99c",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -6199,7 +6143,7 @@
              },
              "elements": [
               {
-               "id": "a2fe03d",
+               "id": "651d8d2",
                "elType": "widget",
                "settings": {
                 "typography_font_size_tablet": {
@@ -6293,7 +6237,7 @@
        "isInner": true
       },
       {
-       "id": "6ae48d2",
+       "id": "331c1ac",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -6433,7 +6377,7 @@
        },
        "elements": [
         {
-         "id": "6b31a2a",
+         "id": "c8a01b6",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -6494,7 +6438,7 @@
          },
          "elements": [
           {
-           "id": "185f8df",
+           "id": "5555294",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -6580,7 +6524,7 @@
            },
            "elements": [
             {
-             "id": "a17d4ba",
+             "id": "a2fe03d",
              "elType": "widget",
              "settings": {
               "selected_icon": {
@@ -6630,7 +6574,7 @@
            "isInner": true
           },
           {
-           "id": "9f42028",
+           "id": "6ae48d2",
            "elType": "container",
            "settings": {
             "_flex_size": "custom",
@@ -6691,7 +6635,7 @@
            },
            "elements": [
             {
-             "id": "851286f",
+             "id": "6b31a2a",
              "elType": "widget",
              "settings": {
               "header_size": "h3",
@@ -6765,7 +6709,7 @@
              "widgetType": "heading"
             },
             {
-             "id": "74c55fa",
+             "id": "185f8df",
              "elType": "widget",
              "settings": {
               "typography_font_size_tablet": {
@@ -6839,7 +6783,7 @@
              "widgetType": "text-editor"
             },
             {
-             "id": "5820467",
+             "id": "a17d4ba",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -6927,7 +6871,7 @@
              },
              "elements": [
               {
-               "id": "5952b31",
+               "id": "9f42028",
                "elType": "widget",
                "settings": {
                 "typography_font_size_tablet": {
@@ -7021,7 +6965,7 @@
        "isInner": true
       },
       {
-       "id": "8d2bb3e",
+       "id": "851286f",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -7161,7 +7105,7 @@
        },
        "elements": [
         {
-         "id": "65923b6",
+         "id": "74c55fa",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -7222,7 +7166,7 @@
          },
          "elements": [
           {
-           "id": "584f0f3",
+           "id": "5820467",
            "elType": "container",
            "settings": {
             "content_width": "full",
@@ -7308,7 +7252,7 @@
            },
            "elements": [
             {
-             "id": "03407d5",
+             "id": "5952b31",
              "elType": "widget",
              "settings": {
               "selected_icon": {
@@ -7358,7 +7302,7 @@
            "isInner": true
           },
           {
-           "id": "4fb148b",
+           "id": "8d2bb3e",
            "elType": "container",
            "settings": {
             "_flex_size": "custom",
@@ -7419,7 +7363,7 @@
            },
            "elements": [
             {
-             "id": "ed08a6d",
+             "id": "65923b6",
              "elType": "widget",
              "settings": {
               "header_size": "h3",
@@ -7493,7 +7437,7 @@
              "widgetType": "heading"
             },
             {
-             "id": "aa9d433",
+             "id": "584f0f3",
              "elType": "widget",
              "settings": {
               "typography_font_size_tablet": {
@@ -7567,7 +7511,7 @@
              "widgetType": "text-editor"
             },
             {
-             "id": "f963339",
+             "id": "03407d5",
              "elType": "container",
              "settings": {
               "content_width": "full",
@@ -7655,7 +7599,7 @@
              },
              "elements": [
               {
-               "id": "5cbf653",
+               "id": "4fb148b",
                "elType": "widget",
                "settings": {
                 "typography_font_size_tablet": {
@@ -7752,7 +7696,7 @@
      "isInner": true
     },
     {
-     "id": "192f631",
+     "id": "5cbf653",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -7777,7 +7721,7 @@
      },
      "elements": [
       {
-       "id": "58908e7",
+       "id": "aa9d433",
        "elType": "widget",
        "settings": {
         "typography_font_size_tablet": {
@@ -7857,7 +7801,7 @@
        "widgetType": "text-editor"
       },
       {
-       "id": "56e5499",
+       "id": "f963339",
        "elType": "widget",
        "settings": {
         "text": "Unverbindliches Erstgespräch vereinbaren",
@@ -12424,37 +12368,37 @@
       "eael_adv_accordion_tab": [
        {
         "eael_adv_accordion_tab_title": "Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
-        "_id": "ad431b1",
+        "_id": "192f631",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja, innerhalb klarer Regeln. Erlaubt ist die Überwachung deines eigenen Geländes und deiner Zugänge, nicht die von Gehweg oder Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel so, dass du auf der sicheren Seite bist, und geben dir die passenden Hinweisschilder und Unterlagen mit.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Wie lange dauert die Installation?",
-        "_id": "409a97b",
+        "_id": "8a6c2f8",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Eine Anlage mit vier bis acht Kameras ist in der Regel an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Kann ich die Bilder auf dem Handy sehen?",
-        "_id": "ec82864",
+        "_id": "a94ee14",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja. Du bekommst eine App, in der du Live-Bild und Aufzeichnungen siehst und bei Bewegung benachrichtigt wirst. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was passiert bei Stromausfall oder Internetstörung?",
-        "_id": "66d3c6c",
+        "_id": "8879a92",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Die Aufzeichnung läuft lokal auf dem Rekorder weiter, solange Strom da ist. Auf Wunsch sichern wir Rekorder und Kameras mit einer unterbrechungsfreien Stromversorgung ab. Fällt das Internet aus, fehlt nur der Fernzugriff, nicht die Aufzeichnung.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was kostet eine Videoüberwachung?",
-        "_id": "f465490",
+        "_id": "ad431b1",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Das hängt von der Zahl der Kameras, den Entfernungen und den vorhandenen Leitungen ab. Einen ersten Rahmen bekommst du schon im Erstgespräch, nach dem Termin vor Ort einen verbindlichen Preis.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
-        "_id": "43cfb35",
+        "_id": "409a97b",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Die Aufnahmen bleiben auf deinem Rekorder im Gebäude und nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung entsprechend ein und halten die Software aktuell.</span></p>"
        }
@@ -33961,12 +33905,12 @@
    "isInner": false
   },
   {
-   "id": "7447627",
+   "id": "ec82864",
    "elType": "container",
    "isInner": false,
    "elements": [
     {
-     "id": "c0d9493",
+     "id": "66d3c6c",
      "elType": "widget",
      "widgetType": "html",
      "elements": [],

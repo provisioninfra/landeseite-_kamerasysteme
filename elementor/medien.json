@@ -9,6 +9,41 @@
  },
  "produkte": [
   {
+   "id": 4352,
+   "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-1.png",
+   "alt": "TP-Link VIGI Bullet-Kamera mit WLAN-Antennen"
+  },
+  {
+   "id": 4353,
+   "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-2.png",
+   "alt": "TP-Link VIGI Bullet-Kamera"
+  },
+  {
+   "id": 4354,
+   "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-3.png",
+   "alt": "TP-Link VIGI Schwenk-Neige-Kamera mit WLAN-Antennen"
+  },
+  {
+   "id": 4355,
+   "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-4.png",
+   "alt": "TP-Link VIGI Bullet-Kamera mit vier Weißlicht-LEDs"
+  },
+  {
+   "id": 4356,
+   "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-5.png",
+   "alt": "TP-Link VIGI Dome-Kamera"
+  }
+ ],
+ "video_4k": {
+  "id": 4341,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video-4k.mp4"
+ },
+ "video_mobile": {
+  "id": 4342,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video-mobil.mp4"
+ },
+ "produkte_platzhalter": [
+  {
    "id": 4307,
    "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-1.jpg"
   },
@@ -32,13 +67,5 @@
    "id": 4312,
    "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-6.jpg"
   }
- ],
- "video_4k": {
-  "id": 4341,
-  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video-4k.mp4"
- },
- "video_mobile": {
-  "id": 4342,
-  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video-mobil.mp4"
- }
+ ]
 }

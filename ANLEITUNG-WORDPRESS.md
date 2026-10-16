@@ -33,20 +33,24 @@ letzten Bild stehen. Scrollst du weg und wieder zurück, startet es erneut.
 
 ---
 
-## Schritt 2: Produktbilder einsetzen (10 Minuten)
+## Schritt 2: Produktbilder prüfen (2 Minuten)
 
-Der Abschnitt **„Technik, die wir verbauen“** enthält sechs Platzhalter-Bilder.
+Der Abschnitt **„Technik, die wir verbauen“** zeigt fünf freigestellte TP-Link-VIGI-Kameras aus deinen Fotos
+(Mediathek: `kamera-1.png` bis `kamera-5.png`, 1600 × 1200 Pixel mit transparentem Hintergrund). Die sechs
+alten Platzhalter `kamera-produktbild-1.jpg` bis `-6.jpg` werden nicht mehr benutzt und können in der
+Mediathek gelöscht werden.
+
+So tauschst oder ergänzt du Bilder:
 
 1. Seite öffnen → **Mit Elementor bearbeiten**.
-2. Zum Slider scrollen und auf das erste Platzhalter-Bild klicken.
+2. Zum Slider scrollen und auf das Bild klicken, das du tauschen willst.
 3. Links im Bedienfeld unter **Bild** auf das Bild klicken → **Bild wählen** → eigenes Foto hochladen
    oder aus der Mediathek wählen → **Medien auswählen**.
-4. Für die anderen Slides wiederholen. Mit den Pfeilen am Slider kommst du zu den weiteren Bildern,
-   oder du klickst links im **Struktur-Fenster** (Symbol mit den Ebenen) auf „Produktbild 2“ usw.
-5. Weniger als sechs Bilder: Im Struktur-Fenster einen Slide markieren → Rechtsklick → **Löschen**.
-   Mehr als sechs: Slide markieren → Rechtsklick → **Duplizieren**, dann das Bild tauschen.
-6. Fotos im Querformat 4:3 (zum Beispiel 1200 × 900 Pixel) sehen am besten aus.
-7. Unten links auf **Aktualisieren** klicken.
+4. Weitere Kamera: Im **Struktur-Fenster** (Symbol mit den Ebenen) einen Slide markieren → Rechtsklick →
+   **Duplizieren**, dann das Bild tauschen. Weniger Kameras: Slide markieren → Rechtsklick → **Löschen**.
+5. Neue Bilder am besten freigestellt als PNG im Querformat 4:3 (1600 × 900 bis 1600 × 1200 Pixel), damit
+   sie zu den vorhandenen passen.
+6. Unten links auf **Aktualisieren** klicken.
 
 ---
 

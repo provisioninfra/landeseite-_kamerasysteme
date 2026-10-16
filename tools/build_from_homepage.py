@@ -231,11 +231,11 @@ for i, img in enumerate(PRODUKTE, 1):
     s["settings"].pop("custom_css", None)
     s["settings"].pop("background_color", None)
     s["settings"]["padding"] = box(0, 0, 0, 0)
-    s["settings"]["_title"] = f"Produktbild {i}"
+    s["settings"]["_title"] = img.get("alt", f"Produktbild {i}")
     s["elements"] = [{
         "id": new_id(), "elType": "widget", "widgetType": "image", "elements": [], "isInner": False,
         "settings": {
-            "image": {"url": img["url"], "id": img["id"], "size": "", "alt": f"Produktbild {i}", "source": "library"},
+            "image": {"url": img["url"], "id": img["id"], "size": "", "alt": img.get("alt", f"Produktbild {i}"), "source": "library"},
             "image_size": "large", "align": "center",
             "width": {"unit": "%", "size": 100, "sizes": []},
             "image_border_radius": box(25, 25, 25, 25),

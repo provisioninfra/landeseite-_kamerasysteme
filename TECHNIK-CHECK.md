@@ -220,3 +220,18 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
 - Kartenspalte 900 px breit, mittig; Tablet und Handy volle Breite. Auf dem Handy stapelt sich die Karte wie auf der
   Startseite: Kachel zentriert oben, Text zentriert darunter.
 
+---
+
+## Produktbilder: Kameras freigestellt (16.10.2026)
+
+- Quelle: fünf Produktfotos (TP-Link VIGI) auf weißem Grund, 447 bis 1000 Pixel Kantenlänge. Ein sechstes Bild war
+  ein Handy-Screenshot derselben Bullet-Kamera und wurde nicht verwendet.
+- Ablauf: vierfach hochskaliert (Real-ESRGAN „general-x4v3“, CPU), dann freigestellt mit rembg. Die Maske ist die
+  Vereinigung aus u2net und isnet-general-use: isnet schneidet weiße Halterungen weg, u2net hält sie, zusammen
+  bleiben Antennen und Halterungen vollständig. Reinweiße Pixel außerhalb der Kante werden zusätzlich transparent
+  gesetzt, Kante leicht geglättet.
+- Ausgabe: 1600 × 1200 PNG mit Transparenz, Kamera mittig mit 8 % Rand, 0,3 bis 0,9 MB je Datei
+  (`assets/img/produkte/kamera-1.png` bis `-5.png`). WordPress liefert im Slider die Größe „large“ (1024 px).
+- Live geprüft: fünf Slides, alle Bilder geladen, keine JS-Fehler, Alt-Texte gesetzt. Werkzeuge:
+  `tools/upscale_sr.py` (Modell „general“), Freistell-Skript `tools/produkt_freistellen.py`.
+
