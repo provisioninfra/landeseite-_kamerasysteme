@@ -66,9 +66,11 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   größte erlaubte Größe, der Rest hält die Zeilen bei schmalen Bildschirmen zusammen. Wer es größer möchte,
   erhöht nur die erste Zahl.
 - **Unser Anspruch:** Glas-Box unter dem Hero.
-- **Fünf Unterschiede:** fünf Karten (Rahmen, beim Überfahren mit der Maus gelb wie auf der Startseite) mit
-  Überschrift, kurzem Text und einer fetten Box mit dem Schmerzpunkt. Karte anklicken, dann die drei Textelemente
-  darin einzeln bearbeiten.
+- **Fünf Unterschiede:** Am Computer zweispaltig wie der Startseiten-Abschnitt „Warum immer mehr KMUs …“: links
+  Überschrift und Einleitung (bleiben beim Scrollen stehen, bis die Karten rechts zu Ende sind), rechts fünf Karten
+  (Rahmen, beim Überfahren mit der Maus gelb) mit Überschrift, kurzem Text und einer fetten Box mit dem
+  Schmerzpunkt. Karte anklicken, dann die drei Textelemente darin einzeln bearbeiten. Auf Tablet und Handy stehen
+  Text und Karten untereinander. Das Glas-Logo im Hintergrund ist das Bild der Startseite (Mediathek-ID 516).
 - **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor.
 - **Ablauf der Zusammenarbeit:** Die fünf Schritte gibt es zweimal, einmal für Desktop (Texte über
   und unter dem Zeitstrahl) und einmal für das Handy (Timeline-Element). Änderungen bitte an beiden Stellen.

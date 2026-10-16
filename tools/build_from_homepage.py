@@ -308,8 +308,33 @@ cta_btn = clone(btn_tpl); cta_btn["settings"]["align"] = "center"; cta_btn["sett
 cta = container({"flex_direction": "column", "flex_align_items": "center",
                  "padding": box(30, 0, 0, 0), "_title": "Erstgespräch"}, [reid(cta_btn)])
 
+# Zweispaltig wie der Startseiten-Abschnitt „Warum immer mehr KMUs …“ (H[6]): links der Text, der am Computer beim
+# Scrollen stehen bleibt, bis die Karten rechts zu Ende sind (Elementor-Sticky, „an Eltern-Container“), rechts die
+# Karten. Glas-Logo als Hintergrund-Overlay der Zeile (nur am Computer). Auf Tablet und Handy stehen Text und Karten wie bisher untereinander, zentriert, ohne Overlays.
+home_row = must(H[6], "f86d566")
+home_left, home_right = must(H[6], "8c98faa"), must(H[6], "b72e86b")
+full = lambda: {"unit": "%", "size": 100, "sizes": []}
+for w in (d_heading, d_intro):
+    w["settings"].pop("_flex_align_self", None)
+    w["settings"].update({"align": "left", "align_tablet": "center", "align_mobile": "center",
+                          "_element_custom_width": full(), "_element_custom_width_tablet": full(), "_element_custom_width_mobile": full()})
+d_intro["settings"]["_margin"] = box(0, 0, 0, 0)
+col["settings"]["width"] = full()
+left = clone(home_left)                      # 40 %, sticky top (widescreen/desktop/laptop), sticky_parent = yes
+left["elements"] = [reid(d_heading), reid(d_intro)]
+left["settings"].update({"width_tablet": full(), "_title": "Text (am Computer sticky)"})
+right = clone(home_right)                    # 60 %
+right["elements"] = [col, cta]
+right["settings"].update({"width_tablet": full(), "_title": "Karten"})
+row = clone(home_row)                        # Zeile mit Glas-Logo (Overlay links, 50 % breit, Maus-Effekt)
+row["elements"] = [left, right]
+row["settings"].update({"flex_direction_tablet": "column", "width": full(),
+                        "margin": box(0, 0, 0, 0), "margin_laptop": box(0, 0, 0, 0),
+                        "background_overlay_opacity_tablet": {"unit": "px", "size": 0, "sizes": []},
+                        "background_overlay_opacity_mobile": {"unit": "px", "size": 0, "sizes": []},
+                        "_title": "Text + Karten"})
 diff = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(sec_tpl["settings"]),
-        "elements": [reid(d_heading), reid(d_intro), col, cta]}
+        "elements": [reid(row)]}
 # Kein Verlaufs-Overlay am oberen Rand (würde die Überschrift abdunkeln) und gleiche Hintergrundfarbe wie der Slider,
 # damit der Übergang ohne sichtbare Kante bleibt.
 diff["settings"].pop("custom_css", None)
@@ -317,8 +342,11 @@ diff["settings"].pop("css_classes", None)
 diff["settings"].update({"_element_id": "unterschiede", "_title": "Fünf Unterschiede",
                          "background_background": "classic", "background_color": "#010A2C",
                          "padding": box(60, 20, 60, 20), "padding_mobile": box(50, 20, 50, 20),
-                         "flex_align_items": "center",   # 900-px-Kartenspalte mittig
+                         "flex_align_items": "center",
                          "flex_gap": {"column": "20", "row": "20", "isLinked": True, "unit": "px", "size": 20}})
+# Hinweis: Der Startseiten-Abschnitt trägt zusätzlich ein gelbes Lichtschein-Overlay (2.png). Es ist dort aber nicht
+# sichtbar, weil die Klasse „shadeup“ das Overlay-Pseudo-Element auf einen 30-px-Streifen zusammendrückt. Damit die
+# Optik dem sichtbaren Original entspricht, wird es hier bewusst nicht übernommen.
 page.append(diff)
 
 # ---------------------------------------------------------------- 8) Kundenstimmen (Original, mit Platz für die Pfeile)

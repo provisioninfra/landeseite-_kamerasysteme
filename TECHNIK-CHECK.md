@@ -235,3 +235,23 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
 - Live geprüft: fünf Slides, alle Bilder geladen, keine JS-Fehler, Alt-Texte gesetzt. Werkzeuge:
   `tools/upscale_sr.py` (Modell „general“), Freistell-Skript `tools/produkt_freistellen.py`.
 
+---
+
+## „Fünf Unterschiede“ zweispaltig mit Sticky-Text und Glas-Logo (16.10.2026)
+
+- Aufbau exakt wie der Startseiten-Abschnitt „Warum immer mehr KMUs …“: Zeile mit zwei Spalten (40 % Text, 60 %
+  Karten, `align-items: flex-start`), linke Spalte mit Elementor-Pro-Sticky „oben“, „an Eltern-Container“ (Sticky
+  endet mit der Zeile, also mit der letzten Karte und dem Button), aktiv für Widescreen, Desktop und Laptop wie auf
+  der Startseite. Zwischen 1025 und 1280 px zwei Spalten ohne Sticky (wie dort), ab 1024 px abwärts untereinander
+  mit zentriertem Text.
+- Glas-Logo: Hintergrund-Overlay der Zeile (Bild `Frame-2147224855.png`, Mediathek-ID 516, links, 50 % Breite,
+  Maus-Effekt), Deckkraft 50 % wie auf der Startseite. Auf Tablet und Handy Deckkraft 0, da nur für den Computer
+  gewünscht.
+- Nicht übernommen: Das gelbe Lichtschein-Overlay des Startseiten-Abschnitts (`2.png`) ist dort nicht sichtbar, weil
+  die Klasse `shadeup` das Overlay-Pseudo-Element auf einen 30-px-Streifen reduziert. Auf dieser Seite würde es
+  voll durchscheinen und vom Original abweichen.
+- Prüfung in der Vorschau und live, ausgeloggt: 1920 und 1440 px: Textspalte wird beim Scrollen `position: fixed`
+  (oben bündig, wie auf der Startseite) und am Ende der Zeile `absolute`, Unterkante gleich Unterkante der Zeile;
+  keine Überlappung mit den Karten. 1280 px: zwei Spalten, kein Sticky. 1024, 768, 393 px: untereinander,
+  Überschrift zentriert, Overlay aus, keine Überbreite, keine JS-Fehler.
+
