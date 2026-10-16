@@ -3750,7 +3750,7 @@
    "isInner": false
   },
   {
-   "id": "b488d07",
+   "id": "5cbf653",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -3845,7 +3845,7 @@
    },
    "elements": [
     {
-     "id": "58908e7",
+     "id": "b488d07",
      "elType": "widget",
      "settings": {
       "typography_typography": "custom",
@@ -3918,7 +3918,7 @@
      "widgetType": "heading"
     },
     {
-     "id": "56e5499",
+     "id": "58908e7",
      "elType": "widget",
      "settings": {
       "typography_font_size_tablet": {
@@ -7696,22 +7696,15 @@
      "isInner": true
     },
     {
-     "id": "5cbf653",
+     "id": "f963339",
      "elType": "container",
      "settings": {
       "content_width": "full",
       "flex_direction": "column",
       "flex_align_items": "center",
-      "flex_gap": {
-       "column": "20",
-       "row": "20",
-       "isLinked": true,
-       "unit": "px",
-       "size": 20
-      },
       "padding": {
        "unit": "px",
-       "top": "40",
+       "top": "30",
        "right": "0",
        "bottom": "0",
        "left": "0",
@@ -7722,86 +7715,6 @@
      "elements": [
       {
        "id": "aa9d433",
-       "elType": "widget",
-       "settings": {
-        "typography_font_size_tablet": {
-         "unit": "px",
-         "size": 12,
-         "sizes": []
-        },
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 12,
-         "sizes": []
-        },
-        "typography_line_height_tablet": {
-         "unit": "em",
-         "size": 1.56,
-         "sizes": []
-        },
-        "typography_line_height_mobile": {
-         "unit": "em",
-         "size": 1.44,
-         "sizes": []
-        },
-        "__globals__": {
-         "typography_typography": "",
-         "text_color": "globals/colors?id=521f46a"
-        },
-        "editor": "<p>Im Erstgespräch sagen wir dir in 15 Minuten, wo dein Gebäude angreifbar ist.</p>",
-        "align": "center",
-        "_element_width": "initial",
-        "_element_custom_width": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "_z_index": 1,
-        "_element_custom_width_tablet": {
-         "unit": "px",
-         "size": 440,
-         "sizes": []
-        },
-        "_title": "Aufruf",
-        "align_mobile": "center",
-        "typography_typography": "custom",
-        "typography_font_family": "Poppins",
-        "typography_font_size": {
-         "unit": "px",
-         "size": 18,
-         "sizes": []
-        },
-        "typography_font_size_laptop": {
-         "unit": "px",
-         "size": 14,
-         "sizes": []
-        },
-        "typography_font_size_tablet_extra": {
-         "unit": "px",
-         "size": 12,
-         "sizes": []
-        },
-        "typography_font_weight": "500",
-        "typography_text_transform": "none",
-        "typography_text_decoration": "none",
-        "typography_line_height": {
-         "unit": "em",
-         "size": 1.64,
-         "sizes": []
-        },
-        "typography_letter_spacing": {
-         "unit": "em",
-         "size": 0,
-         "sizes": []
-        },
-        "text_color": "#FFFFFF",
-        "_flex_align_self_mobile": "center"
-       },
-       "elements": [],
-       "widgetType": "text-editor"
-      },
-      {
-       "id": "f963339",
        "elType": "widget",
        "settings": {
         "text": "Unverbindliches Erstgespräch vereinbaren",
@@ -12368,37 +12281,37 @@
       "eael_adv_accordion_tab": [
        {
         "eael_adv_accordion_tab_title": "Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
-        "_id": "192f631",
+        "_id": "56e5499",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja, innerhalb klarer Regeln. Erlaubt ist die Überwachung deines eigenen Geländes und deiner Zugänge, nicht die von Gehweg oder Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel so, dass du auf der sicheren Seite bist, und geben dir die passenden Hinweisschilder und Unterlagen mit.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Wie lange dauert die Installation?",
-        "_id": "8a6c2f8",
+        "_id": "192f631",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Eine Anlage mit vier bis acht Kameras ist in der Regel an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Kann ich die Bilder auf dem Handy sehen?",
-        "_id": "a94ee14",
+        "_id": "8a6c2f8",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja. Du bekommst eine App, in der du Live-Bild und Aufzeichnungen siehst und bei Bewegung benachrichtigt wirst. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was passiert bei Stromausfall oder Internetstörung?",
-        "_id": "8879a92",
+        "_id": "a94ee14",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Die Aufzeichnung läuft lokal auf dem Rekorder weiter, solange Strom da ist. Auf Wunsch sichern wir Rekorder und Kameras mit einer unterbrechungsfreien Stromversorgung ab. Fällt das Internet aus, fehlt nur der Fernzugriff, nicht die Aufzeichnung.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was kostet eine Videoüberwachung?",
-        "_id": "ad431b1",
+        "_id": "8879a92",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Das hängt von der Zahl der Kameras, den Entfernungen und den vorhandenen Leitungen ab. Einen ersten Rahmen bekommst du schon im Erstgespräch, nach dem Termin vor Ort einen verbindlichen Preis.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
-        "_id": "409a97b",
+        "_id": "ad431b1",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Die Aufnahmen bleiben auf deinem Rekorder im Gebäude und nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung entsprechend ein und halten die Software aktuell.</span></p>"
        }
@@ -33905,12 +33818,12 @@
    "isInner": false
   },
   {
-   "id": "ec82864",
+   "id": "409a97b",
    "elType": "container",
    "isInner": false,
    "elements": [
     {
-     "id": "66d3c6c",
+     "id": "ec82864",
      "elType": "widget",
      "widgetType": "html",
      "elements": [],

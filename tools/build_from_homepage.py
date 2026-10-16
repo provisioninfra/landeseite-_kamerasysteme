@@ -96,7 +96,6 @@ DIFFS = [   # (Icon, Überschrift, Text, Pain-Box)
      "„Läuft“ reicht nicht. Bei der Übergabe prüfen wir mit dir, ob Gesichter auch nachts erkennbar sind und der Alarm wirklich ankommt. Das Ergebnis bekommst du schriftlich.",
      "Mit verwaschenen Nachtaufnahmen können weder Polizei noch Versicherung etwas anfangen."),
 ]
-CTA_LEAD = '<p>Im Erstgespräch sagen wir dir in 15 Minuten, wo dein Gebäude angreifbar ist.</p>'
 
 STEPS = {
     "Erstgespräch": "Ein kurzes Telefonat: Was ist passiert, oder was soll nie passieren? Welche Bereiche machen dir Sorgen? Du bekommst eine erste ehrliche Einschätzung.",
@@ -304,14 +303,10 @@ col = container({"flex_direction": "column",
                  "flex_gap_mobile": {"column": "16", "row": "16", "isLinked": True, "unit": "px", "size": 16},
                  "padding": box(0, 0, 0, 0), "_title": "Unterschiede"}, cards)
 
-cta_lead = clone(text_tpl)
-cta_lead["settings"].update({"editor": CTA_LEAD, "align": "center", "align_mobile": "center", "typography_font_weight": "500",
-                             "typography_font_size": {"unit": "px", "size": 18, "sizes": []},
-                             "_element_custom_width": {"unit": "%", "size": 100, "sizes": []}, "_title": "Aufruf"})
+# Nur der Button, kein Einleitungstext davor (Wunsch vom 16.10.)
 cta_btn = clone(btn_tpl); cta_btn["settings"]["align"] = "center"; cta_btn["settings"]["_title"] = "Erstgespräch"
 cta = container({"flex_direction": "column", "flex_align_items": "center",
-                 "flex_gap": {"column": "20", "row": "20", "isLinked": True, "unit": "px", "size": 20},
-                 "padding": box(40, 0, 0, 0), "_title": "Erstgespräch"}, [reid(cta_lead), reid(cta_btn)])
+                 "padding": box(30, 0, 0, 0), "_title": "Erstgespräch"}, [reid(cta_btn)])
 
 diff = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(sec_tpl["settings"]),
         "elements": [reid(d_heading), reid(d_intro), col, cta]}

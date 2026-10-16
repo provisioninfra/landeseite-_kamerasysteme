@@ -69,8 +69,7 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
 - **Fünf Unterschiede:** fünf Karten (Rahmen, beim Überfahren mit der Maus gelb wie auf der Startseite) mit
   Überschrift, kurzem Text und einer fetten Box mit dem Schmerzpunkt. Karte anklicken, dann die drei Textelemente
   darin einzeln bearbeiten.
-- **Aufruf zum Erstgespräch:** „Im Erstgespräch sagen wir dir in 15 Minuten …“. Wenn 15 Minuten
-  nicht realistisch sind, die Zahl ändern oder streichen.
+- **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor.
 - **Ablauf der Zusammenarbeit:** Die fünf Schritte gibt es zweimal, einmal für Desktop (Texte über
   und unter dem Zeitstrahl) und einmal für das Handy (Timeline-Element). Änderungen bitte an beiden Stellen.
 - **FAQ:** Auf das Akkordeon klicken → links unter **Inhalt** die Fragen aufklappen und bearbeiten.
