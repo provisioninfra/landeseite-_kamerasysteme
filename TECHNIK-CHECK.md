@@ -315,3 +315,21 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
 - Glas-V am Handy: Overlay der Karten-Zeile wie auf der Startseite oben mittig, „contain“, Deckkraft 0,64. Tablet
   weiterhin ohne.
 
+---
+
+## Hero: Schloss neben statt hinter der Headline (16.10.2026)
+
+- Befund: Seit die Headline größer ist und „mit Kamera- & Videoüberwachung“ in einer Zeile steht, endet die zweite
+  Zeile am Desktop hinter dem leuchtenden Schloss im Video (bei 1920 px Text bis 1385 px, Schloss ab 1210 px).
+- Warum „Schloss unter der Headline“ nicht geht: Im Videobild liegen Kameras und Schloss nur 7 % der Bildhöhe
+  auseinander (bei 1920 px etwa 75 px), die zweizeilige Headline ist 160 px hoch. Beides passt nicht zwischen
+  Kameras (oben) und Schloss (unten), bei keiner Videogröße.
+- Lösung: Das Video wird am Computer per Custom-CSS des Hero nach rechts verschoben, die linke Kante mit einer
+  Maske weich in den Hintergrund ausgeblendet. Ab 1441 px feste 200 px; 1281 bis 1440 px `746px - 50vw`
+  (26 bis 106 px); 1025 bis 1280 px `max(0, 645px - 50vw)` (5 bis 132 px). Elementor zentriert das Video mit
+  `translate(-50%, -50%)`, die Regel ergänzt nur den Versatz. Tablet und Handy unverändert.
+- Live gemessen: Schloss beginnt 12 bis 25 px rechts vom Textende der Headline (1281 bis 1920 px), Kameras weiter
+  zwischen Menüleiste und Headline. Nebenwirkung: Der rechte Türflügel ragt bei 1441 bis 1600 px um 170 bis 250 px
+  über den rechten Rand hinaus (vorher 0 bis 45 px), bei 1920 px um 46 px.
+- Alternative ohne Verschiebung wäre eine kleinere Headline ab 1441 px (52 px statt 64 px); bewusst nicht gewählt.
+

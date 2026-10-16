@@ -169,6 +169,32 @@ hs["background_video_link"] = VIDEO_DESKTOP["url"]
 # Kameras im Video frei sichtbar, knapp über der Headline: Text rutscht nach unten, am Desktop bei gleicher Hero-Höhe
 # (oben +80, unten -80), damit der Videoausschnitt gleich bleibt. Laptop/Tablet: oben +70, Höhe darf wachsen.
 hs["padding"] = box(280, 20, 20, 20)
+# Schloss im Video rechts neben dem Headline-Ende statt dahinter (ab 1441 px): Videobild 200 px nach rechts, linke
+# Kante weich in den Hintergrund ausgeblendet. Elementor zentriert das Video mit translate(-50%, -50%).
+hs["custom_css"] = (hs.get("custom_css", "") + """
+@media (min-width: 1441px) {
+  .elementor-element-0f0c707 video.elementor-background-video-hosted {
+    transform: translate(calc(-50% + 200px), -50%) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 220px);
+    mask-image: linear-gradient(to right, transparent 0, #000 220px);
+  }
+}
+/* Laptop (1281-1440 px, Headline 50 px): Verschiebung wächst mit kleinerer Breite (26 px bei 1440, 106 px bei 1281) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .elementor-element-0f0c707 video.elementor-background-video-hosted {
+    transform: translate(calc(-50% + 746px - 50vw), -50%) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 220px);
+    mask-image: linear-gradient(to right, transparent 0, #000 220px);
+  }
+}
+/* 1025-1280 px (Headline 44 px): nur so weit wie nötig (5 px bei 1280, 132 px bei 1025) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .elementor-element-0f0c707 video.elementor-background-video-hosted {
+    transform: translate(calc(-50% + max(0px, 645px - 50vw)), -50%) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 220px);
+    mask-image: linear-gradient(to right, transparent 0, #000 220px);
+  }
+}""")
 hs["padding_laptop"] = box(220, 40, 50, 40)
 hs["padding_tablet"] = box(220, 20, 50, 20)
 hs["background_video_start"] = ""
