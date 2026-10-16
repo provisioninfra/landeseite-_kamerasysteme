@@ -71,7 +71,15 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   (Rahmen, beim Überfahren mit der Maus gelb) mit Überschrift, kurzem Text und einer fetten Box mit dem
   Schmerzpunkt. Karte anklicken, dann die drei Textelemente darin einzeln bearbeiten. Auf Tablet und Handy stehen
   Text und Karten untereinander. Das Glas-Logo im Hintergrund ist das Bild der Startseite (Mediathek-ID 516).
-- **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor.
+- **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor. Alle Buttons der Seite springen
+  zum Kontaktformular am Seitenende (Anker `#kontakt`).
+- **Kontaktformular:** eigenes Gravity-Forms-Formular „Anfrageformular Kamerasysteme“ (ID 4), eine Kopie von
+  „Anfrageformular (1)“ mit den Feldern Name, Bereich, Mitarbeitende, Anzahl Gebäude (1, 2, 3, >3), E-Mail,
+  Telefon. Felder und Texte änderst du unter **Formulare → Anfrageformular Kamerasysteme**. Die beiden
+  bestehenden Formulare sind unverändert. Einträge des neuen Formulars findest du unter **Formulare →
+  Einträge** (Formular auswählen). Das Schritt-für-Schritt-Design (eine Frage pro Schritt, Button „Weiter“)
+  steuert der Eintrag **Landeseiten Forms → Kontakt Kamerasysteme**; dort lassen sich Farben, Schriftgrößen und
+  Button-Texte ändern.
 - **Ablauf der Zusammenarbeit:** Die fünf Schritte gibt es zweimal, einmal für Desktop (Texte über
   und unter dem Zeitstrahl) und einmal für das Handy (Timeline-Element). Änderungen bitte an beiden Stellen.
 - **FAQ:** Auf das Akkordeon klicken → links unter **Inhalt** die Fragen aufklappen und bearbeiten.

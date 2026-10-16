@@ -255,3 +255,29 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
   keine Überlappung mit den Karten. 1280 px: zwei Spalten, kein Sticky. 1024, 768, 393 px: untereinander,
   Überschrift zentriert, Overlay aus, keine Überbreite, keine JS-Fehler.
 
+---
+
+## Kontaktformular auf der Seite (16.10.2026)
+
+- Neues Gravity-Forms-Formular „Anfrageformular Kamerasysteme“ (ID 4), erzeugt als Export von „Anfrageformular (1)“
+  (ID 2), angepasst und über **Import/Export → Formulare importieren** als neues Formular eingespielt. Die Formulare
+  1 und 2 wurden danach erneut exportiert und mit dem Stand davor verglichen: identisch.
+- Änderungen gegenüber dem Original: ein Feld „Wie lautet dein Name?“ statt Vor- und Nachname (volle Breite),
+  „Wie viele Gebäude sollen überwacht werden?“ mit 1 / 2 / 3 / >3 statt der Türen-Frage, die Frage „Wie organisierst
+  du deine Zugänge aktuell?“ entfällt. Versteckte UTM-Felder, Bereich (Privat/Geschäftlich) und Mitarbeitende mit
+  ihrer Bedingung bleiben.
+- Bestätigungen wie im Original (Standard → Seite „Termin“ 3617, „LQ form“ → Seite „Termin Gebucht“ 823). Im
+  Query-String wird `first_name` jetzt mit dem ganzen Namen gefüllt, `last_name` entfällt. Die LQ-Regeln zum
+  Türen-Feld (1–5, 6–15, Noch unsicher) entfallen, weil es das Feld nicht mehr gibt; Privat und Mitarbeitende
+  1–10 / 11–50 wirken weiter. Benachrichtigung unverändert an anfragen@provision-infra.de, Betreff enthält den
+  neuen Formulartitel.
+- Einbindung: Abschnitt der Seite /kontakt (Elementor-Daten in `elementor/quelle-kontakt.json`, nur gelesen) geklont:
+  Überschrift, Text (kameraspezifisch), Essential-Addons-Widget „Gravity Form“ mit Formular 4 und der Klasse
+  `cs-landeseiten-form`, ohne die Mindesthöhe von 100 vh. Anker `kontakt`, alle vier Buttons der Seite verlinken
+  darauf statt auf /kontakt.
+- Schritt-für-Schritt-Darstellung: Die Kontaktseite nutzt das Website-Modul „Landeseiten Forms“ (Eintrag „Kontakt
+  test“, ID 2459, für Formular 2). Für Formular 4 wurde dieser Eintrag mit der Duplizieren-Funktion kopiert
+  (Eintrag „Kontakt Kamerasysteme“, ID 4368) und nur das Formular umgestellt; alle 38 übrigen Einstellungen
+  (Übergang „Reveal“, 800 px, Farben, Schriftgrößen, Button-Texte) sind identisch. Die Einträge 2459 und 828
+  wurden vorher und nachher ausgelesen und sind unverändert.
+
