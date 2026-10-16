@@ -79,22 +79,22 @@ SLIDER_H = 'Technik, <span style="font-weight: 700; ">die wir verbauen</span>'
 DIFF_H = 'Fünf Unterschiede, <span style="font-weight: 700; ">die du im Ernstfall spürst</span>'
 DIFF_INTRO = '<p>„Alles aus einer Hand“ steht auf jeder Website. Ob es stimmt, merkst du erst, wenn etwas passiert.</p>'
 # (Icon-Media-ID, Titel, Text, Versprechen)
-DIFFS = [
+DIFFS = [   # (Icon, Überschrift, Text, Pain-Box)
     ("ICON1", "Sicherheitsanalyse statt Kameraverkauf",
-     "Wer dir ohne Begehung ein Angebot schickt, verkauft Technik. Wir gehen erst mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt. Oft brauchst du weniger Kameras, als du denkst.",
-     "„Wir verkaufen dir keine Kameras auf Vorrat.“"),
+     "Wer dir ohne Begehung ein Angebot schickt, verkauft Technik. Wir gehen erst mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt.",
+     "Eine falsch gesetzte Kamera filmt im Ernstfall den Parkplatz, nicht den Täter."),
     ("ICON2", "Sicherheitskonzept statt isolierter Technik",
-     "Eine Kamera filmt den Einbruch. Verhindern kann sie ihn nicht. Erst wenn Schließanlage und Alarm mitspielen, bekommt der Täter ein Problem. Deshalb planen wir alles zusammen.",
-     "„Vom ersten Zutrittsversuch bis zur verwertbaren Aufnahme.“"),
+     "Eine Kamera filmt den Einbruch, aufhalten kann sie ihn nicht. Deshalb planen wir sie zusammen mit Schließanlage und Alarm.",
+     "Dann hast du ein Video vom Einbruch und trotzdem leere Regale."),
     ("ICON3", "Fertig eingerichtet statt nur montiert",
-     "Viele Anlagen hängen an der Wand und melden nichts, weil nie jemand die App eingerichtet hat. Bei uns verlässt niemand das Gebäude, bevor dein Handy Alarm schlägt und du das System selbst bedienen kannst.",
-     "„Wir gehen erst, wenn du dein System selbst bedienen kannst.“"),
+     "Viele Anlagen hängen an der Wand und schweigen, weil nie jemand die App eingerichtet hat. Bei uns schlägt dein Handy Alarm, bevor wir das Gebäude verlassen.",
+     "Den Einbruch bemerkt sonst der Erste, der morgens aufschließt."),
     ("ICON4", "Langfristige Betreuung statt einmaliger Installation",
-     "Festplatten laufen voll, und irgendwann wächst eine Hecke ins Bild. Fällt das erst nach dem Einbruch auf, ist es zu spät. Wir prüfen deine Anlage regelmäßig, auf Wunsch per Wartungsvertrag.",
-     "„Wir sind auch Jahre später noch für dich da.“"),
+     "Festplatten laufen voll, und irgendwann wächst eine Hecke ins Bild. Wir prüfen deine Anlage regelmäßig, auf Wunsch per Wartungsvertrag.",
+     "Dass die Aufzeichnung seit Monaten fehlt, merkst du erst, wenn du sie brauchst."),
     ("ICON5", "Nachweisbare Übergabe statt bloßem Funktionstest",
-     "„Läuft“ reicht nicht. Bei der Übergabe prüfen wir mit dir, ob Gesichter auch nachts erkennbar sind und ob dein Handy wirklich Alarm schlägt. Das Ergebnis bekommst du schriftlich.",
-     "„Wir belegen, dass die Kamera ihre Aufgabe erfüllt.“"),
+     "„Läuft“ reicht nicht. Bei der Übergabe prüfen wir mit dir, ob Gesichter auch nachts erkennbar sind und der Alarm wirklich ankommt. Das Ergebnis bekommst du schriftlich.",
+     "Mit verwaschenen Nachtaufnahmen können weder Polizei noch Versicherung etwas anfangen."),
 ]
 CTA_LEAD = '<p>Im Erstgespräch sagen wir dir in 15 Minuten, wo dein Gebäude angreifbar ist.</p>'
 
@@ -257,8 +257,8 @@ page.append(slider)
 sec_tpl = H[4]
 heading_tpl = must(H[5], "556df520")
 text_tpl = must(H[15], "4e4df2b")
-row_tpl = must(H[4], "1625f47")
-col_tpl = must(H[4], "9148472")
+card_tpl = must(H[6], "7d36acb")      # Karte der Startseite: 2-px-Rahmen, beim Hover gelb mit Glow
+tile_tpl = must(H[4], "3f048a0")      # Icon-Kachel (das SVG bringt die gelbe Fläche mit)
 btn_tpl = must(H[12], "c7ed38d")
 
 d_heading = clone(heading_tpl); d_heading["settings"]["title"] = DIFF_H; d_heading["settings"]["_title"] = "Fünf Unterschiede"
@@ -270,47 +270,39 @@ d_intro["settings"].update({"editor": DIFF_INTRO, "align": "center", "align_mobi
                             "_element_custom_width_tablet": {"unit": "%", "size": 100, "sizes": []},
                             "_flex_align_self": "center", "_margin": box(10, 0, 30, 0), "_title": "Einleitung"})
 
-rows = []
-for key, title, body, quote in DIFFS:
-    r = clone(row_tpl)
-    tile = r["elements"][0]
+cards = []
+for key, title, body, pain in DIFFS:
+    card = clone(card_tpl)
+    row = card["elements"][0]                                   # Zeile: Kachel + Text (bricht auf Tablet/Handy um, Handy zentriert)
+    _, textcol = row["elements"]
+    tile = clone(tile_tpl)
+    tile["elements"] = [tile["elements"][0]]
     tile["elements"][0]["settings"]["selected_icon"] = svg_icon(*ICONS[key])
     tile["elements"][0]["settings"]["_title"] = "Icon"
-    t_title = clone(must(H[4], "d05eab3"))
-    t_title["settings"].update({
-        "title": title, "_title": title, "header_size": "h3",
-        "typography_font_weight": "700",
-        "typography_font_size": {"unit": "px", "size": 20, "sizes": []},
-        "typography_font_size_laptop": {"unit": "px", "size": 18, "sizes": []},
-        "typography_font_size_tablet_extra": {"unit": "px", "size": 16, "sizes": []},
-        "typography_font_size_tablet": {"unit": "px", "size": 16, "sizes": []},
-        "typography_font_size_mobile": {"unit": "px", "size": 15, "sizes": []},
-        "_element_custom_width": {"unit": "%", "size": 100, "sizes": []},
-        "_element_custom_width_tablet": {"unit": "%", "size": 100, "sizes": []},
-        "_element_custom_width_mobile": {"unit": "%", "size": 100, "sizes": []},
-    })
-    t_body = clone(must(H[4], "7df04ae"))
-    t_body["settings"].update({
-        "editor": f'<p>{body}</p>\n<p><span style="color: #fbc91b; font-weight: 500;">{quote}</span></p>',
-        "_title": title,
-        "_element_custom_width": {"unit": "%", "size": 100, "sizes": []},
-        "_element_custom_width_tablet": {"unit": "%", "size": 100, "sizes": []},
-        "_element_custom_width_mobile": {"unit": "%", "size": 100, "sizes": []},
-    })
-    textcol = container({
-        "width": {"unit": "%", "size": 80, "sizes": []}, "width_tablet": {"unit": "%", "size": 80, "sizes": []},
-        "width_mobile": {"unit": "%", "size": 74, "sizes": []},
-        "flex_direction": "column", "flex_gap": {"column": "6", "row": "6", "isLinked": True, "unit": "px", "size": 6},
-        "padding": box(0, 0, 0, 0), "_title": "Text",
-    }, [t_title, t_body])
-    r["elements"] = [tile, textcol]
-    r["settings"]["_title"] = title
-    rows.append(reid(r))
-col = clone(col_tpl); col["elements"] = rows
-col["settings"].update({"flex_gap_laptop": {"column": "28", "row": "28", "isLinked": True, "unit": "px", "size": 28},
-                        "flex_gap_tablet_extra": {"column": "24", "row": "24", "isLinked": True, "unit": "px", "size": 24},
-                        "_title": "Unterschiede"})
-reid(col)
+    tile["settings"].update({"width": {"unit": "%", "size": 10.34, "sizes": []},
+                             "width_tablet": {"unit": "px", "size": 72, "sizes": []},
+                             "width_mobile": {"unit": "px", "size": 72, "sizes": []},
+                             "padding": box(0, 0, 0, 0), "padding_tablet": box(0, 0, 0, 0), "padding_mobile": box(0, 0, 0, 0),
+                             "_title": "Kachel"})
+    t_title, t_body, pill = textcol["elements"]
+    t_title["settings"].update({"title": title, "_title": title, "header_size": "h3"})
+    t_body["settings"].update({"editor": f"<p>{body}</p>", "_title": "Text",
+                               "typography_font_size_tablet": {"unit": "px", "size": 14, "sizes": []}})
+    pill["elements"][0]["settings"].update({"editor": f"<p>{pain}</p>", "_title": "Pain",
+                                            "typography_font_size_tablet": {"unit": "px", "size": 14, "sizes": []}})
+    pill["settings"]["_title"] = "Pain-Box"
+    row["elements"] = [tile, textcol]
+    row["settings"]["_title"] = "Zeile"
+    textcol["settings"]["_title"] = "Text"
+    card["settings"]["_title"] = title
+    cards.append(reid(card))
+col = container({"flex_direction": "column",
+                 "width": {"unit": "px", "size": 900, "sizes": []},
+                 "width_tablet": {"unit": "%", "size": 100, "sizes": []},
+                 "width_mobile": {"unit": "%", "size": 100, "sizes": []},
+                 "flex_gap": {"column": "20", "row": "20", "isLinked": True, "unit": "px", "size": 20},
+                 "flex_gap_mobile": {"column": "16", "row": "16", "isLinked": True, "unit": "px", "size": 16},
+                 "padding": box(0, 0, 0, 0), "_title": "Unterschiede"}, cards)
 
 cta_lead = clone(text_tpl)
 cta_lead["settings"].update({"editor": CTA_LEAD, "align": "center", "align_mobile": "center", "typography_font_weight": "500",
@@ -330,6 +322,7 @@ diff["settings"].pop("css_classes", None)
 diff["settings"].update({"_element_id": "unterschiede", "_title": "Fünf Unterschiede",
                          "background_background": "classic", "background_color": "#010A2C",
                          "padding": box(60, 20, 60, 20), "padding_mobile": box(50, 20, 50, 20),
+                         "flex_align_items": "center",   # 900-px-Kartenspalte mittig
                          "flex_gap": {"column": "20", "row": "20", "isLinked": True, "unit": "px", "size": 20}})
 page.append(diff)
 

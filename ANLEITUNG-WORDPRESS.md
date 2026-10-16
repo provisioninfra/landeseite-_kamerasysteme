@@ -62,7 +62,9 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   größte erlaubte Größe, der Rest hält die Zeilen bei schmalen Bildschirmen zusammen. Wer es größer möchte,
   erhöht nur die erste Zahl.
 - **Unser Anspruch:** Glas-Box unter dem Hero.
-- **Fünf Unterschiede:** fünf Zeilen mit Überschrift, Text und gelbem Versprechen.
+- **Fünf Unterschiede:** fünf Karten (Rahmen, beim Überfahren mit der Maus gelb wie auf der Startseite) mit
+  Überschrift, kurzem Text und einer fetten Box mit dem Schmerzpunkt. Karte anklicken, dann die drei Textelemente
+  darin einzeln bearbeiten.
 - **Aufruf zum Erstgespräch:** „Im Erstgespräch sagen wir dir in 15 Minuten …“. Wenn 15 Minuten
   nicht realistisch sind, die Zahl ändern oder streichen.
 - **Ablauf der Zusammenarbeit:** Die fünf Schritte gibt es zweimal, einmal für Desktop (Texte über

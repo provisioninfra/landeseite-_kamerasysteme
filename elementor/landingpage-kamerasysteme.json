@@ -3806,7 +3806,7 @@
    "isInner": false
   },
   {
-   "id": "4a79ecb",
+   "id": "8a6c2f8",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -3890,6 +3890,7 @@
     "_element_id": "unterschiede",
     "_title": "Fünf Unterschiede",
     "background_background": "classic",
+    "flex_align_items": "center",
     "flex_gap": {
      "column": "20",
      "row": "20",
@@ -3900,7 +3901,7 @@
    },
    "elements": [
     {
-     "id": "3e06cb6",
+     "id": "a94ee14",
      "elType": "widget",
      "settings": {
       "typography_typography": "custom",
@@ -3973,7 +3974,7 @@
      "widgetType": "heading"
     },
     {
-     "id": "74b6d54",
+     "id": "8879a92",
      "elType": "widget",
      "settings": {
       "typography_font_size_tablet": {
@@ -4062,51 +4063,14 @@
      "widgetType": "text-editor"
     },
     {
-     "id": "5952b31",
+     "id": "b488d07",
      "elType": "container",
      "settings": {
       "content_width": "full",
-      "width": {
-       "unit": "%",
-       "size": 100,
-       "sizes": []
-      },
       "flex_direction": "column",
-      "flex_justify_content": "center",
-      "flex_align_items": "flex-start",
-      "padding": {
+      "width": {
        "unit": "px",
-       "isLinked": false,
-       "top": "0",
-       "right": "0",
-       "bottom": "0",
-       "left": "0"
-      },
-      "flex_gap": {
-       "column": "40",
-       "row": "40",
-       "isLinked": false,
-       "unit": "px",
-       "size": 40
-      },
-      "flex_gap_tablet": {
-       "column": "15",
-       "row": "15",
-       "isLinked": false,
-       "unit": "px",
-       "size": 15
-      },
-      "flex_gap_mobile": {
-       "column": "21",
-       "row": "21",
-       "isLinked": false,
-       "unit": "px",
-       "size": 21
-      },
-      "content_width_tablet": "full",
-      "width_mobile": {
-       "unit": "%",
-       "size": 100,
+       "size": 900,
        "sizes": []
       },
       "width_tablet": {
@@ -4114,25 +4078,2948 @@
        "size": 100,
        "sizes": []
       },
-      "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
-      "_title": "Unterschiede",
-      "flex_direction_tablet": "column",
-      "flex_gap_laptop": {
-       "column": "28",
-       "row": "28",
-       "isLinked": true,
-       "unit": "px",
-       "size": 28
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
       },
-      "flex_gap_tablet_extra": {
-       "column": "24",
-       "row": "24",
+      "flex_gap": {
+       "column": "20",
+       "row": "20",
        "isLinked": true,
        "unit": "px",
-       "size": 24
-      }
+       "size": 20
+      },
+      "flex_gap_mobile": {
+       "column": "16",
+       "row": "16",
+       "isLinked": true,
+       "unit": "px",
+       "size": 16
+      },
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      },
+      "_title": "Unterschiede"
      },
      "elements": [
+      {
+       "id": "d1d42a8",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "flex-start",
+        "padding": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32"
+        },
+        "padding_tablet": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "15",
+         "right": "10",
+         "bottom": "15",
+         "left": "10"
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "isLinked": true,
+         "top": "10",
+         "right": "10",
+         "bottom": "10",
+         "left": "10"
+        },
+        "flex_gap": {
+         "column": "20",
+         "row": "20",
+         "isLinked": true,
+         "unit": "px",
+         "size": 20
+        },
+        "flex_gap_tablet": {
+         "column": "15",
+         "row": "15",
+         "isLinked": false,
+         "unit": "px",
+         "size": 15
+        },
+        "flex_gap_mobile": {
+         "column": "17",
+         "row": "17",
+         "isLinked": false,
+         "unit": "px",
+         "size": 17
+        },
+        "overflow": "hidden",
+        "background_background": "classic",
+        "__globals__": {
+         "background_color": "globals/colors?id=2de0564",
+         "background_hover_color": "globals/colors?id=41c8631",
+         "border_color": "",
+         "border_hover_color": "globals/colors?id=6d0b659"
+        },
+        "border_border": "solid",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": false
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": false
+        },
+        "content_width_tablet": "full",
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+        "_title": "Sicherheitsanalyse statt Kameraverkauf",
+        "background_color": "#FFFFFF0A",
+        "background_hover_background": "classic",
+        "background_hover_color": "#000D30",
+        "background_hover_transition": {
+         "unit": "px",
+         "size": 0.4,
+         "sizes": []
+        },
+        "border_hover_border": "solid",
+        "border_hover_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius_hover": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "box_shadow_hover_box_shadow_type": "yes",
+        "box_shadow_hover_box_shadow": {
+         "horizontal": 0,
+         "vertical": 0,
+         "blur": 24.200212478637695,
+         "spread": 0,
+         "color": "rgba(250, 210.99999999999991, 125.99999999999999, 0.48)"
+        },
+        "border_color": "#FFFFFF66",
+        "animation": "fadeInRight",
+        "_transform_scale_popover_hover": "transform",
+        "_transform_scale_effect_hover": {
+         "unit": "px",
+         "size": 1.05,
+         "sizes": []
+        },
+        "animation_mobile": "fadeInLeft"
+       },
+       "elements": [
+        {
+         "id": "a813ddf",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "width": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "flex_direction": "row",
+          "flex_justify_content": "flex-start",
+          "flex_align_items": "flex-start",
+          "padding": {
+           "unit": "px",
+           "isLinked": false,
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0"
+          },
+          "flex_gap": {
+           "column": "32",
+           "row": "32",
+           "isLinked": false,
+           "unit": "px",
+           "size": 32
+          },
+          "flex_gap_tablet": {
+           "column": "0",
+           "row": "15",
+           "isLinked": false,
+           "unit": "px",
+           "size": 0
+          },
+          "flex_gap_mobile": {
+           "column": "17",
+           "row": "17",
+           "isLinked": false,
+           "unit": "px",
+           "size": 17
+          },
+          "content_width_tablet": "full",
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "flex_wrap_mobile": "wrap",
+          "flex_wrap_tablet": "wrap",
+          "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+          "_title": "Zeile",
+          "flex_justify_content_mobile": "center",
+          "flex_align_items_mobile": "center"
+         },
+         "elements": [
+          {
+           "id": "8080300",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 10.34,
+             "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "center",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "padding_tablet": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "padding_mobile": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "column": "16",
+             "row": "16",
+             "isLinked": false,
+             "unit": "px",
+             "size": 16
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "background_background": "classic",
+            "__globals__": {
+             "background_color": "globals/colors?id=d20e171"
+            },
+            "border_radius": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": false
+            },
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+            "_title": "Kachel",
+            "_flex_align_self_tablet": "flex-start"
+           },
+           "elements": [
+            {
+             "id": "ecc59af",
+             "elType": "widget",
+             "settings": {
+              "selected_icon": {
+               "value": {
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-analyse.svg",
+                "id": 4318
+               },
+               "library": "svg"
+              },
+              "size": {
+               "unit": "px",
+               "size": 65,
+               "sizes": []
+              },
+              "size_widescreen": {
+               "unit": "%",
+               "size": "",
+               "sizes": []
+              },
+              "size_laptop": {
+               "unit": "px",
+               "size": 55,
+               "sizes": []
+              },
+              "size_tablet_extra": {
+               "unit": "px",
+               "size": 45,
+               "sizes": []
+              },
+              "size_tablet": {
+               "unit": "px",
+               "size": 60,
+               "sizes": []
+              },
+              "size_mobile": {
+               "unit": "px",
+               "size": 40,
+               "sizes": []
+              },
+              "_element_width": "inherit",
+              "_title": "Icon"
+             },
+             "elements": [],
+             "widgetType": "icon"
+            }
+           ],
+           "isInner": true
+          },
+          {
+           "id": "8839702",
+           "elType": "container",
+           "settings": {
+            "_flex_size": "custom",
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 85.06,
+             "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "flex-start",
+            "padding": {
+             "unit": "px",
+             "isLinked": false,
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0"
+            },
+            "flex_gap": {
+             "column": "10",
+             "row": "10",
+             "isLinked": true,
+             "unit": "px",
+             "size": 10
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "z_index": 1,
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "%",
+             "size": 70,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+            "_title": "Text",
+            "flex_justify_content_mobile": "center",
+            "flex_align_items_mobile": "center"
+           },
+           "elements": [
+            {
+             "id": "0b3c5ae",
+             "elType": "widget",
+             "settings": {
+              "header_size": "h3",
+              "title": "Sicherheitsanalyse statt Kameraverkauf",
+              "__globals__": {
+               "title_color": "globals/colors?id=521f46a",
+               "typography_typography": ""
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 15,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "px",
+               "size": 25,
+               "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 0,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Sicherheitsanalyse statt Kameraverkauf",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_font_weight": "700",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "title_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "617c611",
+             "elType": "widget",
+             "settings": {
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 14.08,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.56,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.44,
+               "sizes": []
+              },
+              "__globals__": {
+               "typography_typography": "",
+               "text_color": "globals/colors?id=521f46a"
+              },
+              "editor": "<p>Wer dir ohne Begehung ein Angebot schickt, verkauft Technik. Wir gehen erst mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt.</p>",
+              "align": "left",
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 1,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Text",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.64,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "text_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            },
+            {
+             "id": "e13a0d6",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_direction": "row",
+              "flex_justify_content": "center",
+              "flex_align_items": "center",
+              "padding": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "16",
+               "right": "24",
+               "bottom": "16",
+               "left": "24"
+              },
+              "padding_tablet": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "padding_mobile": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "flex_gap": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_tablet": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_mobile": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "z_index": 2,
+              "background_background": "classic",
+              "__globals__": {
+               "background_color": "globals/colors?id=2de0564"
+              },
+              "border_radius": {
+               "unit": "px",
+               "top": "16",
+               "right": "16",
+               "bottom": "16",
+               "left": "16",
+               "isLinked": false
+              },
+              "content_width_tablet": "full",
+              "width_mobile": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_wrap_mobile": "wrap",
+              "flex_wrap_tablet": "wrap",
+              "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+              "_title": "Pain-Box"
+             },
+             "elements": [
+              {
+               "id": "81ba5b0",
+               "elType": "widget",
+               "settings": {
+                "typography_font_size_tablet": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_size_mobile": {
+                 "unit": "px",
+                 "size": 14.08,
+                 "sizes": []
+                },
+                "typography_line_height_tablet": {
+                 "unit": "em",
+                 "size": 1.56,
+                 "sizes": []
+                },
+                "typography_line_height_mobile": {
+                 "unit": "em",
+                 "size": 1.44,
+                 "sizes": []
+                },
+                "__globals__": {
+                 "typography_typography": "",
+                 "text_color": "globals/colors?id=521f46a"
+                },
+                "editor": "<p>Eine falsch gesetzte Kamera filmt im Ernstfall den Parkplatz, nicht den Täter.</p>",
+                "align": "left",
+                "_element_width": "initial",
+                "_element_custom_width": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_z_index": 0,
+                "_element_custom_width_tablet": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_title": "Pain",
+                "align_mobile": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 16,
+                 "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "none",
+                "typography_text_decoration": "none",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.64,
+                 "sizes": []
+                },
+                "typography_letter_spacing": {
+                 "unit": "em",
+                 "size": 0,
+                 "sizes": []
+                },
+                "text_color": "#FFFFFF",
+                "typography_font_size_laptop": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "_padding_tablet": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": false
+                }
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ],
+             "isInner": true
+            }
+           ],
+           "isInner": true
+          }
+         ],
+         "isInner": true
+        }
+       ],
+       "isInner": true
+      },
+      {
+       "id": "f847bcc",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "flex-start",
+        "padding": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32"
+        },
+        "padding_tablet": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "15",
+         "right": "10",
+         "bottom": "15",
+         "left": "10"
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "isLinked": true,
+         "top": "10",
+         "right": "10",
+         "bottom": "10",
+         "left": "10"
+        },
+        "flex_gap": {
+         "column": "20",
+         "row": "20",
+         "isLinked": true,
+         "unit": "px",
+         "size": 20
+        },
+        "flex_gap_tablet": {
+         "column": "15",
+         "row": "15",
+         "isLinked": false,
+         "unit": "px",
+         "size": 15
+        },
+        "flex_gap_mobile": {
+         "column": "17",
+         "row": "17",
+         "isLinked": false,
+         "unit": "px",
+         "size": 17
+        },
+        "overflow": "hidden",
+        "background_background": "classic",
+        "__globals__": {
+         "background_color": "globals/colors?id=2de0564",
+         "background_hover_color": "globals/colors?id=41c8631",
+         "border_color": "",
+         "border_hover_color": "globals/colors?id=6d0b659"
+        },
+        "border_border": "solid",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": false
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": false
+        },
+        "content_width_tablet": "full",
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+        "_title": "Sicherheitskonzept statt isolierter Technik",
+        "background_color": "#FFFFFF0A",
+        "background_hover_background": "classic",
+        "background_hover_color": "#000D30",
+        "background_hover_transition": {
+         "unit": "px",
+         "size": 0.4,
+         "sizes": []
+        },
+        "border_hover_border": "solid",
+        "border_hover_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius_hover": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "box_shadow_hover_box_shadow_type": "yes",
+        "box_shadow_hover_box_shadow": {
+         "horizontal": 0,
+         "vertical": 0,
+         "blur": 24.200212478637695,
+         "spread": 0,
+         "color": "rgba(250, 210.99999999999991, 125.99999999999999, 0.48)"
+        },
+        "border_color": "#FFFFFF66",
+        "animation": "fadeInRight",
+        "_transform_scale_popover_hover": "transform",
+        "_transform_scale_effect_hover": {
+         "unit": "px",
+         "size": 1.05,
+         "sizes": []
+        },
+        "animation_mobile": "fadeInLeft"
+       },
+       "elements": [
+        {
+         "id": "ecb210a",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "width": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "flex_direction": "row",
+          "flex_justify_content": "flex-start",
+          "flex_align_items": "flex-start",
+          "padding": {
+           "unit": "px",
+           "isLinked": false,
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0"
+          },
+          "flex_gap": {
+           "column": "32",
+           "row": "32",
+           "isLinked": false,
+           "unit": "px",
+           "size": 32
+          },
+          "flex_gap_tablet": {
+           "column": "0",
+           "row": "15",
+           "isLinked": false,
+           "unit": "px",
+           "size": 0
+          },
+          "flex_gap_mobile": {
+           "column": "17",
+           "row": "17",
+           "isLinked": false,
+           "unit": "px",
+           "size": 17
+          },
+          "content_width_tablet": "full",
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "flex_wrap_mobile": "wrap",
+          "flex_wrap_tablet": "wrap",
+          "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+          "_title": "Zeile",
+          "flex_justify_content_mobile": "center",
+          "flex_align_items_mobile": "center"
+         },
+         "elements": [
+          {
+           "id": "ef018b2",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 10.34,
+             "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "center",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "padding_tablet": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "padding_mobile": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "column": "16",
+             "row": "16",
+             "isLinked": false,
+             "unit": "px",
+             "size": 16
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "background_background": "classic",
+            "__globals__": {
+             "background_color": "globals/colors?id=d20e171"
+            },
+            "border_radius": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": false
+            },
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+            "_title": "Kachel",
+            "_flex_align_self_tablet": "flex-start"
+           },
+           "elements": [
+            {
+             "id": "6e69ef7",
+             "elType": "widget",
+             "settings": {
+              "selected_icon": {
+               "value": {
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-konzept.svg",
+                "id": 4319
+               },
+               "library": "svg"
+              },
+              "size": {
+               "unit": "px",
+               "size": 65,
+               "sizes": []
+              },
+              "size_widescreen": {
+               "unit": "%",
+               "size": "",
+               "sizes": []
+              },
+              "size_laptop": {
+               "unit": "px",
+               "size": 55,
+               "sizes": []
+              },
+              "size_tablet_extra": {
+               "unit": "px",
+               "size": 45,
+               "sizes": []
+              },
+              "size_tablet": {
+               "unit": "px",
+               "size": 60,
+               "sizes": []
+              },
+              "size_mobile": {
+               "unit": "px",
+               "size": 40,
+               "sizes": []
+              },
+              "_element_width": "inherit",
+              "_title": "Icon"
+             },
+             "elements": [],
+             "widgetType": "icon"
+            }
+           ],
+           "isInner": true
+          },
+          {
+           "id": "0538e68",
+           "elType": "container",
+           "settings": {
+            "_flex_size": "custom",
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 85.06,
+             "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "flex-start",
+            "padding": {
+             "unit": "px",
+             "isLinked": false,
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0"
+            },
+            "flex_gap": {
+             "column": "10",
+             "row": "10",
+             "isLinked": true,
+             "unit": "px",
+             "size": 10
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "z_index": 1,
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "%",
+             "size": 70,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+            "_title": "Text",
+            "flex_justify_content_mobile": "center",
+            "flex_align_items_mobile": "center"
+           },
+           "elements": [
+            {
+             "id": "31bb61b",
+             "elType": "widget",
+             "settings": {
+              "header_size": "h3",
+              "title": "Sicherheitskonzept statt isolierter Technik",
+              "__globals__": {
+               "title_color": "globals/colors?id=521f46a",
+               "typography_typography": ""
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 15,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "px",
+               "size": 25,
+               "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 0,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Sicherheitskonzept statt isolierter Technik",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_font_weight": "700",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "title_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "e3fb5d5",
+             "elType": "widget",
+             "settings": {
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 14.08,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.56,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.44,
+               "sizes": []
+              },
+              "__globals__": {
+               "typography_typography": "",
+               "text_color": "globals/colors?id=521f46a"
+              },
+              "editor": "<p>Eine Kamera filmt den Einbruch, aufhalten kann sie ihn nicht. Deshalb planen wir sie zusammen mit Schließanlage und Alarm.</p>",
+              "align": "left",
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 1,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Text",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.64,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "text_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            },
+            {
+             "id": "3de4855",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_direction": "row",
+              "flex_justify_content": "center",
+              "flex_align_items": "center",
+              "padding": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "16",
+               "right": "24",
+               "bottom": "16",
+               "left": "24"
+              },
+              "padding_tablet": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "padding_mobile": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "flex_gap": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_tablet": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_mobile": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "z_index": 2,
+              "background_background": "classic",
+              "__globals__": {
+               "background_color": "globals/colors?id=2de0564"
+              },
+              "border_radius": {
+               "unit": "px",
+               "top": "16",
+               "right": "16",
+               "bottom": "16",
+               "left": "16",
+               "isLinked": false
+              },
+              "content_width_tablet": "full",
+              "width_mobile": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_wrap_mobile": "wrap",
+              "flex_wrap_tablet": "wrap",
+              "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+              "_title": "Pain-Box"
+             },
+             "elements": [
+              {
+               "id": "6bd3cf0",
+               "elType": "widget",
+               "settings": {
+                "typography_font_size_tablet": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_size_mobile": {
+                 "unit": "px",
+                 "size": 14.08,
+                 "sizes": []
+                },
+                "typography_line_height_tablet": {
+                 "unit": "em",
+                 "size": 1.56,
+                 "sizes": []
+                },
+                "typography_line_height_mobile": {
+                 "unit": "em",
+                 "size": 1.44,
+                 "sizes": []
+                },
+                "__globals__": {
+                 "typography_typography": "",
+                 "text_color": "globals/colors?id=521f46a"
+                },
+                "editor": "<p>Dann hast du ein Video vom Einbruch und trotzdem leere Regale.</p>",
+                "align": "left",
+                "_element_width": "initial",
+                "_element_custom_width": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_z_index": 0,
+                "_element_custom_width_tablet": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_title": "Pain",
+                "align_mobile": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 16,
+                 "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "none",
+                "typography_text_decoration": "none",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.64,
+                 "sizes": []
+                },
+                "typography_letter_spacing": {
+                 "unit": "em",
+                 "size": 0,
+                 "sizes": []
+                },
+                "text_color": "#FFFFFF",
+                "typography_font_size_laptop": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "_padding_tablet": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": false
+                }
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ],
+             "isInner": true
+            }
+           ],
+           "isInner": true
+          }
+         ],
+         "isInner": true
+        }
+       ],
+       "isInner": true
+      },
+      {
+       "id": "38e6fdf",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "flex-start",
+        "padding": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32"
+        },
+        "padding_tablet": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "15",
+         "right": "10",
+         "bottom": "15",
+         "left": "10"
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "isLinked": true,
+         "top": "10",
+         "right": "10",
+         "bottom": "10",
+         "left": "10"
+        },
+        "flex_gap": {
+         "column": "20",
+         "row": "20",
+         "isLinked": true,
+         "unit": "px",
+         "size": 20
+        },
+        "flex_gap_tablet": {
+         "column": "15",
+         "row": "15",
+         "isLinked": false,
+         "unit": "px",
+         "size": 15
+        },
+        "flex_gap_mobile": {
+         "column": "17",
+         "row": "17",
+         "isLinked": false,
+         "unit": "px",
+         "size": 17
+        },
+        "overflow": "hidden",
+        "background_background": "classic",
+        "__globals__": {
+         "background_color": "globals/colors?id=2de0564",
+         "background_hover_color": "globals/colors?id=41c8631",
+         "border_color": "",
+         "border_hover_color": "globals/colors?id=6d0b659"
+        },
+        "border_border": "solid",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": false
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": false
+        },
+        "content_width_tablet": "full",
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+        "_title": "Fertig eingerichtet statt nur montiert",
+        "background_color": "#FFFFFF0A",
+        "background_hover_background": "classic",
+        "background_hover_color": "#000D30",
+        "background_hover_transition": {
+         "unit": "px",
+         "size": 0.4,
+         "sizes": []
+        },
+        "border_hover_border": "solid",
+        "border_hover_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius_hover": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "box_shadow_hover_box_shadow_type": "yes",
+        "box_shadow_hover_box_shadow": {
+         "horizontal": 0,
+         "vertical": 0,
+         "blur": 24.200212478637695,
+         "spread": 0,
+         "color": "rgba(250, 210.99999999999991, 125.99999999999999, 0.48)"
+        },
+        "border_color": "#FFFFFF66",
+        "animation": "fadeInRight",
+        "_transform_scale_popover_hover": "transform",
+        "_transform_scale_effect_hover": {
+         "unit": "px",
+         "size": 1.05,
+         "sizes": []
+        },
+        "animation_mobile": "fadeInLeft"
+       },
+       "elements": [
+        {
+         "id": "2f2dd13",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "width": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "flex_direction": "row",
+          "flex_justify_content": "flex-start",
+          "flex_align_items": "flex-start",
+          "padding": {
+           "unit": "px",
+           "isLinked": false,
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0"
+          },
+          "flex_gap": {
+           "column": "32",
+           "row": "32",
+           "isLinked": false,
+           "unit": "px",
+           "size": 32
+          },
+          "flex_gap_tablet": {
+           "column": "0",
+           "row": "15",
+           "isLinked": false,
+           "unit": "px",
+           "size": 0
+          },
+          "flex_gap_mobile": {
+           "column": "17",
+           "row": "17",
+           "isLinked": false,
+           "unit": "px",
+           "size": 17
+          },
+          "content_width_tablet": "full",
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "flex_wrap_mobile": "wrap",
+          "flex_wrap_tablet": "wrap",
+          "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+          "_title": "Zeile",
+          "flex_justify_content_mobile": "center",
+          "flex_align_items_mobile": "center"
+         },
+         "elements": [
+          {
+           "id": "e20eb02",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 10.34,
+             "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "center",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "padding_tablet": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "padding_mobile": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "column": "16",
+             "row": "16",
+             "isLinked": false,
+             "unit": "px",
+             "size": 16
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "background_background": "classic",
+            "__globals__": {
+             "background_color": "globals/colors?id=d20e171"
+            },
+            "border_radius": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": false
+            },
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+            "_title": "Kachel",
+            "_flex_align_self_tablet": "flex-start"
+           },
+           "elements": [
+            {
+             "id": "1ead99c",
+             "elType": "widget",
+             "settings": {
+              "selected_icon": {
+               "value": {
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-eingerichtet.svg",
+                "id": 4320
+               },
+               "library": "svg"
+              },
+              "size": {
+               "unit": "px",
+               "size": 65,
+               "sizes": []
+              },
+              "size_widescreen": {
+               "unit": "%",
+               "size": "",
+               "sizes": []
+              },
+              "size_laptop": {
+               "unit": "px",
+               "size": 55,
+               "sizes": []
+              },
+              "size_tablet_extra": {
+               "unit": "px",
+               "size": 45,
+               "sizes": []
+              },
+              "size_tablet": {
+               "unit": "px",
+               "size": 60,
+               "sizes": []
+              },
+              "size_mobile": {
+               "unit": "px",
+               "size": 40,
+               "sizes": []
+              },
+              "_element_width": "inherit",
+              "_title": "Icon"
+             },
+             "elements": [],
+             "widgetType": "icon"
+            }
+           ],
+           "isInner": true
+          },
+          {
+           "id": "651d8d2",
+           "elType": "container",
+           "settings": {
+            "_flex_size": "custom",
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 85.06,
+             "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "flex-start",
+            "padding": {
+             "unit": "px",
+             "isLinked": false,
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0"
+            },
+            "flex_gap": {
+             "column": "10",
+             "row": "10",
+             "isLinked": true,
+             "unit": "px",
+             "size": 10
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "z_index": 1,
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "%",
+             "size": 70,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+            "_title": "Text",
+            "flex_justify_content_mobile": "center",
+            "flex_align_items_mobile": "center"
+           },
+           "elements": [
+            {
+             "id": "331c1ac",
+             "elType": "widget",
+             "settings": {
+              "header_size": "h3",
+              "title": "Fertig eingerichtet statt nur montiert",
+              "__globals__": {
+               "title_color": "globals/colors?id=521f46a",
+               "typography_typography": ""
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 15,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "px",
+               "size": 25,
+               "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 0,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Fertig eingerichtet statt nur montiert",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_font_weight": "700",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "title_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "c8a01b6",
+             "elType": "widget",
+             "settings": {
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 14.08,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.56,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.44,
+               "sizes": []
+              },
+              "__globals__": {
+               "typography_typography": "",
+               "text_color": "globals/colors?id=521f46a"
+              },
+              "editor": "<p>Viele Anlagen hängen an der Wand und schweigen, weil nie jemand die App eingerichtet hat. Bei uns schlägt dein Handy Alarm, bevor wir das Gebäude verlassen.</p>",
+              "align": "left",
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 1,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Text",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.64,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "text_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            },
+            {
+             "id": "5555294",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_direction": "row",
+              "flex_justify_content": "center",
+              "flex_align_items": "center",
+              "padding": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "16",
+               "right": "24",
+               "bottom": "16",
+               "left": "24"
+              },
+              "padding_tablet": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "padding_mobile": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "flex_gap": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_tablet": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_mobile": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "z_index": 2,
+              "background_background": "classic",
+              "__globals__": {
+               "background_color": "globals/colors?id=2de0564"
+              },
+              "border_radius": {
+               "unit": "px",
+               "top": "16",
+               "right": "16",
+               "bottom": "16",
+               "left": "16",
+               "isLinked": false
+              },
+              "content_width_tablet": "full",
+              "width_mobile": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_wrap_mobile": "wrap",
+              "flex_wrap_tablet": "wrap",
+              "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+              "_title": "Pain-Box"
+             },
+             "elements": [
+              {
+               "id": "a2fe03d",
+               "elType": "widget",
+               "settings": {
+                "typography_font_size_tablet": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_size_mobile": {
+                 "unit": "px",
+                 "size": 14.08,
+                 "sizes": []
+                },
+                "typography_line_height_tablet": {
+                 "unit": "em",
+                 "size": 1.56,
+                 "sizes": []
+                },
+                "typography_line_height_mobile": {
+                 "unit": "em",
+                 "size": 1.44,
+                 "sizes": []
+                },
+                "__globals__": {
+                 "typography_typography": "",
+                 "text_color": "globals/colors?id=521f46a"
+                },
+                "editor": "<p>Den Einbruch bemerkt sonst der Erste, der morgens aufschließt.</p>",
+                "align": "left",
+                "_element_width": "initial",
+                "_element_custom_width": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_z_index": 0,
+                "_element_custom_width_tablet": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_title": "Pain",
+                "align_mobile": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 16,
+                 "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "none",
+                "typography_text_decoration": "none",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.64,
+                 "sizes": []
+                },
+                "typography_letter_spacing": {
+                 "unit": "em",
+                 "size": 0,
+                 "sizes": []
+                },
+                "text_color": "#FFFFFF",
+                "typography_font_size_laptop": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "_padding_tablet": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": false
+                }
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ],
+             "isInner": true
+            }
+           ],
+           "isInner": true
+          }
+         ],
+         "isInner": true
+        }
+       ],
+       "isInner": true
+      },
+      {
+       "id": "6ae48d2",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "flex-start",
+        "padding": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32"
+        },
+        "padding_tablet": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "15",
+         "right": "10",
+         "bottom": "15",
+         "left": "10"
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "isLinked": true,
+         "top": "10",
+         "right": "10",
+         "bottom": "10",
+         "left": "10"
+        },
+        "flex_gap": {
+         "column": "20",
+         "row": "20",
+         "isLinked": true,
+         "unit": "px",
+         "size": 20
+        },
+        "flex_gap_tablet": {
+         "column": "15",
+         "row": "15",
+         "isLinked": false,
+         "unit": "px",
+         "size": 15
+        },
+        "flex_gap_mobile": {
+         "column": "17",
+         "row": "17",
+         "isLinked": false,
+         "unit": "px",
+         "size": 17
+        },
+        "overflow": "hidden",
+        "background_background": "classic",
+        "__globals__": {
+         "background_color": "globals/colors?id=2de0564",
+         "background_hover_color": "globals/colors?id=41c8631",
+         "border_color": "",
+         "border_hover_color": "globals/colors?id=6d0b659"
+        },
+        "border_border": "solid",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": false
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": false
+        },
+        "content_width_tablet": "full",
+        "width_mobile": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+        "_title": "Langfristige Betreuung statt einmaliger Installation",
+        "background_color": "#FFFFFF0A",
+        "background_hover_background": "classic",
+        "background_hover_color": "#000D30",
+        "background_hover_transition": {
+         "unit": "px",
+         "size": 0.4,
+         "sizes": []
+        },
+        "border_hover_border": "solid",
+        "border_hover_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius_hover": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "box_shadow_hover_box_shadow_type": "yes",
+        "box_shadow_hover_box_shadow": {
+         "horizontal": 0,
+         "vertical": 0,
+         "blur": 24.200212478637695,
+         "spread": 0,
+         "color": "rgba(250, 210.99999999999991, 125.99999999999999, 0.48)"
+        },
+        "border_color": "#FFFFFF66",
+        "animation": "fadeInRight",
+        "_transform_scale_popover_hover": "transform",
+        "_transform_scale_effect_hover": {
+         "unit": "px",
+         "size": 1.05,
+         "sizes": []
+        },
+        "animation_mobile": "fadeInLeft"
+       },
+       "elements": [
+        {
+         "id": "6b31a2a",
+         "elType": "container",
+         "settings": {
+          "content_width": "full",
+          "width": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "flex_direction": "row",
+          "flex_justify_content": "flex-start",
+          "flex_align_items": "flex-start",
+          "padding": {
+           "unit": "px",
+           "isLinked": false,
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0"
+          },
+          "flex_gap": {
+           "column": "32",
+           "row": "32",
+           "isLinked": false,
+           "unit": "px",
+           "size": 32
+          },
+          "flex_gap_tablet": {
+           "column": "0",
+           "row": "15",
+           "isLinked": false,
+           "unit": "px",
+           "size": 0
+          },
+          "flex_gap_mobile": {
+           "column": "17",
+           "row": "17",
+           "isLinked": false,
+           "unit": "px",
+           "size": 17
+          },
+          "content_width_tablet": "full",
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "flex_wrap_mobile": "wrap",
+          "flex_wrap_tablet": "wrap",
+          "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+          "_title": "Zeile",
+          "flex_justify_content_mobile": "center",
+          "flex_align_items_mobile": "center"
+         },
+         "elements": [
+          {
+           "id": "185f8df",
+           "elType": "container",
+           "settings": {
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 10.34,
+             "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "center",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "padding_tablet": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "padding_mobile": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "column": "16",
+             "row": "16",
+             "isLinked": false,
+             "unit": "px",
+             "size": 16
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "background_background": "classic",
+            "__globals__": {
+             "background_color": "globals/colors?id=d20e171"
+            },
+            "border_radius": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": false
+            },
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+            "_title": "Kachel",
+            "_flex_align_self_tablet": "flex-start"
+           },
+           "elements": [
+            {
+             "id": "a17d4ba",
+             "elType": "widget",
+             "settings": {
+              "selected_icon": {
+               "value": {
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-betreuung.svg",
+                "id": 4321
+               },
+               "library": "svg"
+              },
+              "size": {
+               "unit": "px",
+               "size": 65,
+               "sizes": []
+              },
+              "size_widescreen": {
+               "unit": "%",
+               "size": "",
+               "sizes": []
+              },
+              "size_laptop": {
+               "unit": "px",
+               "size": 55,
+               "sizes": []
+              },
+              "size_tablet_extra": {
+               "unit": "px",
+               "size": 45,
+               "sizes": []
+              },
+              "size_tablet": {
+               "unit": "px",
+               "size": 60,
+               "sizes": []
+              },
+              "size_mobile": {
+               "unit": "px",
+               "size": 40,
+               "sizes": []
+              },
+              "_element_width": "inherit",
+              "_title": "Icon"
+             },
+             "elements": [],
+             "widgetType": "icon"
+            }
+           ],
+           "isInner": true
+          },
+          {
+           "id": "9f42028",
+           "elType": "container",
+           "settings": {
+            "_flex_size": "custom",
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 85.06,
+             "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "flex-start",
+            "padding": {
+             "unit": "px",
+             "isLinked": false,
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0"
+            },
+            "flex_gap": {
+             "column": "10",
+             "row": "10",
+             "isLinked": true,
+             "unit": "px",
+             "size": 10
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "z_index": 1,
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "%",
+             "size": 70,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+            "_title": "Text",
+            "flex_justify_content_mobile": "center",
+            "flex_align_items_mobile": "center"
+           },
+           "elements": [
+            {
+             "id": "851286f",
+             "elType": "widget",
+             "settings": {
+              "header_size": "h3",
+              "title": "Langfristige Betreuung statt einmaliger Installation",
+              "__globals__": {
+               "title_color": "globals/colors?id=521f46a",
+               "typography_typography": ""
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 15,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "px",
+               "size": 25,
+               "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 0,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Langfristige Betreuung statt einmaliger Installation",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_font_weight": "700",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "title_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "74c55fa",
+             "elType": "widget",
+             "settings": {
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 14.08,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.56,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.44,
+               "sizes": []
+              },
+              "__globals__": {
+               "typography_typography": "",
+               "text_color": "globals/colors?id=521f46a"
+              },
+              "editor": "<p>Festplatten laufen voll, und irgendwann wächst eine Hecke ins Bild. Wir prüfen deine Anlage regelmäßig, auf Wunsch per Wartungsvertrag.</p>",
+              "align": "left",
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 1,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Text",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.64,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "text_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            },
+            {
+             "id": "5820467",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_direction": "row",
+              "flex_justify_content": "center",
+              "flex_align_items": "center",
+              "padding": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "16",
+               "right": "24",
+               "bottom": "16",
+               "left": "24"
+              },
+              "padding_tablet": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "padding_mobile": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "flex_gap": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_tablet": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_mobile": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "z_index": 2,
+              "background_background": "classic",
+              "__globals__": {
+               "background_color": "globals/colors?id=2de0564"
+              },
+              "border_radius": {
+               "unit": "px",
+               "top": "16",
+               "right": "16",
+               "bottom": "16",
+               "left": "16",
+               "isLinked": false
+              },
+              "content_width_tablet": "full",
+              "width_mobile": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_wrap_mobile": "wrap",
+              "flex_wrap_tablet": "wrap",
+              "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+              "_title": "Pain-Box"
+             },
+             "elements": [
+              {
+               "id": "5952b31",
+               "elType": "widget",
+               "settings": {
+                "typography_font_size_tablet": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_size_mobile": {
+                 "unit": "px",
+                 "size": 14.08,
+                 "sizes": []
+                },
+                "typography_line_height_tablet": {
+                 "unit": "em",
+                 "size": 1.56,
+                 "sizes": []
+                },
+                "typography_line_height_mobile": {
+                 "unit": "em",
+                 "size": 1.44,
+                 "sizes": []
+                },
+                "__globals__": {
+                 "typography_typography": "",
+                 "text_color": "globals/colors?id=521f46a"
+                },
+                "editor": "<p>Dass die Aufzeichnung seit Monaten fehlt, merkst du erst, wenn du sie brauchst.</p>",
+                "align": "left",
+                "_element_width": "initial",
+                "_element_custom_width": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_z_index": 0,
+                "_element_custom_width_tablet": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_title": "Pain",
+                "align_mobile": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 16,
+                 "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "none",
+                "typography_text_decoration": "none",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.64,
+                 "sizes": []
+                },
+                "typography_letter_spacing": {
+                 "unit": "em",
+                 "size": 0,
+                 "sizes": []
+                },
+                "text_color": "#FFFFFF",
+                "typography_font_size_laptop": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "_padding_tablet": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": false
+                }
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ],
+             "isInner": true
+            }
+           ],
+           "isInner": true
+          }
+         ],
+         "isInner": true
+        }
+       ],
+       "isInner": true
+      },
       {
        "id": "8d2bb3e",
        "elType": "container",
@@ -4143,23 +7030,39 @@
          "size": 100,
          "sizes": []
         },
-        "flex_direction": "row",
+        "flex_direction": "column",
         "flex_justify_content": "flex-start",
-        "flex_align_items": "center",
+        "flex_align_items": "flex-start",
         "padding": {
          "unit": "px",
          "isLinked": false,
-         "top": "0",
-         "right": "0",
-         "bottom": "0",
-         "left": "0"
+         "top": "32",
+         "right": "32",
+         "bottom": "32",
+         "left": "32"
+        },
+        "padding_tablet": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "15",
+         "right": "10",
+         "bottom": "15",
+         "left": "10"
+        },
+        "padding_mobile": {
+         "unit": "px",
+         "isLinked": true,
+         "top": "10",
+         "right": "10",
+         "bottom": "10",
+         "left": "10"
         },
         "flex_gap": {
-         "column": "24",
-         "row": "24",
-         "isLinked": false,
+         "column": "20",
+         "row": "20",
+         "isLinked": true,
          "unit": "px",
-         "size": 24
+         "size": 20
         },
         "flex_gap_tablet": {
          "column": "15",
@@ -4169,11 +7072,36 @@
          "size": 15
         },
         "flex_gap_mobile": {
-         "column": "0",
-         "row": "15",
+         "column": "17",
+         "row": "17",
          "isLinked": false,
          "unit": "px",
-         "size": 0
+         "size": 17
+        },
+        "overflow": "hidden",
+        "background_background": "classic",
+        "__globals__": {
+         "background_color": "globals/colors?id=2de0564",
+         "background_hover_color": "globals/colors?id=41c8631",
+         "border_color": "",
+         "border_hover_color": "globals/colors?id=6d0b659"
+        },
+        "border_border": "solid",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": false
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": false
         },
         "content_width_tablet": "full",
         "width_mobile": {
@@ -4186,16 +7114,50 @@
          "size": 100,
          "sizes": []
         },
-        "flex_wrap_mobile": "wrap",
-        "flex_wrap_tablet": "wrap",
-        "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
-        "_title": "Sicherheitsanalyse statt Kameraverkauf",
+        "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+        "_title": "Nachweisbare Übergabe statt bloßem Funktionstest",
+        "background_color": "#FFFFFF0A",
+        "background_hover_background": "classic",
+        "background_hover_color": "#000D30",
+        "background_hover_transition": {
+         "unit": "px",
+         "size": 0.4,
+         "sizes": []
+        },
+        "border_hover_border": "solid",
+        "border_hover_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius_hover": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "box_shadow_hover_box_shadow_type": "yes",
+        "box_shadow_hover_box_shadow": {
+         "horizontal": 0,
+         "vertical": 0,
+         "blur": 24.200212478637695,
+         "spread": 0,
+         "color": "rgba(250, 210.99999999999991, 125.99999999999999, 0.48)"
+        },
+        "border_color": "#FFFFFF66",
+        "animation": "fadeInRight",
         "_transform_scale_popover_hover": "transform",
         "_transform_scale_effect_hover": {
          "unit": "px",
-         "size": 1.04,
+         "size": 1.05,
          "sizes": []
-        }
+        },
+        "animation_mobile": "fadeInLeft"
        },
        "elements": [
         {
@@ -4205,1982 +7167,580 @@
           "content_width": "full",
           "width": {
            "unit": "%",
-           "size": 15,
+           "size": 100,
            "sizes": []
           },
           "flex_direction": "row",
           "flex_justify_content": "flex-start",
-          "flex_align_items": "center",
+          "flex_align_items": "flex-start",
           "padding": {
            "unit": "px",
-           "isLinked": true,
-           "top": "10",
-           "right": "10",
-           "bottom": "10",
-           "left": "10"
-          },
-          "padding_tablet": {
-           "unit": "px",
-           "isLinked": true,
+           "isLinked": false,
            "top": "0",
            "right": "0",
            "bottom": "0",
            "left": "0"
           },
-          "padding_mobile": {
-           "unit": "px",
-           "isLinked": false,
-           "top": "013",
-           "right": "013",
-           "bottom": "013",
-           "left": "013"
-          },
           "flex_gap": {
-           "column": "16",
-           "row": "16",
+           "column": "32",
+           "row": "32",
            "isLinked": false,
            "unit": "px",
-           "size": 16
+           "size": 32
           },
           "flex_gap_tablet": {
-           "column": "15",
+           "column": "0",
            "row": "15",
            "isLinked": false,
            "unit": "px",
-           "size": 15
+           "size": 0
           },
           "flex_gap_mobile": {
-           "column": "11",
-           "row": "11",
+           "column": "17",
+           "row": "17",
            "isLinked": false,
            "unit": "px",
-           "size": 11
-          },
-          "background_background": "classic",
-          "__globals__": {
-           "background_color": "globals/colors?id=d20e171"
-          },
-          "border_radius": {
-           "unit": "px",
-           "top": "16",
-           "right": "16",
-           "bottom": "16",
-           "left": "16",
-           "isLinked": false
+           "size": 17
           },
           "content_width_tablet": "full",
           "width_mobile": {
-           "unit": "px",
-           "size": 72,
+           "unit": "%",
+           "size": 100,
            "sizes": []
           },
           "width_tablet": {
-           "unit": "px",
-           "size": 72,
+           "unit": "%",
+           "size": 100,
            "sizes": []
           },
-          "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
-          "_title": "Frame 9",
-          "_flex_align_self_tablet": "flex-start"
+          "flex_wrap_mobile": "wrap",
+          "flex_wrap_tablet": "wrap",
+          "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+          "_title": "Zeile",
+          "flex_justify_content_mobile": "center",
+          "flex_align_items_mobile": "center"
          },
          "elements": [
           {
            "id": "584f0f3",
-           "elType": "widget",
+           "elType": "container",
            "settings": {
-            "selected_icon": {
-             "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-analyse.svg",
-              "id": 4318
-             },
-             "library": "svg"
-            },
-            "size": {
-             "unit": "px",
-             "size": 65,
-             "sizes": []
-            },
-            "size_widescreen": {
+            "content_width": "full",
+            "width": {
              "unit": "%",
-             "size": "",
+             "size": 10.34,
              "sizes": []
             },
-            "size_laptop": {
+            "flex_direction": "row",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "center",
+            "padding": {
              "unit": "px",
-             "size": 55,
-             "sizes": []
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
             },
-            "size_tablet_extra": {
+            "padding_tablet": {
              "unit": "px",
-             "size": 45,
-             "sizes": []
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
             },
-            "size_tablet": {
+            "padding_mobile": {
              "unit": "px",
-             "size": 60,
-             "sizes": []
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
             },
-            "size_mobile": {
+            "flex_gap": {
+             "column": "16",
+             "row": "16",
+             "isLinked": false,
              "unit": "px",
-             "size": 40,
+             "size": 16
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "background_background": "classic",
+            "__globals__": {
+             "background_color": "globals/colors?id=d20e171"
+            },
+            "border_radius": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": false
+            },
+            "content_width_tablet": "full",
+            "width_mobile": {
+             "unit": "px",
+             "size": 72,
              "sizes": []
             },
-            "_element_width": "inherit",
-            "_title": "Icon"
+            "width_tablet": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
+            "_title": "Kachel",
+            "_flex_align_self_tablet": "flex-start"
            },
-           "elements": [],
-           "widgetType": "icon"
-          }
-         ],
-         "isInner": true
-        },
-        {
-         "id": "03407d5",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
+           "elements": [
+            {
+             "id": "03407d5",
+             "elType": "widget",
+             "settings": {
+              "selected_icon": {
+               "value": {
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-uebergabe.svg",
+                "id": 4322
+               },
+               "library": "svg"
+              },
+              "size": {
+               "unit": "px",
+               "size": 65,
+               "sizes": []
+              },
+              "size_widescreen": {
+               "unit": "%",
+               "size": "",
+               "sizes": []
+              },
+              "size_laptop": {
+               "unit": "px",
+               "size": 55,
+               "sizes": []
+              },
+              "size_tablet_extra": {
+               "unit": "px",
+               "size": 45,
+               "sizes": []
+              },
+              "size_tablet": {
+               "unit": "px",
+               "size": 60,
+               "sizes": []
+              },
+              "size_mobile": {
+               "unit": "px",
+               "size": 40,
+               "sizes": []
+              },
+              "_element_width": "inherit",
+              "_title": "Icon"
+             },
+             "elements": [],
+             "widgetType": "icon"
+            }
+           ],
+           "isInner": true
           },
-          "width_tablet": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 74,
-           "sizes": []
-          },
-          "flex_direction": "column",
-          "flex_gap": {
-           "column": "6",
-           "row": "6",
-           "isLinked": true,
-           "unit": "px",
-           "size": 6
-          },
-          "padding": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": false
-          },
-          "_title": "Text"
-         },
-         "elements": [
           {
            "id": "4fb148b",
-           "elType": "widget",
+           "elType": "container",
            "settings": {
-            "header_size": "h3",
-            "title": "Sicherheitsanalyse statt Kameraverkauf",
-            "__globals__": {
-             "title_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
+            "_flex_size": "custom",
+            "content_width": "full",
+            "width": {
+             "unit": "%",
+             "size": 85.06,
+             "sizes": []
             },
-            "_element_width": "initial",
-            "_element_custom_width": {
+            "flex_direction": "column",
+            "flex_justify_content": "flex-start",
+            "flex_align_items": "flex-start",
+            "padding": {
+             "unit": "px",
+             "isLinked": false,
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0"
+            },
+            "flex_gap": {
+             "column": "10",
+             "row": "10",
+             "isLinked": true,
+             "unit": "px",
+             "size": 10
+            },
+            "flex_gap_tablet": {
+             "column": "15",
+             "row": "15",
+             "isLinked": false,
+             "unit": "px",
+             "size": 15
+            },
+            "flex_gap_mobile": {
+             "column": "11",
+             "row": "11",
+             "isLinked": false,
+             "unit": "px",
+             "size": 11
+            },
+            "z_index": 1,
+            "content_width_tablet": "full",
+            "width_mobile": {
              "unit": "%",
              "size": 100,
              "sizes": []
             },
-            "_z_index": 1,
-            "_element_custom_width_tablet": {
+            "width_tablet": {
              "unit": "%",
-             "size": 100,
+             "size": 70,
              "sizes": []
             },
-            "_title": "Sicherheitsanalyse statt Kameraverkauf",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 20,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 15,
-             "sizes": []
-            },
-            "typography_font_weight": "700",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "title_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 18,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            }
+            "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+            "_title": "Text",
+            "flex_justify_content_mobile": "center",
+            "flex_align_items_mobile": "center"
            },
-           "elements": [],
-           "widgetType": "heading"
-          },
-          {
-           "id": "ed08a6d",
-           "elType": "widget",
-           "settings": {
-            "__globals__": {
-             "text_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "editor": "<p>Wer dir ohne Begehung ein Angebot schickt, verkauft Technik. Wir gehen erst mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt. Oft brauchst du weniger Kameras, als du denkst.</p>\n<p><span style=\"color: #fbc91b; font-weight: 500;\">„Wir verkaufen dir keine Kameras auf Vorrat.“</span></p>",
-            "align": "left",
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Sicherheitsanalyse statt Kameraverkauf",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 13,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            },
-            "typography_font_weight": "400",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "text_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 14,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            }
-           },
-           "elements": [],
-           "widgetType": "text-editor"
-          }
-         ],
-         "isInner": true
-        }
-       ],
-       "isInner": true
-      },
-      {
-       "id": "aa9d433",
-       "elType": "container",
-       "settings": {
-        "content_width": "full",
-        "width": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_direction": "row",
-        "flex_justify_content": "flex-start",
-        "flex_align_items": "center",
-        "padding": {
-         "unit": "px",
-         "isLinked": false,
-         "top": "0",
-         "right": "0",
-         "bottom": "0",
-         "left": "0"
-        },
-        "flex_gap": {
-         "column": "24",
-         "row": "24",
-         "isLinked": false,
-         "unit": "px",
-         "size": 24
-        },
-        "flex_gap_tablet": {
-         "column": "15",
-         "row": "15",
-         "isLinked": false,
-         "unit": "px",
-         "size": 15
-        },
-        "flex_gap_mobile": {
-         "column": "0",
-         "row": "15",
-         "isLinked": false,
-         "unit": "px",
-         "size": 0
-        },
-        "content_width_tablet": "full",
-        "width_mobile": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "width_tablet": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_wrap_mobile": "wrap",
-        "flex_wrap_tablet": "wrap",
-        "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
-        "_title": "Sicherheitskonzept statt isolierter Technik",
-        "_transform_scale_popover_hover": "transform",
-        "_transform_scale_effect_hover": {
-         "unit": "px",
-         "size": 1.04,
-         "sizes": []
-        }
-       },
-       "elements": [
-        {
-         "id": "f963339",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 15,
-           "sizes": []
-          },
-          "flex_direction": "row",
-          "flex_justify_content": "flex-start",
-          "flex_align_items": "center",
-          "padding": {
-           "unit": "px",
-           "isLinked": true,
-           "top": "10",
-           "right": "10",
-           "bottom": "10",
-           "left": "10"
-          },
-          "padding_tablet": {
-           "unit": "px",
-           "isLinked": true,
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0"
-          },
-          "padding_mobile": {
-           "unit": "px",
-           "isLinked": false,
-           "top": "013",
-           "right": "013",
-           "bottom": "013",
-           "left": "013"
-          },
-          "flex_gap": {
-           "column": "16",
-           "row": "16",
-           "isLinked": false,
-           "unit": "px",
-           "size": 16
-          },
-          "flex_gap_tablet": {
-           "column": "15",
-           "row": "15",
-           "isLinked": false,
-           "unit": "px",
-           "size": 15
-          },
-          "flex_gap_mobile": {
-           "column": "11",
-           "row": "11",
-           "isLinked": false,
-           "unit": "px",
-           "size": 11
-          },
-          "background_background": "classic",
-          "__globals__": {
-           "background_color": "globals/colors?id=d20e171"
-          },
-          "border_radius": {
-           "unit": "px",
-           "top": "16",
-           "right": "16",
-           "bottom": "16",
-           "left": "16",
-           "isLinked": false
-          },
-          "content_width_tablet": "full",
-          "width_mobile": {
-           "unit": "px",
-           "size": 72,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "px",
-           "size": 72,
-           "sizes": []
-          },
-          "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
-          "_title": "Frame 9",
-          "_flex_align_self_tablet": "flex-start"
-         },
-         "elements": [
-          {
-           "id": "5cbf653",
-           "elType": "widget",
-           "settings": {
-            "selected_icon": {
-             "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-konzept.svg",
-              "id": 4319
+           "elements": [
+            {
+             "id": "ed08a6d",
+             "elType": "widget",
+             "settings": {
+              "header_size": "h3",
+              "title": "Nachweisbare Übergabe statt bloßem Funktionstest",
+              "__globals__": {
+               "title_color": "globals/colors?id=521f46a",
+               "typography_typography": ""
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 15,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "px",
+               "size": 25,
+               "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 0,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Nachweisbare Übergabe statt bloßem Funktionstest",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_font_weight": "700",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.24,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "title_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              }
              },
-             "library": "svg"
+             "elements": [],
+             "widgetType": "heading"
             },
-            "size": {
-             "unit": "px",
-             "size": 65,
-             "sizes": []
-            },
-            "size_widescreen": {
-             "unit": "%",
-             "size": "",
-             "sizes": []
-            },
-            "size_laptop": {
-             "unit": "px",
-             "size": 55,
-             "sizes": []
-            },
-            "size_tablet_extra": {
-             "unit": "px",
-             "size": 45,
-             "sizes": []
-            },
-            "size_tablet": {
-             "unit": "px",
-             "size": 60,
-             "sizes": []
-            },
-            "size_mobile": {
-             "unit": "px",
-             "size": 40,
-             "sizes": []
-            },
-            "_element_width": "inherit",
-            "_title": "Icon"
-           },
-           "elements": [],
-           "widgetType": "icon"
-          }
-         ],
-         "isInner": true
-        },
-        {
-         "id": "b488d07",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 74,
-           "sizes": []
-          },
-          "flex_direction": "column",
-          "flex_gap": {
-           "column": "6",
-           "row": "6",
-           "isLinked": true,
-           "unit": "px",
-           "size": 6
-          },
-          "padding": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": false
-          },
-          "_title": "Text"
-         },
-         "elements": [
-          {
-           "id": "58908e7",
-           "elType": "widget",
-           "settings": {
-            "header_size": "h3",
-            "title": "Sicherheitskonzept statt isolierter Technik",
-            "__globals__": {
-             "title_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_z_index": 1,
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Sicherheitskonzept statt isolierter Technik",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 20,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 15,
-             "sizes": []
-            },
-            "typography_font_weight": "700",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "title_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 18,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            }
-           },
-           "elements": [],
-           "widgetType": "heading"
-          },
-          {
-           "id": "56e5499",
-           "elType": "widget",
-           "settings": {
-            "__globals__": {
-             "text_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "editor": "<p>Eine Kamera filmt den Einbruch. Verhindern kann sie ihn nicht. Erst wenn Schließanlage und Alarm mitspielen, bekommt der Täter ein Problem. Deshalb planen wir alles zusammen.</p>\n<p><span style=\"color: #fbc91b; font-weight: 500;\">„Vom ersten Zutrittsversuch bis zur verwertbaren Aufnahme.“</span></p>",
-            "align": "left",
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Sicherheitskonzept statt isolierter Technik",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 13,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            },
-            "typography_font_weight": "400",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "text_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 14,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            }
-           },
-           "elements": [],
-           "widgetType": "text-editor"
-          }
-         ],
-         "isInner": true
-        }
-       ],
-       "isInner": true
-      },
-      {
-       "id": "192f631",
-       "elType": "container",
-       "settings": {
-        "content_width": "full",
-        "width": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_direction": "row",
-        "flex_justify_content": "flex-start",
-        "flex_align_items": "center",
-        "padding": {
-         "unit": "px",
-         "isLinked": false,
-         "top": "0",
-         "right": "0",
-         "bottom": "0",
-         "left": "0"
-        },
-        "flex_gap": {
-         "column": "24",
-         "row": "24",
-         "isLinked": false,
-         "unit": "px",
-         "size": 24
-        },
-        "flex_gap_tablet": {
-         "column": "15",
-         "row": "15",
-         "isLinked": false,
-         "unit": "px",
-         "size": 15
-        },
-        "flex_gap_mobile": {
-         "column": "0",
-         "row": "15",
-         "isLinked": false,
-         "unit": "px",
-         "size": 0
-        },
-        "content_width_tablet": "full",
-        "width_mobile": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "width_tablet": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_wrap_mobile": "wrap",
-        "flex_wrap_tablet": "wrap",
-        "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
-        "_title": "Fertig eingerichtet statt nur montiert",
-        "_transform_scale_popover_hover": "transform",
-        "_transform_scale_effect_hover": {
-         "unit": "px",
-         "size": 1.04,
-         "sizes": []
-        }
-       },
-       "elements": [
-        {
-         "id": "8a6c2f8",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 15,
-           "sizes": []
-          },
-          "flex_direction": "row",
-          "flex_justify_content": "flex-start",
-          "flex_align_items": "center",
-          "padding": {
-           "unit": "px",
-           "isLinked": true,
-           "top": "10",
-           "right": "10",
-           "bottom": "10",
-           "left": "10"
-          },
-          "padding_tablet": {
-           "unit": "px",
-           "isLinked": true,
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0"
-          },
-          "padding_mobile": {
-           "unit": "px",
-           "isLinked": false,
-           "top": "013",
-           "right": "013",
-           "bottom": "013",
-           "left": "013"
-          },
-          "flex_gap": {
-           "column": "16",
-           "row": "16",
-           "isLinked": false,
-           "unit": "px",
-           "size": 16
-          },
-          "flex_gap_tablet": {
-           "column": "15",
-           "row": "15",
-           "isLinked": false,
-           "unit": "px",
-           "size": 15
-          },
-          "flex_gap_mobile": {
-           "column": "11",
-           "row": "11",
-           "isLinked": false,
-           "unit": "px",
-           "size": 11
-          },
-          "background_background": "classic",
-          "__globals__": {
-           "background_color": "globals/colors?id=d20e171"
-          },
-          "border_radius": {
-           "unit": "px",
-           "top": "16",
-           "right": "16",
-           "bottom": "16",
-           "left": "16",
-           "isLinked": false
-          },
-          "content_width_tablet": "full",
-          "width_mobile": {
-           "unit": "px",
-           "size": 72,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "px",
-           "size": 72,
-           "sizes": []
-          },
-          "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
-          "_title": "Frame 9",
-          "_flex_align_self_tablet": "flex-start"
-         },
-         "elements": [
-          {
-           "id": "a94ee14",
-           "elType": "widget",
-           "settings": {
-            "selected_icon": {
-             "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-eingerichtet.svg",
-              "id": 4320
+            {
+             "id": "aa9d433",
+             "elType": "widget",
+             "settings": {
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 14.08,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.56,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.44,
+               "sizes": []
+              },
+              "__globals__": {
+               "typography_typography": "",
+               "text_color": "globals/colors?id=521f46a"
+              },
+              "editor": "<p>„Läuft“ reicht nicht. Bei der Übergabe prüfen wir mit dir, ob Gesichter auch nachts erkennbar sind und der Alarm wirklich ankommt. Das Ergebnis bekommst du schriftlich.</p>",
+              "align": "left",
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_z_index": 1,
+              "_element_custom_width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "_title": "Text",
+              "align_mobile": "center",
+              "typography_typography": "custom",
+              "typography_font_family": "Poppins",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_text_transform": "none",
+              "typography_text_decoration": "none",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.64,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "em",
+               "size": 0,
+               "sizes": []
+              },
+              "text_color": "#FFFFFF",
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              }
              },
-             "library": "svg"
+             "elements": [],
+             "widgetType": "text-editor"
             },
-            "size": {
-             "unit": "px",
-             "size": 65,
-             "sizes": []
-            },
-            "size_widescreen": {
-             "unit": "%",
-             "size": "",
-             "sizes": []
-            },
-            "size_laptop": {
-             "unit": "px",
-             "size": 55,
-             "sizes": []
-            },
-            "size_tablet_extra": {
-             "unit": "px",
-             "size": 45,
-             "sizes": []
-            },
-            "size_tablet": {
-             "unit": "px",
-             "size": 60,
-             "sizes": []
-            },
-            "size_mobile": {
-             "unit": "px",
-             "size": 40,
-             "sizes": []
-            },
-            "_element_width": "inherit",
-            "_title": "Icon"
-           },
-           "elements": [],
-           "widgetType": "icon"
-          }
-         ],
-         "isInner": true
-        },
-        {
-         "id": "8879a92",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 74,
-           "sizes": []
-          },
-          "flex_direction": "column",
-          "flex_gap": {
-           "column": "6",
-           "row": "6",
-           "isLinked": true,
-           "unit": "px",
-           "size": 6
-          },
-          "padding": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": false
-          },
-          "_title": "Text"
-         },
-         "elements": [
-          {
-           "id": "ad431b1",
-           "elType": "widget",
-           "settings": {
-            "header_size": "h3",
-            "title": "Fertig eingerichtet statt nur montiert",
-            "__globals__": {
-             "title_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_z_index": 1,
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Fertig eingerichtet statt nur montiert",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 20,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 15,
-             "sizes": []
-            },
-            "typography_font_weight": "700",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "title_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 18,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            }
-           },
-           "elements": [],
-           "widgetType": "heading"
-          },
-          {
-           "id": "409a97b",
-           "elType": "widget",
-           "settings": {
-            "__globals__": {
-             "text_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "editor": "<p>Viele Anlagen hängen an der Wand und melden nichts, weil nie jemand die App eingerichtet hat. Bei uns verlässt niemand das Gebäude, bevor dein Handy Alarm schlägt und du das System selbst bedienen kannst.</p>\n<p><span style=\"color: #fbc91b; font-weight: 500;\">„Wir gehen erst, wenn du dein System selbst bedienen kannst.“</span></p>",
-            "align": "left",
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Fertig eingerichtet statt nur montiert",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 13,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            },
-            "typography_font_weight": "400",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "text_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 14,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            }
-           },
-           "elements": [],
-           "widgetType": "text-editor"
-          }
-         ],
-         "isInner": true
-        }
-       ],
-       "isInner": true
-      },
-      {
-       "id": "ec82864",
-       "elType": "container",
-       "settings": {
-        "content_width": "full",
-        "width": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_direction": "row",
-        "flex_justify_content": "flex-start",
-        "flex_align_items": "center",
-        "padding": {
-         "unit": "px",
-         "isLinked": false,
-         "top": "0",
-         "right": "0",
-         "bottom": "0",
-         "left": "0"
-        },
-        "flex_gap": {
-         "column": "24",
-         "row": "24",
-         "isLinked": false,
-         "unit": "px",
-         "size": 24
-        },
-        "flex_gap_tablet": {
-         "column": "15",
-         "row": "15",
-         "isLinked": false,
-         "unit": "px",
-         "size": 15
-        },
-        "flex_gap_mobile": {
-         "column": "0",
-         "row": "15",
-         "isLinked": false,
-         "unit": "px",
-         "size": 0
-        },
-        "content_width_tablet": "full",
-        "width_mobile": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "width_tablet": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_wrap_mobile": "wrap",
-        "flex_wrap_tablet": "wrap",
-        "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
-        "_title": "Langfristige Betreuung statt einmaliger Installation",
-        "_transform_scale_popover_hover": "transform",
-        "_transform_scale_effect_hover": {
-         "unit": "px",
-         "size": 1.04,
-         "sizes": []
-        }
-       },
-       "elements": [
-        {
-         "id": "66d3c6c",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 15,
-           "sizes": []
-          },
-          "flex_direction": "row",
-          "flex_justify_content": "flex-start",
-          "flex_align_items": "center",
-          "padding": {
-           "unit": "px",
-           "isLinked": true,
-           "top": "10",
-           "right": "10",
-           "bottom": "10",
-           "left": "10"
-          },
-          "padding_tablet": {
-           "unit": "px",
-           "isLinked": true,
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0"
-          },
-          "padding_mobile": {
-           "unit": "px",
-           "isLinked": false,
-           "top": "013",
-           "right": "013",
-           "bottom": "013",
-           "left": "013"
-          },
-          "flex_gap": {
-           "column": "16",
-           "row": "16",
-           "isLinked": false,
-           "unit": "px",
-           "size": 16
-          },
-          "flex_gap_tablet": {
-           "column": "15",
-           "row": "15",
-           "isLinked": false,
-           "unit": "px",
-           "size": 15
-          },
-          "flex_gap_mobile": {
-           "column": "11",
-           "row": "11",
-           "isLinked": false,
-           "unit": "px",
-           "size": 11
-          },
-          "background_background": "classic",
-          "__globals__": {
-           "background_color": "globals/colors?id=d20e171"
-          },
-          "border_radius": {
-           "unit": "px",
-           "top": "16",
-           "right": "16",
-           "bottom": "16",
-           "left": "16",
-           "isLinked": false
-          },
-          "content_width_tablet": "full",
-          "width_mobile": {
-           "unit": "px",
-           "size": 72,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "px",
-           "size": 72,
-           "sizes": []
-          },
-          "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
-          "_title": "Frame 9",
-          "_flex_align_self_tablet": "flex-start"
-         },
-         "elements": [
-          {
-           "id": "f465490",
-           "elType": "widget",
-           "settings": {
-            "selected_icon": {
-             "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-betreuung.svg",
-              "id": 4321
+            {
+             "id": "f963339",
+             "elType": "container",
+             "settings": {
+              "content_width": "full",
+              "width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_direction": "row",
+              "flex_justify_content": "center",
+              "flex_align_items": "center",
+              "padding": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "16",
+               "right": "24",
+               "bottom": "16",
+               "left": "24"
+              },
+              "padding_tablet": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "padding_mobile": {
+               "unit": "px",
+               "isLinked": false,
+               "top": "13",
+               "right": "20",
+               "bottom": "13",
+               "left": "20"
+              },
+              "flex_gap": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_tablet": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "flex_gap_mobile": {
+               "column": "10",
+               "row": "10",
+               "isLinked": false,
+               "unit": "px",
+               "size": 10
+              },
+              "z_index": 2,
+              "background_background": "classic",
+              "__globals__": {
+               "background_color": "globals/colors?id=2de0564"
+              },
+              "border_radius": {
+               "unit": "px",
+               "top": "16",
+               "right": "16",
+               "bottom": "16",
+               "left": "16",
+               "isLinked": false
+              },
+              "content_width_tablet": "full",
+              "width_mobile": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "width_tablet": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "flex_wrap_mobile": "wrap",
+              "flex_wrap_tablet": "wrap",
+              "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
+              "_title": "Pain-Box"
              },
-             "library": "svg"
-            },
-            "size": {
-             "unit": "px",
-             "size": 65,
-             "sizes": []
-            },
-            "size_widescreen": {
-             "unit": "%",
-             "size": "",
-             "sizes": []
-            },
-            "size_laptop": {
-             "unit": "px",
-             "size": 55,
-             "sizes": []
-            },
-            "size_tablet_extra": {
-             "unit": "px",
-             "size": 45,
-             "sizes": []
-            },
-            "size_tablet": {
-             "unit": "px",
-             "size": 60,
-             "sizes": []
-            },
-            "size_mobile": {
-             "unit": "px",
-             "size": 40,
-             "sizes": []
-            },
-            "_element_width": "inherit",
-            "_title": "Icon"
-           },
-           "elements": [],
-           "widgetType": "icon"
-          }
-         ],
-         "isInner": true
-        },
-        {
-         "id": "43cfb35",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 74,
-           "sizes": []
-          },
-          "flex_direction": "column",
-          "flex_gap": {
-           "column": "6",
-           "row": "6",
-           "isLinked": true,
-           "unit": "px",
-           "size": 6
-          },
-          "padding": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": false
-          },
-          "_title": "Text"
-         },
-         "elements": [
-          {
-           "id": "7447627",
-           "elType": "widget",
-           "settings": {
-            "header_size": "h3",
-            "title": "Langfristige Betreuung statt einmaliger Installation",
-            "__globals__": {
-             "title_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_z_index": 1,
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Langfristige Betreuung statt einmaliger Installation",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 20,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 15,
-             "sizes": []
-            },
-            "typography_font_weight": "700",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "title_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 18,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
+             "elements": [
+              {
+               "id": "5cbf653",
+               "elType": "widget",
+               "settings": {
+                "typography_font_size_tablet": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_size_mobile": {
+                 "unit": "px",
+                 "size": 14.08,
+                 "sizes": []
+                },
+                "typography_line_height_tablet": {
+                 "unit": "em",
+                 "size": 1.56,
+                 "sizes": []
+                },
+                "typography_line_height_mobile": {
+                 "unit": "em",
+                 "size": 1.44,
+                 "sizes": []
+                },
+                "__globals__": {
+                 "typography_typography": "",
+                 "text_color": "globals/colors?id=521f46a"
+                },
+                "editor": "<p>Mit verwaschenen Nachtaufnahmen können weder Polizei noch Versicherung etwas anfangen.</p>",
+                "align": "left",
+                "_element_width": "initial",
+                "_element_custom_width": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_z_index": 0,
+                "_element_custom_width_tablet": {
+                 "unit": "%",
+                 "size": 100,
+                 "sizes": []
+                },
+                "_title": "Pain",
+                "align_mobile": "center",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 16,
+                 "sizes": []
+                },
+                "typography_font_weight": "600",
+                "typography_text_transform": "none",
+                "typography_text_decoration": "none",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.64,
+                 "sizes": []
+                },
+                "typography_letter_spacing": {
+                 "unit": "em",
+                 "size": 0,
+                 "sizes": []
+                },
+                "text_color": "#FFFFFF",
+                "typography_font_size_laptop": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "_padding_tablet": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": false
+                }
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ],
+             "isInner": true
             }
-           },
-           "elements": [],
-           "widgetType": "heading"
-          },
-          {
-           "id": "c0d9493",
-           "elType": "widget",
-           "settings": {
-            "__globals__": {
-             "text_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "editor": "<p>Festplatten laufen voll, und irgendwann wächst eine Hecke ins Bild. Fällt das erst nach dem Einbruch auf, ist es zu spät. Wir prüfen deine Anlage regelmäßig, auf Wunsch per Wartungsvertrag.</p>\n<p><span style=\"color: #fbc91b; font-weight: 500;\">„Wir sind auch Jahre später noch für dich da.“</span></p>",
-            "align": "left",
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Langfristige Betreuung statt einmaliger Installation",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 13,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            },
-            "typography_font_weight": "400",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "text_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 14,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            }
-           },
-           "elements": [],
-           "widgetType": "text-editor"
-          }
-         ],
-         "isInner": true
-        }
-       ],
-       "isInner": true
-      },
-      {
-       "id": "7004898",
-       "elType": "container",
-       "settings": {
-        "content_width": "full",
-        "width": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_direction": "row",
-        "flex_justify_content": "flex-start",
-        "flex_align_items": "center",
-        "padding": {
-         "unit": "px",
-         "isLinked": false,
-         "top": "0",
-         "right": "0",
-         "bottom": "0",
-         "left": "0"
-        },
-        "flex_gap": {
-         "column": "24",
-         "row": "24",
-         "isLinked": false,
-         "unit": "px",
-         "size": 24
-        },
-        "flex_gap_tablet": {
-         "column": "15",
-         "row": "15",
-         "isLinked": false,
-         "unit": "px",
-         "size": 15
-        },
-        "flex_gap_mobile": {
-         "column": "0",
-         "row": "15",
-         "isLinked": false,
-         "unit": "px",
-         "size": 0
-        },
-        "content_width_tablet": "full",
-        "width_mobile": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "width_tablet": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_wrap_mobile": "wrap",
-        "flex_wrap_tablet": "wrap",
-        "uich_custom_css_field": "selector {\n  min-width: 240px;\n  max-width: 100%;\n}\n",
-        "_title": "Nachweisbare Übergabe statt bloßem Funktionstest",
-        "_transform_scale_popover_hover": "transform",
-        "_transform_scale_effect_hover": {
-         "unit": "px",
-         "size": 1.04,
-         "sizes": []
-        }
-       },
-       "elements": [
-        {
-         "id": "b38d894",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 15,
-           "sizes": []
-          },
-          "flex_direction": "row",
-          "flex_justify_content": "flex-start",
-          "flex_align_items": "center",
-          "padding": {
-           "unit": "px",
-           "isLinked": true,
-           "top": "10",
-           "right": "10",
-           "bottom": "10",
-           "left": "10"
-          },
-          "padding_tablet": {
-           "unit": "px",
-           "isLinked": true,
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0"
-          },
-          "padding_mobile": {
-           "unit": "px",
-           "isLinked": false,
-           "top": "013",
-           "right": "013",
-           "bottom": "013",
-           "left": "013"
-          },
-          "flex_gap": {
-           "column": "16",
-           "row": "16",
-           "isLinked": false,
-           "unit": "px",
-           "size": 16
-          },
-          "flex_gap_tablet": {
-           "column": "15",
-           "row": "15",
-           "isLinked": false,
-           "unit": "px",
-           "size": 15
-          },
-          "flex_gap_mobile": {
-           "column": "11",
-           "row": "11",
-           "isLinked": false,
-           "unit": "px",
-           "size": 11
-          },
-          "background_background": "classic",
-          "__globals__": {
-           "background_color": "globals/colors?id=d20e171"
-          },
-          "border_radius": {
-           "unit": "px",
-           "top": "16",
-           "right": "16",
-           "bottom": "16",
-           "left": "16",
-           "isLinked": false
-          },
-          "content_width_tablet": "full",
-          "width_mobile": {
-           "unit": "px",
-           "size": 72,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "px",
-           "size": 72,
-           "sizes": []
-          },
-          "uich_custom_css_field": "selector {\n  max-width: 100%;\n}\n",
-          "_title": "Frame 9",
-          "_flex_align_self_tablet": "flex-start"
-         },
-         "elements": [
-          {
-           "id": "49dbda3",
-           "elType": "widget",
-           "settings": {
-            "selected_icon": {
-             "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-uebergabe.svg",
-              "id": 4322
-             },
-             "library": "svg"
-            },
-            "size": {
-             "unit": "px",
-             "size": 65,
-             "sizes": []
-            },
-            "size_widescreen": {
-             "unit": "%",
-             "size": "",
-             "sizes": []
-            },
-            "size_laptop": {
-             "unit": "px",
-             "size": 55,
-             "sizes": []
-            },
-            "size_tablet_extra": {
-             "unit": "px",
-             "size": 45,
-             "sizes": []
-            },
-            "size_tablet": {
-             "unit": "px",
-             "size": 60,
-             "sizes": []
-            },
-            "size_mobile": {
-             "unit": "px",
-             "size": 40,
-             "sizes": []
-            },
-            "_element_width": "inherit",
-            "_title": "Icon"
-           },
-           "elements": [],
-           "widgetType": "icon"
-          }
-         ],
-         "isInner": true
-        },
-        {
-         "id": "f0bbf78",
-         "elType": "container",
-         "settings": {
-          "content_width": "full",
-          "width": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "%",
-           "size": 80,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 74,
-           "sizes": []
-          },
-          "flex_direction": "column",
-          "flex_gap": {
-           "column": "6",
-           "row": "6",
-           "isLinked": true,
-           "unit": "px",
-           "size": 6
-          },
-          "padding": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": false
-          },
-          "_title": "Text"
-         },
-         "elements": [
-          {
-           "id": "1016c58",
-           "elType": "widget",
-           "settings": {
-            "header_size": "h3",
-            "title": "Nachweisbare Übergabe statt bloßem Funktionstest",
-            "__globals__": {
-             "title_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_z_index": 1,
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Nachweisbare Übergabe statt bloßem Funktionstest",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 20,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 15,
-             "sizes": []
-            },
-            "typography_font_weight": "700",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "title_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 18,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            }
-           },
-           "elements": [],
-           "widgetType": "heading"
-          },
-          {
-           "id": "85e918c",
-           "elType": "widget",
-           "settings": {
-            "__globals__": {
-             "text_color": "globals/colors?id=521f46a",
-             "typography_typography": ""
-            },
-            "editor": "<p>„Läuft“ reicht nicht. Bei der Übergabe prüfen wir mit dir, ob Gesichter auch nachts erkennbar sind und ob dein Handy wirklich Alarm schlägt. Das Ergebnis bekommst du schriftlich.</p>\n<p><span style=\"color: #fbc91b; font-weight: 500;\">„Wir belegen, dass die Kamera ihre Aufgabe erfüllt.“</span></p>",
-            "align": "left",
-            "_element_width": "initial",
-            "_element_custom_width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_element_custom_width_tablet": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "_title": "Nachweisbare Übergabe statt bloßem Funktionstest",
-            "typography_typography": "custom",
-            "typography_font_family": "Poppins",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 16,
-             "sizes": []
-            },
-            "typography_font_size_tablet": {
-             "unit": "px",
-             "size": 13,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            },
-            "typography_font_weight": "400",
-            "typography_text_transform": "none",
-            "typography_text_decoration": "none",
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.64,
-             "sizes": []
-            },
-            "typography_line_height_tablet": {
-             "unit": "em",
-             "size": 1.56,
-             "sizes": []
-            },
-            "typography_line_height_mobile": {
-             "unit": "em",
-             "size": 1.44,
-             "sizes": []
-            },
-            "typography_letter_spacing": {
-             "unit": "em",
-             "size": 0,
-             "sizes": []
-            },
-            "text_color": "#FFFFFF",
-            "_element_custom_width_mobile": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "typography_font_size_laptop": {
-             "unit": "px",
-             "size": 14,
-             "sizes": []
-            },
-            "typography_font_size_tablet_extra": {
-             "unit": "px",
-             "size": 12,
-             "sizes": []
-            }
-           },
-           "elements": [],
-           "widgetType": "text-editor"
+           ],
+           "isInner": true
           }
          ],
          "isInner": true
@@ -6192,7 +7752,7 @@
      "isInner": true
     },
     {
-     "id": "d7f768f",
+     "id": "192f631",
      "elType": "container",
      "settings": {
       "content_width": "full",
@@ -6217,7 +7777,7 @@
      },
      "elements": [
       {
-       "id": "b3a6edf",
+       "id": "58908e7",
        "elType": "widget",
        "settings": {
         "typography_font_size_tablet": {
@@ -6297,7 +7857,7 @@
        "widgetType": "text-editor"
       },
       {
-       "id": "a027b55",
+       "id": "56e5499",
        "elType": "widget",
        "settings": {
         "text": "Unverbindliches Erstgespräch vereinbaren",
@@ -10864,37 +12424,37 @@
       "eael_adv_accordion_tab": [
        {
         "eael_adv_accordion_tab_title": "Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
-        "_id": "43e5085",
+        "_id": "ad431b1",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja, innerhalb klarer Regeln. Erlaubt ist die Überwachung deines eigenen Geländes und deiner Zugänge, nicht die von Gehweg oder Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel so, dass du auf der sicheren Seite bist, und geben dir die passenden Hinweisschilder und Unterlagen mit.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Wie lange dauert die Installation?",
-        "_id": "c407c9d",
+        "_id": "409a97b",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Eine Anlage mit vier bis acht Kameras ist in der Regel an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Kann ich die Bilder auf dem Handy sehen?",
-        "_id": "c5f5120",
+        "_id": "ec82864",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja. Du bekommst eine App, in der du Live-Bild und Aufzeichnungen siehst und bei Bewegung benachrichtigt wirst. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was passiert bei Stromausfall oder Internetstörung?",
-        "_id": "94cb6e5",
+        "_id": "66d3c6c",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Die Aufzeichnung läuft lokal auf dem Rekorder weiter, solange Strom da ist. Auf Wunsch sichern wir Rekorder und Kameras mit einer unterbrechungsfreien Stromversorgung ab. Fällt das Internet aus, fehlt nur der Fernzugriff, nicht die Aufzeichnung.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was kostet eine Videoüberwachung?",
-        "_id": "0f9b7a3",
+        "_id": "f465490",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Das hängt von der Zahl der Kameras, den Entfernungen und den vorhandenen Leitungen ab. Einen ersten Rahmen bekommst du schon im Erstgespräch, nach dem Termin vor Ort einen verbindlichen Preis.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
-        "_id": "792e6a4",
+        "_id": "43cfb35",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Die Aufnahmen bleiben auf deinem Rekorder im Gebäude und nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung entsprechend ein und halten die Software aktuell.</span></p>"
        }
@@ -32401,12 +33961,12 @@
    "isInner": false
   },
   {
-   "id": "766794d",
+   "id": "7447627",
    "elType": "container",
    "isInner": false,
    "elements": [
     {
-     "id": "a202bdb",
+     "id": "c0d9493",
      "elType": "widget",
      "widgetType": "html",
      "elements": [],

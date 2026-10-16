@@ -207,3 +207,16 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
   mitskaliert. Geprüft auf der Live-Seite bei 1920, 1600, 1441, 1440, 1366, 1281, 1280, 1100, 1025, 1024, 900, 768,
   430, 393, 375, 360 und 320 px: Zeile 2 beginnt überall mit „- mit“.
 
+---
+
+## „Fünf Unterschiede“ als Hover-Karten (16.10.2026)
+
+- Die fünf Zeilen sind jetzt Klone der Karten aus dem Startseiten-Abschnitt „Warum immer mehr KMUs …“: 4 % weiße
+  Fläche, 2-px-Rahmen in Weiß (40 %), Radius 24 px; beim Hover gelber Rahmen, dunkler Hintergrund, gelber Glow und
+  Vergrößerung auf 105 % (Elementor-Container-Einstellungen, kein eigenes CSS).
+- Aufbau je Karte wie auf der Startseite: Icon-Kachel, Überschrift, Text und darunter die fette Box mit dem
+  Schmerzpunkt. Die gelbe Versprechen-Zeile ist dafür entfallen. Texte gekürzt (Text ca. 20 bis 27 Wörter,
+  Box ein Satz).
+- Kartenspalte 900 px breit, mittig; Tablet und Handy volle Breite. Auf dem Handy stapelt sich die Karte wie auf der
+  Startseite: Kachel zentriert oben, Text zentriert darunter.
+
