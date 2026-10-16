@@ -166,6 +166,11 @@ h1["_element_custom_width_laptop"] = {"unit": "px", "size": 940, "sizes": []}
 must(hero, "e429076")["settings"]["title"] = HERO_SUB
 hs = hero["settings"]
 hs["background_video_link"] = VIDEO_DESKTOP["url"]
+# Kameras im Video frei sichtbar, knapp über der Headline: Text rutscht nach unten, am Desktop bei gleicher Hero-Höhe
+# (oben +80, unten -80), damit der Videoausschnitt gleich bleibt. Laptop/Tablet: oben +70, Höhe darf wachsen.
+hs["padding"] = box(280, 20, 20, 20)
+hs["padding_laptop"] = box(220, 40, 50, 40)
+hs["padding_tablet"] = box(220, 20, 50, 20)
 hs["background_video_start"] = ""
 hs["background_video_end"] = ""            # ganzes Video abspielen, danach stehen bleiben (background_play_once bleibt "yes")
 hs["background_play_on_mobile"] = ""       # mobil einfarbig (eigenes Custom-CSS des Hero), Video folgt als Block unter dem Button
@@ -225,6 +230,8 @@ row["elements"] = [e for e in row["elements"] if e["id"] != "63020976"]      # B
 car = must(slider, "2b91cf92")
 slide_tpl = must(slider, "547b551e")
 car["settings"]["carousel_items"] = []
+car["settings"]["pause_on_hover"] = "no"          # Produktbilder laufen auch am Computer durch, auch wenn die Maus darüber steht
+car["settings"]["pause_on_interaction"] = "no"    # ... und nach einem Klick auf die Pfeile weiter
 car["elements"] = []
 for i, img in enumerate(PRODUKTE, 1):
     item_id = new_id()
@@ -313,7 +320,7 @@ cta = container({"flex_direction": "column", "flex_align_items": "center",
 
 # Zweispaltig wie der Startseiten-Abschnitt „Warum immer mehr KMUs …“ (H[6]): links der Text, der am Computer beim
 # Scrollen stehen bleibt, bis die Karten rechts zu Ende sind (Elementor-Sticky, „an Eltern-Container“), rechts die
-# Karten. Glas-Logo als Hintergrund-Overlay der Zeile (nur am Computer). Auf Tablet und Handy stehen Text und Karten wie bisher untereinander, zentriert, ohne Overlays.
+# Karten. Glas-Logo als Hintergrund-Overlay der Zeile (Computer und Handy wie auf der Startseite, Tablet ohne). Auf Tablet und Handy stehen Text und Karten wie bisher untereinander, zentriert, ohne Overlays.
 home_row = must(H[6], "f86d566")
 home_left, home_right = must(H[6], "8c98faa"), must(H[6], "b72e86b")
 full = lambda: {"unit": "%", "size": 100, "sizes": []}
@@ -334,7 +341,8 @@ row["elements"] = [left, right]
 row["settings"].update({"flex_direction_tablet": "column", "width": full(),
                         "margin": box(0, 0, 0, 0), "margin_laptop": box(0, 0, 0, 0),
                         "background_overlay_opacity_tablet": {"unit": "px", "size": 0, "sizes": []},
-                        "background_overlay_opacity_mobile": {"unit": "px", "size": 0, "sizes": []},
+                        # Handy: Glas-V wie auf der Startseite (oben mittig, Deckkraft 0,64); Tablet ohne
+                        "background_overlay_opacity_mobile": {"unit": "px", "size": 0.64, "sizes": []},
                         "_title": "Text + Karten"})
 diff = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(sec_tpl["settings"]),
         "elements": [reid(row)]}

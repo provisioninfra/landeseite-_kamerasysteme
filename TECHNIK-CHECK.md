@@ -299,3 +299,19 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
   Bild per HTTP 200 als image/jpeg (26 KB nach Imagify). Ein Video lässt sich in Link-Vorschauen nicht abspielen;
   `og:video` würde WhatsApp ignorieren und wurde nicht gesetzt.
 
+---
+
+## Hero: Kameras über der Headline, Produktslider, Glas-V am Handy (16.10.2026)
+
+- Kameras: Elementor skaliert das Hintergrundvideo immer auf die Hero-Höhe (16:9, mittig). Die Kameras liegen im Bild
+  bei 16 bis 27 % der Höhe und standen damit hinter der ersten Headline-Zeile. Lösung: Hero-Innenabstand oben 280 px
+  statt 200 px, unten 20 px statt 100 px, damit die Hero-Höhe am Desktop gleich bleibt (1025 px) und der
+  Videoausschnitt sich nicht verschiebt. Laptop und Tablet: oben 220 px statt 150 px. Gemessen bei 1920, 1600, 1536,
+  1441, 1440, 1366, 1280, 1100, 1024 und 768 px: Unterkante der Kameras liegt überall über der Headline (Abstand
+  2 bis 40 px), Oberkante unter der Menüleiste.
+- Produktslider: `pause_on_hover` und `pause_on_interaction` auf „nein“, damit die Bilder am Computer auch dann
+  weiterlaufen, wenn die Maus darüber steht oder ein Pfeil geklickt wurde. Autoplay (5 s) und Endlosschleife waren
+  bereits wie bei den Kundenstimmen gesetzt; die Kundenstimmen bleiben unverändert.
+- Glas-V am Handy: Overlay der Karten-Zeile wie auf der Startseite oben mittig, „contain“, Deckkraft 0,64. Tablet
+  weiterhin ohne.
+

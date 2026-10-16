@@ -70,7 +70,8 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   Überschrift und Einleitung (bleiben beim Scrollen stehen, bis die Karten rechts zu Ende sind), rechts fünf Karten
   (Rahmen, beim Überfahren mit der Maus gelb) mit Überschrift, kurzem Text und einer fetten Box mit dem
   Schmerzpunkt. Karte anklicken, dann die drei Textelemente darin einzeln bearbeiten. Auf Tablet und Handy stehen
-  Text und Karten untereinander. Das Glas-Logo im Hintergrund ist das Bild der Startseite (Mediathek-ID 516).
+  Text und Karten untereinander, am Handy mit dem Glas-Logo oben wie auf der Startseite. Das Glas-Logo im
+  Hintergrund ist das Bild der Startseite (Mediathek-ID 516).
 - **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor. Alle Buttons der Seite öffnen
   die eigene Kontaktseite /kontakt-kamerasysteme/ (wie die Startseite /kontakt öffnet).
 - **Kontaktseite:** eigene Seite „Kontakt Kamerasysteme“ (ID 4371, /kontakt-kamerasysteme/), Kopie der Seite
