@@ -153,7 +153,7 @@ h1["title"] = HERO_H1
 # Überschrift größer als auf der Startseite. Die zweite Zeile („mit Kamera- & Videoüberwachung“, Poppins 400,
 # ca. 18,4 em breit) muss in jeder Breite in EINE Zeile passen; deshalb ist die Textbox breiter als auf der Startseite
 # und auf Tablet/Handy (Box skaliert mit der Bildschirmbreite) wird die Größe per min()-Formel gedeckelt.
-h1["typography_font_size"] = {"unit": "px", "size": 64, "sizes": []}                      # ab 1441 px, Box 88 % von 1400 px = 1232 px
+h1["typography_font_size"] = {"unit": "px", "size": 52, "sizes": []}                      # ab 1441 px: zweite Zeile endet vor dem Schloss im Video (bei 1536 px max. 52 px)
 h1["typography_font_size_laptop"] = {"unit": "px", "size": 50, "sizes": []}               # 1281-1440 px, Box 940 px
 h1["typography_font_size_tablet_extra"] = {"unit": "px", "size": 44, "sizes": []}         # 1025-1280 px, Box 940 px
 h1["typography_font_size_tablet"] = {"unit": "custom", "size": "min(36px, 4vw - 1.5px)", "sizes": []}   # 768-1024 px: 29 px bei 768, 36 px ab 940
@@ -169,16 +169,11 @@ hs["background_video_link"] = VIDEO_DESKTOP["url"]
 # Kameras im Video frei sichtbar, knapp über der Headline: Text rutscht nach unten, am Desktop bei gleicher Hero-Höhe
 # (oben +80, unten -80), damit der Videoausschnitt gleich bleibt. Laptop/Tablet: oben +70, Höhe darf wachsen.
 hs["padding"] = box(280, 20, 20, 20)
-# Schloss im Video rechts neben dem Headline-Ende statt dahinter (ab 1441 px): Videobild 200 px nach rechts, linke
-# Kante weich in den Hintergrund ausgeblendet. Elementor zentriert das Video mit translate(-50%, -50%).
+# Schloss im Video neben statt hinter der Headline: ab 1441 px über die Schriftgröße (52 px), bei 1025-1440 px über eine
+# kleine Verschiebung des Videobilds nach rechts (linke Kante weich ausgeblendet). Elementor zentriert das Video mit
+# translate(-50%, -50%).
 hs["custom_css"] = (hs.get("custom_css", "") + """
-@media (min-width: 1441px) {
-  .elementor-element-0f0c707 video.elementor-background-video-hosted {
-    transform: translate(calc(-50% + 200px), -50%) !important;
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 220px);
-    mask-image: linear-gradient(to right, transparent 0, #000 220px);
-  }
-}
+/* Ab 1441 px keine Verschiebung (Tür bleibt an Ort und Stelle); dort endet die Headline mit 52 px vor dem Schloss. */
 /* Laptop (1281-1440 px, Headline 50 px): Verschiebung wächst mit kleinerer Breite (26 px bei 1440, 106 px bei 1281) */
 @media (min-width: 1281px) and (max-width: 1440px) {
   .elementor-element-0f0c707 video.elementor-background-video-hosted {

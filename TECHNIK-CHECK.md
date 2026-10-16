@@ -195,7 +195,7 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
 
 | Breite | Größe | Textbox | Zweite Zeile |
 |---|---|---|---|
-| ab 1441 px | 64 px | 88 % von 1400 px = 1232 px | ca. 1177 px, einzeilig |
+| ab 1441 px | 52 px (seit 16.10., damit die Zeile vor dem Schloss im Video endet) | 88 % von 1400 px = 1232 px | ca. 914 px, einzeilig |
 | 1281 bis 1440 px | 50 px | 940 px | ca. 920 px, einzeilig |
 | 1025 bis 1280 px | 44 px | 940 px | ca. 810 px, einzeilig |
 | 768 bis 1024 px | `min(36px, 4vw - 1.5px)` (29 px bei 768, 36 px ab 938) | 75 % der Breite | einzeilig |
@@ -319,17 +319,18 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
 
 ## Hero: Schloss neben statt hinter der Headline (16.10.2026)
 
-- Befund: Seit die Headline größer ist und „mit Kamera- & Videoüberwachung“ in einer Zeile steht, endet die zweite
+- Befund: Seit die Headline größer ist und „mit Kamera- & Videoüberwachung“ in einer Zeile steht, endete die zweite
   Zeile am Desktop hinter dem leuchtenden Schloss im Video (bei 1920 px Text bis 1385 px, Schloss ab 1210 px).
 - Warum „Schloss unter der Headline“ nicht geht: Im Videobild liegen Kameras und Schloss nur 7 % der Bildhöhe
-  auseinander (bei 1920 px etwa 75 px), die zweizeilige Headline ist 160 px hoch. Beides passt nicht zwischen
+  auseinander (bei 1920 px etwa 75 px), die zweizeilige Headline ist 130 bis 160 px hoch. Beides passt nicht zwischen
   Kameras (oben) und Schloss (unten), bei keiner Videogröße.
-- Lösung: Das Video wird am Computer per Custom-CSS des Hero nach rechts verschoben, die linke Kante mit einer
-  Maske weich in den Hintergrund ausgeblendet. Ab 1441 px feste 200 px; 1281 bis 1440 px `746px - 50vw`
-  (26 bis 106 px); 1025 bis 1280 px `max(0, 645px - 50vw)` (5 bis 132 px). Elementor zentriert das Video mit
-  `translate(-50%, -50%)`, die Regel ergänzt nur den Versatz. Tablet und Handy unverändert.
-- Live gemessen: Schloss beginnt 12 bis 25 px rechts vom Textende der Headline (1281 bis 1920 px), Kameras weiter
-  zwischen Menüleiste und Headline. Nebenwirkung: Der rechte Türflügel ragt bei 1441 bis 1600 px um 170 bis 250 px
-  über den rechten Rand hinaus (vorher 0 bis 45 px), bei 1920 px um 46 px.
-- Alternative ohne Verschiebung wäre eine kleinere Headline ab 1441 px (52 px statt 64 px); bewusst nicht gewählt.
-
+- Erster Versuch (verworfen): Video ab 1441 px um 200 px nach rechts verschoben. Dadurch rückte die Tür zu weit nach
+  rechts, Rückmeldung des Kunden. Zurückgenommen.
+- Lösung ab 1441 px: Headline 52 px statt 64 px (bei 1536 px endet die Zeile sonst hinter dem Schloss; 52 px ist das
+  Maximum). Video unverändert an seinem Platz.
+- Lösung 1025 bis 1440 px: kleine Verschiebung des Videobilds per Custom-CSS des Hero, linke Kante per Maske weich
+  ausgeblendet. 1281 bis 1440 px `746px - 50vw` (26 bis 106 px), 1025 bis 1280 px `max(0, 645px - 50vw)`
+  (5 bis 132 px). Elementor zentriert das Video mit `translate(-50%, -50%)`, die Regel ergänzt nur den Versatz.
+  Tablet und Handy unverändert.
+- Live gemessen: Schloss beginnt 14 bis 36 px rechts vom Textende (1281 bis 1920 px), Kameras zwischen Menüleiste
+  und Headline, Tür bei 1441 bis 1920 px komplett im Bild (rechte Kante 1467 bis 1766 px).
