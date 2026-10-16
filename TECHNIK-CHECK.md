@@ -202,7 +202,7 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
 | bis 767 px | `min(28px, 7vw - 2px)` (25,5 px bei 393, 28 px ab 429) | volle Breite minus 20 px | bricht nach „&“ um |
 
 - Auf dem Handy ist die erste Zeile (fett) das Maß: Sie füllt bei 26 px auf einem 390-px-Bildschirm bereits die
-  Breite. Die Formel hält sie bis 320 px einzeilig, die zweite Zeile wird zu „mit Kamera- die zweite Zeile wird zu „mit Kamera- &“ / „Videoüberwachung““ / „Videoüberwachung“.
+  Breite. Die Formel hält sie bis 320 px einzeilig, die zweite Zeile wird zu „mit Kamera- &“ / „Videoüberwachung““ / „Videoüberwachung“.
 - Elementor rendert die Einheit „custom“ unverändert als CSS (`font-size: min(...)`), Zeilenhöhe in em, damit sie
   mitskaliert. Geprüft auf der Live-Seite bei 1920, 1600, 1441, 1440, 1366, 1281, 1280, 1100, 1025, 1024, 900, 768,
   430, 393, 375, 360 und 320 px: Zeile 2 beginnt überall mit „mit Kamera-“.
