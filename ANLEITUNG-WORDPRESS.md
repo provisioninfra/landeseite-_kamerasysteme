@@ -103,6 +103,16 @@ nicht, braucht aber einen zweiten Schritt im Header der Seite. Sag Bescheid, dan
 
 ---
 
+## Link-Vorschau (WhatsApp, LinkedIn, Facebook)
+
+Die Seite hat in Yoast ein eigenes Vorschaubild (Schlussbild des Hero-Videos, 1200 × 630 Pixel, Mediathek
+`kamera-vorschau-1200x630-1.jpg`), einen Vorschau-Titel („Wir schützen dein Gebäude mit Kamera- &
+Videoüberwachung“) und eine Beschreibung. Ändern: Seite bearbeiten → Yoast-Box → Reiter **Social** → Bild,
+Titel, Beschreibung. WhatsApp merkt sich eine Vorschau pro Link; nach Änderungen hilft ein Zusatz wie
+`?v=2` am Link, bis WhatsApp die neue Vorschau lädt. Ein Video kann in keiner Link-Vorschau laufen, nur ein Bild.
+
+---
+
 ## Schritt 5: Suchmaschinen-Angaben eintragen (3 Minuten)
 
 1. Unter **Seiten → Alle Seiten** die Seite normal bearbeiten (nicht mit Elementor).

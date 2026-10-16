@@ -284,3 +284,18 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
   (Übergang „Reveal“, 800 px, Farben, Schriftgrößen, Button-Texte) sind identisch. Die Einträge 2459 und 828
   wurden vorher und nachher ausgelesen und sind unverändert.
 
+---
+
+## Link-Vorschau / Open Graph (16.10.2026)
+
+- Befund: Yoast gab als `og:image` das erste Bild im Inhalt aus, das Header-Logo mit 258 × 60 Pixel. Messenger
+  ignorieren so kleine Bilder, deshalb zeigte WhatsApp nur den Link. Die `og:description` war ein Textauszug der Seite.
+- Lösung: Schlussbild des Hero-Videos (Tür und Kameras) als 1200 × 630 JPEG (`assets/img/og-kamerasysteme.jpg`,
+  46 KB, Mediathek-ID 4376) in Yoast als Facebook- und X-Bild der Seite hinterlegt, dazu Vorschau-Titel und
+  -Beschreibung sowie die Meta-Description. Gesetzt über den Yoast-Datenspeicher des Block-Editors
+  (`setFacebookPreviewImage`, `setFacebookPreviewTitle`, `setFacebookPreviewDescription`, `updateData`), danach
+  Seite gespeichert; Werte nach Neuladen bestätigt.
+- Live geprüft, auch ohne Cache-Umgehung: `og:image` 1200 × 630 mit `og:image:width/height`, `twitter:image`,
+  Bild per HTTP 200 als image/jpeg (26 KB nach Imagify). Ein Video lässt sich in Link-Vorschauen nicht abspielen;
+  `og:video` würde WhatsApp ignorieren und wurde nicht gesetzt.
+
