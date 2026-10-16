@@ -440,7 +440,7 @@
      "left": "20",
      "isLinked": false
     },
-    "background_video_link": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video.mp4",
+    "background_video_link": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video-4k.mp4",
     "padding_tablet": {
      "unit": "px",
      "top": "150",
@@ -626,7 +626,7 @@
         "typography_font_family": "Poppins",
         "typography_font_size": {
          "unit": "px",
-         "size": 52,
+         "size": 60,
          "sizes": []
         },
         "typography_font_weight": "400",
@@ -638,12 +638,12 @@
         },
         "typography_line_height_tablet": {
          "unit": "px",
-         "size": 35,
+         "size": 38,
          "sizes": []
         },
         "typography_line_height_mobile": {
          "unit": "px",
-         "size": 25,
+         "size": 32,
          "sizes": []
         },
         "typography_letter_spacing": {
@@ -673,7 +673,7 @@
         "header_size": "h1",
         "typography_font_size_tablet": {
          "unit": "px",
-         "size": 25,
+         "size": 29,
          "sizes": []
         },
         "_element_custom_width_tablet": {
@@ -684,7 +684,7 @@
         "align_mobile": "center",
         "typography_font_size_mobile": {
          "unit": "px",
-         "size": 22,
+         "size": 26,
          "sizes": []
         },
         "_padding": {
@@ -705,17 +705,17 @@
         },
         "typography_font_size_laptop": {
          "unit": "px",
-         "size": 40,
+         "size": 46,
          "sizes": []
         },
         "typography_font_size_tablet_extra": {
          "unit": "px",
-         "size": 35,
+         "size": 40,
          "sizes": []
         },
         "typography_line_height_tablet_extra": {
          "unit": "px",
-         "size": 40,
+         "size": 48,
          "sizes": []
         },
         "_padding_laptop": {
@@ -736,7 +736,7 @@
         },
         "_element_custom_width_laptop": {
          "unit": "px",
-         "size": 637,
+         "size": 720,
          "sizes": []
         },
         "_padding_mobile": {
@@ -1695,7 +1695,7 @@
      "sizes": []
     },
     "background_background": "video",
-    "background_video_link": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video.mp4",
+    "background_video_link": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video-mobil.mp4",
     "background_play_on_mobile": "yes",
     "custom_css": "@media (min-width: 475px) and (max-width: 767px) {\nselector { min-height: 470px; }\n}\n@media (max-width: 767px) {\nselector video.elementor-background-video-hosted {\n  object-position: 100% 50% !important;\n}\n}",
     "margin_mobile": {
@@ -1710,8 +1710,8 @@
     "background_video_end": "",
     "background_play_once": "yes",
     "background_video_fallback": {
-     "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-standbild.jpg",
-     "id": 4306,
+     "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-standbild-4k-scaled.jpg",
+     "id": 4343,
      "size": "",
      "alt": "",
      "source": "library"
@@ -1722,7 +1722,8 @@
     "hide_laptop": "hidden-laptop",
     "hide_tablet_extra": "hidden-tablet_extra",
     "hide_tablet": "hidden-tablet",
-    "_title": "Hero-Video (nur mobil)"
+    "_title": "Hero-Video (nur mobil)",
+    "background_position_mobile": "center right"
    },
    "elements": [],
    "isInner": false

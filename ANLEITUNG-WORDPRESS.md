@@ -1,8 +1,8 @@
 # Anleitung: Die Kamera-Landingpage in WordPress fertigstellen und veröffentlichen
 
-Diese Anleitung ist für Menschen ohne Technik-Vorkenntnisse geschrieben. Die Seite liegt bereits
-fertig aufgebaut in deinem WordPress, als **unveröffentlichter Entwurf**. Du musst nichts importieren.
-Es bleibt: Produktbilder einsetzen, Texte prüfen, Suchmaschinen-Angaben eintragen, veröffentlichen.
+Diese Anleitung ist für Menschen ohne Technik-Vorkenntnisse geschrieben. Die Seite liegt fertig
+aufgebaut in deinem WordPress und ist inzwischen unter `https://www.provision-infra.de/kamerasysteme/`
+veröffentlicht. Es bleibt: Produktbilder einsetzen, Texte prüfen, Suchmaschinen-Angaben eintragen.
 
 ---
 
@@ -28,7 +28,8 @@ Platzhaltern für deine Produktbilder.
    WordPress-Backend eingeloggt sein, sonst wird die Vorschau nicht angezeigt.
 
 Auf dem Handy liegt das Video als eigener Block unter dem Button, der Text steht auf einfarbigem
-Hintergrund. Auf dem Desktop läuft das Video hinter dem Text einmal ab und bleibt stehen.
+Hintergrund. Auf dem Desktop läuft das Video (4K-Fassung) hinter dem Text einmal ab und bleibt auf dem
+letzten Bild stehen. Scrollst du weg und wieder zurück, startet es erneut.
 
 ---
 

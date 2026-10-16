@@ -4,8 +4,8 @@
   "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video.mp4"
  },
  "poster": {
-  "id": 4306,
-  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-standbild.jpg"
+  "id": 4343,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-standbild-4k-scaled.jpg"
  },
  "produkte": [
   {
@@ -32,5 +32,13 @@
    "id": 4312,
    "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-produktbild-6.jpg"
   }
- ]
+ ],
+ "video_4k": {
+  "id": 4341,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video-4k.mp4"
+ },
+ "video_mobile": {
+  "id": 4342,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-video-mobil.mp4"
+ }
 }

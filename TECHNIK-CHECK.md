@@ -172,3 +172,15 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
 - Medien in der Mediathek: Hero-Video (ID 4305), Standbild (4306), sechs Platzhalter-Produktbilder
   (4307–4312), fünf Icons im Stil der Startseiten-Kacheln (4318–4322).
 - Nicht verändert: Startseite, andere Seiten, Menüs, Einstellungen. Nichts veröffentlicht.
+
+## Hero-Video in höherer Auflösung (15.10.2026)
+
+- Quelle: 1280×720, 9,2 s, KI-generiert. Im Hero auf 1440 bis 1920 Pixel gedehnt, auf Retina-Bildschirmen auf das Doppelte.
+- Alle 221 Frames mit Real-ESRGAN (Modell „animevideov3“, CPU) vierfach hochskaliert und auf 3840×2160 heruntergerechnet.
+  Verglichen wurde mit reinem Lanczos-Upscaling und dem Modell „general-x4v3“; die gewählte Fassung liefert die
+  saubersten Kanten ohne Rauschen auf den Flächen.
+- Desktop-Hero: 4K (3,7 MB). Handy-Block: 2560×1440 (1,5 MB). Die Startseite liefert ihr Hero-Video ebenfalls in 4K aus.
+- Verhalten: Video läuft einmal, das letzte Bild bleibt stehen. Verlässt der Bereich den Bildschirm und kommt zurück,
+  startet es erneut (Hero und Handy-Block). Umgesetzt mit einem HTML-Widget am Seitenende plus CSS, weil Elementor ein
+  einmal abgespieltes Video nach dem Ende ausblendet.
+- Handy: Videoblock 330 px hoch, Bildausschnitt rechts (object-position), damit Kameras und Tür komplett sichtbar sind.

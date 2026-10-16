@@ -145,7 +145,18 @@ page.append(clone(H[0]))
 
 # ---------------------------------------------------------------- 2) Hero (Original, neue Texte, neues Video)
 hero = clone(H[1])
-must(hero, "9dcea29")["settings"]["title"] = HERO_H1
+h1 = must(hero, "9dcea29")["settings"]
+h1["title"] = HERO_H1
+# Überschrift etwas größer als auf der Startseite (ca. 15 %)
+h1["typography_font_size"] = {"unit": "px", "size": 60, "sizes": []}
+h1["typography_font_size_laptop"] = {"unit": "px", "size": 46, "sizes": []}
+h1["typography_font_size_tablet_extra"] = {"unit": "px", "size": 40, "sizes": []}
+h1["typography_font_size_tablet"] = {"unit": "px", "size": 29, "sizes": []}
+h1["typography_font_size_mobile"] = {"unit": "px", "size": 26, "sizes": []}
+h1["typography_line_height_tablet_extra"] = {"unit": "px", "size": 48, "sizes": []}
+h1["typography_line_height_tablet"] = {"unit": "px", "size": 38, "sizes": []}
+h1["typography_line_height_mobile"] = {"unit": "px", "size": 32, "sizes": []}
+h1["_element_custom_width_laptop"] = {"unit": "px", "size": 720, "sizes": []}
 must(hero, "e429076")["settings"]["title"] = HERO_SUB
 hs = hero["settings"]
 hs["background_video_link"] = VIDEO_DESKTOP["url"]
@@ -169,6 +180,7 @@ ms.update(hide_all_but_mobile())
 ms["_title"] = "Hero-Video (nur mobil)"
 # Bildausschnitt: Video rechtsbündig, Blockhöhe so, dass Kameras und Tür komplett im Bild sind (Video ist 16:9).
 ms["min_height_mobile"] = {"unit": "px", "size": 330, "sizes": []}
+ms["background_position_mobile"] = "center right"   # Ersatzbild (bis das Video läuft) mit demselben Ausschnitt wie das Video
 ms["custom_css"] = """@media (min-width: 475px) and (max-width: 767px) {
 selector { min-height: 470px; }
 }

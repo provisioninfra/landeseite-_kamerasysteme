@@ -15,3 +15,12 @@ ffmpeg -i quelle.mov -an -c:v libx264 -pix_fmt yuv420p -crf 23 -movflags +fastst
 ffmpeg -i assets/video/hero.mp4 -an -c:v libvpx-vp9 -crf 33 -b:v 0 assets/video/hero.webm
 ffmpeg -sseof -0.1 -i assets/video/hero.mp4 -frames:v 1 assets/video/hero-poster.jpg
 ```
+
+## Hochskalierte Fassungen (Stand 15.10.2026)
+
+- `hero-4k.mp4` – 3840×2160, KI-hochskaliert (Real-ESRGAN „animevideov3“, 4× und auf 4K heruntergerechnet), 3,7 MB. Desktop-Hero in WordPress.
+- `hero-mobil.mp4` – 2560×1440 aus der 4K-Fassung, 1,5 MB. Handy-Videoblock in WordPress.
+- `hero-poster-4k.jpg` – Standbild aus der 4K-Fassung.
+
+Neu erzeugen: `tools/upscale_batch.py` (Frames hochskalieren, braucht PyTorch und die Modelldatei
+`realesr-animevideov3.pth`), danach `tools/upscale_encode.sh`.
