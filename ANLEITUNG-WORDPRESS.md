@@ -71,9 +71,11 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   (Rahmen, beim Überfahren mit der Maus gelb) mit Überschrift, kurzem Text und einer fetten Box mit dem
   Schmerzpunkt. Karte anklicken, dann die drei Textelemente darin einzeln bearbeiten. Auf Tablet und Handy stehen
   Text und Karten untereinander. Das Glas-Logo im Hintergrund ist das Bild der Startseite (Mediathek-ID 516).
-- **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor. Alle Buttons der Seite springen
-  zum Kontaktformular am Seitenende (Anker `#kontakt`).
-- **Kontaktformular:** eigenes Gravity-Forms-Formular „Anfrageformular Kamerasysteme“ (ID 4), eine Kopie von
+- **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor. Alle Buttons der Seite öffnen
+  die eigene Kontaktseite /kontakt-kamerasysteme/ (wie die Startseite /kontakt öffnet).
+- **Kontaktseite:** eigene Seite „Kontakt Kamerasysteme“ (ID 4371, /kontakt-kamerasysteme/), Kopie der Seite
+  /kontakt, wie diese ohne Suchmaschinen-Indexierung. Darauf das Gravity-Forms-Formular „Anfrageformular
+  Kamerasysteme“ (ID 4), eine Kopie von
   „Anfrageformular (1)“ mit den Feldern Name, Bereich, Mitarbeitende, Anzahl Gebäude (1, 2, 3, >3), E-Mail,
   Telefon. Felder und Texte änderst du unter **Formulare → Anfrageformular Kamerasysteme**. Die beiden
   bestehenden Formulare sind unverändert. Einträge des neuen Formulars findest du unter **Formulare →

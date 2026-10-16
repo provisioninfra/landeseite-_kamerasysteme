@@ -271,10 +271,13 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
   Türen-Feld (1–5, 6–15, Noch unsicher) entfallen, weil es das Feld nicht mehr gibt; Privat und Mitarbeitende
   1–10 / 11–50 wirken weiter. Benachrichtigung unverändert an anfragen@provision-infra.de, Betreff enthält den
   neuen Formulartitel.
-- Einbindung: Abschnitt der Seite /kontakt (Elementor-Daten in `elementor/quelle-kontakt.json`, nur gelesen) geklont:
-  Überschrift, Text (kameraspezifisch), Essential-Addons-Widget „Gravity Form“ mit Formular 4 und der Klasse
-  `cs-landeseiten-form`, ohne die Mindesthöhe von 100 vh. Anker `kontakt`, alle vier Buttons der Seite verlinken
-  darauf statt auf /kontakt.
+- Einbindung: eigene Seite „Kontakt Kamerasysteme“ (ID 4371, /kontakt-kamerasysteme/), angelegt per REST als
+  Entwurf, Inhalt über den Elementor-Editor gespeichert, dann veröffentlicht. Inhalt ist der Abschnitt der Seite
+  /kontakt (Elementor-Daten in `elementor/quelle-kontakt.json`, nur gelesen): Überschrift, Text (kameraspezifisch),
+  Essential-Addons-Widget „Gravity Form“ mit Formular 4 und der Klasse `cs-landeseiten-form`, Mindesthöhe 100 vh.
+  Template „default“ wie /kontakt, Yoast noindex/nofollow wie /kontakt. Alle vier Buttons der Kamera-Seite
+  verlinken auf diese Seite. Weil die URL „kontakt“ enthält, feuern dort dieselben Tag-Manager-Events wie auf
+  /kontakt (Google-Ads-Conversion d6XM…, Meta „ViewContent“).
 - Schritt-für-Schritt-Darstellung: Die Kontaktseite nutzt das Website-Modul „Landeseiten Forms“ (Eintrag „Kontakt
   test“, ID 2459, für Formular 2). Für Formular 4 wurde dieser Eintrag mit der Duplizieren-Funktion kopiert
   (Eintrag „Kontakt Kamerasysteme“, ID 4368) und nur das Formular umgestellt; alle 38 übrigen Einstellungen

@@ -387,17 +387,17 @@ acc["settings"]["eael_adv_accordion_tab"] = [
 ]
 page.append(faq)
 
-# ---------------------------------------------------------------- 11b) Kontaktformular (Original-Abschnitt der Seite /kontakt, eigenes Formular)
-# Die Elementor-Daten der Kontaktseite (quelle-kontakt.json) werden nur gelesen. Das eingebundene Gravity-Forms-Formular ist
-# die Kopie „Anfrageformular Kamerasysteme“ (medien.json: formular_id); die bestehenden Formulare bleiben unberührt.
+# ---------------------------------------------------------------- 11b) Eigene Kontaktseite (Kopie der Seite /kontakt, eigenes Formular)
+# Wie beim Original öffnet der Fragebogen eine eigene Seite. Die Elementor-Daten der Kontaktseite (quelle-kontakt.json)
+# werden nur gelesen; die Kopie bekommt den kameraspezifischen Text und das Formular „Anfrageformular Kamerasysteme“
+# (medien.json: formular_id). Ausgabe: elementor/kontakt-kamerasysteme.elements.json (eigene WordPress-Seite).
 KONTAKT = json.loads((ROOT / "elementor" / "quelle-kontakt.json").read_text(encoding="utf-8"))
 FORM_ID = MEDIA.get("formular_id")
+KONTAKT_URL = MEDIA.get("kontakt_url", "/kontakt-kamerasysteme/")
+kontakt_page = []
 if FORM_ID:
     ksec = clone(KONTAKT[0])
-    for k in [k for k in ksec["settings"] if k.startswith("min_height")]:
-        ksec["settings"].pop(k)                       # keine Mindesthöhe von 100 vh innerhalb der Landingpage
-    ksec["settings"].update({"_element_id": "kontakt", "_title": "Kontakt", "padding": box(80, 20, 80, 20),
-                             "padding_tablet": box(60, 20, 60, 20), "padding_mobile": box(50, 20, 50, 20)})
+    ksec["settings"]["_title"] = "Kontakt"
     for w in ksec["elements"]:
         if w["widgetType"] == "text-editor":
             w["settings"]["editor"] = KONTAKT_TEXT
@@ -405,7 +405,7 @@ if FORM_ID:
             w["settings"]["contact_form_list"] = str(FORM_ID)
             w["settings"]["_title"] = "Anfrageformular Kamerasysteme"
     ksec["isInner"] = False
-    page.append(reid(ksec))
+    kontakt_page.append(reid(ksec))
 
 # ---------------------------------------------------------------- 12) Footer (Original)
 page.append(clone(H[21]))
@@ -487,11 +487,11 @@ PAGE_CSS = """html, body {
 settings = {"template": "default", "background_background": "classic", "background_color": "#010D30",
             "__globals__": {"background_color": ""}, "custom_css": PAGE_CSS}
 
-# ---------------------------------------------------------------- Buttons: zum eigenen Formular auf dieser Seite
+# ---------------------------------------------------------------- Buttons: zur eigenen Kontaktseite (wie das Original auf /kontakt)
 if FORM_ID:
     def relink(el):
-        if el.get("widgetType") == "button" and el["settings"].get("link", {}).get("url") == "/kontakt":
-            el["settings"]["link"]["url"] = "#kontakt"
+        if el.get("widgetType") == "button" and el["settings"].get("link", {}).get("url") in ("/kontakt", "#kontakt"):
+            el["settings"]["link"]["url"] = KONTAKT_URL
         for c in el.get("elements", []):
             relink(c)
     for e in page:
@@ -511,6 +511,7 @@ for e in page:
 
 out = ROOT / "elementor"
 (out / "kamera-seite.elements.json").write_text(json.dumps({"elements": page, "settings": settings}, ensure_ascii=False), encoding="utf-8")
+(out / "kontakt-kamerasysteme.elements.json").write_text(json.dumps({"elements": kontakt_page, "settings": {"template": "default"}}, ensure_ascii=False), encoding="utf-8")
 (out / "landingpage-kamerasysteme.json").write_text(json.dumps({
     "content": page, "page_settings": settings, "version": "0.4",
     "title": "Landingpage Kamera- & Videoüberwachung", "type": "page"}, ensure_ascii=False, indent=1), encoding="utf-8")
