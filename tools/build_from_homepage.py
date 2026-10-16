@@ -65,8 +65,8 @@ def svg_icon(media_id, url):
     return {"value": {"url": url, "id": media_id}, "library": "svg"}
 
 # ---------------------------------------------------------------- Texte
-# Fester Zeilenumbruch nach „Gebäude“: „- mit Kamera- & Videoüberwachung“ steht immer in der zweiten Zeile
-HERO_H1 = '<span style="font-weight: 700;">Wir schützen dein Gebäude</span><br>- mit Kamera- &amp; Videoüberwachung'
+# Fester Zeilenumbruch nach „Gebäude“: „mit Kamera- & Videoüberwachung“ steht immer in der zweiten Zeile (ohne Gedankenstrich)
+HERO_H1 = '<span style="font-weight: 700;">Wir schützen dein Gebäude</span><br>mit Kamera- &amp; Videoüberwachung'
 HERO_SUB = ('Ein Einbruch, Vandalismus oder Diebstahl &amp; deinem Unternehmen drohen schnell zehntausende Euro an Schaden. <br>\n<br>\n'
             'ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung, mit der du dein Gebäude rund um die Uhr im Blick hast – per App, jederzeit und von überall.')
 
@@ -148,7 +148,7 @@ page.append(clone(H[0]))
 hero = clone(H[1])
 h1 = must(hero, "9dcea29")["settings"]
 h1["title"] = HERO_H1
-# Überschrift größer als auf der Startseite. Die zweite Zeile („- mit Kamera- & Videoüberwachung“, Poppins 400,
+# Überschrift größer als auf der Startseite. Die zweite Zeile („mit Kamera- & Videoüberwachung“, Poppins 400,
 # ca. 18,4 em breit) muss in jeder Breite in EINE Zeile passen; deshalb ist die Textbox breiter als auf der Startseite
 # und auf Tablet/Handy (Box skaliert mit der Bildschirmbreite) wird die Größe per min()-Formel gedeckelt.
 h1["typography_font_size"] = {"unit": "px", "size": 64, "sizes": []}                      # ab 1441 px, Box 88 % von 1400 px = 1232 px
