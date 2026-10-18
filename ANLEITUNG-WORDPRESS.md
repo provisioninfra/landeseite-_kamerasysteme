@@ -85,8 +85,10 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   Button-Texte ändern.
 - **Terminbuchung:** Nach dem Absenden landet der Besucher auf /termin-kamerasysteme/ (bei Privat oder bis 50
   Mitarbeitenden auf /termin-gebucht-kamerasysteme/). Beide Seiten zeigen den Calendly-Termintyp „Telefonisches
-  Erstgespräch Kamerasysteme“. Den Termintyp selbst (Dauer, Fragen, Weiterleitung nach der Buchung) pflegst du in
-  Calendly. Die Seiten „Termin“ und „Termin Gebucht“ der Startseite bleiben beim Schließsysteme-Termin.
+  Erstgespräch Kamerasysteme“. Nach der Buchung leitet Calendly wie beim Schließsysteme-Termin auf /danke/ weiter
+  (in Calendly unter dem Termintyp → Weitere Optionen → Bestätigungsseite hinterlegt). Den Termintyp selbst (Dauer,
+  Fragen, Erinnerungen, Weiterleitung) pflegst du in Calendly. Die Seiten „Termin“ und „Termin Gebucht“ der
+  Startseite bleiben beim Schließsysteme-Termin.
 - **Ablauf der Zusammenarbeit:** Die fünf Schritte gibt es zweimal, einmal für Desktop (Texte über
   und unter dem Zeitstrahl) und einmal für das Handy (Timeline-Element). Änderungen bitte an beiden Stellen.
 - **FAQ:** Auf das Akkordeon klicken → links unter **Inhalt** die Fragen aufklappen und bearbeiten.

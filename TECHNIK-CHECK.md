@@ -353,6 +353,13 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
   Seiten „Termin“ (3617) und „Termin Gebucht“ (823) sind unverändert.
 - Tracking: Beide neuen URLs enthalten „termin“ bzw. „termin-gebucht“, die Tag-Manager-Auslöser (Google-Ads-Conversion,
   Meta „Lead“, Meta „SubmitApplication“) greifen also wie beim Original.
-- Nicht prüfbar von außen: die Weiterleitung nach der Buchung, die Calendly je Termintyp speichert (beim
-  Schließsysteme-Termin vermutlich auf eine „danke“-Seite). Für den Kamera-Termin in Calendly gleich einstellen.
+- Weiterleitung nach der Buchung (18.10.2026 im Calendly-Konto nachgesehen, nur gelesen, nichts gespeichert): Beide
+  Termintypen stehen unter „Bestätigungsseite“ auf „An externe Site weiterleiten“ mit der URL
+  `https://provision-infra.de/danke/`, „Ereignisdetails an die weitergeleitete Seite übergeben“ ist bei beiden aus.
+  Der Kamera-Termin ist damit identisch zum Schließsysteme-Termin eingestellt, es war keine Änderung nötig. Die Seite
+  /danke/ ist allgemein formuliert („Wir freuen uns darauf, dich im Gespräch kennenzulernen“), der Tag-Manager-Auslöser
+  „URL enthält danke“ (Meta „Schedule“) greift für beide Termine gleich.
+- Einziger Unterschied zwischen den beiden Termintypen (nicht geändert): Beim Schließsysteme-Termin sind
+  E-Mail-Erinnerungen „1 Stunde vor dem Ereignis“ aktiv, beim Kamera-Termin stehen sie auf „Aus“. SMS-Erinnerung
+  (10 Minuten vorher), E-Mail-Bestätigung, Absage-E-Mail und der Workflow „Terminbestaetigung“ sind bei beiden gleich.
 
