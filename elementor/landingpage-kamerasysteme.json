@@ -9118,6 +9118,803 @@
    ]
   },
   {
+   "id": "7cfc047c",
+   "elType": "container",
+   "settings": {
+    "flex_direction": "column",
+    "padding": {
+     "unit": "px",
+     "top": "50",
+     "right": "20",
+     "bottom": "150",
+     "left": "20",
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_image": {
+     "url": "https://provision-infra.de/wp-content/uploads/2026/05/Ellipse-3.png",
+     "id": 513,
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_repeat": "no-repeat",
+    "background_size": "contain",
+    "background_bg_width": {
+     "unit": "%",
+     "size": 53,
+     "sizes": []
+    },
+    "margin": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": false
+    },
+    "boxed_width": {
+     "unit": "px",
+     "size": 1250,
+     "sizes": []
+    },
+    "css_classes": "c7-slider-viewport shadeup",
+    "content_width": "full",
+    "background_overlay_image": {
+     "url": "",
+     "id": "",
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_overlay_position": "center center",
+    "background_overlay_repeat": "no-repeat",
+    "background_overlay_size": "contain",
+    "background_overlay_bg_width": {
+     "unit": "%",
+     "size": 83,
+     "sizes": []
+    },
+    "overlay_blend_mode": "screen",
+    "__globals__": {
+     "background_overlay_color": "",
+     "background_overlay_color_b": "globals/colors?id=41c8631"
+    },
+    "padding_tablet_extra": {
+     "unit": "px",
+     "top": "50",
+     "right": "20",
+     "bottom": "0",
+     "left": "20",
+     "isLinked": false
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "50",
+     "right": "20",
+     "bottom": "90",
+     "left": "50",
+     "isLinked": false
+    },
+    "width_mobile": {
+     "unit": "%",
+     "size": 100,
+     "sizes": []
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "10",
+     "right": "10",
+     "bottom": "90",
+     "left": "10",
+     "isLinked": false
+    },
+    "background_overlay_color_b": "#000D30",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 1,
+     "sizes": []
+    },
+    "background_color": "#010A2C"
+   },
+   "elements": [
+    {
+     "id": "55a57e52",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "flex_align_items": "center",
+      "background_overlay_background": "classic",
+      "background_overlay_image": {
+       "url": "",
+       "id": "",
+       "size": "",
+       "alt": "",
+       "source": "library"
+      },
+      "background_overlay_position": "center center",
+      "background_overlay_repeat": "no-repeat",
+      "background_overlay_size": "auto",
+      "width_mobile": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "flex_direction_mobile": "row",
+      "flex_justify_content_mobile": "center",
+      "flex_align_items_mobile": "flex-start"
+     },
+     "elements": [
+      {
+       "id": "556df520",
+       "elType": "widget",
+       "settings": {
+        "typography_typography": "custom",
+        "title": "Kundenstimmen und <span style=\"font-weight: 700; \">Testimonials</span>",
+        "__globals__": {
+         "title_color": "globals/colors?id=521f46a"
+        },
+        "typography_font_weight": "400",
+        "typography_font_family": "Poppins",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 42,
+         "sizes": []
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 29,
+         "sizes": []
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 23,
+         "sizes": []
+        },
+        "align": "center",
+        "typography_text_transform": "none",
+        "typography_text_decoration": "none",
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.24,
+         "sizes": []
+        },
+        "typography_line_height_tablet": {
+         "unit": "em",
+         "size": 1.24,
+         "sizes": []
+        },
+        "typography_line_height_mobile": {
+         "unit": "em",
+         "size": 1.2,
+         "sizes": []
+        },
+        "typography_letter_spacing": {
+         "unit": "em",
+         "size": 0,
+         "sizes": []
+        },
+        "_element_width": "initial",
+        "_element_custom_width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "_z_index": 0,
+        "_element_custom_width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "_title": "Tagline",
+        "align_mobile": "center",
+        "_element_custom_width_mobile": {
+         "unit": "%",
+         "size": 88,
+         "sizes": []
+        }
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "63020976",
+       "elType": "container",
+       "settings": {
+        "content_width": "full",
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "padding": {
+         "unit": "px",
+         "isLinked": false,
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0"
+        },
+        "flex_gap": {
+         "column": "12",
+         "row": "12",
+         "isLinked": false,
+         "unit": "px",
+         "size": 12
+        },
+        "flex_gap_tablet": {
+         "column": "11",
+         "row": "11",
+         "isLinked": false,
+         "unit": "px",
+         "size": 11
+        },
+        "flex_gap_mobile": {
+         "column": "11",
+         "row": "11",
+         "isLinked": false,
+         "unit": "px",
+         "size": 11
+        },
+        "z_index": 1,
+        "content_width_tablet": "full",
+        "width_mobile": {
+         "unit": "px",
+         "size": 350.00006103515625,
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "px",
+         "size": 350.00006103515625,
+         "sizes": []
+        },
+        "uich_custom_css_field": "selector {\n  max-width: 100%;\n  min-width: 240px;\n}\n",
+        "_title": "Frame 8",
+        "flex_direction_mobile": "row"
+       },
+       "elements": [
+        {
+         "id": "13936537",
+         "elType": "widget",
+         "settings": {
+          "header_size": "h6",
+          "title": "5.0<span style=\"font-weight: 400; \">/5.0</span>",
+          "__globals__": {
+           "title_color": "globals/colors?id=521f46a",
+           "typography_typography": "globals/typography?id=ac47f4f"
+          },
+          "align": "center",
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "max-content",
+           "sizes": []
+          },
+          "_z_index": 0,
+          "_element_custom_width_tablet": {
+           "unit": "custom",
+           "size": "auto",
+           "sizes": []
+          },
+          "_title": "5.0/5.0"
+         },
+         "elements": [],
+         "widgetType": "heading"
+        },
+        {
+         "id": "6993630f",
+         "elType": "widget",
+         "settings": {
+          "image_size": "full",
+          "_z_index": 1,
+          "width_tablet": {
+           "unit": "px",
+           "size": 83.00004577636719,
+           "sizes": []
+          },
+          "space_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_title": "Frame 44",
+          "image": {
+           "id": 176,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/05/acc94c687c594c740b654da1dc4f5e8b.webp"
+          },
+          "width": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "image"
+        },
+        {
+         "id": "446e370",
+         "elType": "widget",
+         "settings": {
+          "header_size": "h6",
+          "title": "Sterne bei Google",
+          "__globals__": {
+           "title_color": "globals/colors?id=521f46a",
+           "typography_typography": "globals/typography?id=ac47f4f"
+          },
+          "typography_font_size_tablet": {
+           "unit": "px",
+           "size": 18,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 19,
+           "sizes": []
+          },
+          "align": "center",
+          "typography_line_height_tablet": {
+           "unit": "em",
+           "size": 1.24,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "max-content",
+           "sizes": []
+          },
+          "_z_index": 2,
+          "_element_custom_width_tablet": {
+           "unit": "custom",
+           "size": "auto",
+           "sizes": []
+          },
+          "_title": "Sterne bei Google"
+         },
+         "elements": [],
+         "widgetType": "heading"
+        }
+       ],
+       "isInner": true
+      }
+     ],
+     "isInner": true
+    },
+    {
+     "id": "3521da7c",
+     "elType": "container",
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "20",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "34e8adbb",
+       "elType": "widget",
+       "settings": {
+        "image": {
+         "url": "https://provision-infra.de/wp-content/uploads/2026/05/Line-6.png",
+         "id": 514,
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "_padding_widescreen": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "30",
+         "left": "0",
+         "isLinked": false
+        }
+       },
+       "elements": [],
+       "widgetType": "image"
+      }
+     ],
+     "isInner": true
+    },
+    {
+     "id": "2b91cf92",
+     "elType": "widget",
+     "widgetType": "nested-carousel",
+     "settings": {
+      "carousel_name": "Carousel",
+      "carousel_items": [
+       {
+        "slide_title": "Slide #1",
+        "_id": "86ad6a1"
+       },
+       {
+        "slide_title": "Slide #1",
+        "_id": "aeebf2c"
+       },
+       {
+        "slide_title": "Slide #1",
+        "_id": "4e0d94c"
+       }
+      ],
+      "arrow_normal_color": "#FFFFFF",
+      "dots_custom_position": "yes",
+      "navigation_previous_icon_horizontal_orientation": "center",
+      "navigation_previous_icon_horizontal_position": {
+       "unit": "px",
+       "size": -38,
+       "sizes": []
+      },
+      "navigation_previous_icon_vertical_orientation": "end",
+      "navigation_previous_icon_vertical_position": {
+       "unit": "px",
+       "size": 105,
+       "sizes": []
+      },
+      "navigation_next_icon_horizontal_orientation": "center",
+      "navigation_next_icon_horizontal_position": {
+       "unit": "px",
+       "size": -38,
+       "sizes": []
+      },
+      "navigation_next_icon_vertical_orientation": "end",
+      "navigation_next_icon_vertical_position": {
+       "unit": "px",
+       "size": 105,
+       "sizes": []
+      },
+      "content_border_border": "none",
+      "border_radius": {
+       "unit": "px",
+       "top": "25",
+       "right": "25",
+       "bottom": "25",
+       "left": "25",
+       "isLinked": false
+      },
+      "arrows_normal_border_type_border": "solid",
+      "arrows_normal_border_type_width": {
+       "unit": "px",
+       "top": "1",
+       "right": "1",
+       "bottom": "1",
+       "left": "1",
+       "isLinked": true
+      },
+      "arrows_border_radius": {
+       "unit": "px",
+       "top": "99",
+       "right": "99",
+       "bottom": "99",
+       "left": "99",
+       "isLinked": true
+      },
+      "arrows_padding": {
+       "unit": "px",
+       "top": "22",
+       "right": "22",
+       "bottom": "22",
+       "left": "22",
+       "isLinked": true
+      },
+      "custom_css": "@media (min-width: 768px) {\n\n    selector .e-n-carousel.swiper {\n        padding-top: 50px !important;\n        padding-bottom: 50px !important;\n\n        overflow: visible !important;\n\n        /* Prevent responsive shrinking */\n        width: 140vw !important;\n\n        /* Keep centered */\n        position: relative;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    /* Slides */\n    selector .e-n-carousel .swiper-slide {\n        transition: transform 0.4s ease-in-out, opacity 0.4s ease !important;\n        transform: scale(0.90);\n        opacity: 0.6;\n        z-index: 1;\n    }\n\n    /* Active/next slide */\n    selector .e-n-carousel .swiper-slide-next {\n        transform: scale(1) !important;\n        opacity: 1 !important;\n        z-index: 10 !important;\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n        min-height: 324px;\n    }\n\n    /* Allow overflow */\n    selector .e-n-carousel .e-con-inner,\n    selector .e-n-carousel .elementor-element {\n        overflow: visible !important;\n        padding: 12px;\n    }\n}\n\n\n/* FIX FOR LARGE SCREENS */\n@media (min-width: 1200px) {\n    selector .e-n-carousel.swiper {\n        width: 100% !important;\n        left: 0 !important;\n        transform: none !important;\n        overflow: hidden !important;\n    }\n}\n\n\nselector .elementor-image-box-content {\n    position: relative;\n    padding-right: 80px; /* space for SVG */\n}\n\nselector .elementor-image-box-content::after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    top: 50%;\n    transform: translateY(-50%);\n\n    width: 70px;\n    height: 70px;\n\n    background-image: url('/wp-content/uploads/2026/06/Quote.svg');\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n\n\n@media (max-width: 768px) {\n\n  \n    selector .e-n-carousel  {\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n    } }",
+      "slides_to_show_tablet": "3",
+      "navigation_previous_icon": {
+       "value": "fas fa-arrow-left",
+       "library": "fa-solid"
+      },
+      "navigation_next_icon": {
+       "value": "fas fa-arrow-right",
+       "library": "fa-solid"
+      },
+      "image_spacing_custom": {
+       "unit": "px",
+       "size": 0,
+       "sizes": []
+      },
+      "content_background_background": "gradient",
+      "content_background_color": "#000D3000",
+      "content_background_color_b": "#000D307D",
+      "content_border_width": {
+       "unit": "px",
+       "top": "1",
+       "right": "1",
+       "bottom": "1",
+       "left": "1",
+       "isLinked": true
+      },
+      "content_border_color": "#000D30",
+      "arrows_size": {
+       "unit": "px",
+       "size": 22,
+       "sizes": []
+      },
+      "arrows_normal_background_background": "classic",
+      "arrows_normal_background_color": "#2B3C77",
+      "arrows_normal_border_type_color": "#FFFFFF4F",
+      "arrows_hover_background_background": "classic",
+      "arrows_hover_background_color": "#FBC91B",
+      "arrows_hover_box_shadow_box_shadow_type": "yes",
+      "arrows_hover_box_shadow_box_shadow": {
+       "horizontal": 0,
+       "vertical": 0,
+       "blur": 10,
+       "spread": 5,
+       "color": "#FBC91B"
+      },
+      "dots_normal_color": "#FFFFFF",
+      "dots_position": "inside",
+      "_element_width": "initial",
+      "_element_custom_width": {
+       "unit": "px",
+       "size": 1700,
+       "sizes": []
+      },
+      "_flex_align_self": "center",
+      "_margin_laptop": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "100",
+       "left": "0",
+       "isLinked": false
+      },
+      "navigation_previous_icon_vertical_position_tablet": {
+       "unit": "px",
+       "size": 136,
+       "sizes": []
+      },
+      "navigation_next_icon_vertical_position_tablet": {
+       "unit": "px",
+       "size": 136,
+       "sizes": []
+      },
+      "dots_vertical_offset_tablet": {
+       "unit": "px",
+       "size": 35,
+       "sizes": []
+      }
+     },
+     "elements": [
+      {
+       "id": "fe0283b",
+       "elType": "container",
+       "settings": {
+        "_title": "Slide #1",
+        "flex_justify_content": "space-between",
+        "background_color": "#000D3080",
+        "padding": {
+         "unit": "px",
+         "top": "25",
+         "right": "25",
+         "bottom": "25",
+         "left": "25",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "177c18bd",
+         "elType": "widget",
+         "settings": {
+          "selected_icon": {
+           "value": {
+            "url": "https://provision-infra.de/wp-content/uploads/2026/06/Stars1.svg",
+            "id": 2203
+           },
+           "library": "svg"
+          },
+          "title_text": "",
+          "description_text": "\"Hervorragende Arbeit! Fachlich kompetent, zuverlässig & ein sehr faires Preis-Leistungs-Verhältnis. Wer einen Profi für Sicherheitstechnik & Zutrittskontrolle sucht, ist hier genau richtig!\"",
+          "text_align": "start",
+          "title_color": "#FFFFFF",
+          "description_color": "#FFFFFF",
+          "custom_css": "selector svg{\n    width:130px;\n}"
+         },
+         "elements": [],
+         "widgetType": "icon-box"
+        },
+        {
+         "id": "6308d31b",
+         "elType": "widget",
+         "settings": {
+          "title_text": "Andre Küster​",
+          "description_text": "HORNBACH Baumarkt AG​",
+          "position": "left",
+          "image": {
+           "id": "",
+           "url": ""
+          },
+          "text_align": "start",
+          "title_bottom_space": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "title_typography_typography": "custom",
+          "title_typography_font_family": "Poppins",
+          "title_typography_font_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "title_typography_font_weight": "600",
+          "title_color": "#FFFFFF",
+          "hover_title_color": "#FFFFFF",
+          "description_color": "#FFFFFF"
+         },
+         "elements": [],
+         "widgetType": "image-box"
+        }
+       ],
+       "isInner": true,
+       "isLocked": true
+      },
+      {
+       "id": "547b551e",
+       "elType": "container",
+       "settings": {
+        "_title": "Slide #1",
+        "flex_justify_content": "space-between",
+        "padding": {
+         "unit": "px",
+         "top": "25",
+         "right": "25",
+         "bottom": "25",
+         "left": "25",
+         "isLinked": true
+        },
+        "custom_css": "selector svg{\n    width:130px;\n}"
+       },
+       "elements": [
+        {
+         "id": "7639481c",
+         "elType": "widget",
+         "settings": {
+          "selected_icon": {
+           "value": {
+            "url": "https://provision-infra.de/wp-content/uploads/2026/06/Stars1.svg",
+            "id": 2203
+           },
+           "library": "svg"
+          },
+          "title_text": "",
+          "description_text": "\"Was ich besonders spannend finde: Für ein junges Unternehmen bringt ProVision extrem hohe Expertise & echte Erfahrungswerte mit - die Entwicklung die das Team gerade nimmt, ist wirklich beeindruckend.\"",
+          "text_align": "start",
+          "title_color": "#FFFFFF",
+          "description_color": "#FFFFFF"
+         },
+         "elements": [],
+         "widgetType": "icon-box"
+        },
+        {
+         "id": "426f36df",
+         "elType": "widget",
+         "settings": {
+          "title_text": "Pia-Theresa​",
+          "description_text": "Geschäftsführerin​",
+          "position": "left",
+          "image": {
+           "id": "",
+           "url": ""
+          },
+          "text_align": "start",
+          "title_bottom_space": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "title_typography_typography": "custom",
+          "title_typography_font_family": "Poppins",
+          "title_typography_font_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "title_typography_font_weight": "600",
+          "title_color": "#FFFFFF",
+          "hover_title_color": "#FFFFFF",
+          "description_color": "#FFFFFF"
+         },
+         "elements": [],
+         "widgetType": "image-box"
+        }
+       ],
+       "isInner": true,
+       "isLocked": true
+      },
+      {
+       "id": "28fbf406",
+       "elType": "container",
+       "settings": {
+        "_title": "Slide #1",
+        "flex_justify_content": "space-between",
+        "padding": {
+         "unit": "px",
+         "top": "25",
+         "right": "25",
+         "bottom": "25",
+         "left": "25",
+         "isLinked": true
+        },
+        "custom_css": "selector svg{\n    width:130px;\n}"
+       },
+       "elements": [
+        {
+         "id": "25a6e0bf",
+         "elType": "widget",
+         "settings": {
+          "selected_icon": {
+           "value": {
+            "url": "https://provision-infra.de/wp-content/uploads/2026/06/Stars1.svg",
+            "id": 2203
+           },
+           "library": "svg"
+          },
+          "title_text": "",
+          "description_text": "\"Anfahrt & Durchführung waren wirklich schnelle & kompetent, diese Firma ist direkt aus Bad Bevensen und ... top! Absolut  empfehlenswert!\"",
+          "text_align": "start",
+          "title_color": "#FFFFFF",
+          "description_color": "#FFFFFF"
+         },
+         "elements": [],
+         "widgetType": "icon-box"
+        },
+        {
+         "id": "46ac736",
+         "elType": "widget",
+         "settings": {
+          "title_text": "Mia Manikati​",
+          "description_text": "Hörgeräte Akustik, Inhaberin​",
+          "position": "left",
+          "image": {
+           "id": "",
+           "url": ""
+          },
+          "text_align": "start",
+          "title_bottom_space": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "title_typography_typography": "custom",
+          "title_typography_font_family": "Poppins",
+          "title_typography_font_size": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "title_typography_font_weight": "600",
+          "title_color": "#FFFFFF",
+          "hover_title_color": "#FFFFFF",
+          "description_color": "#FFFFFF"
+         },
+         "elements": [],
+         "widgetType": "image-box"
+        }
+       ],
+       "isInner": true,
+       "isLocked": true
+      }
+     ]
+    }
+   ],
+   "isInner": false
+  },
+  {
    "id": "e229ae0",
    "elType": "container",
    "settings": {
@@ -17051,803 +17848,6 @@
       }
      ],
      "isInner": true
-    }
-   ],
-   "isInner": false
-  },
-  {
-   "id": "7cfc047c",
-   "elType": "container",
-   "settings": {
-    "flex_direction": "column",
-    "padding": {
-     "unit": "px",
-     "top": "50",
-     "right": "20",
-     "bottom": "150",
-     "left": "20",
-     "isLinked": false
-    },
-    "background_background": "classic",
-    "background_image": {
-     "url": "https://provision-infra.de/wp-content/uploads/2026/05/Ellipse-3.png",
-     "id": 513,
-     "size": "",
-     "alt": "",
-     "source": "library"
-    },
-    "background_position": "center center",
-    "background_repeat": "no-repeat",
-    "background_size": "contain",
-    "background_bg_width": {
-     "unit": "%",
-     "size": 53,
-     "sizes": []
-    },
-    "margin": {
-     "unit": "px",
-     "top": "0",
-     "right": "0",
-     "bottom": "0",
-     "left": "0",
-     "isLinked": false
-    },
-    "boxed_width": {
-     "unit": "px",
-     "size": 1250,
-     "sizes": []
-    },
-    "css_classes": "c7-slider-viewport shadeup",
-    "content_width": "full",
-    "background_overlay_image": {
-     "url": "",
-     "id": "",
-     "size": "",
-     "alt": "",
-     "source": "library"
-    },
-    "background_overlay_position": "center center",
-    "background_overlay_repeat": "no-repeat",
-    "background_overlay_size": "contain",
-    "background_overlay_bg_width": {
-     "unit": "%",
-     "size": 83,
-     "sizes": []
-    },
-    "overlay_blend_mode": "screen",
-    "__globals__": {
-     "background_overlay_color": "",
-     "background_overlay_color_b": "globals/colors?id=41c8631"
-    },
-    "padding_tablet_extra": {
-     "unit": "px",
-     "top": "50",
-     "right": "20",
-     "bottom": "0",
-     "left": "20",
-     "isLinked": false
-    },
-    "padding_tablet": {
-     "unit": "px",
-     "top": "50",
-     "right": "20",
-     "bottom": "90",
-     "left": "50",
-     "isLinked": false
-    },
-    "width_mobile": {
-     "unit": "%",
-     "size": 100,
-     "sizes": []
-    },
-    "padding_mobile": {
-     "unit": "px",
-     "top": "10",
-     "right": "10",
-     "bottom": "90",
-     "left": "10",
-     "isLinked": false
-    },
-    "background_overlay_color_b": "#000D30",
-    "background_overlay_opacity": {
-     "unit": "px",
-     "size": 1,
-     "sizes": []
-    },
-    "background_color": "#010A2C"
-   },
-   "elements": [
-    {
-     "id": "55a57e52",
-     "elType": "container",
-     "settings": {
-      "content_width": "full",
-      "flex_align_items": "center",
-      "background_overlay_background": "classic",
-      "background_overlay_image": {
-       "url": "",
-       "id": "",
-       "size": "",
-       "alt": "",
-       "source": "library"
-      },
-      "background_overlay_position": "center center",
-      "background_overlay_repeat": "no-repeat",
-      "background_overlay_size": "auto",
-      "width_mobile": {
-       "unit": "%",
-       "size": 100,
-       "sizes": []
-      },
-      "flex_direction_mobile": "row",
-      "flex_justify_content_mobile": "center",
-      "flex_align_items_mobile": "flex-start"
-     },
-     "elements": [
-      {
-       "id": "556df520",
-       "elType": "widget",
-       "settings": {
-        "typography_typography": "custom",
-        "title": "Kundenstimmen und <span style=\"font-weight: 700; \">Testimonials</span>",
-        "__globals__": {
-         "title_color": "globals/colors?id=521f46a"
-        },
-        "typography_font_weight": "400",
-        "typography_font_family": "Poppins",
-        "typography_font_size": {
-         "unit": "px",
-         "size": 42,
-         "sizes": []
-        },
-        "typography_font_size_tablet": {
-         "unit": "px",
-         "size": 29,
-         "sizes": []
-        },
-        "typography_font_size_mobile": {
-         "unit": "px",
-         "size": 23,
-         "sizes": []
-        },
-        "align": "center",
-        "typography_text_transform": "none",
-        "typography_text_decoration": "none",
-        "typography_line_height": {
-         "unit": "em",
-         "size": 1.24,
-         "sizes": []
-        },
-        "typography_line_height_tablet": {
-         "unit": "em",
-         "size": 1.24,
-         "sizes": []
-        },
-        "typography_line_height_mobile": {
-         "unit": "em",
-         "size": 1.2,
-         "sizes": []
-        },
-        "typography_letter_spacing": {
-         "unit": "em",
-         "size": 0,
-         "sizes": []
-        },
-        "_element_width": "initial",
-        "_element_custom_width": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "_z_index": 0,
-        "_element_custom_width_tablet": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "_title": "Tagline",
-        "align_mobile": "center",
-        "_element_custom_width_mobile": {
-         "unit": "%",
-         "size": 88,
-         "sizes": []
-        }
-       },
-       "elements": [],
-       "widgetType": "heading"
-      },
-      {
-       "id": "63020976",
-       "elType": "container",
-       "settings": {
-        "content_width": "full",
-        "width": {
-         "unit": "%",
-         "size": 100,
-         "sizes": []
-        },
-        "flex_direction": "row",
-        "flex_justify_content": "center",
-        "flex_align_items": "center",
-        "padding": {
-         "unit": "px",
-         "isLinked": false,
-         "top": "0",
-         "right": "0",
-         "bottom": "0",
-         "left": "0"
-        },
-        "flex_gap": {
-         "column": "12",
-         "row": "12",
-         "isLinked": false,
-         "unit": "px",
-         "size": 12
-        },
-        "flex_gap_tablet": {
-         "column": "11",
-         "row": "11",
-         "isLinked": false,
-         "unit": "px",
-         "size": 11
-        },
-        "flex_gap_mobile": {
-         "column": "11",
-         "row": "11",
-         "isLinked": false,
-         "unit": "px",
-         "size": 11
-        },
-        "z_index": 1,
-        "content_width_tablet": "full",
-        "width_mobile": {
-         "unit": "px",
-         "size": 350.00006103515625,
-         "sizes": []
-        },
-        "width_tablet": {
-         "unit": "px",
-         "size": 350.00006103515625,
-         "sizes": []
-        },
-        "uich_custom_css_field": "selector {\n  max-width: 100%;\n  min-width: 240px;\n}\n",
-        "_title": "Frame 8",
-        "flex_direction_mobile": "row"
-       },
-       "elements": [
-        {
-         "id": "13936537",
-         "elType": "widget",
-         "settings": {
-          "header_size": "h6",
-          "title": "5.0<span style=\"font-weight: 400; \">/5.0</span>",
-          "__globals__": {
-           "title_color": "globals/colors?id=521f46a",
-           "typography_typography": "globals/typography?id=ac47f4f"
-          },
-          "align": "center",
-          "_element_width": "initial",
-          "_element_custom_width": {
-           "unit": "custom",
-           "size": "max-content",
-           "sizes": []
-          },
-          "_z_index": 0,
-          "_element_custom_width_tablet": {
-           "unit": "custom",
-           "size": "auto",
-           "sizes": []
-          },
-          "_title": "5.0/5.0"
-         },
-         "elements": [],
-         "widgetType": "heading"
-        },
-        {
-         "id": "6993630f",
-         "elType": "widget",
-         "settings": {
-          "image_size": "full",
-          "_z_index": 1,
-          "width_tablet": {
-           "unit": "px",
-           "size": 83.00004577636719,
-           "sizes": []
-          },
-          "space_tablet": {
-           "unit": "%",
-           "size": 100,
-           "sizes": []
-          },
-          "_title": "Frame 44",
-          "image": {
-           "id": 176,
-           "url": "https://provision-infra.de/wp-content/uploads/2026/05/acc94c687c594c740b654da1dc4f5e8b.webp"
-          },
-          "width": {
-           "unit": "%",
-           "size": 100,
-           "sizes": []
-          }
-         },
-         "elements": [],
-         "widgetType": "image"
-        },
-        {
-         "id": "446e370",
-         "elType": "widget",
-         "settings": {
-          "header_size": "h6",
-          "title": "Sterne bei Google",
-          "__globals__": {
-           "title_color": "globals/colors?id=521f46a",
-           "typography_typography": "globals/typography?id=ac47f4f"
-          },
-          "typography_font_size_tablet": {
-           "unit": "px",
-           "size": 18,
-           "sizes": []
-          },
-          "typography_font_size_mobile": {
-           "unit": "px",
-           "size": 19,
-           "sizes": []
-          },
-          "align": "center",
-          "typography_line_height_tablet": {
-           "unit": "em",
-           "size": 1.24,
-           "sizes": []
-          },
-          "typography_line_height_mobile": {
-           "unit": "em",
-           "size": 1.2,
-           "sizes": []
-          },
-          "_element_width": "initial",
-          "_element_custom_width": {
-           "unit": "custom",
-           "size": "max-content",
-           "sizes": []
-          },
-          "_z_index": 2,
-          "_element_custom_width_tablet": {
-           "unit": "custom",
-           "size": "auto",
-           "sizes": []
-          },
-          "_title": "Sterne bei Google"
-         },
-         "elements": [],
-         "widgetType": "heading"
-        }
-       ],
-       "isInner": true
-      }
-     ],
-     "isInner": true
-    },
-    {
-     "id": "3521da7c",
-     "elType": "container",
-     "settings": {
-      "content_width": "full",
-      "padding": {
-       "unit": "px",
-       "top": "20",
-       "right": "0",
-       "bottom": "0",
-       "left": "0",
-       "isLinked": false
-      }
-     },
-     "elements": [
-      {
-       "id": "34e8adbb",
-       "elType": "widget",
-       "settings": {
-        "image": {
-         "url": "https://provision-infra.de/wp-content/uploads/2026/05/Line-6.png",
-         "id": 514,
-         "size": "",
-         "alt": "",
-         "source": "library"
-        },
-        "_padding_widescreen": {
-         "unit": "px",
-         "top": "0",
-         "right": "0",
-         "bottom": "30",
-         "left": "0",
-         "isLinked": false
-        }
-       },
-       "elements": [],
-       "widgetType": "image"
-      }
-     ],
-     "isInner": true
-    },
-    {
-     "id": "2b91cf92",
-     "elType": "widget",
-     "widgetType": "nested-carousel",
-     "settings": {
-      "carousel_name": "Carousel",
-      "carousel_items": [
-       {
-        "slide_title": "Slide #1",
-        "_id": "86ad6a1"
-       },
-       {
-        "slide_title": "Slide #1",
-        "_id": "aeebf2c"
-       },
-       {
-        "slide_title": "Slide #1",
-        "_id": "4e0d94c"
-       }
-      ],
-      "arrow_normal_color": "#FFFFFF",
-      "dots_custom_position": "yes",
-      "navigation_previous_icon_horizontal_orientation": "center",
-      "navigation_previous_icon_horizontal_position": {
-       "unit": "px",
-       "size": -38,
-       "sizes": []
-      },
-      "navigation_previous_icon_vertical_orientation": "end",
-      "navigation_previous_icon_vertical_position": {
-       "unit": "px",
-       "size": 105,
-       "sizes": []
-      },
-      "navigation_next_icon_horizontal_orientation": "center",
-      "navigation_next_icon_horizontal_position": {
-       "unit": "px",
-       "size": -38,
-       "sizes": []
-      },
-      "navigation_next_icon_vertical_orientation": "end",
-      "navigation_next_icon_vertical_position": {
-       "unit": "px",
-       "size": 105,
-       "sizes": []
-      },
-      "content_border_border": "none",
-      "border_radius": {
-       "unit": "px",
-       "top": "25",
-       "right": "25",
-       "bottom": "25",
-       "left": "25",
-       "isLinked": false
-      },
-      "arrows_normal_border_type_border": "solid",
-      "arrows_normal_border_type_width": {
-       "unit": "px",
-       "top": "1",
-       "right": "1",
-       "bottom": "1",
-       "left": "1",
-       "isLinked": true
-      },
-      "arrows_border_radius": {
-       "unit": "px",
-       "top": "99",
-       "right": "99",
-       "bottom": "99",
-       "left": "99",
-       "isLinked": true
-      },
-      "arrows_padding": {
-       "unit": "px",
-       "top": "22",
-       "right": "22",
-       "bottom": "22",
-       "left": "22",
-       "isLinked": true
-      },
-      "custom_css": "@media (min-width: 768px) {\n\n    selector .e-n-carousel.swiper {\n        padding-top: 50px !important;\n        padding-bottom: 50px !important;\n\n        overflow: visible !important;\n\n        /* Prevent responsive shrinking */\n        width: 140vw !important;\n\n        /* Keep centered */\n        position: relative;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    /* Slides */\n    selector .e-n-carousel .swiper-slide {\n        transition: transform 0.4s ease-in-out, opacity 0.4s ease !important;\n        transform: scale(0.90);\n        opacity: 0.6;\n        z-index: 1;\n    }\n\n    /* Active/next slide */\n    selector .e-n-carousel .swiper-slide-next {\n        transform: scale(1) !important;\n        opacity: 1 !important;\n        z-index: 10 !important;\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n        min-height: 324px;\n    }\n\n    /* Allow overflow */\n    selector .e-n-carousel .e-con-inner,\n    selector .e-n-carousel .elementor-element {\n        overflow: visible !important;\n        padding: 12px;\n    }\n}\n\n\n/* FIX FOR LARGE SCREENS */\n@media (min-width: 1200px) {\n    selector .e-n-carousel.swiper {\n        width: 100% !important;\n        left: 0 !important;\n        transform: none !important;\n        overflow: hidden !important;\n    }\n}\n\n\nselector .elementor-image-box-content {\n    position: relative;\n    padding-right: 80px; /* space for SVG */\n}\n\nselector .elementor-image-box-content::after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    top: 50%;\n    transform: translateY(-50%);\n\n    width: 70px;\n    height: 70px;\n\n    background-image: url('/wp-content/uploads/2026/06/Quote.svg');\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n\n\n@media (max-width: 768px) {\n\n  \n    selector .e-n-carousel  {\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n    } }",
-      "slides_to_show_tablet": "3",
-      "navigation_previous_icon": {
-       "value": "fas fa-arrow-left",
-       "library": "fa-solid"
-      },
-      "navigation_next_icon": {
-       "value": "fas fa-arrow-right",
-       "library": "fa-solid"
-      },
-      "image_spacing_custom": {
-       "unit": "px",
-       "size": 0,
-       "sizes": []
-      },
-      "content_background_background": "gradient",
-      "content_background_color": "#000D3000",
-      "content_background_color_b": "#000D307D",
-      "content_border_width": {
-       "unit": "px",
-       "top": "1",
-       "right": "1",
-       "bottom": "1",
-       "left": "1",
-       "isLinked": true
-      },
-      "content_border_color": "#000D30",
-      "arrows_size": {
-       "unit": "px",
-       "size": 22,
-       "sizes": []
-      },
-      "arrows_normal_background_background": "classic",
-      "arrows_normal_background_color": "#2B3C77",
-      "arrows_normal_border_type_color": "#FFFFFF4F",
-      "arrows_hover_background_background": "classic",
-      "arrows_hover_background_color": "#FBC91B",
-      "arrows_hover_box_shadow_box_shadow_type": "yes",
-      "arrows_hover_box_shadow_box_shadow": {
-       "horizontal": 0,
-       "vertical": 0,
-       "blur": 10,
-       "spread": 5,
-       "color": "#FBC91B"
-      },
-      "dots_normal_color": "#FFFFFF",
-      "dots_position": "inside",
-      "_element_width": "initial",
-      "_element_custom_width": {
-       "unit": "px",
-       "size": 1700,
-       "sizes": []
-      },
-      "_flex_align_self": "center",
-      "_margin_laptop": {
-       "unit": "px",
-       "top": "0",
-       "right": "0",
-       "bottom": "100",
-       "left": "0",
-       "isLinked": false
-      },
-      "navigation_previous_icon_vertical_position_tablet": {
-       "unit": "px",
-       "size": 136,
-       "sizes": []
-      },
-      "navigation_next_icon_vertical_position_tablet": {
-       "unit": "px",
-       "size": 136,
-       "sizes": []
-      },
-      "dots_vertical_offset_tablet": {
-       "unit": "px",
-       "size": 35,
-       "sizes": []
-      }
-     },
-     "elements": [
-      {
-       "id": "fe0283b",
-       "elType": "container",
-       "settings": {
-        "_title": "Slide #1",
-        "flex_justify_content": "space-between",
-        "background_color": "#000D3080",
-        "padding": {
-         "unit": "px",
-         "top": "25",
-         "right": "25",
-         "bottom": "25",
-         "left": "25",
-         "isLinked": true
-        }
-       },
-       "elements": [
-        {
-         "id": "177c18bd",
-         "elType": "widget",
-         "settings": {
-          "selected_icon": {
-           "value": {
-            "url": "https://provision-infra.de/wp-content/uploads/2026/06/Stars1.svg",
-            "id": 2203
-           },
-           "library": "svg"
-          },
-          "title_text": "",
-          "description_text": "\"Hervorragende Arbeit! Fachlich kompetent, zuverlässig & ein sehr faires Preis-Leistungs-Verhältnis. Wer einen Profi für Sicherheitstechnik & Zutrittskontrolle sucht, ist hier genau richtig!\"",
-          "text_align": "start",
-          "title_color": "#FFFFFF",
-          "description_color": "#FFFFFF",
-          "custom_css": "selector svg{\n    width:130px;\n}"
-         },
-         "elements": [],
-         "widgetType": "icon-box"
-        },
-        {
-         "id": "6308d31b",
-         "elType": "widget",
-         "settings": {
-          "title_text": "Andre Küster​",
-          "description_text": "HORNBACH Baumarkt AG​",
-          "position": "left",
-          "image": {
-           "id": "",
-           "url": ""
-          },
-          "text_align": "start",
-          "title_bottom_space": {
-           "unit": "px",
-           "size": 0,
-           "sizes": []
-          },
-          "title_typography_typography": "custom",
-          "title_typography_font_family": "Poppins",
-          "title_typography_font_size": {
-           "unit": "px",
-           "size": 20,
-           "sizes": []
-          },
-          "title_typography_font_weight": "600",
-          "title_color": "#FFFFFF",
-          "hover_title_color": "#FFFFFF",
-          "description_color": "#FFFFFF"
-         },
-         "elements": [],
-         "widgetType": "image-box"
-        }
-       ],
-       "isInner": true,
-       "isLocked": true
-      },
-      {
-       "id": "547b551e",
-       "elType": "container",
-       "settings": {
-        "_title": "Slide #1",
-        "flex_justify_content": "space-between",
-        "padding": {
-         "unit": "px",
-         "top": "25",
-         "right": "25",
-         "bottom": "25",
-         "left": "25",
-         "isLinked": true
-        },
-        "custom_css": "selector svg{\n    width:130px;\n}"
-       },
-       "elements": [
-        {
-         "id": "7639481c",
-         "elType": "widget",
-         "settings": {
-          "selected_icon": {
-           "value": {
-            "url": "https://provision-infra.de/wp-content/uploads/2026/06/Stars1.svg",
-            "id": 2203
-           },
-           "library": "svg"
-          },
-          "title_text": "",
-          "description_text": "\"Was ich besonders spannend finde: Für ein junges Unternehmen bringt ProVision extrem hohe Expertise & echte Erfahrungswerte mit - die Entwicklung die das Team gerade nimmt, ist wirklich beeindruckend.\"",
-          "text_align": "start",
-          "title_color": "#FFFFFF",
-          "description_color": "#FFFFFF"
-         },
-         "elements": [],
-         "widgetType": "icon-box"
-        },
-        {
-         "id": "426f36df",
-         "elType": "widget",
-         "settings": {
-          "title_text": "Pia-Theresa​",
-          "description_text": "Geschäftsführerin​",
-          "position": "left",
-          "image": {
-           "id": "",
-           "url": ""
-          },
-          "text_align": "start",
-          "title_bottom_space": {
-           "unit": "px",
-           "size": 0,
-           "sizes": []
-          },
-          "title_typography_typography": "custom",
-          "title_typography_font_family": "Poppins",
-          "title_typography_font_size": {
-           "unit": "px",
-           "size": 20,
-           "sizes": []
-          },
-          "title_typography_font_weight": "600",
-          "title_color": "#FFFFFF",
-          "hover_title_color": "#FFFFFF",
-          "description_color": "#FFFFFF"
-         },
-         "elements": [],
-         "widgetType": "image-box"
-        }
-       ],
-       "isInner": true,
-       "isLocked": true
-      },
-      {
-       "id": "28fbf406",
-       "elType": "container",
-       "settings": {
-        "_title": "Slide #1",
-        "flex_justify_content": "space-between",
-        "padding": {
-         "unit": "px",
-         "top": "25",
-         "right": "25",
-         "bottom": "25",
-         "left": "25",
-         "isLinked": true
-        },
-        "custom_css": "selector svg{\n    width:130px;\n}"
-       },
-       "elements": [
-        {
-         "id": "25a6e0bf",
-         "elType": "widget",
-         "settings": {
-          "selected_icon": {
-           "value": {
-            "url": "https://provision-infra.de/wp-content/uploads/2026/06/Stars1.svg",
-            "id": 2203
-           },
-           "library": "svg"
-          },
-          "title_text": "",
-          "description_text": "\"Anfahrt & Durchführung waren wirklich schnelle & kompetent, diese Firma ist direkt aus Bad Bevensen und ... top! Absolut  empfehlenswert!\"",
-          "text_align": "start",
-          "title_color": "#FFFFFF",
-          "description_color": "#FFFFFF"
-         },
-         "elements": [],
-         "widgetType": "icon-box"
-        },
-        {
-         "id": "46ac736",
-         "elType": "widget",
-         "settings": {
-          "title_text": "Mia Manikati​",
-          "description_text": "Hörgeräte Akustik, Inhaberin​",
-          "position": "left",
-          "image": {
-           "id": "",
-           "url": ""
-          },
-          "text_align": "start",
-          "title_bottom_space": {
-           "unit": "px",
-           "size": 0,
-           "sizes": []
-          },
-          "title_typography_typography": "custom",
-          "title_typography_font_family": "Poppins",
-          "title_typography_font_size": {
-           "unit": "px",
-           "size": 20,
-           "sizes": []
-          },
-          "title_typography_font_weight": "600",
-          "title_color": "#FFFFFF",
-          "hover_title_color": "#FFFFFF",
-          "description_color": "#FFFFFF"
-         },
-         "elements": [],
-         "widgetType": "image-box"
-        }
-       ],
-       "isInner": true,
-       "isLocked": true
-      }
-     ]
     }
    ],
    "isInner": false

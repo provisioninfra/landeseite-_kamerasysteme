@@ -367,7 +367,8 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
 ## Neuer Seitenaufbau nach dem Vorbild der Startseite (20.10.2026)
 
 Reihenfolge jetzt: Hero, Logo-Rahmen mit drei Punkten, Was ohne Kameras passiert (Glas-Logo, Pain-Karten), So arbeiten wir,
-Stell dir mal vor, Und genau das wird möglich, Ablauf, Kundenstimmen, Gründer, Technik, Standort, FAQ, Partner, Footer.
+Kundenstimmen (seit 20.10. abends zwischen „So arbeiten wir“ und „Stell dir mal vor“), Stell dir mal vor, Und genau das wird
+möglich, Ablauf, Gründer, Technik, Standort, FAQ, Partner, Footer.
 Alle Texte überarbeitet (kürzer, ohne Gedankenstriche, ohne Dreiergruppen und Floskeln); Kundenstimmen, Gründer, Standort
 und Partner bleiben wörtlich die Startseiten-Bausteine.
 

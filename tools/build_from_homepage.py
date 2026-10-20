@@ -9,7 +9,7 @@ Ausgabe:  elementor/kamera-seite.elements.json       – Elemente + Seiteneinste
 
 Jeder Abschnitt ist eine Kopie eines Startseiten-Abschnitts; nur Texte, Video, Bilder, Icons und die
 Anzahl der Slides/Zeilen werden geändert. Reihenfolge (20.10.): Header, Hero, Video-Rahmen + drei Punkte, Glas-Logo-Teil
-(Pain-Karten), So arbeiten wir, Stell dir mal vor, Und genau das wird möglich, Ablauf, Kundenstimmen, Gründer, Technik,
+(Pain-Karten), So arbeiten wir, Kundenstimmen, Stell dir mal vor, Und genau das wird möglich, Ablauf, Gründer, Technik,
 Standort, FAQ, Partner, Footer. Dadurch stimmen Schriften, Farben, Abstände,
 Animationen, Header und Footer exakt mit der Startseite überein.
 
@@ -493,6 +493,11 @@ arbeit["settings"].update({"_element_id": "arbeitsweise", "_title": "So arbeiten
 reid(arbeit)
 page.append(arbeit)
 
+# ---------------------------------------------------------------- 8a) Kundenstimmen (Original, mit Platz für die Pfeile; Wunsch vom 20.10.: zwischen „So arbeiten wir“ und „Stell dir mal vor“)
+kunden = clone(H[5])
+slider_spacing(kunden)
+page.append(kunden)
+
 # ---------------------------------------------------------------- 8b) „Stell dir mal vor …“ (Original-Abschnitte H[7], H[8] Desktop, H[9] Handy)
 # Statt Schließzylinder und Türgriff läuft in der Mitte eine eigene Lottie-Animation (Schwenk-Neige-Kamera aus den Produktbildern:
 # schwenkt, schwebt, LED blinkt; erzeugt mit tools/kamera_lottie_erzeugen.py, medien.json: kamera_lottie_mobil).
@@ -598,11 +603,6 @@ for item in tl["settings"]["eael_coustom_content_posts"]:
     assert t in STEPS, t
     item["eael_custom_excerpt"] = f"<p>{STEPS[t]}</p>"
 page.append(ablauf)
-
-# ---------------------------------------------------------------- 10) Kundenstimmen (Original, mit Platz für die Pfeile)
-kunden = clone(H[5])
-slider_spacing(kunden)
-page.append(kunden)
 
 # ---------------------------------------------------------------- 11) Gründer (mit Fortsetzung), Technik, Partner, Standort mit Erstgespräch (Original)
 page.append(clone(H[16]))
