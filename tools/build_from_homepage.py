@@ -88,7 +88,7 @@ SLIDER_H = 'Technik, <span style="font-weight: 700; ">die wir verbauen</span>'
 # Glas-Logo-Abschnitt: links der mitlaufende Text, rechts die Karten. Jede Karte wie auf der Startseite:
 # Situation („… wenn“), Verlauf, hervorgehobene Folge; die letzte Karte zusätzlich mit Hinweiszeile (Glühbirne).
 PAIN_H = 'Was ohne Kameras <span style="font-weight: 700; ">auf deinem Gelände passiert?</span>'
-PAIN_INTRO = '<p>Bei dir war noch nie etwas? Dann lies, wie es abläuft, wenn …</p>'
+PAIN_INTRO = '<p>Fünf Situationen, die jeden Betrieb treffen können. Ohne Kameras passiert Folgendes, wenn …</p>'
 PAIN = [   # (Situation, Verlauf, Folge, Hinweiszeile oder None)
     ("… nachts jemand über den Zaun steigt,",
      "bemerkt das niemand. Der Täter hat Stunden Zeit, bis morgens der Erste aufschließt.",
@@ -466,6 +466,9 @@ page.append(diff)
 # ---------------------------------------------------------------- 8) So arbeiten wir – schwebende Kästen (Original: „… installiert dir genau das, damit du“)
 arbeit = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(H[4]["settings"]),
           "elements": [clone(must(H[4], "18e7c8b"))]}
+# Der Startseiten-Abschnitt dunkelt am Handy die oberen 100 px mit einem Verlauf ab (Übergang vom Hero). Hier stünde die
+# Überschrift darunter und würde grau; deshalb ohne diese Zusatzregel (es bleibt der normale 30-px-Streifen der Klasse shadeup).
+arbeit["settings"].pop("custom_css", None)
 must(arbeit, "58d331d")["settings"].update({"title": ARBEIT_H, "_title": ARBEIT_H})
 for wid, text in zip(("b4a337a", "334a7dd", "28dae90"), ARBEIT):
     w = must(arbeit, wid)["settings"]
@@ -476,7 +479,10 @@ for wid, text in zip(("b4a337a", "334a7dd", "28dae90"), ARBEIT):
     w["_title"] = text[:40]
 must(arbeit, "18e7c8b")["settings"]["_title"] = "Kästen"
 arbeit["settings"].update({"_element_id": "arbeitsweise", "_title": "So arbeiten wir",
-                           "padding": box(0, 20, 50, 20), "padding_laptop": box(0, 20, 50, 20), "padding_mobile": box(0, 20, 30, 20)})
+                           "padding": box(0, 20, 50, 20), "padding_laptop": box(0, 20, 50, 20),
+                           # Tablet/Handy: innerer Container hat dort kein Polster, der dunkle Verlaufsstreifen (shadeup) der
+                           # Abschnittskante würde die Überschrift abdunkeln; deshalb 30 px Abstand wie auf der Startseite
+                           "padding_tablet": box(30, 20, 40, 20), "padding_mobile": box(30, 20, 30, 20)})
 reid(arbeit)
 page.append(arbeit)
 
@@ -526,7 +532,7 @@ mid_col["elements"] = [{"id": new_id(), "elType": "widget", "widgetType": "lotti
     "source_json": {"url": KAMERA_LOTTIE_MOBIL["url"], "id": KAMERA_LOTTIE_MOBIL["id"], "size": "", "alt": "", "source": "library"},
     "loop": "yes", "trigger": "arriving_to_viewport", "_element_id": "pv-kamera", "_z_index": 3,
     "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 74, "sizes": []},
-    "_element_custom_width_tablet": {"unit": "%", "size": 92, "sizes": []}, "_title": "Kamera (schwenkt, LED blinkt)"}}]
+    "_element_custom_width_tablet": {"unit": "%", "size": 92, "sizes": []}, "custom_css": "selector svg { overflow: visible; filter: drop-shadow(0 0 26px rgba(251, 201, 27, 0.55)) drop-shadow(0 0 70px rgba(251, 201, 27, 0.3)); }", "_title": "Kamera (schwenkt, LED blinkt)"}}]
 mid_col["settings"].update({"flex_justify_content": "center", "flex_align_items": "center", "_title": "Kamera"})
 LINIEN_HTML = (ROOT / "tools" / "kamera-linien.html").read_text(encoding="utf-8")
 linien = {"id": new_id(), "elType": "widget", "widgetType": "html", "elements": [], "isInner": False, "settings": {
@@ -554,7 +560,7 @@ mcol["elements"] = [{"id": new_id(), "elType": "widget", "widgetType": "lottie",
     "source_json": {"url": KAMERA_LOTTIE_MOBIL["url"], "id": KAMERA_LOTTIE_MOBIL["id"], "size": "", "alt": "", "source": "library"},
     "loop": "yes", "trigger": "arriving_to_viewport", "_element_id": "pv-kamera-mobil",
     "_element_width": "initial", "_element_custom_width": {"unit": "px", "size": 300, "sizes": []},
-    "_element_custom_width_mobile": {"unit": "px", "size": 280, "sizes": []}, "_title": "Kamera (schwenkt, LED blinkt)"}}]
+    "_element_custom_width_mobile": {"unit": "px", "size": 280, "sizes": []}, "custom_css": "selector svg { overflow: visible; filter: drop-shadow(0 0 26px rgba(251, 201, 27, 0.55)) drop-shadow(0 0 70px rgba(251, 201, 27, 0.3)); }", "_title": "Kamera (schwenkt, LED blinkt)"}}]
 mcol["settings"].update({"flex_align_items": "center", "flex_justify_content": "center", "flex_align_items_mobile": "center",
                          "min_height_mobile": {"unit": "px", "size": 440, "sizes": []}, "_title": "Kamera"})
 stell_m["settings"]["_title"] = "Stell dir mal vor (Handy)"
@@ -562,11 +568,8 @@ page.append(reid(stell_m))
 
 # ---------------------------------------------------------------- 8c) „Und genau das wird möglich mit ProVision Infra“ (Original H[10])
 # Grafik der Startseite als Hintergrund übernommen, die Person darauf als dunkle Kapuzen-Silhouette (Einbrecher) neu gesetzt
-# (tools/einbrecher_silhouette.py). Darüber ein HTML-Element mit zwei Bullet-Kameras aus den Produktbildern (schwenken leicht, LED blinkt),
-# das die Hintergrund-Geometrie (cover, mittig; mobil contain, unten) nachbildet, damit die Kameras in jeder Breite über der
-# Szene sitzen.
+# (tools/einbrecher_silhouette.py).
 SZENE, SZENE_MOBIL = MEDIA["szene_bild"], MEDIA["szene_bild_mobil"]
-CAM_L, CAM_R = MEDIA["kamera_bullet_links"], MEDIA["kamera_bullet_rechts"]
 moeglich = clone(H[10])
 must(moeglich, "ecdc807")["settings"].update({"title": MOEGLICH_H, "_title": "Überschrift"})
 must(moeglich, "f085e1b")["settings"].update({"editor": MOEGLICH_T, "_title": "Text"})
@@ -574,40 +577,7 @@ ms_ = moeglich["settings"]
 ms_["background_image"] = {"url": SZENE["url"], "id": SZENE["id"], "size": "", "alt": "", "source": "library"}
 ms_["background_image_mobile"] = {"url": SZENE_MOBIL["url"], "id": SZENE_MOBIL["id"], "size": "", "alt": "", "source": "library"}
 ms_.update({"_element_id": "moeglich", "_title": "Und genau das wird möglich"})
-SZENE_HTML = f"""<div class="pv-szene" aria-hidden="true">
-  <div class="pv-szene__bild">
-    <div class="pv-cam pv-cam--a"><img src="{CAM_R['url']}" alt="" loading="lazy"><span class="pv-led"></span></div>
-    <div class="pv-cam pv-cam--b"><img src="{CAM_L['url']}" alt="" loading="lazy"><span class="pv-led"></span></div>
-  </div>
-</div>
-<style>
-.pv-szene {{ position: absolute; inset: 0; overflow: hidden; pointer-events: none; }}
-.pv-szene__bild {{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; min-width: 100%; aspect-ratio: 2400 / 1104; }}
-.pv-cam {{ position: absolute; width: 7.2%; animation: pv-schwenk 7s ease-in-out infinite alternate; }}
-.pv-cam img {{ display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .55)); }}
-.pv-cam--a {{ left: 46.5%; top: 4.5%; transform-origin: 18% 22%; }}
-.pv-cam--b {{ left: 77%; top: 2.5%; transform-origin: 82% 22%; animation-delay: -3.5s; animation-duration: 8s; }}
-.pv-led {{ position: absolute; width: 5%; aspect-ratio: 1; border-radius: 50%; background: #ff3b30; box-shadow: 0 0 6px 2px rgba(255, 59, 48, .9), 0 0 16px 6px rgba(255, 59, 48, .45); animation: pv-blink 1.3s steps(1, end) infinite; }}
-.pv-cam--a .pv-led {{ left: 72%; top: 41%; }}
-.pv-cam--b .pv-led {{ left: 22%; top: 41%; animation-delay: -.6s; }}
-@keyframes pv-schwenk {{ from {{ transform: rotate(-4deg); }} to {{ transform: rotate(4deg); }} }}
-@keyframes pv-blink {{ 0%, 88% {{ opacity: 1; }} 12%, 100% {{ opacity: .08; }} }}
-@media (max-width: 767px) {{
-  .pv-szene__bild {{ top: auto; bottom: 0; left: 0; transform: none; height: auto; width: 100%; min-width: 0; aspect-ratio: 1276 / 1104; }}
-  .pv-cam {{ width: 15%; }}
-  .pv-cam--a {{ left: 8%; top: 3%; }}
-  .pv-cam--b {{ left: 70%; top: 1.5%; }}
-}}
-@media (prefers-reduced-motion: reduce) {{ .pv-cam, .pv-led {{ animation: none; }} }}
-</style>"""
-szene_widget = {"id": new_id(), "elType": "widget", "widgetType": "html", "elements": [], "isInner": False, "settings": {
-    "html": SZENE_HTML, "_position": "absolute", "_offset_x": {"unit": "px", "size": 0, "sizes": []}, "_offset_y": {"unit": "px", "size": 0, "sizes": []},
-    "_z_index": 1, "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 100, "sizes": []},
-    "custom_css": "selector { top: 0; left: 0; width: 100%; height: 100%; margin: 0; }",
-    "_title": "Zwei Kameras über der Szene"}}
-moeglich["elements"].append(szene_widget)
-# Text und Kasten über die Kamera-Ebene legen
-must(moeglich, "beae738")["settings"]["z_index"] = 2
+# Keine eingefügten Kameras über der Szene (Wunsch vom 20.10., zweite Runde); die Silhouette bleibt.
 page.append(reid(moeglich))
 
 # ---------------------------------------------------------------- 9) Ablauf der Zusammenarbeit (Original, Kamera-Texte)

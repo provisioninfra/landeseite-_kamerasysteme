@@ -3565,8 +3565,8 @@
                "settings": {
                 "selected_icon": {
                  "value": {
-                  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-eingerichtet.svg",
-                  "id": 4320
+                  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-eingerichtet-dunkel.svg",
+                  "id": 4463
                  },
                  "library": "svg"
                 },
@@ -3998,7 +3998,7 @@
            "typography_typography": "",
            "text_color": "globals/colors?id=521f46a"
           },
-          "editor": "<p>Bei dir war noch nie etwas? Dann lies, wie es abläuft, wenn …</p>",
+          "editor": "<p>Fünf Situationen, die jeden Betrieb treffen können. Ohne Kameras passiert Folgendes, wenn …</p>",
           "align": "left",
           "_element_width": "initial",
           "_element_custom_width": {
@@ -8241,7 +8241,7 @@
     },
     "padding_mobile": {
      "unit": "px",
-     "top": "0",
+     "top": "30",
      "right": "20",
      "bottom": "30",
      "left": "20",
@@ -8258,9 +8258,16 @@
      "size": 100
     },
     "css_classes": "shadeup",
-    "custom_css": "@media (max-width: 767px) {\r\n  selector::before {\r\n    top: 0;\r\n    height: 100px;\r\n    background: linear-gradient(to bottom, #030F29, transparent) !important;\r\n  }\r\n}",
     "_element_id": "arbeitsweise",
-    "_title": "So arbeiten wir"
+    "_title": "So arbeiten wir",
+    "padding_tablet": {
+     "unit": "px",
+     "top": "30",
+     "right": "20",
+     "bottom": "40",
+     "left": "20",
+     "isLinked": false
+    }
    },
    "elements": [
     {
@@ -9672,8 +9679,8 @@
              "settings": {
               "selected_icon": {
                "value": {
-                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-eingerichtet.svg",
-                "id": 4320
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-eingerichtet-dunkel.svg",
+                "id": 4463
                },
                "library": "svg"
               },
@@ -10352,8 +10359,8 @@
              "settings": {
               "selected_icon": {
                "value": {
-                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-uebergabe.svg",
-                "id": 4322
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-uebergabe-dunkel.svg",
+                "id": 4465
                },
                "library": "svg"
               },
@@ -10844,8 +10851,8 @@
          "isInner": false,
          "settings": {
           "source_json": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk-mobil.json",
-           "id": 4449,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk.json",
+           "id": 4460,
            "size": "",
            "alt": "",
            "source": "library"
@@ -10865,6 +10872,7 @@
            "size": 92,
            "sizes": []
           },
+          "custom_css": "selector svg { overflow: visible; filter: drop-shadow(0 0 26px rgba(251, 201, 27, 0.55)) drop-shadow(0 0 70px rgba(251, 201, 27, 0.3)); }",
           "_title": "Kamera (schwenkt, LED blinkt)"
          }
         }
@@ -11154,8 +11162,8 @@
              "settings": {
               "selected_icon": {
                "value": {
-                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-analyse.svg",
-                "id": 4318
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-analyse-dunkel.svg",
+                "id": 4461
                },
                "library": "svg"
               },
@@ -11494,8 +11502,8 @@
              "settings": {
               "selected_icon": {
                "value": {
-                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-konzept.svg",
-                "id": 4319
+                "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-konzept-dunkel.svg",
+                "id": 4462
                },
                "library": "svg"
               },
@@ -12671,8 +12679,8 @@
            "settings": {
             "selected_icon": {
              "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-eingerichtet.svg",
-              "id": 4320
+              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-eingerichtet-dunkel.svg",
+              "id": 4463
              },
              "library": "svg"
             },
@@ -13340,8 +13348,8 @@
            "settings": {
             "selected_icon": {
              "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-uebergabe.svg",
-              "id": 4322
+              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-uebergabe-dunkel.svg",
+              "id": 4465
              },
              "library": "svg"
             },
@@ -14014,8 +14022,8 @@
            "settings": {
             "selected_icon": {
              "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-analyse.svg",
-              "id": 4318
+              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-analyse-dunkel.svg",
+              "id": 4461
              },
              "library": "svg"
             },
@@ -14382,8 +14390,8 @@
            "settings": {
             "selected_icon": {
              "value": {
-              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-konzept.svg",
-              "id": 4319
+              "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-icon-konzept-dunkel.svg",
+              "id": 4462
              },
              "library": "svg"
             },
@@ -15173,8 +15181,8 @@
        "isInner": false,
        "settings": {
         "source_json": {
-         "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk-mobil.json",
-         "id": 4449,
+         "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk.json",
+         "id": 4460,
          "size": "",
          "alt": "",
          "source": "library"
@@ -15193,6 +15201,7 @@
          "size": 280,
          "sizes": []
         },
+        "custom_css": "selector svg { overflow: visible; filter: drop-shadow(0 0 26px rgba(251, 201, 27, 0.55)) drop-shadow(0 0 70px rgba(251, 201, 27, 0.3)); }",
         "_title": "Kamera (schwenkt, LED blinkt)"
        }
       }
@@ -15203,7 +15212,7 @@
    "isInner": false
   },
   {
-   "id": "8b353e8",
+   "id": "ac0d2f9",
    "elType": "container",
    "settings": {
     "flex_direction": "column",
@@ -15323,7 +15332,7 @@
    },
    "elements": [
     {
-     "id": "35e5a06",
+     "id": "8b353e8",
      "elType": "container",
      "settings": {
       "flex_direction": "row",
@@ -15347,12 +15356,11 @@
        "bottom": "0",
        "left": "0",
        "isLinked": false
-      },
-      "z_index": 2
+      }
      },
      "elements": [
       {
-       "id": "139e9f8",
+       "id": "35e5a06",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -15382,7 +15390,7 @@
        },
        "elements": [
         {
-         "id": "6519b8c",
+         "id": "139e9f8",
          "elType": "widget",
          "settings": {
           "header_size": "div",
@@ -15456,7 +15464,7 @@
          "widgetType": "heading"
         },
         {
-         "id": "4bf8567",
+         "id": "6519b8c",
          "elType": "widget",
          "settings": {
           "header_size": "div",
@@ -15533,7 +15541,7 @@
          "widgetType": "heading"
         },
         {
-         "id": "144a30a",
+         "id": "4bf8567",
          "elType": "container",
          "settings": {
           "content_width": "full",
@@ -15640,7 +15648,7 @@
          },
          "elements": [
           {
-           "id": "05ac70c",
+           "id": "144a30a",
            "elType": "widget",
            "settings": {
             "typography_font_size_tablet": {
@@ -15720,7 +15728,7 @@
        "isInner": true
       },
       {
-       "id": "711f7a7",
+       "id": "05ac70c",
        "elType": "container",
        "settings": {
         "content_width": "full",
@@ -15758,36 +15766,6 @@
       }
      ],
      "isInner": true
-    },
-    {
-     "id": "887ada7",
-     "elType": "widget",
-     "widgetType": "html",
-     "elements": [],
-     "isInner": false,
-     "settings": {
-      "html": "<div class=\"pv-szene\" aria-hidden=\"true\">\n  <div class=\"pv-szene__bild\">\n    <div class=\"pv-cam pv-cam--a\"><img src=\"https://provision-infra.de/wp-content/uploads/2026/10/kamera-bullet-rechts.png\" alt=\"\" loading=\"lazy\"><span class=\"pv-led\"></span></div>\n    <div class=\"pv-cam pv-cam--b\"><img src=\"https://provision-infra.de/wp-content/uploads/2026/10/kamera-bullet-links.png\" alt=\"\" loading=\"lazy\"><span class=\"pv-led\"></span></div>\n  </div>\n</div>\n<style>\n.pv-szene { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }\n.pv-szene__bild { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; min-width: 100%; aspect-ratio: 2400 / 1104; }\n.pv-cam { position: absolute; width: 7.2%; animation: pv-schwenk 7s ease-in-out infinite alternate; }\n.pv-cam img { display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .55)); }\n.pv-cam--a { left: 46.5%; top: 4.5%; transform-origin: 18% 22%; }\n.pv-cam--b { left: 77%; top: 2.5%; transform-origin: 82% 22%; animation-delay: -3.5s; animation-duration: 8s; }\n.pv-led { position: absolute; width: 5%; aspect-ratio: 1; border-radius: 50%; background: #ff3b30; box-shadow: 0 0 6px 2px rgba(255, 59, 48, .9), 0 0 16px 6px rgba(255, 59, 48, .45); animation: pv-blink 1.3s steps(1, end) infinite; }\n.pv-cam--a .pv-led { left: 72%; top: 41%; }\n.pv-cam--b .pv-led { left: 22%; top: 41%; animation-delay: -.6s; }\n@keyframes pv-schwenk { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }\n@keyframes pv-blink { 0%, 88% { opacity: 1; } 12%, 100% { opacity: .08; } }\n@media (max-width: 767px) {\n  .pv-szene__bild { top: auto; bottom: 0; left: 0; transform: none; height: auto; width: 100%; min-width: 0; aspect-ratio: 1276 / 1104; }\n  .pv-cam { width: 15%; }\n  .pv-cam--a { left: 8%; top: 3%; }\n  .pv-cam--b { left: 70%; top: 1.5%; }\n}\n@media (prefers-reduced-motion: reduce) { .pv-cam, .pv-led { animation: none; } }\n</style>",
-      "_position": "absolute",
-      "_offset_x": {
-       "unit": "px",
-       "size": 0,
-       "sizes": []
-      },
-      "_offset_y": {
-       "unit": "px",
-       "size": 0,
-       "sizes": []
-      },
-      "_z_index": 1,
-      "_element_width": "initial",
-      "_element_custom_width": {
-       "unit": "%",
-       "size": 100,
-       "sizes": []
-      },
-      "custom_css": "selector { top: 0; left: 0; width: 100%; height: 100%; margin: 0; }",
-      "_title": "Zwei Kameras über der Szene"
-     }
     }
    ],
    "isInner": false
@@ -20413,37 +20391,37 @@
       "eael_adv_accordion_tab": [
        {
         "eael_adv_accordion_tab_title": "Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
-        "_id": "c4f00a2",
+        "_id": "711f7a7",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja, innerhalb klarer Regeln. Erlaubt ist dein eigenes Gelände samt Zugängen, nicht der Gehweg oder das Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel entsprechend und geben dir Schilder und Unterlagen mit.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Wie lange dauert die Installation?",
-        "_id": "08d9e41",
+        "_id": "887ada7",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Vier bis acht Kameras sind meist an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Kann ich die Bilder auf dem Handy sehen?",
-        "_id": "f12be08",
+        "_id": "c4f00a2",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja. In der App siehst du Live-Bild und Aufzeichnungen und wirst bei Bewegung benachrichtigt. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was passiert bei Stromausfall oder Internetstörung?",
-        "_id": "9daf15a",
+        "_id": "08d9e41",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Fällt das Internet aus, fehlt nur der Fernzugriff. Die Aufzeichnung läuft auf dem Rekorder im Gebäude weiter. Gegen Stromausfall sichern wir Rekorder und Kameras auf Wunsch mit einer Notstromversorgung ab.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was kostet eine Videoüberwachung?",
-        "_id": "7266232",
+        "_id": "f12be08",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Das hängt von der Zahl der Kameras und den Wegen für die Verkabelung ab. Einen ersten Rahmen bekommst du im Erstgespräch, einen verbindlichen Preis nach dem Termin vor Ort.</span></p>"
        },
        {
         "eael_adv_accordion_tab_title": "Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
-        "_id": "f4638c2",
+        "_id": "9daf15a",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Die Aufnahmen bleiben auf deinem Rekorder im Gebäude, nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung ein und halten die Software aktuell.</span></p>"
        }
@@ -42421,12 +42399,12 @@
    "isInner": false
   },
   {
-   "id": "2daec2f",
+   "id": "f0d486a",
    "elType": "container",
    "isInner": false,
    "elements": [
     {
-     "id": "f058554",
+     "id": "730dd41",
      "elType": "widget",
      "widgetType": "html",
      "elements": [],

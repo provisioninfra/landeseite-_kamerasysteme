@@ -81,12 +81,15 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   läuft zur Kamera (Element „Leuchtlinie zur Kamera“, bitte nicht löschen). Am Handy stehen die acht Kästen
   untereinander, darunter die Kamera. Texte und Icons gibt es deshalb zweimal (Abschnitt „Computer/Tablet“ und
   Abschnitt „Handy“), Änderungen bitte an beiden Stellen. Die Kamera ist eine Lottie-Animation aus Produktbild 3
-  (Mediathek: kamera-schwenk-mobil.json); sie schwenkt, schwebt leicht, die rote LED blinkt.
+  (Mediathek: kamera-schwenk.json); sie schwenkt, schwebt leicht, die rote LED blinkt. Der gelbe Lichtschein um die
+  Kamera ist ein CSS-Schatten des Elements (Erweitert → Eigenes CSS).
 - **Und genau das wird möglich mit ProVision Infra:** Überschriften und Textkasten links, rechts die Szene der
   Startseite (Flur mit Tür) als Hintergrundbild, die Person darauf als dunkle Kapuzen-Silhouette (Einbrecher).
-  Zwei Kameras aus den Produktbildern sitzen oben über der Szene, schwenken leicht und blinken (Element „Zwei Kameras
-  über der Szene“). Das Hintergrundbild wechselst du unter **Stil → Hintergrund** (Computer und Handy haben je ein
-  eigenes Bild: kamera-szene-einbrecher.jpg und kamera-szene-einbrecher-mobil.jpg).
+  Das Hintergrundbild wechselst du unter **Stil → Hintergrund** (Computer und Handy haben je ein eigenes Bild:
+  kamera-szene-einbrecher.jpg und kamera-szene-einbrecher-mobil.jpg).
+- **Icons:** Alle Icon-Kacheln sind dunkel mit gelbem Symbol (wie auf der Startseite). Die fünf Kamera-Icons liegen als
+  SVG in der Mediathek (kamera-icon-…-dunkel.svg); ein Icon tauschst du im Icon-Element unter **Inhalt → Icon → SVG
+  hochladen**.
 - **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor. Alle Buttons der Seite öffnen
   die eigene Kontaktseite /kontakt-kamerasysteme/ (wie die Startseite /kontakt öffnet).
 - **Kontaktseite:** eigene Seite „Kontakt Kamerasysteme“ (ID 4371, /kontakt-kamerasysteme/), Kopie der Seite

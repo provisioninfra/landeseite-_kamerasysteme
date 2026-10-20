@@ -406,3 +406,27 @@ und Partner bleiben wörtlich die Startseiten-Bausteine.
 - Prüfung auf der Live-Seite (Playwright, Chromium): keine horizontale Verschiebung bei 1920/1440/1280/1024/768/393 px,
   keine JavaScript-Fehler, Reihenfolge der 22 Abschnitte wie geplant, Logo-Link auf die Startseite, Animationen laufen
   (Kamera-Lottie im Sichtbereich, Szene-Kameras per CSS), Hover-Zusammenspiel der Kästen in allen Desktop-Breiten.
+
+## Zweite Runde nach Rückmeldung am Handy (20.10.2026)
+
+- **Icons:** Alle Icon-Kacheln dunkel mit gelbem Symbol wie die Startseiten-Icons. Die fünf Kamera-Icons neu als SVG mit
+  dunkler Kachel (Verlauf, gelber Schein unten, feiner Rand, Strich 5 px) erzeugt und hochgeladen (IDs 4461 bis 4465,
+  `elementor/icons.json`); die gelben Vorgänger (4318 bis 4322) gelöscht. Elementor bettet die SVGs inline ein; die
+  Verlaufsdefinitionen tragen in allen fünf Dateien dieselben IDs und sind identisch, deshalb stört die Mehrfachdefinition nicht.
+- **Einleitung des Glas-Abschnitts:** „Fünf Situationen, die jeden Betrieb treffen können. Ohne Kameras passiert Folgendes,
+  wenn …“ (konkreter, führt weiter in die Karten „… nachts jemand über den Zaun steigt, …“).
+- **„So arbeiten wir“ am Handy grau:** Ursache war die aus dem Startseiten-Abschnitt übernommene Zusatzregel, die bei
+  höchstens 767 px die oberen 100 px mit einem Verlauf abdunkelt (dort Übergang vom Hero). Die Überschrift stand darunter.
+  Regel für diesen Abschnitt entfernt, zusätzlich 30 px Abstand oben auf Tablet und Handy. Geprüft bei 393, 768, 1440 px.
+- **Lichtschein um die Kamera:** Der in die Lottie-Datei eingebettete Schein wurde an der Bühnenkante (360 x 520) abgeschnitten
+  und wirkte kantig. Jetzt ohne Schein in der Datei (109 KB statt 210 KB, Mediathek-ID 4460, alte Datei 4449 gelöscht); der
+  Schein ist ein weicher CSS-Schatten auf dem SVG (`drop-shadow` 26 px und 70 px, gelb), der der Kamerakontur folgt und
+  nicht beschnitten wird. Gilt am Computer und am Handy.
+- **Szene „Und genau das wird möglich“:** die beiden eingefügten Bullet-Kameras entfernt (Wunsch), Silhouette bleibt.
+  Zugehörige Mediendateien 4446/4447 gelöscht.
+- **Animationen gegen die Startseite geprüft** (Playwright, 393 und 1440 px, langsames Durchscrollen): Einblend-Animationen
+  der Elementor-Elemente laufen (übrig bleiben nur Elemente in ausgeblendeten Varianten, genau wie auf der Startseite),
+  `floating`-Animation (3 s) und Glas-Optik (`backdrop-filter: blur(20px)`) der schwebenden Kästen kommen aus dem
+  seitenweiten CSS und greifen auch hier, Sticky-Text (Computer), Zähler, beide Slider mit Autoplay, Ablauf-Lottie
+  (scrollgebunden, Computer), Hover-Rahmen der Karten, Kamera-Lottie (läuft im Sichtbereich, pausiert außerhalb),
+  Leuchtlinie und Aufleuchten der Kästen (Computer/Tablet). Keine JavaScript-Fehler, keine horizontale Verschiebung.

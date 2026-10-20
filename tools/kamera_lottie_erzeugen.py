@@ -1,6 +1,6 @@
 """Aufruf: python3 tools/kamera_lottie_erzeugen.py  (Ausgabe in build/, dann in die Mediathek laden)
 Erzeugt die Lottie-Animation der Schwenk-Neige-Kamera (Produktbild 3): schwenkt um den Wandhalter, schwebt leicht,
-rote Status-LED blinkt, gelber Lichtschein dahinter. Zwei Varianten: Desktop (1512x769, Position wie das Schloss
+rote Status-LED blinkt (gelber Lichtschein per CSS auf dem Widget). Zwei Varianten: Desktop (1512x769, Position wie das Schloss
 der Startseite) und Mobil (kompakte Bühne)."""
 import json, base64, io, pathlib
 from PIL import Image, ImageDraw, ImageFilter
@@ -42,11 +42,9 @@ def build(W, H, cam_pos, glow_pos, glow_scale, fps=25, frames=150):
     layers = [
         {"ddd": 0, "ind": 1, "ty": 4, "nm": "LED", "parent": 2, "sr": 1, "ks": {"o": {"a": 1, "k": blink}, "r": {"a": 0, "k": 0}, "p": {"a": 0, "k": LED + [0]}, "a": {"a": 0, "k": [0, 0, 0]}, "s": {"a": 0, "k": [100, 100, 100]}}, "ao": 0, "shapes": led_shapes, "ip": 0, "op": frames, "st": 0, "bm": 0},
         {"ddd": 0, "ind": 2, "ty": 2, "nm": "Kamera", "refId": "cam", "sr": 1, "ks": {"o": {"a": 0, "k": 100}, "r": {"a": 1, "k": rot}, "p": {"a": 1, "k": pos}, "a": {"a": 0, "k": MOUNT + [0]}, "s": {"a": 0, "k": [100, 100, 100]}}, "ao": 0, "ip": 0, "op": frames, "st": 0, "bm": 0},
-        {"ddd": 0, "ind": 3, "ty": 2, "nm": "Lichtschein", "refId": "glow", "sr": 1, "ks": {"o": {"a": 0, "k": 100}, "r": {"a": 0, "k": 0}, "p": {"a": 0, "k": list(glow_pos) + [0]}, "a": {"a": 0, "k": [G / 2, G / 2, 0]}, "s": {"a": 0, "k": [glow_scale, glow_scale, 100]}}, "ao": 0, "ip": 0, "op": frames, "st": 0, "bm": 0},
-    ]
+    ]   # kein Lichtschein in der Datei: der gelbe Schein kommt per CSS (drop-shadow) auf das Widget und wird so nicht an der Bühnenkante abgeschnitten
     return {"v": "5.6.6", "fr": fps, "ip": 0, "op": frames, "w": W, "h": H, "nm": "kamera-schwenk", "ddd": 0,
-            "assets": [{"id": "cam", "w": CW, "h": CH, "u": "", "p": "data:image/png;base64," + cam_b64, "e": 1},
-                       {"id": "glow", "w": G, "h": G, "u": "", "p": "data:image/png;base64," + glow_b64, "e": 1}],
+            "assets": [{"id": "cam", "w": CW, "h": CH, "u": "", "p": "data:image/png;base64," + cam_b64, "e": 1}],
             "layers": layers, "markers": []}
 # Desktop: Kamerabild oben links bei (575, 20) -> Halterung bei (575+228, 20+228); Lichtschein hinter dem Kamerakopf (ca. 672, 330)
 desk = build(1512, 769, (575 + MOUNT[0], 20 + MOUNT[1]), (672, 330), 100)
