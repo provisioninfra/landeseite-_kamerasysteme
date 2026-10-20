@@ -15221,7 +15221,7 @@
          "elType": "widget",
          "settings": {
           "header_size": "div",
-          "title": "Und genau das wird möglich mit ProVision Infra:",
+          "title": "Und genau das wird möglich mit ProVision&nbsp;Infra:",
           "__globals__": {
            "title_color": "globals/colors?id=521f46a",
            "typography_typography": ""
@@ -15258,7 +15258,7 @@
            "size": 100,
            "sizes": []
           },
-          "_title": "Tagline",
+          "_title": "Vorzeile",
           "align_mobile": "center",
           "typography_typography": "custom",
           "typography_font_family": "Poppins",

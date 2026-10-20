@@ -561,6 +561,8 @@ page.append(reid(stell_m))
 SZENE, SZENE_MOBIL = MEDIA["szene_bild"], MEDIA["szene_bild_mobil"]
 moeglich = clone(H[10])
 must(moeglich, "ecdc807")["settings"].update({"title": MOEGLICH_H, "_title": "Überschrift"})
+# Vorzeile: „ProVision Infra:“ bleibt zusammen und steht am Handy allein in der zweiten Zeile (geschütztes Leerzeichen)
+must(moeglich, "4ae8a09")["settings"].update({"title": "Und genau das wird möglich mit ProVision&nbsp;Infra:", "_title": "Vorzeile"})
 must(moeglich, "f085e1b")["settings"].update({"editor": MOEGLICH_T, "_title": "Text"})
 ms_ = moeglich["settings"]
 ms_["background_image"] = {"url": SZENE["url"], "id": "", "size": "", "alt": "", "source": "library"}   # ohne ID: Elementor ersetzt die URL sonst durch die 2560-px-Kopie („-scaled“)
