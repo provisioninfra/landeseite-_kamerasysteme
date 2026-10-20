@@ -133,22 +133,36 @@ nicht, braucht aber einen zweiten Schritt im Header der Seite. Sag Bescheid, dan
 ## Link-Vorschau (WhatsApp, LinkedIn, Facebook)
 
 Die Seite hat in Yoast ein eigenes Vorschaubild (Schlussbild des Hero-Videos, 1200 × 630 Pixel, Mediathek
-`kamera-vorschau-1200x630-1.jpg`), einen Vorschau-Titel („Wir schützen dein Gebäude mit Kamera- &
-Videoüberwachung“) und eine Beschreibung. Ändern: Seite bearbeiten → Yoast-Box → Reiter **Social** → Bild,
+`kamera-vorschau-1200x630-1.jpg`), einen Vorschau-Titel („Wir schützen dein Unternehmen mit Kamera- &
+Videoüberwachung“) und als Beschreibung die Meta-Beschreibung aus Schritt 5. Ändern: Seite bearbeiten → Yoast-Box → Reiter **Social** → Bild,
 Titel, Beschreibung. WhatsApp merkt sich eine Vorschau pro Link; nach Änderungen hilft ein Zusatz wie
 `?v=2` am Link, bis WhatsApp die neue Vorschau lädt. Ein Video kann in keiner Link-Vorschau laufen, nur ein Bild.
 
 ---
 
-## Schritt 5: Suchmaschinen-Angaben eintragen (3 Minuten)
+## Schritt 5: Suchmaschinen-Angaben prüfen (2 Minuten)
 
-1. Unter **Seiten → Alle Seiten** die Seite normal bearbeiten (nicht mit Elementor).
-2. Unterhalb des Inhalts im **Yoast SEO**-Kasten:
-   - **SEO-Titel:** `Kamera- & Videoüberwachung – ProVision Infra`
-   - **Meta-Beschreibung:** `ProVision Infra plant & installiert deine Kamera- und Videoüberwachung – damit dein Gebäude rund um die Uhr geschützt ist.`
-   - Reiter **Social**: als Facebook-Bild das Standbild aus der Mediathek wählen
-     (Datei `kamera-hero-standbild.jpg`).
-3. **Aktualisieren** klicken.
+Die Angaben sind bereits eingetragen (Stand 20.10.2026, Werte in `elementor/seo.json`). Falls sie einmal
+verloren gehen: unter **Seiten → Alle Seiten** die Seite normal bearbeiten (nicht mit Elementor) und im
+**Yoast SEO**-Kasten unterhalb des Inhalts eintragen:
+
+- **Fokus-Keyphrase:** `Videoüberwachung für Unternehmen`
+- **SEO-Titel:** `Kamera- & Videoüberwachung für Unternehmen | ProVision Infra`
+- **Meta-Beschreibung:** `Videoüberwachung für Unternehmen in Hamburg, Hannover und Niedersachsen. ProVision Infra plant und installiert dein Kamerasystem, mit Alarm aufs Handy.`
+- Reiter **Social**: Bild `kamera-vorschau-1200x630-1.jpg`, Titel `Wir schützen dein Unternehmen mit Kamera- & Videoüberwachung`,
+  Beschreibung wie die Meta-Beschreibung (Facebook und X/Twitter).
+- Reiter **Erweitert**: „Cornerstone-Inhalt“ ist eingeschaltet, „Erlaube Suchmaschinen, diese Seite anzuzeigen“ steht auf Ja.
+
+Dann **Aktualisieren** klicken. Was sonst noch für Suchmaschinen eingebaut ist (Überschriften, Strukturdaten,
+FAQ-Daten), steht in `TECHNIK-CHECK.md` unter „SEO-Optimierung“ und braucht keine Pflege von Hand.
+
+### Bei Google anmelden (Search Console, 5 Minuten)
+
+Die Seite steht in der XML-Sitemap (`https://provision-infra.de/page-sitemap.xml`), Google findet sie also von
+selbst. Schneller geht es so: [search.google.com/search-console](https://search.google.com/search-console) mit
+dem Google-Konto öffnen, in dem die Website bestätigt ist, oben die Adresse
+`https://provision-infra.de/kamerasysteme/` in die Suchleiste („URL-Prüfung“) eingeben, dann
+**Indexierung beantragen** klicken. Google holt die Seite meist innerhalb weniger Tage in den Index.
 
 ---
 

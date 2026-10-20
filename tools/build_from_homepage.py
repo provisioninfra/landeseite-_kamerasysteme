@@ -144,7 +144,7 @@ ARBEIT = [
 STEPS = {
     "Erstgespräch": "Ein kurzes Telefonat: Was ist passiert, oder was soll nie passieren? Du bekommst eine erste ehrliche Einschätzung.",
     "Termin vor Ort": "Wir gehen mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt. Den Kostenrahmen nennen wir dir noch vor Ort.",
-    "Planung deines Systems": "Du bekommst ein Konzept mit Kamerastandorten und ein Angebot, das zu deinem Budget passt. Dann entscheidest du.",
+    "Planung deines Kamerasystems": "Du bekommst ein Konzept mit Kamerastandorten und ein Angebot, das zu deinem Budget passt. Dann entscheidest du.",
     "Umsetzung": "Die Kameras montieren wir, Aufzeichnung und App richten wir komplett ein. Du musst nichts selbst konfigurieren.",
     "Übergabe & Betreuung": "Gemeinsam prüfen wir, ob die Anlage leistet, was vereinbart war, und halten das schriftlich fest. Danach bleiben wir erreichbar.",
 }
@@ -157,16 +157,18 @@ FAQ_H_MOBILE = 'Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <br><b>
 FAQ = [
     ("Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
      "Ja, innerhalb klarer Regeln. Erlaubt ist dein eigenes Gelände samt Zugängen, nicht der Gehweg oder das Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel entsprechend und geben dir Schilder und Unterlagen mit."),
-    ("Wie lange dauert die Installation?",
+    ("Wie lange dauert die Installation einer Videoüberwachung?",
      "Vier bis acht Kameras sind meist an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft."),
-    ("Kann ich die Bilder auf dem Handy sehen?",
+    ("Kann ich die Kamerabilder auf dem Handy sehen?",
      "Ja. In der App siehst du Live-Bild und Aufzeichnungen und wirst bei Bewegung benachrichtigt. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät."),
     ("Was passiert bei Stromausfall oder Internetstörung?",
      "Fällt das Internet aus, fehlt nur der Fernzugriff. Die Aufzeichnung läuft auf dem Rekorder im Gebäude weiter. Gegen Stromausfall sichern wir Rekorder und Kameras auf Wunsch mit einer Notstromversorgung ab."),
-    ("Was kostet eine Videoüberwachung?",
+    ("Was kostet eine Videoüberwachung für mein Unternehmen?",
      "Das hängt von der Zahl der Kameras und den Wegen für die Verkabelung ab. Einen ersten Rahmen bekommst du im Erstgespräch, einen verbindlichen Preis nach dem Termin vor Ort."),
     ("Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
      "Die Aufnahmen bleiben auf deinem Rekorder im Gebäude, nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung ein und halten die Software aktuell."),
+    ("In welcher Region installiert ProVision Infra Videoüberwachung?",
+     "Unser Sitz ist Bad Bevensen bei Lüneburg. Unterwegs sind wir vor allem im Raum Hamburg, Hannover und Niedersachsen, bei größeren Projekten auch bundesweit."),
 ]
 
 # Icons aus der Mediathek (SVG). Zuordnung siehe ICONS unten; Werte können jederzeit im Editor getauscht werden.
@@ -596,12 +598,19 @@ page.append(arbeit)
 
 # ---------------------------------------------------------------- 9) Ablauf der Zusammenarbeit (Original, Kamera-Texte)
 ablauf = clone(H[14])
-for wid, step in [("20734e0", "Erstgespräch"), ("8595654", "Termin vor Ort"), ("2f2676e", "Planung deines Systems"),
+for wid, step in [("20734e0", "Erstgespräch"), ("8595654", "Termin vor Ort"), ("2f2676e", "Planung deines Kamerasystems"),
                   ("933e53d", "Umsetzung"), ("d11be39", "Übergabe & Betreuung")]:
     must(ablauf, wid)["settings"]["editor"] = f"<p>{STEPS[step]}</p>"
+# Schritt 3 heißt hier „Planung deines Kamerasystems“ (Startseite: „Planung deines Systems“): Überschrift und Zeitstrahl
+STEP_RENAME = {"Planung deines Systems": "Planung deines Kamerasystems"}
+assert must(ablauf, "01d6be7")["settings"]["title"] == "Planung deines Systems"
+must(ablauf, "01d6be7")["settings"]["title"] = STEP_RENAME["Planung deines Systems"]
 tl = must(ablauf, "756a14f")
 for item in tl["settings"]["eael_coustom_content_posts"]:
-    t = re.sub(r"\s+", " ", item["eael_custom_title"]).strip().replace("&amp;", "&")
+    roh = re.sub(r"\s+", " ", item["eael_custom_title"]).strip().replace("&amp;", "&")
+    t = STEP_RENAME.get(roh, roh)
+    if t != roh:
+        item["eael_custom_title"] = t
     assert t in STEPS, t
     item["eael_custom_excerpt"] = f"<p>{STEPS[t]}</p>"
 page.append(ablauf)
@@ -622,9 +631,11 @@ must(faq, "45eaf1f")["settings"]["title"] = FAQ_H_MOBILE
 acc = must(faq, "ed852c3")
 acc["settings"]["eael_adv_accordion_tab"] = [
     {"eael_adv_accordion_tab_title": q, "_id": new_id(), "eael_adv_accordion_tab_icon_show": "",
-     "eael_adv_accordion_tab_content": f'<p><span style="font-weight: 400;">{a}</span></p>'}
+     "eael_adv_accordion_text_type": "content", "eael_adv_accordion_tab_content": f"<p>{a}</p>"}
     for q, a in FAQ
 ]
+# SEO: Fragen als Zwischenüberschriften (h3), das Widget gibt dazu FAQPage-Strukturdaten aus (Schema.org)
+acc["settings"].update({"eael_adv_accordion_title_tag": "h3", "eael_adv_accordion_faq_schema_show": "yes"})
 page.append(faq)
 page.append(clone(H[18]))          # Unsere Partner (Wunsch vom 20.10.: ans Ende des FAQ)
 
@@ -649,7 +660,17 @@ if FORM_ID:
     kontakt_page.append(reid(ksec))
 
 # ---------------------------------------------------------------- 12) Footer (Original)
-page.append(clone(H[21]))
+footer_oben = clone(H[21])
+# SEO/Barrierefreiheit: Das Footer-Logo verlinkt auf die Startseite, seine Mediathek-Datei hat aber keinen Alternativtext,
+# der Link bleibt damit ohne Namen. Hier eine eigene Kopie der Datei mit Alt-Text (medien.json: footer_logo, gleiches Bild).
+FOOTER_LOGO = MEDIA["footer_logo"]
+def footer_logo_alt(el):
+    if el.get("widgetType") == "image" and "ProVision-Infra-GmbH-blau" in el["settings"].get("image", {}).get("url", ""):
+        el["settings"]["image"] = {"url": FOOTER_LOGO["url"], "id": FOOTER_LOGO["id"], "size": "", "alt": FOOTER_LOGO["alt"], "source": "library"}
+    for c in el.get("elements", []):
+        footer_logo_alt(c)
+footer_logo_alt(footer_oben)
+page.append(footer_oben)
 page.append(clone(H[22]))
 
 # ---------------------------------------------------------------- 13) Steuerung der Hintergrundvideos
@@ -682,6 +703,27 @@ VIDEO_SCRIPT = """<script>
       });
     }, { threshold: 0 }).observe(bereich);
   }
+  // Der Handy-Videoblock ist am Computer und Tablet ausgeblendet; Elementor lädt sein Video dort trotzdem (1,5 MB).
+  // Deshalb ohne Autoplay und ohne Vorladen, solange der Block unsichtbar ist. Wird er durch eine Größenänderung
+  // sichtbar, startet das Video nach.
+  function nurLadenWennSichtbar(id) {
+    var bereich = document.querySelector('.elementor-element-' + id);
+    if (!bereich || getComputedStyle(bereich).display !== 'none') return;
+    var video = bereich.querySelector('video.elementor-background-video-hosted');
+    if (!video) return;
+    video.removeAttribute('autoplay');
+    video.preload = 'none';
+    var zurueck = function () {
+      if (getComputedStyle(bereich).display === 'none') return;
+      window.removeEventListener('resize', zurueck);
+      video.preload = 'auto';
+      video.setAttribute('autoplay', '');
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    window.addEventListener('resize', zurueck);
+  }
+  nurLadenWennSichtbar('d135e80');
   function start() {
     ['0f0c707', 'd135e80'].forEach(steuern);   // Hero (Desktop/Tablet) und Video-Block (Handy)
   }
@@ -696,6 +738,83 @@ steuerung = {"id": new_id(), "elType": "container", "isInner": False, "elements"
 }], "settings": {"content_width": "full", "padding": box(0, 0, 0, 0), "margin": box(0, 0, 0, 0),
                  "min_height": {"unit": "px", "size": 0, "sizes": []}, "_title": "Steuerung Hintergrundvideo"}}
 page.append(steuerung)
+
+# ---------------------------------------------------------------- 14) SEO: Überschriften-Hierarchie
+# Die Startseite setzt viele Abschnittsüberschriften als <div>. Hier bekommen sie echte Überschriften-Tags (h2/h3), Fließtext
+# in Überschriften-Widgets wird <p>. Das Aussehen bleibt gleich: jede dieser Überschriften hat ihre eigene (oder eine
+# globale) Typografie, die nicht vom Tag abhängt.
+HEADING_TAGS = [   # (Textanfang ohne HTML, Tag)
+    ("Solange nichts passiert", "h2"), ("Stell dir mal vor", "h2"), ("Und genau das wird möglich", "p"),
+    ("Mit Kamera- und Videoüberwachung von ProVision Infra", "h2"), ("So arbeiten wir", "h2"),
+    ("Ablauf der Zusammenarbeit", "h2"), ("Genau daraus ist ProVision Infra entstanden", "h3"),
+    ("Hier findest du", "h2"), ("Unsere Partner", "h2"),
+    ("Jede Kamera planen wir", "p"), ("Aufzeichnung und App sind eingerichtet", "p"),
+    ("5.0", "p"), ("Sterne bei Google", "p"),
+] + [(step, "h3") for step in STEPS]   # Schritte des Ablaufs: h3 statt h6 (Reihenfolge der Überschriften)
+
+def set_heading_tags(el):
+    if el.get("widgetType") == "heading":
+        text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", el["settings"].get("title", ""))).strip()
+        for start, tag in HEADING_TAGS:
+            if text.startswith(start):
+                el["settings"]["header_size"] = tag
+    for c in el.get("elements", []):
+        set_heading_tags(c)
+
+for sec in page:
+    set_heading_tags(sec)
+
+# ---------------------------------------------------------------- 15) SEO: Strukturierte Daten (Anbieter und Leistung)
+# Yoast liefert WebPage, Breadcrumb und WebSite, das FAQ-Akkordeon die FAQPage. Hier kommen Anbieter (LocalBusiness,
+# Daten aus dem Impressum) und die Leistung (Service) dazu. Die Texte für Titel und Beschreibung stehen in SEO (unten)
+# und werden nach elementor/seo.json geschrieben (Yoast-Felder der Seite, siehe ANLEITUNG-WORDPRESS.md).
+PAGE_URL = f"{SITE}/kamerasysteme/"
+SEO = {
+    "title": "Kamera- & Videoüberwachung für Unternehmen | ProVision Infra",
+    "description": ("Videoüberwachung für Unternehmen in Hamburg, Hannover und Niedersachsen. ProVision Infra plant und "
+                    "installiert dein Kamerasystem, mit Alarm aufs Handy."),
+    "focus_keyphrase": "Videoüberwachung für Unternehmen",
+    "og_title": "Wir schützen dein Unternehmen mit Kamera- & Videoüberwachung",
+    "og_image": MEDIA.get("vorschaubild", {}).get("url", ""),
+}
+assert len(SEO["description"]) <= 155, len(SEO["description"])
+AREA = [{"@type": "City", "name": "Hamburg"}, {"@type": "City", "name": "Hannover"},
+        {"@type": "State", "name": "Niedersachsen"}, {"@type": "Country", "name": "Deutschland"}]
+SCHEMA = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {"@type": "LocalBusiness", "@id": f"{SITE}/#organisation", "name": "ProVision Infra GmbH", "url": f"{SITE}/",
+         "logo": LOGO["url"], "image": LOGO["url"], "telephone": "+49 5821 4049040", "email": "info@provision-infra.de",
+         "address": {"@type": "PostalAddress", "streetAddress": "Klein Hesebecker Straße 11", "postalCode": "29549",
+                     "addressLocality": "Bad Bevensen", "addressRegion": "Niedersachsen", "addressCountry": "DE"},
+         "openingHoursSpecification": [
+             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+              "opens": "09:00", "closes": "18:00"},
+             {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "14:00"}],
+         "areaServed": AREA,
+         "sameAs": ["https://www.instagram.com/provision_infra_gmbh/", "https://www.facebook.com/share/1CWs2rohMt/",
+                    "https://www.linkedin.com/company/provision-infra-gmbh-i-g/"]},
+        {"@type": "Service", "@id": f"{PAGE_URL}#leistung", "name": "Kamera- und Videoüberwachung für Unternehmen",
+         "serviceType": "Videoüberwachung", "url": PAGE_URL, "image": SEO["og_image"] or LOGO["url"],
+         "description": SEO["description"], "provider": {"@id": f"{SITE}/#organisation"}, "areaServed": AREA,
+         "audience": {"@type": "BusinessAudience", "name": "Unternehmen, Betriebe und Gewerbe"}},
+    ],
+}
+schema_widget = {"id": new_id(), "elType": "widget", "widgetType": "html", "elements": [], "isInner": False, "settings": {
+    "html": '<script type="application/ld+json">' + json.dumps(SCHEMA, ensure_ascii=False) + "</script>",
+    "_title": "Strukturierte Daten (SEO)"}}
+steuerung["elements"].append(schema_widget)
+
+# ---------------------------------------------------------------- 16) Handy: Standbild des Videoblocks früh laden (LCP)
+# Am Handy ist das größte sichtbare Element das Standbild hinter dem Videoblock. Der Browser entdeckt es sonst erst spät
+# (Hintergrundbild per CSS, nachgeladen per Skript). Ein Preload-Hinweis am Seitenanfang, nur für Handybreiten.
+standbild = must(page[2], "d135e80")["settings"]["background_video_fallback"]["url"]
+preload = {"id": new_id(), "elType": "widget", "widgetType": "html", "elements": [], "isInner": False, "settings": {
+    "html": f'<link rel="preload" as="image" href="{standbild}" media="(max-width: 767px)" fetchpriority="high">',
+    "custom_css": "selector { display: none; }", "_title": "Vorladen Standbild (Handy)"}}
+page[1]["elements"].insert(0, preload)
+
+(ROOT / "elementor" / "seo.json").write_text(json.dumps(SEO, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 # ---------------------------------------------------------------- Seiteneinstellungen (wie Startseite)
 PAGE_CSS = """html, body {

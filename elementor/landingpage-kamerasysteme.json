@@ -565,6 +565,18 @@
    },
    "elements": [
     {
+     "id": "90f45dd",
+     "elType": "widget",
+     "widgetType": "html",
+     "elements": [],
+     "isInner": false,
+     "settings": {
+      "html": "<link rel=\"preload\" as=\"image\" href=\"https://provision-infra.de/wp-content/uploads/2026/10/kamera-hero-standbild-4k-scaled.jpg\" media=\"(max-width: 767px)\" fetchpriority=\"high\">",
+      "custom_css": "selector { display: none; }",
+      "_title": "Vorladen Standbild (Handy)"
+     }
+    },
+    {
      "id": "0f56d04",
      "elType": "container",
      "settings": {
@@ -3025,7 +3037,7 @@
              "id": "e54550b",
              "elType": "widget",
              "settings": {
-              "header_size": "div",
+              "header_size": "h2",
               "title": "Solange nichts passiert, denkt kaum jemand an Kameras.",
               "__globals__": {
                "title_color": "globals/colors?id=521f46a",
@@ -8425,7 +8437,7 @@
          "id": "13936537",
          "elType": "widget",
          "settings": {
-          "header_size": "h6",
+          "header_size": "p",
           "title": "5.0<span style=\"font-weight: 400; \">/5.0</span>",
           "__globals__": {
            "title_color": "globals/colors?id=521f46a",
@@ -8483,7 +8495,7 @@
          "id": "446e370",
          "elType": "widget",
          "settings": {
-          "header_size": "h6",
+          "header_size": "p",
           "title": "Sterne bei Google",
           "__globals__": {
            "title_color": "globals/colors?id=521f46a",
@@ -9003,7 +9015,7 @@
      "id": "8e89b3c",
      "elType": "widget",
      "settings": {
-      "header_size": "div",
+      "header_size": "h2",
       "typography_typography": "custom",
       "title": "<b>Stell dir</b> mal vor …",
       "__globals__": {
@@ -15220,7 +15232,7 @@
          "id": "f37ac87",
          "elType": "widget",
          "settings": {
-          "header_size": "div",
+          "header_size": "p",
           "title": "Und genau das wird möglich mit ProVision&nbsp;Infra:",
           "__globals__": {
            "title_color": "globals/colors?id=521f46a",
@@ -15294,7 +15306,7 @@
          "id": "cefdcfb",
          "elType": "widget",
          "settings": {
-          "header_size": "div",
+          "header_size": "h2",
           "typography_typography": "custom",
           "title": "Mit Kamera- und Videoüberwachung von ProVision Infra <span style=\"font-weight: 700; \">teure Schäden verhindern</span>",
           "__globals__": {
@@ -15721,7 +15733,7 @@
        "id": "c869af6",
        "elType": "widget",
        "settings": {
-        "header_size": "div",
+        "header_size": "h2",
         "title": "So arbeiten wir",
         "__globals__": {
          "title_color": "globals/colors?id=521f46a",
@@ -15995,7 +16007,7 @@
            "id": "8b353e8",
            "elType": "widget",
            "settings": {
-            "header_size": "div",
+            "header_size": "p",
             "title": "Jede Kamera planen wir nach einer Begehung vor Ort. Im Ernstfall zeigt sie den Täter, nicht den Parkplatz.",
             "__globals__": {
              "title_color": "globals/colors?id=521f46a",
@@ -16225,7 +16237,7 @@
            "id": "6519b8c",
            "elType": "widget",
            "settings": {
-            "header_size": "div",
+            "header_size": "p",
             "title": "Aufzeichnung und App sind eingerichtet, bevor wir vom Hof fahren. Dein Handy schlägt ab dem ersten Tag Alarm.",
             "__globals__": {
              "title_color": "globals/colors?id=521f46a",
@@ -16677,7 +16689,7 @@
        "id": "d8fa3a6",
        "elType": "widget",
        "settings": {
-        "header_size": "div",
+        "header_size": "h2",
         "title": "Ablauf der Zusammenarbeit",
         "__globals__": {
          "title_color": "globals/colors?id=521f46a",
@@ -16863,7 +16875,7 @@
              "elType": "widget",
              "settings": {
               "title": "Termin vor Ort",
-              "header_size": "h6",
+              "header_size": "h3",
               "align": "center",
               "__globals__": {
                "title_color": "globals/colors?id=521f46a",
@@ -17014,7 +17026,7 @@
              "elType": "widget",
              "settings": {
               "title": "Umsetzung",
-              "header_size": "h6",
+              "header_size": "h3",
               "align": "center",
               "__globals__": {
                "title_color": "globals/colors?id=521f46a",
@@ -17208,7 +17220,7 @@
              "elType": "widget",
              "settings": {
               "title": "Erstgespräch",
-              "header_size": "h6",
+              "header_size": "h3",
               "align": "center",
               "__globals__": {
                "title_color": "globals/colors?id=521f46a",
@@ -17357,8 +17369,8 @@
              "id": "01d6be7",
              "elType": "widget",
              "settings": {
-              "title": "Planung deines Systems",
-              "header_size": "h6",
+              "title": "Planung deines Kamerasystems",
+              "header_size": "h3",
               "align": "center",
               "__globals__": {
                "title_color": "globals/colors?id=521f46a",
@@ -17487,7 +17499,7 @@
              "elType": "widget",
              "settings": {
               "title": "Übergabe & Betreuung",
-              "header_size": "h6",
+              "header_size": "h3",
               "align": "center",
               "__globals__": {
                "title_color": "globals/colors?id=521f46a",
@@ -17612,7 +17624,7 @@
           "_id": "7676575"
          },
          {
-          "eael_custom_title": "Planung deines Systems",
+          "eael_custom_title": "Planung deines Kamerasystems",
           "eael_custom_excerpt": "<p>Du bekommst ein Konzept mit Kamerastandorten und ein Angebot, das zu deinem Budget passt. Dann entscheidest du.</p>",
           "eael_custom_post_date": "",
           "eael_read_more_text_link": {
@@ -18807,7 +18819,7 @@
        "id": "4adfad6",
        "elType": "widget",
        "settings": {
-        "header_size": "div",
+        "header_size": "h3",
         "title": "Genau daraus ist ProVision Infra entstanden.",
         "__globals__": {
          "title_color": "globals/colors?id=521f46a",
@@ -19878,7 +19890,7 @@
            "id": "51f3331",
            "elType": "widget",
            "settings": {
-            "header_size": "div",
+            "header_size": "h2",
             "typography_typography": "custom",
             "title": "Hier findest du <br><span style=\"font-weight: 700; \">ProVision Infra</span>",
             "__globals__": {
@@ -20387,37 +20399,50 @@
         "eael_adv_accordion_tab_title": "Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
         "_id": "711f7a7",
         "eael_adv_accordion_tab_icon_show": "",
-        "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja, innerhalb klarer Regeln. Erlaubt ist dein eigenes Gelände samt Zugängen, nicht der Gehweg oder das Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel entsprechend und geben dir Schilder und Unterlagen mit.</span></p>"
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Ja, innerhalb klarer Regeln. Erlaubt ist dein eigenes Gelände samt Zugängen, nicht der Gehweg oder das Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel entsprechend und geben dir Schilder und Unterlagen mit.</p>"
        },
        {
-        "eael_adv_accordion_tab_title": "Wie lange dauert die Installation?",
+        "eael_adv_accordion_tab_title": "Wie lange dauert die Installation einer Videoüberwachung?",
         "_id": "887ada7",
         "eael_adv_accordion_tab_icon_show": "",
-        "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Vier bis acht Kameras sind meist an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft.</span></p>"
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Vier bis acht Kameras sind meist an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft.</p>"
        },
        {
-        "eael_adv_accordion_tab_title": "Kann ich die Bilder auf dem Handy sehen?",
+        "eael_adv_accordion_tab_title": "Kann ich die Kamerabilder auf dem Handy sehen?",
         "_id": "c4f00a2",
         "eael_adv_accordion_tab_icon_show": "",
-        "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Ja. In der App siehst du Live-Bild und Aufzeichnungen und wirst bei Bewegung benachrichtigt. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät.</span></p>"
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Ja. In der App siehst du Live-Bild und Aufzeichnungen und wirst bei Bewegung benachrichtigt. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät.</p>"
        },
        {
         "eael_adv_accordion_tab_title": "Was passiert bei Stromausfall oder Internetstörung?",
         "_id": "08d9e41",
         "eael_adv_accordion_tab_icon_show": "",
-        "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Fällt das Internet aus, fehlt nur der Fernzugriff. Die Aufzeichnung läuft auf dem Rekorder im Gebäude weiter. Gegen Stromausfall sichern wir Rekorder und Kameras auf Wunsch mit einer Notstromversorgung ab.</span></p>"
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Fällt das Internet aus, fehlt nur der Fernzugriff. Die Aufzeichnung läuft auf dem Rekorder im Gebäude weiter. Gegen Stromausfall sichern wir Rekorder und Kameras auf Wunsch mit einer Notstromversorgung ab.</p>"
        },
        {
-        "eael_adv_accordion_tab_title": "Was kostet eine Videoüberwachung?",
+        "eael_adv_accordion_tab_title": "Was kostet eine Videoüberwachung für mein Unternehmen?",
         "_id": "f12be08",
         "eael_adv_accordion_tab_icon_show": "",
-        "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Das hängt von der Zahl der Kameras und den Wegen für die Verkabelung ab. Einen ersten Rahmen bekommst du im Erstgespräch, einen verbindlichen Preis nach dem Termin vor Ort.</span></p>"
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Das hängt von der Zahl der Kameras und den Wegen für die Verkabelung ab. Einen ersten Rahmen bekommst du im Erstgespräch, einen verbindlichen Preis nach dem Termin vor Ort.</p>"
        },
        {
         "eael_adv_accordion_tab_title": "Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
         "_id": "9daf15a",
         "eael_adv_accordion_tab_icon_show": "",
-        "eael_adv_accordion_tab_content": "<p><span style=\"font-weight: 400;\">Die Aufnahmen bleiben auf deinem Rekorder im Gebäude, nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung ein und halten die Software aktuell.</span></p>"
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Die Aufnahmen bleiben auf deinem Rekorder im Gebäude, nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung ein und halten die Software aktuell.</p>"
+       },
+       {
+        "eael_adv_accordion_tab_title": "In welcher Region installiert ProVision Infra Videoüberwachung?",
+        "_id": "7266232",
+        "eael_adv_accordion_tab_icon_show": "",
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Unser Sitz ist Bad Bevensen bei Lüneburg. Unterwegs sind wir vor allem im Raum Hamburg, Hannover und Niedersachsen, bei größeren Projekten auch bundesweit.</p>"
        }
       ],
       "eael_adv_accordion_media_type_tab": [
@@ -20708,7 +20733,7 @@
        "left": "20",
        "isLinked": false
       },
-      "eael_adv_accordion_title_tag": "p",
+      "eael_adv_accordion_title_tag": "h3",
       "eael_adv_accordion_tab_toggle_icon_size_mobile": {
        "unit": "px",
        "size": 20,
@@ -23205,7 +23230,8 @@
       "eael_adv_accordion_tab_border_active_color": "#FBC91B",
       "adv_accordion_content_bgtype_background": "classic",
       "adv_accordion_content_bgtype_color": "#000D30",
-      "eael_adv_accordion_content_border_color": "#FBC91B"
+      "eael_adv_accordion_content_border_color": "#FBC91B",
+      "eael_adv_accordion_faq_schema_show": "yes"
      },
      "elements": [],
      "widgetType": "eael-adv-accordion"
@@ -23393,7 +23419,7 @@
        "id": "3070627",
        "elType": "widget",
        "settings": {
-        "header_size": "div",
+        "header_size": "h2",
         "title": "Unsere Partner",
         "__globals__": {
          "title_color": "globals/colors?id=521f46a",
@@ -25460,11 +25486,11 @@
          "elType": "widget",
          "settings": {
           "image": {
-           "id": 309,
-           "url": "https://provision-infra.de/wp-content/uploads/2026/05/ProVision-Infra-GmbH-blau-1.png",
-           "alt": "",
-           "source": "library",
-           "size": ""
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-footer-logo-provision-infra.png",
+           "id": 4492,
+           "size": "",
+           "alt": "ProVision Infra GmbH",
+           "source": "library"
           },
           "align": "start",
           "align_mobile": "center",
@@ -42393,19 +42419,30 @@
    "isInner": false
   },
   {
-   "id": "f0d486a",
+   "id": "730dd41",
    "elType": "container",
    "isInner": false,
    "elements": [
     {
-     "id": "730dd41",
+     "id": "2daec2f",
      "elType": "widget",
      "widgetType": "html",
      "elements": [],
      "isInner": false,
      "settings": {
-      "html": "<script>\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) return;\n  function steuern(id) {\n    var bereich = document.querySelector('.elementor-element-' + id);\n    if (!bereich) return;\n    var video = bereich.querySelector('video.elementor-background-video-hosted');\n    if (!video) return;\n    var warAusserhalb = false;\n    video.loop = false;\n    video.addEventListener('ended', function () {\n      // nach Elementors eigenem Ausblenden wieder einblenden: letztes Bild bleibt stehen\n      setTimeout(function () { video.style.display = ''; }, 0);\n    });\n    if (!('IntersectionObserver' in window)) return;\n    new IntersectionObserver(function (eintraege) {\n      eintraege.forEach(function (e) {\n        if (!e.isIntersecting) { warAusserhalb = true; return; }\n        if (!warAusserhalb) return;\n        warAusserhalb = false;\n        video.style.display = '';\n        try { video.currentTime = 0; } catch (err) {}\n        var p = video.play();\n        if (p && p.catch) p.catch(function () {});\n      });\n    }, { threshold: 0 }).observe(bereich);\n  }\n  function start() {\n    ['0f0c707', 'd135e80'].forEach(steuern);   // Hero (Desktop/Tablet) und Video-Block (Handy)\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();\n  // Elementor initialisiert Hintergrundvideos erst nach dem Laden seiner Skripte: Steuerung dann erneut anbinden\n  window.addEventListener('load', function () { setTimeout(start, 800); });\n})();\n</script>",
+      "html": "<script>\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) return;\n  function steuern(id) {\n    var bereich = document.querySelector('.elementor-element-' + id);\n    if (!bereich) return;\n    var video = bereich.querySelector('video.elementor-background-video-hosted');\n    if (!video) return;\n    var warAusserhalb = false;\n    video.loop = false;\n    video.addEventListener('ended', function () {\n      // nach Elementors eigenem Ausblenden wieder einblenden: letztes Bild bleibt stehen\n      setTimeout(function () { video.style.display = ''; }, 0);\n    });\n    if (!('IntersectionObserver' in window)) return;\n    new IntersectionObserver(function (eintraege) {\n      eintraege.forEach(function (e) {\n        if (!e.isIntersecting) { warAusserhalb = true; return; }\n        if (!warAusserhalb) return;\n        warAusserhalb = false;\n        video.style.display = '';\n        try { video.currentTime = 0; } catch (err) {}\n        var p = video.play();\n        if (p && p.catch) p.catch(function () {});\n      });\n    }, { threshold: 0 }).observe(bereich);\n  }\n  // Der Handy-Videoblock ist am Computer und Tablet ausgeblendet; Elementor lädt sein Video dort trotzdem (1,5 MB).\n  // Deshalb ohne Autoplay und ohne Vorladen, solange der Block unsichtbar ist. Wird er durch eine Größenänderung\n  // sichtbar, startet das Video nach.\n  function nurLadenWennSichtbar(id) {\n    var bereich = document.querySelector('.elementor-element-' + id);\n    if (!bereich || getComputedStyle(bereich).display !== 'none') return;\n    var video = bereich.querySelector('video.elementor-background-video-hosted');\n    if (!video) return;\n    video.removeAttribute('autoplay');\n    video.preload = 'none';\n    var zurueck = function () {\n      if (getComputedStyle(bereich).display === 'none') return;\n      window.removeEventListener('resize', zurueck);\n      video.preload = 'auto';\n      video.setAttribute('autoplay', '');\n      var p = video.play();\n      if (p && p.catch) p.catch(function () {});\n    };\n    window.addEventListener('resize', zurueck);\n  }\n  nurLadenWennSichtbar('d135e80');\n  function start() {\n    ['0f0c707', 'd135e80'].forEach(steuern);   // Hero (Desktop/Tablet) und Video-Block (Handy)\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();\n  // Elementor initialisiert Hintergrundvideos erst nach dem Laden seiner Skripte: Steuerung dann erneut anbinden\n  window.addEventListener('load', function () { setTimeout(start, 800); });\n})();\n</script>",
       "_title": "Steuerung Hintergrundvideo"
+     }
+    },
+    {
+     "id": "f058554",
+     "elType": "widget",
+     "widgetType": "html",
+     "elements": [],
+     "isInner": false,
+     "settings": {
+      "html": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"LocalBusiness\", \"@id\": \"https://provision-infra.de/#organisation\", \"name\": \"ProVision Infra GmbH\", \"url\": \"https://provision-infra.de/\", \"logo\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-logo-provision-infra-1032.png\", \"image\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-logo-provision-infra-1032.png\", \"telephone\": \"+49 5821 4049040\", \"email\": \"info@provision-infra.de\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Klein Hesebecker Straße 11\", \"postalCode\": \"29549\", \"addressLocality\": \"Bad Bevensen\", \"addressRegion\": \"Niedersachsen\", \"addressCountry\": \"DE\"}, \"openingHoursSpecification\": [{\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\"], \"opens\": \"09:00\", \"closes\": \"18:00\"}, {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": \"Friday\", \"opens\": \"09:00\", \"closes\": \"14:00\"}], \"areaServed\": [{\"@type\": \"City\", \"name\": \"Hamburg\"}, {\"@type\": \"City\", \"name\": \"Hannover\"}, {\"@type\": \"State\", \"name\": \"Niedersachsen\"}, {\"@type\": \"Country\", \"name\": \"Deutschland\"}], \"sameAs\": [\"https://www.instagram.com/provision_infra_gmbh/\", \"https://www.facebook.com/share/1CWs2rohMt/\", \"https://www.linkedin.com/company/provision-infra-gmbh-i-g/\"]}, {\"@type\": \"Service\", \"@id\": \"https://provision-infra.de/kamerasysteme/#leistung\", \"name\": \"Kamera- und Videoüberwachung für Unternehmen\", \"serviceType\": \"Videoüberwachung\", \"url\": \"https://provision-infra.de/kamerasysteme/\", \"image\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-vorschau-1200x630-1.jpg\", \"description\": \"Videoüberwachung für Unternehmen in Hamburg, Hannover und Niedersachsen. ProVision Infra plant und installiert dein Kamerasystem, mit Alarm aufs Handy.\", \"provider\": {\"@id\": \"https://provision-infra.de/#organisation\"}, \"areaServed\": [{\"@type\": \"City\", \"name\": \"Hamburg\"}, {\"@type\": \"City\", \"name\": \"Hannover\"}, {\"@type\": \"State\", \"name\": \"Niedersachsen\"}, {\"@type\": \"Country\", \"name\": \"Deutschland\"}], \"audience\": {\"@type\": \"BusinessAudience\", \"name\": \"Unternehmen, Betriebe und Gewerbe\"}}]}</script>",
+      "_title": "Strukturierte Daten (SEO)"
      }
     }
    ],

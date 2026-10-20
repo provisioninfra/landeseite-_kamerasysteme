@@ -456,3 +456,41 @@ und Partner bleiben wörtlich die Startseiten-Bausteine.
   Produktbilds 3 ebenso auf 880 x 1511 hochgerechnet und als WebP mit Transparenz (60 KB) in die Lottie-Datei eingebettet
   (ID 4472, 80 KB); die Ebene ist auf 30,68 % skaliert, Geometrie und LED-Position unverändert. Alte Dateien (4450, 4451,
   4460) gelöscht. Hochrechnen: `tools/kamera_lottie_erzeugen.py` liest `assets/img/produkte/kamera-3-scharf.webp`.
+
+## SEO-Optimierung (20.10.2026)
+
+Texte unverändert bis auf kleine Ergänzungen, alles am 20.10. abends geprüft (Lighthouse 12 lokal, Playwright 1440/393 px).
+
+- **Titel und Beschreibung (Yoast):** Titel `Kamera- & Videoüberwachung für Unternehmen | ProVision Infra` (60 Zeichen, vorher
+  „Kamera- & Videoüberwachung - ProVision“), Meta-Beschreibung mit Region (151 Zeichen, vorher 180 und damit abgeschnitten),
+  Fokus-Keyphrase „Videoüberwachung für Unternehmen“, Seite als Cornerstone markiert. Vorschau-Titel für Facebook/X trugen noch
+  „dein Gebäude“ (alte H1), jetzt „Wir schützen dein Unternehmen mit Kamera- & Videoüberwachung“ mit der neuen Beschreibung.
+  Werte: `elementor/seo.json`. Canonical, `index, follow`, Sitemap-Eintrag, Weiterleitungen (http, www, ohne Schrägstrich →
+  301 auf die Seite) und robots.txt waren bereits in Ordnung; Kontakt- und Terminseiten bleiben `noindex`.
+- **Überschriften:** Die Startseite setzt Abschnittsüberschriften als `<div>`; hier sind es jetzt echte Überschriften:
+  h2 für „Solange nichts passiert …“, „Stell dir mal vor …“, „Mit Kamera- und Videoüberwachung … teure Schäden verhindern“,
+  „So arbeiten wir“, „Ablauf der Zusammenarbeit“, „Hier findest du ProVision Infra“, „Unsere Partner“; h3 für die fünf Schritte
+  (vorher h6), „Genau daraus ist ProVision Infra entstanden“ und die FAQ-Fragen (vorher `<p>`); Fließtext in
+  Überschriften-Widgets (Vorzeile, Kästen „So arbeiten wir“, Bewertungszeile) als `<p>`. Aussehen identisch: alle
+  berechneten Stile (Größe, Gewicht, Zeilenhöhe, Farbe, Abstände) vor und nach der Umstellung verglichen, bei 1440 und 393 px
+  keine Abweichung. Lighthouse „Reihenfolge der Überschriften“ besteht jetzt.
+- **Kleine Textergänzungen (Suchbegriffe):** FAQ „Wie lange dauert die Installation einer Videoüberwachung?“, „Kann ich die
+  Kamerabilder auf dem Handy sehen?“, „Was kostet eine Videoüberwachung für mein Unternehmen?“, neue siebte Frage zur Region
+  (Bad Bevensen, Hamburg, Hannover, Niedersachsen, bundesweit); Schritt 3 heißt „Planung deines Kamerasystems“ (das Wort
+  „Kamerasystem“ kam trotz der Adresse /kamerasysteme/ nicht vor).
+- **Strukturierte Daten:** Yoast liefert WebPage, Breadcrumb, WebSite. Dazu kommen jetzt `LocalBusiness` (Firmendaten aus dem
+  Impressum: Adresse, Telefon, Öffnungszeiten, Einsatzgebiet, Social-Profile) und `Service` (Kamera- und Videoüberwachung für
+  Unternehmen, Anbieter, Einsatzgebiet) als JSON-LD im Abschnitt „Steuerung Hintergrundvideo“, sowie `FAQPage` mit den sieben
+  Fragen, die das FAQ-Akkordeon selbst ausgibt (Option „FAQ Schema“ des Widgets; Antworten ohne den überflüssigen `span`).
+  Alle vier JSON-LD-Blöcke sind gültig. Der `Product`-Block mit der Bewertung stammt vom ProvenExpert-Siegel (seitenweit).
+- **Bilder:** Eigene Medien haben Alt-Texte (Logo, Produktbilder). Das Footer-Logo (Startseiten-Datei ohne Alt-Text) hatte als
+  Link keinen Namen; jetzt eigene Kopie der Datei mit Alt-Text (Mediathek-ID 4492, `medien.json: footer_logo`).
+- **Ladezeit:** Am Computer wurde auch das ausgeblendete Handy-Video (1,5 MB) geladen; das Steuerskript nimmt dem Block
+  Autoplay und Vorladen, solange er unsichtbar ist (bei Größenänderung startet das Video nach). Am Handy ist das größte
+  sichtbare Element das Standbild hinter dem Videoblock; ein Preload-Hinweis am Seitenanfang (nur bis 767 px) lässt den
+  Browser es sofort laden (Start nach 0,7 s statt 1,8 s, als „erkennbar und priorisiert“ gewertet). Lighthouse (lokal, gedrosselt,
+  Schwankung einige Punkte): Handy 39 → 47 Punkte, blockierende Zeit 1,6 s → 0,8 s; Computer 78 → 82; SEO 100, Barrierefreiheit
+  94 → 95. Der große Rest kommt aus seitenweiten Teilen (Tag Manager, Meta-Pixel, ProvenExpert, BugHerd-Skript mit Fehlermeldung,
+  Startseiten-Hintergrundbilder als PNG, Hero-Video als größtes Element am Handy) und wurde nicht angefasst.
+- **Geprüft nach dem Speichern:** Titel, Meta, OG/Twitter, Canonical, Überschriftenfolge, JSON-LD, Preload-Link, Videos
+  (Computer: nur 4k-Video, Handy: nur Handy-Video), keine JavaScript-Fehler, Seiteneinstellungen unverändert.
