@@ -15,7 +15,7 @@ python3 -m http.server 8080
 
 ## Struktur
 
-- `index.html` – Seite (Header, Hero, Kernbotschaft, fünf Unterschiede, Ablauf der Zusammenarbeit, Footer)
+- `index.html` – Seite (Header, Hero, Logo-Rahmen mit drei Punkten, Was ohne Kameras passiert, So arbeiten wir, Stell dir mal vor, Und genau das wird möglich, Ablauf der Zusammenarbeit, Footer)
 - `assets/css/style.css` – Styles (Farben/Schrift wie Liveseite: Navy #010d30, Gelb #fbc91b, Poppins)
 - `assets/js/main.js` – Hero-Video-Steuerung, mobile Navigation, Scroll-Animationen der Ablauf-Sektion
 - `assets/js/lottie_light.min.js` – lottie-web 5.12.2, Light-Build (Timeline-Animation)
@@ -41,6 +41,7 @@ Seiten-ID 4313). Sie wurde aus den Original-Bausteinen der Startseite zusammenge
 Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-Elemente.
 
 - `tools/build_from_homepage.py` – baut die Seite aus den Startseiten-Bausteinen zusammen
+- `tools/kamera-linien.html` – Skript und Stil für die Leuchtlinie und das Aufleuchten der Kästen in „Stell dir mal vor“
 - `elementor/quelle-startseite.json` – Elementor-Daten der Startseite (per WordPress-Export gelesen, nur Quelle)
 - `elementor/medien.json`, `elementor/icons.json` – IDs/URLs der hochgeladenen Kamera-Medien und Icons
 - `elementor/kamera-seite.elements.json` – Elemente + Seiteneinstellungen (Stand, der in WordPress gespeichert ist)

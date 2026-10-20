@@ -363,3 +363,46 @@ Mit Testzugang direkt in WordPress gebaut und geprüft:
   E-Mail-Erinnerungen „1 Stunde vor dem Ereignis“ aktiv, beim Kamera-Termin stehen sie auf „Aus“. SMS-Erinnerung
   (10 Minuten vorher), E-Mail-Bestätigung, Absage-E-Mail und der Workflow „Terminbestaetigung“ sind bei beiden gleich.
 
+
+## Neuer Seitenaufbau nach dem Vorbild der Startseite (20.10.2026)
+
+Reihenfolge jetzt: Hero, Logo-Rahmen mit drei Punkten, Was ohne Kameras passiert (Glas-Logo, Pain-Karten), So arbeiten wir,
+Stell dir mal vor, Und genau das wird möglich, Ablauf, Kundenstimmen, Gründer, Technik, Standort, FAQ, Partner, Footer.
+Alle Texte überarbeitet (kürzer, ohne Gedankenstriche, ohne Dreiergruppen und Floskeln); Kundenstimmen, Gründer, Standort
+und Partner bleiben wörtlich die Startseiten-Bausteine.
+
+- **Logo-Rahmen + drei Punkte:** Kopie des Startseiten-Abschnitts unter dem Hero (Zeile mit Rahmen und drei Icon-Zeilen).
+  Im Rahmen statt des Vimeo-Films das Header-Logo (Mediathek-ID 407) mit Link zur Startseite; Rahmen mindestens 320/240/190 px
+  hoch (Computer/Tablet/Handy). Anker `digitalen` liegt auf diesem Abschnitt, damit der erste Menüpunkt weiter funktioniert.
+- **Pain-Karten:** fünf Karten im Format der Startseite („… wenn“, Verlauf, Folge-Box), X-Symbol der Startseite, letzte Karte
+  mit Hinweiszeile (Vorlage: fünfte Startseiten-Karte, Rahmen und Hintergrund an die anderen angeglichen). Einleitung 20 px
+  (Laptop 19, Tablet 18, Handy 17). Sticky-Text, Hover-Rahmen und Glas-V unverändert, erneut gemessen (1920/1440 sticky,
+  Hover: Rahmen rgb(251,201,27), Glow 24 px).
+- **So arbeiten wir:** Kopie des schwebenden Teils („… installiert dir genau das, damit du“) als eigener Abschnitt.
+- **Stell dir mal vor:** Die Startseite zeichnet Rahmen, Icons und Leuchtlinie der acht Kästen in acht Lottie-Dateien
+  (je 1,2 MB, Schloss und Griff als eingebettete Bilder) an festen Positionen; Text und Rahmen laufen dort je nach Breite
+  und Textlänge auseinander (auf der Startseite bei 1440 px bis zu 76 px). Für die Kameraseite bekommen die Kästen Rahmen,
+  Icon und Aufleuchten selbst (Vorlage: Handy-Kasten der Startseite), die gelbe Linie zum Kamerakopf zeichnet ein Skript
+  (`tools/kamera-linien.html`) als SVG-Pfad von der tatsächlichen Kastenkante zur Kamera: erster Kasten leuchtet beim
+  Erscheinen, Hover wechselt Kasten und Linie, Verlassen schaltet nach 120 ms zurück; Resize und Größenänderung der
+  Kamera (ResizeObserver) ziehen die Linie nach. Das Hover-Skript der Website im Footer findet auf der Kameraseite keine
+  `data-lottie-target`-Elemente und bleibt untätig. Die Kamera in der Mitte ist eine selbst erzeugte Lottie-Datei
+  (tools/kamera_lottie_erzeugen.py: Produktbild 3 als eingebettetes PNG, Schwenk ±6°, Schweben, blinkende LED,
+  Lichtschein; 210 KB, Mediathek-ID 4449), Trigger „im Sichtbereich“, Endlosschleife; außerhalb des Sichtbereichs pausiert
+  Elementor sie. Gemessen (Linie, Kamera, Kästen in Spaltenbreite): 1920, 1440, 1280, 1024, 768; Handy: acht Kästen
+  untereinander, Kamera 280 px breit darunter.
+- **Und genau das wird möglich:** Kopie des Startseiten-Abschnitts mit neuen Hintergrundbildern: Startseiten-Grafik, die
+  Person per Freisteller (rembg u2net) in eine dunkle Kapuzen-Silhouette mit schwachem grünem Lichtsaum umgesetzt
+  (tools/einbrecher_silhouette.py; Mediathek-IDs 4450 Computer, 4451 Handy, je 240 KB JPEG). Darüber ein HTML-Element, das die
+  Hintergrund-Geometrie nachbildet (Computer/Tablet: cover, mittig; Handy: contain, unten) und zwei Bullet-Kameras aus
+  den Produktbildern (IDs 4446/4447) über der Tür und über der Silhouette platziert: Schwenk ±4° (7 s bzw. 8 s), rote
+  LED blinkt (1,3 s). Textkasten liegt über der Kamera-Ebene (z-index). Gemessen in allen Breiten; bei 585 bis 768 px
+  greift die Mindesthöhe 1000 px der Startseite.
+- **Partner** stehen jetzt nach dem FAQ, Standort mit Erstgespräch vor dem FAQ.
+- **Headline:** „Wir schützen dein Unternehmen“; Handy-Formel `min(28px, 5.9vw - 2px)`, damit die fette Zeile bei 360 bis
+  430 px einzeilig bleibt (bei 393 px: 21,2 px, zwei Zeilen insgesamt).
+- **Aufräumen:** acht testweise hochgeladene Linien-Lotties und eine Testdatei wieder aus der Mediathek gelöscht
+  (IDs 4437 bis 4445). Neu in der Mediathek: 4446 bis 4451 (Kameras, Kamera-Animation, zwei Szenenbilder).
+- Prüfung auf der Live-Seite (Playwright, Chromium): keine horizontale Verschiebung bei 1920/1440/1280/1024/768/393 px,
+  keine JavaScript-Fehler, Reihenfolge der 22 Abschnitte wie geplant, Logo-Link auf die Startseite, Animationen laufen
+  (Kamera-Lottie im Sichtbereich, Szene-Kameras per CSS), Hover-Zusammenspiel der Kästen in allen Desktop-Breiten.

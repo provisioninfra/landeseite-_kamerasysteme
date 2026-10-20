@@ -59,19 +59,34 @@ So tauschst oder ergänzt du Bilder:
 Jeder Text ist ein eigenes Elementor-Element. Im Editor auf einen Text klicken, links im Bedienfeld
 schreiben, fertig. Diese Stellen lohnen einen Blick:
 
-- **Hero:** Überschrift und Einleitung. In der Überschrift steht nach „Gebäude“ ein `<br>` (fester
+- **Hero:** Überschrift und Einleitung. In der Überschrift steht nach „Unternehmen“ ein `<br>` (fester
   Zeilenumbruch), damit „mit Kamera- & Videoüberwachung“ auf jedem Bildschirm in der zweiten Zeile beginnt.
   Beim Ändern des Textes das `<br>` stehen lassen. Die Schriftgröße steht unter **Stil → Typografie → Größe**;
-  für Tablet und Handy ist dort eine Formel wie `min(28px, 7vw - 2px)` hinterlegt. Die erste Zahl ist die
+  für Tablet und Handy ist dort eine Formel wie `min(28px, 5.9vw - 2px)` hinterlegt. Die erste Zahl ist die
   größte erlaubte Größe, der Rest hält die Zeilen bei schmalen Bildschirmen zusammen. Wer es größer möchte,
   erhöht nur die erste Zahl.
-- **Unser Anspruch:** Glas-Box unter dem Hero.
-- **Fünf Unterschiede:** Am Computer zweispaltig wie der Startseiten-Abschnitt „Warum immer mehr KMUs …“: links
-  Überschrift und Einleitung (bleiben beim Scrollen stehen, bis die Karten rechts zu Ende sind), rechts fünf Karten
-  (Rahmen, beim Überfahren mit der Maus gelb) mit Überschrift, kurzem Text und einer fetten Box mit dem
-  Schmerzpunkt. Karte anklicken, dann die drei Textelemente darin einzeln bearbeiten. Auf Tablet und Handy stehen
-  Text und Karten untereinander, am Handy mit dem Glas-Logo oben wie auf der Startseite. Das Glas-Logo im
-  Hintergrund ist das Bild der Startseite (Mediathek-ID 516).
+- **Logo-Rahmen und drei Punkte** (direkt unter dem Hero, wie auf der Startseite): links der gelb umrandete Rahmen
+  mit dem Logo, das auf die Startseite verlinkt (Bild-Element, Link unter **Inhalt → Link**), rechts drei Zeilen mit
+  Icon und Text (Ausgangslage, Folgen, Lösung). Jede Zeile ist ein eigenes Textelement.
+- **Was ohne Kameras auf deinem Gelände passiert?** Am Computer zweispaltig wie der Startseiten-Abschnitt „Warum immer
+  mehr KMUs …“: links Überschrift und Einleitung (bleiben beim Scrollen stehen, bis die Karten rechts zu Ende sind),
+  rechts fünf Karten mit X-Symbol (Rahmen, beim Überfahren mit der Maus gelb). Jede Karte: Situation („… wenn“),
+  Verlauf und eine fette Box mit der Folge; die letzte Karte zusätzlich mit einer Hinweiszeile (Glühbirne).
+  Karte anklicken, dann die Textelemente darin einzeln bearbeiten. Auf Tablet und Handy stehen Text und Karten
+  untereinander, am Handy mit dem Glas-Logo oben wie auf der Startseite (Bild der Startseite, Mediathek-ID 516).
+- **So arbeiten wir:** drei schwebende Kästen mit Haken (wie „ProVision Infra installiert dir genau das …“ auf der
+  Startseite). Überschrift und die drei Texte sind einzelne Elemente.
+- **Stell dir mal vor …:** acht Kästen um die schwenkende Kamera. Am Computer und Tablet stehen die Kästen links und
+  rechts der Kamera; der erste Kasten leuchtet, beim Überfahren leuchtet der jeweilige Kasten und eine gelbe Linie
+  läuft zur Kamera (Element „Leuchtlinie zur Kamera“, bitte nicht löschen). Am Handy stehen die acht Kästen
+  untereinander, darunter die Kamera. Texte und Icons gibt es deshalb zweimal (Abschnitt „Computer/Tablet“ und
+  Abschnitt „Handy“), Änderungen bitte an beiden Stellen. Die Kamera ist eine Lottie-Animation aus Produktbild 3
+  (Mediathek: kamera-schwenk-mobil.json); sie schwenkt, schwebt leicht, die rote LED blinkt.
+- **Und genau das wird möglich mit ProVision Infra:** Überschriften und Textkasten links, rechts die Szene der
+  Startseite (Flur mit Tür) als Hintergrundbild, die Person darauf als dunkle Kapuzen-Silhouette (Einbrecher).
+  Zwei Kameras aus den Produktbildern sitzen oben über der Szene, schwenken leicht und blinken (Element „Zwei Kameras
+  über der Szene“). Das Hintergrundbild wechselst du unter **Stil → Hintergrund** (Computer und Handy haben je ein
+  eigenes Bild: kamera-szene-einbrecher.jpg und kamera-szene-einbrecher-mobil.jpg).
 - **Erstgespräch-Button** unter den Karten: nur der Button, ohne Text davor. Alle Buttons der Seite öffnen
   die eigene Kontaktseite /kontakt-kamerasysteme/ (wie die Startseite /kontakt öffnet).
 - **Kontaktseite:** eigene Seite „Kontakt Kamerasysteme“ (ID 4371, /kontakt-kamerasysteme/), Kopie der Seite
@@ -94,8 +109,10 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
 - **FAQ:** Auf das Akkordeon klicken → links unter **Inhalt** die Fragen aufklappen und bearbeiten.
   Die Antwort zur Rechtslage ist allgemein gehalten. Wenn du einen Datenschutz-Berater hast, lass sie gegenlesen.
 
-Die Kundenstimmen, der Gründer-Abschnitt, die Partner und der Standort sind unverändert von der
-Startseite übernommen.
+Reihenfolge der Seite: Hero, Logo-Rahmen mit drei Punkten, Was ohne Kameras passiert, So arbeiten wir, Stell dir mal
+vor, Und genau das wird möglich, Ablauf der Zusammenarbeit, Kundenstimmen, Gründer, Technik (Produktslider), Standort mit
+Erstgespräch, FAQ, Partner, Footer. Kundenstimmen, Gründer, Standort und Partner sind unverändert von der Startseite
+übernommen.
 
 ---
 

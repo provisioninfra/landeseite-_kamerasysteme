@@ -7,8 +7,10 @@ Medien:   elementor/medien.json              (IDs/URLs der hochgeladenen Kamera-
 Ausgabe:  elementor/kamera-seite.elements.json       – Elemente + Seiteneinstellungen (zum Speichern über den Editor)
           elementor/landingpage-kamerasysteme.json   – dieselbe Seite als importierbare Elementor-Vorlage
 
-Jeder Abschnitt ist eine Kopie eines Startseiten-Abschnitts; nur Texte, Video, Bilder und die
-Anzahl der Slides/Zeilen werden geändert. Dadurch stimmen Schriften, Farben, Abstände,
+Jeder Abschnitt ist eine Kopie eines Startseiten-Abschnitts; nur Texte, Video, Bilder, Icons und die
+Anzahl der Slides/Zeilen werden geändert. Reihenfolge (20.10.): Header, Hero, Video-Rahmen + drei Punkte, Glas-Logo-Teil
+(Pain-Karten), So arbeiten wir, Stell dir mal vor, Und genau das wird möglich, Ablauf, Kundenstimmen, Gründer, Technik,
+Standort, FAQ, Partner, Footer. Dadurch stimmen Schriften, Farben, Abstände,
 Animationen, Header und Footer exakt mit der Startseite überein.
 
 Aufruf: python3 tools/build_from_homepage.py
@@ -66,43 +68,85 @@ def svg_icon(media_id, url):
 
 # ---------------------------------------------------------------- Texte
 # Fester Zeilenumbruch nach „Gebäude“: „mit Kamera- & Videoüberwachung“ steht immer in der zweiten Zeile (ohne Gedankenstrich)
-HERO_H1 = '<span style="font-weight: 700;">Wir schützen dein Gebäude</span><br>mit Kamera- &amp; Videoüberwachung'
-HERO_SUB = ('Ein Einbruch, Vandalismus oder Diebstahl &amp; deinem Unternehmen drohen schnell zehntausende Euro an Schaden. <br>\n<br>\n'
-            'ProVision Infra plant &amp; installiert deine Kamera- und Videoüberwachung, mit der du dein Gebäude rund um die Uhr im Blick hast – per App, jederzeit und von überall.')
+HERO_H1 = '<span style="font-weight: 700;">Wir schützen dein Unternehmen</span><br>mit Kamera- &amp; Videoüberwachung'
+HERO_SUB = ('Ein einziger Einbruch kostet dich schnell zehntausende Euro. Und oft bleibt es nicht bei einem. <br>\n<br>\n'
+            'ProVision Infra plant und installiert deine Kamera- und Videoüberwachung. Du siehst jederzeit per App, '
+            'was auf deinem Gelände passiert, und hast im Ernstfall Aufnahmen, die etwas beweisen.')
 
-CLAIM_H = 'Eine Kamera montieren kann jeder. <span style="font-weight: 700; ">Dass sie im Ernstfall das Richtige zeigt, ist unsere Arbeit.</span>'
-CLAIM_T = ('<p>Der Einbruch passiert nachts um drei. Morgens siehst du eine Aufnahme, auf der niemand zu erkennen ist. '
-           'Die Versicherung fragt trotzdem nach Belegen. Genau diesen Moment planen wir von Anfang an mit.</p>')
+# Drei Punkte neben dem Video-Rahmen (wie auf der Startseite: Ausgangslage, Folgen, Lösung). Icon-Schlüssel: HOME_* = Icon der
+# Startseite (UNLOCK = offenes Schloss, WARN = Warndreieck, KEY = Schlüssel), ICON1-5 = Kamera-Icons aus icons.json.
+PUNKTE = [
+    ("HOME_UNLOCK", "Solange nichts passiert, denkt kaum jemand an Kameras."),
+    ("HOME_WARN", "Erst nach dem Einbruch wird klar, was fehlt. Ohne verwertbare Aufnahmen hat die Polizei nichts in der Hand, "
+                  "und die Versicherung verlangt Belege, die du nicht liefern kannst. Der Schaden bleibt an dir hängen."),
+    ("ICON3", "Mit einer Videoüberwachung von ProVision Infra siehst du jederzeit per App, was auf deinem Gelände passiert. "
+              "Dein Handy meldet sich bei Bewegung, und im Ernstfall hast du Aufnahmen, mit denen Polizei und Versicherung arbeiten können."),
+]
 
 SLIDER_H = 'Technik, <span style="font-weight: 700; ">die wir verbauen</span>'
 
-DIFF_H = 'Fünf Unterschiede, <span style="font-weight: 700; ">die du im Ernstfall spürst</span>'
-DIFF_INTRO = '<p>„Alles aus einer Hand“ steht auf jeder Website. Ob es stimmt, merkst du erst, wenn etwas passiert.</p>'
-# (Icon-Media-ID, Titel, Text, Versprechen)
-DIFFS = [   # (Icon, Überschrift, Text, Pain-Box)
-    ("ICON1", "Sicherheitsanalyse statt Kameraverkauf",
-     "Wer dir ohne Begehung ein Angebot schickt, verkauft Technik. Wir gehen erst mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt.",
-     "Eine falsch gesetzte Kamera filmt im Ernstfall den Parkplatz, nicht den Täter."),
-    ("ICON2", "Sicherheitskonzept statt isolierter Technik",
-     "Eine Kamera filmt den Einbruch, aufhalten kann sie ihn nicht. Deshalb planen wir sie zusammen mit Schließanlage und Alarm.",
-     "Dann hast du ein Video vom Einbruch und trotzdem leere Regale."),
-    ("ICON3", "Fertig eingerichtet statt nur montiert",
-     "Viele Anlagen hängen an der Wand und schweigen, weil nie jemand die App eingerichtet hat. Bei uns schlägt dein Handy Alarm, bevor wir das Gebäude verlassen.",
-     "Den Einbruch bemerkt sonst der Erste, der morgens aufschließt."),
-    ("ICON4", "Langfristige Betreuung statt einmaliger Installation",
-     "Festplatten laufen voll, und irgendwann wächst eine Hecke ins Bild. Wir prüfen deine Anlage regelmäßig, auf Wunsch per Wartungsvertrag.",
-     "Dass die Aufzeichnung seit Monaten fehlt, merkst du erst, wenn du sie brauchst."),
-    ("ICON5", "Nachweisbare Übergabe statt bloßem Funktionstest",
-     "„Läuft“ reicht nicht. Bei der Übergabe prüfen wir mit dir, ob Gesichter auch nachts erkennbar sind und der Alarm wirklich ankommt. Das Ergebnis bekommst du schriftlich.",
-     "Mit verwaschenen Nachtaufnahmen können weder Polizei noch Versicherung etwas anfangen."),
+# Glas-Logo-Abschnitt: links der mitlaufende Text, rechts die Karten. Jede Karte wie auf der Startseite:
+# Situation („… wenn“), Verlauf, hervorgehobene Folge; die letzte Karte zusätzlich mit Hinweiszeile (Glühbirne).
+PAIN_H = 'Was ohne Kameras <span style="font-weight: 700; ">auf deinem Gelände passiert?</span>'
+PAIN_INTRO = '<p>Bei dir war noch nie etwas? Dann lies, wie es abläuft, wenn …</p>'
+PAIN = [   # (Situation, Verlauf, Folge, Hinweiszeile oder None)
+    ("… nachts jemand über den Zaun steigt,",
+     "bemerkt das niemand. Der Täter hat Stunden Zeit, bis morgens der Erste aufschließt.",
+     "Werkzeug und Ware sind dann längst weg, und der Betrieb steht am nächsten Morgen still. Ein fünfstelliger Schaden ist schnell erreicht.",
+     None),
+    ("… die Polizei nach Aufnahmen fragt,",
+     "hast du nichts in der Hand. Ohne Bilder gibt es keine Täterbeschreibung, und das Verfahren wird eingestellt.",
+     "Wer einmal unbemerkt reinkam, kennt jetzt den Weg und kommt wieder.",
+     None),
+    ("… Ware aus dem Lager verschwindet,",
+     "weißt du nicht, ob es ein Einbruch war oder jemand aus dem eigenen Haus. Der Verdacht trifft alle, auch die Falschen.",
+     "Inventurdifferenzen laufen so über Jahre, Monat für Monat, ohne dass du den Grund je erfährst.",
+     None),
+    ("… jemand nachts Fahrzeuge zerkratzt oder die Fassade besprüht,",
+     "wiederholt sich das. Ohne Kamera gibt es keine Abschreckung und keinen Verursacher.",
+     "Jede Reparatur zahlst du selbst. Und beim nächsten Mal wieder.",
+     None),
+    ("… die Versicherung den Schaden prüft,",
+     "will sie wissen, wann und auf welchem Weg jemand reinkam. Ohne Nachweis kürzt sie die Leistung oder lehnt ab.",
+     "Den gestohlenen Bestand und die aufgebrochene Tür zahlst du dann aus eigener Tasche.",
+     "Selbst mit Versicherung musst du beweisen, dass es ein Einbruch war. Ohne Aufnahmen steht nur dein Wort."),
+]
+
+# „Stell dir mal vor …“: acht Kästen (Desktop links 1 bis 4, rechts 5 bis 8; Handy untereinander) um die Kamera-Animation
+VORSTELLUNG = [
+    "Du siehst nachts auf dem Handy, wer gerade auf deinem Hof steht.",
+    "Dein Handy meldet sich, sobald sich jemand am Zaun oder am Lager bewegt.",
+    "Nach einem Einbruch hat die Polizei innerhalb von Minuten scharfe Aufnahmen.",
+    "Die Versicherung bekommt den Nachweis, den sie braucht, und zahlt.",
+    "Inventurdifferenzen haben plötzlich ein Datum und ein Gesicht.",
+    "Wer sprühen oder zerkratzen will, sieht die Kamera und zieht weiter.",
+    "Tore und Einfahrten sind rund um die Uhr im Blick, auch wenn du im Urlaub bist.",
+    "Falsche Anschuldigungen klärst du mit einem Klick auf die Aufzeichnung.",
+]
+# Icons der acht Kästen (gleiche Zuordnung im Computer- und im Handy-Abschnitt)
+VORSTELLUNG_ICONS = ["ICON3", "HOME_WARN", "ICON5", "HOME_DOKUMENT", "ICON1", "ICON2", "HOME_CLOUD_HAUS", "HOME_X"]
+
+# „Und genau das wird möglich mit ProVision Infra“
+MOEGLICH_H = 'Mit Kamera- und Videoüberwachung von ProVision Infra <span style="font-weight: 700; ">teure Schäden verhindern</span>'
+MOEGLICH_T = ('<p>Bei ProVision Infra planen und installieren wir eine Videoüberwachung,<br />die nachts und am Wochenende hinsieht, '
+              'wenn niemand im Betrieb ist,<br />und dir im Ernstfall Aufnahmen liefert, die etwas beweisen.</p>'
+              '<p>Dafür setzen wir die Kameras an die Stellen, an denen jemand ungesehen aufs Gelände kommt. '
+              'Live-Bild und Aufzeichnung siehst du per App auf dem Handy.</p>')
+
+# Schwebender Teil nach dem Glas-Logo-Abschnitt (Format wie „ProVision Infra installiert dir genau das, damit du“)
+ARBEIT_H = 'So arbeiten wir'
+ARBEIT = [
+    "Jede Kamera planen wir nach einer Begehung vor Ort. Im Ernstfall zeigt sie den Täter, nicht den Parkplatz.",
+    "Aufzeichnung und App sind eingerichtet, bevor wir vom Hof fahren. Dein Handy schlägt ab dem ersten Tag Alarm.",
+    "Übergeben wird erst, wenn du nachts Gesichter erkennst. Das Ergebnis bekommst du schriftlich.",
 ]
 
 STEPS = {
-    "Erstgespräch": "Ein kurzes Telefonat: Was ist passiert, oder was soll nie passieren? Welche Bereiche machen dir Sorgen? Du bekommst eine erste ehrliche Einschätzung.",
-    "Termin vor Ort": "Wir gehen mit dir über das Gelände und schauen, wo jemand ungesehen reinkommt. Noch vor Ort nennen wir dir den Kostenrahmen.",
-    "Planung deines Systems": "Du bekommst ein Konzept mit Kamerastandorten und Angebot, passend zu deinem Budget. Änderungswünsche bauen wir direkt ein. Dann entscheidest du.",
-    "Umsetzung": "Wir montieren die Kameras und richten Aufzeichnung und App komplett ein. Du musst nichts selbst konfigurieren.",
-    "Übergabe & Betreuung": "Wir prüfen gemeinsam, ob die Anlage leistet, was vereinbart war, und halten das schriftlich fest. Danach bleiben wir erreichbar.",
+    "Erstgespräch": "Ein kurzes Telefonat: Was ist passiert, oder was soll nie passieren? Du bekommst eine erste ehrliche Einschätzung.",
+    "Termin vor Ort": "Wir gehen mit dir über das Gelände und suchen die Stellen, an denen jemand ungesehen reinkommt. Den Kostenrahmen nennen wir dir noch vor Ort.",
+    "Planung deines Systems": "Du bekommst ein Konzept mit Kamerastandorten und ein Angebot, das zu deinem Budget passt. Dann entscheidest du.",
+    "Umsetzung": "Die Kameras montieren wir, Aufzeichnung und App richten wir komplett ein. Du musst nichts selbst konfigurieren.",
+    "Übergabe & Betreuung": "Gemeinsam prüfen wir, ob die Anlage leistet, was vereinbart war, und halten das schriftlich fest. Danach bleiben wir erreichbar.",
 }
 
 KONTAKT_TEXT = ('<p>Im Gespräch klären wir, welche Bereiche du im Blick haben willst und wo jemand ungesehen aufs Gelände kommt. '
@@ -112,17 +156,17 @@ FAQ_H_DESKTOP = 'Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <b>Pro
 FAQ_H_MOBILE = 'Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <br><b>ProVision Infra</b>'
 FAQ = [
     ("Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
-     "Ja, innerhalb klarer Regeln. Erlaubt ist die Überwachung deines eigenen Geländes und deiner Zugänge, nicht die von Gehweg oder Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel so, dass du auf der sicheren Seite bist, und geben dir die passenden Hinweisschilder und Unterlagen mit."),
+     "Ja, innerhalb klarer Regeln. Erlaubt ist dein eigenes Gelände samt Zugängen, nicht der Gehweg oder das Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel entsprechend und geben dir Schilder und Unterlagen mit."),
     ("Wie lange dauert die Installation?",
-     "Eine Anlage mit vier bis acht Kameras ist in der Regel an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft."),
+     "Vier bis acht Kameras sind meist an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft."),
     ("Kann ich die Bilder auf dem Handy sehen?",
-     "Ja. Du bekommst eine App, in der du Live-Bild und Aufzeichnungen siehst und bei Bewegung benachrichtigt wirst. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät."),
+     "Ja. In der App siehst du Live-Bild und Aufzeichnungen und wirst bei Bewegung benachrichtigt. Die Einrichtung übernehmen wir und zeigen dir alles am Gerät."),
     ("Was passiert bei Stromausfall oder Internetstörung?",
-     "Die Aufzeichnung läuft lokal auf dem Rekorder weiter, solange Strom da ist. Auf Wunsch sichern wir Rekorder und Kameras mit einer unterbrechungsfreien Stromversorgung ab. Fällt das Internet aus, fehlt nur der Fernzugriff, nicht die Aufzeichnung."),
+     "Fällt das Internet aus, fehlt nur der Fernzugriff. Die Aufzeichnung läuft auf dem Rekorder im Gebäude weiter. Gegen Stromausfall sichern wir Rekorder und Kameras auf Wunsch mit einer Notstromversorgung ab."),
     ("Was kostet eine Videoüberwachung?",
-     "Das hängt von der Zahl der Kameras, den Entfernungen und den vorhandenen Leitungen ab. Einen ersten Rahmen bekommst du schon im Erstgespräch, nach dem Termin vor Ort einen verbindlichen Preis."),
+     "Das hängt von der Zahl der Kameras und den Wegen für die Verkabelung ab. Einen ersten Rahmen bekommst du im Erstgespräch, einen verbindlichen Preis nach dem Termin vor Ort."),
     ("Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
-     "Die Aufnahmen bleiben auf deinem Rekorder im Gebäude und nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung entsprechend ein und halten die Software aktuell."),
+     "Die Aufnahmen bleiben auf deinem Rekorder im Gebäude, nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung ein und halten die Software aktuell."),
 ]
 
 # Icons aus der Mediathek (SVG). Zuordnung siehe ICONS unten; Werte können jederzeit im Editor getauscht werden.
@@ -157,7 +201,7 @@ h1["typography_font_size"] = {"unit": "px", "size": 52, "sizes": []}            
 h1["typography_font_size_laptop"] = {"unit": "px", "size": 50, "sizes": []}               # 1281-1440 px, Box 940 px
 h1["typography_font_size_tablet_extra"] = {"unit": "px", "size": 44, "sizes": []}         # 1025-1280 px, Box 940 px
 h1["typography_font_size_tablet"] = {"unit": "custom", "size": "min(36px, 4vw - 1.5px)", "sizes": []}   # 768-1024 px: 29 px bei 768, 36 px ab 940
-h1["typography_font_size_mobile"] = {"unit": "custom", "size": "min(28px, 7vw - 2px)", "sizes": []}   # bis 767 px: 1. Zeile (fett) bleibt einzeilig
+h1["typography_font_size_mobile"] = {"unit": "custom", "size": "min(28px, 5.9vw - 2px)", "sizes": []}   # bis 767 px: 1. Zeile (fett, „… dein Unternehmen“) bleibt einzeilig
 h1["typography_line_height_tablet_extra"] = {"unit": "px", "size": 53, "sizes": []}
 h1["typography_line_height_tablet"] = {"unit": "em", "size": 1.25, "sizes": []}
 h1["typography_line_height_mobile"] = {"unit": "em", "size": 1.23, "sizes": []}
@@ -226,24 +270,48 @@ page.append(mvideo)
 # ---------------------------------------------------------------- 4) Mobile Bewertungszeile (Original)
 page.append(clone(H[3]))
 
-# ---------------------------------------------------------------- 5) Unser Anspruch – Glas-Box im Stil der Startseite
-glass = clone(must(H[15], "bea5923"))
-must(glass, "cba15a6")["settings"]["title"] = CLAIM_H
-must(glass, "4e4df2b")["settings"]["editor"] = CLAIM_T
-glass["settings"]["width"] = {"unit": "%", "size": 72, "sizes": []}
-glass["settings"]["width_tablet"] = {"unit": "%", "size": 100, "sizes": []}
-glass["settings"]["width_mobile"] = {"unit": "%", "size": 100, "sizes": []}
-glass["settings"]["animation"] = "fadeInUp"
-glass["settings"]["_title"] = "Unser Anspruch"
-claim = container({
-    "content_width": "boxed", "css_classes": "shadeup", "_element_id": "digitalen", "_title": "Unser Anspruch",
-    "flex_direction": "column", "flex_align_items": "center",
-    "padding": box(80, 20, 50, 20), "padding_mobile": box(40, 20, 30, 20),
-}, [glass])
-claim["isInner"] = False
-page.append(claim)
+# ---------------------------------------------------------------- 5) Video-Rahmen + drei Punkte (Original-Abschnitt direkt unter dem Hero)
+# Kopie des Startseiten-Abschnitts unter dem Hero: links der gelb umrandete Rahmen mit dem Unternehmensfilm (Vimeo,
+# Vorschaubild und Play-Button wie auf der Startseite), rechts drei Icon-Zeilen. Tablet/Handy: Rahmen oben, Punkte darunter.
+# Der schwebende Teil des Originals („… installiert dir genau das, damit du“) folgt weiter unten als eigener Abschnitt.
+HOME_ICONS = {"HOME_KEY": must(H[4], "087e23e")["settings"]["selected_icon"],
+              "HOME_WARN": must(H[4], "3e8f2d1")["settings"]["selected_icon"],
+              "HOME_UNLOCK": must(H[4], "63855c5")["settings"]["selected_icon"],
+              "HOME_X": must(H[6], "75e83d7")["settings"]["selected_icon"],
+              "HOME_DOKUMENT": must(H[9], "4199019")["settings"]["selected_icon"],
+              "HOME_CLOUD_HAUS": must(H[9], "8b077e4")["settings"]["selected_icon"]}
+def icon_for(key):
+    return clone(HOME_ICONS[key]) if key in HOME_ICONS else svg_icon(*ICONS[key])
 
-# ---------------------------------------------------------------- 6) Produkt-Slider – Kopie des Kundenstimmen-Sliders mit Bildern
+punkte = clone(H[4])
+punkte["elements"] = [e for e in punkte["elements"] if e["id"] == "7dfcfda"]
+for wid, iid, (key, text) in zip(("d05eab3", "7df04ae", "d38dec5"), ("087e23e", "3e8f2d1", "63855c5"), PUNKTE):
+    w = must(punkte, wid)["settings"]
+    if "editor" in w:
+        w["editor"] = f"<p>{text}</p>"
+    else:
+        w["title"] = text
+    w["_title"] = text[:40]
+    must(punkte, iid)["settings"]["selected_icon"] = icon_for(key)
+# Im Rahmen kein Video (Wunsch vom 20.10.), sondern das Logo mit Link zur Startseite
+LOGO = MEDIA["logo"]
+frame = must(punkte, "0a52747")
+frame["elements"] = [{"id": new_id(), "elType": "widget", "widgetType": "image", "elements": [], "isInner": False, "settings": {
+    "image": {"url": LOGO["url"], "id": LOGO["id"], "size": "", "alt": "ProVision Infra GmbH", "source": "library"},
+    "image_size": "full", "align": "center", "link_to": "custom",
+    "link": {"url": SITE + "/", "is_external": "", "nofollow": "", "custom_attributes": ""},
+    "width": {"unit": "%", "size": 68, "sizes": []}, "width_tablet": {"unit": "%", "size": 55, "sizes": []}, "width_mobile": {"unit": "%", "size": 68, "sizes": []},
+    "_title": "Logo mit Link zur Startseite"}}]
+frame["settings"].update({"_title": "Logo-Rahmen", "flex_direction": "column", "flex_justify_content": "center", "flex_align_items": "center",
+                          "padding": box(40, 30, 40, 30), "padding_tablet": box(30, 20, 30, 20), "padding_mobile": box(24, 16, 24, 16),
+                          "min_height": {"unit": "px", "size": 320, "sizes": []}, "min_height_tablet": {"unit": "px", "size": 240, "sizes": []},
+                          "min_height_mobile": {"unit": "px", "size": 190, "sizes": []}})
+must(punkte, "478e545")["settings"]["_title"] = "Drei Punkte"
+punkte["settings"].update({"_element_id": "digitalen", "_title": "Video und drei Punkte"})   # Anker des ersten Menüpunkts
+reid(punkte)
+page.append(punkte)
+
+# ---------------------------------------------------------------- 6) Produkt-Slider – Kopie des Kundenstimmen-Sliders mit Bildern (steht weiter unten)
 slider = clone(H[5])
 must(slider, "556df520")["settings"]["title"] = SLIDER_H
 row = must(slider, "55a57e52")
@@ -281,46 +349,60 @@ slider_spacing(slider)
 slider["settings"]["_element_id"] = "produkte"
 slider["settings"]["_title"] = "Produkt-Slider"
 reid(slider)
-page.append(slider)
 
-# ---------------------------------------------------------------- 7) Fünf Unterschiede – Icon-Zeilen im Stil der Startseite
+# ---------------------------------------------------------------- 7) Glas-Logo-Abschnitt: mitlaufender Text links, Pain-Karten rechts
 sec_tpl = H[4]
 heading_tpl = must(H[5], "556df520")
 text_tpl = must(H[15], "4e4df2b")
 card_tpl = must(H[6], "7d36acb")      # Karte der Startseite: 2-px-Rahmen, beim Hover gelb mit Glow
+card_tip_tpl = must(H[6], "067ce5f")  # letzte Karte der Startseite: zusätzlich Trennlinie + Hinweiszeile mit Glühbirne
 tile_tpl = must(H[4], "3f048a0")      # Icon-Kachel (das SVG bringt die gelbe Fläche mit)
 btn_tpl = must(H[12], "c7ed38d")
 
-d_heading = clone(heading_tpl); d_heading["settings"]["title"] = DIFF_H; d_heading["settings"]["_title"] = "Fünf Unterschiede"
+d_heading = clone(heading_tpl); d_heading["settings"]["title"] = PAIN_H; d_heading["settings"]["_title"] = "Was ohne Kameras passiert"
 d_heading["settings"]["_element_custom_width_mobile"] = {"unit": "%", "size": 100, "sizes": []}   # mittig auf dem Handy
 d_heading["settings"]["_flex_align_self"] = "center"
 d_intro = clone(text_tpl)
-d_intro["settings"].update({"editor": DIFF_INTRO, "align": "center", "align_mobile": "center",
+d_intro["settings"].update({"editor": PAIN_INTRO, "align": "center", "align_mobile": "center",
+                            "typography_font_size": {"unit": "px", "size": 20, "sizes": []},          # etwas größer (Wunsch vom 20.10.)
+                            "typography_font_size_laptop": {"unit": "px", "size": 19, "sizes": []},
+                            "typography_font_size_tablet_extra": {"unit": "px", "size": 18, "sizes": []},
+                            "typography_font_size_tablet": {"unit": "px", "size": 18, "sizes": []},
+                            "typography_font_size_mobile": {"unit": "px", "size": 17, "sizes": []},
                             "_element_custom_width": {"unit": "%", "size": 70, "sizes": []},
                             "_element_custom_width_tablet": {"unit": "%", "size": 100, "sizes": []},
                             "_flex_align_self": "center", "_margin": box(10, 0, 30, 0), "_title": "Einleitung"})
 
+small = {"unit": "px", "size": 14, "sizes": []}
 cards = []
-for key, title, body, pain in DIFFS:
-    card = clone(card_tpl)
+for title, body, pain, tip in PAIN:
+    card = clone(card_tip_tpl if tip else card_tpl)
+    if tip:   # Rahmen (2 px) und Hintergrund wie die anderen Karten (die letzte Karte der Startseite hat 1 px und keinen Hintergrund)
+        for k in ("border_width", "background_background", "background_color"):
+            card["settings"][k] = clone(card_tpl["settings"][k])
     row = card["elements"][0]                                   # Zeile: Kachel + Text (bricht auf Tablet/Handy um, Handy zentriert)
     _, textcol = row["elements"]
     tile = clone(tile_tpl)
     tile["elements"] = [tile["elements"][0]]
-    tile["elements"][0]["settings"]["selected_icon"] = svg_icon(*ICONS[key])
+    tile["elements"][0]["settings"]["selected_icon"] = icon_for("HOME_X")   # wie auf der Startseite: X-Symbol bei jeder Pain-Karte
     tile["elements"][0]["settings"]["_title"] = "Icon"
     tile["settings"].update({"width": {"unit": "%", "size": 10.34, "sizes": []},
                              "width_tablet": {"unit": "px", "size": 72, "sizes": []},
                              "width_mobile": {"unit": "px", "size": 72, "sizes": []},
                              "padding": box(0, 0, 0, 0), "padding_tablet": box(0, 0, 0, 0), "padding_mobile": box(0, 0, 0, 0),
                              "_title": "Kachel"})
-    t_title, t_body, pill = textcol["elements"]
+    t_title = next(e for e in textcol["elements"] if e.get("widgetType") == "heading")
+    t_body = next(e for e in textcol["elements"] if e.get("widgetType") == "text-editor")
+    pill = next(e for e in textcol["elements"] if e["elType"] == "container" and e["settings"].get("_title") == "Frame 2147224700")
     t_title["settings"].update({"title": title, "_title": title, "header_size": "h3"})
-    t_body["settings"].update({"editor": f"<p>{body}</p>", "_title": "Text",
-                               "typography_font_size_tablet": {"unit": "px", "size": 14, "sizes": []}})
-    pill["elements"][0]["settings"].update({"editor": f"<p>{pain}</p>", "_title": "Pain",
-                                            "typography_font_size_tablet": {"unit": "px", "size": 14, "sizes": []}})
-    pill["settings"]["_title"] = "Pain-Box"
+    t_body["settings"].update({"editor": f"<p>{body}</p>", "_title": "Text", "typography_font_size_tablet": small})
+    pill["elements"][0]["settings"].update({"editor": f"<p>{pain}</p>", "_title": "Folge", "typography_font_size_tablet": small})
+    pill["settings"]["_title"] = "Folge-Box"
+    if tip:
+        tip_row = next(e for e in textcol["elements"] if e["elType"] == "container" and e["settings"].get("_title") == "Frame 2147224854")
+        tip_text = next(e for e in tip_row["elements"] if e.get("widgetType") == "text-editor")
+        tip_text["settings"].update({"editor": f"<p>{tip}</p>", "_title": "Hinweis", "typography_font_size_tablet": small})
+        tip_row["settings"]["_title"] = "Hinweiszeile"
     row["elements"] = [tile, textcol]
     row["settings"]["_title"] = "Zeile"
     textcol["settings"]["_title"] = "Text"
@@ -332,7 +414,7 @@ col = container({"flex_direction": "column",
                  "width_mobile": {"unit": "%", "size": 100, "sizes": []},
                  "flex_gap": {"column": "20", "row": "20", "isLinked": True, "unit": "px", "size": 20},
                  "flex_gap_mobile": {"column": "16", "row": "16", "isLinked": True, "unit": "px", "size": 16},
-                 "padding": box(0, 0, 0, 0), "_title": "Unterschiede"}, cards)
+                 "padding": box(0, 0, 0, 0), "_title": "Karten"}, cards)
 
 # Nur der Button, kein Einleitungstext davor (Wunsch vom 16.10.)
 cta_btn = clone(btn_tpl); cta_btn["settings"]["align"] = "center"; cta_btn["settings"]["_title"] = "Erstgespräch"
@@ -341,7 +423,7 @@ cta = container({"flex_direction": "column", "flex_align_items": "center",
 
 # Zweispaltig wie der Startseiten-Abschnitt „Warum immer mehr KMUs …“ (H[6]): links der Text, der am Computer beim
 # Scrollen stehen bleibt, bis die Karten rechts zu Ende sind (Elementor-Sticky, „an Eltern-Container“), rechts die
-# Karten. Glas-Logo als Hintergrund-Overlay der Zeile (Computer und Handy wie auf der Startseite, Tablet ohne). Auf Tablet und Handy stehen Text und Karten wie bisher untereinander, zentriert, ohne Overlays.
+# Karten. Glas-Logo als Hintergrund-Overlay der Zeile (Computer und Handy wie auf der Startseite, Tablet ohne). Auf Tablet und Handy stehen Text und Karten untereinander, zentriert, ohne Overlays.
 home_row = must(H[6], "f86d566")
 home_left, home_right = must(H[6], "8c98faa"), must(H[6], "b72e86b")
 full = lambda: {"unit": "%", "size": 100, "sizes": []}
@@ -367,12 +449,12 @@ row["settings"].update({"flex_direction_tablet": "column", "width": full(),
                         "_title": "Text + Karten"})
 diff = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(sec_tpl["settings"]),
         "elements": [reid(row)]}
-# Kein Verlaufs-Overlay am oberen Rand (würde die Überschrift abdunkeln) und gleiche Hintergrundfarbe wie der Slider,
-# damit der Übergang ohne sichtbare Kante bleibt.
+# Kein Verlaufs-Overlay am oberen Rand (würde die Überschrift abdunkeln); Hintergrund wie die Seite (wie beim Original H[6]).
 diff["settings"].pop("custom_css", None)
 diff["settings"].pop("css_classes", None)
-diff["settings"].update({"_element_id": "unterschiede", "_title": "Fünf Unterschiede",
-                         "background_background": "classic", "background_color": "#010A2C",
+for k in [k for k in diff["settings"] if k.startswith("background_")]:
+    diff["settings"].pop(k)
+diff["settings"].update({"_element_id": "folgen", "_title": "Was ohne Kameras passiert",
                          "padding": box(60, 20, 60, 20), "padding_mobile": box(50, 20, 50, 20),
                          "flex_align_items": "center",
                          "flex_gap": {"column": "20", "row": "20", "isLinked": True, "unit": "px", "size": 20}})
@@ -381,10 +463,152 @@ diff["settings"].update({"_element_id": "unterschiede", "_title": "Fünf Untersc
 # Optik dem sichtbaren Original entspricht, wird es hier bewusst nicht übernommen.
 page.append(diff)
 
-# ---------------------------------------------------------------- 8) Kundenstimmen (Original, mit Platz für die Pfeile)
-kunden = clone(H[5])
-slider_spacing(kunden)
-page.append(kunden)
+# ---------------------------------------------------------------- 8) So arbeiten wir – schwebende Kästen (Original: „… installiert dir genau das, damit du“)
+arbeit = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(H[4]["settings"]),
+          "elements": [clone(must(H[4], "18e7c8b"))]}
+must(arbeit, "58d331d")["settings"].update({"title": ARBEIT_H, "_title": ARBEIT_H})
+for wid, text in zip(("b4a337a", "334a7dd", "28dae90"), ARBEIT):
+    w = must(arbeit, wid)["settings"]
+    if "editor" in w:
+        w["editor"] = f"<p>{text}</p>"
+    else:
+        w["title"] = text
+    w["_title"] = text[:40]
+must(arbeit, "18e7c8b")["settings"]["_title"] = "Kästen"
+arbeit["settings"].update({"_element_id": "arbeitsweise", "_title": "So arbeiten wir",
+                           "padding": box(0, 20, 50, 20), "padding_laptop": box(0, 20, 50, 20), "padding_mobile": box(0, 20, 30, 20)})
+reid(arbeit)
+page.append(arbeit)
+
+# ---------------------------------------------------------------- 8b) „Stell dir mal vor …“ (Original-Abschnitte H[7], H[8] Desktop, H[9] Handy)
+# Statt Schließzylinder und Türgriff läuft in der Mitte eine eigene Lottie-Animation (Schwenk-Neige-Kamera aus den Produktbildern:
+# schwenkt, schwebt, LED blinkt; erzeugt mit tools/kamera_lottie_erzeugen.py, medien.json: kamera_lottie_mobil).
+KAMERA_LOTTIE_MOBIL = MEDIA["kamera_lottie_mobil"]      # kompakte Bühne (360 x 520), Computer und Handy
+
+stell = clone(H[7]); stell["settings"]["_title"] = "Stell dir mal vor"
+page.append(reid(stell))
+
+stell_d = clone(H[8])
+# Desktop/Tablet: Die Startseite zeichnet Rahmen, Icons und Leuchtlinie der acht Kästen in acht Lottie-Dateien an festen Positionen;
+# bei anderen Textlängen und Breiten laufen Rahmen und Text auseinander. Hier bekommen die Kästen Rahmen, Icon und das Aufleuchten
+# selbst (Vorlage: Handy-Kasten der Startseite), die gelbe Linie zum Kamerakopf zeichnet ein kleines Skript genau von der
+# tatsächlichen Kastenkante aus (tools/kamera-linien.html). Die Kamera-Animation steht in der mittleren Spalte.
+row_s = must(stell_d, "c1d1015")
+left_col, mid_col, right_col = must(stell_d, "b6936eb"), must(stell_d, "a319592"), must(stell_d, "eaa1402")
+box_tpl = must(H[9], "65b45ef")          # Handy-Kasten der Startseite: Rahmen 1 px, Icon-Kachel, Text
+def make_box(n, text, anim):
+    b = clone(box_tpl)
+    tile, txt = b["elements"]
+    tile["elements"][0]["settings"]["selected_icon"] = icon_for(VORSTELLUNG_ICONS[n - 1])
+    tile["elements"][0]["settings"]["_title"] = "Icon"
+    tile["settings"]["_title"] = "Kachel"
+    txt["settings"].update({"editor": f"<p>{text}</p>", "_title": text[:40],
+                            "typography_font_size": {"unit": "px", "size": 14, "sizes": []},
+                            "typography_font_size_laptop": {"unit": "px", "size": 13, "sizes": []},
+                            "typography_font_size_tablet_extra": {"unit": "px", "size": 12, "sizes": []},
+                            "typography_font_size_tablet": {"unit": "px", "size": 11, "sizes": []},
+                            "_element_custom_width": {"unit": "%", "size": 74, "sizes": []},
+                            "_element_custom_width_tablet": {"unit": "%", "size": 74, "sizes": []}})
+    b["settings"].update({"width": {"unit": "px", "size": 400, "sizes": []}, "width_laptop": {"unit": "px", "size": 380, "sizes": []},
+                          "width_tablet_extra": {"unit": "px", "size": 330, "sizes": []}, "width_tablet": {"unit": "%", "size": 100, "sizes": []},   # Tablet: volle Spaltenbreite (bei 768 px sonst breiter als die Spalte)
+                          "flex_align_items": "center", "padding": box(22, 20, 22, 20), "padding_tablet": box(12, 12, 12, 12),
+                          "flex_gap_tablet": {"column": "10", "row": "10", "isLinked": True, "unit": "px", "size": 10},
+                          "animation": anim, "_attributes": f"data-pv-box|{n}", "_title": f"Kasten {n}"})
+    return reid(b)
+left_col["elements"] = [make_box(n, VORSTELLUNG[n - 1], "fadeInLeft") for n in (1, 2, 3, 4)]
+right_col["elements"] = [make_box(n, VORSTELLUNG[n - 1], "fadeInRight") for n in (5, 6, 7, 8)]
+gap = {"column": "24", "row": "24", "isLinked": True, "unit": "px", "size": 24}
+for col, title in ((left_col, "Kästen links"), (right_col, "Kästen rechts")):
+    col["settings"].update({"flex_justify_content": "center", "flex_align_items": "center", "flex_gap": gap, "_title": title,
+                            "flex_gap_tablet": {"column": "14", "row": "14", "isLinked": True, "unit": "px", "size": 14}})
+    col["settings"].pop("_flex_align_self_tablet", None)
+mid_col["elements"] = [{"id": new_id(), "elType": "widget", "widgetType": "lottie", "elements": [], "isInner": False, "settings": {
+    "source_json": {"url": KAMERA_LOTTIE_MOBIL["url"], "id": KAMERA_LOTTIE_MOBIL["id"], "size": "", "alt": "", "source": "library"},
+    "loop": "yes", "trigger": "arriving_to_viewport", "_element_id": "pv-kamera", "_z_index": 3,
+    "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 74, "sizes": []},
+    "_element_custom_width_tablet": {"unit": "%", "size": 92, "sizes": []}, "_title": "Kamera (schwenkt, LED blinkt)"}}]
+mid_col["settings"].update({"flex_justify_content": "center", "flex_align_items": "center", "_title": "Kamera"})
+LINIEN_HTML = (ROOT / "tools" / "kamera-linien.html").read_text(encoding="utf-8")
+linien = {"id": new_id(), "elType": "widget", "widgetType": "html", "elements": [], "isInner": False, "settings": {
+    "html": LINIEN_HTML, "custom_css": "selector { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; pointer-events: none; z-index: 1; }",
+    "_title": "Leuchtlinie zur Kamera"}}
+row_s["elements"] = [left_col, mid_col, right_col, linien]
+row_s["settings"]["css_classes"] = (row_s["settings"].get("css_classes", "") + " pv-stell").strip()
+row_s["settings"]["_title"] = "Kästen + Kamera"
+stell_d["elements"] = [e for e in stell_d["elements"] if e["id"] != "b0f015c"]   # Lottie-Container der Startseite entfällt
+stell_d["settings"]["_title"] = "Stell dir mal vor (Computer/Tablet)"
+page.append(reid(stell_d))
+
+stell_m = clone(H[9])
+for wid, text in zip(("196a01d", "95203a8", "b640c54", "b7ef4bd", "8f999b2", "ba5311c", "c325747", "13ec65b"), VORSTELLUNG):
+    w = must(stell_m, wid)["settings"]
+    if "editor" in w:
+        w["editor"] = f"<p>{text}</p>"
+    else:
+        w["title"] = text
+    w["_title"] = text[:40]
+for wid, key in zip(("20fb6a9", "be97d3f", "5e4fd62", "4199019", "ac64bd9", "770ea05", "8b077e4", "545759b"), VORSTELLUNG_ICONS):
+    must(stell_m, wid)["settings"]["selected_icon"] = icon_for(key)
+mcol = must(stell_m, "1f03386")
+mcol["elements"] = [{"id": new_id(), "elType": "widget", "widgetType": "lottie", "elements": [], "isInner": False, "settings": {
+    "source_json": {"url": KAMERA_LOTTIE_MOBIL["url"], "id": KAMERA_LOTTIE_MOBIL["id"], "size": "", "alt": "", "source": "library"},
+    "loop": "yes", "trigger": "arriving_to_viewport", "_element_id": "pv-kamera-mobil",
+    "_element_width": "initial", "_element_custom_width": {"unit": "px", "size": 300, "sizes": []},
+    "_element_custom_width_mobile": {"unit": "px", "size": 280, "sizes": []}, "_title": "Kamera (schwenkt, LED blinkt)"}}]
+mcol["settings"].update({"flex_align_items": "center", "flex_justify_content": "center", "flex_align_items_mobile": "center",
+                         "min_height_mobile": {"unit": "px", "size": 440, "sizes": []}, "_title": "Kamera"})
+stell_m["settings"]["_title"] = "Stell dir mal vor (Handy)"
+page.append(reid(stell_m))
+
+# ---------------------------------------------------------------- 8c) „Und genau das wird möglich mit ProVision Infra“ (Original H[10])
+# Grafik der Startseite als Hintergrund übernommen, die Person darauf als dunkle Kapuzen-Silhouette (Einbrecher) neu gesetzt
+# (tools/einbrecher_silhouette.py). Darüber ein HTML-Element mit zwei Bullet-Kameras aus den Produktbildern (schwenken leicht, LED blinkt),
+# das die Hintergrund-Geometrie (cover, mittig; mobil contain, unten) nachbildet, damit die Kameras in jeder Breite über der
+# Szene sitzen.
+SZENE, SZENE_MOBIL = MEDIA["szene_bild"], MEDIA["szene_bild_mobil"]
+CAM_L, CAM_R = MEDIA["kamera_bullet_links"], MEDIA["kamera_bullet_rechts"]
+moeglich = clone(H[10])
+must(moeglich, "ecdc807")["settings"].update({"title": MOEGLICH_H, "_title": "Überschrift"})
+must(moeglich, "f085e1b")["settings"].update({"editor": MOEGLICH_T, "_title": "Text"})
+ms_ = moeglich["settings"]
+ms_["background_image"] = {"url": SZENE["url"], "id": SZENE["id"], "size": "", "alt": "", "source": "library"}
+ms_["background_image_mobile"] = {"url": SZENE_MOBIL["url"], "id": SZENE_MOBIL["id"], "size": "", "alt": "", "source": "library"}
+ms_.update({"_element_id": "moeglich", "_title": "Und genau das wird möglich"})
+SZENE_HTML = f"""<div class="pv-szene" aria-hidden="true">
+  <div class="pv-szene__bild">
+    <div class="pv-cam pv-cam--a"><img src="{CAM_R['url']}" alt="" loading="lazy"><span class="pv-led"></span></div>
+    <div class="pv-cam pv-cam--b"><img src="{CAM_L['url']}" alt="" loading="lazy"><span class="pv-led"></span></div>
+  </div>
+</div>
+<style>
+.pv-szene {{ position: absolute; inset: 0; overflow: hidden; pointer-events: none; }}
+.pv-szene__bild {{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; min-width: 100%; aspect-ratio: 2400 / 1104; }}
+.pv-cam {{ position: absolute; width: 7.2%; animation: pv-schwenk 7s ease-in-out infinite alternate; }}
+.pv-cam img {{ display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .55)); }}
+.pv-cam--a {{ left: 46.5%; top: 4.5%; transform-origin: 18% 22%; }}
+.pv-cam--b {{ left: 77%; top: 2.5%; transform-origin: 82% 22%; animation-delay: -3.5s; animation-duration: 8s; }}
+.pv-led {{ position: absolute; width: 5%; aspect-ratio: 1; border-radius: 50%; background: #ff3b30; box-shadow: 0 0 6px 2px rgba(255, 59, 48, .9), 0 0 16px 6px rgba(255, 59, 48, .45); animation: pv-blink 1.3s steps(1, end) infinite; }}
+.pv-cam--a .pv-led {{ left: 72%; top: 41%; }}
+.pv-cam--b .pv-led {{ left: 22%; top: 41%; animation-delay: -.6s; }}
+@keyframes pv-schwenk {{ from {{ transform: rotate(-4deg); }} to {{ transform: rotate(4deg); }} }}
+@keyframes pv-blink {{ 0%, 88% {{ opacity: 1; }} 12%, 100% {{ opacity: .08; }} }}
+@media (max-width: 767px) {{
+  .pv-szene__bild {{ top: auto; bottom: 0; left: 0; transform: none; height: auto; width: 100%; min-width: 0; aspect-ratio: 1276 / 1104; }}
+  .pv-cam {{ width: 15%; }}
+  .pv-cam--a {{ left: 8%; top: 3%; }}
+  .pv-cam--b {{ left: 70%; top: 1.5%; }}
+}}
+@media (prefers-reduced-motion: reduce) {{ .pv-cam, .pv-led {{ animation: none; }} }}
+</style>"""
+szene_widget = {"id": new_id(), "elType": "widget", "widgetType": "html", "elements": [], "isInner": False, "settings": {
+    "html": SZENE_HTML, "_position": "absolute", "_offset_x": {"unit": "px", "size": 0, "sizes": []}, "_offset_y": {"unit": "px", "size": 0, "sizes": []},
+    "_z_index": 1, "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 100, "sizes": []},
+    "custom_css": "selector { top: 0; left: 0; width: 100%; height: 100%; margin: 0; }",
+    "_title": "Zwei Kameras über der Szene"}}
+moeglich["elements"].append(szene_widget)
+# Text und Kasten über die Kamera-Ebene legen
+must(moeglich, "beae738")["settings"]["z_index"] = 2
+page.append(reid(moeglich))
 
 # ---------------------------------------------------------------- 9) Ablauf der Zusammenarbeit (Original, Kamera-Texte)
 ablauf = clone(H[14])
@@ -398,13 +622,18 @@ for item in tl["settings"]["eael_coustom_content_posts"]:
     item["eael_custom_excerpt"] = f"<p>{STEPS[t]}</p>"
 page.append(ablauf)
 
-# ---------------------------------------------------------------- 10) Gründer, Partner, Standort mit Erstgespräch (Original)
+# ---------------------------------------------------------------- 10) Kundenstimmen (Original, mit Platz für die Pfeile)
+kunden = clone(H[5])
+slider_spacing(kunden)
+page.append(kunden)
+
+# ---------------------------------------------------------------- 11) Gründer (mit Fortsetzung), Technik, Partner, Standort mit Erstgespräch (Original)
 page.append(clone(H[16]))
 page.append(clone(H[17]))
-page.append(clone(H[18]))
-page.append(clone(H[19]))
+page.append(slider)
+page.append(clone(H[19]))          # Standort mit Erstgespräch; die Partner (H[18]) folgen nach dem FAQ
 
-# ---------------------------------------------------------------- 11) FAQ (Original-Akkordeon, Kamera-Fragen)
+# ---------------------------------------------------------------- 12) FAQ (Original-Akkordeon, Kamera-Fragen)
 faq = clone(H[20])
 must(faq, "7983242")["settings"]["title"] = FAQ_H_DESKTOP
 must(faq, "45eaf1f")["settings"]["title"] = FAQ_H_MOBILE
@@ -415,6 +644,7 @@ acc["settings"]["eael_adv_accordion_tab"] = [
     for q, a in FAQ
 ]
 page.append(faq)
+page.append(clone(H[18]))          # Unsere Partner (Wunsch vom 20.10.: ans Ende des FAQ)
 
 # ---------------------------------------------------------------- 11b) Eigene Kontaktseite (Kopie der Seite /kontakt, eigenes Formular)
 # Wie beim Original öffnet der Fragebogen eine eigene Seite. Die Elementor-Daten der Kontaktseite (quelle-kontakt.json)

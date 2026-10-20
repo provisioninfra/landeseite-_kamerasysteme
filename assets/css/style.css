@@ -333,3 +333,75 @@ a { color: inherit; }
   .hero__title { font-size: 28px; hyphens: auto; -webkit-hyphens: auto; }
   .hero__text { font-size: 17px; }
 }
+
+/* ---------- Logo-Rahmen + drei Punkte (20.10.) ---------- */
+.section--points { padding-top: 10px; }
+.points { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; }
+.points__frame { display: flex; align-items: center; justify-content: center; min-height: 320px; padding: 40px 30px; border: 2px solid var(--yellow); border-radius: 24px; transition: transform .3s ease; }
+.points__frame:hover { transform: scale(1.03); }
+.points__frame img { width: 68%; height: auto; }
+.points__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+.points__list li { display: grid; grid-template-columns: 54px 1fr; gap: 22px; align-items: center; }
+.points__list p { margin: 0; font-size: 16px; line-height: 1.6; }
+.points__icon { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; background: linear-gradient(180deg, #2a2f4f, #121a3c); color: var(--yellow); box-shadow: 0 6px 18px rgba(0, 0, 0, .4); }
+.points__icon--solid { background: var(--yellow); color: var(--navy); }
+.points__icon svg { width: 28px; height: 28px; }
+@media (max-width: 1024px) { .points { grid-template-columns: 1fr; gap: 32px; } .points__frame { min-height: 240px; } }
+
+/* ---------- Pain-Karten: Text links bleibt am Computer stehen ---------- */
+.diff__layout { display: grid; grid-template-columns: 40fr 60fr; gap: 40px; align-items: start; }
+.diff__lead { position: sticky; top: 90px; }
+.diff__lead .section__title, .diff__lead .section__intro { text-align: left; max-width: none; margin-left: 0; }
+.section__intro--big { font-size: 20px; }
+.diff__icon--x { background: linear-gradient(180deg, #2a2f4f, #121a3c); color: var(--yellow); }
+.diff__tip { display: flex; gap: 10px; align-items: flex-start; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .2); font-size: 15px; }
+.diff__tip::before { content: "💡"; }
+@media (max-width: 1024px) { .diff__layout { grid-template-columns: 1fr; } .diff__lead { position: static; } .diff__lead .section__title, .diff__lead .section__intro { text-align: center; margin-left: auto; } .section__intro--big { font-size: 18px; } }
+
+/* ---------- So arbeiten wir ---------- */
+.work__title { margin: 0 0 18px; text-align: center; font-size: 24px; font-weight: 700; }
+.work { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.work li { display: flex; gap: 16px; align-items: center; padding: 24px; border-radius: 24px; background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .12); transition: transform .3s ease; }
+.work li:hover { transform: scale(1.03); }
+.work p { margin: 0; font-size: 15px; line-height: 1.55; }
+.work__check { flex: 0 0 40px; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--yellow); color: var(--navy); }
+.work__check svg { width: 24px; height: 24px; }
+@media (max-width: 900px) { .work { grid-template-columns: 1fr; } }
+
+/* ---------- Stell dir mal vor (Kästen um die Kamera) ---------- */
+.imagine__title { margin: 0 0 30px; text-align: center; font-size: 42px; font-weight: 400; }
+.imagine__title strong { font-weight: 700; }
+.imagine { display: grid; grid-template-columns: 35fr 30fr 35fr; gap: 20px; align-items: center; }
+.imagine__col { list-style: none; margin: 0; padding: 0; display: grid; gap: 24px; justify-items: center; }
+.imagine__box { display: flex; gap: 16px; align-items: center; width: 100%; max-width: 400px; padding: 22px 20px; border: 1px solid rgba(255, 255, 255, .48); border-radius: 24px; background: rgba(255, 255, 255, .03); transition: background .35s ease, border-color .35s ease, box-shadow .35s ease; }
+.imagine__box:hover, .imagine__box.is-lit { border-color: var(--yellow); background: linear-gradient(135deg, #22398f, #0b1446); box-shadow: 0 0 24px rgba(250, 211, 126, .48); }
+.imagine__box p { margin: 0; font-size: 14px; line-height: 1.6; }
+.imagine__icon { flex: 0 0 54px; display: grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; background: var(--yellow); color: var(--navy); }
+.imagine__icon svg { width: 28px; height: 28px; }
+.imagine__cam { position: relative; width: 74%; margin: 0 auto; filter: drop-shadow(0 0 40px rgba(251, 201, 27, .35)); animation: pv-schwenk 6s ease-in-out infinite alternate; transform-origin: 84% 48%; }
+.imagine__cam img { width: 100%; height: auto; }
+.led { position: absolute; width: 4%; aspect-ratio: 1; border-radius: 50%; background: #ff3b30; box-shadow: 0 0 6px 2px rgba(255, 59, 48, .9), 0 0 16px 6px rgba(255, 59, 48, .45); animation: pv-blink 1.3s steps(1, end) infinite; }
+.imagine__cam .led { left: 44%; top: 79%; }
+@keyframes pv-schwenk { from { transform: rotate(-6deg); } to { transform: rotate(6deg); } }
+@keyframes pv-blink { 0%, 88% { opacity: 1; } 12%, 100% { opacity: .08; } }
+@media (max-width: 1024px) { .imagine { grid-template-columns: 1fr; } .imagine__cam { width: 60%; max-width: 300px; } .imagine__title { font-size: 29px; } }
+
+/* ---------- Und genau das wird möglich ---------- */
+.possible { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.possible__eyebrow { margin: 0 0 12px; font-size: 20px; font-weight: 700; }
+.possible__title { margin: 0 0 24px; font-size: 42px; font-weight: 400; line-height: 1.24; }
+.possible__title strong { font-weight: 700; }
+.possible__box { padding: 32px; border: 1px solid rgba(255, 255, 255, .48); border-radius: 24px; background: rgba(255, 255, 255, .04); }
+.possible__box p { margin: 0 0 1em; font-size: 16px; line-height: 1.64; }
+.possible__box p:last-child { margin-bottom: 0; }
+.possible__scene { position: relative; border-radius: 24px; overflow: hidden; }
+.possible__bg { width: 100%; height: auto; }
+.possible__cam { position: absolute; width: 14%; animation: pv-schwenk 7s ease-in-out infinite alternate; }
+.possible__cam img { width: 100%; height: auto; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .55)); }
+.possible__cam--a { left: 44%; top: 4%; transform-origin: 18% 22%; }
+.possible__cam--a img { transform: scaleX(-1); }
+.possible__cam--b { left: 74%; top: 2%; transform-origin: 82% 22%; animation-delay: -3.5s; animation-duration: 8s; }
+.possible__cam .led { width: 6%; left: 72%; top: 41%; }
+.possible__cam--b .led { left: 22%; animation-delay: -.6s; }
+@media (max-width: 1024px) { .possible { grid-template-columns: 1fr; } .possible__title { font-size: 29px; } .possible__eyebrow { text-align: center; } .possible__title { text-align: center; } }
+@media (prefers-reduced-motion: reduce) { .imagine__cam, .possible__cam, .led { animation: none; } }

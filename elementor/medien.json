@@ -69,5 +69,30 @@
   }
  ],
  "formular_id": 4,
- "calendly_kamera_url": "https://calendly.com/provision-infra/telefonisches-erstgesprach-kamerasysteme"
+ "calendly_kamera_url": "https://calendly.com/provision-infra/telefonisches-erstgesprach-kamerasysteme",
+ "logo": {
+  "id": 407,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/05/ProVision-Infra-GmbH-blau-1-1.png",
+  "hinweis": "Logo aus dem Header der Startseite (Mediathek, unverändert)"
+ },
+ "kamera_lottie_mobil": {
+  "id": 4449,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk-mobil.json"
+ },
+ "kamera_bullet_links": {
+  "id": 4446,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-bullet-links.png"
+ },
+ "kamera_bullet_rechts": {
+  "id": 4447,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-bullet-rechts.png"
+ },
+ "szene_bild": {
+  "id": 4450,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher.jpg"
+ },
+ "szene_bild_mobil": {
+  "id": 4451,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher-mobil.jpg"
+ }
 }

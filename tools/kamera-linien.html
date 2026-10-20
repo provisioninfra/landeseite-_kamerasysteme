@@ -1,0 +1,49 @@
+<svg class="pv-linien" aria-hidden="true"><path class="pv-linie" d=""/></svg>
+<style>
+.pv-linien { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.pv-linie { fill: none; stroke: #FBC91B; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 4px rgba(251, 201, 27, .9)); }
+.pv-stell [data-pv-box] { position: relative; z-index: 2; cursor: default; transition: background-color .35s ease, border-color .35s ease, box-shadow .35s ease; }
+.pv-stell [data-pv-box].pv-lit, .pv-stell [data-pv-box]:hover { border-color: #FBC91B !important; background: linear-gradient(135deg, #22398F 0%, #0B1446 100%) !important; box-shadow: 0 0 24px rgba(250, 211, 126, .48); }
+@media (prefers-reduced-motion: reduce) { .pv-linie { transition: none !important; } }
+</style>
+<script>
+(function () {
+  if (document.body.classList.contains('elementor-editor-active')) return;
+  function start() {
+    var row = document.querySelector('.pv-stell'); if (!row || row.__pvLinien) return; row.__pvLinien = true;
+    var svg = row.querySelector('.pv-linien'), path = row.querySelector('.pv-linie'), cam = row.querySelector('#pv-kamera');
+    var boxes = [].slice.call(row.querySelectorAll('[data-pv-box]')).sort(function (a, b) { return +a.getAttribute('data-pv-box') - +b.getAttribute('data-pv-box'); });
+    if (!svg || !path || !cam || !boxes.length) return;
+    var DEFAULT = boxes[0], current = null, timer = null, shown = false;
+    function draw(box, animate) {
+      var rr = row.getBoundingClientRect(), br = box.getBoundingClientRect(), cr = cam.getBoundingClientRect();
+      var n = +box.getAttribute('data-pv-box'), left = n <= 4, i = left ? n - 1 : n - 5;
+      var sx = (left ? br.right : br.left) - rr.left, sy = br.top + br.height / 2 - rr.top;
+      var ex = cr.left - rr.left + cr.width * (left ? 0.2 : 0.8), ey = cr.top - rr.top + cr.height * (0.56 + 0.09 * i);
+      var mx = sx + (ex - sx) * 0.38;
+      path.setAttribute('d', 'M' + sx.toFixed(1) + ' ' + sy.toFixed(1) + ' H' + mx.toFixed(1) + ' L' + ex.toFixed(1) + ' ' + ey.toFixed(1));
+      var len = path.getTotalLength();
+      path.style.transition = 'none'; path.style.strokeDasharray = len; path.style.strokeDashoffset = animate ? len : 0;
+      void path.getBoundingClientRect();
+      path.style.transition = 'stroke-dashoffset .55s ease'; path.style.strokeDashoffset = 0;
+    }
+    function light(box) {
+      boxes.forEach(function (b) { b.classList.toggle('pv-lit', b === box); });
+      var changed = box !== current; current = box; draw(box, changed);
+    }
+    boxes.forEach(function (b) {
+      b.addEventListener('mouseenter', function () { clearTimeout(timer); light(b); });
+      b.addEventListener('mouseleave', function () { clearTimeout(timer); timer = setTimeout(function () { light(DEFAULT); }, 120); });
+    });
+    function show() { if (shown) return; shown = true; light(DEFAULT); }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) show(); }); }, { threshold: 0.25 }).observe(row);
+    } else { show(); }
+    if ('ResizeObserver' in window) { new ResizeObserver(function () { if (current) draw(current, false); }).observe(cam); }
+    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { if (current) draw(current, false); }, 120); });
+    // Kamera-Animation wird erst nach dem Laden gesetzt: Linie danach einmal nachziehen
+    window.addEventListener('load', function () { setTimeout(function () { if (current) draw(current, false); }, 900); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
