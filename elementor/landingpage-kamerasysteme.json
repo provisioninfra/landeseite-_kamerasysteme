@@ -2621,9 +2621,9 @@
         "padding": {
          "unit": "px",
          "top": "40",
-         "right": "30",
+         "right": "24",
          "bottom": "40",
-         "left": "30",
+         "left": "24",
          "isLinked": false
         },
         "__globals__": {
@@ -2660,10 +2660,10 @@
         },
         "padding_mobile": {
          "unit": "px",
-         "top": "24",
-         "right": "16",
-         "bottom": "24",
-         "left": "16",
+         "top": "28",
+         "right": "14",
+         "bottom": "28",
+         "left": "14",
          "isLinked": false
         },
         "min_height": {
@@ -2691,8 +2691,8 @@
          "isInner": false,
          "settings": {
           "image": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/05/ProVision-Infra-GmbH-blau-1-1.png",
-           "id": 407,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-logo-provision-infra-1032.png",
+           "id": 4479,
            "size": "",
            "alt": "ProVision Infra GmbH",
            "source": "library"
@@ -2706,21 +2706,7 @@
            "nofollow": "",
            "custom_attributes": ""
           },
-          "width": {
-           "unit": "%",
-           "size": 68,
-           "sizes": []
-          },
-          "width_tablet": {
-           "unit": "%",
-           "size": 55,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 68,
-           "sizes": []
-          },
+          "custom_css": "selector { width: 88%; max-width: 88%; }\nselector > a { display: block; width: 100%; }\nselector img { width: 100%; height: auto; }\n@media (max-width: 1024px) { selector { width: 72%; max-width: 72%; } }\n@media (max-width: 767px) { selector { width: 86%; max-width: 86%; } }",
           "_title": "Logo mit Link zur Startseite"
          }
         }
@@ -10851,8 +10837,8 @@
          "isInner": false,
          "settings": {
           "source_json": {
-           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk.json",
-           "id": 4460,
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk-scharf.json",
+           "id": 4472,
            "size": "",
            "alt": "",
            "source": "library"
@@ -12296,7 +12282,7 @@
        "elements": [],
        "isInner": false,
        "settings": {
-        "html": "<svg class=\"pv-linien\" aria-hidden=\"true\"><path class=\"pv-linie\" d=\"\"/></svg>\n<style>\n.pv-linien { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }\n.pv-linie { fill: none; stroke: #FBC91B; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 4px rgba(251, 201, 27, .9)); }\n.pv-stell [data-pv-box] { position: relative; z-index: 2; cursor: default; transition: background-color .35s ease, border-color .35s ease, box-shadow .35s ease; }\n.pv-stell [data-pv-box].pv-lit, .pv-stell [data-pv-box]:hover { border-color: #FBC91B !important; background: linear-gradient(135deg, #22398F 0%, #0B1446 100%) !important; box-shadow: 0 0 24px rgba(250, 211, 126, .48); }\n@media (prefers-reduced-motion: reduce) { .pv-linie { transition: none !important; } }\n</style>\n<script>\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) return;\n  function start() {\n    var row = document.querySelector('.pv-stell'); if (!row || row.__pvLinien) return; row.__pvLinien = true;\n    var svg = row.querySelector('.pv-linien'), path = row.querySelector('.pv-linie'), cam = row.querySelector('#pv-kamera');\n    var boxes = [].slice.call(row.querySelectorAll('[data-pv-box]')).sort(function (a, b) { return +a.getAttribute('data-pv-box') - +b.getAttribute('data-pv-box'); });\n    if (!svg || !path || !cam || !boxes.length) return;\n    var DEFAULT = boxes[0], current = null, timer = null, shown = false;\n    function draw(box, animate) {\n      var rr = row.getBoundingClientRect(), br = box.getBoundingClientRect(), cr = cam.getBoundingClientRect();\n      var n = +box.getAttribute('data-pv-box'), left = n <= 4, i = left ? n - 1 : n - 5;\n      var sx = (left ? br.right : br.left) - rr.left, sy = br.top + br.height / 2 - rr.top;\n      var ex = cr.left - rr.left + cr.width * (left ? 0.2 : 0.8), ey = cr.top - rr.top + cr.height * (0.56 + 0.09 * i);\n      var mx = sx + (ex - sx) * 0.38;\n      path.setAttribute('d', 'M' + sx.toFixed(1) + ' ' + sy.toFixed(1) + ' H' + mx.toFixed(1) + ' L' + ex.toFixed(1) + ' ' + ey.toFixed(1));\n      var len = path.getTotalLength();\n      path.style.transition = 'none'; path.style.strokeDasharray = len; path.style.strokeDashoffset = animate ? len : 0;\n      void path.getBoundingClientRect();\n      path.style.transition = 'stroke-dashoffset .55s ease'; path.style.strokeDashoffset = 0;\n    }\n    function light(box) {\n      boxes.forEach(function (b) { b.classList.toggle('pv-lit', b === box); });\n      var changed = box !== current; current = box; draw(box, changed);\n    }\n    boxes.forEach(function (b) {\n      b.addEventListener('mouseenter', function () { clearTimeout(timer); light(b); });\n      b.addEventListener('mouseleave', function () { clearTimeout(timer); timer = setTimeout(function () { light(DEFAULT); }, 120); });\n    });\n    function show() { if (shown) return; shown = true; light(DEFAULT); }\n    if ('IntersectionObserver' in window) {\n      new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) show(); }); }, { threshold: 0.25 }).observe(row);\n    } else { show(); }\n    if ('ResizeObserver' in window) { new ResizeObserver(function () { if (current) draw(current, false); }).observe(cam); }\n    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { if (current) draw(current, false); }, 120); });\n    // Kamera-Animation wird erst nach dem Laden gesetzt: Linie danach einmal nachziehen\n    window.addEventListener('load', function () { setTimeout(function () { if (current) draw(current, false); }, 900); });\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();\n})();\n</script>\n",
+        "html": "<svg class=\"pv-linien\" aria-hidden=\"true\"><path class=\"pv-linie\" d=\"\"/></svg>\n<style>\n.pv-linien { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }\n.pv-linie { fill: none; stroke: #FBC91B; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 4px rgba(251, 201, 27, .9)); }\n.pv-stell [data-pv-box] { position: relative; z-index: 2; cursor: default; transition: background-color .35s ease, border-color .35s ease, box-shadow .35s ease; }\n.pv-stell [data-pv-box].pv-lit, .pv-stell [data-pv-box]:hover { border-color: #FBC91B !important; background: linear-gradient(135deg, #22398F 0%, #0B1446 100%) !important; box-shadow: 0 0 24px rgba(250, 211, 126, .48); }\n@media (prefers-reduced-motion: reduce) { .pv-linie { transition: none !important; } }\n</style>\n<script>\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) return;\n  function start() {\n    var row = document.querySelector('.pv-stell'); if (!row || row.__pvLinien) return; row.__pvLinien = true;\n    var svg = row.querySelector('.pv-linien'), path = row.querySelector('.pv-linie'), cam = row.querySelector('#pv-kamera');\n    var boxes = [].slice.call(row.querySelectorAll('[data-pv-box]')).sort(function (a, b) { return +a.getAttribute('data-pv-box') - +b.getAttribute('data-pv-box'); });\n    if (!svg || !path || !cam || !boxes.length) return;\n    var DEFAULT = boxes[0], current = null, timer = null, shown = false;\n    function draw(box, animate) {\n      var rr = row.getBoundingClientRect(), br = box.getBoundingClientRect(), cr = cam.getBoundingClientRect();\n      var n = +box.getAttribute('data-pv-box'), left = n <= 4, i = left ? n - 1 : n - 5;\n      var sx = (left ? br.right : br.left) - rr.left, sy = br.top + br.height / 2 - rr.top;\n      var ex = cr.left - rr.left + cr.width * (left ? 0.2 : 0.8), ey = cr.top - rr.top + cr.height * (0.56 + 0.09 * i);\n      var mx = sx + (ex - sx) * 0.38;\n      path.setAttribute('d', 'M' + sx.toFixed(1) + ' ' + sy.toFixed(1) + ' H' + mx.toFixed(1) + ' L' + ex.toFixed(1) + ' ' + ey.toFixed(1));\n      var len = path.getTotalLength();\n      path.style.transition = 'none'; path.style.strokeDasharray = len; path.style.strokeDashoffset = animate ? len : 0;\n      void path.getBoundingClientRect();\n      path.style.transition = 'stroke-dashoffset .55s ease'; path.style.strokeDashoffset = 0;\n    }\n    function light(box) {\n      boxes.forEach(function (b) { b.classList.toggle('pv-lit', b === box); });\n      var changed = box !== current; current = box; draw(box, changed);\n    }\n    boxes.forEach(function (b) {\n      b.addEventListener('mouseenter', function () { clearTimeout(timer); light(b); });\n      b.addEventListener('mouseleave', function () { clearTimeout(timer); timer = setTimeout(function () { light(DEFAULT); }, 120); });\n    });\n    // Erst zeichnen, wenn der Standard-Kasten seine Einblend-Animation (fadeInLeft) beendet hat; sonst wird die Linie\n    // an der Zwischenposition des hereingleitenden Kastens gemessen und beginnt mitten im Kasten.\n    function animating(el) {\n      if (el.classList.contains('elementor-invisible')) return true;\n      if (typeof el.getAnimations !== 'function') return false;\n      return el.getAnimations().some(function (a) { return a.playState === 'running'; });\n    }\n    function show() {\n      if (shown) return;\n      var tries = 0;\n      (function go() {\n        if (!animating(DEFAULT) || tries > 50) { shown = true; light(DEFAULT); }\n        else { tries++; setTimeout(go, 100); }\n      })();\n    }\n    // Nach jeder beendeten Einblend-Animation eines Kastens die aktuelle Linie an die endgültige Position legen\n    row.addEventListener('animationend', function () { if (current) draw(current, false); }, true);\n    if ('IntersectionObserver' in window) {\n      new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) show(); }); }, { threshold: 0.25 }).observe(row);\n    } else { show(); }\n    if ('ResizeObserver' in window) { new ResizeObserver(function () { if (current) draw(current, false); }).observe(cam); }\n    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { if (current) draw(current, false); }, 120); });\n    // Kamera-Animation wird erst nach dem Laden gesetzt: Linie danach einmal nachziehen\n    window.addEventListener('load', function () { setTimeout(function () { if (current) draw(current, false); }, 900); });\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();\n})();\n</script>\n",
         "custom_css": "selector { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; pointer-events: none; z-index: 1; }",
         "_title": "Leuchtlinie zur Kamera"
        }
@@ -15181,8 +15167,8 @@
        "isInner": false,
        "settings": {
         "source_json": {
-         "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk.json",
-         "id": 4460,
+         "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk-scharf.json",
+         "id": 4472,
          "size": "",
          "alt": "",
          "source": "library"
@@ -15224,8 +15210,8 @@
     },
     "background_background": "classic",
     "background_image": {
-     "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher.jpg",
-     "id": 4450,
+     "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher-4800.webp",
+     "id": "",
      "size": "",
      "alt": "",
      "source": "library"
@@ -15299,8 +15285,8 @@
     },
     "_element_id": "moeglich",
     "background_image_mobile": {
-     "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher-mobil.jpg",
-     "id": 4451,
+     "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher-mobil-2552.webp",
+     "id": 4474,
      "size": "",
      "alt": "",
      "source": "library"
@@ -18667,7 +18653,15 @@
      "unit": "px",
      "top": "0",
      "right": "0",
-     "bottom": "0",
+     "bottom": "40",
+     "left": "0",
+     "isLinked": false
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "20",
+     "right": "0",
+     "bottom": "60",
      "left": "0",
      "isLinked": false
     }

@@ -66,7 +66,7 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   größte erlaubte Größe, der Rest hält die Zeilen bei schmalen Bildschirmen zusammen. Wer es größer möchte,
   erhöht nur die erste Zahl.
 - **Logo-Rahmen und drei Punkte** (direkt unter dem Hero, wie auf der Startseite): links der gelb umrandete Rahmen
-  mit dem Logo, das auf die Startseite verlinkt (Bild-Element, Link unter **Inhalt → Link**), rechts drei Zeilen mit
+  mit dem Logo, das auf die Startseite verlinkt (Bild-Element, Link unter **Inhalt → Link**; Datei kamera-logo-provision-infra-1032.png, eine hochgerechnete Version des Header-Logos; die Breite steht im Element unter **Erweitert → Eigenes CSS**), rechts drei Zeilen mit
   Icon und Text (Ausgangslage, Folgen, Lösung). Jede Zeile ist ein eigenes Textelement.
 - **Was ohne Kameras auf deinem Gelände passiert?** Am Computer zweispaltig wie der Startseiten-Abschnitt „Warum immer
   mehr KMUs …“: links Überschrift und Einleitung (bleiben beim Scrollen stehen, bis die Karten rechts zu Ende sind),
@@ -81,12 +81,12 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   läuft zur Kamera (Element „Leuchtlinie zur Kamera“, bitte nicht löschen). Am Handy stehen die acht Kästen
   untereinander, darunter die Kamera. Texte und Icons gibt es deshalb zweimal (Abschnitt „Computer/Tablet“ und
   Abschnitt „Handy“), Änderungen bitte an beiden Stellen. Die Kamera ist eine Lottie-Animation aus Produktbild 3
-  (Mediathek: kamera-schwenk.json); sie schwenkt, schwebt leicht, die rote LED blinkt. Der gelbe Lichtschein um die
+  (Mediathek: kamera-schwenk-scharf.json); sie schwenkt, schwebt leicht, die rote LED blinkt. Der gelbe Lichtschein um die
   Kamera ist ein CSS-Schatten des Elements (Erweitert → Eigenes CSS).
 - **Und genau das wird möglich mit ProVision Infra:** Überschriften und Textkasten links, rechts die Szene der
   Startseite (Flur mit Tür) als Hintergrundbild, die Person darauf als dunkle Kapuzen-Silhouette (Einbrecher).
   Das Hintergrundbild wechselst du unter **Stil → Hintergrund** (Computer und Handy haben je ein eigenes Bild:
-  kamera-szene-einbrecher.jpg und kamera-szene-einbrecher-mobil.jpg).
+  kamera-szene-einbrecher-4800.webp und kamera-szene-einbrecher-mobil-2552.webp).
 - **Icons:** Alle Icon-Kacheln sind dunkel mit gelbem Symbol (wie auf der Startseite). Die fünf Kamera-Icons liegen als
   SVG in der Mediathek (kamera-icon-…-dunkel.svg); ein Icon tauschst du im Icon-Element unter **Inhalt → Icon → SVG
   hochladen**.

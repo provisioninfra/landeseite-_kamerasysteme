@@ -430,3 +430,28 @@ und Partner bleiben wörtlich die Startseiten-Bausteine.
   seitenweiten CSS und greifen auch hier, Sticky-Text (Computer), Zähler, beide Slider mit Autoplay, Ablauf-Lottie
   (scrollgebunden, Computer), Hover-Rahmen der Karten, Kamera-Lottie (läuft im Sichtbereich, pausiert außerhalb),
   Leuchtlinie und Aufleuchten der Kästen (Computer/Tablet). Keine JavaScript-Fehler, keine horizontale Verschiebung.
+
+## Dritte Runde nach Rückmeldung am Handy (20.10.2026)
+
+- **Box „Genau daraus ist ProVision Infra entstanden“ unten abgeschnitten:** Der Abschnitt der Startseite hat am Handy kein
+  Polster nach unten; auf der Kameraseite folgt der Technik-Slider mit dem Verlaufsstreifen (`shadeup`), der den unteren Rand
+  und den gelben Schein der Box verdeckte (auf der Startseite folgt der Partner-Abschnitt ohne Streifen). Jetzt 40 px Abstand
+  am Handy, 60 px am Tablet. Rest des Abschnitts unverändert.
+- **Leuchtlinie begann mitten im ersten Kasten:** Die Linie wurde beim Erscheinen des Abschnitts gezeichnet, während der erste
+  Kasten noch mit `fadeInLeft` hereinglitt; gemessen wurde seine Zwischenposition (bei 1536 px 54 px zu weit links). Das
+  Skript wartet jetzt, bis die Einblend-Animation des Standard-Kastens beendet ist (`getAnimations`, Rückfall nach 5 s), und
+  legt die aktuelle Linie nach jedem `animationend` eines Kastens neu. Geprüft: Linienstart exakt an der Kastenkante bei
+  1920, 1536, 1440, 1366, 1024 und 768 px (Abweichung 0 px); keine Linie kreuzt einen anderen Kasten (zwölf Breiten von
+  768 bis 1920 px, alle acht Kästen).
+- **Logo im Rahmen:** 88 % der Rahmenbreite (Tablet 72 %, Handy 86 %). Zwei Hürden: Das Bild-Element steckt wegen des Links in
+  einem `<a>` und schrumpft als Flex-Kind des zentrierten Rahmens auf die natürliche Bildbreite, die Breite wird deshalb per
+  eigenem CSS auf dem Element gesetzt. Und die einzige Logodatei der Website (Header, Mediathek-ID 407) ist nur 258 x 60 px
+  groß; ein größeres Logo wäre unscharf. Deshalb mit Real-ESRGAN (`realesr-animevideov3`, gut für flächige Grafik) auf
+  1032 x 240 px vervierfacht, Alpha getrennt skaliert, als PNG hochgeladen (ID 4479). Kein größeres Logo in der Mediathek
+  vorhanden (Suche nach „logo“, „ProVision-Infra-GmbH“; nur Partnerlogos).
+- **Schärfe:** Szenenbild (Computer) mit Real-ESRGAN `realesr-general-x4v3` in Kacheln vervierfacht, auf 4800 x 2208
+  verkleinert und leicht nachgeschärft, als WebP (106 KB, Mediathek-ID 4473; WordPress legt zusätzlich eine 2560-px-Kopie
+  „-scaled“ an, die Seite nutzt die volle Datei). Handy-Variante 2552 x 2208 (90 KB, ID 4474). Kamera-Ausschnitt des
+  Produktbilds 3 ebenso auf 880 x 1511 hochgerechnet und als WebP mit Transparenz (60 KB) in die Lottie-Datei eingebettet
+  (ID 4472, 80 KB); die Ebene ist auf 30,68 % skaliert, Geometrie und LED-Position unverändert. Alte Dateien (4450, 4451,
+  4460) gelöscht. Hochrechnen: `tools/kamera_lottie_erzeugen.py` liest `assets/img/produkte/kamera-3-scharf.webp`.

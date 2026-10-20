@@ -300,10 +300,17 @@ frame["elements"] = [{"id": new_id(), "elType": "widget", "widgetType": "image",
     "image": {"url": LOGO["url"], "id": LOGO["id"], "size": "", "alt": "ProVision Infra GmbH", "source": "library"},
     "image_size": "full", "align": "center", "link_to": "custom",
     "link": {"url": SITE + "/", "is_external": "", "nofollow": "", "custom_attributes": ""},
-    "width": {"unit": "%", "size": 68, "sizes": []}, "width_tablet": {"unit": "%", "size": 55, "sizes": []}, "width_mobile": {"unit": "%", "size": 68, "sizes": []},
+    # Breite per CSS: das Bild steckt wegen des Links in einem <a>; die Prozent-Breite des Bild-Elements greift dort nicht
+    # Breite per CSS auf dem Element selbst: das Bild steckt wegen des Links in einem <a>, und als Flex-Kind des zentrierten
+    # Rahmens schrumpft das Element sonst auf die natürliche Bildbreite
+    "custom_css": ("selector { width: 88%; max-width: 88%; }\n"
+                   "selector > a { display: block; width: 100%; }\n"
+                   "selector img { width: 100%; height: auto; }\n"
+                   "@media (max-width: 1024px) { selector { width: 72%; max-width: 72%; } }\n"
+                   "@media (max-width: 767px) { selector { width: 86%; max-width: 86%; } }"),
     "_title": "Logo mit Link zur Startseite"}}]
 frame["settings"].update({"_title": "Logo-Rahmen", "flex_direction": "column", "flex_justify_content": "center", "flex_align_items": "center",
-                          "padding": box(40, 30, 40, 30), "padding_tablet": box(30, 20, 30, 20), "padding_mobile": box(24, 16, 24, 16),
+                          "padding": box(40, 24, 40, 24), "padding_tablet": box(30, 20, 30, 20), "padding_mobile": box(28, 14, 28, 14),
                           "min_height": {"unit": "px", "size": 320, "sizes": []}, "min_height_tablet": {"unit": "px", "size": 240, "sizes": []},
                           "min_height_mobile": {"unit": "px", "size": 190, "sizes": []}})
 must(punkte, "478e545")["settings"]["_title"] = "Drei Punkte"
@@ -574,7 +581,7 @@ moeglich = clone(H[10])
 must(moeglich, "ecdc807")["settings"].update({"title": MOEGLICH_H, "_title": "Überschrift"})
 must(moeglich, "f085e1b")["settings"].update({"editor": MOEGLICH_T, "_title": "Text"})
 ms_ = moeglich["settings"]
-ms_["background_image"] = {"url": SZENE["url"], "id": SZENE["id"], "size": "", "alt": "", "source": "library"}
+ms_["background_image"] = {"url": SZENE["url"], "id": "", "size": "", "alt": "", "source": "library"}   # ohne ID: Elementor ersetzt die URL sonst durch die 2560-px-Kopie („-scaled“)
 ms_["background_image_mobile"] = {"url": SZENE_MOBIL["url"], "id": SZENE_MOBIL["id"], "size": "", "alt": "", "source": "library"}
 ms_.update({"_element_id": "moeglich", "_title": "Und genau das wird möglich"})
 # Keine eingefügten Kameras über der Szene (Wunsch vom 20.10., zweite Runde); die Silhouette bleibt.
@@ -599,7 +606,10 @@ page.append(kunden)
 
 # ---------------------------------------------------------------- 11) Gründer (mit Fortsetzung), Technik, Partner, Standort mit Erstgespräch (Original)
 page.append(clone(H[16]))
-page.append(clone(H[17]))
+entstanden = clone(H[17])
+entstanden["settings"]["padding_mobile"] = box(0, 0, 40, 0)      # Handy: Box samt Schein frei vom Streifen des folgenden Slider-Abschnitts
+entstanden["settings"]["padding_tablet"] = box(20, 0, 60, 0)
+page.append(entstanden)
 page.append(slider)
 page.append(clone(H[19]))          # Standort mit Erstgespräch; die Partner (H[18]) folgen nach dem FAQ
 

@@ -35,7 +35,23 @@
       b.addEventListener('mouseenter', function () { clearTimeout(timer); light(b); });
       b.addEventListener('mouseleave', function () { clearTimeout(timer); timer = setTimeout(function () { light(DEFAULT); }, 120); });
     });
-    function show() { if (shown) return; shown = true; light(DEFAULT); }
+    // Erst zeichnen, wenn der Standard-Kasten seine Einblend-Animation (fadeInLeft) beendet hat; sonst wird die Linie
+    // an der Zwischenposition des hereingleitenden Kastens gemessen und beginnt mitten im Kasten.
+    function animating(el) {
+      if (el.classList.contains('elementor-invisible')) return true;
+      if (typeof el.getAnimations !== 'function') return false;
+      return el.getAnimations().some(function (a) { return a.playState === 'running'; });
+    }
+    function show() {
+      if (shown) return;
+      var tries = 0;
+      (function go() {
+        if (!animating(DEFAULT) || tries > 50) { shown = true; light(DEFAULT); }
+        else { tries++; setTimeout(go, 100); }
+      })();
+    }
+    // Nach jeder beendeten Einblend-Animation eines Kastens die aktuelle Linie an die endgültige Position legen
+    row.addEventListener('animationend', function () { if (current) draw(current, false); }, true);
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) show(); }); }, { threshold: 0.25 }).observe(row);
     } else { show(); }

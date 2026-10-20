@@ -71,21 +71,23 @@
  "formular_id": 4,
  "calendly_kamera_url": "https://calendly.com/provision-infra/telefonisches-erstgesprach-kamerasysteme",
  "logo": {
-  "id": 407,
-  "url": "https://provision-infra.de/wp-content/uploads/2026/05/ProVision-Infra-GmbH-blau-1-1.png",
-  "hinweis": "Logo aus dem Header der Startseite (Mediathek, unverändert)"
+  "id": 4479,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-logo-provision-infra-1032.png",
+  "hinweis": "Header-Logo der Startseite (Mediathek-ID 407, nur 258 px breit) mit Real-ESRGAN vervierfacht, damit es den Rahmen scharf ausfüllt"
  },
  "kamera_lottie_mobil": {
-  "id": 4460,
-  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk.json",
-  "hinweis": "Schwenk-Neige-Kamera (Produktbild 3), Bühne 360 x 520, ohne Lichtschein (kommt per CSS)"
+  "id": 4472,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-schwenk-scharf.json",
+  "hinweis": "Schwenk-Neige-Kamera (Produktbild 3, 880 px scharf), Bühne 360 x 520, Lichtschein per CSS"
  },
  "szene_bild": {
-  "id": 4450,
-  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher.jpg"
+  "id": 4473,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher-4800.webp",
+  "hinweis": "4800 x 2208, WebP, mit Real-ESRGAN hochgerechnet; WordPress legt zusätzlich eine 2560-px-Kopie (-scaled) an, hier wird die volle Größe verwendet"
  },
  "szene_bild_mobil": {
-  "id": 4451,
-  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher-mobil.jpg"
+  "id": 4474,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-szene-einbrecher-mobil-2552.webp",
+  "hinweis": "2552 x 2208, WebP"
  }
 }
