@@ -112,8 +112,8 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
 - **FAQ:** Auf das Akkordeon klicken → links unter **Inhalt** die Fragen aufklappen und bearbeiten.
   Die Antwort zur Rechtslage ist allgemein gehalten. Wenn du einen Datenschutz-Berater hast, lass sie gegenlesen.
 
-Reihenfolge der Seite: Hero, Logo-Rahmen mit drei Punkten, Was ohne Kameras passiert, So arbeiten wir, Kundenstimmen,
-Stell dir mal vor, Und genau das wird möglich, Ablauf der Zusammenarbeit, Gründer, Technik (Produktslider), Standort mit
+Reihenfolge der Seite: Hero, Logo-Rahmen mit drei Punkten, Was ohne Kameras passiert, Kundenstimmen, Stell dir mal vor,
+Und genau das wird möglich, So arbeiten wir, Ablauf der Zusammenarbeit, Gründer, Technik (Produktslider), Standort mit
 Erstgespräch, FAQ, Partner, Footer. Kundenstimmen, Gründer, Standort und Partner sind unverändert von der Startseite
 übernommen.
 

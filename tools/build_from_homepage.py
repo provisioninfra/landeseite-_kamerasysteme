@@ -9,7 +9,7 @@ Ausgabe:  elementor/kamera-seite.elements.json       – Elemente + Seiteneinste
 
 Jeder Abschnitt ist eine Kopie eines Startseiten-Abschnitts; nur Texte, Video, Bilder, Icons und die
 Anzahl der Slides/Zeilen werden geändert. Reihenfolge (20.10.): Header, Hero, Video-Rahmen + drei Punkte, Glas-Logo-Teil
-(Pain-Karten), So arbeiten wir, Kundenstimmen, Stell dir mal vor, Und genau das wird möglich, Ablauf, Gründer, Technik,
+(Pain-Karten), Kundenstimmen, Stell dir mal vor, Und genau das wird möglich, So arbeiten wir, Ablauf, Gründer, Technik,
 Standort, FAQ, Partner, Footer. Dadurch stimmen Schriften, Farben, Abstände,
 Animationen, Header und Footer exakt mit der Startseite überein.
 
@@ -470,30 +470,7 @@ diff["settings"].update({"_element_id": "folgen", "_title": "Was ohne Kameras pa
 # Optik dem sichtbaren Original entspricht, wird es hier bewusst nicht übernommen.
 page.append(diff)
 
-# ---------------------------------------------------------------- 8) So arbeiten wir – schwebende Kästen (Original: „… installiert dir genau das, damit du“)
-arbeit = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(H[4]["settings"]),
-          "elements": [clone(must(H[4], "18e7c8b"))]}
-# Der Startseiten-Abschnitt dunkelt am Handy die oberen 100 px mit einem Verlauf ab (Übergang vom Hero). Hier stünde die
-# Überschrift darunter und würde grau; deshalb ohne diese Zusatzregel (es bleibt der normale 30-px-Streifen der Klasse shadeup).
-arbeit["settings"].pop("custom_css", None)
-must(arbeit, "58d331d")["settings"].update({"title": ARBEIT_H, "_title": ARBEIT_H})
-for wid, text in zip(("b4a337a", "334a7dd", "28dae90"), ARBEIT):
-    w = must(arbeit, wid)["settings"]
-    if "editor" in w:
-        w["editor"] = f"<p>{text}</p>"
-    else:
-        w["title"] = text
-    w["_title"] = text[:40]
-must(arbeit, "18e7c8b")["settings"]["_title"] = "Kästen"
-arbeit["settings"].update({"_element_id": "arbeitsweise", "_title": "So arbeiten wir",
-                           "padding": box(0, 20, 50, 20), "padding_laptop": box(0, 20, 50, 20),
-                           # Tablet/Handy: innerer Container hat dort kein Polster, der dunkle Verlaufsstreifen (shadeup) der
-                           # Abschnittskante würde die Überschrift abdunkeln; deshalb 30 px Abstand wie auf der Startseite
-                           "padding_tablet": box(30, 20, 40, 20), "padding_mobile": box(30, 20, 30, 20)})
-reid(arbeit)
-page.append(arbeit)
-
-# ---------------------------------------------------------------- 8a) Kundenstimmen (Original, mit Platz für die Pfeile; Wunsch vom 20.10.: zwischen „So arbeiten wir“ und „Stell dir mal vor“)
+# ---------------------------------------------------------------- 8) Kundenstimmen (Original, mit Platz für die Pfeile; nach dem Glas-Logo-Abschnitt)
 kunden = clone(H[5])
 slider_spacing(kunden)
 page.append(kunden)
@@ -591,6 +568,29 @@ ms_["background_image_mobile"] = {"url": SZENE_MOBIL["url"], "id": SZENE_MOBIL["
 ms_.update({"_element_id": "moeglich", "_title": "Und genau das wird möglich"})
 # Keine eingefügten Kameras über der Szene (Wunsch vom 20.10., zweite Runde); die Silhouette bleibt.
 page.append(reid(moeglich))
+
+# ---------------------------------------------------------------- 8d) So arbeiten wir – schwebende Kästen (Original: „… installiert dir genau das, damit du“); seit 20.10. abends direkt vor dem Ablauf
+arbeit = {"id": new_id(), "elType": "container", "isInner": False, "settings": clone(H[4]["settings"]),
+          "elements": [clone(must(H[4], "18e7c8b"))]}
+# Der Startseiten-Abschnitt dunkelt am Handy die oberen 100 px mit einem Verlauf ab (Übergang vom Hero). Hier stünde die
+# Überschrift darunter und würde grau; deshalb ohne diese Zusatzregel (es bleibt der normale 30-px-Streifen der Klasse shadeup).
+arbeit["settings"].pop("custom_css", None)
+must(arbeit, "58d331d")["settings"].update({"title": ARBEIT_H, "_title": ARBEIT_H})
+for wid, text in zip(("b4a337a", "334a7dd", "28dae90"), ARBEIT):
+    w = must(arbeit, wid)["settings"]
+    if "editor" in w:
+        w["editor"] = f"<p>{text}</p>"
+    else:
+        w["title"] = text
+    w["_title"] = text[:40]
+must(arbeit, "18e7c8b")["settings"]["_title"] = "Kästen"
+arbeit["settings"].update({"_element_id": "arbeitsweise", "_title": "So arbeiten wir",
+                           "padding": box(0, 20, 50, 20), "padding_laptop": box(0, 20, 50, 20),
+                           # Tablet/Handy: innerer Container hat dort kein Polster, der dunkle Verlaufsstreifen (shadeup) der
+                           # Abschnittskante würde die Überschrift abdunkeln; deshalb 30 px Abstand wie auf der Startseite
+                           "padding_tablet": box(30, 20, 40, 20), "padding_mobile": box(30, 20, 30, 20)})
+reid(arbeit)
+page.append(arbeit)
 
 # ---------------------------------------------------------------- 9) Ablauf der Zusammenarbeit (Original, Kamera-Texte)
 ablauf = clone(H[14])
