@@ -70,7 +70,7 @@ def svg_icon(media_id, url):
 # Fester Zeilenumbruch nach „Gebäude“: „mit Kamera- & Videoüberwachung“ steht immer in der zweiten Zeile (ohne Gedankenstrich)
 HERO_H1 = '<span style="font-weight: 700;">Wir schützen dein Unternehmen</span><br>mit Kamera- &amp; Videoüberwachung'
 HERO_SUB = ('Ein einziger Einbruch kostet dich schnell zehntausende Euro. Und oft bleibt es nicht bei einem. <br>\n<br>\n'
-            'ProVision Infra plant und installiert deine Kamera- und Videoüberwachung. Du siehst jederzeit per App, '
+            'ProVision Infra plant und installiert Kamera- und Videoüberwachung für Unternehmen. Du siehst jederzeit per App, '
             'was auf deinem Gelände passiert, und hast im Ernstfall Aufnahmen, die etwas beweisen.')
 
 # Drei Punkte neben dem Video-Rahmen (wie auf der Startseite: Ausgangslage, Folgen, Lösung). Icon-Schlüssel: HOME_* = Icon der
@@ -128,8 +128,8 @@ VORSTELLUNG_ICONS = ["ICON3", "HOME_WARN", "ICON5", "HOME_DOKUMENT", "ICON1", "I
 
 # „Und genau das wird möglich mit ProVision Infra“
 MOEGLICH_H = 'Mit Kamera- und Videoüberwachung von ProVision Infra <span style="font-weight: 700; ">teure Schäden verhindern</span>'
-MOEGLICH_T = ('<p>Bei ProVision Infra planen und installieren wir eine Videoüberwachung, die nachts und am Wochenende hinsieht, '
-              'wenn niemand im Betrieb ist, und dir im Ernstfall Aufnahmen liefert, die etwas beweisen.</p>'
+MOEGLICH_T = ('<p>Bei ProVision Infra planen und installieren wir Videoüberwachung für Unternehmen: Kameras, die nachts und am '
+              'Wochenende hinsehen, wenn niemand im Betrieb ist, und dir im Ernstfall Aufnahmen liefern, die etwas beweisen.</p>'
               '<p>Dafür setzen wir die Kameras an die Stellen, an denen jemand ungesehen aufs Gelände kommt. '
               'Live-Bild und Aufzeichnung siehst du per App auf dem Handy.</p>')
 
@@ -152,11 +152,11 @@ STEPS = {
 KONTAKT_TEXT = ('<p>Im Gespräch klären wir, welche Bereiche du im Blick haben willst und wo jemand ungesehen aufs Gelände kommt. '
                 'Dazu bekommst du eine erste Einschätzung zu Aufwand und Kosten.</p>')
 
-FAQ_H_DESKTOP = 'Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <b>ProVision&nbsp;Infra</b>'
-FAQ_H_MOBILE = 'Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <br><b>ProVision Infra</b>'
+FAQ_H_DESKTOP = 'Häufige Fragen zur \n<b>Videoüberwachung für&nbsp;Unternehmen</b>'
+FAQ_H_MOBILE = 'Häufige Fragen zur <br><b>Videoüberwachung für Unternehmen</b>'
 FAQ = [
     ("Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
-     "Ja, innerhalb klarer Regeln. Erlaubt ist dein eigenes Gelände samt Zugängen, nicht der Gehweg oder das Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel entsprechend und geben dir Schilder und Unterlagen mit."),
+     "Ja, innerhalb klarer Regeln. Erlaubt ist die Kameraüberwachung deines eigenen Geländes samt Zugängen, nicht der Gehweg oder das Nachbargrundstück. Mitarbeiter müssen informiert sein, ein Hinweisschild ist Pflicht. Wir planen die Kamerawinkel entsprechend und geben dir Schilder und Unterlagen mit."),
     ("Wie lange dauert die Installation einer Videoüberwachung?",
      "Vier bis acht Kameras sind meist an einem Tag montiert und eingerichtet. Größere Objekte planen wir in Abschnitten, damit dein Betrieb weiterläuft."),
     ("Kann ich die Kamerabilder auf dem Handy sehen?",
@@ -168,7 +168,7 @@ FAQ = [
     ("Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
      "Die Aufnahmen bleiben auf deinem Rekorder im Gebäude, nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung ein und halten die Software aktuell."),
     ("In welcher Region installiert ProVision Infra Videoüberwachung?",
-     "Unser Sitz ist Bad Bevensen bei Lüneburg. Unterwegs sind wir vor allem im Raum Hamburg, Hannover und Niedersachsen, bei größeren Projekten auch bundesweit."),
+     "Unser Sitz ist Bad Bevensen bei Lüneburg. Videoüberwachung für Unternehmen installieren wir vor allem im Raum Hamburg, Hannover und Niedersachsen, bei größeren Projekten auch bundesweit."),
 ]
 
 # Icons aus der Mediathek (SVG). Zuordnung siehe ICONS unten; Werte können jederzeit im Editor getauscht werden.
@@ -185,7 +185,7 @@ for k, v in ICON_OVERRIDES.items():
 
 VIDEO, POSTER, PRODUKTE = MEDIA["video"], MEDIA["poster"], MEDIA["produkte"]
 VIDEO_DESKTOP = MEDIA.get("video_4k", VIDEO)        # Desktop-Hero: 4K-Version (KI-hochskaliert), falls vorhanden
-VIDEO_MOBILE = MEDIA.get("video_mobile", VIDEO)     # Handy-Block: kleinere Version
+VIDEO_MOBILE = MEDIA.get("video_mobile_1080", MEDIA.get("video_mobile", VIDEO))   # Handy-Block: 1080p, 0,5 MB (vorher 1440p, 1,5 MB)
 
 page = []
 
@@ -307,7 +307,7 @@ for wid, iid, (key, text) in zip(("d05eab3", "7df04ae", "d38dec5"), ("087e23e", 
 LOGO = MEDIA["logo"]
 frame = must(punkte, "0a52747")
 frame["elements"] = [{"id": new_id(), "elType": "widget", "widgetType": "image", "elements": [], "isInner": False, "settings": {
-    "image": {"url": LOGO["url"], "id": LOGO["id"], "size": "", "alt": "ProVision Infra GmbH", "source": "library"},
+    "image": {"url": LOGO["url"], "id": LOGO["id"], "size": "", "alt": "ProVision Infra GmbH, Videoüberwachung für Unternehmen", "source": "library"},
     "image_size": "full", "align": "center", "link_to": "custom",
     "link": {"url": SITE + "/", "is_external": "", "nofollow": "", "custom_attributes": ""},
     # Breite per CSS: das Bild steckt wegen des Links in einem <a>; die Prozent-Breite des Bild-Elements greift dort nicht
@@ -331,6 +331,25 @@ page.append(punkte)
 # ---------------------------------------------------------------- 6) Produkt-Slider – Kopie des Kundenstimmen-Sliders mit Bildern (steht weiter unten)
 slider = clone(H[5])
 must(slider, "556df520")["settings"]["title"] = SLIDER_H
+# SEO: kurzer Technik-Absatz (Synonyme Überwachungskameras/Kameraüberwachung, Keyphrase); Vorlage: Textwidget des Standorts
+TECHNIK_T = ('<p>Wir verbauen Überwachungskameras von TP-Link VIGI, je nach Standort als Bullet- oder Dome-Kamera oder schwenkbar, '
+             'immer mit Nachtsicht und Bewegungserkennung. Dazu kommen ein Rekorder im Gebäude und die App auf deinem Handy. '
+             'So wird aus einzelnen Kameras eine Videoüberwachung für Unternehmen, die zu deinem Betrieb passt.</p>')
+technik_text = clone(must(H[19], "5c65e03"))
+technik_text["id"] = new_id()
+technik_text["settings"].update({"editor": TECHNIK_T, "_title": "Technik-Text", "align": "center",
+                                 "width": {"unit": "px", "size": 820, "sizes": []}, "width_tablet": {"unit": "%", "size": 100, "sizes": []},
+                                 "width_mobile": {"unit": "%", "size": 100, "sizes": []}, "_flex_align_self": "center",
+                                 "_margin": box(16, 0, 0, 0), "_margin_mobile": box(10, 0, 0, 0)})
+def parent_of(el, eid):
+    for c in el.get("elements", []):
+        if c.get("id") == eid:
+            return el
+        r = parent_of(c, eid)
+        if r:
+            return r
+    return None
+parent_of(slider, "556df520")["elements"].append(technik_text)   # in den Container der Überschrift
 row = must(slider, "55a57e52")
 row["elements"] = [e for e in row["elements"] if e["id"] != "63020976"]      # Bewertungszeile entfernen
 car = must(slider, "2b91cf92")
@@ -625,6 +644,10 @@ page.append(ablauf)
 
 # ---------------------------------------------------------------- 11) Gründer (mit Fortsetzung), Technik, Partner, Standort mit Erstgespräch (Original)
 gruender = clone(H[16])
+# Ladezeit: Das Overlay-Bild des Abschnitts (PNG, 696 KB) als WebP-Kopie (182 KB, optisch gleich; medien.json: hintergrund_gruender)
+HG = MEDIA["hintergrund_gruender"]
+assert "Untitled-design-1" in gruender["settings"].get("background_overlay_image", {}).get("url", "")
+gruender["settings"]["background_overlay_image"] = {"url": HG["url"], "id": HG["id"], "size": "", "alt": "", "source": "library"}
 # Gründertext der Startseite, hier ohne Gedankenstriche (Schreibregel dieser Seite); Inhalt unverändert
 for wid, alt, neu in (("e04b70a", "Entscheidungen treffen – das gehörte", "Entscheidungen treffen: Das gehörte"),
                       ("a1d3e7d", "nachgemacht – und erst wenn", "nachgemacht, und erst wenn")):
@@ -638,7 +661,10 @@ entstanden["settings"]["padding_mobile"] = box(0, 0, 40, 0)      # Handy: Box sa
 entstanden["settings"]["padding_tablet"] = box(20, 0, 60, 0)
 page.append(entstanden)
 page.append(slider)
-page.append(clone(H[19]))          # Standort mit Erstgespräch; die Partner (H[18]) folgen nach dem FAQ
+standort = clone(H[19])             # Standort mit Erstgespräch; die Partner (H[18]) folgen nach dem FAQ
+# SEO (lokale Suche): Überschrift nennt Region statt „Hier findest du ProVision Infra“; Text und Karte unverändert
+must(standort, "51f3331")["settings"]["title"] = 'Videoüberwachung in <span style="font-weight: 700; ">Hamburg, Hannover und&nbsp;Niedersachsen</span>'
+page.append(standort)
 
 # ---------------------------------------------------------------- 12) FAQ (Original-Akkordeon, Kamera-Fragen)
 faq = clone(H[20])
@@ -769,7 +795,7 @@ HEADING_TAGS = [   # (Textanfang ohne HTML, Tag)
     ("Solange nichts passiert", "h2"), ("Stell dir mal vor", "h2"), ("Und genau das wird möglich", "p"),
     ("Mit Kamera- und Videoüberwachung von ProVision Infra", "h2"), ("So arbeiten wir", "h2"),
     ("Ablauf der Zusammenarbeit", "h2"), ("Genau daraus ist ProVision Infra entstanden", "h3"),
-    ("Hier findest du", "h2"), ("Unsere Partner", "h2"),
+    ("Hier findest du", "h2"), ("Videoüberwachung in", "h2"), ("Unsere Partner", "h2"),
     ("Jede Kamera planen wir", "p"), ("Aufzeichnung und App sind eingerichtet", "p"),
     ("5.0", "p"), ("Sterne bei Google", "p"),
 ] + [(step, "h3") for step in STEPS]   # Schritte des Ablaufs: h3 statt h6 (Reihenfolge der Überschriften)
@@ -817,8 +843,8 @@ for sec in page:
 # und werden nach elementor/seo.json geschrieben (Yoast-Felder der Seite, siehe ANLEITUNG-WORDPRESS.md).
 PAGE_URL = f"{SITE}/kamerasysteme/"
 SEO = {
-    "title": "Kamera- & Videoüberwachung für Unternehmen | ProVision Infra",
-    "description": ("Videoüberwachung für Unternehmen in Hamburg, Hannover und Niedersachsen. ProVision Infra plant und "
+    "title": "Videoüberwachung für Unternehmen | ProVision Infra",
+    "description": ("Videoüberwachung für Unternehmen im Raum Hamburg und Hannover. ProVision Infra plant und "
                     "installiert dein Kamerasystem, mit Alarm aufs Handy."),
     "focus_keyphrase": "Videoüberwachung für Unternehmen",
     "og_title": "Wir schützen dein Unternehmen mit Kamera- & Videoüberwachung",

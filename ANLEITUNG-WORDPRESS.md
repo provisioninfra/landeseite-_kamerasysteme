@@ -153,8 +153,8 @@ verloren gehen: unter **Seiten → Alle Seiten** die Seite normal bearbeiten (ni
 **Yoast SEO**-Kasten unterhalb des Inhalts eintragen:
 
 - **Fokus-Keyphrase:** `Videoüberwachung für Unternehmen`
-- **SEO-Titel:** `Kamera- & Videoüberwachung für Unternehmen | ProVision Infra`
-- **Meta-Beschreibung:** `Videoüberwachung für Unternehmen in Hamburg, Hannover und Niedersachsen. ProVision Infra plant und installiert dein Kamerasystem, mit Alarm aufs Handy.`
+- **SEO-Titel:** `Videoüberwachung für Unternehmen | ProVision Infra`
+- **Meta-Beschreibung:** `Videoüberwachung für Unternehmen im Raum Hamburg und Hannover. ProVision Infra plant und installiert dein Kamerasystem, mit Alarm aufs Handy.`
 - Reiter **Social**: Bild `kamera-vorschau-1200x630-1.jpg`, Titel `Wir schützen dein Unternehmen mit Kamera- & Videoüberwachung`,
   Beschreibung wie die Meta-Beschreibung (Facebook und X/Twitter).
 - Reiter **Erweitert**: „Cornerstone-Inhalt“ ist eingeschaltet, „Erlaube Suchmaschinen, diese Seite anzuzeigen“ steht auf Ja.

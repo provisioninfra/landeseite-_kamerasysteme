@@ -561,3 +561,28 @@ Runde 3: fünf weitere Breiten, Abschnitts-Screenshots bei 360 und 1536 px, Endk
 - **Benutzer:** Testbenutzer „claude-test“ (Administrator) löschen; für alle Administratoren Zwei-Faktor-Anmeldung.
 - **Kleinigkeiten der Startseitenvorlage:** Sprungmarke „Zum Inhalt springen“ und der ProvenExpert-Link mit geringem Kontrast,
   ProvenExpert-Siegel als Tap-Ziel nur 20 px hoch, Hintergrund-PNGs der Startseite (1,6 MB), Kontakt- und Terminseiten ohne h1.
+
+## SEO, zweite Stufe (24.10.2026)
+
+Grundlage: die Yoast-Analyse der Seite (Fokus-Keyphrase „Videoüberwachung für Unternehmen“) und die Lighthouse-Messung.
+Alle Texte bleiben inhaltlich gleich; es sind gezielte Ergänzungen.
+
+- **Keyphrase an den Stellen, die zählen:** SEO-Titel beginnt jetzt damit (`Videoüberwachung für Unternehmen | ProVision Infra`,
+  50 Zeichen, vorher wurde die Breite überschritten), Meta-Beschreibung gekürzt (141 Zeichen), Hero-Einleitung („… installiert
+  Kamera- und Videoüberwachung für Unternehmen“), Fließtext unter „Und genau das wird möglich“, FAQ-Antwort zur Region, Alt-Text
+  des Logos (Mediathek 4479). Yoast: Keyphrase-Dichte von 2 auf 8 Treffer bei 1562 Wörtern (grün), Titel grün.
+- **Zwischenüberschriften:** FAQ heißt „Häufige Fragen zur Videoüberwachung für Unternehmen“; der Standort-Abschnitt trägt die
+  Region als H2 („Videoüberwachung in Hamburg, Hannover und Niedersachsen“, lokale Suche) statt „Hier findest du ProVision Infra“.
+- **Synonyme:** neuer kurzer Absatz unter „Technik, die wir verbauen“ (Überwachungskameras, Bullet-/Dome-/schwenkbare Kamera,
+  Nachtsicht, Bewegungserkennung, Rekorder, App) und „Kameraüberwachung“ in der ersten FAQ-Antwort.
+- **Ladezeit am Handy:** Hero-Video des Handy-Blocks neu kodiert (1920 x 1080, CRF 24, 504 KB statt 2560 x 1440 mit 1,5 MB;
+  SSIM zur 4k-Quelle 0,999, Bildvergleich ohne sichtbaren Unterschied; Mediathek 4549, alte Datei 4342 gelöscht). Overlay-Bild des
+  Gründer-Abschnitts als WebP (182 KB statt 696 KB, Mediathek 4545). Die drei Lichtschein-PNGs der Startseite bleiben: verkleinerte
+  Kopien zeigten Streifen im Verlauf. Übertragene Datenmenge am Handy 4,6 MB → 3,1 MB, am Computer 6,7 MB → 3,5 MB.
+- **Nicht umgesetzt, bewusst:** Keyphrase im Permalink (die Adresse /kamerasysteme/ bleibt), Keyphrase in mehr als zwei
+  Zwischenüberschriften (wäre Schlüsselwort-Stopfen), Yoasts „Bindewörter“-Hinweis (für deutsche Texte wenig aussagekräftig).
+- **Geprüft nach dem Speichern:** Titel, Beschreibung, OG, vier gültige JSON-LD-Blöcke, 13 H2, keine JavaScript-Fehler,
+  Handy lädt nur das neue 1080p-Video, Gründer-Overlay aus dem WebP; Lighthouse SEO 100, Barrierefreiheit 99 (Handy und Computer).
+- **Was nur du tun kannst, mit größter Wirkung:** Property in der Search Console und „Indexierung beantragen“; ein Link von der
+  Startseite auf /kamerasysteme/ (Menü „Main“ oder ein Textlink, Ankertext „Videoüberwachung für Unternehmen“); Honeypot des
+  Formulars einschalten.
