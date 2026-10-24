@@ -98,5 +98,10 @@
   "id": 4492,
   "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-footer-logo-provision-infra.png",
   "alt": "ProVision Infra GmbH"
+ },
+ "menue_header": {
+  "id": 17,
+  "slug": "kamerasysteme-header",
+  "name": "Kamerasysteme Header"
  }
 }

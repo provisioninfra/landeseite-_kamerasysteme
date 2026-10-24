@@ -189,8 +189,14 @@ VIDEO_MOBILE = MEDIA.get("video_mobile", VIDEO)     # Handy-Block: kleinere Vers
 
 page = []
 
-# ---------------------------------------------------------------- 1) Header (Original)
-page.append(clone(H[0]))
+# ---------------------------------------------------------------- 1) Header (Original, eigenes Menü)
+# Die Kopfleiste ist die der Startseite. Nur das Menü ist ein eigenes WordPress-Menü (medien.json: menue_header, Design → Menüs
+# „Kamerasysteme Header“): erster Eintrag „Durch Videoüberwachung teure Schäden verhindern“ → #moeglich, „So arbeiten wir
+# zusammen“ → #arbeitsweise, „Über uns“ → #Über, „FAQ“ → #FAQ, alle auf dieser Seite. Das Menü „main“ der Startseite bleibt unberührt.
+header = clone(H[0])
+MENUE = MEDIA["menue_header"]
+must(header, "2a487ab")["settings"]["menu"] = MENUE["slug"]
+page.append(header)
 
 # ---------------------------------------------------------------- 2) Hero (Original, neue Texte, neues Video)
 hero = clone(H[1])

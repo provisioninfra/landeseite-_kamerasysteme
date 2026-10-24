@@ -119,14 +119,19 @@ Erstgespräch, FAQ, Partner, Footer. Kundenstimmen, Gründer, Standort und Partn
 
 ---
 
-## Schritt 4: Menü oben (2 Minuten, optional)
+## Schritt 4: Menü oben (nichts zu tun)
 
-Die Kopfleiste zeigt das Menü deiner Website. Die Einträge springen zu den Abschnitten der Seite:
-„Mit digitalen Schlüsseln Kosten sparen“ führt zur Glas-Box, die anderen drei zu Ablauf, Gründer und FAQ.
+Die Kopfleiste ist die der Startseite, zeigt auf der Kamera-Seite aber ein eigenes Menü: unter **Design → Menüs**
+heißt es „Kamerasysteme Header“ (seit 24.10.2026). Die vier Einträge springen zu Abschnitten der Kamera-Seite:
 
-Nur der erste Eintrag passt vom Wortlaut nicht zur Kamera-Seite. Wenn er geändert werden soll, muss
-unter **Design → Menüs** ein eigenes Menü für diese Seite angelegt werden. Das verändert die Startseite
-nicht, braucht aber einen zweiten Schritt im Header der Seite. Sag Bescheid, dann übernehme ich das.
+- „Durch Videoüberwachung teure Schäden verhindern“ → Abschnitt „Und genau das wird möglich mit ProVision Infra“
+- „So arbeiten wir zusammen“ → Abschnitt „So arbeiten wir“ (direkt darunter der Ablauf)
+- „Über uns“ → „Der Gründer von ProVision Infra“
+- „FAQ“ → die häufigen Fragen
+
+Das Menü „Main“ der Startseite ist unverändert. Einträge ändern: **Design → Menüs**, oben „Kamerasysteme Header“
+auswählen, Text oder Link anpassen, „Menü speichern“. Die Links beginnen mit `/kamerasysteme/#…`, damit sie auch
+von anderen Seiten aus funktionieren.
 
 ---
 

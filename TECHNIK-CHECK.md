@@ -494,3 +494,18 @@ Texte unverändert bis auf kleine Ergänzungen, alles am 20.10. abends geprüft 
   Startseiten-Hintergrundbilder als PNG, Hero-Video als größtes Element am Handy) und wurde nicht angefasst.
 - **Geprüft nach dem Speichern:** Titel, Meta, OG/Twitter, Canonical, Überschriftenfolge, JSON-LD, Preload-Link, Videos
   (Computer: nur 4k-Video, Handy: nur Handy-Video), keine JavaScript-Fehler, Seiteneinstellungen unverändert.
+
+## Eigenes Header-Menü (24.10.2026)
+
+- Die Kopfleiste nutzte das seitenweite Menü „Main“ (erster Eintrag „Mit digitalen Schlüsseln Kosten sparen“, alle Links auf
+  die Startseite). Da das Menü auch die Startseite bedient, wurde es nicht geändert, sondern ein eigenes WordPress-Menü
+  „Kamerasysteme Header“ angelegt (ID 17, Slug `kamerasysteme-header`, per REST `wp/v2/menus` und `wp/v2/menu-items`;
+  `medien.json: menue_header`). Das Nav-Menü-Widget der Kopfleiste (2a487ab) zeigt auf dieses Menü; Aussehen, Abstände und
+  Handy-Menü (Hamburger) bleiben die der Startseite, weil es dasselbe Widget mit denselben Einstellungen ist.
+- Einträge: „Durch Videoüberwachung teure Schäden verhindern“ → `/kamerasysteme/#moeglich`, „So arbeiten wir zusammen“ →
+  `/kamerasysteme/#arbeitsweise`, „Über uns“ → `/kamerasysteme/#Über`, „FAQ“ → `/kamerasysteme/#FAQ`. Absolute Pfade wie beim
+  Original (`/#digitalen`), damit Elementors sanftes Scrollen greift und die Links auch von anderen Seiten funktionieren.
+- Geprüft bei 1024, 1280, 1440, 1920 und 393 px: alle vier Einträge in einer Zeile, keine horizontale Verschiebung; Klick auf
+  jeden Eintrag scrollt zum richtigen Abschnitt (Abschnittsoberkante am oberen Rand, bei 1280/1440 um die 25 px des
+  Verlaufsstreifens darüber, wie beim Original); am Handy öffnet der Hamburger das Menü mit den neuen Einträgen. Keine
+  JavaScript-Fehler. Die Startseite zeigt weiterhin ihr Menü „Main“ mit den alten Einträgen (HTML verglichen).

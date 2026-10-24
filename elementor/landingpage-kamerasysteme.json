@@ -286,7 +286,7 @@
          "elType": "widget",
          "settings": {
           "menu_name": "Menu",
-          "menu": "main",
+          "menu": "kamerasysteme-header",
           "pointer": "none",
           "menu_typography_typography": "custom",
           "menu_typography_font_family": "Poppins",
