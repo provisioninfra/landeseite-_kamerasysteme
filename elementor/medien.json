@@ -101,7 +101,17 @@
  },
  "menue_header": {
   "id": 17,
-  "slug": "kamerasysteme-header",
-  "name": "Kamerasysteme Header"
+  "slug": "menue-kamerasysteme-header",
+  "name": "Menü Kamerasysteme (Header)"
+ },
+ "google_logo": {
+  "id": 4525,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-google-logo-272.webp",
+  "alt": "Google"
+ },
+ "fuenf_sterne": {
+  "id": 4526,
+  "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-fuenf-sterne-332.webp",
+  "alt": "Fünf Sterne Bewertung"
  }
 }

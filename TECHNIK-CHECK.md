@@ -509,3 +509,55 @@ Texte unverändert bis auf kleine Ergänzungen, alles am 20.10. abends geprüft 
   jeden Eintrag scrollt zum richtigen Abschnitt (Abschnittsoberkante am oberen Rand, bei 1280/1440 um die 25 px des
   Verlaufsstreifens darüber, wie beim Original); am Handy öffnet der Hamburger das Menü mit den neuen Einträgen. Keine
   JavaScript-Fehler. Die Startseite zeigt weiterhin ihr Menü „Main“ mit den alten Einträgen (HTML verglichen).
+
+## Debugging in drei Runden (24.10.2026)
+
+Geprüft wurden die Kameraseite und ihre drei Unterseiten (Kontakt, Termin, Termin gebucht): Optik auf zwölf Breiten
+(320, 360, 393, 768, 834, 1024, 1280, 1366, 1440, 1536, 1920, 2560 px), Bedienung (Menü, FAQ, Slider, Hover, Leuchtlinie,
+Tastatur), Inhalte (Rechtschreibung, Schreibregeln, Links), Sicherheit (nur lesende Prüfungen) und Ladezeit (Lighthouse 12).
+Runde 1: Bestandsaufnahme mit Skripten und Sichtprüfung aller Abschnitte. Runde 2: Korrekturen, danach alles erneut.
+Runde 3: fünf weitere Breiten, Abschnitts-Screenshots bei 360 und 1536 px, Endkontrolle von Reihenfolge, SEO-Kopf und Menüs.
+
+### Behoben
+
+- **Erzwungene Zeilenumbrüche** im Text unter „Und genau das wird möglich“ (aus der Startseitenvorlage übernommen) erzeugten
+  am Handy und Tablet abgehackte Zeilen; Text läuft jetzt frei.
+- **Hero-Button am Handy:** Schrift 11 px, jetzt 12 px (ab 360 px Breite einzeilig, bei 320 px zwei zentrierte Zeilen).
+- **Gedankenstriche** im Gründertext (Startseitentext, hier Kopie): zwei Stellen umformuliert, Inhalt gleich.
+- **FAQ-Überschrift** am Computer brach mit „Infra“ allein in der dritten Zeile; „ProVision Infra“ bleibt jetzt zusammen.
+- **Footer-Menü am Handy:** der lange erste Eintrag brach linksbündig um, jetzt zentriert.
+- **Slider-Punkte** (6 px) als Tap-Ziel zu klein: unsichtbare Trefferfläche 24 px, Aussehen gleich.
+- **Unscharfe Kleinbilder** auf Handys mit hoher Pixeldichte: Google-Logo (68 px) und Sternenleiste (83 px) der Startseite durch
+  vierfach hochgerechnete Kopien mit Alt-Text ersetzt (Mediathek 4525, 4526; Transparenz getrennt skaliert).
+- **Footer-Menü ausdrücklich gesetzt:** Die Footer-Menü-Widgets der Startseite verweisen auf ein nicht vorhandenes Menü
+  („karriere-menu“); WordPress zeigt dann das alphabetisch erste Menü mit Einträgen. Auf der Kameraseite ist jetzt das
+  Kamera-Menü fest eingetragen, und das Menü heißt „Menü Kamerasysteme (Header)“, damit es hinter „Main“ einsortiert wird und
+  die Startseite nicht beeinflusst (Slug `menue-kamerasysteme-header`).
+
+### Geprüft und in Ordnung
+
+- Keine horizontale Verschiebung, keine abgeschnittenen Texte, keine fehlenden Bilder, keine JavaScript-Fehler aus eigenem
+  Code auf allen Breiten; Rechtschreibprüfung (Deutsch) ohne Fehler, keine Platzhalter; alle Links erreichbar (Facebook
+  antwortet nur echten Browsern, im Browser geprüft: Firmenseite); Anker der Menüs vorhanden; Menü, FAQ, beide Slider,
+  Karten-Hover, Leuchtlinie und Tastaturreihenfolge funktionieren; Kontaktformular rendert (ohne Testversand), Calendly lädt.
+- Sicherheit: HSTS mit Preload, nosniff, TLS 1.0/1.1 aus, XML-RPC, debug.log, .env und .git gesperrt, keine
+  Verzeichnislisten, Nutzerliste über REST und ?author= gesperrt, Formular-REST nur mit Anmeldung, keine Cookies vor Einwilligung,
+  kein Mixed Content, keine Inline-Event-Handler, eigene SVG- und Lottie-Dateien ohne Skripte, eigene Skripte verarbeiten keine
+  Nutzereingaben; Kontakt- und Terminseiten `noindex`.
+- Lighthouse nach den Korrekturen: Handy 43 Punkte (LCP 6,4 s statt 11 s), Barrierefreiheit 99 (vorher 94), SEO 100;
+  Computer 94 (vorher 78), Barrierefreiheit 99.
+
+### Offen, nur mit Zugriff auf die ganze Website zu lösen (Empfehlungen)
+
+- **Footer der Startseite zeigt ein fremdes Menü:** Seit heute gibt es ein Menü „Lüneburg“ (nicht von mir angelegt). Weil die
+  Footer-Widgets der Startseite auf das fehlende „karriere-menu“ verweisen, zeigt der Startseiten-Footer jetzt dieses Menü
+  (Schließanlagen, Videoüberwachung, …) statt „Main“. Abhilfe: in den Footer-Widgets der Startseite das Menü „Main“ fest
+  auswählen, oder das Menü „Lüneburg“ so umbenennen, dass es hinter „Main“ steht.
+- **BugHerd-Skript** (Feedback-Werkzeug) lädt auf allen Seiten mit öffentlichem API-Schlüssel und wirft einen Konsolenfehler;
+  für den Livebetrieb entfernen.
+- **Spam-Schutz:** Honeypot des Kamera-Formulars einschalten (Anleitung, „Zwei Handgriffe“); Captcha nur bei Bedarf.
+- **HTTP-Header:** Content-Security-Policy, X-Frame-Options (oder frame-ancestors), Referrer-Policy und Permissions-Policy
+  fehlen seitenweit; `readme.html` und `license.txt` sind abrufbar, der Generator-Tag nennt WordPress- und Elementor-Version.
+- **Benutzer:** Testbenutzer „claude-test“ (Administrator) löschen; für alle Administratoren Zwei-Faktor-Anmeldung.
+- **Kleinigkeiten der Startseitenvorlage:** Sprungmarke „Zum Inhalt springen“ und der ProvenExpert-Link mit geringem Kontrast,
+  ProvenExpert-Siegel als Tap-Ziel nur 20 px hoch, Hintergrund-PNGs der Startseite (1,6 MB), Kontakt- und Terminseiten ohne h1.

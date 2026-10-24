@@ -286,7 +286,7 @@
          "elType": "widget",
          "settings": {
           "menu_name": "Menu",
-          "menu": "kamerasysteme-header",
+          "menu": "menue-kamerasysteme-header",
           "pointer": "none",
           "menu_typography_typography": "custom",
           "menu_typography_font_family": "Poppins",
@@ -918,7 +918,7 @@
           },
           "typography_font_size_mobile": {
            "unit": "px",
-           "size": 11,
+           "size": 12,
            "sizes": []
           },
           "typography_line_height_tablet": {
@@ -1213,10 +1213,10 @@
              "elType": "widget",
              "settings": {
               "image": {
-               "url": "https://provision-infra.de/wp-content/uploads/2026/05/Frame-8-e1779423443644.png",
-               "id": 397,
+               "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-google-logo-272.webp",
+               "id": 4525,
                "size": "",
-               "alt": "",
+               "alt": "Google",
                "source": "library"
               },
               "image_size": "full",
@@ -1984,10 +1984,10 @@
            "elType": "widget",
            "settings": {
             "image": {
-             "url": "https://provision-infra.de/wp-content/uploads/2026/05/Frame-8-e1779423443644.png",
-             "id": 397,
+             "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-google-logo-272.webp",
+             "id": 4525,
              "size": "",
-             "alt": "",
+             "alt": "Google",
              "source": "library"
             },
             "image_size": "full",
@@ -8479,8 +8479,11 @@
           },
           "_title": "Frame 44",
           "image": {
-           "id": 176,
-           "url": "https://provision-infra.de/wp-content/uploads/2026/05/acc94c687c594c740b654da1dc4f5e8b.webp"
+           "url": "https://provision-infra.de/wp-content/uploads/2026/10/kamera-fuenf-sterne-332.webp",
+           "id": 4526,
+           "size": "",
+           "alt": "Fünf Sterne Bewertung",
+           "source": "library"
           },
           "width": {
            "unit": "%",
@@ -8666,7 +8669,7 @@
        "left": "22",
        "isLinked": true
       },
-      "custom_css": "@media (min-width: 768px) {\n\n    selector .e-n-carousel.swiper {\n        padding-top: 50px !important;\n        padding-bottom: 50px !important;\n\n        overflow: visible !important;\n\n        /* Prevent responsive shrinking */\n        width: 140vw !important;\n\n        /* Keep centered */\n        position: relative;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    /* Slides */\n    selector .e-n-carousel .swiper-slide {\n        transition: transform 0.4s ease-in-out, opacity 0.4s ease !important;\n        transform: scale(0.90);\n        opacity: 0.6;\n        z-index: 1;\n    }\n\n    /* Active/next slide */\n    selector .e-n-carousel .swiper-slide-next {\n        transform: scale(1) !important;\n        opacity: 1 !important;\n        z-index: 10 !important;\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n        min-height: 324px;\n    }\n\n    /* Allow overflow */\n    selector .e-n-carousel .e-con-inner,\n    selector .e-n-carousel .elementor-element {\n        overflow: visible !important;\n        padding: 12px;\n    }\n}\n\n\n/* FIX FOR LARGE SCREENS */\n@media (min-width: 1200px) {\n    selector .e-n-carousel.swiper {\n        width: 100% !important;\n        left: 0 !important;\n        transform: none !important;\n        overflow: hidden !important;\n    }\n}\n\n\nselector .elementor-image-box-content {\n    position: relative;\n    padding-right: 80px; /* space for SVG */\n}\n\nselector .elementor-image-box-content::after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    top: 50%;\n    transform: translateY(-50%);\n\n    width: 70px;\n    height: 70px;\n\n    background-image: url('/wp-content/uploads/2026/06/Quote.svg');\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n\n\n@media (max-width: 768px) {\n\n  \n    selector .e-n-carousel  {\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n    } }",
+      "custom_css": "@media (min-width: 768px) {\n\n    selector .e-n-carousel.swiper {\n        padding-top: 50px !important;\n        padding-bottom: 50px !important;\n\n        overflow: visible !important;\n\n        /* Prevent responsive shrinking */\n        width: 140vw !important;\n\n        /* Keep centered */\n        position: relative;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    /* Slides */\n    selector .e-n-carousel .swiper-slide {\n        transition: transform 0.4s ease-in-out, opacity 0.4s ease !important;\n        transform: scale(0.90);\n        opacity: 0.6;\n        z-index: 1;\n    }\n\n    /* Active/next slide */\n    selector .e-n-carousel .swiper-slide-next {\n        transform: scale(1) !important;\n        opacity: 1 !important;\n        z-index: 10 !important;\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n        min-height: 324px;\n    }\n\n    /* Allow overflow */\n    selector .e-n-carousel .e-con-inner,\n    selector .e-n-carousel .elementor-element {\n        overflow: visible !important;\n        padding: 12px;\n    }\n}\n\n\n/* FIX FOR LARGE SCREENS */\n@media (min-width: 1200px) {\n    selector .e-n-carousel.swiper {\n        width: 100% !important;\n        left: 0 !important;\n        transform: none !important;\n        overflow: hidden !important;\n    }\n}\n\n\nselector .elementor-image-box-content {\n    position: relative;\n    padding-right: 80px; /* space for SVG */\n}\n\nselector .elementor-image-box-content::after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    top: 50%;\n    transform: translateY(-50%);\n\n    width: 70px;\n    height: 70px;\n\n    background-image: url('/wp-content/uploads/2026/06/Quote.svg');\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n\n\n@media (max-width: 768px) {\n\n  \n    selector .e-n-carousel  {\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n    } }\nselector .swiper-pagination-bullet { position: relative; }\nselector .swiper-pagination-bullet::after { content: \"\"; position: absolute; inset: -9px; }\n",
       "slides_to_show_tablet": "3",
       "navigation_previous_icon": {
        "value": "fas fa-arrow-left",
@@ -15514,7 +15517,7 @@
              "typography_typography": "",
              "text_color": "globals/colors?id=521f46a"
             },
-            "editor": "<p>Bei ProVision Infra planen und installieren wir eine Videoüberwachung,<br />die nachts und am Wochenende hinsieht, wenn niemand im Betrieb ist,<br />und dir im Ernstfall Aufnahmen liefert, die etwas beweisen.</p><p>Dafür setzen wir die Kameras an die Stellen, an denen jemand ungesehen aufs Gelände kommt. Live-Bild und Aufzeichnung siehst du per App auf dem Handy.</p>",
+            "editor": "<p>Bei ProVision Infra planen und installieren wir eine Videoüberwachung, die nachts und am Wochenende hinsieht, wenn niemand im Betrieb ist, und dir im Ernstfall Aufnahmen liefert, die etwas beweisen.</p><p>Dafür setzen wir die Kameras an die Stellen, an denen jemand ungesehen aufs Gelände kommt. Live-Bild und Aufzeichnung siehst du per App auf dem Handy.</p>",
             "align": "left",
             "_element_width": "initial",
             "_element_custom_width": {
@@ -18322,7 +18325,7 @@
              "text_color": "globals/colors?id=521f46a",
              "typography_typography": ""
             },
-            "editor": "<p>Als gelernter Elektriker, ausgebildeter IT-Systemkaufmann und Berufsfeuerwehrmann in Hamburg bringt der Gründer von ProVision Infra zusätzlich Erfahrung aus dem militärischen Sicherheitsumfeld mit. </p><p>Türen öffnen, Situationen schnell lösen und unter Druck Entscheidungen treffen – das gehörte lange zu seinem Alltag. Daraus entstand auch der Schritt in die Selbstständigkeit: zunächst mit einem eigenen Schlüsseldienst.</p>",
+            "editor": "<p>Als gelernter Elektriker, ausgebildeter IT-Systemkaufmann und Berufsfeuerwehrmann in Hamburg bringt der Gründer von ProVision Infra zusätzlich Erfahrung aus dem militärischen Sicherheitsumfeld mit. </p><p>Türen öffnen, Situationen schnell lösen und unter Druck Entscheidungen treffen: Das gehörte lange zu seinem Alltag. Daraus entstand auch der Schritt in die Selbstständigkeit: zunächst mit einem eigenen Schlüsseldienst.</p>",
             "align": "left",
             "_element_width": "initial",
             "_element_custom_width": {
@@ -18610,7 +18613,7 @@
              "text_color": "globals/colors?id=521f46a",
              "typography_typography": ""
             },
-            "editor": "<p>Dabei wurde schnell deutlich, wie viele Unternehmen beim Thema Zutritt ähnlich arbeiten: Die Schlüssel werden verteilt, weitergegeben oder nachgemacht – und erst wenn etwas schiefläuft, entstehen Aufwand und hohe Kosten.</p><p>Mit der Zeit kamen immer mehr Anfragen nach digitalen Möglichkeiten. Also nicht mehr nur „Tür aufmachen“, sondern Zutritt strukturiert organisieren: Wer wann wo Zugang hat, ohne Übergaben, Nachschlüssel und unnötige Komplexität.</p>",
+            "editor": "<p>Dabei wurde schnell deutlich, wie viele Unternehmen beim Thema Zutritt ähnlich arbeiten: Die Schlüssel werden verteilt, weitergegeben oder nachgemacht, und erst wenn etwas schiefläuft, entstehen Aufwand und hohe Kosten.</p><p>Mit der Zeit kamen immer mehr Anfragen nach digitalen Möglichkeiten. Also nicht mehr nur „Tür aufmachen“, sondern Zutritt strukturiert organisieren: Wer wann wo Zugang hat, ohne Übergaben, Nachschlüssel und unnötige Komplexität.</p>",
             "align": "left",
             "_element_width": "initial",
             "_element_custom_width": {
@@ -19225,7 +19228,7 @@
        "left": "22",
        "isLinked": true
       },
-      "custom_css": "@media (min-width: 768px) {\n\n    selector .e-n-carousel.swiper {\n        padding-top: 50px !important;\n        padding-bottom: 50px !important;\n\n        overflow: visible !important;\n\n        /* Prevent responsive shrinking */\n        width: 140vw !important;\n\n        /* Keep centered */\n        position: relative;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    /* Slides */\n    selector .e-n-carousel .swiper-slide {\n        transition: transform 0.4s ease-in-out, opacity 0.4s ease !important;\n        transform: scale(0.90);\n        opacity: 0.6;\n        z-index: 1;\n    }\n\n    /* Active/next slide */\n    selector .e-n-carousel .swiper-slide-next {\n        transform: scale(1) !important;\n        opacity: 1 !important;\n        z-index: 10 !important;\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n        min-height: 324px;\n    }\n\n    /* Allow overflow */\n    selector .e-n-carousel .e-con-inner,\n    selector .e-n-carousel .elementor-element {\n        overflow: visible !important;\n        padding: 12px;\n    }\n}\n\n\n/* FIX FOR LARGE SCREENS */\n@media (min-width: 1200px) {\n    selector .e-n-carousel.swiper {\n        width: 100% !important;\n        left: 0 !important;\n        transform: none !important;\n        overflow: hidden !important;\n    }\n}\n\n\nselector .elementor-image-box-content {\n    position: relative;\n    padding-right: 80px; /* space for SVG */\n}\n\nselector .elementor-image-box-content::after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    top: 50%;\n    transform: translateY(-50%);\n\n    width: 70px;\n    height: 70px;\n\n    background-image: url('/wp-content/uploads/2026/06/Quote.svg');\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n\n\n@media (max-width: 768px) {\n\n  \n    selector .e-n-carousel  {\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n    } }",
+      "custom_css": "@media (min-width: 768px) {\n\n    selector .e-n-carousel.swiper {\n        padding-top: 50px !important;\n        padding-bottom: 50px !important;\n\n        overflow: visible !important;\n\n        /* Prevent responsive shrinking */\n        width: 140vw !important;\n\n        /* Keep centered */\n        position: relative;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    /* Slides */\n    selector .e-n-carousel .swiper-slide {\n        transition: transform 0.4s ease-in-out, opacity 0.4s ease !important;\n        transform: scale(0.90);\n        opacity: 0.6;\n        z-index: 1;\n    }\n\n    /* Active/next slide */\n    selector .e-n-carousel .swiper-slide-next {\n        transform: scale(1) !important;\n        opacity: 1 !important;\n        z-index: 10 !important;\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n        min-height: 324px;\n    }\n\n    /* Allow overflow */\n    selector .e-n-carousel .e-con-inner,\n    selector .e-n-carousel .elementor-element {\n        overflow: visible !important;\n        padding: 12px;\n    }\n}\n\n\n/* FIX FOR LARGE SCREENS */\n@media (min-width: 1200px) {\n    selector .e-n-carousel.swiper {\n        width: 100% !important;\n        left: 0 !important;\n        transform: none !important;\n        overflow: hidden !important;\n    }\n}\n\n\nselector .elementor-image-box-content {\n    position: relative;\n    padding-right: 80px; /* space for SVG */\n}\n\nselector .elementor-image-box-content::after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    top: 50%;\n    transform: translateY(-50%);\n\n    width: 70px;\n    height: 70px;\n\n    background-image: url('/wp-content/uploads/2026/06/Quote.svg');\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n\n\n@media (max-width: 768px) {\n\n  \n    selector .e-n-carousel  {\n        border: 1px solid #fbc91b;\n        border-radius: 25px;\n        box-shadow: 0 0 12px #fbc91b;\n    } }\nselector .swiper-pagination-bullet { position: relative; }\nselector .swiper-pagination-bullet::after { content: \"\"; position: absolute; inset: -9px; }\n",
       "slides_to_show_tablet": "3",
       "navigation_previous_icon": {
        "value": "fas fa-arrow-left",
@@ -20309,7 +20312,7 @@
      "id": "7983242",
      "elType": "widget",
      "settings": {
-      "title": "Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <b>ProVision Infra</b>",
+      "title": "Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <b>ProVision&nbsp;Infra</b>",
       "align": "center",
       "_element_width": "initial",
       "_element_custom_width": {
@@ -28057,7 +28060,7 @@
             "user_visit_count": 3
            }
           ],
-          "menu": "karriere-menu",
+          "menu": "menue-kamerasysteme-header",
           "align_items": "center",
           "pointer": "none",
           "full_width": "stretch",
@@ -30629,7 +30632,8 @@
           "eael_cl_action_apply_if": "all",
           "eael_cl_fallback": "none",
           "eael_cl_fallback_content": "The content is hidden",
-          "eael_cl_fallback_template": ""
+          "eael_cl_fallback_template": "",
+          "custom_css": "selector .elementor-nav-menu a { text-align: center; }"
          },
          "elements": [],
          "widgetType": "nav-menu"
@@ -30698,7 +30702,7 @@
             "user_visit_count": 3
            }
           ],
-          "menu": "karriere-menu",
+          "menu": "menue-kamerasysteme-header",
           "align_items": "center",
           "pointer": "none",
           "full_width": "stretch",

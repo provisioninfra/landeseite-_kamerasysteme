@@ -128,8 +128,8 @@ VORSTELLUNG_ICONS = ["ICON3", "HOME_WARN", "ICON5", "HOME_DOKUMENT", "ICON1", "I
 
 # „Und genau das wird möglich mit ProVision Infra“
 MOEGLICH_H = 'Mit Kamera- und Videoüberwachung von ProVision Infra <span style="font-weight: 700; ">teure Schäden verhindern</span>'
-MOEGLICH_T = ('<p>Bei ProVision Infra planen und installieren wir eine Videoüberwachung,<br />die nachts und am Wochenende hinsieht, '
-              'wenn niemand im Betrieb ist,<br />und dir im Ernstfall Aufnahmen liefert, die etwas beweisen.</p>'
+MOEGLICH_T = ('<p>Bei ProVision Infra planen und installieren wir eine Videoüberwachung, die nachts und am Wochenende hinsieht, '
+              'wenn niemand im Betrieb ist, und dir im Ernstfall Aufnahmen liefert, die etwas beweisen.</p>'
               '<p>Dafür setzen wir die Kameras an die Stellen, an denen jemand ungesehen aufs Gelände kommt. '
               'Live-Bild und Aufzeichnung siehst du per App auf dem Handy.</p>')
 
@@ -152,7 +152,7 @@ STEPS = {
 KONTAKT_TEXT = ('<p>Im Gespräch klären wir, welche Bereiche du im Blick haben willst und wo jemand ungesehen aufs Gelände kommt. '
                 'Dazu bekommst du eine erste Einschätzung zu Aufwand und Kosten.</p>')
 
-FAQ_H_DESKTOP = 'Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <b>ProVision Infra</b>'
+FAQ_H_DESKTOP = 'Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <b>ProVision&nbsp;Infra</b>'
 FAQ_H_MOBILE = 'Häufige Fragen zu Kamera- &amp; \nVideoüberwachung mit <br><b>ProVision Infra</b>'
 FAQ = [
     ("Darf ich mein Firmengelände überhaupt per Kamera überwachen?",
@@ -191,7 +191,7 @@ page = []
 
 # ---------------------------------------------------------------- 1) Header (Original, eigenes Menü)
 # Die Kopfleiste ist die der Startseite. Nur das Menü ist ein eigenes WordPress-Menü (medien.json: menue_header, Design → Menüs
-# „Kamerasysteme Header“): erster Eintrag „Durch Videoüberwachung teure Schäden verhindern“ → #moeglich, „So arbeiten wir
+# „Menü Kamerasysteme (Header)“, Name mit „Menü…“, damit es in der Namenssortierung hinter „Main“ steht, siehe TECHNIK-CHECK.md): erster Eintrag „Durch Videoüberwachung teure Schäden verhindern“ → #moeglich, „So arbeiten wir
 # zusammen“ → #arbeitsweise, „Über uns“ → #Über, „FAQ“ → #FAQ, alle auf dieser Seite. Das Menü „main“ der Startseite bleibt unberührt.
 header = clone(H[0])
 MENUE = MEDIA["menue_header"]
@@ -248,6 +248,8 @@ hs["background_video_start"] = ""
 hs["background_video_end"] = ""            # ganzes Video abspielen, danach stehen bleiben (background_play_once bleibt "yes")
 hs["background_play_on_mobile"] = ""       # mobil einfarbig (eigenes Custom-CSS des Hero), Video folgt als Block unter dem Button
 hs.pop("background_video_fallback", None)   # kein Ersatzbild: es würde mobil hinter dem Text erscheinen (einfarbig per Custom-CSS des Hero)
+# Button-Schrift am Handy 12 px statt 11 px (lesbarer; bleibt ab 360 px Breite einzeilig, bei 320 px zwei zentrierte Zeilen)
+must(hero, "5fb0dd6")["settings"]["typography_font_size_mobile"] = {"unit": "px", "size": 12, "sizes": []}
 page.append(hero)
 
 # ---------------------------------------------------------------- 3) Mobiler Video-Block (Original-Block der Startseite, nur mobil)
@@ -622,7 +624,15 @@ for item in tl["settings"]["eael_coustom_content_posts"]:
 page.append(ablauf)
 
 # ---------------------------------------------------------------- 11) Gründer (mit Fortsetzung), Technik, Partner, Standort mit Erstgespräch (Original)
-page.append(clone(H[16]))
+gruender = clone(H[16])
+# Gründertext der Startseite, hier ohne Gedankenstriche (Schreibregel dieser Seite); Inhalt unverändert
+for wid, alt, neu in (("e04b70a", "Entscheidungen treffen – das gehörte", "Entscheidungen treffen: Das gehörte"),
+                      ("a1d3e7d", "nachgemacht – und erst wenn", "nachgemacht, und erst wenn")):
+    w = must(gruender, wid)["settings"]
+    assert alt in w["editor"], wid
+    w["editor"] = w["editor"].replace(alt, neu)
+    assert "–" not in w["editor"], wid
+page.append(gruender)
 entstanden = clone(H[17])
 entstanden["settings"]["padding_mobile"] = box(0, 0, 40, 0)      # Handy: Box samt Schein frei vom Streifen des folgenden Slider-Abschnitts
 entstanden["settings"]["padding_tablet"] = box(20, 0, 60, 0)
@@ -676,6 +686,12 @@ def footer_logo_alt(el):
     for c in el.get("elements", []):
         footer_logo_alt(c)
 footer_logo_alt(footer_oben)
+# Die Footer-Menüs der Startseite verweisen auf ein Menü, das es nicht gibt („karriere-menu“); WordPress zeigt dann das
+# alphabetisch erste Menü mit Einträgen, also je nach Mediathek etwas anderes. Hier deshalb ausdrücklich das Kamera-Menü.
+for wid in ("59b27e3", "a430424"):
+    must(footer_oben, wid)["settings"]["menu"] = MENUE["slug"]
+# Handy-Variante (senkrechte Liste): ein umbrechender Eintrag bleibt zentriert
+must(footer_oben, "59b27e3")["settings"]["custom_css"] = "selector .elementor-nav-menu a { text-align: center; }"
 page.append(footer_oben)
 page.append(clone(H[22]))
 
@@ -769,6 +785,31 @@ def set_heading_tags(el):
 
 for sec in page:
     set_heading_tags(sec)
+
+# Schärfe: Google-Logo (68 px) und Sternenleiste (83 px) der Startseite sind auf Handys mit hoher Pixeldichte unscharf.
+# Hier vierfach hochgerechnete Kopien mit Alt-Text (medien.json: google_logo, fuenf_sterne); Größe und Platz unverändert.
+SCHARF = {"Frame-8-e1779423443644.png": MEDIA["google_logo"], "acc94c687c594c740b654da1dc4f5e8b.webp": MEDIA["fuenf_sterne"]}
+def scharfe_bilder(el):
+    if el.get("widgetType") == "image":
+        url = (el["settings"].get("image") or {}).get("url", "")
+        for alt_name, neu in SCHARF.items():
+            if url.endswith(alt_name):
+                el["settings"]["image"] = {"url": neu["url"], "id": neu["id"], "size": "", "alt": neu["alt"], "source": "library"}
+    for c in el.get("elements", []):
+        scharfe_bilder(c)
+for sec in page:
+    scharfe_bilder(sec)
+
+# Bedienung: Die Punkte der beiden Slider sind 6 px groß; eine unsichtbare Fläche von 24 px macht sie am Handy treffbar.
+BULLET_CSS = ("\nselector .swiper-pagination-bullet { position: relative; }\n"
+              "selector .swiper-pagination-bullet::after { content: \"\"; position: absolute; inset: -9px; }\n")
+def bullet_css(el):
+    if el.get("widgetType") == "nested-carousel":
+        el["settings"]["custom_css"] = el["settings"].get("custom_css", "") + BULLET_CSS
+    for c in el.get("elements", []):
+        bullet_css(c)
+for sec in page:
+    bullet_css(sec)
 
 # ---------------------------------------------------------------- 15) SEO: Strukturierte Daten (Anbieter und Leistung)
 # Yoast liefert WebPage, Breadcrumb und WebSite, das FAQ-Akkordeon die FAQPage. Hier kommen Anbieter (LocalBusiness,
