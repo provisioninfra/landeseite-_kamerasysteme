@@ -33,6 +33,7 @@ Falls das Video nicht geladen werden kann, läuft eine animierte SVG-Szene (Kame
 
 - `ANLEITUNG-WORDPRESS.md` – Schritt-für-Schritt-Anleitung für Laien: Seite als Unterseite auf provision-infra.de veröffentlichen
 - `TECHNIK-CHECK.md` – Ergebnis des Technik- und Skalierungs-Checks vor dem Livegang
+- `SEO-KEYWORDS.md` – Keyword-Karte (Google-Suggest-Auswertung, Zuordnung zur Seite, offene Hebel außerhalb der Seite)
 
 ## WordPress: die eigentliche Seite
 
@@ -45,6 +46,7 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `elementor/quelle-startseite.json` – Elementor-Daten der Startseite (per WordPress-Export gelesen, nur Quelle)
 - `elementor/medien.json`, `elementor/icons.json` – IDs/URLs der hochgeladenen Kamera-Medien und Icons
 - `elementor/seo.json` – SEO-Titel, Meta-Beschreibung, Fokus-Keyphrase und Vorschau-Titel der Seite (vom Composer geschrieben, in Yoast eingetragen)
+- `elementor/geo.json` – Geokoordinaten des Firmensitzes für die LocalBusiness-Strukturdaten
 - `elementor/kamera-seite.elements.json` – Elemente + Seiteneinstellungen (Stand, der in WordPress gespeichert ist)
 - `elementor/landingpage-kamerasysteme.json` – dieselbe Seite als importierbare Elementor-Vorlage (Sicherung)
 

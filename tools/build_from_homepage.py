@@ -167,6 +167,14 @@ FAQ = [
      "Das hängt von der Zahl der Kameras und den Wegen für die Verkabelung ab. Einen ersten Rahmen bekommst du im Erstgespräch, einen verbindlichen Preis nach dem Termin vor Ort."),
     ("Sind meine Aufnahmen vor fremdem Zugriff geschützt?",
      "Die Aufnahmen bleiben auf deinem Rekorder im Gebäude, nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung ein und halten die Software aktuell."),
+    ("Ist Videoüberwachung auf dem Betriebsgelände erlaubt, und was gilt für Mitarbeiter?",
+     "Für dein eigenes Betriebsgelände reicht in der Regel das berechtigte Interesse, also der Schutz vor Einbruch, Diebstahl und Vandalismus. Öffentlich zugängliche Bereiche wie der Eingangsbereich oder der Kundenparkplatz brauchen ein Hinweisschild. Mitarbeiter müssen vorab informiert werden, Pausenräume, Umkleiden und Büros bleiben kamerafrei, und mit Betriebsrat gehört das Thema in eine Betriebsvereinbarung. Schilder und eine Vorlage für die Mitarbeiterinformation bekommst du von uns, die rechtliche Prüfung im Einzelfall ersetzt das nicht."),
+    ("Wie lange dürfen die Aufnahmen gespeichert werden?",
+     "In der Regel höchstens 72 Stunden, danach überschreibt der Rekorder die Aufnahmen automatisch. Länger speichern darfst du nur mit konkretem Anlass, etwa wenn du nach einem Einbruch Aufnahmen für Polizei oder Versicherung sicherst. Die Löschfrist stellen wir bei der Einrichtung ein."),
+    ("Welche Bereiche sichern Unternehmen mit Videoüberwachung ab?",
+     "Meist die Stellen, an denen jemand ungesehen aufs Gelände kommt: Einfahrt und Tor, Eingangsbereich, Parkplatz, Betriebshof, Lagerhalle und Außenlager. Auf einem Gewerbegrundstück sind das selten mehr als sechs bis zehn Kameras. Gehweg, Straße und Nachbargrundstück bleiben außen vor, das stellen wir über die Kamerawinkel sicher."),
+    ("Kann ich eine vorhandene Anlage erweitern oder nachrüsten lassen?",
+     "Ja. Bestehende Verkabelung und brauchbare Kameras übernehmen wir, alte Analogkameras tauschen wir gegen IP-Kameras mit Nachtsicht. Beim Termin vor Ort prüfen wir, was bleiben kann und was fehlt, und du bekommst ein Angebot nur für die Lücken."),
     ("In welcher Region installiert ProVision Infra Videoüberwachung?",
      "Unser Sitz ist Bad Bevensen bei Lüneburg. Videoüberwachung für Unternehmen installieren wir vor allem im Raum Hamburg, Hannover und Niedersachsen, bei größeren Projekten auch bundesweit."),
 ]
@@ -664,6 +672,9 @@ page.append(slider)
 standort = clone(H[19])             # Standort mit Erstgespräch; die Partner (H[18]) folgen nach dem FAQ
 # SEO (lokale Suche): Überschrift nennt Region statt „Hier findest du ProVision Infra“; Text und Karte unverändert
 must(standort, "51f3331")["settings"]["title"] = 'Videoüberwachung in <span style="font-weight: 700; ">Hamburg, Hannover und&nbsp;Niedersachsen</span>'
+w_ort = must(standort, "5c65e03")["settings"]
+assert "Wir sitzen in Norddeutschland und sind" in w_ort["editor"]
+w_ort["editor"] = w_ort["editor"].replace("Wir sitzen in Norddeutschland und sind", "Wir sitzen in Bad Bevensen bei Lüneburg und sind")
 page.append(standort)
 
 # ---------------------------------------------------------------- 12) FAQ (Original-Akkordeon, Kamera-Fragen)
@@ -844,15 +855,17 @@ for sec in page:
 PAGE_URL = f"{SITE}/kamerasysteme/"
 SEO = {
     "title": "Videoüberwachung für Unternehmen | ProVision Infra",
-    "description": ("Videoüberwachung für Unternehmen im Raum Hamburg und Hannover. ProVision Infra plant und "
-                    "installiert dein Kamerasystem, mit Alarm aufs Handy."),
+    "description": ("Videoüberwachung für Unternehmen im Raum Hamburg und Lüneburg, DSGVO-konform geplant. "
+                    "ProVision Infra installiert dein Kamerasystem mit Alarm aufs Handy."),
     "focus_keyphrase": "Videoüberwachung für Unternehmen",
     "og_title": "Wir schützen dein Unternehmen mit Kamera- & Videoüberwachung",
     "og_image": MEDIA.get("vorschaubild", {}).get("url", ""),
 }
 assert len(SEO["description"]) <= 155, len(SEO["description"])
-AREA = [{"@type": "City", "name": "Hamburg"}, {"@type": "City", "name": "Hannover"},
+AREA = [{"@type": "City", "name": "Hamburg"}, {"@type": "City", "name": "Hannover"}, {"@type": "City", "name": "Lüneburg"},
         {"@type": "State", "name": "Niedersachsen"}, {"@type": "Country", "name": "Deutschland"}]
+GEO_FILE = ROOT / "elementor" / "geo.json"     # {"lat": ..., "lon": ...} des Firmensitzes (OpenStreetMap/Nominatim)
+GEO = json.loads(GEO_FILE.read_text(encoding="utf-8")) if GEO_FILE.exists() else None
 SCHEMA = {
     "@context": "https://schema.org",
     "@graph": [
@@ -865,6 +878,8 @@ SCHEMA = {
               "opens": "09:00", "closes": "18:00"},
              {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "14:00"}],
          "areaServed": AREA,
+         **({"geo": {"@type": "GeoCoordinates", "latitude": GEO["lat"], "longitude": GEO["lon"]},
+             "hasMap": f"https://www.google.com/maps/search/?api=1&query={GEO['lat']},{GEO['lon']}"} if GEO else {}),
          "sameAs": ["https://www.instagram.com/provision_infra_gmbh/", "https://www.facebook.com/share/1CWs2rohMt/",
                     "https://www.linkedin.com/company/provision-infra-gmbh-i-g/"]},
         {"@type": "Service", "@id": f"{PAGE_URL}#leistung", "name": "Kamera- und Videoüberwachung für Unternehmen",

@@ -565,7 +565,7 @@
    },
    "elements": [
     {
-     "id": "ba9efb6",
+     "id": "c82e8a9",
      "elType": "widget",
      "widgetType": "html",
      "elements": [],
@@ -20104,7 +20104,7 @@
              "typography_typography": "",
              "text_color": "globals/colors?id=521f46a"
             },
-            "editor": "<p>Wir sitzen in Norddeutschland und sind vor allem im Raum Hamburg, Hannover und Niedersachsen unterwegs. Darüber hinaus sind wir bundesweit im Einsatz.</p><p>Für Beratung, Planung und Umsetzung kommen wir direkt zu dir vor Ort, schauen uns deine Situation an und setzen das System dort um, wo es gebraucht wird.</p>",
+            "editor": "<p>Wir sitzen in Bad Bevensen bei Lüneburg und sind vor allem im Raum Hamburg, Hannover und Niedersachsen unterwegs. Darüber hinaus sind wir bundesweit im Einsatz.</p><p>Für Beratung, Planung und Umsetzung kommen wir direkt zu dir vor Ort, schauen uns deine Situation an und setzen das System dort um, wo es gebraucht wird.</p>",
             "align": "left",
             "_element_width": "initial",
             "_element_custom_width": {
@@ -20556,8 +20556,36 @@
         "eael_adv_accordion_tab_content": "<p>Die Aufnahmen bleiben auf deinem Rekorder im Gebäude, nicht in einer fremden Cloud. Zugriff hat nur, wer von dir freigegeben ist. Wir richten Zugänge und Verschlüsselung ein und halten die Software aktuell.</p>"
        },
        {
-        "eael_adv_accordion_tab_title": "In welcher Region installiert ProVision Infra Videoüberwachung?",
+        "eael_adv_accordion_tab_title": "Ist Videoüberwachung auf dem Betriebsgelände erlaubt, und was gilt für Mitarbeiter?",
         "_id": "630f1be",
+        "eael_adv_accordion_tab_icon_show": "",
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Für dein eigenes Betriebsgelände reicht in der Regel das berechtigte Interesse, also der Schutz vor Einbruch, Diebstahl und Vandalismus. Öffentlich zugängliche Bereiche wie der Eingangsbereich oder der Kundenparkplatz brauchen ein Hinweisschild. Mitarbeiter müssen vorab informiert werden, Pausenräume, Umkleiden und Büros bleiben kamerafrei, und mit Betriebsrat gehört das Thema in eine Betriebsvereinbarung. Schilder und eine Vorlage für die Mitarbeiterinformation bekommst du von uns, die rechtliche Prüfung im Einzelfall ersetzt das nicht.</p>"
+       },
+       {
+        "eael_adv_accordion_tab_title": "Wie lange dürfen die Aufnahmen gespeichert werden?",
+        "_id": "7f41805",
+        "eael_adv_accordion_tab_icon_show": "",
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>In der Regel höchstens 72 Stunden, danach überschreibt der Rekorder die Aufnahmen automatisch. Länger speichern darfst du nur mit konkretem Anlass, etwa wenn du nach einem Einbruch Aufnahmen für Polizei oder Versicherung sicherst. Die Löschfrist stellen wir bei der Einrichtung ein.</p>"
+       },
+       {
+        "eael_adv_accordion_tab_title": "Welche Bereiche sichern Unternehmen mit Videoüberwachung ab?",
+        "_id": "f0d486a",
+        "eael_adv_accordion_tab_icon_show": "",
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Meist die Stellen, an denen jemand ungesehen aufs Gelände kommt: Einfahrt und Tor, Eingangsbereich, Parkplatz, Betriebshof, Lagerhalle und Außenlager. Auf einem Gewerbegrundstück sind das selten mehr als sechs bis zehn Kameras. Gehweg, Straße und Nachbargrundstück bleiben außen vor, das stellen wir über die Kamerawinkel sicher.</p>"
+       },
+       {
+        "eael_adv_accordion_tab_title": "Kann ich eine vorhandene Anlage erweitern oder nachrüsten lassen?",
+        "_id": "730dd41",
+        "eael_adv_accordion_tab_icon_show": "",
+        "eael_adv_accordion_text_type": "content",
+        "eael_adv_accordion_tab_content": "<p>Ja. Bestehende Verkabelung und brauchbare Kameras übernehmen wir, alte Analogkameras tauschen wir gegen IP-Kameras mit Nachtsicht. Beim Termin vor Ort prüfen wir, was bleiben kann und was fehlt, und du bekommst ein Angebot nur für die Lücken.</p>"
+       },
+       {
+        "eael_adv_accordion_tab_title": "In welcher Region installiert ProVision Infra Videoüberwachung?",
+        "_id": "2daec2f",
         "eael_adv_accordion_tab_icon_show": "",
         "eael_adv_accordion_text_type": "content",
         "eael_adv_accordion_tab_content": "<p>Unser Sitz ist Bad Bevensen bei Lüneburg. Videoüberwachung für Unternehmen installieren wir vor allem im Raum Hamburg, Hannover und Niedersachsen, bei größeren Projekten auch bundesweit.</p>"
@@ -42538,12 +42566,12 @@
    "isInner": false
   },
   {
-   "id": "f058554",
+   "id": "85d5f75",
    "elType": "container",
    "isInner": false,
    "elements": [
     {
-     "id": "90f45dd",
+     "id": "09b1530",
      "elType": "widget",
      "widgetType": "html",
      "elements": [],
@@ -42554,13 +42582,13 @@
      }
     },
     {
-     "id": "d598687",
+     "id": "dca37dc",
      "elType": "widget",
      "widgetType": "html",
      "elements": [],
      "isInner": false,
      "settings": {
-      "html": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"LocalBusiness\", \"@id\": \"https://provision-infra.de/#organisation\", \"name\": \"ProVision Infra GmbH\", \"url\": \"https://provision-infra.de/\", \"logo\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-logo-provision-infra-1032.png\", \"image\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-logo-provision-infra-1032.png\", \"telephone\": \"+49 5821 4049040\", \"email\": \"info@provision-infra.de\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Klein Hesebecker Straße 11\", \"postalCode\": \"29549\", \"addressLocality\": \"Bad Bevensen\", \"addressRegion\": \"Niedersachsen\", \"addressCountry\": \"DE\"}, \"openingHoursSpecification\": [{\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\"], \"opens\": \"09:00\", \"closes\": \"18:00\"}, {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": \"Friday\", \"opens\": \"09:00\", \"closes\": \"14:00\"}], \"areaServed\": [{\"@type\": \"City\", \"name\": \"Hamburg\"}, {\"@type\": \"City\", \"name\": \"Hannover\"}, {\"@type\": \"State\", \"name\": \"Niedersachsen\"}, {\"@type\": \"Country\", \"name\": \"Deutschland\"}], \"sameAs\": [\"https://www.instagram.com/provision_infra_gmbh/\", \"https://www.facebook.com/share/1CWs2rohMt/\", \"https://www.linkedin.com/company/provision-infra-gmbh-i-g/\"]}, {\"@type\": \"Service\", \"@id\": \"https://provision-infra.de/kamerasysteme/#leistung\", \"name\": \"Kamera- und Videoüberwachung für Unternehmen\", \"serviceType\": \"Videoüberwachung\", \"url\": \"https://provision-infra.de/kamerasysteme/\", \"image\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-vorschau-1200x630-1.jpg\", \"description\": \"Videoüberwachung für Unternehmen im Raum Hamburg und Hannover. ProVision Infra plant und installiert dein Kamerasystem, mit Alarm aufs Handy.\", \"provider\": {\"@id\": \"https://provision-infra.de/#organisation\"}, \"areaServed\": [{\"@type\": \"City\", \"name\": \"Hamburg\"}, {\"@type\": \"City\", \"name\": \"Hannover\"}, {\"@type\": \"State\", \"name\": \"Niedersachsen\"}, {\"@type\": \"Country\", \"name\": \"Deutschland\"}], \"audience\": {\"@type\": \"BusinessAudience\", \"name\": \"Unternehmen, Betriebe und Gewerbe\"}}]}</script>",
+      "html": "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"LocalBusiness\", \"@id\": \"https://provision-infra.de/#organisation\", \"name\": \"ProVision Infra GmbH\", \"url\": \"https://provision-infra.de/\", \"logo\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-logo-provision-infra-1032.png\", \"image\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-logo-provision-infra-1032.png\", \"telephone\": \"+49 5821 4049040\", \"email\": \"info@provision-infra.de\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Klein Hesebecker Straße 11\", \"postalCode\": \"29549\", \"addressLocality\": \"Bad Bevensen\", \"addressRegion\": \"Niedersachsen\", \"addressCountry\": \"DE\"}, \"openingHoursSpecification\": [{\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\"], \"opens\": \"09:00\", \"closes\": \"18:00\"}, {\"@type\": \"OpeningHoursSpecification\", \"dayOfWeek\": \"Friday\", \"opens\": \"09:00\", \"closes\": \"14:00\"}], \"areaServed\": [{\"@type\": \"City\", \"name\": \"Hamburg\"}, {\"@type\": \"City\", \"name\": \"Hannover\"}, {\"@type\": \"City\", \"name\": \"Lüneburg\"}, {\"@type\": \"State\", \"name\": \"Niedersachsen\"}, {\"@type\": \"Country\", \"name\": \"Deutschland\"}], \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 53.0779485, \"longitude\": 10.5903962}, \"hasMap\": \"https://www.google.com/maps/search/?api=1&query=53.0779485,10.5903962\", \"sameAs\": [\"https://www.instagram.com/provision_infra_gmbh/\", \"https://www.facebook.com/share/1CWs2rohMt/\", \"https://www.linkedin.com/company/provision-infra-gmbh-i-g/\"]}, {\"@type\": \"Service\", \"@id\": \"https://provision-infra.de/kamerasysteme/#leistung\", \"name\": \"Kamera- und Videoüberwachung für Unternehmen\", \"serviceType\": \"Videoüberwachung\", \"url\": \"https://provision-infra.de/kamerasysteme/\", \"image\": \"https://provision-infra.de/wp-content/uploads/2026/10/kamera-vorschau-1200x630-1.jpg\", \"description\": \"Videoüberwachung für Unternehmen im Raum Hamburg und Lüneburg, DSGVO-konform geplant. ProVision Infra installiert dein Kamerasystem mit Alarm aufs Handy.\", \"provider\": {\"@id\": \"https://provision-infra.de/#organisation\"}, \"areaServed\": [{\"@type\": \"City\", \"name\": \"Hamburg\"}, {\"@type\": \"City\", \"name\": \"Hannover\"}, {\"@type\": \"City\", \"name\": \"Lüneburg\"}, {\"@type\": \"State\", \"name\": \"Niedersachsen\"}, {\"@type\": \"Country\", \"name\": \"Deutschland\"}], \"audience\": {\"@type\": \"BusinessAudience\", \"name\": \"Unternehmen, Betriebe und Gewerbe\"}}]}</script>",
       "_title": "Strukturierte Daten (SEO)"
      }
     }

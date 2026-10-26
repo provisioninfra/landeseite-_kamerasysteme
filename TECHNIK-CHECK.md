@@ -598,3 +598,23 @@ Alle Texte bleiben inhaltlich gleich; es sind gezielte Ergänzungen.
   Crawling-Warteschlange hinzugefügt“, damit Google den neuen Titel und die SEO-Änderungen zügig übernimmt.
 - Ablauf technisch: echter Browser mit Google-Anmeldung (2-Faktor-Freigabe durch den Kunden), Steuerung über Befehlsdatei;
   der Direktlink zur URL-Prüfung liefert 404, der Weg über das Suchfeld der Property funktioniert. Browserprofil danach gelöscht.
+
+## SEO, dritte Stufe: Suchabsichten (26.10.2026)
+
+Grundlage: Google-Suggest-Auswertung zu 20 Ausgangsbegriffen (Datei `SEO-KEYWORDS.md`). Ergebnis: Wer nach Videoüberwachung
+für Firmen sucht, fragt vor allem nach der Rechtslage (erlaubt, DSGVO, Hinweisschild, Mitarbeiter, Betriebsrat), nach Orten
+(Betriebsgelände, Firmengelände, Gewerbegrundstück, Betriebshof, Lagerhalle, Eingangsbereich) und lokal (Lüneburg, Hamburg,
+Hannover, „in der Nähe“).
+
+- **Vier neue FAQ-Einträge** decken genau diese Absichten ab: Betriebsgelände und Mitarbeiter (berechtigtes Interesse,
+  Hinweisschild, Mitarbeiterinformation, Betriebsvereinbarung, kamerafreie Räume), Speicherdauer (in der Regel 72 Stunden,
+  länger nur mit Anlass), typische Bereiche (Einfahrt, Eingangsbereich, Parkplatz, Betriebshof, Lagerhalle, Gewerbegrundstück;
+  Gehweg und Nachbargrundstück bleiben außen vor), Nachrüsten vorhandener Anlagen. Die Rechtsangaben sind allgemein
+  gehalten und verweisen auf die Prüfung im Einzelfall. Das FAQ-Schema wächst automatisch mit (11 Fragen, gültig).
+- **Lokal:** Standort-Text nennt den Sitz „Bad Bevensen bei Lüneburg“ (Impressum-Angabe), Lüneburg im Einsatzgebiet der
+  Strukturdaten; LocalBusiness jetzt mit Geokoordinaten und Kartenlink (`elementor/geo.json`, Gebäudetreffer bei OpenStreetMap).
+- **Meta-Beschreibung** mit „DSGVO-konform geplant“ und Lüneburg (153 Zeichen).
+- **Geprüft nach dem Speichern:** Titel, Beschreibung, vier gültige JSON-LD-Blöcke, 11 FAQ-Fragen im Schema, keine
+  JavaScript-Fehler; FAQ und Standort bei 393, 768 und 1440 px sauber.
+- **Offen, nur mit Zutun des Kunden:** Preisrahmen für die Kosten-Frage, Link von der Startseite, Google Unternehmensprofil,
+  Backlinks, zweite Bestätigungsmethode in der Search Console (Liste in `SEO-KEYWORDS.md`).
