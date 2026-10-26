@@ -162,13 +162,16 @@ verloren gehen: unter **Seiten → Alle Seiten** die Seite normal bearbeiten (ni
 Dann **Aktualisieren** klicken. Was sonst noch für Suchmaschinen eingebaut ist (Überschriften, Strukturdaten,
 FAQ-Daten), steht in `TECHNIK-CHECK.md` unter „SEO-Optimierung“ und braucht keine Pflege von Hand.
 
-### Bei Google anmelden (Search Console, 5 Minuten)
+### Google Search Console (erledigt am 26.10.2026)
 
-Die Seite steht in der XML-Sitemap (`https://provision-infra.de/page-sitemap.xml`), Google findet sie also von
-selbst. Schneller geht es so: [search.google.com/search-console](https://search.google.com/search-console) mit
-dem Google-Konto öffnen, in dem die Website bestätigt ist, oben die Adresse
-`https://provision-infra.de/kamerasysteme/` in die Suchleiste („URL-Prüfung“) eingeben, dann
-**Indexierung beantragen** klicken. Google holt die Seite meist innerhalb weniger Tage in den Index.
+Im Google-Konto hey@provision-infra.de gibt es jetzt die Property `https://provision-infra.de/`. Google hat die
+Inhaberschaft automatisch über den Tag Manager bestätigt (der Container auf der Website muss dafür bleiben). Die Sitemap
+`sitemap_index.xml` ist eingereicht und erfolgreich gelesen, die Kameraseite ist laut URL-Prüfung „auf Google“ und
+indexiert, Produkt-, Rezensions- und Navigationspfad-Daten werden als gültig erkannt. Eine erneute Indexierung nach den
+SEO-Änderungen ist beantragt.
+
+Nach größeren Änderungen an der Seite: [search.google.com/search-console](https://search.google.com/search-console)
+öffnen, oben `https://provision-infra.de/kamerasysteme/` in die Suchleiste eingeben, **Indexierung beantragen** klicken.
 
 ---
 

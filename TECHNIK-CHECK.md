@@ -586,3 +586,15 @@ Alle Texte bleiben inhaltlich gleich; es sind gezielte Ergänzungen.
 - **Was nur du tun kannst, mit größter Wirkung:** Property in der Search Console und „Indexierung beantragen“; ein Link von der
   Startseite auf /kamerasysteme/ (Menü „Main“ oder ein Textlink, Ankertext „Videoüberwachung für Unternehmen“); Honeypot des
   Formulars einschalten.
+
+## Google-Indexierung (26.10.2026)
+
+- Search-Console-Property `https://provision-infra.de/` im Konto hey@provision-infra.de angelegt (URL-Präfix, nicht Domain:
+  die Domain-Variante bräuchte einen DNS-Eintrag). Inhaberschaft automatisch über Google Tag Manager bestätigt; eine zweite
+  Bestätigungsmethode (HTML-Tag in Yoast oder DNS) wäre sinnvoll, damit die Bestätigung nicht am Tag-Manager-Container hängt.
+- Sitemap `sitemap_index.xml` eingereicht, Status „Erfolgreich“, 7 erkannte Seiten.
+- URL-Prüfung der Kameraseite: „URL ist auf Google“, Seite indexiert; Verbesserungen erkannt: Produkt-Snippets (ProvenExpert),
+  Rezensions-Snippets, Navigationspfade (Yoast), HTTPS. „Indexierung beantragen“ ausgelöst: „URL wurde einer bevorzugten
+  Crawling-Warteschlange hinzugefügt“, damit Google den neuen Titel und die SEO-Änderungen zügig übernimmt.
+- Ablauf technisch: echter Browser mit Google-Anmeldung (2-Faktor-Freigabe durch den Kunden), Steuerung über Befehlsdatei;
+  der Direktlink zur URL-Prüfung liefert 404, der Weg über das Suchfeld der Property funktioniert. Browserprofil danach gelöscht.
