@@ -672,6 +672,11 @@ Einträge sichtbar sein, „Komm in unser Team“ steht überall zuletzt. Gilt f
   nicht angefasst, Rückfrage an den Kunden.
 - **Footer-Menüs** zeigen weiterhin „Mehr“ als Aufklappmenü (am Bildschirm per Hover, auf dem Handy per Tipp). Nicht Teil der
   Vorgabe, die die Kopfleiste betrifft; mit demselben CSS gleich umsetzbar.
+- **Geprüft nach dem Speichern (Startseite und Kameraseite):** Handy 393 px, Menü ausgeklappt: Zeile „Mehr“ ausgeblendet,
+  alle Einträge sichtbar, Haupt- und Unterpunkte mit gleicher Schrift (Poppins 400, 12 px), gleicher Zeilenhöhe und gleicher
+  Textposition, „Komm in unser Team“ zuletzt, keine aria-hidden-Markierung mehr, kein Überlauf, keine JavaScript-Fehler.
+  Bildschirm 1440 px und Tablet 1024 px: „Mehr“ als Aufklappmenü (öffnet in diesem Elementor-Menü per Klick, wie zuvor),
+  darin „Komm in unser Team“ als letzter Punkt.
 - **Nebenbefund Hoster:** Viele Anfragen kurz hintereinander (mehrere Browser parallel) beantwortet der Server mit 429, dann
   fehlen Stylesheets und Seiten sehen „kaputt“ aus. Prüfungen deshalb nacheinander mit Pausen; echte Besucher sind nicht
   betroffen.
