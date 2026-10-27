@@ -658,8 +658,10 @@ Einträge sichtbar sein, „Komm in unser Team“ steht überall zuletzt. Gilt f
 - **Befund Handy:** Elementors Aufklappmenü zeigt „Mehr“ als Zeile mit Pfeil; die Unterpunkte sind eingeklappt (display none,
   aria-hidden) und erscheinen erst nach einem Tipp auf den Pfeil.
 - **Lösung (`tools/menue_handy.py`, von beiden Build-Skripten genutzt):** Custom CSS am Menü-Widget der Kopfleiste: unter
-  768 px wird die Zeile „Mehr“ ausgeblendet und ihre Unterliste dauerhaft eingeblendet, Schriftgröße der Unterpunkte wie die
-  der Hauptpunkte. Dazu ein kleines Skript (HTML-Widget im Steuerungsabschnitt), das die Markierung aria-hidden der nun
+  768 px wird die Zeile „Mehr“ ausgeblendet und ihre Unterliste dauerhaft eingeblendet. Die Unterpunkte bekommen die
+  Typografie der Hauptpunkte (Poppins 400, Größe aus den Widget-Einstellungen, normale Zeilenhöhe), denn Elementor gibt
+  ihnen sonst die globale Aufklapp-Typografie (Roboto 500, 20 px Zeilenhöhe) und einen unsichtbaren 8-px-Rahmen links
+  (`border-inline-start`, für die Hervorhebung des aktiven Punkts), der wie ein Einzug wirkt. Dazu ein kleines Skript (HTML-Widget im Steuerungsabschnitt), das die Markierung aria-hidden der nun
   sichtbaren Unterpunkte zurücknimmt, damit Vorlesehilfen sie erreichen; Elementors Menüskript setzt sie bei jeder
   Initialisierung, deshalb mit MutationObserver. Ein einziges Menü genügt für beide Darstellungen: Ändert der Kunde das Menü,
   folgen Bildschirm und Handy automatisch.

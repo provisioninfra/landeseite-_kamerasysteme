@@ -13,19 +13,29 @@ HANDY_MAX = 767   # Elementor-Breakpoint „Handy“ dieser Website
 
 
 def handy_css(nav_settings):
-    """Custom CSS für das Nav-Menu-Widget. Schriftgröße der Unterpunkte = Schriftgröße der Hauptpunkte auf dem Handy."""
+    """Custom CSS für das Nav-Menu-Widget. Die Unterpunkte bekommen auf dem Handy die Typografie der Hauptpunkte
+    (Elementor gibt ihnen sonst die globale Aufklapp-Typografie, hier Roboto 500, und einen unsichtbaren 8-px-Rahmen links)."""
     groesse = None
     for key in ("menu_typography_font_size_mobile", "menu_typography_font_size_tablet", "menu_typography_font_size"):
         v = nav_settings.get(key)
         if isinstance(v, dict) and v.get("size"):
             groesse = f'{v["size"]}{v.get("unit", "px")}'
             break
-    schrift = f" font-size: {groesse};" if groesse else ""
+    familie = nav_settings.get("menu_typography_font_family")
+    gewicht = nav_settings.get("menu_typography_font_weight")
+    regeln = []
+    if familie:
+        regeln.append(f'font-family: "{familie}", sans-serif;')
+    if gewicht:
+        regeln.append(f"font-weight: {gewicht};")
+    if groesse:
+        regeln.append(f"font-size: {groesse};")
+    regeln += ["line-height: normal;", "border-inline-start-width: 0;"]
     return ("/* Handy: Aufklappmenü flach. „Mehr“ ausblenden, seine Unterpunkte als normale Zeilen zeigen (siehe tools/menue_handy.py) */\n"
             f"@media (max-width: {HANDY_MAX}px) {{\n"
             "  selector .elementor-nav-menu--dropdown li.menu-item-has-children > a.has-submenu { display: none; }\n"
             "  selector .elementor-nav-menu--dropdown ul.sub-menu { display: block !important; }\n"
-            f"  selector .elementor-nav-menu--dropdown a.elementor-sub-item {{{schrift} }}\n"
+            f"  selector .elementor-nav-menu--dropdown a.elementor-sub-item {{ {' '.join(regeln)} }}\n"
             "}")
 
 

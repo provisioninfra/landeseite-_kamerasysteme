@@ -388,7 +388,7 @@
            "size": 10,
            "sizes": []
           },
-          "custom_css": "/* Handy: Aufklappmenü flach. „Mehr“ ausblenden, seine Unterpunkte als normale Zeilen zeigen (siehe tools/menue_handy.py) */\n@media (max-width: 767px) {\n  selector .elementor-nav-menu--dropdown li.menu-item-has-children > a.has-submenu { display: none; }\n  selector .elementor-nav-menu--dropdown ul.sub-menu { display: block !important; }\n  selector .elementor-nav-menu--dropdown a.elementor-sub-item { font-size: 12px; }\n}"
+          "custom_css": "/* Handy: Aufklappmenü flach. „Mehr“ ausblenden, seine Unterpunkte als normale Zeilen zeigen (siehe tools/menue_handy.py) */\n@media (max-width: 767px) {\n  selector .elementor-nav-menu--dropdown li.menu-item-has-children > a.has-submenu { display: none; }\n  selector .elementor-nav-menu--dropdown ul.sub-menu { display: block !important; }\n  selector .elementor-nav-menu--dropdown a.elementor-sub-item { font-family: \"Poppins\", sans-serif; font-weight: 400; font-size: 12px; line-height: normal; border-inline-start-width: 0; }\n}"
          },
          "elements": [],
          "widgetType": "nav-menu"
