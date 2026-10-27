@@ -49,8 +49,10 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `elementor/geo.json` – Geokoordinaten des Firmensitzes für die LocalBusiness-Strukturdaten
 - `elementor/kamera-seite.elements.json` – Elemente + Seiteneinstellungen (Stand, der in WordPress gespeichert ist)
 - `elementor/landingpage-kamerasysteme.json` – dieselbe Seite als importierbare Elementor-Vorlage (Sicherung)
-- `tools/startseite_link.py` – Startseite: Teaser „Videoüberwachung aus einer Hand“, Footer-Zeile „Leistungen“ und feste
-  Footer-Menüs (liest die Sicherung, schreibt `elementor/startseite-mit-link.elements.json`)
+- `tools/menue_handy.py` – Kopfleisten-Menü: CSS und Skript, damit „Mehr“ nur am Bildschirm aufklappt und das Handy-Menü
+  flach ist (von beiden Build-Skripten genutzt)
+- `tools/startseite_link.py` – Startseite: Teaser „Videoüberwachung aus einer Hand“, Footer-Zeile „Leistungen“, feste
+  Footer-Menüs und flaches Handy-Menü (liest die Sicherung, schreibt `elementor/startseite-mit-link.elements.json`)
 - `elementor/startseite-sicherung-2026-10-26.json` – Sicherung der Startseite vor dieser Änderung (Elementor-Export, 23 Abschnitte)
 - `elementor/startseite-mit-link.elements.json` – Startseite mit Teaser und Footer-Zeile (Stand, der in WordPress gespeichert ist)
 

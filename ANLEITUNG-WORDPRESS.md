@@ -119,20 +119,19 @@ Erstgespräch, FAQ, Partner, Footer. Kundenstimmen, Gründer, Standort und Partn
 
 ---
 
-## Schritt 4: Menü oben (nichts zu tun)
+## Schritt 4: Menü oben (Stand 27.10.2026)
 
 Die Kopfleiste ist die der Startseite, zeigt auf der Kamera-Seite aber ein eigenes Menü: unter **Design → Menüs**
-heißt es „Menü Kamerasysteme (Header)“ (seit 24.10.2026). Der Name beginnt absichtlich mit „Menü“, damit es in der
-alphabetischen Liste hinter „Main“ steht; Hintergrund siehe `TECHNIK-CHECK.md` („Fehlendes Footer-Menü“). Die vier Einträge springen zu Abschnitten der Kamera-Seite:
+heißt es „Menü Kamerasysteme (Header)“. Aufbau wie im Hauptmenü „Main“:
 
 - „Durch Videoüberwachung teure Schäden verhindern“ → Abschnitt „Und genau das wird möglich mit ProVision Infra“
-- „So arbeiten wir zusammen“ → Abschnitt „So arbeiten wir“ (direkt darunter der Ablauf)
-- „Über uns“ → „Der Gründer von ProVision Infra“
-- „FAQ“ → die häufigen Fragen
+- „Mehr“ (Aufklappmenü) mit „So arbeiten wir zusammen“, „Über uns“, „FAQ“ und zuletzt „Komm in unser Team“ (Karriere-Seite)
 
-Das Menü „Main“ der Startseite ist unverändert. Einträge ändern: **Design → Menüs**, oben „Menü Kamerasysteme (Header)“
-auswählen, Text oder Link anpassen, „Menü speichern“. Die Links beginnen mit `/kamerasysteme/#…`, damit sie auch
-von anderen Seiten aus funktionieren.
+Am Bildschirm erscheint „Mehr“ als Aufklappmenü. Auf dem Handy wird die Zeile „Mehr“ ausgeblendet, ihre Unterpunkte stehen
+direkt in der Liste und „Komm in unser Team“ ganz unten. Das erledigt das Seiten-CSS von selbst, auch wenn du Einträge
+änderst: Was unter „Mehr“ hängt, ist am Bildschirm aufklappbar und auf dem Handy sofort sichtbar. Dasselbe gilt für die
+Startseite. Einträge ändern: **Design → Menüs**, oben das Menü auswählen, Text oder Link anpassen, „Menü speichern“.
+Die Links der Kamera-Seite beginnen mit `/kamerasysteme/#…`, damit sie auch von anderen Seiten aus funktionieren.
 
 ---
 

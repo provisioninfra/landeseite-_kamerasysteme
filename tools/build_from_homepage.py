@@ -15,7 +15,9 @@ Animationen, Header und Footer exakt mit der Startseite überein.
 
 Aufruf: python3 tools/build_from_homepage.py
 """
-import copy, hashlib, json, pathlib, re
+import copy, hashlib, json, pathlib, re, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))   # tools/ auch im isolierten Modus (python3 -I)
+import menue_handy   # Handy-Menü: CSS und Skript (gleich auf Start- und Kameraseite)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 H = json.loads((ROOT / "elementor" / "quelle-startseite.json").read_text(encoding="utf-8"))
@@ -204,6 +206,8 @@ page = []
 header = clone(H[0])
 MENUE = MEDIA["menue_header"]
 must(header, "2a487ab")["settings"]["menu"] = MENUE["slug"]
+# Handy: Aufklappmenü flach („Mehr“ nur am Bildschirm, „Komm in unser Team“ zuletzt), Vorgabe vom 27.10.2026
+must(header, "2a487ab")["settings"]["custom_css"] = menue_handy.handy_css(must(header, "2a487ab")["settings"])
 page.append(header)
 
 # ---------------------------------------------------------------- 2) Hero (Original, neue Texte, neues Video)
@@ -796,6 +800,7 @@ steuerung = {"id": new_id(), "elType": "container", "isInner": False, "elements"
     "settings": {"html": VIDEO_SCRIPT, "_title": "Steuerung Hintergrundvideo"},
 }], "settings": {"content_width": "full", "padding": box(0, 0, 0, 0), "margin": box(0, 0, 0, 0),
                  "min_height": {"unit": "px", "size": 0, "sizes": []}, "_title": "Steuerung Hintergrundvideo"}}
+steuerung["elements"].append(menue_handy.script_widget())   # Handy-Menü: aria-hidden der flach gezeigten Unterpunkte zurücknehmen
 page.append(steuerung)
 
 # ---------------------------------------------------------------- 14) SEO: Überschriften-Hierarchie

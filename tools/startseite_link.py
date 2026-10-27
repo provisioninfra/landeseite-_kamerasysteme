@@ -6,10 +6,13 @@ Editor exportiert) und schreibt elementor/startseite-mit-link.elements.json mit 
   1. Teaser-Abschnitt „Videoüberwachung aus einer Hand“ vor dem Gründer-Abschnitt (Kasten im Stil des Standort-Kastens,
      zwei Sätze, gelber Button „Videoüberwachung für Unternehmen“ auf /kamerasysteme/),
   2. Footer-Zeile „Leistungen: Schließsysteme | Videoüberwachung“ neben Datenschutz, Impressum, AGB,
-  3. Footer-Menü-Widgets fest auf das Menü „main“ (bisher Verweis auf ein nicht vorhandenes Menü).
-Alles andere bleibt byteidentisch. Freigabe des Kunden vom 26.10.2026.
+  3. Footer-Menü-Widgets fest auf das Menü „main“ (bisher Verweis auf ein nicht vorhandenes Menü),
+  4. Kopfleisten-Menü auf dem Handy flach („Mehr“ nur am Bildschirm; tools/menue_handy.py), Vorgabe vom 27.10.2026.
+Alles andere bleibt byteidentisch. Freigabe des Kunden vom 26.10.2026 (1–3) und 27.10.2026 (4).
 """
-import copy, hashlib, json, pathlib
+import copy, hashlib, json, pathlib, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))   # tools/ auch im isolierten Modus (python3 -I)
+import menue_handy   # Handy-Menü: CSS und Skript (gleich auf Start- und Kameraseite)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "elementor" / "startseite-sicherung-2026-10-26.json"
@@ -114,6 +117,15 @@ for wid in ("59b27e3", "a430424"):
     w = must(page, wid)
     assert w.get("widgetType") == "nav-menu"
     w["settings"]["menu"] = "main"
+
+# ---------------------------------------------------------------- 4) Kopfleisten-Menü auf dem Handy flach
+nav = must(page, "2a487ab")
+assert nav.get("widgetType") == "nav-menu"
+nav["settings"]["custom_css"] = menue_handy.handy_css(nav["settings"])
+steuerung = {"id": new_id(), "elType": "container", "isInner": False, "elements": [menue_handy.script_widget("startseite-handy-menue")],
+             "settings": {"content_width": "full", "padding": box(0, 0, 0, 0), "margin": box(0, 0, 0, 0),
+                          "min_height": {"unit": "px", "size": 0, "sizes": []}, "_title": "Steuerung Handy-Menü"}}
+page.append(steuerung)
 
 DST.write_text(json.dumps({"elements": page, "settings": data["settings"], "title": data["title"], "status": data["status"]},
                           ensure_ascii=False), encoding="utf-8")

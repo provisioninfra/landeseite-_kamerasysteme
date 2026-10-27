@@ -645,3 +645,31 @@ aus dem Elementor-Editor exportiert: `elementor/startseite-sicherung-2026-10-26.
 - **Geprüft nach dem Speichern** bei 393, 768, 1024, 1440 und 1920 px: zwei Links auf `/kamerasysteme/` (Teaser-Button,
   Footer), Teaser als 17. von 24 Abschnitten, kein horizontaler Überlauf, keine JavaScript-Fehler, Header unverändert,
   Footer-Menüs zeigen „Main“, Einblend-Animation des Teasers wie bei den Nachbarabschnitten.
+
+## Kopfleisten-Menü: „Mehr“ nur am Bildschirm, Handy flach (27.10.2026)
+
+Vorgabe des Kunden: Am Bildschirm bleibt „Mehr“ als Aufklappmenü, auf dem Handy sollen nach dem Ausklappen sofort alle
+Einträge sichtbar sein, „Komm in unser Team“ steht überall zuletzt. Gilt für alle Seiten außer der Karriere-Seite.
+
+- **Menüs:** Der Kunde hat „Komm in unser Team“ im Hauptmenü „Main“ selbst als letzten Unterpunkt von „Mehr“ angelegt
+  (Design → Menüs). Im Kamera-Menü stand es an zweiter Stelle; über die REST-Schnittstelle als letzter Unterpunkt von „Mehr“
+  eingeordnet. Reihenfolge dort jetzt: „Durch Videoüberwachung teure Schäden verhindern“, „Mehr“ mit „So arbeiten wir
+  zusammen“, „Über uns“, „FAQ“, „Komm in unser Team“ (die Verschachtelung von „So arbeiten wir zusammen“ stammt vom Kunden).
+- **Befund Handy:** Elementors Aufklappmenü zeigt „Mehr“ als Zeile mit Pfeil; die Unterpunkte sind eingeklappt (display none,
+  aria-hidden) und erscheinen erst nach einem Tipp auf den Pfeil.
+- **Lösung (`tools/menue_handy.py`, von beiden Build-Skripten genutzt):** Custom CSS am Menü-Widget der Kopfleiste: unter
+  768 px wird die Zeile „Mehr“ ausgeblendet und ihre Unterliste dauerhaft eingeblendet, Schriftgröße der Unterpunkte wie die
+  der Hauptpunkte. Dazu ein kleines Skript (HTML-Widget im Steuerungsabschnitt), das die Markierung aria-hidden der nun
+  sichtbaren Unterpunkte zurücknimmt, damit Vorlesehilfen sie erreichen; Elementors Menüskript setzt sie bei jeder
+  Initialisierung, deshalb mit MutationObserver. Ein einziges Menü genügt für beide Darstellungen: Ändert der Kunde das Menü,
+  folgen Bildschirm und Handy automatisch.
+- **Seiten:** Startseite (ID 31, `tools/startseite_link.py`, Schritt 4) und Kameraseite (ID 4313, Composer) umgesetzt.
+  Zutrittssystem-Seite (ID 3316): zwei Einträge, „Komm in unser Team“ bereits zuletzt, kein „Mehr“, nichts zu tun.
+  Karriere-Seite: ausgenommen, hat ohnehin kein solches Menü. Die neuen Seiten „Lüneburg“ (ID 4496) und „Uelzen“ (ID 4605,
+  beide am 27.10. von anderer Hand angelegt bzw. geändert) nutzen eigene Menüs ohne „Mehr“ und ohne „Komm in unser Team“;
+  nicht angefasst, Rückfrage an den Kunden.
+- **Footer-Menüs** zeigen weiterhin „Mehr“ als Aufklappmenü (am Bildschirm per Hover, auf dem Handy per Tipp). Nicht Teil der
+  Vorgabe, die die Kopfleiste betrifft; mit demselben CSS gleich umsetzbar.
+- **Nebenbefund Hoster:** Viele Anfragen kurz hintereinander (mehrere Browser parallel) beantwortet der Server mit 429, dann
+  fehlen Stylesheets und Seiten sehen „kaputt“ aus. Prüfungen deshalb nacheinander mit Pausen; echte Besucher sind nicht
+  betroffen.

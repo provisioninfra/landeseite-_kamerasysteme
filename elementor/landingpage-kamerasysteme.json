@@ -387,7 +387,8 @@
            "unit": "px",
            "size": 10,
            "sizes": []
-          }
+          },
+          "custom_css": "/* Handy: Aufklappmenü flach. „Mehr“ ausblenden, seine Unterpunkte als normale Zeilen zeigen (siehe tools/menue_handy.py) */\n@media (max-width: 767px) {\n  selector .elementor-nav-menu--dropdown li.menu-item-has-children > a.has-submenu { display: none; }\n  selector .elementor-nav-menu--dropdown ul.sub-menu { display: block !important; }\n  selector .elementor-nav-menu--dropdown a.elementor-sub-item { font-size: 12px; }\n}"
          },
          "elements": [],
          "widgetType": "nav-menu"
@@ -42579,6 +42580,17 @@
      "settings": {
       "html": "<script>\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) return;\n  function steuern(id) {\n    var bereich = document.querySelector('.elementor-element-' + id);\n    if (!bereich) return;\n    var video = bereich.querySelector('video.elementor-background-video-hosted');\n    if (!video) return;\n    var warAusserhalb = false;\n    video.loop = false;\n    video.addEventListener('ended', function () {\n      // nach Elementors eigenem Ausblenden wieder einblenden: letztes Bild bleibt stehen\n      setTimeout(function () { video.style.display = ''; }, 0);\n    });\n    if (!('IntersectionObserver' in window)) return;\n    new IntersectionObserver(function (eintraege) {\n      eintraege.forEach(function (e) {\n        if (!e.isIntersecting) { warAusserhalb = true; return; }\n        if (!warAusserhalb) return;\n        warAusserhalb = false;\n        video.style.display = '';\n        try { video.currentTime = 0; } catch (err) {}\n        var p = video.play();\n        if (p && p.catch) p.catch(function () {});\n      });\n    }, { threshold: 0 }).observe(bereich);\n  }\n  // Der Handy-Videoblock ist am Computer und Tablet ausgeblendet; Elementor lädt sein Video dort trotzdem (1,5 MB).\n  // Deshalb ohne Autoplay und ohne Vorladen, solange der Block unsichtbar ist. Wird er durch eine Größenänderung\n  // sichtbar, startet das Video nach.\n  function nurLadenWennSichtbar(id) {\n    var bereich = document.querySelector('.elementor-element-' + id);\n    if (!bereich || getComputedStyle(bereich).display !== 'none') return;\n    var video = bereich.querySelector('video.elementor-background-video-hosted');\n    if (!video) return;\n    video.removeAttribute('autoplay');\n    video.preload = 'none';\n    var zurueck = function () {\n      if (getComputedStyle(bereich).display === 'none') return;\n      window.removeEventListener('resize', zurueck);\n      video.preload = 'auto';\n      video.setAttribute('autoplay', '');\n      var p = video.play();\n      if (p && p.catch) p.catch(function () {});\n    };\n    window.addEventListener('resize', zurueck);\n  }\n  nurLadenWennSichtbar('d135e80');\n  function start() {\n    ['0f0c707', 'd135e80'].forEach(steuern);   // Hero (Desktop/Tablet) und Video-Block (Handy)\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();\n  // Elementor initialisiert Hintergrundvideos erst nach dem Laden seiner Skripte: Steuerung dann erneut anbinden\n  window.addEventListener('load', function () { setTimeout(start, 800); });\n})();\n</script>",
       "_title": "Steuerung Hintergrundvideo"
+     }
+    },
+    {
+     "id": "edc7fd7",
+     "elType": "widget",
+     "widgetType": "html",
+     "elements": [],
+     "isInner": false,
+     "settings": {
+      "html": "<script>\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) return;\n  var HANDY = 767;\n  function istHandy() { return window.innerWidth <= HANDY; }\n  // Auf dem Handy zeigt das CSS die Unterpunkte von „Mehr“ dauerhaft an. Elementors Menüskript markiert sie trotzdem als\n  // verborgen (aria-hidden); das wird hier zurückgenommen, damit Vorlesehilfen alle Einträge erreichen.\n  function freigeben(ul) {\n    if (!istHandy()) return;\n    ['aria-hidden', 'aria-expanded', 'role', 'aria-labelledby'].forEach(function (a) { ul.removeAttribute(a); });\n  }\n  function start() {\n    var listen = document.querySelectorAll('.elementor-nav-menu--dropdown ul.sub-menu');\n    if (!listen.length) return;\n    var beobachter = new MutationObserver(function (aenderungen) {\n      aenderungen.forEach(function (m) { if (m.target.getAttribute('aria-hidden') === 'true') freigeben(m.target); });\n    });\n    listen.forEach(function (ul) { freigeben(ul); beobachter.observe(ul, { attributes: true, attributeFilter: ['aria-hidden'] }); });\n    window.addEventListener('resize', function () { listen.forEach(freigeben); });\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();\n})();\n</script>",
+      "_title": "Steuerung Handy-Menü"
      }
     },
     {
