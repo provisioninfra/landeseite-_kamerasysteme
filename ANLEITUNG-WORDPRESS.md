@@ -185,24 +185,36 @@ Nach größeren Änderungen an der Seite: [search.google.com/search-console](htt
 
 ---
 
-## Schritt 7: Verlinken, damit Besucher die Seite finden (5 Minuten)
+## Schritt 7: Verlinken, damit Besucher die Seite finden (erledigt bis auf einen Handgriff)
 
-Eine Unterseite ohne Link findet niemand. Möglichkeiten:
+Seit 27.10.2026 verlinkt die Startseite die Kamera-Seite an zwei Stellen (so freigegeben):
 
-- **Button auf der Startseite:** Im Elementor der Startseite an passender Stelle einen Button einfügen,
-  Link `/kamera-videoueberwachung/`.
-- **Menü:** Unter **Design → Menüs** die Seite dem Menü hinzufügen.
-- **Google Search Console** (falls eingerichtet): Die Adresse unter „URL-Prüfung“ eintragen und
-  **Indexierung beantragen**.
+- **Teaser „Videoüberwachung aus einer Hand“** zwischen „So kommst du zu deinem digitalen Zutrittssystem“ und
+  „Der Gründer von ProVision Infra“, mit dem Button „Videoüberwachung für Unternehmen“.
+- **Footer-Zeile** „Leistungen: Schließsysteme | Videoüberwachung“ neben Datenschutz, Impressum, AGB.
+
+Text oder Button des Teasers ändern: Startseite mit Elementor bearbeiten, im Navigator den Abschnitt
+„Videoüberwachung aus einer Hand (Teaser)“ aufklappen. Die Footer-Menüs der Startseite stehen seitdem fest auf „Main“
+(vorher zeigten sie per Fallback ein anderes Menü).
+
+**Noch zu tun (eine Minute): Hauptmenü.** Die seitenweite Navigation durfte ich nicht ändern. So geht es:
+**Design → Menüs**, oben das Menü „Main“ wählen → links „Individuelle Links“ → URL `https://provision-infra.de/kamerasysteme/`,
+Link-Text „Videoüberwachung“ → „Zum Menü hinzufügen“ → den neuen Eintrag an die zweite Stelle ziehen (hinter „Mit digitalen
+Schlüsseln Kosten sparen“, vor „Komm in unser Team“) → „Menü speichern“. Der Eintrag erscheint dann im Header aller Seiten
+außer der Kamera-Seite, die ihr eigenes Menü hat (Schritt 4).
+
+**Google:** Die Startseite steht mit neuem Änderungsdatum in der Sitemap, Google übernimmt die Links von selbst. Schneller
+geht es über die Search Console: Startseite in die „URL-Prüfung“ eintragen und **Indexierung beantragen**.
 
 ---
 
-## Zwei Handgriffe für dich (je eine Minute)
+## Drei Handgriffe für dich (je eine Minute)
 
 1. **Spam-Schutz des Formulars:** Formulare → „Anfrageformular Kamerasysteme“ → Einstellungen → Formulareinstellungen →
    „Anti-Spam-Honeypot“ einschalten → speichern. Das Feld ist unsichtbar, Besucher merken nichts. Ich durfte diese Einstellung
    nicht selbst ändern.
-2. **Testbenutzer löschen:** Benutzer → „claude-test“ → Löschen, Inhalte deinem eigenen Benutzer zuordnen.
+2. **Hauptmenü-Eintrag „Videoüberwachung“** an zweiter Stelle im Menü „Main“ (Anleitung in Schritt 7).
+3. **Testbenutzer löschen:** Benutzer → „claude-test“ → Löschen, Inhalte deinem eigenen Benutzer zuordnen.
 
 ---
 

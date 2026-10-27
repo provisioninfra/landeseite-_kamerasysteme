@@ -52,7 +52,8 @@ plus die Yoast-Analyse der Seite. Ohne Suchvolumen-Tool; die Vervollständigunge
 
 ## Was außerhalb der Seite den größten Hebel hat
 
-1. **Link von der Startseite** auf /kamerasysteme/ (Menü „Main“ oder Textlink mit Ankertext „Videoüberwachung für Unternehmen“). Ohne internen Link bleibt die Seite für Google eine Insel.
+1. **Link von der Startseite** auf /kamerasysteme/: seit 27.10.2026 gesetzt (Teaser mit Ankertext „Videoüberwachung für Unternehmen“
+   und Footer-Zeile). Offen ist nur der Eintrag „Videoüberwachung“ im Hauptmenü „Main“ (siehe `ANLEITUNG-WORDPRESS.md`, Schritt 7).
 2. **Google Unternehmensprofil:** Leistung „Videoüberwachung“ eintragen, Beitrag mit Link auf die Kameraseite, Kategorie „Sicherheitsdienst/Alarmanlagen“ prüfen. Bedient „in der Nähe“-Suchen.
 3. **Preisrahmen** für die FAQ „Was kostet …“ (z. B. „ab … € je Kamera inklusive Montage“). „Kosten“ ist eine der häufigsten Absichten.
 4. **Backlinks:** Partner- und Herstellerverzeichnisse (TP-Link VIGI Partner), IHK Lüneburg-Wolfsburg, lokale Branchenverzeichnisse, ProvenExpert-Profil mit Link auf die Kameraseite.

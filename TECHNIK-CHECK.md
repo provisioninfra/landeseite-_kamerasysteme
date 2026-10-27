@@ -616,5 +616,32 @@ Hannover, „in der Nähe“).
 - **Meta-Beschreibung** mit „DSGVO-konform geplant“ und Lüneburg (153 Zeichen).
 - **Geprüft nach dem Speichern:** Titel, Beschreibung, vier gültige JSON-LD-Blöcke, 11 FAQ-Fragen im Schema, keine
   JavaScript-Fehler; FAQ und Standort bei 393, 768 und 1440 px sauber.
-- **Offen, nur mit Zutun des Kunden:** Preisrahmen für die Kosten-Frage, Link von der Startseite, Google Unternehmensprofil,
+- **Offen, nur mit Zutun des Kunden:** Preisrahmen für die Kosten-Frage, Hauptmenü-Eintrag „Videoüberwachung“ (Teaser und Footer-Link der Startseite sind seit
+  27.10. gesetzt, siehe unten), Google Unternehmensprofil,
   Backlinks, zweite Bestätigungsmethode in der Search Console (Liste in `SEO-KEYWORDS.md`).
+
+## Link von der Startseite (27.10.2026)
+
+Freigabe des Kunden für genau drei Änderungen an der Startseite (ID 31); alles andere blieb unangetastet. Sicherung vorher
+aus dem Elementor-Editor exportiert: `elementor/startseite-sicherung-2026-10-26.json` (23 Abschnitte, Seiteneinstellungen).
+
+- **Teaser-Abschnitt „Videoüberwachung aus einer Hand“** zwischen „So kommst du zu deinem digitalen Zutrittssystem“ und
+  „Der Gründer von ProVision Infra“: Kasten nach dem Vorbild des Standort-Kastens (Rahmen, Radius, Einblendung), Überschrift
+  als h2, die zwei Sätze des Kunden, Button „Videoüberwachung für Unternehmen“ (Keyphrase als Linktext) auf `/kamerasysteme/`.
+  Breite 820 px, auf Tablet und Handy volle Breite, Abstand 60/50/40 px nach oben und unten, Anker `#videoueberwachung`.
+- **Footer-Zeile „Leistungen: Schließsysteme | Videoüberwachung“** neben Datenschutz, Impressum, AGB (Kopie der
+  Rechtsliste). Auf dem Handy steht „Leistungen:“ in eigener Zeile (Custom CSS am Widget), sonst brach die Zeile mitten im
+  Linktext um.
+- **Footer-Menüs der Startseite** zeigten auf ein nicht vorhandenes Menü („karriere-menu“) und damit per WordPress-Fallback
+  auf das alphabetisch erste Menü; beide Nav-Widgets stehen jetzt fest auf „Main“. Damit entfällt der Grund für die
+  Namenswahl „Menü Kamerasysteme (Header)“ (bleibt so, schadet nicht).
+- **Hauptmenü:** Der Eintrag „Videoüberwachung“ an zweiter Stelle im Menü „Main“ wurde vom Freigabesystem dieser Sitzung
+  zweimal blockiert (Änderung an der seitenweiten Navigation; einmal per REST, einmal über den Menüeditor). Nicht umgangen;
+  der Handgriff steht in `ANLEITUNG-WORDPRESS.md`, Schritt 7.
+- **Vorgehen:** `tools/startseite_link.py` liest die Sicherung, setzt die drei Änderungen und schreibt
+  `elementor/startseite-mit-link.elements.json` (24 Abschnitte); gespeichert über den Speicherweg des Elementor-Editors
+  mit Status „publish“. Vorher per Vergleich geprüft: unter den bestehenden Abschnitten ändert sich nur der Footer,
+  die Seiteneinstellungen sind identisch.
+- **Geprüft nach dem Speichern** bei 393, 768, 1024, 1440 und 1920 px: zwei Links auf `/kamerasysteme/` (Teaser-Button,
+  Footer), Teaser als 17. von 24 Abschnitten, kein horizontaler Überlauf, keine JavaScript-Fehler, Header unverändert,
+  Footer-Menüs zeigen „Main“, Einblend-Animation des Teasers wie bei den Nachbarabschnitten.

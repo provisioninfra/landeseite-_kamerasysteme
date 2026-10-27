@@ -37,8 +37,8 @@ Falls das Video nicht geladen werden kann, läuft eine animierte SVG-Szene (Kame
 
 ## WordPress: die eigentliche Seite
 
-Die Landingpage liegt als unveröffentlichter Entwurf in WordPress („Kamera- & Videoüberwachung“,
-Seiten-ID 4313). Sie wurde aus den Original-Bausteinen der Startseite zusammengesetzt und über den
+Die Landingpage ist in WordPress veröffentlicht („Kamera- & Videoüberwachung“, Seiten-ID 4313,
+`/kamerasysteme/`). Sie wurde aus den Original-Bausteinen der Startseite zusammengesetzt und über den
 Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-Elemente.
 
 - `tools/build_from_homepage.py` – baut die Seite aus den Startseiten-Bausteinen zusammen
@@ -49,8 +49,12 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `elementor/geo.json` – Geokoordinaten des Firmensitzes für die LocalBusiness-Strukturdaten
 - `elementor/kamera-seite.elements.json` – Elemente + Seiteneinstellungen (Stand, der in WordPress gespeichert ist)
 - `elementor/landingpage-kamerasysteme.json` – dieselbe Seite als importierbare Elementor-Vorlage (Sicherung)
+- `tools/startseite_link.py` – Startseite: Teaser „Videoüberwachung aus einer Hand“, Footer-Zeile „Leistungen“ und feste
+  Footer-Menüs (liest die Sicherung, schreibt `elementor/startseite-mit-link.elements.json`)
+- `elementor/startseite-sicherung-2026-10-26.json` – Sicherung der Startseite vor dieser Änderung (Elementor-Export, 23 Abschnitte)
+- `elementor/startseite-mit-link.elements.json` – Startseite mit Teaser und Footer-Zeile (Stand, der in WordPress gespeichert ist)
 
-Neu erzeugen: `python3 tools/build_from_homepage.py`. Die Schritte bis zur Veröffentlichung stehen in
+Neu erzeugen: `python3 tools/build_from_homepage.py` (Kamera-Seite), `python3 tools/startseite_link.py` (Startseite). Die Schritte bis zur Veröffentlichung stehen in
 `ANLEITUNG-WORDPRESS.md`.
 
 ## Statische Version (index.html)
