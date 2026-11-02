@@ -125,7 +125,7 @@ danach alle Seiten aus frischen Exporten. Regel seitdem: vor jedem Speichern fri
 anderen Sitzung vorher nennen, Steuer-Container getrennt halten (ihre Titel beginnen mit „Steuerung“, meiner heißt
 „Querformat + Hero-Video (Steuerung)“).
 
-## Ergebnis (Stand 02.11.2026, 10:15 Uhr)
+## Ergebnis (Stand 02.11.2026, 10:50 Uhr)
 
 | Seite | Mein Container (CSS+JS) | Kleine Hero-Videos | Siegel Querformat aus | Container „Steuerung Ladeverhalten“ (Parallelsitzung) |
 | --- | --- | --- | --- | --- |
@@ -133,7 +133,7 @@ anderen Sitzung vorher nennen, Steuer-Container getrennt halten (ihre Titel begi
 | /lueneburg/ (4496) | ja (09:49, nach Überschreiben um 10:05 wiederhergestellt) | ja | ja | ja |
 | /zutrittssystem/ (3316) | ja (09:53) | nein (eigene Videos 6,4 / 3,8 MB, unverändert) | ja | ja |
 | /kamerasysteme/ (4313) | nein (eigene Videosteuerung der Seite, JS des Snippets wäre dort inaktiv) | eigene kleine Videos | ja (Widget-Regel der Parallelsitzung) | ja |
-| Startseite (31) | geplant 10:50 Uhr (angekündigt) | geplant | ja (Widget-Regel der Parallelsitzung) | ja |
+| Startseite (31) | ja (10:48, aus frischem Export mit den Ständen der Parallelsitzung von 10:26) | ja | ja (doppelt) | ja |
 
 Sichtbarer Text aller geänderten Seiten vor/nach identisch (Vergleich des gerenderten HTML), je Seite genau zwei neue
 Elemente (Container + Widget).
