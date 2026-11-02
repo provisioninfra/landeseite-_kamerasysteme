@@ -61,4 +61,6 @@ LADE_SCRIPT = r"""<script>
 
 def script_widget(id_hint):
     return {"id": hashlib.md5(id_hint.encode()).hexdigest()[:7], "elType": "widget", "widgetType": "html", "elements": [],
-            "isInner": False, "settings": {"html": LADE_SCRIPT, "_title": "Steuerung Ladeverhalten und Schema"}}
+            "isInner": False, "settings": {"html": LADE_SCRIPT, "_title": "Steuerung Ladeverhalten und Schema",
+                                           # ausgeblendet: so erzeugt das Widget keinen Flex-Abstand im Container (Skript läuft trotzdem)
+                                           "custom_css": "selector { display: none; }"}}

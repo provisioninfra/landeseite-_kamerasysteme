@@ -728,5 +728,16 @@ Build-Skripte dieses Repos.
   frischen 4605-Export zurück. Regel seitdem: vor jedem Speichern frisch exportieren, beide Sitzungen per Nachricht
   abstimmen, Steuerungs-Container getrennt halten (eigene Titel beginnen mit „Steuerung“). Das Siegel wird zusätzlich im
   Handy-Querformat (max-height 520 px) ausgeblendet, weil es dort laut Kunde Texte verdeckte; die Regel sitzt am Widget.
+- **Geprüft nach dem Speichern (02.11., alle fünf Seiten):** im gerenderten DOM kein Product-Schema mehr, alle
+  LocalBusiness-Blöcke mit `#organization`; am Handy (393 px) laden die ausgeblendeten Lotties nicht mehr (Startseite 0
+  statt 9 Dateien, Zutrittssystem 1 statt 6), am Bildschirm wie zuvor; je Gerät nur das sichtbare Hero-Video; keine
+  JavaScript-Fehler, kein Überlauf. Siegel: Hochformat auf allen Seiten fest unten rechts (80 px), Querformat 956×440
+  ausgeblendet. Pixelvergleich der Ganzseiten-Screenshots (393/768/1440 px, Karriere als Kontrolle): Abweichungen 0,0
+  bis 0,7 % in schmalen Bändern, optisch geprüft identisch (Siegel, Animationen, Bewertungszähler, Antialiasing);
+  Karriere 0,0 %. Lighthouse Handy Startseite: Leistung 44 → 60, Übertragung 15,4 → 5,2 MB, Blockierzeit 3,9 s → 0,8 s,
+  LCP 4,5 → 4,0 s; Zutrittssystem: Übertragung 8,7 → 4,5 MB, Blockierzeit 1,3 → 1,0 s (Layout-Sprung 0,24 bleibt,
+  Ursache Hintergrundvideo-Container, nicht ohne sichtbare Änderung lösbar). Korrektur nach dem Vergleich: Das
+  Steuerungs-Widget erzeugte in bestehenden Steuerungs-Containern 20 px Flex-Abstand am Seitenende; es ist jetzt per
+  CSS ausgeblendet (Skripte laufen weiter).
 - **Nicht möglich aus dieser Sitzung:** Custom Code „Bugherd“ auf Entwurf setzen (vom Freigabesystem als Änderung
   an gemeinsamen Ressourcen abgelehnt), Shortcode-Code, ProvenExpert-Konto, Hosting, Weiterleitungskette.

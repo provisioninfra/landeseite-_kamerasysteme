@@ -46,8 +46,13 @@ for e in walk(page):
 
 # 3) Steuerungs-Widget
 widget = ladeverhalten.script_widget(f"ladeverhalten-{pathlib.Path(src).stem}")
-if any(e.get("widgetType") == "html" and e.get("settings", {}).get("_title") == widget["settings"]["_title"] for e in walk(page)):
-    log.append("Steuerungs-Widget bereits vorhanden")
+vorhanden = [e for e in walk(page) if e.get("widgetType") == "html" and e.get("settings", {}).get("_title") == widget["settings"]["_title"]]
+if vorhanden:
+    for e in vorhanden:   # bestehendes Widget auf den aktuellen Stand bringen (Skript, Ausblendung)
+        if e["settings"].get("html") != widget["settings"]["html"] or e["settings"].get("custom_css") != widget["settings"]["custom_css"]:
+            e["settings"]["html"] = widget["settings"]["html"]; e["settings"]["custom_css"] = widget["settings"]["custom_css"]
+            log.append(f"Steuerungs-Widget {e['id']} aktualisiert")
+    if not any("aktualisiert" in l for l in log): log.append("Steuerungs-Widget bereits vorhanden")
 else:
     # nur eigene Steuerungs-Container (Titel beginnt mit „Steuerung“), nicht den Container der Parallelsitzung
     ziel = next((e for e in page if e.get("elType") == "container" and e.get("settings", {}).get("_title", "").startswith("Steuerung")), None)
