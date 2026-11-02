@@ -44,7 +44,33 @@ Tags für Contact und CompleteRegistration existieren nicht.
    prüfen. In Gravity Forms gilt bei Formular 2 „privat ab 16 Türen“ und bei Formular 6 „geschäftlich“ ohne
    Türenregel als HQ; das ist Absicht laut Kunde, weicht aber vom Wortlaut der Vorgabe ab.
 
-## Korrektur im Tag Manager (fünf Minuten, Arbeitsbereich → Version veröffentlichen)
+## Umgesetzt am 02.11.2026: Container-Version 12 ist live
+
+Im Google-Konto des Kunden (2-Faktor-Freigabe durch den Kunden) wurde der Arbeitsbereich exportiert, daraus eine
+Import-Datei gebaut (`scratchpad`, nicht im Repo) und per „Container importieren → Zusammenführen → Konflikte
+überschreiben“ eingespielt: vier neue Trigger (Seitenaufruf, **Page Path ist gleich**), Tags „Meta Pixel - Lead“ und
+„Meta Pixel - SubmitApplication HQL“ auf die exakten Pfade umgehängt, zwei neue Tags „Meta Pixel - Contact LQ Kamera“
+und „Meta Pixel - CompleteRegistration HQ Kamera“ (Kopien des Lead-Tags mit anderem Standardereignis). Veröffentlicht als
+Version 12 „Meta-Events je Terminseite (LQ/HQ Schließ, LQ/HQ Kamera)“. Mit veröffentlicht wurde der seit 8 Tagen
+offene, ungenutzte Trigger „generate_LQ_lead_google“ des Kunden (ohne Wirkung).
+
+Geprüft an der öffentlichen Container-Datei (gtm.js, Version 12):
+
+| Seite | Meta-Event |
+|---|---|
+| /termin/ | Lead |
+| /termin-gebucht/ | SubmitApplication |
+| /termin-kamerasysteme/ | Contact |
+| /termin-gebucht-kamerasysteme/ | CompleteRegistration |
+| /danke/, /danke-seite/ | Schedule (unverändert) |
+| Seiten mit „kontakt“ | ViewContent (unverändert) |
+
+Nicht geändert: Google-Ads-Conversion-Tag 14 (feuert weiter auf allen „termin“-Seiten), Einwilligungsfrage (siehe
+Nebenbefunde). Calendly je Terminseite ist korrekt: /termin/ und /termin-gebucht/ betten „Telefonisches Erstgespräch
+Schließsysteme“ ein, die beiden Kamera-Seiten „telefonisches-erstgesprach-kamerasysteme“; das kombinierte Formular
+(/kontakt-kombiniert/) führt auf die Schließsysteme-Termine.
+
+## Korrektur im Tag Manager (so wurde es umgesetzt)
 
 Trigger neu anlegen, Typ „Seitenaufruf“, Bedingung **Page Path ist gleich** (nicht „enthält“):
 
