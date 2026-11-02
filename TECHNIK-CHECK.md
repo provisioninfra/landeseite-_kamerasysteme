@@ -770,7 +770,10 @@ Ursache zurückgeführt; danach dieselbe Prüfung auf den Unterseiten.
   Seite aus einer ID-Tabelle erzeugt (Startseite 31, Kamera 4313, Lüneburg 4496, Uelzen 4605, Zutrittssystem 3316;
   Karriere ausgenommen). Am Bildschirm und Tablet ändert sich nichts. Hochformat (bis 767 px): Footer-„Mehr“
   ausgeblendet, Unterpunkte fest in der Liste mit der Optik der Hauptpunkte (wie das Kopfleisten-Menü vom 27.10.);
-  Griff/Zylinder-Bild zentriert unter den Karten (62 %, max. 300 px), Leuchtfläche ausgeblendet; Siegel 60 statt 80 px.
+  Griff/Zylinder-Bild im Fluss unter den Karten (62 %, max. 300 px), per Auto-Rand zentriert und um 24 % seiner Breite
+  nach rechts versetzt, weil Platte und Zylinder bei 23–29 % der Bildbreite liegen und der Hebel bis zum rechten Rand
+  reicht (so steht das Symbol mittig wie am PC); die Schwebe-Animation der Klasse „floating“ (translateY ±10 px, 3 s)
+  bleibt erhalten, deshalb keine transform-Regel; Leuchtfläche ausgeblendet; Siegel 60 statt 80 px.
   Querformat (Höhe bis 520 px), Anordnung wie am PC: Video links 46 %, Text rechts, darin die drei Zeilen mit Icon
   links und Text rechts (Elementor bricht sie ab Tablet um, Icon über Text); linke Textspalte neben den Karten und per
   `position: sticky` mitlaufend; Computer-Variante von „Stell dir mal vor“ ausgeblendet (ihre Kästen zeigen Texte nur
@@ -782,6 +785,12 @@ Ursache zurückgeführt; danach dieselbe Prüfung auf den Unterseiten.
   Handy-Anordnung (Karten zweispaltig, Bild rechts) und die Videozeilen mit Icon über Text; beides jetzt wie oben
   beschrieben auf die PC-Anordnung gebracht, vorher ohne Speichern per eingeschleustem CSS auf der Live-Seite
   geprüft (852×393 und 932×430), dann veröffentlicht.
+- **Dritte Rückmeldung („Symbol wieder mittig und frei schwebend“, Hochformat):** Die erste Fassung zentrierte das
+  ganze Bild (dadurch stand die Platte links, der Hebel mittig) und unterband mit `transform: none` die
+  Schwebe-Animation. Jetzt Platte mittig per Versatz und Animation wieder aktiv (siehe oben). Beim Test fiel auf, dass
+  eingeschleustes CSS im `<head>` gegen das Widget-CSS im `<body>` verliert (gleiche Spezifität, beide `!important`,
+  spätere Regel gewinnt); der Test entfernt deshalb erst das vorhandene Widget-CSS. Zutrittssystem-Seite: die Platte
+  der Lottie-Animation liegt bei 52 % der Elementbreite, dort reicht die Zentrierung ohne Versatz.
 - **Unterseiten:** Kamera-Seite (4313): Footer-„Mehr“ hochkant ebenfalls außerhalb (x = −206 px), Leuchtfläche über
   einem Kartentext, Logo-Rahmen statt Video im Querformat voll breit, Textspalte „Was ohne Kameras passiert“ nicht
   mitlaufend, Türfoto 950 px hoch: dieselben Regeln mit den IDs dieser Seite; die Computer-Variante von „Stell dir mal

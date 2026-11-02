@@ -8,9 +8,11 @@ Hochformat (bis 767 px):
   1. Footer-Menü: Untermenü von „Mehr“ öffnete als Aufklappfenster links außerhalb des Bildes (SmartMenus positioniert
      es absolut mit negativem Rand). Jetzt: „Mehr“ ausgeblendet, Unterpunkte stehen fest in der Liste, Optik wie die
      Hauptpunkte (weiß, Poppins, zentriert).
-  2. „Stell dir mal vor“ (Handy-Variante): Das Bild bzw. die Animation saß absolut mit festen Versätzen und stand auf
-     breiteren Handys links; jetzt horizontal zentriert, 62 % der Breite (max. 300 px), mit festem Abstand unter den
-     Karten. Die blaue Leuchtfläche dahinter (SVG-Kreis) wird am Handy ausgeblendet.
+  2. „Stell dir mal vor“ (Handy-Variante): Das Bild bzw. die Animation saß absolut mit festen Versätzen (34/45 px für
+     375 px Breite) und stand auf breiteren Handys links; jetzt im Fluss unter den Karten, 62 % der Breite (max. 300 px),
+     per Auto-Rand zentriert und je Seite um einen Versatz verschoben, damit die Platte (nicht der Hebel) mittig steht.
+     Die Klasse „floating“ (Schwebe-Animation) bleibt wirksam, deshalb keine transform-Regel. Die blaue Leuchtfläche
+     dahinter (SVG-Kreis) wird am Handy ausgeblendet.
   3. Festes ProvenExpert-Siegel verdeckte Text am rechten Rand; am Handy nur noch 60 px breit.
 
 Querformat (Höhe bis 520 px, z. B. 932×430):
@@ -37,6 +39,9 @@ SEITEN = {
         "stelldir_desktop": "af8c629", "stelldir_mobile": "1a6dd74", "stelldir_bild": "02add21",
         "stelldir_kreis": "00282d7", "stelldir_bildspalte": "1f03386", "stelldir_heading": "00fec0c",
         "stelldir_links": "13ae847", "stelldir_rechts": "134945e",
+        # Platte und Zylinder liegen bei 23–29 % der Bildbreite (Hebel bis zum rechten Rand): Bild um 24 % seiner Breite
+        # nach rechts, damit das Symbol mittig steht (Breite 62 % der Spalte, max. 300 px → 14.9 % bzw. 72 px)
+        "stelldir_bild_versatz": "min(14.9%, 72px)", "stelldir_bild_versatz_quer": "min(24%, 62px)",
         "badge": "86d54af", "tuer": "c567c71",
     },
     4313: {  # Kamerasysteme: Logo-Rahmen statt Video; „Stell dir mal vor“ (Computer) ist eine normale Zeile, bleibt im Querformat
@@ -91,11 +96,12 @@ def handy_css(ids):
         kreis = f"  {m} {_sel(g('stelldir_kreis'))} {{ display: none !important; }}\n" if g("stelldir_kreis") else ""
         if g("stelldir_bild"):
             b = _sel(g("stelldir_bild"))
-            hoch.append(f"""  /* „Stell dir mal vor“: Bild zentriert unter den Karten */
+            versatz = g("stelldir_bild_versatz") or "0px"
+            hoch.append(f"""  /* „Stell dir mal vor“: Griff mittig unter den Karten, frei schwebend (Klasse „floating“ animiert weiter) */
   {m} {{ padding-bottom: 40px !important; }}
   {m} {b} {{
-    position: static !important; left: auto !important; right: auto !important; top: auto !important; bottom: auto !important;
-    transform: none !important; margin: 24px auto 0 !important; display: block !important; order: 99; flex: 0 0 auto !important;
+    position: relative !important; left: {versatz} !important; right: auto !important; top: auto !important; bottom: auto !important;
+    margin: 24px auto 0 !important; display: block !important; order: 99; flex: 0 0 auto !important;
     width: 62% !important; max-width: 300px !important;
   }}
   {m} {b} img, {m} {b} svg {{ width: 100% !important; height: auto !important; display: block; }}
@@ -108,8 +114,8 @@ def handy_css(ids):
             spalte = f"  {m} {_sel(g('stelldir_bildspalte'))} {{ justify-content: center !important; align-items: center !important; }}\n" if g("stelldir_bildspalte") else ""
             head = f"  {_sel(g('stelldir_heading'))} {{ padding-bottom: 14px !important; position: relative; z-index: 2; }}\n" if g("stelldir_heading") else ""
             bild = (f"""  {m} {b} {{
-    position: static !important; left: auto !important; right: auto !important; top: auto !important; bottom: auto !important;
-    transform: none !important; margin: 0 auto !important; display: block !important; flex: 0 0 auto !important;
+    position: relative !important; left: {g("stelldir_bild_versatz_quer") or "0px"} !important; right: auto !important; top: auto !important; bottom: auto !important;
+    margin: 0 auto !important; display: block !important; flex: 0 0 auto !important;
     width: 100% !important; max-width: 260px !important;
   }}
   {m} {b} img, {m} {b} svg {{ width: 100% !important; height: auto !important; display: block; }}
