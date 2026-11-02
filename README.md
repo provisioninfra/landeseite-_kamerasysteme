@@ -47,6 +47,7 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `elementor/medien.json`, `elementor/icons.json` – IDs/URLs der hochgeladenen Kamera-Medien und Icons
 - `elementor/seo.json` – SEO-Titel, Meta-Beschreibung, Fokus-Keyphrase und Vorschau-Titel der Seite (vom Composer geschrieben, in Yoast eingetragen)
 - `elementor/geo.json` – Geokoordinaten des Firmensitzes für die LocalBusiness-Strukturdaten
+- `SEO-GESAMTSEITE.md` – SEO-Audit und priorisierter Maßnahmenplan für alle Seiten der Website (02.11.2026)
 - `elementor/kamera-seite.elements.json` – Elemente + Seiteneinstellungen (Stand, der in WordPress gespeichert ist)
 - `elementor/landingpage-kamerasysteme.json` – dieselbe Seite als importierbare Elementor-Vorlage (Sicherung)
 - `tools/menue_handy.py` – Kopfleisten-Menü: CSS und Skript, damit „Mehr“ nur am Bildschirm aufklappt und das Handy-Menü
