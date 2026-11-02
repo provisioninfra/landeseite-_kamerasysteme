@@ -48,6 +48,7 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `elementor/seo.json` – SEO-Titel, Meta-Beschreibung, Fokus-Keyphrase und Vorschau-Titel der Seite (vom Composer geschrieben, in Yoast eingetragen)
 - `elementor/geo.json` – Geokoordinaten des Firmensitzes für die LocalBusiness-Strukturdaten
 - `SEO-GESAMTSEITE.md` – SEO-Audit und priorisierter Maßnahmenplan für alle Seiten der Website (02.11.2026)
+- `TRACKING-CHECK.md` – Prüfung der Meta-Pixel-Events im Tag Manager gegen die Formular-Logik, mit Korrekturanleitung (02.11.2026)
 - `tools/siegel_handy.py` – schwebendes ProvenExpert-Siegel auch auf dem Handy zeigen (Ausblendung entfernen)
 - `tools/lueneburg_wiederherstellen.py` – Lüneburg-Seite nach Überschneidung mit der Parallelsitzung wiederhergestellt (02.11.2026)
 - `tools/lottie_webp.py`, `tools/ladeverhalten.py`, `tools/unsichtbar_patch.py` – unsichtbare Ladezeit- und
