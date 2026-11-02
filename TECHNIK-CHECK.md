@@ -807,5 +807,20 @@ Ursache zurückgeführt; danach dieselbe Prüfung auf den Unterseiten.
   „Mehr“. Nachbefund dort: Die Handy-Variante ist für Tablet ausgeblendet, deshalb hatte das Ladeverhalten-Skript
   (02.11.) ihre Griff-Lottie im Querformat abgeschaltet, die Mitte blieb leer; das Widget-Skript gibt die Lottie in
   dieser Lage wieder frei (bei DOMContentLoaded nach dem Ladeverhalten-Skript, nach einer Drehung nachträglich mit
-  Elementors runReadyTrigger). Auf allen Seiten im Querformat: das Footer-Menü ist dort das waagerechte Tablet-Menü, „Mehr“ klappt wie am
+  Elementors runReadyTrigger).
+- **Geprüft nach dem Speichern (02.11., 23:40 UTC, alle fünf Seiten, Playwright mit iPhone-Profil, Lottie-Dateien aus
+  einem lokalen Zwischenspeicher, weil der Hoster Bursts mit 429 beantwortet):** Hochformat 393×852 und 430×932:
+  Footer-„Mehr“ ausgeblendet, Unterpunkte in der Liste; Griff/Zylinder-Bild der Startseite mit Plattenmitte exakt auf
+  Bildschirmmitte (197/197 px bzw. 215/215 px), Schwebe-Animation aktiv; Siegel 60 × 72 px unten rechts; keine
+  Überläufe außer den bekannten Slidern. Querformat 852×393 und 932×430: Erklärvideo links (46 %), Text rechts mit
+  Icon-links-Zeilen (kein Umbruch); „Stell dir mal vor“ mit Karten links, Griff mittig (Plattenmitte 466/466 bzw.
+  422/422 px), Karten rechts, Überschrift frei, Computer-Variante ausgeblendet; Türfoto-Abschnitt 440 px hoch statt
+  950 px, Person im Bild sichtbar, kein Überlappen mehr mit den Karten; Textspalten haften beim Scrollen auf allen
+  Seiten (Scrollmessung: Spaltenoberkante bleibt bei 16 px, bis die Karten enden; Zutrittssystem mit eigener
+  Einstellung bei 0 px). Zutrittssystem-Seite: Griff-Lottie im Querformat sichtbar und mittig, Türfoto-Abschnitt 628
+  statt 850 px. Kamera-Seite: Logo-Rahmen links, drei Punkte rechts. Unverändert und bewusst nicht angefasst: der
+  Abschnitt „Das heißt für dich“ (Karten erscheinen auch am PC erst beim Überfahren), der Tablet-Footer im Querformat
+  (waagerechtes Menü mit Aufklapp-„Mehr“ wie am PC, auf der Kamera-Seite ragt das Aufklappfenster 5 px über den
+  rechten Rand), das dekorative „V“ hinter den Texten. Speicherstände: 31 um 23:38, 4313 23:29, 4496 23:32, 4605
+  23:34, 3316 23:36 UTC; Nachbarsitzung informiert. Auf allen Seiten im Querformat: das Footer-Menü ist dort das waagerechte Tablet-Menü, „Mehr“ klappt wie am
   PC nach unten auf (nicht Teil der Rückmeldung, unverändert).
