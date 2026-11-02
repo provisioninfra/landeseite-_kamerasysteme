@@ -680,3 +680,39 @@ Einträge sichtbar sein, „Komm in unser Team“ steht überall zuletzt. Gilt f
 - **Nebenbefund Hoster:** Viele Anfragen kurz hintereinander (mehrere Browser parallel) beantwortet der Server mit 429, dann
   fehlen Stylesheets und Seiten sehen „kaputt“ aus. Prüfungen deshalb nacheinander mit Pausen; echte Besucher sind nicht
   betroffen.
+
+## Unsichtbare Änderungen auf allen Seiten (02.11.2026)
+
+Freigabe des Kunden: alles aus dem Audit (`SEO-GESAMTSEITE.md`) umsetzen, aber in der Ansicht am Endgerät darf sich
+nichts ändern. Umgesetzt wurde deshalb nur, was für Besucher unsichtbar ist, mit Vorher-Nachher-Screenshots aller
+sechs indexierbaren Seiten bei 393, 768 und 1440 px als Beleg. Alle Seiten wurden am 29.10.2026 von anderer Hand
+bearbeitet; Grundlage sind deshalb frische Exporte aus dem Editor (`elementor/sicherung-2026-11-02/`), nicht die
+Build-Skripte dieses Repos.
+
+- **Lottie-Dateien pixelidentisch verkleinert** (`tools/lottie_webp.py`): Die Kästen der Startseite (acht Dateien mit
+  je 1,18 MB) und der Zutrittssystem-Seite (sechs Dateien mit je 1,1 MB) bestehen fast nur aus eingebetteten PNG-Bildern.
+  Diese sind jetzt verlustfreies WebP (Prüfung Bild für Bild: keine abweichenden Pixel, auch unter voll transparenten
+  Flächen). Ergebnis: 15 MB auf 9,5 MB, als neue Medien hochgeladen (`elementor/lottie-uploads-2026-11-02.json`), die
+  Widgets zeigen auf die neuen Dateien. Das Hover-Skript der Kästen (Custom Code „Animation Hover“) ist unberührt.
+- **Ausgeblendete Lotties und Videos laden nicht mehr** (`tools/ladeverhalten.py`, Steuerungs-Widget je Seite): Elementor
+  lud die Desktop-Kästen auch am Handy (rund 7 MB auf der Startseite) und ausgeblendete Hintergrundvideos auf jedem
+  Gerät. Das Skript läuft vor Elementors Initialisierung, nimmt auf dem jeweils ausgeblendeten Gerät Lottie-Widgets den
+  Widget-Typ und Videos den Videolink, und stellt beides bei einer Größenänderung in eine sichtbare Breite wieder her
+  (Elementor initialisiert nach). Lazy-Load der Lotties kam nicht in Frage, weil das Hover-Skript die geladenen Grafiken
+  sofort vermisst und nur zwölf Sekunden lang wartet.
+- **Product-Schema des Bewertungssiegels:** Der Shortcode `[provenexpert]` (Code außerhalb der Seiten, mit lebendem
+  Bewertungszähler) gibt ein JSON-LD vom Typ Product mit Sternen aus. Das Steuerungs-Widget entfernt diesen Block aus
+  dem gerenderten DOM, das Google für Strukturdaten auswertet. Dauerhafte Lösung bleibt das Abschalten im Shortcode
+  oder im ProvenExpert-Konto (Handgriff des Kunden, `ANLEITUNG-WORDPRESS.md`).
+- **Eine Organisation-Kennung:** Die LocalBusiness-Blöcke nutzten `#organisation`, die Karriere-Seite `#organization`;
+  jetzt überall `#organization`, damit Google eine Entität sieht.
+- **Yoast:** Startseite neu auf „Digitale Schließanlage für Unternehmen | ProVision Infra“ mit Keyphrase „digitale
+  Schließanlage“ (Cornerstone), Zutrittssystem-Seite auf „Elektronische Schließanlage mit Service | ProVision Infra“
+  mit Keyphrase „elektronische Schließanlage“; neue Beschreibungen (`elementor/seo/`). Damit konkurrieren die beiden
+  Seiten nicht mehr um denselben Begriff. Seitentexte unverändert.
+- **Bewusst nicht geändert:** doppelte H2 aus Desktop/Handy-Varianten (nutzen die Kit-Typografie, ein Tag-Wechsel wäre
+  nicht garantiert pixelgleich, Ranking-Wirkung praktisch null); Alt-Texte (alle Bilder ohne Alt sind dekorativ:
+  Leuchtflächen, Linien, Videoposter, Icons; leerer Alt-Text ist dort korrekt); Karriere-Seite (ausgenommen);
+  Footer-Links, Telefonnummer, Texte (sichtbar, liegen beim Kunden); Tag-Manager-Verzögerung (verändert Messdaten).
+- **Nicht möglich aus dieser Sitzung:** Custom Code „Bugherd“ auf Entwurf setzen (vom Freigabesystem als Änderung
+  an gemeinsamen Ressourcen abgelehnt), Shortcode-Code, ProvenExpert-Konto, Hosting, Weiterleitungskette.

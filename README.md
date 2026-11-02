@@ -48,6 +48,10 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `elementor/seo.json` – SEO-Titel, Meta-Beschreibung, Fokus-Keyphrase und Vorschau-Titel der Seite (vom Composer geschrieben, in Yoast eingetragen)
 - `elementor/geo.json` – Geokoordinaten des Firmensitzes für die LocalBusiness-Strukturdaten
 - `SEO-GESAMTSEITE.md` – SEO-Audit und priorisierter Maßnahmenplan für alle Seiten der Website (02.11.2026)
+- `tools/lottie_webp.py`, `tools/ladeverhalten.py`, `tools/unsichtbar_patch.py` – unsichtbare Ladezeit- und
+  Strukturdaten-Änderungen für alle Seiten (02.11.2026), Zuordnung der neuen Lottie-Dateien in `elementor/lottie-uploads-2026-11-02.json`
+- `elementor/sicherung-2026-11-02/` – Exporte der sechs indexierbaren Seiten vor diesen Änderungen
+- `elementor/seo/` – Yoast-Angaben für Startseite (31) und Zutrittssystem-Seite (3316)
 - `elementor/kamera-seite.elements.json` – Elemente + Seiteneinstellungen (Stand, der in WordPress gespeichert ist)
 - `elementor/landingpage-kamerasysteme.json` – dieselbe Seite als importierbare Elementor-Vorlage (Sicherung)
 - `tools/menue_handy.py` – Kopfleisten-Menü: CSS und Skript, damit „Mehr“ nur am Bildschirm aufklappt und das Handy-Menü

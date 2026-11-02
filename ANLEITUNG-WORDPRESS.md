@@ -207,6 +207,25 @@ geht es über die Search Console: Startseite in die „URL-Prüfung“ eintragen
 
 ---
 
+## Handgriffe nach dem SEO-Audit vom 02.11.2026 (nur in deinen Konten möglich)
+
+1. **Bewertungssiegel ohne Product-Schema:** Der Shortcode `[provenexpert]` gibt ein JSON-LD vom Typ „Product“ mit
+   Sternen für das Unternehmen aus; Google wertet das als irreführende Strukturdaten. Entweder im ProvenExpert-Konto
+   das Siegel ohne „Rich Snippets“ erzeugen und den Code des Shortcodes austauschen, oder in dessen Code den Block
+   `<script type="application/ld+json">…"@type": "Product"…</script>` entfernen. Bis dahin nimmt ein Skript auf den
+   Seiten den Block aus dem gerenderten DOM; die Sterne bleiben sichtbar.
+2. **BugHerd abschalten:** Elementor → Custom Code → Eintrag „Bugherd“ → als Entwurf speichern oder löschen. Das
+   Feedback-Tool lädt sonst für alle Besucher. (Ich durfte diesen seitenweiten Eintrag nicht ändern.)
+3. **Yoast → Einstellungen → Website-Repräsentation:** „Organisation“ wählen, Name „ProVision Infra GmbH“, Logo
+   hochladen. Dann hängt Google alle Seiten an dieselbe Organisation (Kennung `#organization`, auf den Seiten bereits
+   so gesetzt).
+4. **Yoast → Einstellungen → Website-Funktionen → IndexNow** einschalten, damit Bing und KI-Suchen Änderungen sofort
+   bekommen.
+5. **Google-Unternehmensprofil** pflegen und Google-Bewertungen sammeln (Details in `SEO-GESAMTSEITE.md`).
+6. **Sichtbare Änderungen aus dem Audit, die deine Freigabe brauchen:** Footer-Zeile „Leistungen“ um Zutrittssystem und
+   eine Zeile „Einsatzgebiet“ mit den Stadtseiten ergänzen, klickbare Telefonnummer auf Start-, Zutritts- und
+   Kameraseite, Kosten-Abschnitt, Ratgeber- und Referenzseiten.
+
 ## Drei Handgriffe für dich (je eine Minute)
 
 1. **Spam-Schutz des Formulars:** Formulare → „Anfrageformular Kamerasysteme“ → Einstellungen → Formulareinstellungen →
