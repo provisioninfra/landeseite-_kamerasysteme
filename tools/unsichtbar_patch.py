@@ -46,10 +46,11 @@ for e in walk(page):
 
 # 3) Steuerungs-Widget
 widget = ladeverhalten.script_widget(f"ladeverhalten-{pathlib.Path(src).stem}")
-if any(e["id"] == widget["id"] for e in walk(page)):
+if any(e.get("widgetType") == "html" and e.get("settings", {}).get("_title") == widget["settings"]["_title"] for e in walk(page)):
     log.append("Steuerungs-Widget bereits vorhanden")
 else:
-    ziel = next((e for e in page if e.get("elType") == "container" and "Steuerung" in e.get("settings", {}).get("_title", "")), None)
+    # nur eigene Steuerungs-Container (Titel beginnt mit „Steuerung“), nicht den Container der Parallelsitzung
+    ziel = next((e for e in page if e.get("elType") == "container" and e.get("settings", {}).get("_title", "").startswith("Steuerung")), None)
     if ziel is None:
         ziel = {"id": hashlib.md5(f"steuerung-{pathlib.Path(src).stem}".encode()).hexdigest()[:7], "elType": "container", "isInner": False,
                 "elements": [], "settings": {"content_width": "full", "padding": box(0), "margin": box(0),

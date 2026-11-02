@@ -721,5 +721,12 @@ Build-Skripte dieses Repos.
   sichtbar. Markup und Stylesheets vor und nach der Speicherung sind identisch; warum der Kunde das Siegel vorher am
   Handy sah, ließ sich nicht belegen (vermutlich eine ältere Cache- oder CSS-Fassung). Lösung auf Wunsch des Kunden:
   `tools/siegel_handy.py` entfernt die Ausblendung auf den vier Seiten, das Siegel läuft am Handy unten rechts mit.
+- **Parallelsitzung „Uelzen Unterseite“ (gleicher Zugang):** Sie speicherte am 02.11. zwischen 09:44 und 09:53 Uhr auf
+  4605, 4496 und 3316 einen Container „Querformat + Hero-Video (Steuerung)“ und tauschte auf den Stadtseiten die
+  Hero-Videos (startseite-hero-tuer-desktop-2160.mp4, -handy-1440.mp4). Mein Speicherlauf überschrieb 4496 um 09:56 mit
+  einem Export von 09:20; `tools/lueneburg_wiederherstellen.py` übernahm Container und Videoeinstellungen aus dem
+  frischen 4605-Export zurück. Regel seitdem: vor jedem Speichern frisch exportieren, beide Sitzungen per Nachricht
+  abstimmen, Steuerungs-Container getrennt halten (eigene Titel beginnen mit „Steuerung“). Das Siegel wird zusätzlich im
+  Handy-Querformat (max-height 520 px) ausgeblendet, weil es dort laut Kunde Texte verdeckte; die Regel sitzt am Widget.
 - **Nicht möglich aus dieser Sitzung:** Custom Code „Bugherd“ auf Entwurf setzen (vom Freigabesystem als Änderung
   an gemeinsamen Ressourcen abgelehnt), Shortcode-Code, ProvenExpert-Konto, Hosting, Weiterleitungskette.

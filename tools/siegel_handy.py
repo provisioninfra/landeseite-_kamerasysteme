@@ -20,8 +20,15 @@ def walk(els):
 n = 0
 for e in walk(data["elements"]):
     s = e.get("settings", {})
-    if e.get("widgetType") == "html" and "pe-badge-fixed" in s.get("html", "") and s.get("_position") == "fixed" and s.get("hide_mobile"):
-        del s["hide_mobile"]; n += 1
-        print(f"Siegel-Widget {e['id']}: Handy-Ausblendung entfernt")
+    if e.get("widgetType") == "html" and "pe-badge-fixed" in s.get("html", "") and s.get("_position") == "fixed":
+        if s.get("hide_mobile"):
+            del s["hide_mobile"]; n += 1
+            print(f"Siegel-Widget {e['id']}: Handy-Ausblendung entfernt")
+        # Handy-Querformat (z. B. 956x440): dort verdeckte das Siegel Texte (Rückmeldung des Kunden an die Parallelsitzung
+        # „Uelzen Unterseite“), deshalb dieselbe Regel wie deren Container, zusätzlich direkt am Widget
+        css = s.get("custom_css") or ""
+        if "orientation: landscape" not in css:
+            s["custom_css"] = css.rstrip() + "\n\n/* Handy-Querformat: Siegel ausblenden, sonst verdeckt es Texte */\n@media (orientation: landscape) and (max-height: 520px) {\nselector { display: none; }\n}"
+            n += 1; print(f"Siegel-Widget {e['id']}: Querformat-Regel ergänzt")
 pathlib.Path(dst).write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
 print(f"{n} Widget(s) geändert")
