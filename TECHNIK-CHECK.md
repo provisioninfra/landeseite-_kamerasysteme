@@ -771,14 +771,25 @@ Ursache zurückgeführt; danach dieselbe Prüfung auf den Unterseiten.
   Karriere ausgenommen). Am Bildschirm und Tablet ändert sich nichts. Hochformat (bis 767 px): Footer-„Mehr“
   ausgeblendet, Unterpunkte fest in der Liste mit der Optik der Hauptpunkte (wie das Kopfleisten-Menü vom 27.10.);
   Griff/Zylinder-Bild zentriert unter den Karten (62 %, max. 300 px), Leuchtfläche ausgeblendet; Siegel 60 statt 80 px.
-  Querformat (Höhe bis 520 px): Video links 46 %, Text rechts; linke Textspalte neben den Karten und per
-  `position: sticky` mitlaufend; Computer-Variante von „Stell dir mal vor“ ausgeblendet, stattdessen die
-  Handy-Variante (Karten zweispaltig, Bild rechts in seiner Spalte zentriert); Türfoto-Abschnitt ohne Mindesthöhe.
+  Querformat (Höhe bis 520 px), Anordnung wie am PC: Video links 46 %, Text rechts, darin die drei Zeilen mit Icon
+  links und Text rechts (Elementor bricht sie ab Tablet um, Icon über Text); linke Textspalte neben den Karten und per
+  `position: sticky` mitlaufend; Computer-Variante von „Stell dir mal vor“ ausgeblendet (ihre Kästen zeigen Texte nur
+  beim Überfahren mit der Maus, am Touch-Gerät gäbe es sie nicht), stattdessen die Handy-Variante in PC-Anordnung:
+  Karten links, Griff und Zylinder in der Mitte (max. 260 px), Karten rechts; Türfoto-Abschnitt ohne Mindesthöhe und
+  ohne den negativen Abstand nach oben (−150 px, am PC für die Überlappung mit der Lottie-Komposition gedacht, im
+  Querformat verdeckte er die letzten Karten).
+- **Zweite Rückmeldung (Querformat „passt noch nicht wie am PC“):** Die erste Fassung zeigte im Querformat die
+  Handy-Anordnung (Karten zweispaltig, Bild rechts) und die Videozeilen mit Icon über Text; beides jetzt wie oben
+  beschrieben auf die PC-Anordnung gebracht, vorher ohne Speichern per eingeschleustem CSS auf der Live-Seite
+  geprüft (852×393 und 932×430), dann veröffentlicht.
 - **Unterseiten:** Kamera-Seite (4313): Footer-„Mehr“ hochkant ebenfalls außerhalb (x = −206 px), Leuchtfläche über
   einem Kartentext, Logo-Rahmen statt Video im Querformat voll breit, Textspalte „Was ohne Kameras passiert“ nicht
   mitlaufend, Türfoto 950 px hoch: dieselben Regeln mit den IDs dieser Seite; die Computer-Variante von „Stell dir mal
   vor“ ist dort eine normale Zeile ohne absolute Lotties und bleibt im Querformat. Lüneburg (4496) und Uelzen (4605):
   Video, Textspalte, Leuchtfläche, Siegel wie Startseite (gleiche Element-IDs für den Film-Abschnitt); ihre Menüs
   haben kein „Mehr“. Zutrittssystem (3316): fünf absolute Lotties in der Computer-Variante (Versatz −490 px im
-  Tablet-Bereich) wie auf der Startseite, Türfoto-Abschnitt mit 850 px Mindesthöhe, Footer-„Mehr“; Textspalte dort
-  bereits mit Sticky auf Tablet eingestellt.
+  Tablet-Bereich) wie auf der Startseite, dazu verrutschte Kartentexte; im Querformat deshalb die Handy-Variante in
+  PC-Anordnung (vier Karten links, Griff in der Mitte, eine Karte rechts), hochkant der Griff zentriert (stand links);
+  Türfoto-Abschnitt mit 850 px Mindesthöhe; Textspalte dort bereits mit Sticky auf Tablet eingestellt, Menü ohne
+  „Mehr“. Auf allen Seiten im Querformat: das Footer-Menü ist dort das waagerechte Tablet-Menü, „Mehr“ klappt wie am
+  PC nach unten auf (nicht Teil der Rückmeldung, unverändert).
