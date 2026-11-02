@@ -18,7 +18,9 @@ Hochformat (bis 767 px):
 Querformat (Höhe bis 520 px, z. B. 932×430):
   1. Footer-Menü ebenfalls flach (gleiche Optik wie die Hauptpunkte im Tablet-Schriftgrad).
   4. Erklärvideo-Abschnitt: Video und Text wieder nebeneinander (Video links 46 %, Text rechts), wie am PC.
-  5. „Warum immer mehr KMUs …“: linke Textspalte läuft beim Scrollen mit (position: sticky), wie am Desktop.
+  5. „Warum immer mehr KMUs …“: linke Textspalte neben den Karten und beim Scrollen mitlaufend wie am Desktop. CSS
+     position:sticky haftet auf der Seite nicht (html/body mit overflow-x: clip), deshalb wird Elementors eigene
+     Sticky-Funktion der Spalte (sticky_on) per Skript um „tablet“ ergänzt, nur auf Handys (kurze Seite bis 520 px).
   6. „Stell dir mal vor“: Die Desktop/Tablet-Variante zieht die absolut gesetzten Lotties ohne Tablet-Breite auf volle
      Breite und nach oben; sie überdecken die Überschrift. Im Querformat wird stattdessen die Handy-Variante gezeigt,
      angeordnet wie am PC: Karten links, Griff/Animation in der Mitte, Karten rechts; die Überschrift bekommt Luft.
@@ -27,7 +29,7 @@ Querformat (Höhe bis 520 px, z. B. 932×430):
      (2400×1104, cover) seitlich so stark beschneiden, dass die Person im Bild fehlte. Im Querformat keine
      Mindesthöhe mehr, das Bild zeigt wie am PC Tür und Person.
 """
-import hashlib
+import hashlib, json
 
 # Element-IDs je Seite (Elementor-Export). Schlüssel, die eine Seite nicht hat, weglassen.
 SEITEN = {
@@ -150,9 +152,9 @@ def handy_css(ids):
         par, col = _sel(g("kmu_parent")), _sel(g("kmu_sticky"))
         karten = f"  {_sel(g('kmu_cards'))} {{ --width: auto !important; width: auto !important; flex: 1 1 auto !important; min-width: 0; }}\n" if g("kmu_cards") else ""
         breite = "--width: 40% !important; width: 40% !important; flex: 0 0 40% !important; " if g("kmu_cards") else ""
-        quer.append(f"""  /* Linke Textspalte neben den Karten, läuft beim Scrollen mit */
+        quer.append(f"""  /* Linke Textspalte neben den Karten (Mitlaufen übernimmt Elementors Sticky, siehe Skript) */
   {par}, {par} > .e-con-inner {{ flex-direction: row !important; align-items: flex-start !important; }}
-  {col} {{ position: sticky !important; top: 16px !important; align-self: flex-start !important; {breite}}}
+  {col} {{ align-self: flex-start !important; {breite}}}
 {karten}""".rstrip())
     if g("tuer"):
         quer.append(f"  /* Türfoto: keine Mindesthöhe (Bild sonst seitlich beschnitten), kein negativer Abstand nach oben (würde die Karten verdecken) */\n  {_sel(g('tuer'))} {{ min-height: 0 !important; --min-height: 0 !important; margin-top: 0 !important; }}")
@@ -161,9 +163,47 @@ def handy_css(ids):
     if quer: out.append("@media (orientation: landscape) and (max-height: 520px) {\n" + "\n".join(quer) + "\n}")
     return "\n".join(out) + "\n"
 
+HANDY_SCRIPT = r"""<script id="pv-handy-sticky">
+/* 1. Handy-Querformat: Elementor behandelt es als Tablet. CSS position:sticky haftet hier nicht (Elementor/Theme clippen
+      html/body), deshalb Elementors eigene Sticky-Funktion der Textspalten (Einstellung „sticky_on“) um „tablet“
+      ergänzen – nur auf Handys (kurze Bildschirmseite bis 520 px), echte Tablets und Computer bleiben unverändert.
+      Läuft vor Elementors Initialisierung, weil das Widget am Seitenende steht.
+   2. Die Handy-Variante von „Stell dir mal vor“ ist für Tablet ausgeblendet; das Ladeverhalten-Skript schaltet deshalb
+      ihre Lottie-Animation im Querformat ab. Da das CSS die Variante dort zeigt, wird die Animation wieder freigegeben
+      (bei DOMContentLoaded, nach dem Ladeverhalten-Skript und vor Elementors Initialisierung; bei Drehung nachträglich). */
+(function () {
+  var HANDY_VARIANTEN = %s;
+  try {
+    if (Math.min(window.screen.width, window.screen.height) > 520) return;
+    var els = document.querySelectorAll('.e-con[data-settings*="sticky"]');
+    for (var i = 0; i < els.length; i++) {
+      var s = JSON.parse(els[i].getAttribute('data-settings'));
+      if (!s || !s.sticky || !Array.isArray(s.sticky_on) || s.sticky_on.indexOf('tablet') !== -1) continue;
+      s.sticky_on.push('tablet');
+      if (s.sticky_offset_tablet === undefined) s.sticky_offset_tablet = 16;
+      els[i].setAttribute('data-settings', JSON.stringify(s));
+    }
+  } catch (e) {}
+  function quer() { return window.matchMedia('(orientation: landscape) and (max-height: 520px)').matches; }
+  function lottiesFreigeben(nachtraeglich) {
+    if (!quer()) return;
+    HANDY_VARIANTEN.forEach(function (id) {
+      document.querySelectorAll('.elementor-element-' + id + ' .elementor-widget-lottie[data-widget_type="lottie-ausgeblendet.default"]').forEach(function (w) {
+        w.setAttribute('data-widget_type', 'lottie.default');
+        if (nachtraeglich) { try { window.elementorFrontend && elementorFrontend.elementsHandler.runReadyTrigger(w); } catch (e) {} }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { lottiesFreigeben(false); });
+  else lottiesFreigeben(false);
+  var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { lottiesFreigeben(true); }, 450); });
+})();
+</script>"""
+
 def style_widget(ids, id_hint="steuerung-handy-darstellung"):
     return {"id": hashlib.md5(id_hint.encode()).hexdigest()[:7], "elType": "widget", "widgetType": "html", "elements": [],
-            "isInner": False, "settings": {"html": "<style id=\"pv-handy-darstellung\">\n" + handy_css(ids) + "</style>",
+            "isInner": False, "settings": {"html": "<style id=\"pv-handy-darstellung\">\n" + handy_css(ids) + "</style>\n"
+                                                   + HANDY_SCRIPT % json.dumps([ids["stelldir_mobile"]] if ids.get("stelldir_desktop") and ids.get("stelldir_mobile") else []),
                                            "_title": "Steuerung Handy-Darstellung", "custom_css": "selector { display: none; }"}}
 
 if __name__ == "__main__":

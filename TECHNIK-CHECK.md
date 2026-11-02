@@ -775,8 +775,12 @@ Ursache zurückgeführt; danach dieselbe Prüfung auf den Unterseiten.
   reicht (so steht das Symbol mittig wie am PC); die Schwebe-Animation der Klasse „floating“ (translateY ±10 px, 3 s)
   bleibt erhalten, deshalb keine transform-Regel; Leuchtfläche ausgeblendet; Siegel 60 statt 80 px.
   Querformat (Höhe bis 520 px), Anordnung wie am PC: Video links 46 %, Text rechts, darin die drei Zeilen mit Icon
-  links und Text rechts (Elementor bricht sie ab Tablet um, Icon über Text); linke Textspalte neben den Karten und per
-  `position: sticky` mitlaufend; Computer-Variante von „Stell dir mal vor“ ausgeblendet (ihre Kästen zeigen Texte nur
+  links und Text rechts (Elementor bricht sie ab Tablet um, Icon über Text); linke Textspalte neben den Karten und
+  mitlaufend: CSS `position: sticky` haftet auf dieser Seite nicht (html und body tragen `overflow-x: clip`, Test mit
+  Scrollmessung), deshalb ergänzt ein kleines Skript im Widget Elementors eigene Sticky-Einstellung der Spalte
+  (`sticky_on`) um „tablet“, nur auf Handys (kurze Bildschirmseite bis 520 px; echte Tablets und Computer unverändert);
+  die Spalte verhält sich dann wie am PC (fest mit 16 px Abstand, bis die Karten enden); Computer-Variante von „Stell
+  dir mal vor“ ausgeblendet (ihre Kästen zeigen Texte nur
   beim Überfahren mit der Maus, am Touch-Gerät gäbe es sie nicht), stattdessen die Handy-Variante in PC-Anordnung:
   Karten links, Griff und Zylinder in der Mitte (max. 260 px), Karten rechts; Türfoto-Abschnitt ohne Mindesthöhe und
   ohne den negativen Abstand nach oben (−150 px, am PC für die Überlappung mit der Lottie-Komposition gedacht, im
@@ -800,5 +804,8 @@ Ursache zurückgeführt; danach dieselbe Prüfung auf den Unterseiten.
   Tablet-Bereich) wie auf der Startseite, dazu verrutschte Kartentexte; im Querformat deshalb die Handy-Variante in
   PC-Anordnung (vier Karten links, Griff in der Mitte, eine Karte rechts), hochkant der Griff zentriert (stand links);
   Türfoto-Abschnitt mit 850 px Mindesthöhe; Textspalte dort bereits mit Sticky auf Tablet eingestellt, Menü ohne
-  „Mehr“. Auf allen Seiten im Querformat: das Footer-Menü ist dort das waagerechte Tablet-Menü, „Mehr“ klappt wie am
+  „Mehr“. Nachbefund dort: Die Handy-Variante ist für Tablet ausgeblendet, deshalb hatte das Ladeverhalten-Skript
+  (02.11.) ihre Griff-Lottie im Querformat abgeschaltet, die Mitte blieb leer; das Widget-Skript gibt die Lottie in
+  dieser Lage wieder frei (bei DOMContentLoaded nach dem Ladeverhalten-Skript, nach einer Drehung nachträglich mit
+  Elementors runReadyTrigger). Auf allen Seiten im Querformat: das Footer-Menü ist dort das waagerechte Tablet-Menü, „Mehr“ klappt wie am
   PC nach unten auf (nicht Teil der Rückmeldung, unverändert).
