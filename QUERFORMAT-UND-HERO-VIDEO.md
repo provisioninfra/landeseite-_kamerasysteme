@@ -138,6 +138,14 @@ anderen Sitzung vorher nennen, Steuer-Container getrennt halten (ihre Titel begi
 Sichtbarer Text aller geänderten Seiten vor/nach identisch (Vergleich des gerenderten HTML), je Seite genau zwei neue
 Elemente (Container + Widget).
 
+## Nachtrag 02.11.2026, 13:23–13:32 Uhr: Kundenstimme
+
+Kundenwunsch: In der Kundenstimmen-Karte „Pia-Theresa“ (image-box `426f36df`) lautet die Unterzeile jetzt
+„Geschäftsführerin, Digitale Hanseaten“ (vorher „Geschäftsführerin“ mit angehängtem Leerzeichen ohne Breite). Geändert
+auf Startseite (31), /kamerasysteme/ (4313), /lueneburg/ (4496) und /uelzen/ (4605) – die übrigen Seiten enthalten die
+Karte nicht. Je Seite frischer Export, genau diese eine Einstellung geändert, danach Vergleich des gerenderten HTML:
+Elementanzahl gleich, Textdiff nur diese Stelle. Mit der Parallelsitzung vorher und nachher abgestimmt.
+
 ## Nicht geändert, zur Entscheidung
 
 - Siegel-Überlappung auf iPad und Desktop (rechter Spaltenrand): bestehendes Design.
