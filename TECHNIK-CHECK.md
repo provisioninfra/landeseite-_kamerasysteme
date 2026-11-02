@@ -714,5 +714,12 @@ Build-Skripte dieses Repos.
   nicht garantiert pixelgleich, Ranking-Wirkung praktisch null); Alt-Texte (alle Bilder ohne Alt sind dekorativ:
   Leuchtflächen, Linien, Videoposter, Icons; leerer Alt-Text ist dort korrekt); Karriere-Seite (ausgenommen);
   Footer-Links, Telefonnummer, Texte (sichtbar, liegen beim Kunden); Tag-Manager-Verzögerung (verändert Messdaten).
+- **Schwebendes ProvenExpert-Siegel am Handy (Rückmeldung des Kunden nach der Veröffentlichung):** Das Siegel unten
+  rechts ist ein HTML-Widget mit Elementors fester Positionierung. Auf Start-, Kamera- und beiden Stadtseiten trug es
+  „auf Handy ausblenden“ (nachweislich schon in der Sicherung vom 26.10. und in allen Exporten), besaß aber eigene
+  Handy-Werte (Abstand 5 px, Bild 80 px); auf der Zutrittssystem-Seite fehlt die Ausblendung, dort war es am Handy
+  sichtbar. Markup und Stylesheets vor und nach der Speicherung sind identisch; warum der Kunde das Siegel vorher am
+  Handy sah, ließ sich nicht belegen (vermutlich eine ältere Cache- oder CSS-Fassung). Lösung auf Wunsch des Kunden:
+  `tools/siegel_handy.py` entfernt die Ausblendung auf den vier Seiten, das Siegel läuft am Handy unten rechts mit.
 - **Nicht möglich aus dieser Sitzung:** Custom Code „Bugherd“ auf Entwurf setzen (vom Freigabesystem als Änderung
   an gemeinsamen Ressourcen abgelehnt), Shortcode-Code, ProvenExpert-Konto, Hosting, Weiterleitungskette.
