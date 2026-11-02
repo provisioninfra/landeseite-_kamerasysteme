@@ -1,0 +1,79 @@
+<!-- ProVision Infra: Handy-Querformat (feste Überlagerungen) und Hero-Hintergrundvideos (einmal abspielen, beim Zurückscrollen erneut, Nachstart bei blockiertem Autoplay). Gilt seitenweit, Kamera-Seite (4313) hat eigene Videosteuerung. Stand 02.11.2026 -->
+<style id="pv-querformat">
+/* Handy im Querformat: wenig Höhe, feste Elemente verdecken sonst Text. Nur Viewports bis 520 px Höhe im Querformat. */
+@media (orientation: landscape) and (max-height: 520px) {
+  #pe-badge-fixed { display: none !important; }          /* festes ProvenExpert-Siegel unten rechts; Siegel bleibt in Hero und Footer sichtbar */
+  .brlbs-cmpnt-widget { transform: scale(.62); transform-origin: bottom left; }  /* Cookie-Symbol unten links kleiner */
+}
+</style>
+<script id="pv-hero-video">
+(function () {
+  if (document.body.classList.contains('elementor-editor-active')) return;
+  if (document.body.classList.contains('page-id-4313')) return; // Kamera-Seite: eigene Steuerung im Seitenende
+  var SEL = 'video.elementor-background-video-hosted';
+  function sichtbar(el) { return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length); }
+  function fragment(video) { // Ausschnitt #t=start,end aus der Videoquelle (Elementor: Start-/Endzeit)
+    var m = /#t=([\d.]*)(?:,([\d.]+))?/.exec(video.currentSrc || video.src || video.getAttribute('src') || '');
+    return { start: m && m[1] ? parseFloat(m[1]) : 0, end: m && m[2] ? parseFloat(m[2]) : null };
+  }
+  function durchgelaufen(video) {
+    var f = fragment(video);
+    return f.end ? video.currentTime >= f.end - 0.1 : video.ended;
+  }
+  function abspielen(video) { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
+
+  // 1) Verstecktes Video nicht laden (z. B. Handy-Block am Computer, Computer-Hero am Handy): Elementor setzt die
+  //    Quelle erst später; ohne autoplay und mit preload=none bleibt der Download aus, bis der Block sichtbar wird.
+  function ladeSteuerung() {
+    document.querySelectorAll(SEL).forEach(function (video) {
+      var c = video.closest('.elementor-background-video-container'); if (!c) return;
+      if (!sichtbar(c)) {
+        if (!video.__pvGebremst) { video.__pvGebremst = true; video.removeAttribute('autoplay'); video.preload = 'none'; }
+        if (!video.paused) video.pause();
+      } else if (video.__pvGebremst) {
+        video.__pvGebremst = false; video.preload = 'auto'; video.setAttribute('autoplay', '');
+        if (video.getAttribute('src')) { try { video.load(); } catch (e) {} abspielen(video); }
+      }
+    });
+  }
+
+  // 2) Einmal abspielen, letztes Bild stehen lassen, nach Verlassen und Zurückkehren des Bereichs erneut abspielen
+  function steuern(video) {
+    if (video.__pvGesteuert) return; video.__pvGesteuert = true;
+    var container = video.closest('.elementor-background-video-container');
+    var bereich = (container && container.closest('.elementor-element')) || container || video;
+    var warAusserhalb = false;
+    video.loop = false;
+    video.addEventListener('ended', function () { setTimeout(function () { video.style.display = ''; }, 0); }); // Elementor blendet nach dem Ende aus
+    video.addEventListener('timeupdate', function () { var f = fragment(video); if (f.end && !video.paused && video.currentTime >= f.end - 0.05) video.pause(); });
+    if (!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (eintraege) {
+      eintraege.forEach(function (e) {
+        if (!e.isIntersecting) { warAusserhalb = true; return; }
+        if (!warAusserhalb) return;
+        warAusserhalb = false;
+        if (!container || !sichtbar(container) || !video.getAttribute('src')) return;
+        video.style.display = '';
+        try { video.currentTime = fragment(video).start || 0; } catch (err) {}
+        abspielen(video);
+      });
+    }, { threshold: 0 }).observe(bereich);
+  }
+
+  // 3) Hat das Gerät den automatischen Start unterbunden (z. B. Stromsparmodus), bei der ersten Berührung starten
+  function nachstarten() {
+    document.querySelectorAll(SEL).forEach(function (video) {
+      var c = video.closest('.elementor-background-video-container');
+      if (!c || !sichtbar(c) || !video.paused || !video.getAttribute('src') || durchgelaufen(video)) return;
+      abspielen(video);
+    });
+  }
+  ['touchend', 'click', 'keydown'].forEach(function (ev) { document.addEventListener(ev, nachstarten, { passive: true, capture: true }); });
+
+  function start() { ladeSteuerung(); document.querySelectorAll(SEL).forEach(steuern); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+  window.addEventListener('load', function () { setTimeout(start, 800); }); // Elementor bindet Hintergrundvideos erst nach dem Laden seiner Skripte an
+  window.addEventListener('resize', function () { clearTimeout(window.__pvResize); window.__pvResize = setTimeout(ladeSteuerung, 250); });
+  window.addEventListener('orientationchange', function () { setTimeout(ladeSteuerung, 400); });
+})();
+</script>
