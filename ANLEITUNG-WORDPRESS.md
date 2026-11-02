@@ -236,6 +236,15 @@ geht es über die Search Console: Startseite in die „URL-Prüfung“ eintragen
 
 ---
 
+## Handy-Darstellung (02.11.2026): ein Element, das bleiben muss
+
+Ganz unten auf Startseite, Kamera-Seite, Lüneburg, Uelzen und Zutrittssystem liegt im Steuerungs-Abschnitt ein
+unsichtbares HTML-Element „Steuerung Handy-Darstellung“. Es enthält nur Gestaltungsregeln für Smartphones (Footer-„Mehr“
+flach, Griff/Zylinder mittig, Video links und Text rechts im Querformat, mitlaufende Textspalte, Türfoto ohne Beschnitt,
+kleineres Siegel). Am Bildschirm und Tablet wirkt es nicht. Bitte nicht löschen und nicht verschieben; wer einen der
+betroffenen Abschnitte duplizierst oder neu anlegt, bekommt neue Element-IDs, dann greifen die Regeln dort nicht mehr
+(Rückmeldung genügt, die ID-Tabelle in `tools/handy_darstellung.py` wird dann ergänzt).
+
 ## Nach der Veröffentlichung: Kurzer Check
 
 - Seite im **privaten Browserfenster** öffnen: Wird alles angezeigt, läuft das Video?

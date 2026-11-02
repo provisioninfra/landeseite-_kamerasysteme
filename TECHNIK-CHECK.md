@@ -741,3 +741,44 @@ Build-Skripte dieses Repos.
   CSS ausgeblendet (Skripte laufen weiter).
 - **Nicht möglich aus dieser Sitzung:** Custom Code „Bugherd“ auf Entwurf setzen (vom Freigabesystem als Änderung
   an gemeinsamen Ressourcen abgelehnt), Shortcode-Code, ProvenExpert-Konto, Hosting, Weiterleitungskette.
+
+## Handy-Darstellung: sechs Punkte des Kunden (02.11.2026)
+
+Rückmeldung mit sechs Screenshots vom iPhone (393 × 852 px, hochkant und quer): 1. Animation nicht mittig, 2. Schrift
+abgeschnitten, 3. Video zu groß (soll wie am PC links stehen, rechts die Texte), 4. die Schrift läuft im Querformat
+nicht mit, 5. Bild nicht passend skaliert, 6. „Mehr“ wird hochkant links angezeigt. Alle sechs Punkte auf der
+Startseite nachgestellt (Playwright, iPhone-Profil, 393/430 px hochkant, 852×393 und 932×430 quer) und auf die
+Ursache zurückgeführt; danach dieselbe Prüfung auf den Unterseiten.
+
+- **Ursachen auf der Startseite:**
+  1. „Stell dir mal vor“, Handy-Variante: Das Bild mit Griff und Zylinder (ein PNG, 1875 × 2445) ist absolut
+     positioniert mit festen Versätzen für 375 px Breite; auf breiteren Handys steht es links. Die blaue Leuchtfläche
+     dahinter (SVG-Kreis, Mittelpunkt links außerhalb) rutscht mit.
+  2. „Stell dir mal vor“, Computer-Variante im Querformat: Querformat-Handys fallen in Elementors Tablet-Bereich
+     (768–1024 px). Die acht Lottie-Kästen sind absolut positioniert mit Tablet-Versatz −490 px und ohne Tablet-Breite,
+     dehnen sich auf volle Breite und verdecken die Überschrift „Stell dir mal vor …“.
+  3. Erklärvideo: Die Zeile Video/Text steht ab Tablet untereinander, das Video wird 778 px breit.
+  4. „Warum immer mehr KMUs …“: Der Sticky-Effekt der linken Spalte ist nur für Computer eingeschaltet
+     (sticky_on ohne Tablet), im Querformat scrollt der Text weg.
+  5. Abschnitt mit Türfoto („Und genau das wird möglich …“): Mindesthöhe 950 px gilt auch im Querformat; das
+     Hintergrundbild (2400 × 1104, cover) wird seitlich so stark beschnitten, dass die Person im Bild fehlt.
+  6. Footer-Menü: „Mehr“ ist dort ein senkrechtes Menü ohne Aufklapp-Modus; SmartMenus öffnet die Unterliste als
+     absolut positioniertes Fenster mit negativem Rand (x = −206 px), also links außerhalb des Bildes.
+  Dazu verdeckte das schwebende ProvenExpert-Siegel (80 px) am rechten Rand Überschriften („… mit Pro[Siegel]“).
+- **Lösung (`tools/handy_darstellung.py`, eingesetzt mit `tools/handy_patch.py`):** Ein HTML-Widget „Steuerung
+  Handy-Darstellung“ mit reinem CSS im eigenen Steuerungs-Container jeder Seite, Regeln an Element-IDs gebunden, je
+  Seite aus einer ID-Tabelle erzeugt (Startseite 31, Kamera 4313, Lüneburg 4496, Uelzen 4605, Zutrittssystem 3316;
+  Karriere ausgenommen). Am Bildschirm und Tablet ändert sich nichts. Hochformat (bis 767 px): Footer-„Mehr“
+  ausgeblendet, Unterpunkte fest in der Liste mit der Optik der Hauptpunkte (wie das Kopfleisten-Menü vom 27.10.);
+  Griff/Zylinder-Bild zentriert unter den Karten (62 %, max. 300 px), Leuchtfläche ausgeblendet; Siegel 60 statt 80 px.
+  Querformat (Höhe bis 520 px): Video links 46 %, Text rechts; linke Textspalte neben den Karten und per
+  `position: sticky` mitlaufend; Computer-Variante von „Stell dir mal vor“ ausgeblendet, stattdessen die
+  Handy-Variante (Karten zweispaltig, Bild rechts in seiner Spalte zentriert); Türfoto-Abschnitt ohne Mindesthöhe.
+- **Unterseiten:** Kamera-Seite (4313): Footer-„Mehr“ hochkant ebenfalls außerhalb (x = −206 px), Leuchtfläche über
+  einem Kartentext, Logo-Rahmen statt Video im Querformat voll breit, Textspalte „Was ohne Kameras passiert“ nicht
+  mitlaufend, Türfoto 950 px hoch: dieselben Regeln mit den IDs dieser Seite; die Computer-Variante von „Stell dir mal
+  vor“ ist dort eine normale Zeile ohne absolute Lotties und bleibt im Querformat. Lüneburg (4496) und Uelzen (4605):
+  Video, Textspalte, Leuchtfläche, Siegel wie Startseite (gleiche Element-IDs für den Film-Abschnitt); ihre Menüs
+  haben kein „Mehr“. Zutrittssystem (3316): fünf absolute Lotties in der Computer-Variante (Versatz −490 px im
+  Tablet-Bereich) wie auf der Startseite, Türfoto-Abschnitt mit 850 px Mindesthöhe, Footer-„Mehr“; Textspalte dort
+  bereits mit Sticky auf Tablet eingestellt.

@@ -1,0 +1,144 @@
+"""Darstellung am Smartphone (Hoch- und Querformat), Rückmeldung des Kunden vom 02.11.2026.
+
+Sechs Punkte, als CSS in einem HTML-Widget am Seitenende (Container „Steuerung …“, Widget-Titel
+„Steuerung Handy-Darstellung“). Die Regeln sind an Element-IDs gebunden und werden je Seite aus der ID-Tabelle
+SEITEN erzeugt; fehlt ein Block auf einer Seite, entfällt die Regel.
+
+Hochformat (bis 767 px):
+  1. Footer-Menü: Untermenü von „Mehr“ öffnete als Aufklappfenster links außerhalb des Bildes (SmartMenus positioniert
+     es absolut mit negativem Rand). Jetzt: „Mehr“ ausgeblendet, Unterpunkte stehen fest in der Liste, Optik wie die
+     Hauptpunkte (weiß, Poppins, zentriert).
+  2. „Stell dir mal vor“ (Handy-Variante): Das Bild bzw. die Animation saß absolut mit festen Versätzen und stand auf
+     breiteren Handys links; jetzt horizontal zentriert, 62 % der Breite (max. 300 px), mit festem Abstand unter den
+     Karten. Die blaue Leuchtfläche dahinter (SVG-Kreis) wird am Handy ausgeblendet.
+  3. Festes ProvenExpert-Siegel verdeckte Text am rechten Rand; am Handy nur noch 60 px breit.
+
+Querformat (Höhe bis 520 px, z. B. 932×430):
+  1. Footer-Menü ebenfalls flach (gleiche Optik wie die Hauptpunkte im Tablet-Schriftgrad).
+  4. Erklärvideo-Abschnitt: Video und Text wieder nebeneinander (Video links 46 %, Text rechts), wie am PC.
+  5. „Warum immer mehr KMUs …“: linke Textspalte läuft beim Scrollen mit (position: sticky), wie am Desktop.
+  6. „Stell dir mal vor“: Die Desktop/Tablet-Variante zieht die absolut gesetzten Lotties ohne Tablet-Breite auf volle
+     Breite und nach oben; sie überdecken die Überschrift. Im Querformat wird stattdessen die Handy-Variante gezeigt
+     (Karten in zwei Spalten, Bild rechts in der Mitte seiner Spalte); die Überschrift bekommt Luft nach unten.
+  7. Abschnitt mit dem Türfoto („Und genau das wird möglich …“): Mindesthöhe 950 px ließ das Hintergrundbild
+     (2400×1104, cover) seitlich so stark beschneiden, dass die Person im Bild fehlte. Im Querformat keine
+     Mindesthöhe mehr, das Bild zeigt wie am PC Tür und Person.
+"""
+import hashlib
+
+# Element-IDs je Seite (Elementor-Export). Schlüssel, die eine Seite nicht hat, weglassen.
+SEITEN = {
+    31: {  # Startseite
+        "footer_nav": ["59b27e3"],
+        "video_row": "7dfcfda", "video_col": "0a52747", "video_text": "478e545",
+        "kmu_parent": "f86d566", "kmu_sticky": "8c98faa",
+        "stelldir_desktop": "af8c629", "stelldir_mobile": "1a6dd74", "stelldir_bild": "02add21",
+        "stelldir_kreis": "00282d7", "stelldir_bildspalte": "1f03386", "stelldir_heading": "00fec0c",
+        "badge": "86d54af", "tuer": "c567c71",
+    },
+    4313: {  # Kamerasysteme: Logo-Rahmen statt Video; „Stell dir mal vor“ (Computer) ist eine normale Zeile, bleibt im Querformat
+        "footer_nav": ["59b27e3"],
+        "video_row": "29f65fd", "video_col": "a80975c", "video_text": "44c75f4",
+        "kmu_parent": "74b6d54", "kmu_sticky": "43e5085", "kmu_cards": "94cb6e5",
+        "stelldir_mobile": "57840b0", "stelldir_kreis": "039908a",
+        "badge": "86d54af", "tuer": "2419932",
+    },
+    4496: {  # Lüneburg (Kopie der Startseite mit Kamera-Lottie)
+        "footer_nav": ["59b27e3"],
+        "video_row": "7dfcfda", "video_col": "0a52747", "video_text": "478e545",
+        "kmu_parent": "4a79ecb", "kmu_sticky": "3e06cb6", "kmu_cards": "c407c9d",
+        "stelldir_mobile": "7dfd9f6", "stelldir_kreis": "a191679",
+        "badge": "86d54af",
+    },
+    3316: {  # Zutrittssystem: eigenes Design, fünf absolute Lotties in der Computer-Variante
+        "footer_nav": ["333801ae"],
+        "stelldir_desktop": "cb32d04", "stelldir_mobile": "364cd94", "stelldir_bild": "8df30cf",
+        "stelldir_kreis": "70a288e", "stelldir_bildspalte": "3bb5900", "stelldir_heading": "23eaae5d",
+        "badge": "6c473b9", "tuer": "1ef97f25",
+    },
+}
+SEITEN[4605] = dict(SEITEN[4496])  # Uelzen: gleiche Struktur wie Lüneburg
+
+def _sel(ids):
+    return ", ".join(f".elementor-element-{i}" for i in ([ids] if isinstance(ids, str) else ids))
+
+def handy_css(ids):
+    g = ids.get
+    hoch, quer = [], []
+    if g("footer_nav"):
+        nav = _sel(g("footer_nav"))
+        for ziel, fs in ((hoch, "14.08px"), (quer, "15.04px")):
+            ziel.append(f"""  /* Footer-Menü: „Mehr“ flach, Unterpunkte wie Hauptpunkte */
+  {nav} nav.elementor-nav-menu--main li.menu-item-has-children > a.has-submenu {{ display: none !important; }}
+  {nav} nav.elementor-nav-menu--main ul.sub-menu {{
+    display: flex !important; flex-direction: column; align-items: center; position: static !important;
+    margin: 0 !important; padding: 0 !important; width: auto !important; min-width: 0 !important; max-width: none !important;
+    background: transparent !important; box-shadow: none !important; border: 0 !important;
+  }}
+  {nav} nav.elementor-nav-menu--main ul.sub-menu a.elementor-sub-item {{
+    color: #fff !important; background: transparent !important; font-family: "Poppins", sans-serif !important;
+    font-weight: 400 !important; font-size: {fs} !important; line-height: 1.44 !important; padding: 6px 5px !important;
+    text-align: center !important; border-inline-start: 0 !important;
+  }}""")
+    if g("stelldir_mobile"):
+        m = _sel(g("stelldir_mobile"))
+        kreis = f"  {m} {_sel(g('stelldir_kreis'))} {{ display: none !important; }}\n" if g("stelldir_kreis") else ""
+        if g("stelldir_bild"):
+            b = _sel(g("stelldir_bild"))
+            hoch.append(f"""  /* „Stell dir mal vor“: Bild zentriert unter den Karten */
+  {m} {{ padding-bottom: 40px !important; }}
+  {m} {b} {{
+    position: static !important; left: auto !important; right: auto !important; top: auto !important; bottom: auto !important;
+    transform: none !important; margin: 24px auto 0 !important; display: block !important; order: 99; flex: 0 0 auto !important;
+    width: 62% !important; max-width: 300px !important;
+  }}
+  {m} {b} img, {m} {b} svg {{ width: 100% !important; height: auto !important; display: block; }}
+{kreis}""".rstrip())
+        elif kreis:
+            hoch.append("  /* „Stell dir mal vor“: versetzte Leuchtfläche ausblenden */\n" + kreis.rstrip())
+        if g("stelldir_desktop"):
+            # Querformat: Desktop-Variante (absolute Lotties) ausblenden, Handy-Variante zeigen
+            b = _sel(g("stelldir_bild")) if g("stelldir_bild") else None
+            spalte = f"  {m} {_sel(g('stelldir_bildspalte'))} {{ justify-content: center !important; align-items: center !important; }}\n" if g("stelldir_bildspalte") else ""
+            head = f"  {_sel(g('stelldir_heading'))} {{ padding-bottom: 14px !important; position: relative; z-index: 2; }}\n" if g("stelldir_heading") else ""
+            bild = (f"""  {m} {b} {{
+    position: static !important; left: auto !important; right: auto !important; top: auto !important; bottom: auto !important;
+    transform: none !important; margin: 0 auto !important; display: block !important; flex: 0 0 auto !important;
+    width: 100% !important; max-width: 240px !important;
+  }}
+  {m} {b} img, {m} {b} svg {{ width: 100% !important; height: auto !important; display: block; }}
+""" if b else "")
+            quer.append(f"""  /* „Stell dir mal vor“: Handy-Variante statt der absoluten Desktop-Komposition */
+  {_sel(g('stelldir_desktop'))} {{ display: none !important; }}
+  {m} {{ display: flex !important; min-height: 0 !important; padding-bottom: 30px !important; }}
+{spalte}{bild}{kreis}{head}""".rstrip())
+    if g("badge"):
+        hoch.append(f"  /* Siegel kleiner, damit weniger Text verdeckt wird */\n  {_sel(g('badge'))} img {{ max-width: 60px !important; }}")
+    if g("video_row"):
+        quer.append(f"""  /* Erklärvideo links, Text rechts */
+  {_sel(g('video_row'))} {{ flex-direction: row !important; align-items: flex-start !important; gap: 20px; }}
+  {_sel(g('video_col'))} {{ --width: 46% !important; width: 46% !important; flex: 0 0 46% !important; }}
+  {_sel(g('video_text'))} {{ --width: 52% !important; width: 52% !important; flex: 1 1 auto !important; }}""")
+    if g("kmu_sticky"):
+        par, col = _sel(g("kmu_parent")), _sel(g("kmu_sticky"))
+        karten = f"  {_sel(g('kmu_cards'))} {{ --width: auto !important; width: auto !important; flex: 1 1 auto !important; min-width: 0; }}\n" if g("kmu_cards") else ""
+        breite = "--width: 40% !important; width: 40% !important; flex: 0 0 40% !important; " if g("kmu_cards") else ""
+        quer.append(f"""  /* Linke Textspalte neben den Karten, läuft beim Scrollen mit */
+  {par}, {par} > .e-con-inner {{ flex-direction: row !important; align-items: flex-start !important; }}
+  {col} {{ position: sticky !important; top: 16px !important; align-self: flex-start !important; {breite}}}
+{karten}""".rstrip())
+    if g("tuer"):
+        quer.append(f"  /* Türfoto: keine Mindesthöhe, damit das Bild nicht seitlich beschnitten wird */\n  {_sel(g('tuer'))} {{ min-height: 0 !important; --min-height: 0 !important; }}")
+    out = ["/* Handy-Darstellung (ProVision Infra), erzeugt aus tools/handy_darstellung.py */"]
+    if hoch: out.append("@media (max-width: 767px) {\n" + "\n".join(hoch) + "\n}")
+    if quer: out.append("@media (orientation: landscape) and (max-height: 520px) {\n" + "\n".join(quer) + "\n}")
+    return "\n".join(out) + "\n"
+
+def style_widget(ids, id_hint="steuerung-handy-darstellung"):
+    return {"id": hashlib.md5(id_hint.encode()).hexdigest()[:7], "elType": "widget", "widgetType": "html", "elements": [],
+            "isInner": False, "settings": {"html": "<style id=\"pv-handy-darstellung\">\n" + handy_css(ids) + "</style>",
+                                           "_title": "Steuerung Handy-Darstellung", "custom_css": "selector { display: none; }"}}
+
+if __name__ == "__main__":
+    import sys
+    print(handy_css(SEITEN[int(sys.argv[1]) if len(sys.argv) > 1 else 31]))
