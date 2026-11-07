@@ -865,6 +865,29 @@ eines frischen Exports vor (jede Stelle genau einmal vorhanden, sonst bricht das
   mit Ladeprüfung auf die Hero-Überschrift und 60-s-Pausen wiederholt. Nachbarsitzung über beide Speicherungen
   informiert.
 
+## Kamera-Seite: gleiches Prinzip im Hero (07.11.2026)
+
+Auftrag des Kunden mit dem Bildschirmfoto der Startseite: auf `/kamerasysteme/` (ID 4313) dieselben zwei Handgriffe
+wie auf der Startseite, nur das Nötige, auf allen Geräteklassen verträglich. Die Kamera-Seite ist eine Kopie der
+Startseite mit denselben Element-IDs, deshalb reicht `tools/hero_text.py` mit dem Seitenargument 4313 (Absatztexte je
+Seite in `TEXTE`; Aufruf für die Startseite unverändert). Frischer Export unmittelbar vor dem Speichern (seit dem
+Export um 17:20 UTC unverändert), gespeichert 18:50 UTC, Parallelsitzung vorher und nachher informiert.
+
+- **Abstand:** Überschrift 9dcea29, Innenabstand unten am Handy 10 → 18 px; Computer 35/15, Tablet und Querformat 20 px
+  unverändert.
+- **Absatz:** zweiter Teil der Unterzeile e429076 jetzt „ProVision Infra plant und installiert Kamera- und
+  Videoüberwachung für Unternehmen: Du siehst per App jederzeit, was auf deinem Gelände passiert – und hast im
+  Ernstfall Aufnahmen, die etwas beweisen.“ (28 statt 33 Wörter, Aussage, Kernbegriffe und Du-Ansprache erhalten) in
+  einem span mit font-weight 700; erster Satz „Ein einziger Einbruch kostet dich …“ unverändert. Export-Vergleich: nur
+  diese zwei Einstellungen, alle 346 Elemente und Seiteneinstellungen sonst identisch.
+- **Geprüft (Vorher/Nachher in neun Größen: 1920, 1440, 1280, 1024, 768 px, Handy 393 und 430 px, Querformat 852×393
+  und 932×430, öffentliche Seite):** Abstand Überschrift → Unterzeile am Handy 10 → 18 px, auf Computer (55/15/20 px),
+  Tablet (20 px) und im Querformat (20 px) unverändert; die Unterzeile braucht überall dieselbe Höhe wie vorher
+  (Handy 154 px, Querformat 101 px, Tablet 81/122 px, Computer 118/105/123 px), also dieselbe Zeilenzahl; der zweite
+  Absatz steht überall mit Schriftgewicht 700, Schriftgrößen je Gerät unverändert (18/16/15/13/12 px). Bildschirmfotos
+  393 px hochkant und 852×393 quer gesichtet: Überschrift, Unterzeile, fetter Absatz und Button sauber untereinander,
+  kein Überlauf.
+
 ## Unterseite „Videoüberwachung für Schlachthöfe“ (07.11.2026)
 
 Auftrag: eine Unterseite zur Kamerapflicht in Schlachthöfen nach dem neuen Gesetz der Bundesregierung, für
