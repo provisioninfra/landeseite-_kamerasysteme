@@ -82,9 +82,16 @@ Yoast (Block-Editor, Metabox-Felder geprüft):
 Prüfung nach dem Speichern (gerendertes HTML vorher/nachher): Elementanzahl 346 = 346, Textdiff nur die genannten
 Stellen, 2.178 Wörter, FAQPage mit 17 Fragen, Service-Schema gültig, Titel/Description/OG wie oben.
 
-## 5. Search Console
+## 5. Search Console (07.11.2026, 17:30–17:45 UTC)
 
-(wird nach der Indexierungsanforderung ergänzt)
+- URL-Prüfung vorher: „URL ist Google nicht bekannt“, keine verweisende Sitemap gemeldet (Google hatte die Sitemap
+  zuletzt am 07.11. gelesen; `sitemap_index.xml` mit 22 erkannten Seiten, Status „Erfolgreich“).
+- Live-Test: „URL ist für Google verfügbar – Seite kann indexiert werden“, Video erkannt, Navigationspfade 1 gültiges
+  Element.
+- Indexierung beantragt: „URL wurde einer bevorzugten Crawling-Warteschlange hinzugefügt.“ Ein erster Versuch endete
+  mit „Hoppla. Ein Fehler ist aufgetreten“; nach dem Live-Test klappte der Antrag aus der Live-Test-Ansicht.
+- Nächste Prüfung: in 1–2 Wochen URL-Prüfung wiederholen (Status „URL ist auf Google“), danach Leistungsbericht nach
+  „Schlachthof“ filtern.
 
 ## 6. Ehrliche Einordnung „Platz 1 deutschlandweit“
 
