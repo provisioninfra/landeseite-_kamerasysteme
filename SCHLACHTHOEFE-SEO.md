@@ -82,6 +82,18 @@ Yoast (Block-Editor, Metabox-Felder geprüft):
 Prüfung nach dem Speichern (gerendertes HTML vorher/nachher): Elementanzahl 346 = 346, Textdiff nur die genannten
 Stellen, 2.178 Wörter, FAQPage mit 17 Fragen, Service-Schema gültig, Titel/Description/OG wie oben.
 
+### 4a. Straffung (07.11.2026, 18:50 UTC)
+
+Die Parallelsitzung wies nach meiner ersten Speicherung darauf hin, dass der Kunde ihr am selben Tag aufgetragen hatte,
+die Texte der Seite deutlich zu kürzen. Meine Ergänzungen wurden deshalb gestrafft
+(`tools/schlachthoefe_seo_transform2_kuerzung.mjs`, frischer Export): Einleitungssätze knapper („Betroffen sind
+bundesweit Schlachtbetriebe …“, „§ 4d TierSchG … Kameraüberwachung entlang …“), Quellenangabe als
+„Quelle: Bundestag, Drucksache 21/8974“, die fünf neuen FAQ-Antworten auf je zwei Sätze. Wortzahl der Seite:
+1.899 vor meinem Eingriff, 2.178 nach der ersten Fassung, 2.165 nach der Straffung; davon liegen rund 190 Wörter in den
+eingeklappten FAQ-Antworten, rund 35 im NAP-Block. Hero, Türfoto-Container 2419932 und „Stell dir mal vor“ blieben
+unverändert; kein eigener FAQPage-Knoten (das EA-Akkordeon liefert ihn). Falls der Kunde auch die FAQ kürzer will,
+können die fünf Einträge ohne weitere Nebenwirkungen entfernt werden.
+
 ## 5. Search Console (07.11.2026, 17:30–17:45 UTC)
 
 - URL-Prüfung vorher: „URL ist Google nicht bekannt“, keine verweisende Sitemap gemeldet (Google hatte die Sitemap
