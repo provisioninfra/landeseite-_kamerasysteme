@@ -824,3 +824,18 @@ Ursache zurückgeführt; danach dieselbe Prüfung auf den Unterseiten.
   rechten Rand), das dekorative „V“ hinter den Texten. Speicherstände: 31 um 23:38, 4313 23:29, 4496 23:32, 4605
   23:34, 3316 23:36 UTC; Nachbarsitzung informiert. Auf allen Seiten im Querformat: das Footer-Menü ist dort das waagerechte Tablet-Menü, „Mehr“ klappt wie am
   PC nach unten auf (nicht Teil der Rückmeldung, unverändert).
+
+## Startseiten-Hero: Abstand und fetter Absatz (07.11.2026)
+
+Rückmeldung des Kunden am Handy: unter der Überschrift etwas mehr Platz, der zweite Absatz der Unterzeile leicht
+gekürzt und fett, nur das Nötige, auf allen Geräteklassen verträglich. Umgesetzt mit `tools/hero_text.py` auf einem
+frischen Export (seit dem 02.11. hatte niemand sonst die Seite geändert).
+
+- **Abstand:** Die Überschrift (Widget 9dcea29) trägt den Abstand als Innenabstand unten je Geräteklasse (Computer
+  35 px, Laptop 15, Tablet 20, Handy 10). Nur der Handy-Wert wurde auf 18 px erhöht; Tablet und Computer blieben, weil
+  dort der Abstand zur Schriftgröße passt. Das Handy-Querformat nutzt den Tablet-Wert (20 px) und ist damit abgedeckt.
+- **Absatz:** Unterzeile und Absatz sind ein Überschrift-Widget (e429076, Tag p) mit doppeltem Zeilenumbruch. Der
+  zweite Teil lautet jetzt „ProVision Infra plant & installiert in Norddeutschland dein digitales Zutrittssystem:
+  Zugänge per Chip, KeyCard oder App in Sekunden vergeben und entziehen – das spart dir Zeit und Aufwand im Alltag.“
+  (30 statt 33 Wörter, Kernbegriffe und Du-Ansprache erhalten) und steht in einem span mit font-weight 700, derselben
+  Technik wie der fette Teil der Überschrift; Schriftgrößen je Gerät unverändert (18/16/15/13/12 px).

@@ -50,6 +50,7 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `SEO-GESAMTSEITE.md` – SEO-Audit und priorisierter Maßnahmenplan für alle Seiten der Website (02.11.2026)
 - `TRACKING-CHECK.md` – Prüfung der Meta-Pixel-Events im Tag Manager gegen die Formular-Logik, mit Korrekturanleitung (02.11.2026)
 - `tools/siegel_handy.py` – schwebendes ProvenExpert-Siegel auch auf dem Handy zeigen (Ausblendung entfernen)
+- `tools/hero_text.py` – Startseiten-Hero: mehr Abstand unter der Überschrift am Handy, zweiter Absatz gekürzt und fett (07.11.2026)
 - `tools/handy_darstellung.py`, `tools/handy_patch.py` – Handy-Darstellung (Hoch- und Querformat) nach der Rückmeldung mit
   sechs Punkten vom 02.11.2026: CSS je Seite aus einer ID-Tabelle, als Widget „Steuerung Handy-Darstellung“ eingesetzt
 - `tools/lueneburg_wiederherstellen.py` – Lüneburg-Seite nach Überschneidung mit der Parallelsitzung wiederhergestellt (02.11.2026)
