@@ -864,3 +864,42 @@ eines frischen Exports vor (jede Stelle genau einmal vorhanden, sonst bricht das
   Hinweis zur Prüfung: Der Hoster beantwortete die Handy-Aufrufe dieser Seite zeitweise mit 429; Messungen deshalb
   mit Ladeprüfung auf die Hero-Überschrift und 60-s-Pausen wiederholt. Nachbarsitzung über beide Speicherungen
   informiert.
+
+## Unterseite „Videoüberwachung für Schlachthöfe“ (07.11.2026)
+
+Auftrag: eine Unterseite zur Kamerapflicht in Schlachthöfen nach dem neuen Gesetz der Bundesregierung, für
+Norddeutschland und bundesweit, mit der Kamera-Seite `/kamerasysteme/` als Vorlage und eigener Recherche der
+Rechtsgrundlage. Adresse: `/videoueberwachung-schlachthoefe/` (WordPress schreibt Umlaute in Adressen als „ue“ und
+„oe“, wie bei `/lueneburg/`), Seiten-ID 4870.
+
+- **Rechtsgrundlage (Stand 07.11.2026, Quellen und Auswertung in `recherche/schlachthoefe-quellen.md`, Primärquellen
+  als PDF in `recherche/quellen-pdf/`):** Der Bundestag hat am 05.11.2026 den Regierungsentwurf (BT-Drs. 21/6809) in
+  der Fassung des Agrarausschusses (BT-Drs. 21/8974) beschlossen. Neuer § 4d Tierschutzgesetz: Pflicht zu
+  Videoaufzeichnungen für Schlachteinrichtungen, die einen Tierschutzbeauftragten benennen müssen (ab 1.000
+  Großvieheinheiten Säugetiere oder 150.000 Stück Geflügel/Kaninchen im Jahr; 232 Betriebe, rund 90 % der
+  Schlachttiere); Anordnungsbefugnis für kleinere Betriebe bei konkreten Anhaltspunkten; Erfassung von der Entladung
+  bis zu den ersten Schlachtarbeiten; Datum und Uhrzeit lesbar; 30 Schlachttage Speicherung, arbeitstäglicher Abruf
+  je Kamera in üblichem Dateiformat; Protokollierung der Abrufe; automatische Löschung; Kontrolle der Installation
+  durch die Behörde; Bußgeldtatbestand § 18 Abs. 1 Nr. 6b. Inkrafttreten 01.01.2027, Anwendung ab 01.01.2028;
+  Bundesrat und Verkündung standen am 07.11. noch aus. Für Norddeutschland: Niedersachsens Vereinbarung von 2019 und
+  der Datenschutz-Leitfaden 2020 (Art. 6 Abs. 1 lit. f DSGVO, keine Beschäftigten-Einwilligung, keine Tonaufnahmen,
+  Hinweisschilder, DSFA-Prüfung, Betriebsrat).
+- **Aufbau (`tools/schlachthof_seite.py`):** Export der Kamera-Seite als Vorlage, Element-IDs bleiben (wie bei den
+  Stadtseiten, dadurch greifen Ladeverhalten- und Handy-Darstellungs-Regeln mit der ID-Tabelle der Kamera-Seite).
+  Ersetzt wurden 17 Überschriften und 37 Fließtexte je Element-ID: Hero (Beschluss, Pflicht ab 2028, Leistung),
+  „Ab 1. Januar 2028 …“ mit Schwellenwerten, fünf Karten „Was § 4d Tierschutzgesetz verlangt“ (Pflichtbereiche,
+  Zeitstempel und Sortierung, 30 Schlachttage, Protokollierung, Beschäftigtendatenschutz, dazu Anordnung für kleine
+  Betriebe und Bußgeld), acht „Stell dir mal vor“-Karten in beiden Varianten, Leistungsabschnitt, „So arbeiten wir“,
+  fünf Ablaufschritte, Technik (TP-Link VIGI, IP67, Zeitstempel, Speicher für 30 Schlachttage, Export), Region
+  (Niedersachsen als Vorreiter, Norddeutschland, bundesweit, Links zur Kamera- und Startseite), zwölf FAQ-Einträge
+  (Essential-Addons-Akkordeon, neue Einträge aus der Struktur des ersten). Unverändert: Hero-Video, Kundenstimmen,
+  Gründer, Partner, Footer, Kamera-Lottie. Strukturdaten: LocalBusiness aus der Vorlage, neuer Service mit
+  areaServed Norddeutschland und Deutschland, FAQPage aus den zwölf Fragen. Ladeverhalten-Skript und
+  Handy-Darstellung aus dem Repo eingesetzt.
+- **Vorsicht im Text:** keine Bußgeldhöhe, keine Kostenschätzung der Bundesregierung (3.500 Euro je Betrieb gilt in
+  der Fachwelt als zu niedrig), technische Details als eigene Praxis und nicht als Gesetzesvorgabe, Datum „ab 2028“
+  mit Hinweis auf den ausstehenden Bundesratsdurchgang in der FAQ.
+- **Veröffentlichung:** Seite per REST als Entwurf angelegt (Slug `videoueberwachung-schlachthoefe`), Inhalte über den
+  Speicherweg des Elementor-Editors gesetzt, Vorschau angemeldet in 1440, 393 und 852×393 px geprüft, dann
+  veröffentlicht; Yoast-Titel, -Beschreibung und Keyphrase „Videoüberwachung Schlachthof“ aus
+  `elementor/seo/seite-schlachthoefe.json`.

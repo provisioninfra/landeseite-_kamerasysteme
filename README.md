@@ -50,6 +50,9 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `SEO-GESAMTSEITE.md` – SEO-Audit und priorisierter Maßnahmenplan für alle Seiten der Website (02.11.2026)
 - `TRACKING-CHECK.md` – Prüfung der Meta-Pixel-Events im Tag Manager gegen die Formular-Logik, mit Korrekturanleitung (02.11.2026)
 - `tools/siegel_handy.py` – schwebendes ProvenExpert-Siegel auch auf dem Handy zeigen (Ausblendung entfernen)
+- `tools/schlachthof_seite.py` – Unterseite „Videoüberwachung für Schlachthöfe“ (`/videoueberwachung-schlachthoefe/`, ID 4870) aus der
+  Kamera-Seite als Vorlage: Texte je Element-ID, FAQ, Strukturdaten (07.11.2026); Rechtsgrundlage und Quellen in `recherche/`
+- `elementor/seo/seite-schlachthoefe.json` – Yoast-Angaben der Schlachthof-Seite
 - `tools/hero_text.py` – Startseiten-Hero: mehr Abstand unter der Überschrift am Handy, zweiter Absatz gekürzt und fett (07.11.2026)
 - `tools/karriere_hero.py` – Karriere-Seite (HTML-Widget): dasselbe im Hero per exakten Ersetzungen im Widget-HTML (07.11.2026)
 - `tools/handy_darstellung.py`, `tools/handy_patch.py` – Handy-Darstellung (Hoch- und Querformat) nach der Rückmeldung mit
