@@ -21,6 +21,7 @@ Querformat (Höhe bis 520 px, z. B. 932×430):
   5. „Warum immer mehr KMUs …“: linke Textspalte neben den Karten und beim Scrollen mitlaufend wie am Desktop. CSS
      position:sticky haftet auf der Seite nicht (html/body mit overflow-x: clip), deshalb wird Elementors eigene
      Sticky-Funktion der Spalte (sticky_on) per Skript um „tablet“ ergänzt, nur auf Handys (kurze Seite bis 520 px).
+     Beim Drehen zurück ins Hochformat lässt Elementor die Spalte fixiert; das Skript hebt die Fixierung dort auf.
   6. „Stell dir mal vor“: Die Desktop/Tablet-Variante zieht die absolut gesetzten Lotties ohne Tablet-Breite auf volle
      Breite und nach oben; sie überdecken die Überschrift. Im Querformat wird stattdessen die Handy-Variante gezeigt,
      angeordnet wie am PC: Karten links, Griff/Animation in der Mitte, Karten rechts; die Überschrift bekommt Luft.
@@ -197,7 +198,26 @@ HANDY_SCRIPT = r"""<script id="pv-handy-sticky">
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { lottiesFreigeben(false); });
   else lottiesFreigeben(false);
-  var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { lottiesFreigeben(true); }, 450); });
+  /* 3. Dreht man das Handy vom Quer- ins Hochformat, lässt Elementor die im Querformat fixierte Textspalte fixiert
+        (position: fixed) – sie legt sich dann hochkant über die Karten. Im Hochformat wird die Fixierung deshalb
+        aufgehoben (über Elementors eigenes Sticky-Plugin, damit es beim Zurückdrehen wieder sauber startet). */
+  function stickyAufraeumen() {
+    if (window.innerWidth > 767) return;
+    document.querySelectorAll('.e-con.elementor-sticky--active').forEach(function (el) {
+      var erledigt = false;
+      try { if (window.jQuery && jQuery.fn && jQuery.fn.sticky && jQuery(el).data('sticky')) { jQuery(el).sticky('destroy'); erledigt = true; } } catch (e) {}
+      if (!erledigt) {
+        el.classList.remove('elementor-sticky--active');
+        ['position', 'width', 'margin-top', 'margin-bottom', 'top', 'inset-inline-start', 'left'].forEach(function (p) { el.style.removeProperty(p); });
+        [el.previousElementSibling, el.nextElementSibling].forEach(function (n) { if (n && n.classList && n.classList.contains('elementor-sticky__spacer')) n.parentNode.removeChild(n); });
+      }
+    });
+  }
+  var t, t2;
+  window.addEventListener('resize', function () {
+    clearTimeout(t); t = setTimeout(function () { lottiesFreigeben(true); }, 450);
+    clearTimeout(t2); t2 = setTimeout(stickyAufraeumen, 700);
+  });
 })();
 </script>"""
 

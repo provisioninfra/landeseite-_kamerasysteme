@@ -914,6 +914,14 @@ Rechtsgrundlage. Adresse: `/videoueberwachung-schlachthoefe/` (WordPress schreib
   „1. Januar 2027 … Übergangsfrist ein Jahr“. Handy-Prüfung wie bei den anderen Seiten: hochkant Footer-„Mehr“ flach,
   Siegel 60 px, kein Überlauf; quer Textspalte neben den Karten und haftend (Elementor-Sticky aktiv, Oberkante bleibt
   bei 16 px), Logo-Rahmen links und drei Punkte rechts, Kamera-Lottie der Computer-Variante sichtbar.
+- **Zweite Rückmeldung (07.11., 16:33 Uhr):** Texte überall deutlich kürzer (Hero, Pflichtkarten, „Stell dir mal
+  vor“, Leistungsabschnitt, Ablauf, Technik, Region, FAQ; Inhalt unverändert, rund ein Viertel weniger Wörter), damit
+  der Textkasten im Türfoto-Abschnitt hochkant nicht mehr über die Person im Bild reicht. Dazu ein Fehler der
+  mitlaufenden Textspalte: Dreht man das Handy vom Quer- ins Hochformat, lässt Elementor die im Querformat fixierte
+  Spalte fixiert (nachgestellt: position fixed, Gerätemodus bereits „mobile“), sie legt sich hochkant über die Karten.
+  Das Widget-Skript hebt die Fixierung im Hochformat jetzt über Elementors Sticky-Plugin auf (`sticky('destroy')`,
+  Spacer entfernt), beim Zurückdrehen startet Elementor sie wieder. Gilt mit der nächsten Speicherung für alle Seiten
+  mit mitlaufender Spalte.
 - **Offen für den Kunden:** Verlinkung der neuen Seite (Hauptmenü „Main“ und Kamera-Menü sind vom Freigabesystem
   gesperrt, Vorschlag: Unterpunkt „Schlachthöfe“ unter „Mehr“ bzw. ein Teaser auf `/kamerasysteme/`); Hero-Video und
   Produktbilder sind die der Kamera-Seite, ein Schlachthof-Motiv wäre passender; Rechtslage nach dem
