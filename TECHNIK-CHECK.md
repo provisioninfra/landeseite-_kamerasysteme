@@ -880,7 +880,7 @@ Rechtsgrundlage. Adresse: `/videoueberwachung-schlachthoefe/` (WordPress schreib
   Schlachttiere); Anordnungsbefugnis für kleinere Betriebe bei konkreten Anhaltspunkten; Erfassung von der Entladung
   bis zu den ersten Schlachtarbeiten; Datum und Uhrzeit lesbar; 30 Schlachttage Speicherung, arbeitstäglicher Abruf
   je Kamera in üblichem Dateiformat; Protokollierung der Abrufe; automatische Löschung; Kontrolle der Installation
-  durch die Behörde; Bußgeldtatbestand § 18 Abs. 1 Nr. 6b. Inkrafttreten 01.01.2027, Anwendung ab 01.01.2028;
+  durch die Behörde; Bußgeldtatbestand § 18 Abs. 1 Nr. 6b. gilt ab 01.01.2027 mit einjähriger Übergangsfrist für die Umsetzung (§ 4d anzuwenden ab 01.01.2028);
   Bundesrat und Verkündung standen am 07.11. noch aus. Für Norddeutschland: Niedersachsens Vereinbarung von 2019 und
   der Datenschutz-Leitfaden 2020 (Art. 6 Abs. 1 lit. f DSGVO, keine Beschäftigten-Einwilligung, keine Tonaufnahmen,
   Hinweisschilder, DSFA-Prüfung, Betriebsrat).
@@ -897,8 +897,8 @@ Rechtsgrundlage. Adresse: `/videoueberwachung-schlachthoefe/` (WordPress schreib
   areaServed Norddeutschland und Deutschland, FAQPage aus den zwölf Fragen. Ladeverhalten-Skript und
   Handy-Darstellung aus dem Repo eingesetzt.
 - **Vorsicht im Text:** keine Bußgeldhöhe, keine Kostenschätzung der Bundesregierung (3.500 Euro je Betrieb gilt in
-  der Fachwelt als zu niedrig), technische Details als eigene Praxis und nicht als Gesetzesvorgabe, Datum „ab 2028“
-  mit Hinweis auf den ausstehenden Bundesratsdurchgang in der FAQ.
+  der Fachwelt als zu niedrig), technische Details als eigene Praxis und nicht als Gesetzesvorgabe, Fristen durchgängig als „gilt ab 1. Januar 2027,
+  Übergangsfrist ein Jahr“ formuliert (Vorgabe des Kunden), mit Hinweis auf den ausstehenden Bundesratsdurchgang in der FAQ.
 - **Veröffentlichung:** Seite per REST als Entwurf angelegt (Slug `videoueberwachung-schlachthoefe`), Inhalte über den
   Speicherweg des Elementor-Editors gesetzt, Vorschau angemeldet in 1440, 393 und 852×393 px geprüft, dann
   veröffentlicht; Yoast-Titel, -Beschreibung und Keyphrase „Videoüberwachung Schlachthof“ aus

@@ -79,6 +79,7 @@ Tierhaltungskennzeichnungsgesetzes“ (ursprünglich „Fünftes Gesetz zur Änd
 
 ## Was auf der Seite bewusst vorsichtig formuliert ist
 
-- „Ab 2028“: ergibt sich aus Inkrafttreten 01.01.2027 plus einem Jahr; Bundesratsdurchgang und Verkündung standen aus.
+- Fristen: Das Gesetz gilt ab 01.01.2027; für § 4d besteht eine Übergangsfrist von einem Jahr (Anwendung ab 01.01.2028). Auf der
+  Seite durchgängig so formuliert; Bundesratsdurchgang und Verkündung standen aus.
 - Keine Bußgeldhöhe genannt (§ 18 TierSchG, Rahmen je Tatbestand), keine Kostenangabe aus der Gesetzesbegründung.
 - Technische Details (Auflösung usw.) als eigene Praxis beschrieben, nicht als gesetzliche Vorgabe.

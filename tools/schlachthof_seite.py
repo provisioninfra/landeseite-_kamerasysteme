@@ -3,8 +3,8 @@
 
 Rechtsgrundlage (recherchiert am 07.11.2026): Fünftes Gesetz zur Änderung des Tierschutzgesetzes, Regierungsentwurf
 BT-Drs. 21/6809 (Kabinett 29.04.2026), Beschlussempfehlung des Agrarausschusses BT-Drs. 21/8974 (04.11.2026),
-vom Bundestag am 05.11.2026 beschlossen; neuer § 4d TierSchG; Inkrafttreten 01.01.2027, § 4d anzuwenden ab
-01.01.2028 (§ 21 Abs. 1 TierSchG n. F.). Niedersachsen: Vereinbarung vom 12.02.2019 und Datenschutz-Leitfaden
+vom Bundestag am 05.11.2026 beschlossen; neuer § 4d TierSchG; Inkrafttreten 01.01.2027 mit einjähriger Übergangsfrist
+(§ 4d anzuwenden ab 01.01.2028, § 21 Abs. 1 TierSchG n. F.). Niedersachsen: Vereinbarung vom 12.02.2019 und Datenschutz-Leitfaden
 (Stand Juni 2020). Quellen in `recherche/schlachthoefe-quellen.md`.
 
 Vorgehen: Export der Kamera-Seite laden, Texte je Element-ID ersetzen (IDs bleiben, wie bei den Stadtseiten),
@@ -23,12 +23,12 @@ B = '<span style="font-weight: 700;">'
 # --- Überschriften (heading: title) ---
 HEADINGS = {
     "9dcea29": f"{B}Videoüberwachung für Schlachthöfe</span> nach dem neuen Tierschutzgesetz",
-    "e429076": ("Der Bundestag hat am 5. November 2026 die Kamerapflicht für Schlachthöfe beschlossen: Ab 2028 müssen "
-                "größere Betriebe alle tierschutzrelevanten Schritte aufzeichnen. <br>\n<br>\n"
+    "e429076": ("Der Bundestag hat am 5. November 2026 die Kamerapflicht für Schlachthöfe beschlossen: Sie gilt ab "
+                "1. Januar 2027, mit einer Übergangsfrist von einem Jahr für die Umsetzung. <br>\n<br>\n"
                 f"{B}ProVision Infra plant und installiert Videoüberwachung nach § 4d Tierschutzgesetz: alle Pflichtbereiche "
                 "im Bild, 30 Schlachttage Speicherung, Abruf für die Behörde und Datenschutz für dein Team – in "
                 "Norddeutschland und bundesweit.</span>"),
-    "e54550b": "Ab 1. Januar 2028 gilt die Kamerapflicht für größere Schlachthöfe.",
+    "e54550b": "Ab 1. Januar 2027 gilt die Kamerapflicht für größere Schlachthöfe – mit einer Übergangsfrist von einem Jahr.",
     "c407c9d": "Was § 4d Tierschutzgesetz von deinem Schlachthof verlangt",
     "b31eb2f": "… alle tierschutzrelevanten Schritte im Bild sind,",
     "f35e156": "… Datum und Uhrzeit immer mitlaufen,",
@@ -55,8 +55,8 @@ TEXTE = {
     "3efeb2a": ("<p>ProVision Infra setzt die Vorgaben aus § 4d Tierschutzgesetz technisch um: Kameras entlang des gesamten "
                 "Schlachtprozesses, Zeitstempel im Bild, 30 Schlachttage Speicherung mit automatischer Löschung und ein Abruf "
                 "für die Behörde, der bei der Abnahme standhält.</p>"),
-    "c5f5120": ("<p>Fünf Vorgaben, die jeder betroffene Betrieb bis zum Stichtag erfüllen muss. Dein Schlachthof ist auf der "
-                "sicheren Seite, wenn …</p>"),
+    "c5f5120": ("<p>Fünf Vorgaben, die jeder betroffene Betrieb innerhalb der einjährigen Übergangsfrist erfüllen muss. Dein "
+                "Schlachthof ist auf der sicheren Seite, wenn …</p>"),
     "59a04cb": ("<p>von der Entladung über Warten und Zutrieb, Betäubung, Aufhängen und Entblutungsschnitt bis zu den ersten "
                 "weiteren Schlachtarbeiten wie Brühen oder Zurichten. Tiere und die Personen, die mit ihnen umgehen, müssen "
                 "erkennbar sein.</p>"),
@@ -141,10 +141,11 @@ FAQ = [
      "Betriebe sind ausgenommen, können aber von der Behörde zur Aufzeichnung verpflichtet werden, sobald konkrete "
      "Anhaltspunkte für Tierschutzverstöße vorliegen."),
     ("Ab wann gilt die Kamerapflicht?",
-     "Der Bundestag hat das Gesetz am 5. November 2026 beschlossen. Es tritt am 1. Januar 2027 in Kraft, der neue § 4d "
-     "Tierschutzgesetz ist ein Jahr später anzuwenden, also ab dem 1. Januar 2028. Die abschließende Beratung im Bundesrat "
-     "und die Verkündung im Bundesgesetzblatt standen am 7. November 2026 noch aus. Wer 2027 plant und installiert, hat "
-     "Zeit für die Abnahme durch die Behörde und für die Einbindung von Betriebsrat und Datenschutzbeauftragtem."),
+     "Der Bundestag hat das Gesetz am 5. November 2026 beschlossen. Es gilt ab dem 1. Januar 2027, mit einer Übergangsfrist "
+     "von einem Jahr für die Einrichtung der Videoüberwachung: Spätestens ab dem 1. Januar 2028 müssen die Aufzeichnungen "
+     "laufen und für die Behörde abrufbar sein. Die abschließende Beratung im Bundesrat und die Verkündung im "
+     "Bundesgesetzblatt standen am 7. November 2026 noch aus. Wer früh im Jahr 2027 plant und installiert, hat Zeit für "
+     "die Abnahme durch die Behörde und für die Einbindung von Betriebsrat und Datenschutzbeauftragtem."),
     ("Welche Bereiche müssen gefilmt werden?",
      "Alle tierschutzrelevanten Schritte, soweit sie im Betrieb vorkommen: das Entladen, die Zeit zwischen Entladung und "
      "Betäubung (Zutrieb, Ruhen und Warten), die Betäubung, das Aufhängen nach der Betäubung, das Setzen des "
@@ -203,8 +204,8 @@ FAQ = [
 
 SEO = {
     "title": "Videoüberwachung im Schlachthof (§ 4d TierSchG) | ProVision Infra",
-    "description": ("Kamerapflicht für Schlachthöfe ab 2028: Videoüberwachung nach § 4d Tierschutzgesetz, geplant und "
-                    "installiert von ProVision Infra. Norddeutschland und bundesweit."),
+    "description": ("Kamerapflicht für Schlachthöfe ab 2027 mit einjähriger Übergangsfrist: Videoüberwachung nach § 4d "
+                    "Tierschutzgesetz, geplant und installiert von ProVision Infra. Norddeutschland und bundesweit."),
     "focus_keyphrase": "Videoüberwachung Schlachthof",
     "og_title": "Videoüberwachung für Schlachthöfe nach § 4d Tierschutzgesetz | ProVision Infra",
     "cornerstone": False,
