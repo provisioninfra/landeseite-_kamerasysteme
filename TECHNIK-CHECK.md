@@ -839,3 +839,17 @@ frischen Export (seit dem 02.11. hatte niemand sonst die Seite geändert).
   Zugänge per Chip, KeyCard oder App in Sekunden vergeben und entziehen – das spart dir Zeit und Aufwand im Alltag.“
   (30 statt 33 Wörter, Kernbegriffe und Du-Ansprache erhalten) und steht in einem span mit font-weight 700, derselben
   Technik wie der fette Teil der Überschrift; Schriftgrößen je Gerät unverändert (18/16/15/13/12 px).
+
+## Karriere-Seite: gleiches Prinzip im Hero (07.11.2026)
+
+Die Karriere-Seite (ID 4408, `/karriere/`) ist eine einzige HTML-Widget-Seite mit eigenem CSS (kein Elementor-Aufbau),
+eine Quelle dafür liegt nicht im Repo. `tools/karriere_hero.py` nimmt deshalb drei exakte Ersetzungen im Widget-HTML
+eines frischen Exports vor (jede Stelle genau einmal vorhanden, sonst bricht das Skript ab):
+
+- **Abstand:** Handy-Regel (max-width 767 px) der Überschrift `.hero__title` von `padding-bottom: 18px` auf 26 px
+  (+8 px wie auf der Startseite). Tablet (`padding-bottom` 24 px ab 1440, 40 px darüber) und die eigene
+  Querformat-Regel der Seite (10 px bei max-height 520 px) bleiben.
+- **Absatz:** Der zweite Absatz der Unterzeile lautet jetzt „Elektrohandwerk, IT, Vertrieb oder Büro: Du bekommst früh
+  eigene Aufgaben und siehst abends, was du geschafft hast.“ (nur „Bei uns bekommst du“ → „Du bekommst“, der Satz war
+  schon knapp) und steht in `<strong>`; dazu eine Regel `.hero__sub strong{font-weight:700}` neben der bestehenden
+  Regel für den fetten Teil der Überschrift (die Seite setzt `strong` ohnehin auf 700, die Regel sichert es ab).
