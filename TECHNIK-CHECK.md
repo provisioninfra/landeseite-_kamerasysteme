@@ -839,6 +839,11 @@ frischen Export (seit dem 02.11. hatte niemand sonst die Seite geändert).
   Zugänge per Chip, KeyCard oder App in Sekunden vergeben und entziehen – das spart dir Zeit und Aufwand im Alltag.“
   (30 statt 33 Wörter, Kernbegriffe und Du-Ansprache erhalten) und steht in einem span mit font-weight 700, derselben
   Technik wie der fette Teil der Überschrift; Schriftgrößen je Gerät unverändert (18/16/15/13/12 px).
+- **Geprüft (Vorher/Nachher in neun Größen: 1920, 1440, 1280, 1024, 768 px, Handy 393 und 430 px, Querformat 852×393
+  und 932×430):** Abstand Überschrift → Unterzeile am Handy 10 → 18 px, auf Computer (55/15/20 px), Tablet (20 px) und
+  im Querformat (20 px) unverändert; Hero-Höhe nur am Handy um 8 px größer, sonst identisch; der gekürzte Absatz
+  braucht überall dieselbe Zeilenzahl wie zuvor und steht mit Schriftgewicht 700; keine weiteren Änderungen auf der
+  Seite (Export-Vergleich: nur die zwei Einstellungen).
 
 ## Karriere-Seite: gleiches Prinzip im Hero (07.11.2026)
 
@@ -853,3 +858,9 @@ eines frischen Exports vor (jede Stelle genau einmal vorhanden, sonst bricht das
   eigene Aufgaben und siehst abends, was du geschafft hast.“ (nur „Bei uns bekommst du“ → „Du bekommst“, der Satz war
   schon knapp) und steht in `<strong>`; dazu eine Regel `.hero__sub strong{font-weight:700}` neben der bestehenden
   Regel für den fetten Teil der Überschrift (die Seite setzt `strong` ohnehin auf 700, die Regel sichert es ab).
+- **Geprüft:** Handy 393 px: Innenabstand unter der Überschrift 26 px (vorher 18), Absatz fett (700) bei 13 px;
+  Tablet 768/1024 px: 24 px wie zuvor, Absatz fett; Querformat 852×393: die eigene Regel der Seite (10 px) greift wie
+  zuvor, Absatz fett; Computer 1280/1440/1920 px: Abstände (24/24/40 px) und Hero-Höhen unverändert, Absatz fett.
+  Hinweis zur Prüfung: Der Hoster beantwortete die Handy-Aufrufe dieser Seite zeitweise mit 429; Messungen deshalb
+  mit Ladeprüfung auf die Hero-Überschrift und 60-s-Pausen wiederholt. Nachbarsitzung über beide Speicherungen
+  informiert.
