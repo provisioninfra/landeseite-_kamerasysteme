@@ -972,3 +972,24 @@ zurückgenommen (die drei `_wp_old_slug`-Einträge an 4870 sind harmlos).
   noindex sind und nirgends verlinkt werden. Ein echter 301 bräuchte ein Weiterleitungs-Plugin (z. B. „Redirection“
   oder Yoast SEO Premium) oder eine Regel in der Serverkonfiguration; sobald es das gibt, können die drei Seiten
   gelöscht werden. Bis dahin bitte nicht löschen, umbenennen oder in ein Menü aufnehmen.
+
+## Prüfung nach der SEO-Überarbeitung durch die Parallelsitzung (07.11.2026, 16:50 UTC)
+
+Die Parallelsitzung hat die Schlachthof-Seite 4870 nach eigener Angabe im Kundenauftrag überarbeitet und um 16:22 UTC
+gespeichert (Yoast 16:24 UTC). Vergleich des frischen Exports mit dem zuletzt von hier gespeicherten Stand
+(`wp/schlachthoefe/seite.json`, 346 Elemente in beiden Fassungen, nichts hinzugefügt oder entfernt):
+
+- **Geändert:** H1 „… nach § 4d Tierschutzgesetz“ (statt „nach dem neuen Tierschutzgesetz“); Yoast-Titel
+  „Videoüberwachung Schlachthof: Kamerapflicht § 4d TierSchG“ und neue Beschreibung; vier Fließtexte länger
+  (Einleitung 30→35 und 29→32 Wörter, § 18-Absatz mit Quellenlink 21→35, Standort-Text mit Telefon/E-Mail 70→95);
+  FAQ von 12 auf 17 Einträge (kleine Betriebe, Betriebsrat, Speicherbedarf, Nassbereich-Kameras,
+  Niedersachsen-Vereinbarung), die zwölf bestehenden Antworten unverändert; Strukturdaten-Widget mit
+  Legislation-Knoten. Textwörter in Überschriften, Fließtexten und FAQ: 1.525 → 1.921 (rund ein Viertel mehr; die
+  Kürzung aus der zweiten Rückmeldung des Kunden ist damit vom Umfang her weitgehend aufgehoben, dem Kunden
+  gemeldet). Fehlende Standardwerte im Export (`header_size`, `image_size`, Lottie-`trigger`) sind nur weggelassene
+  Voreinstellungen: Live rendern alle betroffenen Überschriften weiter als H2 (19 H2, 32 H3, eine H1).
+- **Unverändert und geprüft:** Container „Steuerung Handy-Darstellung“ und Ladeverhalten-Widget Byte für Byte gleich,
+  Türfoto-Abschnitt 800 px Mindesthöhe am Handy (Abstand Textkasten→Bild 58 px bei 393, 38 px bei 430 px), Fristen
+  weiterhin „1. Januar 2027 … Übergangsfrist ein Jahr … spätestens 1. Januar 2028“, FAQPage-Schema nur einmal (vom
+  Akkordeon), robots index/follow, Canonical auf die Seite. Live-Messung 393×852, 852×393, 1440×900 und 1024×768:
+  keine Überläufe, keine JavaScript-Fehler, mitlaufende Spalte im Querformat aktiv und hochkant inaktiv, Siegel 60 px.
