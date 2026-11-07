@@ -935,3 +935,40 @@ Rechtsgrundlage. Adresse: `/videoueberwachung-schlachthoefe/` (WordPress schreib
   gesperrt, Vorschlag: Unterpunkt „Schlachthöfe“ unter „Mehr“ bzw. ein Teaser auf `/kamerasysteme/`); Hero-Video und
   Produktbilder sind die der Kamera-Seite, ein Schlachthof-Motiv wäre passender; Rechtslage nach dem
   Bundesratsdurchgang und einer möglichen Rechtsverordnung zu technischen Anforderungen nachziehen.
+
+## Umlaut-Adressen der Schlachthof-Seite (07.11.2026)
+
+Frage des Kunden: Kommt man auch über `/videoüberwachung-schlachthöfe` auf die Seite? Vorher nicht: Die Seite liegt
+unter `/videoueberwachung-schlachthoefe/` (WordPress schreibt Umlaute als „ue“/„oe“), die Umlaut-Adresse lieferte
+HTTP 404. Es ist kein Weiterleitungs-Plugin installiert (Yoast SEO frei hat keinen Redirect-Manager), und die
+eingebaute Weiterleitung alter Adressen (`wp_old_slug_redirect`) gilt nur für Beiträge, nicht für Seiten
+(hierarchischer Inhaltstyp); drei Versuche mit alten Slugs auf der Seite 4870 blieben wirkungslos und wurden
+zurückgenommen (die drei `_wp_old_slug`-Einträge an 4870 sind harmlos).
+
+- **Lösung ohne Plugin:** drei kleine Weiterleitungsseiten, deren Adresse die jeweilige Umlaut-Schreibweise ist
+  (WordPress speichert den Slug prozentkodiert, z. B. `video%c3%bcberwachung-schlachth%c3%b6fe`, und findet ihn beim
+  Aufruf der Umlaut-Adresse). Jede Seite nutzt die Elementor-Canvas-Vorlage (kein Kopf, kein Footer) und enthält
+  nur `<meta http-equiv="refresh" content="0; url=…">`, `window.location.replace(…)` als Skript und einen
+  Textlink „Weiter zur Seite Videoüberwachung für Schlachthöfe“ als Rückfall. Ziel ist immer
+  `https://provision-infra.de/videoueberwachung-schlachthoefe/`.
+
+  | ID | Adresse | Titel |
+  |---|---|---|
+  | 4891 | `/videoüberwachung-schlachthöfe/` | Videoüberwachung Schlachthöfe (Weiterleitung) |
+  | 4893 | `/videoüberwachung-schlachthoefe/` | Videoüberwachung Schlachthöfe (Weiterleitung) |
+  | 4894 | `/videoueberwachung-schlachthöfe/` | Videoüberwachung Schlachthöfe (Weiterleitung) |
+
+- **Suchmaschinen:** Alle drei Seiten stehen in Yoast auf noindex und nofollow (`<meta name='robots'
+  content='noindex, nofollow' />` im Quelltext, Yoast-REST `get_head` bestätigt es) und fehlen in der
+  `page-sitemap.xml`; dort steht nur `/videoueberwachung-schlachthoefe/`. Die Hauptseite 4870 bleibt index/follow mit
+  Canonical auf sich selbst.
+- **Geprüft (öffentlich, Chromium ohne Anmeldung):** `/videoüberwachung-schlachthöfe/`, dasselbe ohne Schrägstrich
+  (WordPress leitet erst per 301 auf die prozentkodierte Adresse), die prozentkodierte Adresse, die beiden gemischten
+  Schreibweisen und `/Videoüberwachung-Schlachthöfe` mit Großbuchstaben (die Datenbank vergleicht Slugs ohne
+  Groß-/Kleinschreibung) landen alle auf `https://provision-infra.de/videoueberwachung-schlachthoefe/` mit der H1
+  „Videoüberwachung für Schlachthöfe nach dem neuen Tierschutzgesetz“, nach 1 bis 5 Sekunden je nach Cache.
+- **Grenze:** Das ist eine Weiterleitung im Browser (Meta-Refresh und Skript), kein HTTP-301 des Servers. Für
+  Besucher ist der Unterschied nicht spürbar; für Suchmaschinen zählt die Hauptadresse ohnehin, weil die drei Seiten
+  noindex sind und nirgends verlinkt werden. Ein echter 301 bräuchte ein Weiterleitungs-Plugin (z. B. „Redirection“
+  oder Yoast SEO Premium) oder eine Regel in der Serverkonfiguration; sobald es das gibt, können die drei Seiten
+  gelöscht werden. Bis dahin bitte nicht löschen, umbenennen oder in ein Menü aufnehmen.

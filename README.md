@@ -53,6 +53,8 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `tools/schlachthof_seite.py` – Unterseite „Videoüberwachung für Schlachthöfe“ (`/videoueberwachung-schlachthoefe/`, ID 4870) aus der
   Kamera-Seite als Vorlage: Texte je Element-ID, FAQ, Strukturdaten (07.11.2026); Rechtsgrundlage und Quellen in `recherche/`
 - `elementor/seo/seite-schlachthoefe.json` – Yoast-Angaben der Schlachthof-Seite
+- Umlaut-Adressen `/videoüberwachung-schlachthöfe` (und gemischte Schreibweisen) führen über drei noindex-Weiterleitungsseiten
+  (IDs 4891, 4893, 4894) auf die Schlachthof-Seite; Einzelheiten in `TECHNIK-CHECK.md` (07.11.2026)
 - `tools/hero_text.py` – Startseiten-Hero: mehr Abstand unter der Überschrift am Handy, zweiter Absatz gekürzt und fett (07.11.2026)
 - `tools/karriere_hero.py` – Karriere-Seite (HTML-Widget): dasselbe im Hero per exakten Ersetzungen im Widget-HTML (07.11.2026)
 - `tools/handy_darstellung.py`, `tools/handy_patch.py` – Handy-Darstellung (Hoch- und Querformat) nach der Rückmeldung mit
