@@ -214,6 +214,9 @@ def bauen(basis):
                                           eael_adv_accordion_tab_title=q, eael_adv_accordion_tab_content=f"<p>{a}</p>") for q, a in FAQ]
     # Strukturdaten
     by["dca37dc"]["settings"]["html"] = schema(by["dca37dc"]["settings"]["html"])
+    # Türfoto-Abschnitt am Handy etwas höher (750 → 800 px), damit der Textkasten über dem Bild endet: Das Handy-Bild
+    # (2552 × 2208, contain, unten) ist bei 393–430 px Breite 340–372 px hoch; so bleiben mindestens 60 px Abstand.
+    by["2419932"]["settings"]["min_height_mobile"] = {"unit": "px", "size": 800, "sizes": []}
     # Ladeverhalten-Skript in der aktuellen Fassung aus dem Repo
     by["dc9ac90"]["settings"]["html"] = ladeverhalten.LADE_SCRIPT
     # Handy-Darstellung (gleiche Element-IDs wie die Kamera-Seite)

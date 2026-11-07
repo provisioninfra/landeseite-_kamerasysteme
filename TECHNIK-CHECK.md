@@ -920,8 +920,17 @@ Rechtsgrundlage. Adresse: `/videoueberwachung-schlachthoefe/` (WordPress schreib
   mitlaufenden Textspalte: Dreht man das Handy vom Quer- ins Hochformat, lässt Elementor die im Querformat fixierte
   Spalte fixiert (nachgestellt: position fixed, Gerätemodus bereits „mobile“), sie legt sich hochkant über die Karten.
   Das Widget-Skript hebt die Fixierung im Hochformat jetzt über Elementors Sticky-Plugin auf (`sticky('destroy')`,
-  Spacer entfernt), beim Zurückdrehen startet Elementor sie wieder. Gilt mit der nächsten Speicherung für alle Seiten
-  mit mitlaufender Spalte.
+  Spacer entfernt), beim Zurückdrehen startet Elementor sie wieder. Mit demselben Widget auf allen fünf anderen Seiten
+  neu gespeichert. Außerdem Türfoto-Abschnitt am Handy von 750 auf 800 px Mindesthöhe: Das Handy-Bild (2552 × 2208,
+  unten, contain) ist bei 393 bzw. 430 px Breite 340 bzw. 372 px hoch; der Textkasten endet jetzt 58 bzw. 38 px über
+  der Bildoberkante, die Person bleibt frei.
+- **Geprüft nach der zweiten Runde (öffentliche Seite, neun Größen 1920/1440/1280/1024/768, Handy 393/430,
+  Querformat 852×393/932×430):** keine Überläufe, keine JavaScript-Fehler, mitlaufende Spalte im Querformat aktiv und
+  hochkant inaktiv; Drehtest Querformat → Hochformat: Spalte wieder im Fluss (vorher fixiert). Abschnitte visuell
+  geprüft: Hero (gekürzte Unterzeile, fett), Pflichtkarten, Türfoto mit freier Person, Region, FAQ. Animationen und
+  Effekte wie auf der Kamera-Seite: Hintergrundvideo im Hero, Einblendungen der Karten, Leuchtlinie und Kamera-Lottie
+  in „Stell dir mal vor“, Produkt-Slider, Akkordeon; nichts davon wurde verändert, alle greifen über dieselben
+  Element-IDs.
 - **Offen für den Kunden:** Verlinkung der neuen Seite (Hauptmenü „Main“ und Kamera-Menü sind vom Freigabesystem
   gesperrt, Vorschlag: Unterpunkt „Schlachthöfe“ unter „Mehr“ bzw. ein Teaser auf `/kamerasysteme/`); Hero-Video und
   Produktbilder sind die der Kamera-Seite, ein Schlachthof-Motiv wäre passender; Rechtslage nach dem
