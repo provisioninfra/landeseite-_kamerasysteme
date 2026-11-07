@@ -71,6 +71,7 @@ SEITEN = {
     },
 }
 SEITEN[4605] = dict(SEITEN[4496])  # Uelzen: gleiche Struktur wie Lüneburg
+SEITEN[4870] = dict(SEITEN[4313])  # Videoüberwachung Schlachthöfe (07.11.2026): aus der Kamera-Seite gebaut, gleiche Element-IDs
 
 def _sel(ids):
     return ", ".join(f".elementor-element-{i}" for i in ([ids] if isinstance(ids, str) else ids))

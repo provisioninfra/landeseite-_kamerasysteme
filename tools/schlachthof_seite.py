@@ -217,7 +217,7 @@ def walk(els):
         yield from walk(e.get("elements", []))
 
 def schema(vorhanden_html):
-    """Strukturdaten: Organisation aus der Vorlage übernehmen, Service und FAQ neu."""
+    """Strukturdaten: Organisation aus der Vorlage übernehmen, Service neu (FAQ-Schema liefert das Akkordeon)."""
     start = vorhanden_html.find("{"); ende = vorhanden_html.rfind("}") + 1
     g = json.loads(vorhanden_html[start:ende])
     org = next(x for x in g["@graph"] if x["@type"] == "LocalBusiness")
@@ -231,9 +231,9 @@ def schema(vorhanden_html):
                        {"@type": "State", "name": "Mecklenburg-Vorpommern"}, {"@type": "Country", "name": "Deutschland"}],
         "audience": {"@type": "BusinessAudience", "name": "Schlachtbetriebe und Fleischwirtschaft"},
     }
-    faq = {"@type": "FAQPage", "@id": URL + "#faq", "mainEntity": [
-        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
-    return '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@graph": [org, service, faq]}, ensure_ascii=False) + "</script>"
+    # Kein eigenes FAQPage: das Essential-Addons-Akkordeon gibt bereits ein FAQ-Schema mit allen Einträgen aus
+    # („EA FAQ Schema“); ein zweiter Block wäre eine Dublette.
+    return '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@graph": [org, service]}, ensure_ascii=False) + "</script>"
 
 def bauen(basis):
     data = copy.deepcopy(basis)
@@ -257,7 +257,7 @@ def bauen(basis):
     if not any(w.get("settings", {}).get("_title") == "Steuerung Handy-Darstellung" for w in steuerung["elements"]):
         steuerung["elements"].append(handy_darstellung.style_widget(handy_darstellung.SEITEN[4313]))
     # Seitentitel
-    data["settings"]["post_title"] = TITEL; data["title"] = TITEL; data["status"] = "draft"
+    data["settings"]["post_title"] = TITEL; data["title"] = TITEL; data["status"] = "publish"
     return data
 
 if __name__ == "__main__":
