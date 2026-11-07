@@ -901,5 +901,20 @@ Rechtsgrundlage. Adresse: `/videoueberwachung-schlachthoefe/` (WordPress schreib
   Übergangsfrist ein Jahr“ formuliert (Vorgabe des Kunden), mit Hinweis auf den ausstehenden Bundesratsdurchgang in der FAQ.
 - **Veröffentlichung:** Seite per REST als Entwurf angelegt (Slug `videoueberwachung-schlachthoefe`), Inhalte über den
   Speicherweg des Elementor-Editors gesetzt, Vorschau angemeldet in 1440, 393 und 852×393 px geprüft, dann
-  veröffentlicht; Yoast-Titel, -Beschreibung und Keyphrase „Videoüberwachung Schlachthof“ aus
-  `elementor/seo/seite-schlachthoefe.json`.
+  veröffentlicht (07.11.2026, 15:20 UTC); Yoast-Titel, -Beschreibung und Keyphrase „Videoüberwachung Schlachthof“
+  aus `elementor/seo/seite-schlachthoefe.json`, Social-Vorschau mit demselben Text.
+- **Strukturdaten-Korrektur:** Das Essential-Addons-Akkordeon gibt selbst ein FAQPage-Schema mit allen zwölf Fragen
+  aus; der eigene Block aus dem Build hatte es verdoppelt und enthält jetzt nur Organisation und Service. Das
+  Product-Schema des ProvenExpert-Shortcodes steht wie auf den anderen Seiten im Quelltext und wird vom
+  Ladeverhalten-Skript im gerenderten DOM entfernt.
+- **Geprüft:** Vorschau angemeldet in 1440, 393 und 852×393 px: H1, 17 Überschriften, zwölf FAQ-Einträge, keine
+  Überläufe, keine JavaScript-Fehler; Hero, Pflicht-Karten, FAQ und „Stell dir mal vor“ (Kamera-Lottie mittig, Karten
+  links und rechts) visuell geprüft. Live nach Veröffentlichung: HTTP 200, Titel und Beschreibung aus Yoast, kein
+  noindex, Canonical auf die neue Adresse, JSON-LD LocalBusiness/Service/FAQPage je einmal, Fristen durchgängig
+  „1. Januar 2027 … Übergangsfrist ein Jahr“. Handy-Prüfung wie bei den anderen Seiten: hochkant Footer-„Mehr“ flach,
+  Siegel 60 px, kein Überlauf; quer Textspalte neben den Karten und haftend (Elementor-Sticky aktiv, Oberkante bleibt
+  bei 16 px), Logo-Rahmen links und drei Punkte rechts, Kamera-Lottie der Computer-Variante sichtbar.
+- **Offen für den Kunden:** Verlinkung der neuen Seite (Hauptmenü „Main“ und Kamera-Menü sind vom Freigabesystem
+  gesperrt, Vorschlag: Unterpunkt „Schlachthöfe“ unter „Mehr“ bzw. ein Teaser auf `/kamerasysteme/`); Hero-Video und
+  Produktbilder sind die der Kamera-Seite, ein Schlachthof-Motiv wäre passender; Rechtslage nach dem
+  Bundesratsdurchgang und einer möglichen Rechtsverordnung zu technischen Anforderungen nachziehen.
