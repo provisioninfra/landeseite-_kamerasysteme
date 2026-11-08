@@ -55,6 +55,8 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `elementor/seo/seite-schlachthoefe.json` – Yoast-Angaben der Schlachthof-Seite
 - Umlaut-Adressen `/videoüberwachung-schlachthöfe` (und gemischte Schreibweisen) führen über drei noindex-Weiterleitungsseiten
   (IDs 4891, 4893, 4894) auf die Schlachthof-Seite; Einzelheiten in `TECHNIK-CHECK.md` (07.11.2026)
+- Umlaut-Adressen der Ortsseiten `/lüneburg/`, `/bienenbüttel/`, `/lüchow/` führen über drei weitere noindex-Weiterleitungsseiten
+  (IDs 4986, 4987, 4988) auf `/lueneburg/`, `/bienenbuettel/`, `/luechow/` (08.11.2026)
 - `tools/hero_text.py` – Hero der Startseite (ID 31) und der Kamera-Seite (ID 4313): mehr Abstand unter der Überschrift am Handy,
   zweiter Absatz gekürzt und fett; Absatztexte je Seiten-ID in `TEXTE` (07.11.2026)
 - `tools/karriere_hero.py` – Karriere-Seite (HTML-Widget): dasselbe im Hero per exakten Ersetzungen im Widget-HTML (07.11.2026)

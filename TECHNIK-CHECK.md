@@ -1049,3 +1049,27 @@ ursprüngliche Siegel genutzt werden.
   Kamera-Seite (393 px) geladen: Siegel im Hero und schwebendes Siegel zeigen das neue Motiv, ohne Änderung an der
   Website. Die Bilder liefern `cache-control: max-age=86400, no-cache`, Browser fragen also vor jeder Anzeige nach und
   zeigen das aktuelle Bild sofort.
+
+## Umlaut-Adressen der Ortsseiten (08.11.2026)
+
+Auftrag des Kunden: für alle Unterseiten, deren Adresse Umlaute umschreibt (ue/oe/ae), eine Weiterleitung bzw.
+Seite unter der Umlaut-Schreibweise. Betroffen sind drei Ortsseiten: `/lueneburg/` (ID 4496), `/bienenbuettel/`
+(4743) und `/luechow/` (4771); alle anderen Adressen (Uelzen, Celle, Gifhorn, Wittingen …) enthalten keine
+umschriebenen Umlaute, die Schlachthof-Seite hat ihre Weiterleitungsseiten seit dem 07.11.
+
+- **Umsetzung** wie bei der Schlachthof-Seite (kein Weiterleitungs-Plugin vorhanden, Alt-Slug-Weiterleitung gilt
+  nicht für Seiten): je eine Weiterleitungsseite mit prozentkodiertem Slug, Canvas-Vorlage, Meta-Refresh, Skript
+  `location.replace` und Textlink als Rückfall; Yoast noindex/nofollow.
+
+  | ID | Adresse | Ziel |
+  |---|---|---|
+  | 4986 | `/lüneburg/` | `/lueneburg/` |
+  | 4987 | `/bienenbüttel/` | `/bienenbuettel/` |
+  | 4988 | `/lüchow/` | `/luechow/` |
+
+- **Geprüft (Chromium ohne Anmeldung):** `/lüneburg/`, `/lüneburg` ohne Schrägstrich, `/Lüneburg/` mit
+  Großbuchstaben, `/bienenbüttel/`, `/lüchow/` und die prozentkodierte Form landen auf der jeweiligen Ortsseite mit
+  der richtigen H1 (1 bis 4 Sekunden). Quelltext der drei Seiten: `<meta name='robots' content='noindex, nofollow'>`,
+  in der `page-sitemap.xml` stehen nur die Hauptadressen.
+- **Grenze wie zuvor:** Weiterleitung im Browser, kein Server-301; mit einem Weiterleitungs-Plugin wären echte 301
+  möglich, dann können die Seiten gelöscht werden. Bis dahin nicht löschen, umbenennen oder ins Menü aufnehmen.

@@ -245,7 +245,7 @@ kleineres Siegel). Am Bildschirm und Tablet wirkt es nicht. Bitte nicht löschen
 betroffenen Abschnitte duplizierst oder neu anlegt, bekommt neue Element-IDs, dann greifen die Regeln dort nicht mehr
 (Rückmeldung genügt, die ID-Tabelle in `tools/handy_darstellung.py` wird dann ergänzt).
 
-## Umlaut-Adressen der Schlachthof-Seite (07.11.2026): drei Seiten, die bleiben müssen
+## Umlaut-Adressen (07./08.11.2026): sechs Weiterleitungsseiten, die bleiben müssen
 
 Unter **Seiten** stehen drei Einträge „Videoüberwachung Schlachthöfe (Weiterleitung)“ (IDs 4891, 4893, 4894). Sie
 sorgen dafür, dass `/videoüberwachung-schlachthöfe`, `/videoüberwachung-schlachthoefe` und
@@ -253,6 +253,10 @@ sorgen dafür, dass `/videoüberwachung-schlachthöfe`, `/videoüberwachung-schl
 sind für Suchmaschinen gesperrt (noindex). Bitte nicht löschen, nicht umbenennen und nicht in ein Menü aufnehmen.
 Wer später ein Weiterleitungs-Plugin (z. B. „Redirection“ oder Yoast SEO Premium) einrichtet, legt dort echte
 301-Weiterleitungen auf dieselbe Zieladresse an und kann die drei Seiten danach löschen.
+
+Dasselbe gilt für die drei Einträge „Schließanlagen & Videoüberwachung … (Weiterleitung)“ (IDs 4986, 4987, 4988):
+Sie führen `/lüneburg/`, `/bienenbüttel/` und `/lüchow/` auf die Ortsseiten `/lueneburg/`, `/bienenbuettel/` und
+`/luechow/` und sind ebenfalls für Suchmaschinen gesperrt.
 
 ## Nach der Veröffentlichung: Kurzer Check
 
