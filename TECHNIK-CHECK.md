@@ -1022,3 +1022,24 @@ gespeichert (Yoast 16:24 UTC). Vergleich des frischen Exports mit dem zuletzt vo
   keine Überläufe, keine JavaScript-Fehler, mitlaufende Spalte im Querformat aktiv und hochkant inaktiv, Siegel 60 px.
   Nach der Nachkürzung erneut 393×852 gemessen: unverändert ohne Überlauf, Abschnittshöhen gleich (Hero 484 px,
   Türfoto 800 px), H1 bricht sauber um.
+
+## ProvenExpert-Siegel ohne Sterne (08.11.2026)
+
+Frage des Kunden: Auf allen Seiten zeigen beide Siegel (Siegel im Hero, schwebendes Siegel unten rechts) nur noch
+„Kundenbewertungen – 130 Bewertungen“ statt fünf Sterne, „Sehr gut“ und 100 % Empfehlungen; es solle wieder das
+ursprüngliche Siegel genutzt werden.
+
+- **Befund Website:** Der Einbettungscode ist auf allen Seiten unverändert seit Oktober (Vergleich mit den Sicherungen
+  vom 26.10. und 02.11.: HTML-Widgets f20eb37 und 5acddce mit `widget_landscape_300_de_0.png`, schwebendes Widget
+  86d54af mit `widget_portrait_140_de_0.png`, dazu der Shortcode `[provenexpert]`, der die Sterne-Zeile weiterhin
+  mit Sternen ausgibt). Die Siegel sind Bilder, die ProvenExpert unter diesen festen Adressen erzeugt; ihr Aussehen
+  bestimmt ProvenExpert, nicht die Seite. Bildschirmfoto vom 24.10. zeigt noch das Siegel mit „100 % Empfehlungen“.
+- **Ursache (ProvenExpert-Regel):** Laut ProvenExpert-Hilfe („Why are stars, overall rating, recommendation rate and
+  awards missing on my seal?“) zeigt das Siegel nur die Anzahl der veröffentlichten Bewertungen und das Datum der
+  neuesten, sobald nicht alle Bewertungen veröffentlicht sind (nicht innerhalb von 72 Stunden freigegeben, im
+  Schlichtungsverfahren oder über dem Limit des Tarifs); sind alle veröffentlicht, schaltet es automatisch zurück.
+  Das öffentliche Profil weist am 08.11. „130 Bewertungen … von insgesamt 131“ aus, also eine unveröffentlichte
+  Bewertung, neueste veröffentlichte vom 03.11.2026 (dieses Datum steht auch im Siegel).
+- **Lösung:** im ProvenExpert-Konto die offene Bewertung freigeben (bzw. das Schlichtungsverfahren abschließen);
+  danach erscheinen Sterne, „Sehr gut“ und Empfehlungsquote auf allen Seiten in beiden Siegeln von selbst, ein neuer
+  Einbettungscode ist nicht nötig und würde denselben Stand zeigen. Auf der Website ist nichts zu ändern.
