@@ -1043,3 +1043,9 @@ ursprüngliche Siegel genutzt werden.
 - **Lösung:** im ProvenExpert-Konto die offene Bewertung freigeben (bzw. das Schlichtungsverfahren abschließen);
   danach erscheinen Sterne, „Sehr gut“ und Empfehlungsquote auf allen Seiten in beiden Siegeln von selbst, ein neuer
   Einbettungscode ist nicht nötig und würde denselben Stand zeigen. Auf der Website ist nichts zu ändern.
+- **Nachprüfung 08.11.2026, 09:08 UTC:** Nach der Freigabe im ProvenExpert-Konto hat ProvenExpert beide Siegelbilder um
+  09:07 UTC neu erzeugt (Last-Modified der Bilddateien). Sie zeigen wieder fünf Sterne, „SEHR GUT“, „100 %
+  Empfehlungen“ und jetzt „131 Kundenbewertungen“. Im Browser auf der öffentlichen Startseite (1440 px) und der
+  Kamera-Seite (393 px) geladen: Siegel im Hero und schwebendes Siegel zeigen das neue Motiv, ohne Änderung an der
+  Website. Die Bilder liefern `cache-control: max-age=86400, no-cache`, Browser fragen also vor jeder Anzeige nach und
+  zeigen das aktuelle Bild sofort.
