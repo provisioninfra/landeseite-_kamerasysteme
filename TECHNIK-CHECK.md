@@ -1023,6 +1023,35 @@ gespeichert (Yoast 16:24 UTC). Vergleich des frischen Exports mit dem zuletzt vo
   Nach der Nachkürzung erneut 393×852 gemessen: unverändert ohne Überlauf, Abschnittshöhen gleich (Hero 484 px,
   Türfoto 800 px), H1 bricht sauber um.
 
+## Ortsseiten: gleiches Prinzip im Hero (08.11.2026)
+
+Auftrag des Kunden (mit Bildschirmfotos der Startseite und der Uelzen-Seite): dieselben zwei Handgriffe wie auf
+Start- und Kamera-Seite auf allen Orts-Unterseiten. Das sind 15 Seiten: Lüneburg 4496, Uelzen 4605, Bad Bevensen
+4735, Bad Bodenteich 4739, Bienenbüttel 4743, Bleckede 4747, Celle 4751, Dannenberg 4755, Ebstorf 4759, Gifhorn 4763,
+Hitzacker 4767, Lüchow 4771, Wieren 4775, Winsen (Luhe) 4779, Wittingen 4783. Alle sind Kopien der Startseite mit
+denselben Element-IDs, deshalb reicht `tools/hero_text.py` mit der Seiten-ID; die Absatztexte je Seite stehen in
+`TEXTE`.
+
+- **Abstand:** Überschrift 9dcea29, Innenabstand unten am Handy 10 → 18 px auf allen 15 Seiten; Computer 35/15,
+  Tablet und Querformat 20 px unverändert.
+- **Absatz:** zweiter Teil der Unterzeile e429076 je Seite leicht gekürzt (Aussagen, Ortsbezug, Anfahrtszeit und
+  Du-Ansprache erhalten; meist die beiden Sätze mit Doppelpunkt und Gedankenstrich zusammengezogen, „beides
+  zusammen“ → „kombiniert“, auf Celle und Winsen der Nachsatz „das Erstgespräch ist unverbindlich“ entfernt, weil der
+  Button direkt darunter genau das sagt) und in einem span mit font-weight 700. Wörter vorher → nachher: Lüneburg
+  37 → 33, Uelzen 35 → 34, Bad Bevensen 32 → 30, Bad Bodenteich 33 → 31, Bienenbüttel 29 → 27, Bleckede 32 → 30,
+  Celle 36 → 30, Dannenberg 32 → 30, Ebstorf 29 → 28, Gifhorn 35 → 33, Hitzacker 31 → 29, Lüchow 33 → 31, Wieren
+  31 → 30, Winsen 40 → 34, Wittingen 32 → 30. Erster Absatz und Überschrift unverändert.
+- **Speichern:** je Seite frischer Export unmittelbar davor, Werkzeug, Export-Vergleich (genau die zwei Einstellungen,
+  349 bzw. 350 Elemente sonst identisch), dann Speichern (`wp/hero_runde.sh` im Arbeitsordner), 17:46 bis 18:30 UTC;
+  Parallelsitzung vorher und nachher informiert, ihre Steuer-Container auf Lüneburg und Uelzen unverändert enthalten.
+- **Geprüft (öffentliche Seiten, vorher 393 px auf allen 15, nachher 1440, 1024, 393 und 852×393 px auf allen 15, 60
+  Messungen):** Abstand Überschrift → Unterzeile am Handy überall 10 → 18 px, Computer 15, Tablet 20 und Querformat
+  20 px unverändert; Höhe der Unterzeile am Handy wie vorher (198 oder 220 px), nur Celle eine Zeile kürzer
+  (220 → 198 px); zweiter Absatz überall mit Schriftgewicht 700, Schriftgrößen unverändert. Bildschirmfotos Uelzen
+  und Celle hochkant sowie Lüneburg quer gesichtet: Überschrift, Unterzeile, fetter Absatz und Button sauber
+  untereinander, kein Überlauf. Der Hoster drosselte die Messläufe mehrfach (HTTP 429), alle Seiten wurden nach
+  Wiederholung geladen.
+
 ## ProvenExpert-Siegel ohne Sterne (08.11.2026)
 
 Frage des Kunden: Auf allen Seiten zeigen beide Siegel (Siegel im Hero, schwebendes Siegel unten rechts) nur noch
