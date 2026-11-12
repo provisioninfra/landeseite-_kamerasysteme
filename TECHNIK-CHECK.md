@@ -1102,3 +1102,45 @@ umschriebenen Umlaute, die Schlachthof-Seite hat ihre Weiterleitungsseiten seit 
   in der `page-sitemap.xml` stehen nur die Hauptadressen.
 - **Grenze wie zuvor:** Weiterleitung im Browser, kein Server-301; mit einem Weiterleitungs-Plugin wären echte 301
   möglich, dann können die Seiten gelöscht werden. Bis dahin nicht löschen, umbenennen oder ins Menü aufnehmen.
+
+## Kontaktformulare und Terminweiterleitungen auf allen Seiten geprüft (12.11.2026)
+
+Auftrag des Kunden: auf allen Haupt- und Unterseiten prüfen, ob die richtigen Kontaktformulare hinterlegt sind und
+ob auf die jeweils passenden Terminbuchungsseiten weitergeleitet wird. Nur gelesen: Quelltext aller 37
+veröffentlichten Seiten (ohne die sechs Weiterleitungsseiten), Gravity-Forms-Definitionen über die
+Formular-Schnittstelle (Felder, Bestätigungen mit Bedingungen, Benachrichtigungen), Calendly-Termintypen über die
+öffentliche Buchungsabfrage. Keine Testsendung, keine Testbuchung.
+
+- **Buttons und Links → Kontaktseite:** Startseite (5 ×) und Zutrittssystem (9 ×) → `/kontakt/`; Kamera-Seite (3 ×)
+  und Schlachthof-Seite (3 ×) → `/kontakt-kamerasysteme/`; alle 15 Ortsseiten (je 3 ×) → `/anfrage-auswahl/`
+  (Funnel). Karriere: keine Kontaktbuttons, Bewerbungen per Mail an bewerbung@provision-infra.de (gewollt). Keine Seite
+  verlinkt `/kontakt-test/`, `/kontakt-kombiniert/` wird nur über den Funnel erreicht.
+- **Formulare auf den Kontaktseiten:** `/kontakt/` Formular 2 „Anfrageformular (1)“ (Vorname, Nachname, Bereich,
+  Mitarbeitende, Türen/Zugänge, Organisation der Zugänge, E-Mail, Telefon); `/kontakt-kamerasysteme/` Formular 4
+  „Anfrageformular Kamerasysteme“ (Name, Bereich, Mitarbeitende, Gebäude, E-Mail, Telefon); `/kontakt-kombiniert/`
+  Formular 6 „Anfrageformular Schließ- & Kamerasysteme“ (Felder beider Themen); `/anfrage-auswahl/` Formular 5 „Funnel
+  Auswahl“ (eine Frage „Wofür suchst du eine Lösung?“). Alle vier aktiv, alle mit versteckten utm-/gclid-/fbclid-Feldern,
+  die aus der Adresse befüllt werden. Formular 1 „Anfrageformular“ ist auf keiner Seite eingebunden (Altbestand).
+- **Weiterleitung nach dem Absenden (Bestätigungen in Gravity Forms):**
+  - Funnel (5): „Kamerasysteme“ → `/kontakt-kamerasysteme/`, „Beides“ → `/kontakt-kombiniert/`, „Schließsystem“
+    (Standard) → `/kontakt/`; utm-Werte und die Auswahl werden als Parameter mitgegeben.
+  - Formular 2 (`/kontakt/`): Geschäftlich und nicht „1–5“/„Noch unsicher“ → `/termin-gebucht/`; Privat ab 16 Türen →
+    `/termin-gebucht/`; alles andere (Standard) → `/termin/`.
+  - Formular 4 (`/kontakt-kamerasysteme/`): Geschäftlich → `/termin-gebucht-kamerasysteme/`; Privat (Standard) →
+    `/termin-kamerasysteme/`.
+  - Formular 6 (`/kontakt-kombiniert/`): Geschäftlich → `/termin-gebucht/`; Privat (Standard) → `/termin/`.
+  - Alle Bestätigungen geben Vorname, Nachname (soweit vorhanden) und E-Mail als Parameter weiter.
+- **Terminseiten:** `/termin/` und `/termin-gebucht/` betten „Telefonisches Erstgespräch Schließsysteme“ ein
+  (`calendly.com/provision-infra/erstgespraech`), `/termin-kamerasysteme/` und `/termin-gebucht-kamerasysteme/`
+  „Telefonisches Erstgespräch Kamerasysteme“ (`…/telefonisches-erstgesprach-kamerasysteme`); die Einbettung übernimmt
+  first_name, last_name und email aus der Adresse in Calendly. Beide Termintypen sind öffentlich, 30 Minuten, und
+  leiten nach der Buchung auf `https://provision-infra.de/danke/` (Bestätigungsseite „extern“, Stand 12.11.2026).
+  `/danke/` ist vorhanden und passt zu beiden Themen. Kontakt-, Termin- und Danke-Seiten stehen auf noindex.
+- **Benachrichtigungen:** Formulare 2, 4 und 6 melden jede Sendung an anfragen@provision-infra.de; der Funnel (5)
+  verschickt nichts (nur Verteilung, gewollt).
+- **Ergebnis:** Kette auf allen Seiten stimmig, nichts zu ändern. Nebenbefunde: `/kontakt-test/` (ID 2457) ist eine
+  veröffentlichte Testkopie mit dem echten Formular 2 (noindex, nirgends verlinkt; Sendungen würden als echte Anfrage
+  ankommen); `/danke-seite/` (2465), `/opt-2/` (1606) und `/elementor-3524/` (3524) werden von keiner Bestätigung und
+  keiner Seite genutzt; der Honeypot-Spamschutz ist bei allen Formularen weiterhin aus (Empfehlung aus dem Audit vom
+  02.11.). Die Anleitung beschrieb die Kamera-Weiterleitung noch mit einer alten Regel („bei Privat oder bis 50
+  Mitarbeitenden“); korrigiert auf den tatsächlichen Stand (Geschäftlich → Termin gebucht, Privat → Termin).

@@ -101,8 +101,8 @@ schreiben, fertig. Diese Stellen lohnen einen Blick:
   Einträge** (Formular auswählen). Das Schritt-für-Schritt-Design (eine Frage pro Schritt, Button „Weiter“)
   steuert der Eintrag **Landeseiten Forms → Kontakt Kamerasysteme**; dort lassen sich Farben, Schriftgrößen und
   Button-Texte ändern.
-- **Terminbuchung:** Nach dem Absenden landet der Besucher auf /termin-kamerasysteme/ (bei Privat oder bis 50
-  Mitarbeitenden auf /termin-gebucht-kamerasysteme/). Beide Seiten zeigen den Calendly-Termintyp „Telefonisches
+- **Terminbuchung:** Nach dem Absenden landet der Besucher bei „Geschäftlich“ auf /termin-gebucht-kamerasysteme/,
+  bei „Privat“ auf /termin-kamerasysteme/ (Stand der Bestätigungen am 12.11.2026). Beide Seiten zeigen den Calendly-Termintyp „Telefonisches
   Erstgespräch Kamerasysteme“. Nach der Buchung leitet Calendly wie beim Schließsysteme-Termin auf /danke/ weiter
   (in Calendly unter dem Termintyp → Weitere Optionen → Bestätigungsseite hinterlegt). Den Termintyp selbst (Dauer,
   Fragen, Erinnerungen, Weiterleitung) pflegst du in Calendly. Die Seiten „Termin“ und „Termin Gebucht“ der
