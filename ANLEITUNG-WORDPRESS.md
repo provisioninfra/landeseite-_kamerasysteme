@@ -258,6 +258,13 @@ Dasselbe gilt für die drei Einträge „Schließanlagen & Videoüberwachung …
 Sie führen `/lüneburg/`, `/bienenbüttel/` und `/lüchow/` auf die Ortsseiten `/lueneburg/`, `/bienenbuettel/` und
 `/luechow/` und sind ebenfalls für Suchmaschinen gesperrt.
 
+## AGB-Seite (15.11.2026): Wortlaut liegt im Repo
+
+Die AGB auf `/agb/` stammen aus `inhalte/agb-2026-01.txt` (Stand Januar 2026, Kontakt hey@provision-infra.de). Kleine
+Korrekturen kannst du direkt im Elementor-Editor im Text-Widget machen; bei größeren Änderungen die Textdatei
+anpassen und das Werkzeug `tools/agb_seite.py` neu laufen lassen, dann bleiben Inhaltsverzeichnis und Sprungmarken
+automatisch stimmig.
+
 ## Nach der Veröffentlichung: Kurzer Check
 
 - Seite im **privaten Browserfenster** öffnen: Wird alles angezeigt, läuft das Video?

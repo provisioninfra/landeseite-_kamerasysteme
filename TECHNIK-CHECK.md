@@ -1144,3 +1144,31 @@ Formular-Schnittstelle (Felder, Bestätigungen mit Bedingungen, Benachrichtigung
   keiner Seite genutzt; der Honeypot-Spamschutz ist bei allen Formularen weiterhin aus (Empfehlung aus dem Audit vom
   02.11.). Die Anleitung beschrieb die Kamera-Weiterleitung noch mit einer alten Regel („bei Privat oder bis 50
   Mitarbeitenden“); korrigiert auf den tatsächlichen Stand (Geschäftlich → Termin gebucht, Privat → Termin).
+
+## AGB-Seite: neue Fassung eingebaut (15.11.2026)
+
+Auftrag des Kunden: die gelieferten AGB-Textbausteine (Abschnitte A bis F, Ziffern 1 bis 23, Preisliste,
+Widerrufsbelehrung mit Muster-Widerrufsformular) sinnvoll in die Seite `/agb/` (ID 782) einbauen; Nachtrag: E-Mail
+hey@provision-infra.de statt der Info-Adresse und Stand „Januar 2026“ statt „November 2026“ (drei Stellen: Kopf,
+Ziffer 22, Schlusszeile).
+
+- **Quelle im Repo:** `inhalte/agb-2026-01.txt` (Wortlaut des Kunden mit den beiden Nachträgen). Einbau mit
+  `tools/agb_seite.py` auf einem frischen Export: nur Überschrift 5ed217e (H1 jetzt „Allgemeine Geschäftsbedingungen
+  der ProVision Infra GmbH“) und das Text-Widget d3d6ae8 (Inhalt und Widget-CSS) geändert; Logo-Kopf, Footer und die
+  Widget-Einstellungen (globale Schrift und Textfarbe) unverändert. Vorher stand dort die Fassung „Stand: Dezember 2025“
+  als unformatierter Textblock (1.655 Wörter) in einem fremden Rahmen-DIV.
+- **Aufbau wie die Datenschutzerklärung** (Überschriften und Absätze im Text-Widget): Vorspann mit Anschrift,
+  Registerangaben und Stand; Inhaltsverzeichnis mit Sprungmarken zu den sechs Abschnitten und 23 Ziffern; Abschnitte
+  als h2, Ziffern als h3, Absätze (1)…(n) als p; der Hinweis „(Ziffern 3 bis 15 gelten ergänzend.)“ kursiv; in Ziffer
+  23 die Vorspannwörter Widerrufsrecht, Folgen des Widerrufs und Vorzeitiges Erlöschen fett, das
+  Muster-Widerrufsformular als Kasten mit einer Zeile je Angabe; Schlusszeile mit Stand. Gerade Anführungszeichen
+  wurden zu „…“, Datenschutzerklärung, OS-Plattform, E-Mail und Telefon sind Links. Der Wortlaut ist unverändert
+  (Prüfung: jeder Satz der Quelldatei kommt im sichtbaren Text vor).
+- **Gespeichert** 15.11.2026, 23:55 UTC (frischer Export unmittelbar davor, Export-Vergleich: 18 Elemente, nur die drei
+  genannten Einstellungen), Parallelsitzung vorher und nachher informiert.
+- **Geprüft live (1440, 1024, 393 und 852×393 px):** eine H1, sechs h2, 23 h3, 29 Sprungmarken mit vorhandenem Ziel,
+  kein Überlauf, keine JavaScript-Fehler, 4.077 Wörter; „Januar 2026“ viermal (Kopf, Inhaltsverzeichnis, Ziffer 22,
+  Schlusszeile), „November 2026“ und die Info-Adresse nicht mehr vorhanden, hey@provision-infra.de zweimal.
+  Bildschirmfotos am Computer und am Handy (Kopf, Inhaltsverzeichnis, Ziffer 23) gesichtet.
+- **Pflege:** Künftige Änderungen in `inhalte/agb-2026-01.txt` (oder einer neuen Datei) eintragen, Werkzeug auf einen
+  frischen Export anwenden, speichern; Regeln für Überschriften und Absätze stehen im Werkzeug.

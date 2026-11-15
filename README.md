@@ -57,6 +57,8 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
   (IDs 4891, 4893, 4894) auf die Schlachthof-Seite; Einzelheiten in `TECHNIK-CHECK.md` (07.11.2026)
 - Umlaut-Adressen der Ortsseiten `/lüneburg/`, `/bienenbüttel/`, `/lüchow/` führen über drei weitere noindex-Weiterleitungsseiten
   (IDs 4986, 4987, 4988) auf `/lueneburg/`, `/bienenbuettel/`, `/luechow/` (08.11.2026)
+- `tools/agb_seite.py`, `inhalte/agb-2026-01.txt` – AGB-Seite (ID 782): Wortlaut des Kunden als Textdatei, Werkzeug baut daraus
+  Vorspann, Inhaltsverzeichnis, Abschnitte (h2), Ziffern (h3), Absätze und das Muster-Widerrufsformular ins Text-Widget (15.11.2026)
 - `tools/hero_text.py` – Hero der Startseite (ID 31), der Kamera-Seite (4313) und der 15 Ortsseiten (4496, 4605, 4735–4783):
   mehr Abstand unter der Überschrift am Handy, zweiter Absatz gekürzt und fett; Absatztexte je Seiten-ID in `TEXTE` (07./08.11.2026)
 - `tools/karriere_hero.py` – Karriere-Seite (HTML-Widget): dasselbe im Hero per exakten Ersetzungen im Widget-HTML (07.11.2026)
