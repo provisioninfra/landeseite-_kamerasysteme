@@ -50,8 +50,18 @@ TAUSCH = {  # alte URL: (neue URL, neue Mediathek-ID)
     UP + "2026/10/kamera-4.png": (N + "kamera-4-1600-q90.webp", 5220),
     UP + "2026/10/kamera-5.png": (N + "kamera-5-1600-q90.webp", 5223),
     UP + "2026/05/Germany.png": (N + "karte-deutschland-558-q95.webp", 5226),
+    # Handy-Ausschnitte der Startseite (bearbeitete Kopien ohne Sicherung): aus den Originalen neu geschnitten, q88
+    UP + "2026/06/Untitled-design-14-1-e1781622175463.png": (N + "foto-serverraum-handy-1276-q88.webp", 5244),
+    UP + "2026/06/Untitled-design-15-1-e1781625191894.png": (N + "foto-gruender-tuer-handy-1332-q88.webp", 5245),
 }
-VIDEO = {N + "zutritt-hero-desktop-1920.mp4": N + "zutritt-hero-desktop-2560.mp4"}
+VIDEO = {  # Handy-Hero-Videos: die erste Neukodierung (CRF 24) war in den goldenen Leuchtbereichen sichtbar grob (PSNR 34 dB);
+    # neu mit CRF 14 (Banner, 2,5 MB statt 15 MB) bzw. CRF 17 (Zutritt Handy, 1,2 MB), Desktop 2560 px CRF 21
+    N + "zutritt-hero-desktop-1920.mp4": N + "zutritt-hero-desktop-2560.mp4",
+    N + "zutritt-hero-handy-1080.mp4": N + "zutritt-hero-handy-1080-q17.mp4",
+    N + "banner-video-handy-1080.mp4": N + "banner-video-handy-1080-q14.mp4",
+    UP + "2026/05/Main-Banner-Video-6.mp4": N + "banner-video-handy-1080-q14.mp4",
+    "https://dev-ls-de-532018.hostingersite.com/wp-content/uploads/2026/05/Main-Banner-Video-6.mp4": N + "banner-video-handy-1080-q14.mp4",
+}
 
 # Weiche Ränder: Element-ID -> Kanten, die ausgeblendet werden (aus der Messung); Prozentwerte beziehen sich auf die Höhe
 MASKEN = {
