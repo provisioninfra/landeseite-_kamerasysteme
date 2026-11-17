@@ -1252,3 +1252,11 @@ Antworten des Kunden und Plan stehen in `SEO-CHECK-2026-11.md`. Umgesetzt, jewei
   (öffentlich nachgesehen); Hersteller-Partner EVVA, SimonsVoss, Keyota, NUKI, Keyrent, TP-Link, Omada (für Stufe C);
   drei Presseartikel (Unternehmerjournal, Arbeitgebermagazin, Gewinnermagazin, April 2026) verlinken die Seite nur
   mit nofollow.
+- **A7 Hero-Videos (Hinweis der Parallelsitzung, Lighthouse mobil 17.11.: `/zutrittssystem/` lud 9,9 MB Video, LCP
+  16 s):** Die Zutrittssystem-Seite nutzte eigene Originale (3840×2160 mit Tonspur 6,2 MB, 2026×2160 3,7 MB) und in
+  zwei Handy-/Tablet-Containern das 15-MB-Video `Main-Banner-Video-6.mp4` (2880×2880, 29 Mbit/s), eines davon noch
+  vom alten Entwicklungs-Host; dasselbe 15-MB-Video steckte im Handy-Container 67b8213 der Kamera- und der
+  Schlachthof-Seite. Mit ffmpeg ohne Tonspur neu gerechnet (H.264, CRF 24, faststart): 1920×1080 319 KB,
+  1014×1080 268 KB, 1080×1080 294 KB; Ähnlichkeit zum Original (SSIM) 0,99. In die Mediathek geladen (IDs 5086, 5087,
+  5090) und mit `tools/video_tausch.py` getauscht (nur `background_video_link`): 3316 um 21:29 UTC (4 Verweise),
+  4313 um 21:31 UTC und 4870 um 21:33 UTC (je 1 Verweis). Funktionsprüfung und Messung im Anschluss (siehe unten).
