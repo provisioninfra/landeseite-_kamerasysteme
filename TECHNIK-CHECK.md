@@ -1260,3 +1260,8 @@ Antworten des Kunden und Plan stehen in `SEO-CHECK-2026-11.md`. Umgesetzt, jewei
   1014×1080 268 KB, 1080×1080 294 KB; Ähnlichkeit zum Original (SSIM) 0,99. In die Mediathek geladen (IDs 5086, 5087,
   5090) und mit `tools/video_tausch.py` getauscht (nur `background_video_link`): 3316 um 21:29 UTC (4 Verweise),
   4313 um 21:31 UTC und 4870 um 21:33 UTC (je 1 Verweis). Funktionsprüfung und Messung im Anschluss (siehe unten).
+- **A7 Bildertausch, Ergebnis:** 22 Seiten gespeichert (21:11 bis 21:55 UTC, je frischer Export, 1 bis 14 Bildfelder je
+  Seite, 0 Fehler; Karriere übersprungen, nutzt die Bilder nicht). Nachtrag Zutrittssystem (21:38 UTC): eigene
+  Juli-Kopien von Ellipse-3 und Rahmen auf die neuen Dateien, dazu das Handybild `Untitled-design-3.png` (1378×1325,
+  2,2 MB) als WebP 46 KB (Mediathek 5105); Darstellung geprüft (scharf, Seitenverhältnis gleich). Zutrittssystem mobil:
+  4,9 → 2,3 MB Übertragung.
