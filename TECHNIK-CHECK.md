@@ -1265,3 +1265,20 @@ Antworten des Kunden und Plan stehen in `SEO-CHECK-2026-11.md`. Umgesetzt, jewei
   Juli-Kopien von Ellipse-3 und Rahmen auf die neuen Dateien, dazu das Handybild `Untitled-design-3.png` (1378×1325,
   2,2 MB) als WebP 46 KB (Mediathek 5105); Darstellung geprüft (scharf, Seitenverhältnis gleich). Zutrittssystem mobil:
   4,9 → 2,3 MB Übertragung.
+- **A3 Footer, Ergebnis:** mit `tools/footer_block.py` auf 21 Seiten gespeichert (21:57 bis 22:36 UTC, je frischer
+  Export, Prüfung: nur die drei neuen Container-IDs und die Felder `editor`/`icon_list` geändert, 0 Fehler); Karriere-
+  Seite hat keinen Standard-Footer und blieb unverändert. Die Startseite hatte schon eine „Leistungen:“-Zeile (um
+  Zutrittssystem und Schlachthöfe ergänzt), deshalb dort nur die Zeile „Standorte“ neu.
+- **A4 Menü:** Die Seiten nutzen eigene WordPress-Menüs (Start „Main“, Kamera/Schlachthof „Menü Kamerasysteme
+  (Header)“, Ortsseiten „Menü Lüneburg“/„Menü Uelzen“, Zutrittssystem „Secandary Menu“), die Kopfzeile ist Teil jeder
+  Seite. Über die REST-Schnittstelle (`wp/v2/menu-items`, Anmelde-Cookie + Nonce) im Aufklappmenü „Mehr“ ergänzt:
+  Startseite → Zutrittssystem, Kamera- & Videosicherheit, Videoüberwachung Schlachthöfe (vor „Komm in unser Team“);
+  Kamera-Menü → Digitale Schließanlagen, Zutrittssystem, Videoüberwachung Schlachthöfe. Keine neuen Punkte in der
+  obersten Ebene, damit die Kopfzeile auf keiner Breite umbricht; Ortsseiten- und Zutritt-Menü unverändert (die
+  Ortsseiten verlinken beide Leistungsseiten im Text, der Footer trägt jetzt alle Standorte und Leistungen).
+  Live geprüft 22:46 UTC.
+- **A5 Interne Links:** Bestand geprüft (Exporte): jede Ortsseite verlinkt Zutrittssystem und Kamera-Seite im Text,
+  Start verlinkt beide, Kamera ↔ Zutritt beidseitig. Gefehlt hat nur Schlachthof → Zutritt: im Regions-Absatz der
+  Schlachthof-Seite (Widget 5c65e03) wurde „digitale Zutrittskontrolle“ mit `tools/text_link.py` verlinkt (nur
+  dieses Feld geändert, gespeichert 22:41 UTC). Kamera → Schlachthof läuft über den neuen Footer-Block (der
+  Kamera-Text nennt Schlachthöfe nicht; kein neuer Text laut Vorgabe).
