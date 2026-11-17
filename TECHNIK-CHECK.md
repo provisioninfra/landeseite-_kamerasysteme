@@ -1210,3 +1210,45 @@ Parallelsitzung vorher und nachher informiert.
   Handy. ProVision Infra installiert vor Ort.“ (155 Zeichen); Social-Titel bleiben „Kamera- & Videosicherheit für
   Unternehmen | ProVision Infra“, WordPress-Seitentitel bleibt „Kamera- & Videosicherheit“. Nur über den Editor
   gesetzt (keine Elementor-Speicherung), live geprüft; Yoast-Titelbewertung wieder 83 (vorher 61 ohne Suchbegriff).
+
+## SEO-Check, Stufe A umgesetzt (17.11.2026, Freigabe des Kunden: „nichts Gravierendes ändern“)
+
+Antworten des Kunden und Plan stehen in `SEO-CHECK-2026-11.md`. Umgesetzt, jeweils nur lesend geprüft und ohne
+Änderung an Wording, Aufbau oder Animationen:
+
+- **A1 Product-Schema entfernt:** Das Siegel kommt aus `provenexpert.php` im Child-Theme „Landeseiten Design Child“
+  (ProvenExpert-Skript, gibt `aggregateRating` der ProvenExpert-API aus, darin das JSON-LD „Product“ mit
+  Eigenbewertung). Über den Theme-Datei-Editor wurde nur die Ausgabezeile geändert: `preg_replace` entfernt den
+  `<script type="application/ld+json">`-Block, Sterne und Link bleiben (Kopie der alten Datei im Arbeitsordner).
+  Live: kein Product-Knoten mehr auf allen Seiten, Sterne-Widget unverändert, keine PHP-Warnung.
+- **A6 BugHerd:** Elementor-Custom-Code „Bugherd“ (ID 1598, global, Kopf) auf Entwurf gesetzt; das Skript lädt nicht
+  mehr (zwei Anfragen weniger je Seite).
+- **A2 Yoast-Organisation:** Website-Repräsentation „Organisation“, Name „ProVision Infra GmbH“, Alternativname
+  „ProVision Infra“, Logo Mediathek 4479 (1032×240), Profile Facebook, Instagram, LinkedIn. Beschreibung, E-Mail,
+  Telefon, Rechtsname und USt-ID sind in Yoast Free gesperrt (Premium). Live: Organization-Knoten im Schema aller
+  Seiten.
+- **A9 Titel:** Startseite „Digitale Schließanlage für Unternehmen in Norddeutschland“ (Yoast-Bewertung 100, Marke
+  erscheint bei Google als Website-Name), Zutrittssystem „Elektronische Schließanlage & Zutrittskontrolle mit Service“;
+  Beschreibungen unverändert.
+- **A8 WP Rocket:** CSS minifizieren, JavaScript minifizieren, CSS-Hintergrundbilder lazy laden, iframes lazy laden,
+  WebP-Cache (Imagify hat für 27 von 40 Bildern der Kamera-Seite WebP-Dateien; WP Rocket tauscht nur, wo die Datei
+  existiert) aktiviert; Zusammenfassen, Defer und Delay JS bewusst aus (Animationen, Lotties, Sticky). Danach beide
+  Caches geleert (WP Rocket und Varnish des Hosters über die Admin-Leiste; der Varnish-Cache hält Seiten sonst bis
+  zu einer Stunde). Funktionsprüfung Start-, Kamera- und Lüneburg-Seite am PC und Handy: Lotties, Hero-Videos,
+  Zähler, Akkordeon, Sticky-Spalte in Ordnung, keine JavaScript-Fehler. Messung Startseite mobil: LCP 3,46 → 2,0 bis
+  2,3 s. Nebenbefund: vier dekorative Bilddateien liefern 404 (zwei SVG, `image-111111722.png`), vorher schon.
+- **A7 Hintergrundbilder:** sechs dekorative PNGs (1,9 MB) als verkleinerte Dateien in die Mediathek geladen
+  (IDs 5066–5071, 0,8 MB; optischer Vergleich der Abschnitte: mittlere Abweichung unter 3/255), Tausch der Verweise
+  mit `tools/bilder_tausch.py` je Seite (frischer Export, nur Bildfelder geändert) auf allen 23 Seiten; Zeiten im
+  Arbeitsprotokoll des Werkzeugs.
+- **A3 Footer:** `tools/footer_block.py` ergänzt je Seite im bestehenden Footer eine Zeile „Leistungen“ (Schließanlagen,
+  Zutrittssystem, Kamera- & Videosicherheit, Schlachthöfe, Karriere) und „Standorte“ (15 Ortsseiten) im Stil der
+  Datenschutz-Liste sowie unter dem Copyright die Firmendaten (Anschrift, Telefon, E-Mail als Links). Vorschau auf
+  `/zutrittssystem/` (21:18 UTC), Bildschirmfotos PC und Handy dem Kunden gezeigt; Ausrollen auf die übrigen Seiten
+  nach dem Bildertausch. Die Karriere-Seite hat keinen Standard-Footer (eigenes HTML) und bleibt außen vor.
+- **Nicht möglich aus dieser Umgebung:** Google-Anmeldung (Captcha), Bing/Qwant-Abfragen (Bot-Sperre),
+  PageSpeed-Schnittstelle (Kontingent). Kunde liefert Search-Console-Export und Google-Bildschirmfotos nach.
+- **Weitere Antworten des Kunden:** Google-Profil 5,0 mit 24 Bewertungen, Kategorie „Anbieter von Sicherheitssystemen“
+  (öffentlich nachgesehen); Hersteller-Partner EVVA, SimonsVoss, Keyota, NUKI, Keyrent, TP-Link, Omada (für Stufe C);
+  drei Presseartikel (Unternehmerjournal, Arbeitgebermagazin, Gewinnermagazin, April 2026) verlinken die Seite nur
+  mit nofollow.

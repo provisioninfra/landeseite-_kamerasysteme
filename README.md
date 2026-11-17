@@ -59,6 +59,9 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
   (IDs 4891, 4893, 4894) auf die Schlachthof-Seite; Einzelheiten in `TECHNIK-CHECK.md` (07.11.2026)
 - Umlaut-Adressen der Ortsseiten `/lüneburg/`, `/bienenbüttel/`, `/lüchow/` führen über drei weitere noindex-Weiterleitungsseiten
   (IDs 4986, 4987, 4988) auf `/lueneburg/`, `/bienenbuettel/`, `/luechow/` (08.11.2026)
+- `tools/bilder_tausch.py` – sechs große Hintergrund-PNGs gegen verkleinerte Versionen tauschen (alle Seiten, 17.11.2026)
+- `tools/footer_block.py` – Footer je Seite: Zeile „Leistungen“/„Standorte“ mit Links zu allen Seiten und Firmendaten unter dem
+  Copyright (17.11.2026)
 - `tools/kamera_wording.py` – Kamera-Seite (ID 4313): Wording „Kamera- & Videosicherheitssysteme“ in H1, Unterzeile und
   Leistungsüberschrift; Modus `seo`: Strukturdaten und Seitentitel „Kamera- & Videosicherheit“ für den Google-Eintrag (17.11.2026)
 - `tools/agb_seite.py`, `inhalte/agb-2026-01.txt` – AGB-Seite (ID 782): Wortlaut des Kunden als Textdatei, Werkzeug baut daraus
