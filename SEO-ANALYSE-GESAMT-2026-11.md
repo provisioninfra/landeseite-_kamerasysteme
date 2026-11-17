@@ -146,6 +146,13 @@ AGB, Datenschutz, Impressum, Startseite). Externe Links: Facebook, LinkedIn, Pro
 | /karriere/ | Karriere bei ProVision Infra: Jobs in Bad Bevensen (50) | 152 | Komm ins Team … | 1.663 | 0/7 | 8 |
 | /impressum/, /datenschutz/, /agb/ | kurz, ohne Description | – | ja | 181 / 5.381 / 3.812 | – | – |
 
+Nachtrag 17.11.2026 (18:58–19:10 UTC, parallele Sitzung im Kundenauftrag): Die Tabelle zeigt /kamerasysteme/ im Stand des
+Crawls. Seit dem Abend lauten dort H1 und eine H2 auf „Kamera- & Videosicherheitssysteme“, der Yoast-Titel „Kamera- &
+Videosicherheit: Videoüberwachung für Unternehmen“ (58 Zeichen), die Description „Kamera- & Videosicherheit für Unternehmen:
+DSGVO-konforme Videoüberwachung von Hamburg bis Hannover, Alarm aufs Handy. ProVision Infra installiert vor Ort.“, der
+WordPress-Seitentitel „Kamera- & Videosicherheit“; Name und Beschreibung des Service-Schemas wurden entsprechend angepasst.
+Das Hauptkeyword „Videoüberwachung“ bleibt damit in Titel und Description erhalten, fehlt aber in H1 und H2.
+
 Beobachtungen:
 
 - **Titel folgen einem Muster** „Leistung + Ort | Marke“. Das ist korrekt, aber auf 15 Stadtseiten identisch aufgebaut. Der
