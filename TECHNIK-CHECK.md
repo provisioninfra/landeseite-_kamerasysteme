@@ -1282,3 +1282,31 @@ Antworten des Kunden und Plan stehen in `SEO-CHECK-2026-11.md`. Umgesetzt, jewei
   Schlachthof-Seite (Widget 5c65e03) wurde „digitale Zutrittskontrolle“ mit `tools/text_link.py` verlinkt (nur
   dieses Feld geändert, gespeichert 22:41 UTC). Kamera → Schlachthof läuft über den neuen Footer-Block (der
   Kamera-Text nennt Schlachthöfe nicht; kein neuer Text laut Vorgabe).
+
+## Harte Farbstufen und abgeschnittene Leuchtflächen (17./18.11.2026, Kundenhinweis mit Bildschirmfotos)
+
+Befund nach Messung an Originaldateien, Live-CSS und Bildschirmfotos bei 2560 px:
+
+1. **Ringe in den Leuchtflächen.** Die blauen und goldenen Leuchtflächen (Ellipse-3/-4, Overlay 1/2, Ellipse-5 und die
+   Kopien der Karriere-Seite) lagen seit Mai als Palette-PNG mit nur 12–15 Alphastufen vor – Imagify hatte die
+   Uploads des Designers verlustbehaftet quantisiert (die unberührten Originale liegen noch unter
+   `uploads/backup/`, z. B. Ellipse-3 mit 907 Farben, 3,9 MB). Die erste Runde des SEO-Checks (A7) hatte die Stufen
+   auf 6–7 reduziert und Imagify hat die neuen Dateien auf dem Server nochmals komprimiert (z. B. 302 → 130 KB) –
+   deshalb nach der Umstellung deutlich sichtbare Ringe und getönte Rechtecke. Lösung: Alphakanal der Originale mit
+   Gauß-Filter (σ 40 px) geglättet, Farbe und Ausdehnung unverändert, verlustfreies WebP (45–85 KB, 141–148
+   Stufen, kein Schritt über 1 Stufe); Imagify-Automatik während der Uploads aus, Live-Dateien byteidentisch geprüft.
+2. **Weitere quantisierte Dateien** (Hero-Hintergrund `Untitled-design-13`, Kopffoto, Türgriff, drei Fotos,
+   fünf Kamerabilder, Deutschlandkarte, Rahmen): aus den Sicherungen als WebP q88–q95 (PSNR auf Seitenblau
+   40–53 dB) neu erzeugt.
+3. **Abgeschnittene Leuchtflächen an Abschnittsgrenzen.** Zwei Overlays je Seite sind bewusst größer als ihr
+   Abschnitt (Element 55b8573 bzw. 9a7495a: 40 % Breite, 25 px nach oben versetzt, unten abgeschnitten mit bis zu
+   15 Stufen Sprung; Element ddbba36 bzw. 772b72df: 94 % Breite, −472/−6xx px versetzt, oben und unten
+   abgeschnitten). Gemessen mit `seo/cuts.mjs` (Bildkasten aus background-size/-position wie im Browser, Alpha an der
+   Elementkante aus der Bilddatei) bei 2560, 1366 und 390 px auf allen Seiten. Lösung ohne Eingriff in Größe oder
+   Position: `mask-image` auf dem Overlay (`::before`) blendet zum betroffenen Rand über 18 % der Höhe aus
+   (`tools/hintergrund_runde3.py`, Kennung `pv-weich` im Element-CSS).
+4. **Videos:** geprüft, keine Verschlechterung durch die Neukodierung (PSNR in dunklen Flächen ~50 dB, gleiche
+   Zahl Helligkeitsstufen, ein Keyframe, kein Pulsieren). Für große Bildschirme zusätzlich 2560×1440 (1,3 MB).
+5. **Pulsieren:** Auf den Seiten laufen nur die schwebenden Karten (`floating`, 3 s) und der Play-Button
+   (`play-pulse`); keine Animation auf Hintergründen. Die wahrgenommenen Pulsierungen sind die bei Bewegung
+   auffälligen Ringe der Leuchtflächen.
