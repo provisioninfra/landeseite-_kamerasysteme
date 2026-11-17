@@ -20,7 +20,8 @@ UP = "https://provision-infra.de/wp-content/uploads/"
 N = UP + "2026/11/"
 TAUSCH = {  # alte URL: (neue URL, neue Mediathek-ID)
     # Runde 2 (wiederholbar)
-    N + "hintergrund-ellipse-3-1200.webp": (N + "hintergrund-ellipse-3-glatt.webp", 5180),
+    N + "hintergrund-ellipse-3-1200.webp": (N + "hintergrund-ellipse-3-glatt2.webp", 5227),
+    N + "hintergrund-ellipse-3-glatt.webp": (N + "hintergrund-ellipse-3-glatt2.webp", 5227),  # Runde-2-Datei: linker Rand weich (Alpha 11 → 0)
     N + "hintergrund-ellipse-4-1083.png": (N + "hintergrund-ellipse-4-glatt.webp", 5181),
     N + "hintergrund-overlay-1-1083.png": (N + "hintergrund-overlay-1-glatt.webp", 5182),
     N + "hintergrund-overlay-2-1083.png": (N + "hintergrund-overlay-2-glatt.webp", 5183),
@@ -28,7 +29,7 @@ TAUSCH = {  # alte URL: (neue URL, neue Mediathek-ID)
     N + "hintergrund-verlauf-1200.webp": (N + "hintergrund-verlauf-q95.webp", 5185),
     N + "zutritt-handy-bild-1378.webp": (N + "zutritt-handy-bild-q96.webp", 5186),
     # Karriere-Seite: Kopien derselben Leuchtflächen (im HTML-Widget)
-    UP + "2026/10/glow-ellipse-3-1.png": (N + "hintergrund-ellipse-3-glatt.webp", 5180),
+    UP + "2026/10/glow-ellipse-3-1.png": (N + "hintergrund-ellipse-3-glatt2.webp", 5227),
     UP + "2026/10/glow-ellipse-4-1.png": (N + "hintergrund-ellipse-4-glatt.webp", 5181),
     UP + "2026/10/glow-left-1.png": (N + "hintergrund-overlay-1-glatt.webp", 5182),
     UP + "2026/10/glow-right-1.png": (N + "hintergrund-overlay-2-glatt.webp", 5183),
