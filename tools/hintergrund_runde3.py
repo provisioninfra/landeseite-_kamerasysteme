@@ -82,9 +82,13 @@ def footer_ausrichten(data):
         if e.get("id") != "a1f0071":
             continue
         kinder = e.get("elements", [])
-        if any(k.get("id") == "a1f0074" for k in kinder):
-            return 0  # schon umgebaut
+        NULL = {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": True}
         s = e.setdefault("settings", {})
+        if any(k.get("id") == "a1f0074" for k in kinder):
+            if s.get("padding") != NULL:  # schon umgebaut, aber noch Standard-Innenabstand (10 px) des Containers
+                s["padding"] = NULL
+                return 1
+            return 0
         innen = {
             "id": "a1f0074", "elType": "container", "isInner": True, "elements": kinder,
             "settings": {
@@ -97,8 +101,9 @@ def footer_ausrichten(data):
         e["elements"] = [innen]
         s["content_width"] = "boxed"
         s["boxed_width"] = {"unit": "px", "size": 1400, "sizes": []}
-        for k in ("border_border", "border_width", "border_color", "padding"):
+        for k in ("border_border", "border_width", "border_color"):
             s.pop(k, None)
+        s["padding"] = NULL  # sonst 10 px Standard-Innenabstand: Listen bei schmalen Breiten 10 px eingerückt
         return 1
     return 0
 
