@@ -1321,3 +1321,20 @@ Befund nach Messung an Originaldateien, Live-CSS und Bildschirmfotos bei 2560 px
   Ellipse-5, Karriere-Kopien), weiche Ausblendung der sieben gemessenen Overlays, Footer-Block auf 1400 px zentriert
   (neuer innerer Container a1f0074 trägt Linie und Abstand). Zeiten im Arbeitsprotokoll; Imagify-Automatik nach den
   Uploads wieder eingeschaltet (23:35 UTC).
+
+**Nachträge Handy/Tablet (18.11.2026, 00:00 UTC, Kundenhinweis „gelbe Farbpulsierungen“ auf Mobilgeräten):**
+
+- **Handy-Hero-Videos:** Die erste Neukodierung (CRF 24) war in den goldenen Leuchtbereichen des Banner-Videos
+  (Schlüsselloch-Glanz) messbar grob: PSNR im Gold 34 dB, mittlere Abweichung 3,6 Stufen – das flackert beim
+  Abspielen als gelbes Pulsieren. Neu: Banner 1080×1080 CRF 14 (2,5 MB statt 15 MB; Gold 40 dB, 1,8 Stufen),
+  Zutritt-Handy 1014×1080 CRF 17 (1,2 MB). Außerdem hing auf 14 Ortsseiten im Handy-Container 67b8213 noch das
+  15-MB-Original `Main-Banner-Video-6.mp4` – wird in Runde 3 mit getauscht.
+- **Handy-Fotoausschnitte der Startseite** (`Untitled-design-14-1-e…`, `-15-1-e…`, mit dem WordPress-Bildeditor
+  zugeschnitten, daher ohne Imagify-Sicherung, 97–131 Farben): Ausschnitt per Bildvergleich in den Originalen
+  bestimmt (x = 1124 bzw. 1068, Abweichung 3,2 Stufen zur quantisierten Fassung) und neu als WebP q88 geschnitten.
+- **Nachladen von Hintergründen:** Elementor setzt Hintergrundbilder ab dem vierten Abschnitt erst, wenn der
+  Abschnitt bis etwa 100 px an das Sichtfenster heranrückt (Klasse `e-lazyloaded`); Overlays (::before) sind nicht
+  betroffen. Gemessen auf dem Handy: Hintergrund gesetzt, sobald die Oberkante 50 px unter dem Sichtfenster liegt.
+  Nicht geändert (Sichtbarkeit erst nach der Endprüfung beurteilen).
+- **Anmeldesitzung** lief um 23:47 UTC ab (Runde 3 war bei 5 von 37 Seiten); neu angemeldet, Runde 3 ab 23:58 UTC
+  vollständig neu gestartet (Werkzeug wiederholbar: bereits fertige Seiten erhalten nur die noch fehlenden Änderungen).
