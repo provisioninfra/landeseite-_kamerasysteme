@@ -18,6 +18,10 @@ TAUSCH = {  # alte URL: (neue URL, neue Mediathek-ID)
     UPLOADS + "2026/05/Ellipse-4.png": (UPLOADS + "2026/11/hintergrund-ellipse-4-1083.png", 5069),
     UPLOADS + "2026/06/1.png": (UPLOADS + "2026/11/hintergrund-overlay-1-1083.png", 5070),
     UPLOADS + "2026/06/2.png": (UPLOADS + "2026/11/hintergrund-overlay-2-1083.png", 5071),
+    # Zutrittssystem-Seite (3316): eigene Kopien der Hintergründe von Juli und ein 2,2-MB-Handybild
+    UPLOADS + "2026/07/Ellipse-3.png": (UPLOADS + "2026/11/hintergrund-ellipse-3-1200.webp", 5068),
+    UPLOADS + "2026/07/Frame-2147224855.png": (UPLOADS + "2026/11/hintergrund-rahmen-802.webp", 5067),
+    UPLOADS + "2026/08/Untitled-design-3.png": (UPLOADS + "2026/11/zutritt-handy-bild-1378.webp", 5105),
 }
 
 
