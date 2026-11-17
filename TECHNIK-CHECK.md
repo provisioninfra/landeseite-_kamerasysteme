@@ -1310,3 +1310,14 @@ Befund nach Messung an Originaldateien, Live-CSS und Bildschirmfotos bei 2560 px
 5. **Pulsieren:** Auf den Seiten laufen nur die schwebenden Karten (`floating`, 3 s) und der Play-Button
    (`play-pulse`); keine Animation auf Hintergründen. Die wahrgenommenen Pulsierungen sind die bei Bewegung
    auffälligen Ringe der Leuchtflächen.
+
+**Umsetzung in drei Speicherrunden** (je Seite frischer Export, Werkzeug, strenge Diff-Prüfung, Veröffentlichen):
+
+- Runde 2 (`tools/bilder_glatt.py`, 23:02–23:34 UTC): glatte Leuchtflächen, Rahmen und Gründerfoto aus den Originalen,
+  Handybild q96, Zutritts-Hero-Video 2560 px – 15 Seiten (3316, 31, 4313, 4870, 4496–4767), dann zugunsten von Runde 3
+  gestoppt.
+- Runde 3 (`tools/hintergrund_runde3.py`, ab 23:35 UTC, alle 37 veröffentlichten Seiten inkl. Karriere, Kontakt-,
+  Termin- und Danke-Seiten): restliche Dateien (Hero-Hintergrund, Kopffoto, Türgriff, Fotos, Kamerabilder, Karte,
+  Ellipse-5, Karriere-Kopien), weiche Ausblendung der sieben gemessenen Overlays, Footer-Block auf 1400 px zentriert
+  (neuer innerer Container a1f0074 trägt Linie und Abstand). Zeiten im Arbeitsprotokoll; Imagify-Automatik nach den
+  Uploads wieder eingeschaltet (23:35 UTC).
