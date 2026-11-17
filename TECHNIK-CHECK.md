@@ -1172,3 +1172,22 @@ Ziffer 22, Schlusszeile).
   Bildschirmfotos am Computer und am Handy (Kopf, Inhaltsverzeichnis, Ziffer 23) gesichtet.
 - **Pflege:** Künftige Änderungen in `inhalte/agb-2026-01.txt` (oder einer neuen Datei) eintragen, Werkzeug auf einen
   frischen Export anwenden, speichern; Regeln für Überschriften und Absätze stehen im Werkzeug.
+
+## Kamera-Seite: Wording „Kamera- & Videosicherheitssysteme“ (17.11.2026)
+
+Vorgabe des Kunden (Bildschirmfoto des Heros am Handy): das Wording „Kamera- & Videosicherheitssysteme“ nutzen.
+Umgesetzt mit `tools/kamera_wording.py` auf einem frischen Export der Kamera-Seite (ID 4313), gespeichert 18:06 UTC,
+Parallelsitzung vorher und nachher informiert.
+
+- **Geändert (drei Überschriften, Grammatik nach dem Satz):** H1 „Wir schützen dein Unternehmen mit Kamera- &
+  Videosicherheitssystemen“ (vorher „… Videoüberwachung“); fetter Absatz der Unterzeile „ProVision Infra plant und
+  installiert Kamera- & Videosicherheitssysteme für Unternehmen: …“; Leistungsüberschrift „Mit Kamera- &
+  Videosicherheitssystemen von ProVision Infra teure Schäden verhindern“. Export-Vergleich: nur diese drei Titel,
+  alle 346 Elemente sonst identisch.
+- **Bewusst nicht geändert:** einzelne Nennungen von „Videoüberwachung“ in Fließtexten, FAQ-Überschriften, Tagline und
+  Akkordeon (keine Wortverbindung mit „Kamera-“); Yoast-Titel „Kamera- & Videoüberwachung für Unternehmen | ProVision
+  Infra“, Meta-Beschreibung und Strukturdaten (Suchbegriff „Videoüberwachung“, dem Kunden zur Entscheidung gemeldet);
+  andere Seiten (Ortsseiten, Schlachthof) nicht betroffen.
+- **Geprüft live (1440, 1024, 393 und 852×393 px):** Seitenbreite ohne Überlauf, Überschriftenzahl unverändert (1/14/11),
+  keine JavaScript-Fehler; am Handy bricht die H1 jetzt in vier Zeilen („mit Kamera- & / Videosicherheitssystemen“),
+  Seite 26 px länger, Bildschirmfotos Handy und Computer gesichtet.
