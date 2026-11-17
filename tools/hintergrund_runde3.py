@@ -46,9 +46,9 @@ TAUSCH = {  # alte URL: (neue URL, neue Mediathek-ID)
     UP + "2026/10/kamera-1.png": (N + "kamera-1-1600-q90.webp", 5213),
     UP + "2026/10/kamera-2.png": (N + "kamera-2-1600-q90.webp", 5216),
     UP + "2026/10/kamera-3.png": (N + "kamera-3-1600-q90.webp", 5219),
-    UP + "2026/10/kamera-4.png": (N + "kamera-4-1600-q90.webp", None),
-    UP + "2026/10/kamera-5.png": (N + "kamera-5-1600-q90.webp", None),
-    UP + "2026/05/Germany.png": (N + "karte-deutschland-558-q95.webp", None),
+    UP + "2026/10/kamera-4.png": (N + "kamera-4-1600-q90.webp", 5220),
+    UP + "2026/10/kamera-5.png": (N + "kamera-5-1600-q90.webp", 5223),
+    UP + "2026/05/Germany.png": (N + "karte-deutschland-558-q95.webp", 5226),
 }
 VIDEO = {N + "zutritt-hero-desktop-1920.mp4": N + "zutritt-hero-desktop-2560.mp4"}
 
