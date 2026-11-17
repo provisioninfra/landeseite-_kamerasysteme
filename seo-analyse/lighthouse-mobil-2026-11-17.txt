@@ -1,0 +1,140 @@
+
+===== celle https://provision-infra.de/celle/ {'performance': 56, 'accessibility': 99, 'best-practices': 75, 'seo': 100} runtimeError: None
+  first-contentful-paint           3.4 s
+  largest-contentful-paint         4.2 s
+  speed-index                      6.1 s
+  total-blocking-time              760 ms
+  cumulative-layout-shift          0.002
+  interactive                      17.2 s
+  server-response-time             Root document took 220 ms
+  LCP-Element: <p class="elementor-heading-title elementor-size-default">
+  DOM-Größe: 1,433 elements | Requests: 140 | Transfer gesamt: Total size was 3,900 KiB
+  Ressourcen: Total: 116x 3900 KB, Image: 15x 1700 KB, Script: 46x 1024 KB, Media: 1x 798 KB, Stylesheet: 37x 122 KB, Document: 2x 107 KB, Font: 6x 83 KB, Other: 9x 66 KB, Third-party: 21x 696 KB
+  Drittanbieter (Transfer KB / Blocking ms): Google Tag Manager: 322/460, Facebook: 207/287, Macropod BugHerd: 77/1, Amazon Web Services: 56/0, provenexpert.com: 29/0, Google/Doubleclick Ads: 4/0, Other Google APIs/SDKs: 1/0
+  CHANCE modern-image-formats               Est savings of 930 KiB
+  CHANCE render-blocking-resources          Est savings of 710 ms
+  CHANCE unused-css-rules                   Est savings of 35 KiB
+  CHANCE unused-javascript                  Est savings of 325 KiB
+  CHANCE server-response-time               Root document took 220 ms
+  CHANCE legacy-javascript                  Est savings of 56 KiB
+  Größte Requests: startseite-hero-tuer-handy-1440.mp4 798 KB (Media); Untitled-design-1.png 697 KB (Image); Ellipse-3.png 449 KB (Image); Ellipse-4.png 238 KB (Image); 1.png 217 KB (Image); js?id=GT-NC8XZMMS&cx=c&gtm=4e6bd1 166 KB (Script); gtm.js?id=GTM-KV75JXFB 156 KB (Script); 1882223199102262?v=2.9.440&r=stable&domain=pr 108 KB (Script)
+  seo nicht bestanden: []
+  best-practices nicht bestanden: ['third-party-cookies', 'errors-in-console', 'inspector-issues']
+  accessibility nicht bestanden: ['aria-allowed-role']
+  Konsole: ['[AUTH] Unauthenticated Error: Cannot initialize BugHerd\n    at https://www.bugherd.com/sid', 'undefined']
+  Ungenutztes JS: [('gtm.js?id=GTM-KV75JXFB', 67), ('js?id=GT-NC8XZMMS&cx=c&gtm=4e6bd1', 63), ('1882223199102262?v=2.9.440&r=stable&doma', 47), ('lottie.min.js?ver=5.6.6', 43), ('fbevents.js', 34)]
+  Ungenutztes CSS: [('all.min.css?ver=6.8.5', 13), ('borlabs-cookie-1-de.css?ver=3.4.6-27', 12), ('post-4751.css?ver=1794559136', 10)]
+  Bildformate: [('Untitled-design-1.png', 545), ('Ellipse-3.png', 208), ('Ellipse-4.png', 90), ('Frame-2147224855.png', 47)]
+  Render-blockierend: [('post-4751.css?ver=1794559136', 384), ('all.min.css?ver=6.8.5', 384)]
+
+===== kamerasysteme https://provision-infra.de/kamerasysteme/ {'performance': 54, 'accessibility': 95, 'best-practices': 75, 'seo': 92} runtimeError: None
+  first-contentful-paint           3.1 s
+  largest-contentful-paint         6.4 s
+  speed-index                      5.5 s
+  total-blocking-time              540 ms
+  cumulative-layout-shift          0.003
+  interactive                      15.3 s
+  server-response-time             Root document took 220 ms
+  LCP-Element: <div class="elementor-element elementor-element-d135e80 e-con-full shadeup elementor-h…" data-id="d135e80" data-element_type="container" data-e-type="container"
+  DOM-Größe: 1,447 elements | Requests: 138 | Transfer gesamt: Total size was 3,117 KiB
+  Ressourcen: Total: 114x 3117 KB, Image: 15x 1238 KB, Script: 45x 1015 KB, Media: 1x 493 KB, Stylesheet: 36x 123 KB, Document: 2x 100 KB, Font: 6x 83 KB, Other: 9x 66 KB, Third-party: 21x 696 KB
+  Drittanbieter (Transfer KB / Blocking ms): Google Tag Manager: 323/382, Facebook: 207/266, Macropod BugHerd: 77/0, Amazon Web Services: 56/0, provenexpert.com: 29/0, Google/Doubleclick Ads: 4/0, Other Google APIs/SDKs: 1/0
+  CHANCE unused-javascript                  Est savings of 325 KiB
+  CHANCE render-blocking-resources          Est savings of 850 ms
+  CHANCE modern-image-formats               Est savings of 385 KiB
+  CHANCE unused-css-rules                   Est savings of 36 KiB
+  CHANCE uses-responsive-images             Est savings of 24 KiB
+  CHANCE server-response-time               Root document took 220 ms
+  CHANCE legacy-javascript                  Est savings of 56 KiB
+  Größte Requests: kamera-hero-video-mobil-1080.mp4 493 KB (Media); Ellipse-3.png 449 KB (Image); Ellipse-4.png 238 KB (Image); 1.png 217 KB (Image); kamera-hintergrund-gruender.webp 183 KB (Image); js?id=GT-NC8XZMMS&cx=c&gtm=4e6bg0h2 167 KB (Script); gtm.js?id=GTM-KV75JXFB 156 KB (Script); 1882223199102262?v=2.9.440&r=stable&domain=pr 108 KB (Script)
+  seo nicht bestanden: ['robots-txt']
+  best-practices nicht bestanden: ['third-party-cookies', 'errors-in-console', 'inspector-issues']
+  accessibility nicht bestanden: ['aria-allowed-role', 'aria-hidden-focus']
+  Konsole: ['[AUTH] Unauthenticated Error: Cannot initialize BugHerd\n    at https://www.bugherd.com/sid', 'undefined']
+  Ungenutztes JS: [('gtm.js?id=GTM-KV75JXFB', 67), ('js?id=GT-NC8XZMMS&cx=c&gtm=4e6bg0h2', 63), ('1882223199102262?v=2.9.440&r=stable&doma', 47), ('lottie.min.js?ver=5.6.6', 43), ('fbevents.js', 34)]
+  Ungenutztes CSS: [('all.min.css?ver=6.8.5', 13), ('borlabs-cookie-1-de.css?ver=3.4.6-27', 13), ('post-4313.css?ver=1794558829', 11)]
+  Bildformate: [('Ellipse-3.png', 208), ('Ellipse-4.png', 90), ('Frame-2147224855.png', 47), ('1.png', 30)]
+  Render-blockierend: [('jquery-migrate.min.js?ver=3.4.1', 302), ('all.min.css?ver=6.8.5', 302), ('widget-heading.min.css?ver=4.3.5', 302)]
+
+===== lueneburg https://provision-infra.de/lueneburg/ {'performance': 64, 'accessibility': 99, 'best-practices': 75, 'seo': 100} runtimeError: None
+  first-contentful-paint           3.0 s
+  largest-contentful-paint         3.4 s
+  speed-index                      5.3 s
+  total-blocking-time              770 ms
+  cumulative-layout-shift          0.003
+  interactive                      16.7 s
+  server-response-time             Root document took 220 ms
+  LCP-Element: <p class="elementor-heading-title elementor-size-default">
+  DOM-Größe: 1,421 elements | Requests: 140 | Transfer gesamt: Total size was 3,902 KiB
+  Ressourcen: Total: 116x 3902 KB, Image: 15x 1700 KB, Script: 46x 1024 KB, Media: 1x 798 KB, Stylesheet: 37x 122 KB, Document: 2x 108 KB, Font: 6x 83 KB, Other: 9x 66 KB, Third-party: 21x 696 KB
+  Drittanbieter (Transfer KB / Blocking ms): Facebook: 207/435, Google Tag Manager: 322/378, Macropod BugHerd: 77/0, Amazon Web Services: 56/0, provenexpert.com: 29/0, Google/Doubleclick Ads: 4/0, Other Google APIs/SDKs: 1/0
+  CHANCE modern-image-formats               Est savings of 930 KiB
+  CHANCE unused-javascript                  Est savings of 325 KiB
+  CHANCE render-blocking-resources          Est savings of 330 ms
+  CHANCE server-response-time               Root document took 220 ms
+  CHANCE legacy-javascript                  Est savings of 56 KiB
+  Größte Requests: startseite-hero-tuer-handy-1440.mp4 798 KB (Media); Untitled-design-1.png 697 KB (Image); Ellipse-3.png 449 KB (Image); Ellipse-4.png 238 KB (Image); 1.png 217 KB (Image); js?id=GT-NC8XZMMS&cx=c&gtm=4e6bd1 166 KB (Script); gtm.js?id=GTM-KV75JXFB 156 KB (Script); 1882223199102262?v=2.9.440&r=stable&domain=pr 108 KB (Script)
+  seo nicht bestanden: []
+  best-practices nicht bestanden: ['third-party-cookies', 'errors-in-console', 'inspector-issues']
+  accessibility nicht bestanden: ['aria-allowed-role']
+  Konsole: ['[AUTH] Unauthenticated Error: Cannot initialize BugHerd\n    at https://www.bugherd.com/sid', 'undefined']
+  Ungenutztes JS: [('gtm.js?id=GTM-KV75JXFB', 67), ('js?id=GT-NC8XZMMS&cx=c&gtm=4e6bd1', 63), ('1882223199102262?v=2.9.440&r=stable&doma', 47), ('lottie.min.js?ver=5.6.6', 43), ('fbevents.js', 34)]
+  Ungenutztes CSS: [('all.min.css?ver=6.8.5', 13), ('borlabs-cookie-1-de.css?ver=3.4.6-27', 12), ('post-4496.css?ver=1794558866', 10)]
+  Bildformate: [('Untitled-design-1.png', 545), ('Ellipse-3.png', 208), ('Ellipse-4.png', 90), ('Frame-2147224855.png', 47)]
+  Render-blockierend: [('all.min.css?ver=6.8.5', 292), ('jquery-migrate.min.js?ver=3.4.1', 292), ('widget-nested-carousel.min.css?ver=4.1.1', 292)]
+
+===== startseite https://provision-infra.de/ {'performance': 52, 'accessibility': 94, 'best-practices': 75, 'seo': 100} runtimeError: None
+  first-contentful-paint           3.7 s
+  largest-contentful-paint         5.0 s
+  speed-index                      6.1 s
+  total-blocking-time              700 ms
+  cumulative-layout-shift          0
+  interactive                      17.4 s
+  server-response-time             Root document took 220 ms
+  LCP-Element: <p class="elementor-heading-title elementor-size-default">
+  DOM-Größe: 1,555 elements | Requests: 153 | Transfer gesamt: Total size was 4,103 KiB
+  Ressourcen: Total: 114x 4103 KB, Image: 16x 1918 KB, Script: 44x 1011 KB, Media: 1x 798 KB, Document: 2x 153 KB, Stylesheet: 37x 134 KB, Font: 6x 83 KB, Other: 8x 7 KB, Third-party: 21x 696 KB
+  Drittanbieter (Transfer KB / Blocking ms): Google Tag Manager: 322/483, Facebook: 207/308, Macropod BugHerd: 77/0, Amazon Web Services: 56/0, provenexpert.com: 29/0, Google/Doubleclick Ads: 4/0, Other Google APIs/SDKs: 1/0
+  CHANCE modern-image-formats               Est savings of 960 KiB
+  CHANCE render-blocking-resources          Est savings of 670 ms
+  CHANCE unused-javascript                  Est savings of 340 KiB
+  CHANCE server-response-time               Root document took 220 ms
+  CHANCE legacy-javascript                  Est savings of 56 KiB
+  Größte Requests: startseite-hero-tuer-handy-1440.mp4 798 KB (Media); Untitled-design-1.png 697 KB (Image); Ellipse-3.png 449 KB (Image); Ellipse-4.png 238 KB (Image); 2.png 218 KB (Image); 1.png 217 KB (Image); js?id=GT-NC8XZMMS&cx=c&gtm=4e6bd1 166 KB (Script); gtm.js?id=GTM-KV75JXFB 156 KB (Script)
+  seo nicht bestanden: []
+  best-practices nicht bestanden: ['third-party-cookies', 'errors-in-console', 'inspector-issues']
+  accessibility nicht bestanden: ['aria-allowed-role', 'aria-hidden-focus', 'heading-order']
+  Konsole: ['[AUTH] Unauthenticated Error: Cannot initialize BugHerd\n    at https://www.bugherd.com/sid', 'undefined']
+  Ungenutztes JS: [('gtm.js?id=GTM-KV75JXFB', 67), ('js?id=GT-NC8XZMMS&cx=c&gtm=4e6bd1', 63), ('lottie.min.js?ver=5.6.6', 58), ('1882223199102262?v=2.9.440&r=stable&doma', 47), ('fbevents.js', 34)]
+  Ungenutztes CSS: [('post-31.css?ver=1794558567', 15), ('all.min.css?ver=6.8.5', 13), ('borlabs-cookie-1-de.css?ver=3.4.6-27', 12)]
+  Bildformate: [('Untitled-design-1.png', 545), ('Ellipse-3.png', 208), ('Ellipse-4.png', 90), ('Frame-2147224855.png', 47)]
+  Render-blockierend: [('jquery.min.js?ver=3.7.1', 370), ('post-31.css?ver=1794558567', 370), ('general.min.css?ver=6.8.5', 370)]
+
+===== zutrittssystem https://provision-infra.de/zutrittssystem/ {'performance': 48, 'accessibility': 98, 'best-practices': 75, 'seo': 100} runtimeError: None
+  first-contentful-paint           2.7 s
+  largest-contentful-paint         16.4 s
+  speed-index                      4.9 s
+  total-blocking-time              810 ms
+  cumulative-layout-shift          0.003
+  interactive                      17.4 s
+  server-response-time             Root document took 220 ms
+  LCP-Element: <video class="elementor-background-video-hosted" role="presentation" autoplay="" muted="" playsinline="" src="https://provision-infra.de/wp-content/uploads/2026
+  DOM-Größe: 1,266 elements | Requests: 126 | Transfer gesamt: Total size was 13,052 KiB
+  Ressourcen: Total: 103x 13052 KB, Media: 2x 9930 KB, Image: 13x 1382 KB, Script: 43x 976 KB, Other: 9x 509 KB, Document: 2x 119 KB, Stylesheet: 30x 103 KB, Font: 4x 32 KB, Third-party: 21x 696 KB
+  Drittanbieter (Transfer KB / Blocking ms): Google Tag Manager: 322/413, Facebook: 207/261, Macropod BugHerd: 77/0, Amazon Web Services: 56/0, provenexpert.com: 29/0, Google/Doubleclick Ads: 4/0, Other Google APIs/SDKs: 1/0
+  CHANCE unused-javascript                  Est savings of 303 KiB
+  CHANCE render-blocking-resources          Est savings of 560 ms
+  CHANCE uses-rel-preconnect                Est savings of 470 ms
+  CHANCE modern-image-formats               Est savings of 454 KiB
+  CHANCE unused-css-rules                   Est savings of 37 KiB
+  CHANCE server-response-time               Root document took 220 ms
+  CHANCE legacy-javascript                  Est savings of 56 KiB
+  Größte Requests: Untitled-design.mp4 6241 KB (Media); Untitled-design-1.mp4 3689 KB (Media); lp10754-provision-infra-gmbh-L6-subpage-V01-w 502 KB (XHR); Ellipse-3.png 449 KB (Image); Ellipse-3.png 427 KB (Image); Ellipse-4.png 238 KB (Image); 1.png 217 KB (Image); js?id=GT-NC8XZMMS&cx=c&gtm=4e6bd1 166 KB (Script)
+  seo nicht bestanden: []
+  best-practices nicht bestanden: ['third-party-cookies', 'errors-in-console', 'inspector-issues']
+  accessibility nicht bestanden: ['aria-allowed-role', 'skip-link']
+  Konsole: ['[AUTH] Unauthenticated Error: Cannot initialize BugHerd\n    at https://www.bugherd.com/sid', 'undefined']
+  Ungenutztes JS: [('gtm.js?id=GTM-KV75JXFB', 66), ('js?id=GT-NC8XZMMS&cx=c&gtm=4e6bd1', 63), ('1882223199102262?v=2.9.440&r=stable&doma', 47), ('lottie.min.js?ver=5.6.6', 45), ('fbevents.js', 34)]
+  Ungenutztes CSS: [('all.min.css?ver=6.8.5', 13), ('borlabs-cookie-1-de.css?ver=3.4.6-27', 13), ('post-3316.css?ver=1794558718', 12)]
+  Bildformate: [('Ellipse-3.png', 208), ('Ellipse-3.png', 116), ('Ellipse-4.png', 90), ('1.png', 30)]
+  Render-blockierend: [('jquery.min.js?ver=3.7.1', 258), ('all.min.css?ver=6.8.5', 258), ('post-8.css?ver=1793092920', 258)]

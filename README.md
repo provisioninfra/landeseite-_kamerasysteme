@@ -34,6 +34,7 @@ Falls das Video nicht geladen werden kann, läuft eine animierte SVG-Szene (Kame
 - `ANLEITUNG-WORDPRESS.md` – Schritt-für-Schritt-Anleitung für Laien: Seite als Unterseite auf provision-infra.de veröffentlichen
 - `TECHNIK-CHECK.md` – Ergebnis des Technik- und Skalierungs-Checks vor dem Livegang
 - `SEO-KEYWORDS.md` – Keyword-Karte (Google-Suggest-Auswertung, Zuordnung zur Seite, offene Hebel außerhalb der Seite)
+- `SEO-ANALYSE-GESAMT-2026-11.md` – SEO-Analyse aller Seiten von provision-infra.de (17.11.2026) mit priorisierten Empfehlungen; Rohdaten in `seo-analyse/`
 
 ## WordPress: die eigentliche Seite
 

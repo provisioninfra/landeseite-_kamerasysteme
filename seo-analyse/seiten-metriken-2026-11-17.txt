@@ -1,0 +1,160 @@
+Seite                               St   KB Tit Desc H1  H2 Wörter Bild oAlt Lnk tel FAQ Vid Robots / Titel
+/                                  200  592  56  150  1  13   2406   47   10   8   0   5   2 index, follow, | Digitale Schließanlage für Unternehmen | ProVision Infra
+/karriere/                         200  280  50  152  1  10   1663    7    0   6   2   0   0 index, follow, | Karriere bei ProVision Infra: Jobs in Bad Bevensen
+/impressum/                        200  143  27    0  1   0    181    2    0   4   0   0   0 index, follow, | Impressum - ProVision Infra
+/datenschutz/                      200  177  29    0  1   7   5381    2    0   4   0   0   0 index, follow, | Datenschutz - ProVision Infra
+/zutrittssystem/                   200  432  57  144  1  14    913   29   16   7   0   3   2 index, follow, | Elektronische Schließanlage mit Service | ProVision Infra
+/videoueberwachung-schlachthoefe/  200  501  57  160  1  19   2053   27    7   7   1   8   2 index, follow, | Videoüberwachung Schlachthof: Kamerapflicht § 4d TierSchG
+/kamerasysteme/                    200  488  60  155  1  19   1892   27    7   8   0   5   2 index, follow, | Kamera- & Videoüberwachung für Unternehmen | ProVision Infra
+/lueneburg/                        200  506  60  158  1  18   1920   26    7   8   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Lüneburg | ProVision Infra
+/uelzen/                           200  511  58  153  1  18   2195   26    7   8   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Uelzen | ProVision Infra
+/bad-bevensen/                     200  501  58  157  1  18   2151   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Bad Bevensen | ProVision
+/bad-bodenteich/                   200  501  60  153  1  18   2152   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Bad Bodenteich | ProVision
+/bienenbuettel/                    200  501  58  158  1  18   2102   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Bienenbüttel | ProVision
+/bleckede/                         200  500  60  158  1  18   2095   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Bleckede | ProVision Infra
+/celle/                            200  501  57  151  1  18   2154   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Celle | ProVision Infra
+/dannenberg/                       200  501  56  157  1  18   2102   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Dannenberg | ProVision
+/ebstorf/                          200  501  59  146  1  18   2097   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Ebstorf | ProVision Infra
+/gifhorn/                          200  500  59  158  1  18   2098   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Gifhorn | ProVision Infra
+/hitzacker/                        200  500  55  153  1  18   2061   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Hitzacker | ProVision
+/luechow/                          200  501  58  150  1  18   2130   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Lüchow | ProVision Infra
+/wieren/                           200  501  58  158  1  18   2121   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Wieren | ProVision Infra
+/winsen-luhe/                      200  501  59  148  1  18   2175   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Winsen (Luhe) | ProVision
+/wittingen/                        200  501  55  156  1  18   2119   26    7  21   1   5   2 index, follow, | Schließanlagen & Videoüberwachung Wittingen | ProVision
+/agb/                              200  166  21    0  1   6   3812    2    0   4   1   0   0 index, follow, | AGB - ProVision Infra
+/kontakt/                          200  187  25    0  0   0    171    0    0   0   0   0   0 noindex, nofol | Kontakt - ProVision Infra
+/termin/                           200  117  24    0  0   0     17    0    0   0   0   0   0 noindex, nofol | Termin - ProVision Infra
+/anfrage-auswahl/                  200  176  25    0  0   0    128    0    0   0   0   0   0 noindex, follo | Anfrage – ProVision Infra
+/kontakt-kombiniert/               200  189  50    0  0   0    160    0    0   0   0   0   0 noindex, follo | Kontakt Schließ- & Kamerasysteme – ProVision Infra
+/kontakt-kamerasysteme/            200  183  39    0  0   0    125    0    0   0   0   0   0 noindex, nofol | Kontakt Kamerasysteme - ProVision Infra
+/termin-kamerasysteme/             200  117  38    0  0   0     17    0    0   0   0   0   0 noindex, nofol | Termin Kamerasysteme - ProVision Infra
+/danke/                            200  135  23    0  0   1    121    2    1   1   0   0   0 noindex, nofol | Danke - ProVision Infra
+/video%c3%bcberwachung-schlachth%c 200  108  63    0  0   0     21    0    0   1   0   0   0 noindex, nofol | Videoüberwachung Schlachthöfe (Weiterleitung) - ProVision Infra
+/einbruchschutz/                   200  117  32    0  0   1     26    1    0   1   0   0   0 noindex, follo | Page not found - ProVision Infra
+/schluesselnotdienst/              200  117  32    0  0   1     26    1    0   1   0   0   0 noindex, follo | Page not found - ProVision Infra
+
+== Dubletten (Jaccard 5-Wort-Shingles, Top 25):
+  1.00  /einbruchschutz/  ~  /schluesselnotdienst/
+  0.62  /termin/  ~  /termin-kamerasysteme/
+  0.56  /kontakt-kombiniert/  ~  /kontakt-kamerasysteme/
+  0.53  /kontakt/  ~  /kontakt-kombiniert/
+  0.46  /bad-bodenteich/  ~  /wieren/
+  0.44  /dannenberg/  ~  /ebstorf/
+  0.43  /gifhorn/  ~  /wittingen/
+  0.43  /bleckede/  ~  /wittingen/
+  0.43  /bleckede/  ~  /winsen-luhe/
+  0.42  /dannenberg/  ~  /winsen-luhe/
+  0.42  /bad-bevensen/  ~  /gifhorn/
+  0.41  /kontakt/  ~  /anfrage-auswahl/
+  0.41  /ebstorf/  ~  /wieren/
+  0.40  /hitzacker/  ~  /wittingen/
+  0.40  /ebstorf/  ~  /luechow/
+  0.40  /bad-bodenteich/  ~  /luechow/
+  0.40  /bad-bevensen/  ~  /bleckede/
+  0.39  /uelzen/  ~  /bienenbuettel/
+  0.39  /lueneburg/  ~  /hitzacker/
+  0.39  /dannenberg/  ~  /wieren/
+  0.39  /dannenberg/  ~  /luechow/
+  0.39  /celle/  ~  /dannenberg/
+  0.39  /bad-bevensen/  ~  /wittingen/
+  0.38  /termin/  ~  /schluesselnotdienst/
+  0.38  /termin/  ~  /einbruchschutz/
+
+== Eingehende interne Links je Seite (ohne Sitemap):
+  /                                        25  von: /agb/, /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /danke/, /dannenberg/, /datenschutz/, /eb  | Anker: {'': 46, 'digitalen Schließanlagen': 17, 'Zur Startseite': 6}
+  /karriere/                                4  von: /, /kamerasysteme/, /videoueberwachung-schlachthoefe/, /zutrittssystem/  | Anker: {'Komm in unser Team': 24}
+  /impressum/                              22  von: /, /agb/, /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /datenschutz/, /ebstorf/  | Anker: {'Impressum': 22}
+  /datenschutz/                            22  von: /, /agb/, /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /h  | Anker: {'Datenschutz': 22, 'provision-infra.de/datenschutz': 1}
+  /zutrittssystem/                         18  von: /, /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacke  | Anker: {'digitalen Zutrittssystem': 15, 'Zutrittssystem': 15, 'Rundum-Service für elektronische Schließanlagen': 1}
+  /videoueberwachung-schlachthoefe/         1  von: /video%c3%bcberwachung-schlachth%c3%b6fe/  | Anker: {'Videoüberwachung für Schlachthöfe': 1}
+  /kamerasysteme/                          19  von: /, /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacke  | Anker: {'Kamera- und Videoüberwachung für Unternehmen': 15, 'Kamerasysteme': 9, 'Durch Videoüberwachung teure Schäden verhindern': 6}
+  /lueneburg/                              14  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/,  | Anker: {'Lüneburg': 14}
+  /uelzen/                                 14  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/,  | Anker: {'Uelzen': 14}
+  /bad-bevensen/                           12  von: /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/, /luechow/, /wie  | Anker: {'Bad Bevensen': 12}
+  /bad-bodenteich/                         12  von: /bad-bevensen/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/, /luechow/, /wiere  | Anker: {'Bad Bodenteich': 12}
+  /bienenbuettel/                          12  von: /bad-bevensen/, /bad-bodenteich/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/, /luechow/, /wier  | Anker: {'Bienenbüttel': 12}
+  /bleckede/                               12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/, /luechow/,   | Anker: {'Bleckede': 12}
+  /celle/                                  12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/, /luechow  | Anker: {'Celle': 12}
+  /dannenberg/                             12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /ebstorf/, /gifhorn/, /hitzacker/, /luechow/, /w  | Anker: {'Dannenberg (Elbe)': 12}
+  /ebstorf/                                12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /gifhorn/, /hitzacker/, /luechow/,  | Anker: {'Ebstorf': 12}
+  /gifhorn/                                12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /hitzacker/, /luechow/,  | Anker: {'Gifhorn': 12}
+  /hitzacker/                              12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /luechow/, /  | Anker: {'Hitzacker (Elbe)': 12}
+  /luechow/                                12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/,  | Anker: {'Lüchow (Wendland)': 12}
+  /wieren/                                 12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/,  | Anker: {'Wieren': 12}
+  /winsen-luhe/                            12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/,  | Anker: {'Winsen (Luhe)': 12}
+  /wittingen/                              12  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/,  | Anker: {'Wittingen': 12}
+  /agb/                                    22  von: /, /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /datenschutz/, /ebstorf/, /gifh  | Anker: {'AGB': 22}
+  /kontakt/                                 2  von: /, /zutrittssystem/  | Anker: {'Unverbindliches Erstgespräch vereinbaren': 6, 'Infos anfordern': 6, 'Jetzt beraten lassen': 2}
+  /termin/                                  0  von:   | Anker: {}
+  /anfrage-auswahl/                        15  von: /bad-bevensen/, /bad-bodenteich/, /bienenbuettel/, /bleckede/, /celle/, /dannenberg/, /ebstorf/, /gifhorn/, /hitzacker/,  | Anker: {'Unverbindliches Erstgespräch vereinbaren': 45}
+  /kontakt-kombiniert/                      0  von:   | Anker: {}
+  /kontakt-kamerasysteme/                   2  von: /kamerasysteme/, /videoueberwachung-schlachthoefe/  | Anker: {'Unverbindliches Erstgespräch vereinbaren': 6}
+  /termin-kamerasysteme/                    0  von:   | Anker: {}
+  /danke/                                   0  von:   | Anker: {}
+  /video%c3%bcberwachung-schlachth%c3%b6fe/  0  von:   | Anker: {}
+  /einbruchschutz/                          0  von:   | Anker: {}
+  /schluesselnotdienst/                     0  von:   | Anker: {}
+
+== Schema-Knoten je Seite:
+  /                                        [('WebPage', '://provision-infra.de/', None), ('ImageObject', 'infra.de/#primaryimage', None), ('BreadcrumbList', 'n-infra.de/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'ra.de/#schliessanlagen', None), ('FAQPage', '', 10)]
+  /karriere/                               [('WebPage', 'ion-infra.de/karriere/', None), ('ImageObject', 'karriere/#primaryimage', None), ('BreadcrumbList', 'e/karriere/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Organization', 'infra.de/#organization', None), ('WebSite', 'sion-infra.de/#website', None), ('WebPage', 'ion-infra.de/karriere/', None), ('BreadcrumbList', 'e/karriere/#breadcrumb', None), ('JobPosting', '', None), ('JobPosting', '', None), ('JobPosting', '', None), ('JobPosting', '', None), ('FAQPage', 'infra.de/karriere/#faq', 8)]
+  /impressum/                              [('WebPage', 'on-infra.de/impressum/', None), ('ImageObject', 'mpressum/#primaryimage', None), ('BreadcrumbList', '/impressum/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /datenschutz/                            [('WebPage', '-infra.de/datenschutz/', None), ('ImageObject', 'enschutz/#primaryimage', None), ('BreadcrumbList', 'atenschutz/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /zutrittssystem/                         [('WebPage', 'fra.de/zutrittssystem/', None), ('ImageObject', 'tssystem/#primaryimage', None), ('BreadcrumbList', 'ittssystem/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'utrittssystem/#service', None), ('FAQPage', '', 6)]
+  /videoueberwachung-schlachthoefe/        [('WebPage', 'wachung-schlachthoefe/', None), ('ImageObject', 'chthoefe/#primaryimage', None), ('BreadcrumbList', 'lachthoefe/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), ('LocalBusiness', 'infra.de/#organization', None), ('Service', 'chlachthoefe/#leistung', None), ('FAQPage', '', 17)]
+  /kamerasysteme/                          [('WebPage', 'nfra.de/kamerasysteme/', None), ('ImageObject', 'asysteme/#primaryimage', None), ('BreadcrumbList', 'erasysteme/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), ('LocalBusiness', 'infra.de/#organization', None), ('Service', 'amerasysteme/#leistung', None), ('FAQPage', '', 11)]
+  /lueneburg/                              [('WebPage', 'on-infra.de/lueneburg/', None), ('ImageObject', 'ueneburg/#primaryimage', None), ('BreadcrumbList', '/lueneburg/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'eburg/#schliessanlagen', None), ('Service', 'a.de/lueneburg/#kamera', None), ('FAQPage', '', 10)]
+  /uelzen/                                 [('WebPage', 'ision-infra.de/uelzen/', None), ('ImageObject', 'e/uelzen/#primaryimage', None), ('BreadcrumbList', '.de/uelzen/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'elzen/#schliessanlagen', None), ('Service', 'nfra.de/uelzen/#kamera', None), ('FAQPage', '', 11)]
+  /bad-bevensen/                           [('WebPage', 'infra.de/bad-bevensen/', None), ('ImageObject', 'bevensen/#primaryimage', None), ('BreadcrumbList', 'd-bevensen/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'ensen/#schliessanlagen', None), ('Service', 'e/bad-bevensen/#kamera', None), ('FAQPage', '', 10)]
+  /bad-bodenteich/                         [('WebPage', 'fra.de/bad-bodenteich/', None), ('ImageObject', 'denteich/#primaryimage', None), ('BreadcrumbList', 'bodenteich/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'teich/#schliessanlagen', None), ('Service', 'bad-bodenteich/#kamera', None), ('FAQPage', '', 10)]
+  /bienenbuettel/                          [('WebPage', 'nfra.de/bienenbuettel/', None), ('ImageObject', 'nbuettel/#primaryimage', None), ('BreadcrumbList', 'nenbuettel/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'ettel/#schliessanlagen', None), ('Service', '/bienenbuettel/#kamera', None), ('FAQPage', '', 10)]
+  /bleckede/                               [('WebPage', 'ion-infra.de/bleckede/', None), ('ImageObject', 'bleckede/#primaryimage', None), ('BreadcrumbList', 'e/bleckede/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'ckede/#schliessanlagen', None), ('Service', 'ra.de/bleckede/#kamera', None), ('FAQPage', '', 10)]
+  /celle/                                  [('WebPage', 'vision-infra.de/celle/', None), ('ImageObject', 'de/celle/#primaryimage', None), ('BreadcrumbList', 'a.de/celle/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'celle/#schliessanlagen', None), ('Service', 'infra.de/celle/#kamera', None), ('FAQPage', '', 10)]
+  /dannenberg/                             [('WebPage', 'n-infra.de/dannenberg/', None), ('ImageObject', 'nnenberg/#primaryimage', None), ('BreadcrumbList', 'dannenberg/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'nberg/#schliessanlagen', None), ('Service', '.de/dannenberg/#kamera', None), ('FAQPage', '', 10)]
+  /ebstorf/                                [('WebPage', 'sion-infra.de/ebstorf/', None), ('ImageObject', '/ebstorf/#primaryimage', None), ('BreadcrumbList', 'de/ebstorf/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'storf/#schliessanlagen', None), ('Service', 'fra.de/ebstorf/#kamera', None), ('FAQPage', '', 10)]
+  /gifhorn/                                [('WebPage', 'sion-infra.de/gifhorn/', None), ('ImageObject', '/gifhorn/#primaryimage', None), ('BreadcrumbList', 'de/gifhorn/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'fhorn/#schliessanlagen', None), ('Service', 'fra.de/gifhorn/#kamera', None), ('FAQPage', '', 10)]
+  /hitzacker/                              [('WebPage', 'on-infra.de/hitzacker/', None), ('ImageObject', 'itzacker/#primaryimage', None), ('BreadcrumbList', '/hitzacker/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'acker/#schliessanlagen', None), ('Service', 'a.de/hitzacker/#kamera', None), ('FAQPage', '', 10)]
+  /luechow/                                [('WebPage', 'sion-infra.de/luechow/', None), ('ImageObject', '/luechow/#primaryimage', None), ('BreadcrumbList', 'de/luechow/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'echow/#schliessanlagen', None), ('Service', 'fra.de/luechow/#kamera', None), ('FAQPage', '', 10)]
+  /wieren/                                 [('WebPage', 'ision-infra.de/wieren/', None), ('ImageObject', 'e/wieren/#primaryimage', None), ('BreadcrumbList', '.de/wieren/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'ieren/#schliessanlagen', None), ('Service', 'nfra.de/wieren/#kamera', None), ('FAQPage', '', 10)]
+  /winsen-luhe/                            [('WebPage', '-infra.de/winsen-luhe/', None), ('ImageObject', 'sen-luhe/#primaryimage', None), ('BreadcrumbList', 'insen-luhe/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', '-luhe/#schliessanlagen', None), ('Service', 'de/winsen-luhe/#kamera', None), ('FAQPage', '', 10)]
+  /wittingen/                              [('WebPage', 'on-infra.de/wittingen/', None), ('ImageObject', 'ittingen/#primaryimage', None), ('BreadcrumbList', '/wittingen/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None), ('Product', '', None), (['LocalBusiness', 'Locksmith'], 'infra.de/#organization', None), ('Service', 'ingen/#schliessanlagen', None), ('Service', 'a.de/wittingen/#kamera', None), ('FAQPage', '', 10)]
+  /agb/                                    [('WebPage', 'rovision-infra.de/agb/', None), ('ImageObject', 'a.de/agb/#primaryimage', None), ('BreadcrumbList', 'fra.de/agb/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /kontakt/                                [('WebPage', 'sion-infra.de/kontakt/', None), ('BreadcrumbList', 'de/kontakt/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /termin/                                 [('WebPage', 'ision-infra.de/termin/', None), ('BreadcrumbList', '.de/termin/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /anfrage-auswahl/                        [('WebPage', 'ra.de/anfrage-auswahl/', None), ('BreadcrumbList', 'ge-auswahl/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /kontakt-kombiniert/                     [('WebPage', 'de/kontakt-kombiniert/', None), ('BreadcrumbList', 'kombiniert/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /kontakt-kamerasysteme/                  [('WebPage', 'kontakt-kamerasysteme/', None), ('BreadcrumbList', 'erasysteme/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /termin-kamerasysteme/                   [('WebPage', '/termin-kamerasysteme/', None), ('BreadcrumbList', 'erasysteme/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /danke/                                  [('WebPage', 'vision-infra.de/danke/', None), ('ImageObject', 'de/danke/#primaryimage', None), ('BreadcrumbList', 'a.de/danke/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /video%c3%bcberwachung-schlachth%c3%b6fe/ [('WebPage', 'ung-schlachth%c3%b6fe/', None), ('BreadcrumbList', 'th%c3%b6fe/#breadcrumb', None), ('WebSite', 'sion-infra.de/#website', None)]
+  /einbruchschutz/                         [('WebSite', 'sion-infra.de/#website', None)]
+  /schluesselnotdienst/                    [('WebSite', 'sion-infra.de/#website', None)]
+
+== Doppelte Titel/Descriptions:
+  title x2: Page not found - ProVision Infra
+
+== Ortsnennungen je Seite:
+  /                                        {'Lüneburg': 4, 'Winsen': 2, 'Uelzen': 2, 'Celle': 2, 'Bad Bevensen': 3, 'Hamburg': 6, 'Hannover': 5, 'Soltau': 2}
+  /karriere/                               {'Lüneburg': 2, 'Uelzen': 2, 'Bad Bevensen': 11, 'Hamburg': 2, 'Hannover': 1}
+  /impressum/                              {'Lüneburg': 2, 'Bad Bevensen': 1}
+  /datenschutz/                            {'Bad Bevensen': 1, 'Hamburg': 2}
+  /zutrittssystem/                         {'Lüneburg': 4, 'Winsen': 2, 'Uelzen': 2, 'Celle': 2, 'Bad Bevensen': 2, 'Hamburg': 5, 'Hannover': 5, 'Soltau': 2}
+  /videoueberwachung-schlachthoefe/        {'Lüneburg': 2, 'Bad Bevensen': 4, 'Hamburg': 3, 'Hannover': 1, 'Niedersachsen': 5}
+  /kamerasysteme/                          {'Lüneburg': 3, 'Winsen': 1, 'Uelzen': 1, 'Celle': 1, 'Bad Bevensen': 3, 'Hamburg': 5, 'Hannover': 4, 'Soltau': 1, 'Niedersachsen': 3}
+  /lueneburg/                              {'Lüneburg': 31, 'Winsen': 2, 'Uelzen': 3, 'Bleckede': 1, 'Bad Bevensen': 7, 'Hamburg': 2, 'Hannover': 1}
+  /uelzen/                                 {'Lüneburg': 2, 'Uelzen': 40, 'Dannenberg': 1, 'Bad Bevensen': 11, 'Hamburg': 2, 'Hannover': 1, 'Lüchow': 1}
+  /bad-bevensen/                           {'Lüneburg': 1, 'Winsen': 1, 'Uelzen': 2, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 34, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /bad-bodenteich/                         {'Lüneburg': 1, 'Winsen': 1, 'Uelzen': 4, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 11, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /bienenbuettel/                          {'Lüneburg': 2, 'Winsen': 1, 'Uelzen': 3, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 8, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /bleckede/                               {'Lüneburg': 2, 'Winsen': 1, 'Uelzen': 2, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 30, 'Bad Bevensen': 7, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /celle/                                  {'Lüneburg': 2, 'Winsen': 1, 'Uelzen': 2, 'Dannenberg': 1, 'Celle': 36, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 10, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /dannenberg/                             {'Lüneburg': 1, 'Winsen': 1, 'Uelzen': 1, 'Dannenberg': 36, 'Celle': 1, 'Hitzacker': 3, 'Bleckede': 1, 'Bad Bevensen': 10, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /ebstorf/                                {'Lüneburg': 1, 'Winsen': 1, 'Uelzen': 1, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 11, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /gifhorn/                                {'Lüneburg': 2, 'Winsen': 1, 'Uelzen': 2, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 7, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 35, 'Lüchow': 1, 'Wittingen': 1}
+  /hitzacker/                              {'Lüneburg': 1, 'Winsen': 1, 'Uelzen': 1, 'Dannenberg': 3, 'Celle': 1, 'Hitzacker': 30, 'Bleckede': 1, 'Bad Bevensen': 9, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /luechow/                                {'Lüneburg': 1, 'Winsen': 1, 'Uelzen': 2, 'Dannenberg': 3, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 12, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 35, 'Wittingen': 1}
+  /wieren/                                 {'Lüneburg': 1, 'Winsen': 1, 'Uelzen': 3, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 7, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /winsen-luhe/                            {'Lüneburg': 3, 'Winsen': 32, 'Uelzen': 2, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 8, 'Hamburg': 3, 'Hannover': 1, 'Gifhorn': 1, 'Lüchow': 1, 'Wittingen': 1}
+  /wittingen/                              {'Lüneburg': 2, 'Winsen': 1, 'Uelzen': 3, 'Dannenberg': 1, 'Celle': 1, 'Hitzacker': 1, 'Bleckede': 1, 'Bad Bevensen': 11, 'Hamburg': 2, 'Hannover': 1, 'Gifhorn': 5, 'Lüchow': 1, 'Wittingen': 30}
+  /agb/                                    {'Lüneburg': 1, 'Celle': 1, 'Bad Bevensen': 5}
+  /danke/                                  {'Bad Bevensen': 1}
