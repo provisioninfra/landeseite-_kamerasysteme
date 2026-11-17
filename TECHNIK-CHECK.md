@@ -1204,3 +1204,9 @@ Parallelsitzung vorher und nachher informiert.
   erst beim nächsten Crawl (Tage bis Wochen); in der Search Console lässt sich die Seite unter „URL-Prüfung →
   Indexierung beantragen“ vorziehen. SEO-Hinweis der Parallelsitzung (Suchbegriff „Videoüberwachung“ fehlt nun in
   Titel, H1 und H2) dem Kunden mitgeteilt; Entscheidung des Kunden.
+- **Nachtrag (17.11., 19:10 UTC), Variante mit Suchbegriff:** Auf Wunsch des Kunden Yoast-Titel „Kamera- &
+  Videosicherheit: Videoüberwachung für Unternehmen“ (59 Zeichen, Marke in der Beschreibung) und Meta-Beschreibung
+  „Kamera- & Videosicherheit für Unternehmen: DSGVO-konforme Videoüberwachung von Hamburg bis Hannover, Alarm aufs
+  Handy. ProVision Infra installiert vor Ort.“ (155 Zeichen); Social-Titel bleiben „Kamera- & Videosicherheit für
+  Unternehmen | ProVision Infra“, WordPress-Seitentitel bleibt „Kamera- & Videosicherheit“. Nur über den Editor
+  gesetzt (keine Elementor-Speicherung), live geprüft; Yoast-Titelbewertung wieder 83 (vorher 61 ohne Suchbegriff).
