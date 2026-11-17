@@ -265,6 +265,22 @@ Korrekturen kannst du direkt im Elementor-Editor im Text-Widget machen; bei grö
 anpassen und das Werkzeug `tools/agb_seite.py` neu laufen lassen, dann bleiben Inhaltsverzeichnis und Sprungmarken
 automatisch stimmig.
 
+## Leuchtflächen und Verläufe (17./18.11.2026): worauf du beim Bilder-Hochladen achten musst
+
+Die blauen und goldenen Leuchtflächen im Hintergrund waren seit Mai auf 12–15 Farbstufen reduziert – nicht vom
+Designer, sondern von Imagify beim Hochladen („Automatisch optimieren“ steht auf verlustbehaftet). Weiche Verläufe
+mit Transparenz vertragen das nicht; es entstehen Ringe und harte Kanten. Die unberührten Originale liegen in
+`wp-content/uploads/backup/`, die jetzt genutzten glatten Fassungen heißen `hintergrund-…-glatt.webp`,
+`hintergrund-haze-2554-q95.webp`, `header-foto-1305-q92.webp`, `kamera-1…5-1600-q90.webp` usw. (Mediathek, November).
+
+Wenn du künftig ein Bild mit weichem Verlauf oder Transparenz hochlädst: In Imagify vorher „Automatisch optimieren
+beim Hochladen“ ausschalten (Einstellungen → Imagify), hochladen, danach wieder einschalten. Fotos ohne Verlauf
+dürfen optimiert werden.
+
+Zwei Overlays je Seite (Regions-Abschnitt mit Karte, Footer-Box) ragen bewusst über den Abschnitt hinaus; sie
+werden per Element-CSS zum Rand hin ausgeblendet (Kennung `pv-weich` im Feld „Benutzerdefiniertes CSS“ des
+Containers). Bitte dieses CSS nicht löschen, sonst kommen die harten Kanten zurück.
+
 ## Nach der Veröffentlichung: Kurzer Check
 
 - Seite im **privaten Browserfenster** öffnen: Wird alles angezeigt, läuft das Video?

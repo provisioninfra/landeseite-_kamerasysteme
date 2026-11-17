@@ -8,6 +8,10 @@ Originalen tauschen und abgeschnittene Leuchtflächen an Abschnittsrändern weic
 2. Weiche Ränder: Bei Leuchtflächen, die als Overlay (::before) mit fester Größe über den Abschnittsrand hinausragen
    (Messung mit scratchpad seo/cuts.mjs), wird per Element-CSS eine Maske gesetzt, die das Overlay zum oberen bzw.
    unteren Rand hin ausblendet. Nur `custom_css` des Elements wird ergänzt (Kennung `pv-weich`), alles andere bleibt.
+3. Footer-Block ausrichten: Der Block „Leistungen/Standorte“ (a1f0071) lag als Vollbreiten-Container im 98 %-Footer,
+   der übrige Footer-Inhalt ist auf 1400 px zentriert. Der Block wird zum Container mit Inhaltsbreite „boxed“
+   (1400 px); Rahmenlinie und Innenabstand wandern in einen neuen inneren Container a1f0074, der die beiden Listen
+   aufnimmt. So liegen Linie und Listen auf allen Breiten bündig mit Copyright-Zeile und Logo.
 Aufruf: python3 -I tools/hintergrund_runde3.py export.json ziel.json   (Ausgabe: Zahl der Änderungen)
 """
 import json, pathlib, re, sys
@@ -29,16 +33,16 @@ TAUSCH = {  # alte URL: (neue URL, neue Mediathek-ID)
     UP + "2026/10/glow-left-1.png": (N + "hintergrund-overlay-1-glatt.webp", 5182),
     UP + "2026/10/glow-right-1.png": (N + "hintergrund-overlay-2-glatt.webp", 5183),
     UP + "2026/10/glow-frame.png": (N + "hintergrund-rahmen-urfassung.webp", 5184),
-    UP + "2026/10/glow-ellipse-5-1.png": (N + "hintergrund-ellipse-5-glatt.webp", None),
+    UP + "2026/10/glow-ellipse-5-1.png": (N + "hintergrund-ellipse-5-glatt.webp", 5198),
     # weitere quantisierte Dateien (IDs nach Upload eintragen)
-    UP + "2026/05/Ellipse-5.png": (N + "hintergrund-ellipse-5-glatt.webp", None),
-    UP + "2026/05/Untitled-design-13.png": (N + "hintergrund-haze-2554-q95.webp", None),
-    UP + "2026/07/Untitled-design-13.png": (N + "hintergrund-haze-2554-q95.webp", None),
-    UP + "2026/05/provision_header_02-1.png": (N + "header-foto-1305-q92.webp", None),
-    UP + "2026/05/Untitled-design-12.png": (N + "tuergriff-1875-q90.webp", None),
-    UP + "2026/05/Untitled-design-14.png": (N + "foto-serverraum-2400-q88.webp", None),
-    UP + "2026/05/Untitled-design-15.png": (N + "foto-gruender-tuer-2400-q88.webp", None),
-    UP + "2026/08/Mask-group-7-2.png": (N + "foto-gruender-laptop-2400-q90.webp", None),
+    UP + "2026/05/Ellipse-5.png": (N + "hintergrund-ellipse-5-glatt.webp", 5198),
+    UP + "2026/05/Untitled-design-13.png": (N + "hintergrund-haze-2554-q95.webp", 5199),
+    UP + "2026/07/Untitled-design-13.png": (N + "hintergrund-haze-2554-q95.webp", 5199),
+    UP + "2026/05/provision_header_02-1.png": (N + "header-foto-1305-q92.webp", 5202),
+    UP + "2026/05/Untitled-design-12.png": (N + "tuergriff-1875-q90.webp", 5205),
+    UP + "2026/05/Untitled-design-14.png": (N + "foto-serverraum-2400-q88.webp", 5206),
+    UP + "2026/05/Untitled-design-15.png": (N + "foto-gruender-tuer-2400-q88.webp", 5209),
+    UP + "2026/08/Mask-group-7-2.png": (N + "foto-gruender-laptop-2400-q90.webp", 5212),
     UP + "2026/10/kamera-1.png": (N + "kamera-1-1600-q90.webp", None),
     UP + "2026/10/kamera-2.png": (N + "kamera-2-1600-q90.webp", None),
     UP + "2026/10/kamera-3.png": (N + "kamera-3-1600-q90.webp", None),
@@ -49,7 +53,15 @@ TAUSCH = {  # alte URL: (neue URL, neue Mediathek-ID)
 VIDEO = {N + "zutritt-hero-desktop-1920.mp4": N + "zutritt-hero-desktop-2560.mp4"}
 
 # Weiche Ränder: Element-ID -> Kanten, die ausgeblendet werden (aus der Messung); Prozentwerte beziehen sich auf die Höhe
-MASKEN = {}
+MASKEN = {
+    "55b8573": "unten",   # Regions-Abschnitt mit Karte: Ellipse-4-Overlay (40 % Breite, −25 px) ragt unten heraus (bis 15 Stufen)
+    "9a7495a": "unten",   # dito Zutrittssystem-Seite
+    "ddbba36": "beide",   # Footer-Box der Inhaltsseiten: Ellipse-3-Overlay (94 % Breite, −472/−6xx px) oben und unten abgeschnitten
+    "772b72df": "beide",  # Footer-Box Zutrittssystem
+    "67f4447": "beide",   # Footer-Box Impressum
+    "3a939b6": "beide",   # Footer-Box Datenschutz
+    "ebac46e": "beide",   # Footer-Box AGB
+}
 MASKE_CSS = {
     "oben": "linear-gradient(to bottom,transparent 0,#000 18%,#000 100%)",
     "unten": "linear-gradient(to bottom,#000 0,#000 82%,transparent 100%)",
@@ -61,6 +73,33 @@ def walk(els):
     for e in els:
         yield e
         yield from walk(e.get("elements", []))
+
+
+def footer_ausrichten(data):
+    """a1f0071 auf Inhaltsbreite boxed 1400 setzen; Linie/Abstand in neuen inneren Container a1f0074 mit den Listen."""
+    for e in walk(data["elements"]):
+        if e.get("id") != "a1f0071":
+            continue
+        kinder = e.get("elements", [])
+        if any(k.get("id") == "a1f0074" for k in kinder):
+            return 0  # schon umgebaut
+        s = e.setdefault("settings", {})
+        innen = {
+            "id": "a1f0074", "elType": "container", "isInner": True, "elements": kinder,
+            "settings": {
+                "content_width": "full", "flex_direction": "column", "_title": "Footer: Leistungen und Standorte (innen)",
+                "border_border": s.get("border_border", "solid"), "border_width": s.get("border_width"), "border_color": s.get("border_color"),
+                "padding": s.get("padding"),
+            },
+        }
+        innen["settings"] = {k: v for k, v in innen["settings"].items() if v is not None}
+        e["elements"] = [innen]
+        s["content_width"] = "boxed"
+        s["boxed_width"] = {"unit": "px", "size": 1400, "sizes": []}
+        for k in ("border_border", "border_width", "border_color", "padding"):
+            s.pop(k, None)
+        return 1
+    return 0
 
 
 def anwenden(data):
@@ -93,6 +132,7 @@ def anwenden(data):
                 g = MASKE_CSS[kante]
                 s["custom_css"] = (css.rstrip() + "\n" if css.strip() else "") + f"/* pv-weich */ selector::before{{-webkit-mask-image:{g};mask-image:{g};}}"
                 n += 1
+    n += footer_ausrichten(data)
     return data, n
 
 
