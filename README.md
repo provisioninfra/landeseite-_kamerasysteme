@@ -58,7 +58,7 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - Umlaut-Adressen der Ortsseiten `/lüneburg/`, `/bienenbüttel/`, `/lüchow/` führen über drei weitere noindex-Weiterleitungsseiten
   (IDs 4986, 4987, 4988) auf `/lueneburg/`, `/bienenbuettel/`, `/luechow/` (08.11.2026)
 - `tools/kamera_wording.py` – Kamera-Seite (ID 4313): Wording „Kamera- & Videosicherheitssysteme“ in H1, Unterzeile und
-  Leistungsüberschrift (17.11.2026)
+  Leistungsüberschrift; Modus `seo`: Strukturdaten und Seitentitel „Kamera- & Videosicherheit“ für den Google-Eintrag (17.11.2026)
 - `tools/agb_seite.py`, `inhalte/agb-2026-01.txt` – AGB-Seite (ID 782): Wortlaut des Kunden als Textdatei, Werkzeug baut daraus
   Vorspann, Inhaltsverzeichnis, Abschnitte (h2), Ziffern (h3), Absätze und das Muster-Widerrufsformular ins Text-Widget (15.11.2026)
 - `tools/hero_text.py` – Hero der Startseite (ID 31), der Kamera-Seite (4313) und der 15 Ortsseiten (4496, 4605, 4735–4783):

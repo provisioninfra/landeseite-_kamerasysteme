@@ -1191,3 +1191,16 @@ Parallelsitzung vorher und nachher informiert.
 - **Geprüft live (1440, 1024, 393 und 852×393 px):** Seitenbreite ohne Überlauf, Überschriftenzahl unverändert (1/14/11),
   keine JavaScript-Fehler; am Handy bricht die H1 jetzt in vier Zeilen („mit Kamera- & / Videosicherheitssystemen“),
   Seite 26 px länger, Bildschirmfotos Handy und Computer gesichtet.
+- **Nachtrag (17.11., 19:00 UTC), Google-Eintrag „Kamera- & Videosicherheit“:** Der Kunde will den Eintrag der
+  Kamera-Seite in der Google-Ergebnisliste (Sitelink „Kamera- & Videoüberwachung“ unter dem Treffer provision-infra.de)
+  als „Kamera- & Videosicherheit“. Google bildet solche Einträge aus Seitentitel und Titel-Tag; daher gesetzt:
+  Yoast-Titel „Kamera- & Videosicherheit für Unternehmen | ProVision Infra“, Meta-Beschreibung „Kamera- &
+  Videosicherheit für Unternehmen zwischen Hamburg und Hannover: …“ (Rest unverändert), Social-Titel (Facebook,
+  X) gleichlautend, WordPress-Seitentitel „Kamera- & Videosicherheit“ (vorher „Kamera- & Videoüberwachung“), dazu im
+  Strukturdaten-Widget dca37dc Service-Name und -Beschreibung (`tools/kamera_wording.py`, Modus `seo`, der auch den
+  Seitentitel in den Seiteneinstellungen setzt, damit ein späteres Elementor-Speichern ihn nicht zurückdreht).
+  Elementor gespeichert 18:58 UTC (frischer Export, nur dca37dc.html und post_title), Yoast über den Editor 18:59 UTC;
+  Parallelsitzung informiert. Die Adresse `/kamerasysteme/` bleibt. Hinweis: Google übernimmt die neue Bezeichnung
+  erst beim nächsten Crawl (Tage bis Wochen); in der Search Console lässt sich die Seite unter „URL-Prüfung →
+  Indexierung beantragen“ vorziehen. SEO-Hinweis der Parallelsitzung (Suchbegriff „Videoüberwachung“ fehlt nun in
+  Titel, H1 und H2) dem Kunden mitgeteilt; Entscheidung des Kunden.
