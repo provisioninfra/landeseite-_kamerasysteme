@@ -139,7 +139,12 @@ def anwenden(data):
                 s["custom_css"] = (css.rstrip() + "\n" if css.strip() else "") + f"/* pv-weich */ selector::before{{-webkit-mask-image:{g};mask-image:{g};}}"
                 n += 1
     n += footer_ausrichten(data)
-    return data, n
+    # Nachtrag: Startseite – alte „Leistungen:“-Liste aus der Copyright-Zeile in den Block (siehe footer_start_angleichen.py)
+    import importlib.util as _ilu
+    _spec = _ilu.spec_from_file_location("fsa", pathlib.Path(__file__).resolve().parent / "footer_start_angleichen.py")
+    _fsa = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_fsa)
+    data, m = _fsa.anwenden(data)
+    return data, n + m
 
 
 if __name__ == "__main__":
