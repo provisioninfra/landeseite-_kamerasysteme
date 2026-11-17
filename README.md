@@ -48,6 +48,8 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
 - `elementor/seo.json` – SEO-Titel, Meta-Beschreibung, Fokus-Keyphrase und Vorschau-Titel der Seite (vom Composer geschrieben, in Yoast eingetragen)
 - `elementor/geo.json` – Geokoordinaten des Firmensitzes für die LocalBusiness-Strukturdaten
 - `SEO-GESAMTSEITE.md` – SEO-Audit und priorisierter Maßnahmenplan für alle Seiten der Website (02.11.2026)
+- `SEO-CHECK-2026-11.md` – ausführlicher SEO-Check mit Ziel „Platz 1 in Norddeutschland“: Antworten des Kunden, Befund (Technik,
+  Inhalt, Verlinkung, lokale Signale, Autorität), Maßnahmenplan in drei Stufen, offene Zulieferungen (17.11.2026)
 - `TRACKING-CHECK.md` – Prüfung der Meta-Pixel-Events im Tag Manager gegen die Formular-Logik, mit Korrekturanleitung (02.11.2026)
 - `tools/siegel_handy.py` – schwebendes ProvenExpert-Siegel auch auf dem Handy zeigen (Ausblendung entfernen)
 - `tools/schlachthof_seite.py` – Unterseite „Videoüberwachung für Schlachthöfe“ (`/videoueberwachung-schlachthoefe/`, ID 4870) aus der
