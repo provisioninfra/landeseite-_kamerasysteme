@@ -5,6 +5,9 @@
 2. Startseite: Die alte Liste „Leistungen:“ in der Copyright-Zeile (d38bcbe, auf vier Einträge erweitert) ließ die Zeile
    bei 2560 px umbrechen („Schlachthöfe“ und „AGB“ allein in zweiter Zeile). Die Liste wandert als Zeile „Leistungen“
    in den Footer-Block (wie auf allen anderen Seiten), die Copyright-Zeile hat wieder Copyright und Rechtslinks.
+3. Barrierefreiheit (Lighthouse nach dem Footer-Block: „target-size“ und „link-in-text-block“): Links der beiden Listen
+   bekommen 5 px Innenabstand oben/unten (Tippfläche ≥ 24 px), die Beschriftungen „Leistungen:“/„Standorte:“ eine
+   gedämpfte Farbe (#8A94B0), damit Links und Text ohne Unterstreichung unterscheidbar sind (Kontrast ≥ 3:1).
 Aufruf: python3 -I tools/footer_start_angleichen.py export.json ziel.json   (Ausgabe: Zahl der Änderungen)
 """
 import importlib.util, json, pathlib, sys
@@ -13,6 +16,8 @@ HIER = pathlib.Path(__file__).resolve().parent
 _spec = importlib.util.spec_from_file_location("footer_block", HIER / "footer_block.py")
 fb = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(fb)
 NULL = {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": True}
+A11Y_CSS = ("/* pv-a11y */ selector .elementor-icon-list-item a { display: inline-block; padding: 5px 0; } "
+            "selector .elementor-icon-list-items > li:first-child .elementor-icon-list-text { color: #8A94B0; }")
 
 
 def walk(els, parent=None):
@@ -29,6 +34,11 @@ def anwenden(data):
     if block is not None and block.get("settings", {}).get("padding") != NULL:
         block.setdefault("settings", {})["padding"] = NULL
         n += 1
+    for e, _ in paare:
+        if e.get("id") in ("a1f0072", "a1f0073") and "pv-a11y" not in (e.get("settings", {}).get("custom_css") or ""):
+            css = e.setdefault("settings", {}).get("custom_css") or ""
+            e["settings"]["custom_css"] = (css.rstrip() + "\n" if css.strip() else "") + A11Y_CSS
+            n += 1
     if innen is None:
         return data, n
     alt = next(((e, p) for e, p in paare if e.get("widgetType") == "icon-list" and e.get("id") != "a1f0072"
