@@ -1355,3 +1355,13 @@ Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matri
   `kamera-hero-video-mobil-1080.mp4` (44 dB, dunkle Szene), Zutrittssystem die neue CRF-17-Fassung. Das Türvideo wird
   auf 16 Seiten gegen eine CRF-18-Fassung (2,0 MB, Gold 39–41 dB) getauscht; Kamera-Handyvideo bleibt (nur +2 dB
   erreichbar bei vierfacher Größe).
+- **Runde 4 (ab 01:00 UTC, 22 Footer-Seiten):** Handy-Türvideo auf Start- und Ortsseiten gegen die CRF-18-Fassung
+  (Mediathek 5296) getauscht; Footer-Listen barrierefrei nach Hinweis der Parallelsitzung (Lighthouse-Barrierefreiheit
+  war durch den Footer-Block von 94 auf 83 gefallen): Listenlinks mit 5 px Innenabstand oben/unten (Tippfläche
+  ≥ 24 px), Beschriftungen „Leistungen:“/„Standorte:“ in gedämpftem Blaugrau #8A94B0 (Kontrast zu den weißen Links
+  ≥ 3:1, zum Hintergrund ≥ 5:1), per Element-CSS (Kennung `pv-a11y`). Die vier Ortsseiten-Stichproben vorher
+  (Karriere, Zutrittssystem, Kamera, Schlachthof, Impressum auf Handy hoch/quer und Tablet hoch/quer): goldene
+  Leuchtflächen ohne Ringe, größter Helligkeitsschritt zwischen Nachbarpixeln 1 Stufe (8-Bit-Grenze).
+- **Nicht umgesetzt (bewusst):** Poster-Bild/nur eine Videofassung mobil auf /zutrittssystem/ (der Desktop-Container
+  spielt per Steuerung auch im Handy-Querformat, siehe Handy-Darstellung vom 02.11.), Render-Blocking von jQuery/GTM/
+  Facebook, Lottie-JSON 502 KB – wären Eingriffe in Abläufe bzw. Tracking (Freigabe nötig).
