@@ -1410,3 +1410,12 @@ Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matri
     Zutrittssystem-Seite (10 px). Designer-Layout, nicht geändert.
   - Fotos für den Kundenbericht: Ganzseitenfotos aus Sichtfenster-Kacheln nach nutzerähnlichem Scrollen
     (`seo/ganzseite_kacheln.mjs` im Arbeitsordner), damit Einblend-Animationen so erscheinen wie beim Nutzer.
+- **Durchsicht aller Unterseiten (18.11.2026, 08:00–09:00 UTC, Kundenfrage „passen auch alle einzelnen Unterseiten?“):**
+  alle 32 veröffentlichten Seiten als Ganzseitenfoto aus Sichtfenster-Kacheln bei 390×844 (Handy hochkant) und
+  1366×768 (Laptop) erzeugt (`seo/alle_kacheln.sh` im Arbeitsordner) und Seite für Seite als Übersichtsblatt angesehen:
+  Hero, Leuchtflächen, Karten, Karussells, Zeitleiste, Karte, FAQ, Partnerlogos, Footer-Block mit Leistungen und
+  Standorten – auf allen Seiten vollständig und einheitlich; die Zutritt-Footer-Zeile sitzt nach der Korrektur auch am
+  Laptop im Bild. Zwei scheinbare Auffälligkeiten waren Artefakte der Kachel-Montage (Nahtstellen in einer Karte der
+  Ortsseiten, doppelt wirkende Sterne der Lüchow-Bewertungskarte) – direkt auf der Live-Seite fotografiert: korrekt.
+  Wiederholte Überschriften auf den Blättern stammen von mitlaufenden (sticky) Überschriften, die in jeder Kachel
+  erscheinen. Der Vimeo-Platzhalter auf den Ortsseiten ist der Consent-Platzhalter (nur essenzielle Cookies im Test).
