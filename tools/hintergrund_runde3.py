@@ -61,6 +61,8 @@ VIDEO = {  # Handy-Hero-Videos: die erste Neukodierung (CRF 24) war in den golde
     N + "banner-video-handy-1080.mp4": N + "banner-video-handy-1080-q14.mp4",
     UP + "2026/05/Main-Banner-Video-6.mp4": N + "banner-video-handy-1080-q14.mp4",
     "https://dev-ls-de-532018.hostingersite.com/wp-content/uploads/2026/05/Main-Banner-Video-6.mp4": N + "banner-video-handy-1080-q14.mp4",
+    # Handy-Hero der Start- und Ortsseiten (Container d135e80, 1440×1440, 1,55 Mbit/s, Gold-PSNR 37–40 dB) → CRF 18, 2,0 MB, Gold 39–41 dB
+    N + "startseite-hero-tuer-handy-1440.mp4": N + "startseite-hero-tuer-handy-1440-q18.mp4",
 }
 
 # Weiche Ränder: Element-ID -> Kanten, die ausgeblendet werden (aus der Messung); Prozentwerte beziehen sich auf die Höhe

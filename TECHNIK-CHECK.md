@@ -1347,3 +1347,11 @@ geprüften Speicherdateien wurden nach Korrektur der Prüfung mit Sperre gegen z
 (REST `modified_gmt` gegen Exportzeit) gespeichert). 13 Seiten ohne Treffer (Kontakt-, Termin-, Danke-, Test- und
 Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matrix 32 Seiten × 6 Größen, Kernseiten
 × 8 Größen mit Ganzseitenfotos, Schnittkanten-Messung, Handy-/Tablet-Fotos von acht Seiten).
+- **Nachprüfung Handy-Videos (00:55 UTC):** Die Container mit dem Banner-Video (67b8213 auf Kamera-, Schlachthof- und
+  Ortsseiten, 64ae7342/10797c0 auf Zutrittssystem) haben Hintergrundtyp „classic“ – ihr `background_video_link` ist
+  wirkungslos, dort lief also weder das 15-MB-Original noch die CRF-24-Fassung. Tatsächlich abgespielt werden auf dem
+  Handy: Start- und Ortsseiten `startseite-hero-tuer-handy-1440.mp4` (Parallelsitzung, 1,55 Mbit/s; gemessen gegen das
+  2880²-Original: PSNR gesamt 42,7 dB, in den goldenen Leuchtbereichen 37–40 dB), Kamera/Schlachthof
+  `kamera-hero-video-mobil-1080.mp4` (44 dB, dunkle Szene), Zutrittssystem die neue CRF-17-Fassung. Das Türvideo wird
+  auf 16 Seiten gegen eine CRF-18-Fassung (2,0 MB, Gold 39–41 dB) getauscht; Kamera-Handyvideo bleibt (nur +2 dB
+  erreichbar bei vierfacher Größe).
