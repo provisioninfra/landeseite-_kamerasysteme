@@ -1419,3 +1419,19 @@ Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matri
   Ortsseiten, doppelt wirkende Sterne der Lüchow-Bewertungskarte) – direkt auf der Live-Seite fotografiert: korrekt.
   Wiederholte Überschriften auf den Blättern stammen von mitlaufenden (sticky) Überschriften, die in jeder Kachel
   erscheinen. Der Vimeo-Platzhalter auf den Ortsseiten ist der Consent-Platzhalter (nur essenzielle Cookies im Test).
+- **Tablet-Durchsicht (18.11.2026, 09:00 UTC; elf Vorlagen bei 820×1180, fünf bei 1024×768) – Befund und Korrektur,
+  Zutrittssystem, Block „Zusätzlich bekommst du“ (Türgriff):** Fünf Lottie-Ebenen (`lottie-1` bis `lottie-5`, je
+  100 % der Blockbreite, Seitenverhältnis 0,4818) zeichnen die Kästchen (22,39 % × 14,70 % der Ebene), Icons und
+  Verbindungslinien; die fünf Beschriftungen liegen in absolut positionierten Containern (08fd7c8, b76492c, 4d000ef,
+  d20cee8, 38aacf7) mit festen Pixel-Offsets je Breakpoint (Designer-Einstellung). Gemessen per DOM-Geometrie der
+  Lottie-Bilder gegen die Container bei 768–1920 px: Deckung nur ab 1512 px (dort ist der Block fest 1512 px breit);
+  bei 1024, 1180, 1280 und 1440 px standen die Texte 25–86 px über der Kästchenmitte, teils über den Icons oder ganz
+  außerhalb. Korrektur ohne Strukturänderung: `tools/zutritt_griff_beschriftung.py` ergänzt das Element-CSS des
+  Blocks (Kennung `pv-griff`) um vier Media-Bereiche (768–1024, 1025–1280, 1281–1440, 1441–1511 px), die `top`,
+  `left`, `--width` und `--min-height` der fünf Container als `calc(vw, px)` genau auf die Kästchen setzen (Ebenen-
+  Versatz, Spalten-Ursprung 30 px bzw. 65 % der Fensterbreite und Rand je Breakpoint eingerechnet). Schrift, Einblend-
+  Animation, Hover-Vergrößerung und Lottie-Hover unverändert; ab 1512 px greift nichts davon. Gespeichert 09:41 UTC
+  über die Kette `griff_runde.sh` (Prüfung: nur `custom_css` von cb32d04, nur angehängt, 273 Elemente sonst
+  identisch); Caches geleert. Live nachgemessen bei 820, 1024, 1180, 1280, 1366, 1440, 1512 und 1920 px: alle 40
+  Platzierungen innerhalb der Kästchen, Textmitte −18 bis +6 px zur Kästchenmitte, Abstand zum Icon 10–37 px;
+  Desktop-Werte identisch mit vorher. Bildschirmfotos 820/1024/1180/1366/1440 geprüft.

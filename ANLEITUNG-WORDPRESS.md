@@ -289,6 +289,16 @@ Querformat nicht seitlich aus dem Bild ragt, steht beim Container dieser Zeile u
 Breakpoint **Laptop** der Wert **100 %**. Wenn du diesen Footer einmal bearbeitest: den Wert nicht löschen; am
 Desktop ab 1441 px ändert er nichts, auf dem Handy hochkant war die Zeile schon vorher korrekt.
 
+## Türgriff-Block der Zutrittssystem-Seite (18.11.2026): ein CSS-Block, der bleiben muss
+
+Im Block „Zusätzlich bekommst du“ zeichnen fünf Lottie-Animationen die Kästchen, Icons und Linien um den Türgriff; sie
+wachsen mit der Fensterbreite. Die fünf Texte liegen in eigenen, fest positionierten Containern. Damit Text und Kästchen
+auf Tablets quer und Laptops (1024–1511 px) zusammenbleiben, steht am Block (Container „cb32d04“, Reiter *Erweitert →
+Benutzerdefiniertes CSS*) ein Abschnitt mit der Kennung `pv-griff`. Bitte nicht löschen. Wenn der Block einmal neu
+gestaltet wird (andere Lottie-Dateien, andere Spaltenbreiten, andere Abstände), passt dieser Abschnitt nicht mehr und
+muss neu gemessen werden – im Zweifel vorher Bescheid geben. Ab 1512 px Fensterbreite gelten weiterhin nur die
+Einstellungen des Designers.
+
 ## Nach der Veröffentlichung: Kurzer Check
 
 - Seite im **privaten Browserfenster** öffnen: Wird alles angezeigt, läuft das Video?

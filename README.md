@@ -66,6 +66,7 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
   hochwertiges WebP, weiche Ausblendung abgeschnittener Overlays per Element-CSS, Footer-Block auf 1400 px zentriert
 - `tools/text_link.py` – eine vorhandene Textstelle in einem Elementor-Textwidget verlinken, ohne den Text zu ändern
 - `tools/footer_start_angleichen.py`, `tools/zutritt_hero_handy.py` – Footer-Block ausrichten und barrierefrei machen; Zutritt-Hero: kein Desktop-Video im Handy-Hochformat (18.11.2026)
+- `tools/zutritt_griff_beschriftung.py` – Zutrittssystem, Block „Zusätzlich bekommst du“: Element-CSS (Kennung `pv-griff`), mit dem die fünf Beschriftungen zwischen 768 und 1511 px den mit der Breite skalierenden Lottie-Kästchen folgen; ab 1512 px unverändert (18.11.2026)
 - `tools/zutritt_footer_zeile.py` – Footer-Zeile der Zutrittssystem-Seite (Bewertung + Social-Icons, fest 1400 px) ab Elementor-Breakpoint „Laptop“ (≤ 1440 px) 100 % breit, damit sie auf Tablets und Handys quer nicht seitlich abgeschnitten wird (18.11.2026)
 - `tools/footer_block.py` – Footer je Seite: Zeile „Leistungen“/„Standorte“ mit Links zu allen Seiten und Firmendaten unter dem
   Copyright (17.11.2026)
