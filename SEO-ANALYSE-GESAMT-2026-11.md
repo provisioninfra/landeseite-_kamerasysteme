@@ -449,6 +449,43 @@ Anrufe/Formulare aus dem Unternehmensprofil, Lighthouse-Performance ≥ 80 mobil
 Domains. Platz 1 lässt sich nicht garantieren; die genannten Maßnahmen schließen aber jede gefundene Lücke zum Wettbewerb und
 bauen in der Region einen Vorsprung auf, den heute niemand hat.
 
+## 12. Nachtrag: Umsetzungsstand 18.11.2026, 00:50 UTC (lesend geprüft)
+
+Die parallele Sitzung „Kamera-/Technik“ hat am 17./18.11. im Kundenauftrag einen Teil der Phase 1 umgesetzt. Geprüft habe
+ich live mit Cache-Umgehung auf /, /kamerasysteme/, /zutrittssystem/ und /celle/ sowie mit einem zweiten Lighthouse-Lauf.
+
+| Nr. (Top 10) | Stand | Befund |
+|---|---|---|
+| 1 Hauptmenü | teilweise | „Mehr“ enthält jetzt Zutrittssystem, Kamera- & Videosicherheit, Videoüberwachung Schlachthöfe, Karriere (Menüs „Main“ und Kamera-Header). Kein Punkt „Standorte“; Menü auf /zutrittssystem/ weiterhin nur „Zur Startseite“/„Karriere“; Menüs der Stadtseiten unverändert (nur Anker) |
+| 2 Footer-NAP | teilweise | Neuer Footer-Block „Leistungen/Standorte“ auf allen Seiten: 15 Stadtseiten, 3 Leistungsseiten, Schlachthof-Seite; Firmenzeile mit Adresse und Telefon als `tel:`-Link (jetzt auch auf /, /kamerasysteme/, /zutrittssystem/). Öffnungszeiten fehlen; Ankertexte der Stadtseiten weiterhin nur der Ortsname |
+| 3 Startseite/Region | teilweise | Titel jetzt „Digitale Schließanlage für Unternehmen in Norddeutschland“; Standortlinks nur über den Footer-Block, kein Fließtext-Abschnitt mit beschreibenden Links |
+| 4 Schlachthof verlinkt | erledigt | aus „Mehr“ und Footer auf allen Seiten; die Seite verlinkt zurück auf /zutrittssystem/ |
+| 5 Schema | weitgehend | ProvenExpert-Product-Schema entfernt (Child-Theme), Yoast-Organisation gesetzt (publisher und Organization-Knoten vorhanden). Vereinheitlichung der LocalBusiness-Typen je Seite nicht geprüft |
+| 7 Performance | weitgehend | Große PNGs (Ellipse-3/-4, Untitled-design-1, 1.png, 2.png, Frame-…) ersetzt, 11–14 WebP je Seite, Bildtransfer Startseite 1,9 MB → 35 KB; Videos /zutrittssystem/ 9,9 MB → 2,4 MB (Desktop 1,26 MB, Handy 1,18 MB, beide werden mobil geladen); BugHerd entfernt; WP Rocket Minify und Lazy-CSS-Hintergründe aktiv; Rest-PNG `Frame-2147225609-scaled` 0,4 MB |
+| SEO-Titel | erledigt | / „Digitale Schließanlage für Unternehmen in Norddeutschland“, /zutrittssystem/ „Elektronische Schließanlage & Zutrittskontrolle mit Service“, /kamerasysteme/ „Kamera- & Videosicherheit: Videoüberwachung für Unternehmen“ |
+
+Lighthouse mobil, vorher (17.11., 00:07 UTC) → nachher (18.11., 00:55 UTC):
+
+| Seite | Performance | LCP | TBT | Transfer | Requests | Barrierefreiheit | Best Practices |
+|---|---|---|---|---|---|---|---|
+| / | 52 → 57 | 5,0 → 4,4 s | 700 → 720 ms | 4,1 → 2,2 MB | 153 → 144 | 94 → **83** | 75 → 79 |
+| /zutrittssystem/ | 48 → 47 | 16,4 → 8,7 s | 810 → 900 ms | 13,1 → 4,2 MB | 126 → 115 | 98 → **86** | 75 → 79 |
+
+Einordnung: Das Transfervolumen ist stark gesunken, der Performance-Score bewegt sich kaum, weil die verbleibenden Bremsen
+JavaScript und CSS sind: render-blockierende Dateien 710 ms (jQuery, Post-CSS, Roboto-CSS), Google Tag Manager 323 KB plus
+Facebook-Pixel 208 KB (630–700 ms Blockierzeit), ungenutztes JS 276–314 KB, Lottie-JSON 502 KB auf /zutrittssystem/. LCP-Element
+auf /zutrittssystem/ bleibt das Hintergrundvideo; ein Poster-Bild als LCP und nur eine Videofassung je Gerät würden den LCP
+unter 2,5 s bringen.
+
+Barrierefreiheit gesunken durch den neuen Footer-Block: 20 Links mit zu kleinen Tippflächen (`target-size`, unter 24 px),
+Links im Textblock ohne Unterscheidung vom Text (`link-in-text-block`), dazu ein Kontrastfehler im ProvenExpert-Widget
+(`pe_u`, Farbe #726542). Behebung: Zeilenhöhe und Abstand der Footer-Links auf mindestens 24 px, Unterstreichung oder eigene
+Linkfarbe.
+
+Aus Phase 1 noch offen: Menüpunkt „Standorte“, Öffnungszeiten im Footer, beschreibende Ankertexte („Schließanlagen &
+Videoüberwachung in Celle“), 301 für Umlaut-URLs und Großschreibung, Google-Unternehmensprofil (ohne Login nicht prüfbar),
+GitHub-Repos privat, LinkedIn-Slug, LocalBusiness-Typen vereinheitlichen.
+
 ## Anhang
 
 - `seo-analyse/seiten-metriken-2026-11-17.txt` – Kennzahlen aller 33 geprüften URLs, Dubletten-Matrix, Linkgraph, Schema je Seite

@@ -1,0 +1,50 @@
+
+===== startseite https://provision-infra.de/ {'performance': 57, 'accessibility': 83, 'best-practices': 79, 'seo': 100} runtimeError: None
+  first-contentful-paint           3.7 s
+  largest-contentful-paint         4.4 s
+  speed-index                      4.6 s
+  total-blocking-time              720 ms
+  cumulative-layout-shift          0.003
+  interactive                      10.9 s
+  server-response-time             Root document took 220 ms
+  LCP-Element: <p class="elementor-heading-title elementor-size-default">
+  DOM-Größe: 1,664 elements | Requests: 144 | Transfer gesamt: Total size was 2,159 KiB
+  Ressourcen: Total: 102x 2159 KB, Script: 43x 953 KB, Media: 1x 798 KB, Document: 1x 152 KB, Stylesheet: 37x 133 KB, Font: 6x 83 KB, Image: 8x 35 KB, Other: 6x 5 KB, Third-party: 15x 620 KB
+  Drittanbieter (Transfer KB / Blocking ms): Google Tag Manager: 323/375, Facebook: 208/281, Amazon Web Services: 56/0, provenexpert.com: 29/0, Google/Doubleclick Ads: 4/0, Other Google APIs/SDKs: 1/0
+  CHANCE render-blocking-resources          Est savings of 710 ms
+  CHANCE unused-javascript                  Est savings of 314 KiB
+  CHANCE server-response-time               Root document took 220 ms
+  Größte Requests: startseite-hero-tuer-handy-1440.mp4 798 KB (Media); js?id=GT-NC8XZMMS&cx=c&gtm=4e6bg2 167 KB (Script); gtm.js?id=GTM-KV75JXFB 156 KB (Script); https://provision-infra.de/ 152 KB (Document); 1882223199102262?v=2.9.441&r=stable&domain=pr 108 KB (Script); fbevents.js 99 KB (Script); lottie.min.js?ver=5.6.6 67 KB (Script); clientParamBuilder.bundle.js 56 KB (Script)
+  seo nicht bestanden: []
+  best-practices nicht bestanden: ['third-party-cookies', 'inspector-issues']
+  accessibility nicht bestanden: ['aria-allowed-role', 'aria-hidden-focus', 'color-contrast', 'heading-order', 'link-in-text-block', 'target-size']
+  Ungenutztes JS: [('gtm.js?id=GTM-KV75JXFB', 67), ('js?id=GT-NC8XZMMS&cx=c&gtm=4e6bg2', 63), ('lottie.min.js?ver=5.6.6', 58), ('1882223199102262?v=2.9.441&r=stable&doma', 47), ('fbevents.js', 34)]
+  Ungenutztes CSS: [('post-31.css?ver=1794960311&wpr_t=1794963', 15), ('all.min.css?ver=1794963008', 13), ('borlabs-cookie-1-de.css?ver=1794963007', 12)]
+  Bildformate: [('widget_landscape_300_de_0.png', 10)]
+  Render-blockierend: [('jquery.min.js?ver=3.7.1', 369), ('post-31.css?ver=1794960311&wpr_t=1794963', 369), ('custom-frontend.min.css?ver=1793092920', 369)]
+
+===== zutrittssystem https://provision-infra.de/zutrittssystem/ {'performance': 47, 'accessibility': 86, 'best-practices': 79, 'seo': 100} runtimeError: None
+  first-contentful-paint           3.3 s
+  largest-contentful-paint         8.7 s
+  speed-index                      4.0 s
+  total-blocking-time              900 ms
+  cumulative-layout-shift          0.003
+  interactive                      13.7 s
+  server-response-time             Root document took 220 ms
+  LCP-Element: <video class="elementor-background-video-hosted" role="presentation" autoplay="" muted="" playsinline="" src="https://provision-infra.de/wp-content/uploads/2026
+  DOM-Größe: 1,341 elements | Requests: 115 | Transfer gesamt: Total size was 4,150 KiB
+  Ressourcen: Total: 92x 4150 KB, Media: 2x 2446 KB, Script: 41x 910 KB, Other: 7x 507 KB, Document: 1x 117 KB, Stylesheet: 30x 103 KB, Image: 7x 34 KB, Font: 4x 32 KB, Third-party: 15x 620 KB
+  Drittanbieter (Transfer KB / Blocking ms): Google Tag Manager: 323/452, Facebook: 208/248, Amazon Web Services: 56/0, provenexpert.com: 29/0, Google/Doubleclick Ads: 4/0, Other Google APIs/SDKs: 1/0
+  CHANCE unused-javascript                  Est savings of 276 KiB
+  CHANCE render-blocking-resources          Est savings of 710 ms
+  CHANCE unused-css-rules                   Est savings of 37 KiB
+  CHANCE uses-rel-preconnect                Est savings of 300 ms
+  CHANCE server-response-time               Root document took 220 ms
+  Größte Requests: zutritt-hero-desktop-2560.mp4 1262 KB (Media); zutritt-hero-handy-1080-q17.mp4 1184 KB (Media); lp10754-provision-infra-gmbh-L6-subpage-V01-w 502 KB (XHR); js?id=GT-NC8XZMMS&cx=c&gtm=4e6bg2 167 KB (Script); gtm.js?id=GTM-KV75JXFB 156 KB (Script); https://provision-infra.de/zutrittssystem/ 117 KB (Document); 1882223199102262?v=2.9.441&r=stable&domain=pr 108 KB (Script); fbevents.js 99 KB (Script)
+  seo nicht bestanden: []
+  best-practices nicht bestanden: ['third-party-cookies', 'inspector-issues']
+  accessibility nicht bestanden: ['aria-allowed-role', 'color-contrast', 'link-in-text-block', 'skip-link', 'target-size']
+  Ungenutztes JS: [('gtm.js?id=GTM-KV75JXFB', 66), ('js?id=GT-NC8XZMMS&cx=c&gtm=4e6bg2', 63), ('1882223199102262?v=2.9.441&r=stable&doma', 47), ('lottie.min.js?ver=5.6.6', 45), ('fbevents.js', 34)]
+  Ungenutztes CSS: [('all.min.css?ver=1794963008', 13), ('borlabs-cookie-1-de.css?ver=1794963007', 12), ('post-3316.css?ver=1794961992&wpr_t=17949', 12)]
+  Bildformate: [('widget_landscape_300_de_0.png', 10)]
+  Render-blockierend: [('roboto.css?ver=1794963008', 370), ('post-3316.css?ver=1794961992&wpr_t=17949', 370)]
