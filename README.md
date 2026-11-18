@@ -65,6 +65,7 @@ Speicherweg des Elementor-Editors gespeichert. Alle Texte sind native Elementor-
   den unberührten Originalen geglättet (141 statt 14 Alphastufen), weitere quantisierte Bilder aus den Imagify-Sicherungen als
   hochwertiges WebP, weiche Ausblendung abgeschnittener Overlays per Element-CSS, Footer-Block auf 1400 px zentriert
 - `tools/text_link.py` – eine vorhandene Textstelle in einem Elementor-Textwidget verlinken, ohne den Text zu ändern
+- `tools/footer_start_angleichen.py`, `tools/zutritt_hero_handy.py` – Footer-Block ausrichten und barrierefrei machen; Zutritt-Hero: kein Desktop-Video im Handy-Hochformat (18.11.2026)
 - `tools/footer_block.py` – Footer je Seite: Zeile „Leistungen“/„Standorte“ mit Links zu allen Seiten und Firmendaten unter dem
   Copyright (17.11.2026)
 - `tools/kamera_wording.py` – Kamera-Seite (ID 4313): Wording „Kamera- & Videosicherheitssysteme“ in H1, Unterzeile und

@@ -1368,3 +1368,8 @@ Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matri
 - **Runde 4 abgeschlossen (01:44 UTC):** 22 Seiten gespeichert (31, 3316, 4313, 4870, 4605, 4496 01:01–01:09; nach
   einem Neustart der Arbeitsumgebung 4735–4783, 50, 52, 782 01:13–01:44), 0 Fehler. Damit stehen alle 37
   veröffentlichten Seiten auf dem Endstand; anschließend beide Caches geleert und Gesamtprüfung gestartet.
+- **Zutrittssystem, doppeltes Hero-Video (Hinweis der Parallelsitzung, 01:49 UTC):** Der Handy-Hero 601d5d0 liegt
+  hier als Kind im Desktop-Hero 74da297c; im Hochformat liefen beide Videos (1,3 + 1,2 MB). `tools/zutritt_hero_handy.py`
+  entfernt beim Desktop-Hero „Auf Mobilgeräten abspielen“ (einzige Änderung, gespeichert 01:52 UTC). Geprüft: 390×844
+  lädt nur `zutritt-hero-handy-1080-q17.mp4`, 844×390 und 1366×768 nur `zutritt-hero-desktop-2560.mp4`; Aufbau und
+  Querformat-Verhalten unverändert.
