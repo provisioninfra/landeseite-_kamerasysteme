@@ -281,6 +281,14 @@ Zwei Overlays je Seite (Regions-Abschnitt mit Karte, Footer-Box) ragen bewusst �
 werden per Element-CSS zum Rand hin ausgeblendet (Kennung `pv-weich` im Feld „Benutzerdefiniertes CSS“ des
 Containers). Bitte dieses CSS nicht löschen, sonst kommen die harten Kanten zurück.
 
+## Footer der Zutrittssystem-Seite (18.11.2026): eine Breite, die bleiben muss
+
+Die Zeile mit den ProvenExpert-Sternen und den drei Social-Icons im Footer der Seite „Zutrittssystem“ hat am
+Desktop eine feste Breite von 1400 px (Designer-Einstellung). Damit sie auf Laptops bis 1440 px, Tablets und Handys im
+Querformat nicht seitlich aus dem Bild ragt, steht beim Container dieser Zeile unter *Layout → Breite* für den
+Breakpoint **Laptop** der Wert **100 %**. Wenn du diesen Footer einmal bearbeitest: den Wert nicht löschen; am
+Desktop ab 1441 px ändert er nichts, auf dem Handy hochkant war die Zeile schon vorher korrekt.
+
 ## Nach der Veröffentlichung: Kurzer Check
 
 - Seite im **privaten Browserfenster** öffnen: Wird alles angezeigt, läuft das Video?

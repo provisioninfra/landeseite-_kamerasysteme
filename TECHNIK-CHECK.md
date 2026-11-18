@@ -1373,3 +1373,31 @@ Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matri
   entfernt beim Desktop-Hero „Auf Mobilgeräten abspielen“ (einzige Änderung, gespeichert 01:52 UTC). Geprüft: 390×844
   lädt nur `zutritt-hero-handy-1080-q17.mp4`, 844×390 und 1366×768 nur `zutritt-hero-desktop-2560.mp4`; Aufbau und
   Querformat-Verhalten unverändert.
+- **Gesamtprüfung nach Runde 4 (18.11.2026, 01:45–02:56 UTC) und Nachträge bis 03:30 UTC:**
+  - Matrix: 32 Seiten × 6 Größen (390×844, 844×390, 820×1180, 1180×820, 1366×768, 2560×1440) = 192 Messungen,
+    Kernseiten (Start, Kamera, Zutrittssystem, Lüneburg) zusätzlich 1920×1080 und 3440×1440 mit Ganzseitenfotos:
+    kein seitlicher Überlauf (einzige Meldung: Danke-Seite bei 844/820/1180 px – Scheinbreite des versteckten
+    Karussells, kein echter Überlauf), keine JavaScript-Fehler, Footer-Block auf allen Footer-Seiten vorhanden, Listen
+    ohne Überlappung, Blockhöhe je Größe auf allen Seiten identisch (178 px Desktop, 169 px Tablet und Handy quer,
+    334 px Handy hoch).
+  - Schnittkanten: gerenderte Messung der maskierten Unterkanten (55b8573 auf Start-, Kamera-, Lüneburg- und
+    Schlachthof-Seite, 9a7495a auf Zutrittssystem) bei 1920, 2560 und 3440 px: Helligkeitssprung an der Kante
+    höchstens 0,7 Stufen, also unter der Sichtbarkeitsgrenze von einer Stufe. Die Geometrie-Tabelle von
+    `cuts_auswertung.py` meldet diese Overlays weiterhin als „Schnitt“, weil sie die CSS-Maske nicht kennt.
+  - Handy- und Tablet-Fotos (acht Seiten × 390×844, 844×390, 820×1180, 1180×820): in den goldenen Leuchtflächen
+    größter Nachbarpixel-Schritt 1 Stufe; alle großen Sprünge der Messung liegen auf Textkanten, gelben Buttons und
+    goldenen Kartenrahmen (per Bildausschnitt geprüft).
+  - Hinweis zu den automatischen Ganzseitenfotos: Die Beschriftungen der Zeitleiste „Ablauf der Zusammenarbeit“
+    (Start- und Ortsseiten) fehlen darauf, weil Elementor sie erst beim Scrollen einblendet (`fadeInUp`/`fadeInDown`,
+    Designer-Einstellung); mit langsamem Scrollen wie beim Nutzer sind alle fünf Beschriftungen sichtbar (2560, 1180
+    und 820 px geprüft). Chromium rendert Ganzseitenfotos nur bis 16.384 px Höhe, darunter bleibt das Foto weiß –
+    beides keine Seitenfehler.
+  - **Befund und Korrektur, Footer der Zutrittssystem-Seite:** Die Zeile mit ProvenExpert-Bewertung und Social-Icons
+    (Container 6ad6b91, Designer-Einstellung feste Breite 1400 px) ragte auf Laptops bis 1440 px, Tablets und Handys im
+    Querformat seitlich aus dem Bildschirm: bei 844×390 war von der Bewertung nur „xpert.com“ zu sehen, die drei Icons
+    lagen außerhalb (gemessen: Zeile von −278 bis 1122 px bei 844 px Breite; 1366 px: letztes Icon 7 px abgeschnitten).
+    Handy hochkant war korrekt (Elementor setzt dort 100 %). `tools/zutritt_footer_zeile.py` setzt für den
+    Elementor-Breakpoint „Laptop“ (≤ 1440 px) die Breite auf 100 % – einzige Änderung, gespeichert 03:23 UTC über die
+    Kette `footer_zeile_runde.sh` (Prüfung: nur `width_laptop` von 6ad6b91 weicht ab, Desktop-Breite 1400 px bleibt).
+    Vorher per eingeblendetem CSS getestet, nachher live gemessen: Zeile bei 1440, 1366, 1280, 1180, 1024, 844 und
+    820 px vollständig im Sichtfenster, Bewertung links, Icons rechts wie am Desktop; Caches geleert.
