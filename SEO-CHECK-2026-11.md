@@ -153,11 +153,11 @@ echten Inhalten, dann überregionale Fachbegriffe über Ratgeber.
 |---|---|---|
 | A1 | erledigt | Product-Schema serverseitig aus dem ProvenExpert-Skript entfernt, Siegel unverändert |
 | A2 | erledigt | Yoast-Organisation mit Logo und Profilen; Premium-Felder (Beschreibung, Telefon, USt-ID) nicht verfügbar |
-| A3 | erledigt | Footer-Block „Leistungen“ und „Standorte“ plus Firmenzeile auf 21 Seiten (Karriere ohne Standard-Footer) |
+| A3 | erledigt | Footer-Block „Leistungen“ und „Standorte“ plus Firmenzeile auf 21 Seiten (Karriere ohne Standard-Footer); Block auf 1400 px zentriert, Tippflächen ≥ 24 px, Beschriftungen vom Linktext unterscheidbar |
 | A4 | erledigt (Teil) | Leistungsseiten im Aufklappmenü „Mehr“ von Start- und Kamera-Menü; kein „Standorte“-Menüpunkt, weil es keine Übersichtsseite gibt (Stufe B) – der Footer verlinkt alle Standorte |
 | A5 | erledigt | Bestand war weitgehend vorhanden; ergänzt: Schlachthof → Zutrittssystem im Regions-Absatz |
 | A6 | erledigt (Teil) | BugHerd aus; Facebook-Pixel/GTM vor Einwilligung ist ein Rechtsthema für Borlabs, nicht umgesetzt |
-| A7 | erledigt, nachgebessert | Erste Runde (verkleinerte Dateien) erzeugte sichtbare Farbstufen – zurückgenommen; zweite Runde aus den unberührten Originalen (Imagify-Sicherung), glatte Verläufe, Details im Technik-Check |
+| A7 | erledigt, nachgebessert | Erste Runde (verkleinerte Dateien) erzeugte sichtbare Farbstufen – zurückgenommen; danach aus den unberührten Originalen (Imagify-Sicherung): glatte Leuchtflächen, 16 weitere Bilddateien, weiche Ausblendung abgeschnittener Overlays, Handy-Videos in hoher Qualität; Details im Technik-Check |
 | A8 | erledigt (Teil) | Minify CSS/JS, Lazyload für CSS-Hintergründe und iframes; Zusammenfassen/Defer/Delay bewusst aus; fetchpriority und „unused CSS“ nicht angefasst (Risiko für Animationen) |
 | A9 | erledigt | Titel Startseite und Zutrittssystem |
 

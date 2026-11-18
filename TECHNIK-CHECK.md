@@ -1365,3 +1365,6 @@ Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matri
 - **Nicht umgesetzt (bewusst):** Poster-Bild/nur eine Videofassung mobil auf /zutrittssystem/ (der Desktop-Container
   spielt per Steuerung auch im Handy-Querformat, siehe Handy-Darstellung vom 02.11.), Render-Blocking von jQuery/GTM/
   Facebook, Lottie-JSON 502 KB – wären Eingriffe in Abläufe bzw. Tracking (Freigabe nötig).
+- **Runde 4 abgeschlossen (01:44 UTC):** 22 Seiten gespeichert (31, 3316, 4313, 4870, 4605, 4496 01:01–01:09; nach
+  einem Neustart der Arbeitsumgebung 4735–4783, 50, 52, 782 01:13–01:44), 0 Fehler. Damit stehen alle 37
+  veröffentlichten Seiten auf dem Endstand; anschließend beide Caches geleert und Gesamtprüfung gestartet.
