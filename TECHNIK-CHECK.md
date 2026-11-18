@@ -1401,3 +1401,12 @@ Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matri
     Kette `footer_zeile_runde.sh` (Prüfung: nur `width_laptop` von 6ad6b91 weicht ab, Desktop-Breite 1400 px bleibt).
     Vorher per eingeblendetem CSS getestet, nachher live gemessen: Zeile bei 1440, 1366, 1280, 1180, 1024, 844 und
     820 px vollständig im Sichtfenster, Bewertung links, Icons rechts wie am Desktop; Caches geleert.
+  - Seitlich abgeschnittene Inhalte (eigene Prüfung der 24 Sitemap-Seiten × 844×390, 820×1180, 1180×820, 1366×768 auf
+    Text, Bilder und Icons, die über den Rand des Sichtfensters ragen; der Überlauf-Test sieht so etwas nicht, weil die
+    Seite seitlich abschneidet): außer der Zutritt-Footer-Zeile nur Textboxen in den Karten „Stell dir mal vor“/
+    Leistungen (Kamera-, Schlachthof- und Ortsseiten bei 820 px, die vergrößerte aktive Karte bei 1366 px) mit 6–30 px
+    über dem Rand – der Text selbst bricht innerhalb der Karte um und ist vollständig lesbar (Fotos und Textmaße
+    geprüft, z. B. Ebstorf 844×390: Textbreite 127–772 px bei 844 px); dazu das dekorative Lottie-Element der
+    Zutrittssystem-Seite (10 px). Designer-Layout, nicht geändert.
+  - Fotos für den Kundenbericht: Ganzseitenfotos aus Sichtfenster-Kacheln nach nutzerähnlichem Scrollen
+    (`seo/ganzseite_kacheln.mjs` im Arbeitsordner), damit Einblend-Animationen so erscheinen wie beim Nutzer.
