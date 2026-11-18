@@ -486,6 +486,15 @@ Aus Phase 1 noch offen: Menüpunkt „Standorte“, Öffnungszeiten im Footer, b
 Videoüberwachung in Celle“), 301 für Umlaut-URLs und Großschreibung, Google-Unternehmensprofil (ohne Login nicht prüfbar),
 GitHub-Repos privat, LinkedIn-Slug, LocalBusiness-Typen vereinheitlichen.
 
+Ergänzung 18.11., 01:45–02:00 UTC: Die parallele Sitzung meldet Runde 4 (nicht erneut von mir geprüft): Footer-Links mit
+Innenabstand für Tippflächen ≥ 24 px und Beschriftungen mit Kontrast ≥ 3:1 auf 22 Seiten; auf Start- und 15 Ortsseiten das
+Handy-Hero-Video gegen eine höherwertige Fassung getauscht (`startseite-hero-tuer-handy-1440-q18.mp4`, 2,0 MB statt 0,8 MB,
+mobiler Transfer je Seite damit rund 1,2 MB höher). Doppeltes Videoladen auf /zutrittssystem/ selbst mit Handy-Emulation
+geprüft (iPhone 13, Hochformat): beide Hero-Container sind dort im Hochformat sichtbar, der Desktop-Hero 74da297c trägt keine
+Mobil-Ausblendung (auf der Startseite ist der Desktop-Hero mobil versteckt, dort lädt nur eine Datei). Behebung: Container
+74da297c in Elementor auf Mobil ausblenden; die Querformat-Steuerung vom 02.11. ist nicht die Ursache, sie bremst nur
+unsichtbare Videos.
+
 ## Anhang
 
 - `seo-analyse/seiten-metriken-2026-11-17.txt` – Kennzahlen aller 33 geprüften URLs, Dubletten-Matrix, Linkgraph, Schema je Seite
