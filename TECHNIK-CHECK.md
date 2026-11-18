@@ -1338,3 +1338,12 @@ Befund nach Messung an Originaldateien, Live-CSS und Bildschirmfotos bei 2560 px
   Nicht geändert (Sichtbarkeit erst nach der Endprüfung beurteilen).
 - **Anmeldesitzung** lief um 23:47 UTC ab (Runde 3 war bei 5 von 37 Seiten); neu angemeldet, Runde 3 ab 23:58 UTC
   vollständig neu gestartet (Werkzeug wiederholbar: bereits fertige Seiten erhalten nur die noch fehlenden Änderungen).
+
+**Ergebnis Runde 3 (18.11.2026, 00:49 UTC):** alle 37 veröffentlichten Seiten durchlaufen. 24 Seiten geändert
+(Startseite 00:04 nach einmaligem „403 Forbidden“ des Servers beim ersten Versuch; Impressum, Datenschutz, AGB,
+Karriere, opt-2, Uelzen 00:01–00:12; Zutrittssystem, Kamera, Schlachthof und 14 Ortsseiten 00:32–00:48 – dort war
+die erste Prüfung an der Rückabbildung mehrerer alter Video-URLs auf eine neue Datei gescheitert, die bereits
+geprüften Speicherdateien wurden nach Korrektur der Prüfung mit Sperre gegen zwischenzeitliche Änderungen
+(REST `modified_gmt` gegen Exportzeit) gespeichert). 13 Seiten ohne Treffer (Kontakt-, Termin-, Danke-, Test- und
+Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matrix 32 Seiten × 6 Größen, Kernseiten
+× 8 Größen mit Ganzseitenfotos, Schnittkanten-Messung, Handy-/Tablet-Fotos von acht Seiten).
