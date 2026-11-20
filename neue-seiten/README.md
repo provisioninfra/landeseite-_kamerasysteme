@@ -34,3 +34,19 @@ python3 -I bau.py <export-4605.json> mechanische_schliessanlagen.py <ausgabe.jso
 `werkzeuge/yoast2.mjs` (SEO-Werte), Prüfung mit `werkzeuge/vorschau.mjs`. Zugangsdaten nie im Repo.
 
 Texte zum Gegenlesen: `texte/`.
+
+## Stand 20.11.2026
+
+- 17:3x UTC: alle acht Seiten nach Freigabe des Kunden veröffentlicht, öffentlich geprüft (HTTP 200, Canonical,
+  `index, follow`, eine H1, strukturierte Daten: Service bzw. Article mit Autor, FAQPage, ItemList) und in der
+  Yoast-Sitemap enthalten.
+- Menü „Menü Kamerasysteme (Header)“ (17): unter „Mehr“ ergänzt um Mechanische Schließanlagen, Schließsysteme im
+  Vergleich, Standorte, Ratgeber. „Secandary Menu“ (15, Zutrittssystem): Standorte und Ratgeber ergänzt.
+  Menü „Main“ (6) bleibt unverändert, weil die Startseite es nutzt. Menüs der Ortsseiten (18, 19) unverändert:
+  ihre Fußnavigation nutzt dasselbe Menü, ein Untermenü würde dort aufklappen.
+- Footer-Block auf allen Seiten außer der Startseite (Kundenvorgabe): „Leistungen“ (a1f0072) um Mechanische
+  Schließanlagen, Schließsysteme und Ratgeber ergänzt, „Standorte“ (a1f0073) um „Alle Standorte“
+  (`werkzeuge/footer_transform.mjs`, je Seite frischer Export und ein Speichervorgang).
+- 18:00–18:10 UTC: alle acht URLs in der Search Console (Property `https://provision-infra.de/`) über die URL-Prüfung
+  zur Indexierung beantragt; Bestätigung „Indexierung wurde beantragt“ je URL per Screenshot geprüft. Hinweis: Die
+  Adresse `/search-console/inspect?...&id=<URL>` liefert inzwischen 404; die Prüfung geht über das Suchfeld oben.
