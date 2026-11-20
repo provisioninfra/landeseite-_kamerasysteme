@@ -68,3 +68,25 @@ def script_widget(id_hint="steuerung-handy-menue"):
     """HTML-Widget mit dem Skript; feste ID (unabhängig vom Zähler der Build-Skripte)."""
     return {"id": hashlib.md5(id_hint.encode()).hexdigest()[:7], "elType": "widget", "widgetType": "html", "elements": [],
             "isInner": False, "settings": {"html": HANDY_SCRIPT, "_title": "Steuerung Handy-Menü"}}
+
+
+def handy_css_mehr(nav_settings):
+    """Fassung vom 20.11.2026 für das einheitliche Kopfmenü: Auf dem Handy wird nur der Punkt „Mehr“ (Menüeintrag mit der
+    Klasse pv-mehr, Start- und Kameraseite) ausgeblendet und seine Unterpunkte erscheinen als normale Zeilen; die Gruppen
+    „Schließanlagen“ und „Videoüberwachung“ bleiben überall auf- und zuklappbar wie auf den neuen Seiten. Auf Seiten ohne
+    „Mehr“ ist das CSS wirkungslos, steht aber überall gleich (ein Design, ein Code)."""
+    groesse = None
+    for key in ("menu_typography_font_size_mobile", "menu_typography_font_size_tablet", "menu_typography_font_size"):
+        v = nav_settings.get(key)
+        if isinstance(v, dict) and v.get("size"):
+            groesse = f'{v["size"]}{v.get("unit", "px")}'
+            break
+    familie = nav_settings.get("menu_typography_font_family") or "Poppins"
+    gewicht = nav_settings.get("menu_typography_font_weight") or "400"
+    return ("/* pv-menue: Handy-Aufklappmenü. Nur „Mehr“ (Klasse pv-mehr) flach zeigen, Gruppen bleiben klappbar (tools/menue_handy.py, handy_css_mehr) */\n"
+            f"@media (max-width: {HANDY_MAX}px) {{\n"
+            "  selector .elementor-nav-menu--dropdown li.pv-mehr > a.has-submenu { display: none; }\n"
+            "  selector .elementor-nav-menu--dropdown li.pv-mehr > ul.sub-menu { display: block !important; }\n"
+            "  selector .elementor-nav-menu--dropdown li.pv-mehr > ul.sub-menu > li > a { "
+            f'font-family: "{familie}", sans-serif; font-weight: {gewicht}; font-size: {groesse or "12px"}; line-height: normal; border-inline-start-width: 0; padding-inline-start: 20px; }}\n'
+            "}")
