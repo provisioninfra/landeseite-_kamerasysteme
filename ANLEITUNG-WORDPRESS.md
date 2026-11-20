@@ -299,6 +299,20 @@ gestaltet wird (andere Lottie-Dateien, andere Spaltenbreiten, andere Abstände),
 muss neu gemessen werden – im Zweifel vorher Bescheid geben. Ab 1512 px Fensterbreite gelten weiterhin nur die
 Einstellungen des Designers.
 
+## Kopfmenü (20.11.2026): ein Menü-Set, das zusammengehört
+
+Das Kopfmenü ist auf allen Seiten gleich aufgebaut (Schließanlagen ▾, Videoüberwachung ▾, Standorte, Ratgeber, Über uns,
+Komm in unser Team, FAQ), kommt aber aus fünf WordPress-Menüs, weil „Über uns“ und „FAQ“ je Seite auf den eigenen
+Abschnitt zeigen: „Main“ (Startseite, zusätzlich „Mit digitalen Schlüsseln Kosten sparen“ und „So arbeiten wir zusammen“
+in der Gruppe Schließanlagen), „Menü Kamerasysteme (Header)“ (Kamera- und Schlachthofseite, eigene Punkte in der Gruppe
+Videoüberwachung), „Secandary Menu“ (Zutrittssystem), „Menü Leistungsseiten“ (Ortsseiten und alle neuen Seiten) und
+„Menü Karriere“. Wenn du einen Punkt änderst oder eine neue Seite aufnimmst: in allen fünf Menüs gleich machen
+(Design → Menüs), sonst weichen die Seiten wieder voneinander ab. Die Menüs „Menü Lüneburg“, „Menü Uelzen“ und „Menü
+Leistungsseiten Footer“ gehören zu den Footer-Zeilen, nicht zur Kopfzeile.
+
+Zwei Maße der Kopfzeile bitte nicht zurückstellen: Menüpunkt-Abstand 20 px und Pillen-Innenabstand 60 px links/rechts.
+Mit den alten Werten (30 px/80 px) passen die sieben Punkte ab 1441 px Fensterbreite nicht mehr in eine Zeile.
+
 ## Nach der Veröffentlichung: Kurzer Check
 
 - Seite im **privaten Browserfenster** öffnen: Wird alles angezeigt, läuft das Video?

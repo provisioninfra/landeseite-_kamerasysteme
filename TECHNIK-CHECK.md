@@ -1435,3 +1435,52 @@ Wartungsseiten). Danach beide Caches geleert und Gesamtprüfung gestartet (Matri
   identisch); Caches geleert. Live nachgemessen bei 820, 1024, 1180, 1280, 1366, 1440, 1512 und 1920 px: alle 40
   Platzierungen innerhalb der Kästchen, Textmitte −18 bis +6 px zur Kästchenmitte, Abstand zum Icon 10–37 px;
   Desktop-Werte identisch mit vorher. Bildschirmfotos 820/1024/1180/1366/1440 geprüft.
+
+## Einheitliches Kopfmenü auf allen Seiten (20.11.2026)
+
+**Auftrag des Kunden** (Screenshot des Handy-Menüs der neuen Seiten): das Kopfmenü auf allen Seiten so wie dort, „FAQ“
+ganz unten, darüber „Komm in unser Team“; Start- und Kamera-Seite zusätzlich mit ihren eigenen Punkten („Mit digitalen
+Schlüsseln Kosten sparen“ bzw. „Durch Videoüberwachung teure Schäden verhindern“, „So arbeiten wir zusammen“, „Über uns“);
+Design des Menüs überall angleichen. Rückfragen beantwortet: eigene Punkte „sinnvoll, aber überall gleich“ einbauen;
+Karriere-Seite bekommt dieselbe Kopfzeile; Impressum/Datenschutz/AGB behalten nur das Logo; Kontakt-, Termin- und
+Danke-Seiten bleiben ohne Menü.
+
+**Ausgangslage:** sechs verschiedene Menüs (Start „Main“ mit „Mehr“-Aufklappmenü, Kamera/Schlachthöfe „Menü
+Kamerasysteme (Header)“ mit „Mehr“, Zutrittssystem „Secandary Menu“, Ortsseiten „Menü Lüneburg“/„Menü Uelzen“ mit
+Sprungmarken, neue Seiten „Menü Leistungsseiten“ (Parallelsitzung, 20.11.)), die Karriere-Seite mit eigener HTML-Kopfzeile,
+die Rechtsseiten nur mit Logo. Die Kopfzeile ist auf jeder Seite Teil des Inhalts (Container 192a273, auf Zutrittssystem
+20a7a089) mit einem Elementor-Nav-Menü-Widget (2a487ab bzw. 35b5dc02).
+
+**Zielstruktur (überall gleich, sieben Punkte):** Schließanlagen ▾ (Digitale Schließanlagen → Startseite, Elektronische
+Schließanlagen → Zutrittssystem, Mechanische Schließanlagen, Schließsysteme im Vergleich, Für Hausverwaltungen),
+Videoüberwachung ▾ (Kamera- & Videosicherheit, Videoüberwachung Schlachthöfe), Standorte, Ratgeber, Über uns, Komm in
+unser Team, FAQ. Auf der Startseite stehen „Mit digitalen Schlüsseln Kosten sparen“ und „So arbeiten wir zusammen“ als
+erste Einträge der Gruppe „Schließanlagen“, auf Kamera-/Schlachthofseite „Durch Videoüberwachung teure Schäden verhindern“
+und „So arbeiten wir zusammen“ als erste Einträge der Gruppe „Videoüberwachung“; „Über uns“ und „FAQ“ zeigen jeweils auf
+den eigenen Abschnitt (Start `/#Über`, `/#FAQ`; Kamera `/kamerasysteme/#Über`, `#FAQ`; Ortsseiten und neue Seiten
+`#ueber`, `#FAQ`; Karriere `#ueber-uns`, `#faq`; Zutrittssystem ohne eigenen „Über uns“-Abschnitt → Startseite).
+Kein „Mehr“ mehr – damit entfällt auch das Handy-Sonderverhalten vom 27.10.; die Gruppen sind auf dem Handy wie auf den
+neuen Seiten auf- und zuklappbar.
+
+**Menüs (WordPress, REST `wp/v2/menu-items`, Werkzeuge `wp/menu_edit.mjs` + `wp/menu_sync.py` im Arbeitsordner):**
+Menü 20 „Menü Leistungsseiten“ um „Komm in unser Team“ und „FAQ“ ergänzt (Basis für Ortsseiten und neue Seiten); Menü 6
+„Main“ und Menü 17 „Menü Kamerasysteme (Header)“ in die Zielstruktur umgebaut („Mehr“ gelöscht, Gruppen angelegt,
+vorhandene Punkte umgehängt); Menü 15 „Secandary Menu“ (Zutrittssystem) neu aufgebaut („Zur Startseite“ entfällt, das
+Logo und „Digitale Schließanlagen“ führen zur Startseite); neues Menü 22 „Menü Karriere“. Unverändert: Menüs 18/19
+(Ortsseiten, nur noch im Footer in Verwendung) und 21 (Footer der neuen Seiten). Der Hoster drosselt die
+Schnittstelle stark (429 nach fast jeder Anfrage, auch GET), deshalb liefen die Umbauten mit Wartezeiten über etwa
+anderthalb Stunden; ein Fehler im eigenen Skript (Verweise auf neu angelegte Gruppen in Umhäng-Aktionen) ließ beim ersten
+Durchgang einige Punkte als Waisen zurück, zweiter Durchgang nach Ist-Abgleich (`menu_sync.py`) korrigiert.
+
+**Seiten (`tools/kopfmenue.py`, Kette `wp/kopf_runde.sh`: frischer Export → Werkzeug → Prüfung „nur Nav-Widget und
+Pillen-Zeile geändert“ → Sperre über `modified_gmt` → Speichern):**
+- 15 Ortsseiten (4496, 4735–4783, 4605) und 8 neue Seiten (5364–5395): Nav-Widget auf Menü 20; Start (31) bleibt auf
+  Menü 6, Kamera (4313) und Schlachthöfe (4870) auf Menü 17, Zutrittssystem (3316) auf Menü 15. Überall gleiches
+  Element-CSS (`handy_css_einheitlich`: Unterpunkte auf dem Handy in Poppins 400, 12 px, ohne 8-px-Rahmen links) und
+  gleiche Maße: Menüpunkt-Abstand 20 px (vorher 30 px) und Pillen-Innenabstand 60 px links/rechts (vorher 80 px) –
+  mit sieben Punkten brach das Menü ab 1441 px sonst in zwei Zeilen um (gemessen: 1032 px Bedarf bei 974 px Platz).
+- Karriere (4408): Pillen-Kopfzeile als Kopie der Uelzen-Kopfzeile (Menü 22) als erster Abschnitt eingefügt, die eigene
+  HTML-Kopfzeile `.pk-header` per CSS am neuen Container ausgeblendet; der Hero reserviert ohnehin 200/150/110/96 px
+  nach oben, Abstand bleibt. Die früheren Sprungmarken „Offene Stellen“, „Warum wir“, „Bewerbung“ stehen weiter im
+  Seiteninhalt (Buttons), nur nicht mehr im Menü.
+- Gespeichert 18:56–19:46 UTC (27 Seiten) und 20:14 UTC (Karriere), alle „publish“, jede Prüfung bestanden.
