@@ -79,7 +79,7 @@ keine auffälligen Dreiergruppen, keine vagen Autoritäten; Kundenzitate bleiben
   `werkzeuge/zusammen.py` (Ortsseiten = eigene Felder + gemeinsame Felder; mobile Ablauf-Zeitleiste 756a14f übernimmt die
   neuen Desktoptexte, behebt nebenbei den falschen Kamera-Ablauf auf 4870), `werkzeuge/speichern.sh`.
   Texte vorher/nachher: `bestand/<ID>-vorher.json` / `-nachher.json`; gespeichert 20:53 bis 21:28 UTC, alle im 1. Versuch.
-- Karriere 4408: Text steckt im HTML-Widget f5cab51; `werkzeuge/textknoten.py` ändert nur sichtbare Textknoten.
+- Karriere 4408: Text steckt im HTML-Widget f5cab51; `werkzeuge/textknoten.py` ändert nur sichtbare Textknoten (20 Knoten, gespeichert 21:32 UTC, Kopf unverändert; Firmenname im Fuß auf „ProVision“ korrigiert).
 - Befund Cache: WP Rocket baut unter /wp-content/cache/background-css/ eine Kopie der Seiten-CSS. Unter 429-Drosselung
   entstand eine unvollständige Kopie (Kunde sah auf /mechanische-schliessanlagen/ dunkle Schrift auf Dunkelblau);
   neu gebaut 21:21 UTC. `werkzeuge/cachecheck.sh` vergleicht Kopie und Original je Seite (Handy- und Desktop-UA).
