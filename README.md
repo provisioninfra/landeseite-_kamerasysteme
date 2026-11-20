@@ -35,6 +35,7 @@ Falls das Video nicht geladen werden kann, läuft eine animierte SVG-Szene (Kame
 - `TECHNIK-CHECK.md` – Ergebnis des Technik- und Skalierungs-Checks vor dem Livegang
 - `SEO-KEYWORDS.md` – Keyword-Karte (Google-Suggest-Auswertung, Zuordnung zur Seite, offene Hebel außerhalb der Seite)
 - `SEO-ANALYSE-GESAMT-2026-11.md` – SEO-Analyse aller Seiten von provision-infra.de (17.11.2026) mit priorisierten Empfehlungen; Rohdaten in `seo-analyse/`
+- `SEO-VORSCHLAG-SEITENARCHITEKTUR-2026-11.md` – SEO-Strategie mit Seitenarchitektur (Säulen Schließanlagen, Videoüberwachung, Regionen), Ratgeber-Plan und Umsetzungswellen (20.11.2026)
 
 ## WordPress: die eigentliche Seite
 
