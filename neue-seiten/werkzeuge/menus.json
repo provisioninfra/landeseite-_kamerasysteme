@@ -1,0 +1,18 @@
+[{"name": "Menü Leistungsseiten", "slug": "menue-leistungsseiten", "items": [
+   {"title": "Schließanlagen", "url": "https://provision-infra.de/", "children": [
+      {"title": "Digitale Schließanlagen", "url": "https://provision-infra.de/"},
+      {"title": "Elektronische Schließanlagen", "url": "https://provision-infra.de/zutrittssystem/"},
+      {"title": "Mechanische Schließanlagen", "url": "https://provision-infra.de/mechanische-schliessanlagen/"},
+      {"title": "Schließsysteme im Vergleich", "url": "https://provision-infra.de/schliesssysteme/"},
+      {"title": "Für Hausverwaltungen", "url": "https://provision-infra.de/schliessanlage-hausverwaltung/"}]},
+   {"title": "Videoüberwachung", "url": "https://provision-infra.de/kamerasysteme/", "children": [
+      {"title": "Kamera- & Videosicherheit", "url": "https://provision-infra.de/kamerasysteme/"},
+      {"title": "Videoüberwachung Schlachthöfe", "url": "https://provision-infra.de/videoueberwachung-schlachthoefe/"}]},
+   {"title": "Standorte", "url": "https://provision-infra.de/standorte/"},
+   {"title": "Über uns", "url": "#ueber"}]},
+ {"name": "Menü Leistungsseiten Footer", "slug": "menue-leistungsseiten-footer", "items": [
+   {"title": "Schließanlagen", "url": "https://provision-infra.de/"},
+   {"title": "Videoüberwachung", "url": "https://provision-infra.de/kamerasysteme/"},
+   {"title": "Standorte", "url": "https://provision-infra.de/standorte/"},
+   {"title": "Über uns", "url": "#ueber"},
+   {"title": "FAQ", "url": "#FAQ"}]}]
