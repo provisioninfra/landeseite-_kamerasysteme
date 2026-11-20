@@ -3,12 +3,12 @@
 
 Drei Eingriffe, je nach Seite:
 1. `nav_setzen(data, menu_slug)` – Seiten mit der Pillen-Kopfzeile (Container 192a273 bzw. 20a7a089): im Nav-Menü-Widget
-   der Kopfzeile das Feld `menu` auf das Zielmenü setzen und das Element-CSS einheitlich auf `handy_css_mehr` stellen
-   (nur „Mehr“ wird auf dem Handy flach, Gruppen bleiben klappbar).
+   der Kopfzeile das Feld `menu` auf das Zielmenü setzen, das Element-CSS einheitlich auf `handy_css_einheitlich`
+   stellen und die Maße angleichen (Punktabstand 20 px, Pillenrand 60 px).
 2. `karriere_kopf(data, vorlage)` – Karriere-Seite (HTML-Widget mit eigener Kopfzeile): die Pillen-Kopfzeile aus einer
    Vorlagenseite als ersten Abschnitt einfügen (Menü „menue-karriere“), die HTML-Kopfzeile `.pk-header` per CSS ausblenden.
-3. `rechtliches_kopf(data, vorlage)` – Impressum, Datenschutz, AGB (dunkler Balken nur mit Logo): im Balken das Logo durch
-   die Pillen-Zeile (Logo + Menü „menue-rechtliches“) ersetzen, Balkenbreite 1400 px wie die Kopfzeile der übrigen Seiten.
+3. `rechtliches_kopf(data, vorlage)` – (nicht verwendet: Kunde will auf Impressum, Datenschutz, AGB nur das Logo lassen)
+   im Balken das Logo durch die Pillen-Zeile (Logo + Menü „menue-rechtliches“) ersetzen, Balkenbreite 1400 px wie die Kopfzeile der übrigen Seiten.
 
 Aufruf: python3 -I tools/kopfmenue.py MODUS export.json ziel.json [vorlage.json]   (MODUS: nav:<slug> | karriere | rechtliches)
 Ausgabe: Zahl der Änderungen.
@@ -16,7 +16,7 @@ Ausgabe: Zahl der Änderungen.
 import copy, json, pathlib, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from menue_handy import handy_css_mehr  # noqa: E402
+from menue_handy import handy_css_einheitlich  # noqa: E402
 
 KOPF_IDS = ("192a273", "20a7a089")
 PILLE_IDS = ("f07a3e3", "5391d65")   # Zeile mit Logo und Menü (Startseiten-Vorlage bzw. Zutrittssystem)
@@ -72,7 +72,7 @@ def nav_setzen(data, menu_slug):
     if nav is None:
         raise SystemExit("kein Nav-Menü-Widget in der Kopfzeile")
     s = nav["settings"]
-    css = handy_css_mehr(s)
+    css = handy_css_einheitlich(s)
     n = 0
     if s.get("menu") != menu_slug:
         s["menu"] = menu_slug
@@ -91,7 +91,7 @@ def kopf_vorlage(vorlage, menu_slug):
         raise SystemExit("Vorlage ohne Kopfzeile 192a273")
     nav = nav_widget(kopf)
     nav["settings"]["menu"] = menu_slug
-    nav["settings"]["custom_css"] = handy_css_mehr(nav["settings"])
+    nav["settings"]["custom_css"] = handy_css_einheitlich(nav["settings"])
     kopf_angleichen(kopf)
     return kopf
 

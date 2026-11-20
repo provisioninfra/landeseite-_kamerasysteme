@@ -70,11 +70,12 @@ def script_widget(id_hint="steuerung-handy-menue"):
             "isInner": False, "settings": {"html": HANDY_SCRIPT, "_title": "Steuerung Handy-Menü"}}
 
 
-def handy_css_mehr(nav_settings):
-    """Fassung vom 20.11.2026 für das einheitliche Kopfmenü: Auf dem Handy wird nur der Punkt „Mehr“ (Menüeintrag mit der
-    Klasse pv-mehr, Start- und Kameraseite) ausgeblendet und seine Unterpunkte erscheinen als normale Zeilen; die Gruppen
-    „Schließanlagen“ und „Videoüberwachung“ bleiben überall auf- und zuklappbar wie auf den neuen Seiten. Auf Seiten ohne
-    „Mehr“ ist das CSS wirkungslos, steht aber überall gleich (ein Design, ein Code)."""
+
+def handy_css_einheitlich(nav_settings):
+    """Fassung vom 20.11.2026 für das einheitliche Kopfmenü (kein „Mehr“ mehr, überall dieselben sieben Punkte mit
+    den Gruppen „Schließanlagen“ und „Videoüberwachung“): Auf dem Handy bekommen die Unterpunkte der Gruppen die
+    Schrift der Hauptpunkte (Poppins 400, Größe aus den Widget-Einstellungen) statt der globalen Aufklapp-Typografie und
+    verlieren den unsichtbaren 8-px-Rahmen links. Gruppen bleiben auf- und zuklappbar (Elementor-Standard)."""
     groesse = None
     for key in ("menu_typography_font_size_mobile", "menu_typography_font_size_tablet", "menu_typography_font_size"):
         v = nav_settings.get(key)
@@ -83,10 +84,8 @@ def handy_css_mehr(nav_settings):
             break
     familie = nav_settings.get("menu_typography_font_family") or "Poppins"
     gewicht = nav_settings.get("menu_typography_font_weight") or "400"
-    return ("/* pv-menue: Handy-Aufklappmenü. Nur „Mehr“ (Klasse pv-mehr) flach zeigen, Gruppen bleiben klappbar (tools/menue_handy.py, handy_css_mehr) */\n"
+    return ("/* pv-menue: einheitliches Kopfmenü, Handy-Aufklappmenü – Unterpunkte in der Schrift der Hauptpunkte (tools/menue_handy.py, handy_css_einheitlich) */\n"
             f"@media (max-width: {HANDY_MAX}px) {{\n"
-            "  selector .elementor-nav-menu--dropdown li.pv-mehr > a.has-submenu { display: none; }\n"
-            "  selector .elementor-nav-menu--dropdown li.pv-mehr > ul.sub-menu { display: block !important; }\n"
-            "  selector .elementor-nav-menu--dropdown li.pv-mehr > ul.sub-menu > li > a { "
-            f'font-family: "{familie}", sans-serif; font-weight: {gewicht}; font-size: {groesse or "12px"}; line-height: normal; border-inline-start-width: 0; padding-inline-start: 20px; }}\n'
+            "  selector .elementor-nav-menu--dropdown a.elementor-sub-item { "
+            f'font-family: "{familie}", sans-serif; font-weight: {gewicht}; font-size: {groesse or "12px"}; line-height: normal; border-inline-start-width: 0; }}\n'
             "}")
