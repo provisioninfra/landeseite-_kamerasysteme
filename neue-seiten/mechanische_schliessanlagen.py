@@ -1,6 +1,6 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gemeinsam import NAP, ORG, BASE, VERBOTEN, ORTE_NORD, ORDER, GRUENDER, PRESSE, video_kasten, cta, analyse
+from gemeinsam import NAP, ORG, BASE, VERBOTEN, ORTE_NORD, ORDER, GRUENDER, PRESSE, video_kasten, cta, analyse, stell_dir_vor, vorteile
 
 URL = BASE + '/mechanische-schliessanlagen/'
 def p(t): return '<p>' + t + '</p>'
@@ -101,10 +101,29 @@ SPEC = {
   '7983242': {'title': 'Häufige Fragen zu <b>mechanischen Schließanlagen</b>'},
   '45eaf1f': {'title': 'Häufige Fragen zu <br><b>mechanischen Schließanlagen</b>'},
  },
- 'graft': [
+ 'graft': stell_dir_vor([
+    'Ein Mitarbeiter verliert seinen Schlüssel, und du weißt sofort, welche Türen betroffen sind.',
+    'Heimlich nachmachen lässt sich kein Schlüssel, weil das Profil geschützt ist.',
+    'Die Reinigungsfirma kommt in die Sozialräume. Das Lager bleibt für sie zu.',
+    'Fällt der Strom aus, schließt trotzdem jede Tür wie gewohnt.',
+    'Neue Kollegen bekommen am ersten Tag genau den Schlüssel, den sie brauchen.',
+    'An deinem Bund hängt ein einziger Schlüssel für alle Türen, die du öffnen darfst.',
+    'Der Schließplan liegt dir schriftlich vor, und jede Erweiterung baut darauf auf.',
+    'Kommt ein zweiter Standort dazu, wächst die Anlage einfach mit.']) + [
    analyse('Bevor wir einen einzigen Zylinder bestellen, schauen wir uns an, wie dein Betrieb heute mit Schlüsseln arbeitet:',
            ('Wer braucht welche Türen?', 'Wie oft wechseln die Nutzer?', 'Welche Räume sind besonders kritisch?'),
            'Aus den Antworten entsteht ein Schließplan, der zu deinem Alltag passt.'),
+  ] + vorteile([
+    ('Klare Ordnung:', 'Der Schließplan legt fest, wer welche Tür öffnet. Das Rätselraten hat ein Ende.'),
+    ('Schutz vor Kopien:', 'Nachschlüssel gibt es bei EVVA nur gegen Vorlage der Sicherungskarte.'),
+    ('Unabhängig vom Strom:', 'Zylinder und Schlüssel arbeiten ohne Batterie und ohne Software.'),
+    ('Ein Schlüssel am Bund:', 'Jede Person trägt genau einen Schlüssel für ihre Türen.'),
+    ('Für Handwerk und Landwirtschaft:', 'Werkstatt und Lager hängen an einer robusten Anlage, die viele Jahre hält.'),
+    ('Für Praxen und kleine Büros:', 'Das Team ist überschaubar, und in Akten- oder Medikamentenräume kommen trotzdem nur Berechtigte.'),
+    ('Für Hausverwaltungen und Vereine:', 'Ein Schlüssel öffnet Haustür und Wohnung. Mehr dazu auf der Seite für <a href="/schliessanlage-hausverwaltung/">Hausverwaltungen</a>.'),
+    ('Planbare Kosten bei Verlust:', 'Getauscht werden nur die Zylinder, die der verlorene Schlüssel öffnet.'),
+    ('Offen für später:', 'Stark genutzte Eingänge lassen sich jederzeit elektronisch nachrüsten.'),
+  ]) + [
    cta('So kommst du zu deiner mechanischen Schließanlage',
        'Ob mechanisch reicht oder eine Kombination besser passt, klären wir im Erstgespräch. Danach weißt du, was deine Anlage kostet und wie lange der Umbau dauert.'),
    video_kasten('Kameras ergänzen eine Schließanlage dort, wo Schlüssel allein nicht reichen, zum Beispiel an Toren und Laderampen. Wir planen beides zusammen und installieren Kamerasysteme mit Alarm aufs Handy.'),
@@ -130,14 +149,6 @@ SPEC = {
         ["Beratung und Planung", "Schließplan erstellen", "Montage EVVA-Zylinder", "Nachschlüssel gegen Sicherungskarte", "Austausch bei Schlüsselverlust", "Wartung und Erweiterung"]]}}]},
 }
 SPEC['clone'] = [
- ('f1a5d3e', None, 'f1a5d3e', {
-   'f1a5d3e': {'_title': 'Zielgruppen', '_element_id': 'zielgruppen'},
-   'cfa4bb1': {'_title': 'Zielgruppen', 'title': 'Für wen sich eine mechanische Schließanlage lohnt'},
-   '4967d0c': {'title': 'Handwerk und Landwirtschaft: Werkstatt und Lager hängen an einer robusten Anlage, die ganz ohne Strom auskommt.'},
-   '99ee72d': {'title': 'Praxen und kleine Büros: Das Team ist überschaubar, und in Akten- oder Medikamentenräume kommen trotzdem nur Berechtigte.'},
-   '8754a23': {'editor': p('Hausverwaltungen und Vereine: Ein Schlüssel öffnet Haustür und Wohnung, geschützt vor Kopien. Mehr dazu auf der Seite für '
-               '<a href="/schliessanlage-hausverwaltung/">Hausverwaltungen und Mehrfamilienhäuser</a>.')},
- }),
  ('985957a', '58762b2', '985957a', {
    '4967d0c': {'title': 'Nachschlüssel: Gegen Vorlage der Sicherungskarte bestellen wir neue Schlüssel, passend zum Schließplan.'},
    '99ee72d': {'title': 'Schlüsselverlust: Wir tauschen genau die Zylinder, die der verlorene Schlüssel öffnet, und aktualisieren den Plan.'},

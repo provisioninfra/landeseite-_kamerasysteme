@@ -74,6 +74,40 @@ Deine Anlage wächst mit, und bei jeder Frage erreichst du denselben Ansprechpar
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
+Stell dir mal vor …
+
+Ein Mitarbeiter verliert seinen Schlüssel, und du weißt sofort, welche Türen betroffen sind.
+
+Heimlich nachmachen lässt sich kein Schlüssel, weil das Profil geschützt ist.
+
+Die Reinigungsfirma kommt in die Sozialräume. Das Lager bleibt für sie zu.
+
+Fällt der Strom aus, schließt trotzdem jede Tür wie gewohnt.
+
+Neue Kollegen bekommen am ersten Tag genau den Schlüssel, den sie brauchen.
+
+An deinem Bund hängt ein einziger Schlüssel für alle Türen, die du öffnen darfst.
+
+Der Schließplan liegt dir schriftlich vor, und jede Erweiterung baut darauf auf.
+
+Kommt ein zweiter Standort dazu, wächst die Anlage einfach mit.
+
+Ein Mitarbeiter verliert seinen Schlüssel, und du weißt sofort, welche Türen betroffen sind.
+
+Heimlich nachmachen lässt sich kein Schlüssel, weil das Profil geschützt ist.
+
+Die Reinigungsfirma kommt in die Sozialräume. Das Lager bleibt für sie zu.
+
+Fällt der Strom aus, schließt trotzdem jede Tür wie gewohnt.
+
+Neue Kollegen bekommen am ersten Tag genau den Schlüssel, den sie brauchen.
+
+An deinem Bund hängt ein einziger Schlüssel für alle Türen, die du öffnen darfst.
+
+Der Schließplan liegt dir schriftlich vor, und jede Erweiterung baut darauf auf.
+
+Kommt ein zweiter Standort dazu, wächst die Anlage einfach mit.
+
 Mechanisch oder elektronisch? Die Antwort hängt von deinem Betrieb ab.
 
 Mechanisch lohnt sich bei wenigen Türen und einem festen Team. Die Anlage kommt ohne Strom und Software aus und hält bei guter Pflege viele Jahre.
@@ -106,13 +140,85 @@ Schlüsselverlust: Wir tauschen genau die Zylinder, die der verlorene Schlüssel
 
 Wartung und Erweiterung: Wir nehmen neue Türen auf und ersetzen verschlissene Zylinder. Stark genutzte Eingänge rüsten wir auf Wunsch elektronisch nach.
 
-Für wen sich eine mechanische Schließanlage lohnt
+Das heißt für dich:
 
-Handwerk und Landwirtschaft: Werkstatt und Lager hängen an einer robusten Anlage, die ganz ohne Strom auskommt.
+Klare Ordnung:
 
-Praxen und kleine Büros: Das Team ist überschaubar, und in Akten- oder Medikamentenräume kommen trotzdem nur Berechtigte.
+Der Schließplan legt fest, wer welche Tür öffnet. Das Rätselraten hat ein Ende.
 
-Hausverwaltungen und Vereine: Ein Schlüssel öffnet Haustür und Wohnung, geschützt vor Kopien. Mehr dazu auf der Seite für Hausverwaltungen und Mehrfamilienhäuser .
+Schutz vor Kopien:
+
+Nachschlüssel gibt es bei EVVA nur gegen Vorlage der Sicherungskarte.
+
+Unabhängig vom Strom:
+
+Zylinder und Schlüssel arbeiten ohne Batterie und ohne Software.
+
+Ein Schlüssel am Bund:
+
+Jede Person trägt genau einen Schlüssel für ihre Türen.
+
+Für Handwerk und Landwirtschaft:
+
+Werkstatt und Lager hängen an einer robusten Anlage, die viele Jahre hält.
+
+Für Praxen und kleine Büros:
+
+Das Team ist überschaubar, und in Akten- oder Medikamentenräume kommen trotzdem nur Berechtigte.
+
+Für Hausverwaltungen und Vereine:
+
+Ein Schlüssel öffnet Haustür und Wohnung. Mehr dazu auf der Seite für Hausverwaltungen .
+
+Planbare Kosten bei Verlust:
+
+Getauscht werden nur die Zylinder, die der verlorene Schlüssel öffnet.
+
+Offen für später:
+
+Stark genutzte Eingänge lassen sich jederzeit elektronisch nachrüsten.
+
+[Button] Unverbindliches Erstgespräch vereinbaren → /kontakt/
+
+Das heißt für dich:
+
+Klare Ordnung:
+
+Der Schließplan legt fest, wer welche Tür öffnet. Das Rätselraten hat ein Ende.
+
+Schutz vor Kopien:
+
+Nachschlüssel gibt es bei EVVA nur gegen Vorlage der Sicherungskarte.
+
+Unabhängig vom Strom:
+
+Zylinder und Schlüssel arbeiten ohne Batterie und ohne Software.
+
+Ein Schlüssel am Bund:
+
+Jede Person trägt genau einen Schlüssel für ihre Türen.
+
+Für Handwerk und Landwirtschaft:
+
+Werkstatt und Lager hängen an einer robusten Anlage, die viele Jahre hält.
+
+Für Praxen und kleine Büros:
+
+Das Team ist überschaubar, und in Akten- oder Medikamentenräume kommen trotzdem nur Berechtigte.
+
+Für Hausverwaltungen und Vereine:
+
+Ein Schlüssel öffnet Haustür und Wohnung. Mehr dazu auf der Seite für Hausverwaltungen .
+
+Planbare Kosten bei Verlust:
+
+Getauscht werden nur die Zylinder, die der verlorene Schlüssel öffnet.
+
+Offen für später:
+
+Stark genutzte Eingänge lassen sich jederzeit elektronisch nachrüsten.
+
+[Button] Unverbindliches Erstgespräch vereinbaren → /kontakt/
 
 Ablauf der Zusammenarbeit
 

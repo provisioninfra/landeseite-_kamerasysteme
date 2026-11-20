@@ -83,3 +83,12 @@ keine auffälligen Dreiergruppen, keine vagen Autoritäten; Kundenzitate bleiben
 - Befund Cache: WP Rocket baut unter /wp-content/cache/background-css/ eine Kopie der Seiten-CSS. Unter 429-Drosselung
   entstand eine unvollständige Kopie (Kunde sah auf /mechanische-schliessanlagen/ dunkle Schrift auf Dunkelblau);
   neu gebaut 21:21 UTC. `werkzeuge/cachecheck.sh` vergleicht Kopie und Original je Seite (Handy- und Desktop-UA).
+
+## Mechanische Schließanlagen wie die Schwesterseiten (20.11.2026, 22:06 UTC)
+
+Kundenwunsch „genau so wie die anderen“: 5364 bekommt wie Schließsysteme und Hausverwaltung den Block „Stell dir mal vor …“
+mit Türgriff (00fec0c/af8c629/1a6dd74) und „Das heißt für dich:“ (7cf6d53/916606a). Der Zusatzabschnitt „Zielgruppen“ entfällt,
+seine drei Zielgruppen stehen jetzt in den Vorteile-Kacheln. Beim Speichern Kopf 192a273 und Footer 9fafb57 aus dem frischen
+Export übernommen (`UEBERNEHMEN=192a273,9fafb57 werkzeuge/kopf_uebernehmen.py`), danach WP Rocket und Varnish komplett geleert.
+Befund: Jeder Elementor-Save lässt gecachte Seiten auf gelöschte Cache-CSS zeigen (404, Seite ohne Gestaltung). Nach Saves daher
+immer den gesamten Cache leeren und mit `werkzeuge/css404.sh <pfade>` prüfen.
