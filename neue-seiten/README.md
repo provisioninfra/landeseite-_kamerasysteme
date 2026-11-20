@@ -50,3 +50,18 @@ Texte zum Gegenlesen: `texte/`.
 - 18:00–18:10 UTC: alle acht URLs in der Search Console (Property `https://provision-infra.de/`) über die URL-Prüfung
   zur Indexierung beantragt; Bestätigung „Indexierung wurde beantragt“ je URL per Screenshot geprüft. Hinweis: Die
   Adresse `/search-console/inspect?...&id=<URL>` liefert inzwischen 404; die Prüfung geht über das Suchfeld oben.
+
+## Überarbeitung 20.11.2026 abends (Kundenwunsch: Design wie Startseite, Texte redaktionell)
+
+- Die neuen Seiten übernehmen jetzt Aufbau und Bausteine der Startseite (`startseite-bausteine.json`, aus dem Export
+  der Startseite 31, die selbst nicht verändert wird): „Stell dir mal vor …“ mit Türgriff und acht Feldern
+  (Schließsysteme, Hausverwaltungen, Ratgeber Zylinder nachrüsten), „Wer braucht wann Zugang?“, „Das heißt für dich“
+  (Schließsysteme, Hausverwaltungen), Abschluss-Aufruf mit Gründerbild, Kasten „Videoüberwachung aus einer Hand“ und ein
+  neuer Kasten „ProVision Infra in der Presse“ (Arbeitgebermagazin, Unternehmerjournal, GEWINNERmagazin).
+  Reihenfolge der Abschnitte wie auf der Startseite (`gemeinsam.ORDER`), Handy-Regeln der Startseite ergänzt.
+- Alle Texte nach den Regeln des Kunden überarbeitet und mit `textpruefung.py` geprüft: keine Gedankenstriche, keine
+  „nicht nur … sondern auch“-Muster, keine auffälligen Dreiergruppen, keine vagen Autoritäten. Verbleibende Treffer sind
+  Herstellerlisten oder Pflichtangaben (z. B. Inhalt des Hinweisschilds) und ein Gedankenstrich in einer Kundenstimme,
+  die als Originalzitat unverändert bleibt.
+- Gründertext auf den neuen Seiten neu formuliert und mit Namen; Autorzeile der Ratgeber verlinkt auf das Interview.
+- Bilder-Slider „Technik, die wir verbauen“ auf den Schließanlagen-Seiten bleibt weg, bis eigene Fotos vorliegen.

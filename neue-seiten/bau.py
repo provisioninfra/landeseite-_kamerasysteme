@@ -41,7 +41,24 @@ def build(template_path, spec):
     d = json.load(open(template_path, encoding='utf-8'))
     els, settings = d['elements'], d['settings']
     ids = all_ids(els)
-    # Klone zuerst (Quellen sind Original-IDs), danach Texte setzen
+    TOP0 = set(e['id'] for e in els)
+    # Bausteine der Startseite einsetzen (IDs bleiben, außer reid=True)
+    if spec.get('graft'):
+        import os
+        B = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'startseite-bausteine.json'), encoding='utf-8'))
+        for g in spec['graft']:
+            bid, after, sets = g[0], g[1], g[2]; neu_ids = len(g) > 3 and g[3]
+            c = copy.deepcopy(B[bid]); m = {}
+            if neu_ids: reid(c, ids, m)
+            else:
+                walk([c], lambda e, p: ids.add(e['id'])); m = None; TOP0.add(c['id'])
+            pos = [k['id'] for k in els].index(after) + 1
+            els.insert(pos, c)
+            for old, vals in sets.items():
+                x, _ = find([c], m[old] if m else old); x['settings'].update(vals)
+        if spec.get('handy_css'):
+            e, _ = find(els, 'b1ab0ce'); e['settings']['html'] = e['settings']['html'] + '\n' + B['__handy_css']
+    # Klone (Quellen sind Original-IDs), danach Texte setzen
     for src, parent_id, after_id, sets in spec.get('clone', []):
         e, _ = find(els, src)
         c = copy.deepcopy(e); m = {}; reid(c, ids, m)
@@ -109,6 +126,14 @@ def build(template_path, spec):
             if e.get('widgetType') == 'nav-menu':
                 e['settings']['menu'] = spec['menu'] if e['id'] == '2a487ab' else spec.get('menu_footer', spec['menu'])
         walk(els, setmenu)
+    # Reihenfolge der Hauptabschnitte wie auf der Startseite; Klone mit neuen IDs bleiben hinter ihrem Vorgänger
+    if spec.get('order'):
+        order = spec['order']; groups = []
+        for e in els:
+            if e['id'] in TOP0 or not groups: groups.append([e])
+            else: groups[-1].append(e)
+        groups.sort(key=lambda g: (0, order.index(g[0]['id'])) if g[0]['id'] in order else (1, 0))
+        els[:] = [e for g in groups for e in g]
     settings['post_title'] = spec['title']
     # Prüfungen
     texte = []

@@ -1,15 +1,15 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gemeinsam import NAP, BASE, VERBOTEN
-from gemeinsam_artikel import AUTOR_ZEILE, REMOVE, artikel_schema, p, kurz
+from gemeinsam_artikel import AUTOR_ZEILE, REMOVE, artikel_schema, p, kurz, ORDER, GRUENDER, PRESSE, video_kasten, cta, stell_dir_vor
 
 URL = BASE + '/ratgeber/schluessel-verloren-unternehmen/'
 TITEL = 'Schlüssel im Unternehmen verloren: Was jetzt zu tun ist'
 BESCHR = 'Firmenschlüssel verloren? Was jetzt zu tun ist, wer haftet, was der Austausch kostet und wie du künftig vorbeugst. Ratgeber für Unternehmen.'
 KARTEN = [
  ('Schritt 1: Verlust sofort melden und Umstände klären',
-  p('Je früher der Verlust bekannt ist, desto kleiner ist das Risiko. Kläre, wann und wo der Schlüssel zuletzt da war, ob er gestohlen oder verloren wurde und ob am Bund etwas auf deine Firma hinweist, '
-    'etwa ein Anhänger mit Name oder Adresse. Ein Schlüssel mit Firmenlogo ist deutlich riskanter als einer, der im See liegt.'),
+  p('Je früher der Verlust bekannt ist, desto kleiner ist das Risiko. Kläre, wann der Schlüssel zuletzt da war und ob er gestohlen wurde. Wichtig ist auch, ob am Bund etwas auf deine Firma hinweist, '
+    'etwa ein Anhänger mit der Adresse. Ein Schlüssel mit Firmenlogo ist deutlich riskanter als einer, der im See liegt.'),
   kurz('Melden, aufschreiben, was bekannt ist, und keine Zeit verlieren.')),
  ('Schritt 2: Im Schließplan nachsehen, welche Türen betroffen sind',
   p('Der Schließplan zeigt, was der verlorene Schlüssel öffnet. Ein Einzelschlüssel betrifft eine Tür, ein Gruppenschlüssel einen Bereich, ein Generalhauptschlüssel im Zweifel das ganze Gebäude. '
@@ -46,7 +46,7 @@ FAQ = [
  ('Haftet der Mitarbeiter, wenn er einen Firmenschlüssel verliert?',
   p('Das hängt vom Grad des Verschuldens ab. Bei leichter Fahrlässigkeit in der Regel nicht, bei mittlerer meist anteilig, bei grober Fahrlässigkeit oder Vorsatz in der Regel voll. Im Einzelfall entscheidet die rechtliche Prüfung.')),
  ('Was kostet der Austausch nach einem Schlüsselverlust?',
-  p('Das hängt von der Zahl der betroffenen Zylinder, dem System und der Erreichbarkeit der Türen ab. Mit Schließplan lässt sich der Austausch genau eingrenzen und vorab beziffern.')),
+  p('Das hängt vor allem von der Zahl der betroffenen Zylinder ab. Mit Schließplan lässt sich der Austausch genau eingrenzen und vorab beziffern.')),
  ('Zahlt die Versicherung den Schlüsselverlust?',
   p('Manchmal. Betriebliche und private Haftpflichtpolicen enthalten teilweise einen Baustein für den Verlust fremder oder beruflich genutzter Schlüssel. Prüfe die Bedingungen, bevor du den Austausch beauftragst.')),
  ('Wie lange dauert der Austausch?',
@@ -60,13 +60,17 @@ SPEC = {
  'verboten': VERBOTEN, 'erlaubt': ['im Landkreis Uelzen', '/uelzen/', '"name": "Uelzen"', 'Standorte:'],
  'seo': {'title': 'Schlüssel verloren in der Firma: Wer haftet, was tun?',
          'description': BESCHR, 'focuskw': 'Schlüssel verloren Firma', 'bctitle': 'Schlüssel verloren', 'robots_noindex': '0'},
- 'remove': REMOVE, 'karten': KARTEN,
+ 'remove': REMOVE,
+ 'order': ORDER, 'handy_css': True,
+ 'graft': [cta('Schlüssel weg? Wir helfen dir weiter', 'Wir prüfen mit dir, welche Türen betroffen sind, und liefern dir die Aufstellung für die Versicherung.', nach='f1a5d3e'),
+   video_kasten('Wo ein verlorener Schlüssel besonders heikel wäre, helfen Kameras zusätzlich. Wir planen beides zusammen und installieren Kamerasysteme mit Alarm aufs Handy.'), PRESSE], 'karten': KARTEN,
  'set': {
+  **GRUENDER,
   '9dcea29': {'_title': 'H1', 'title': '<span style="font-weight: 700;">Schlüssel im Unternehmen verloren:</span><br>Was jetzt zu tun ist'},
   'e429076': {'_title': 'Hero-Text', 'title': 'Ein Schlüssel fehlt, und plötzlich stehen Fragen im Raum: Wer kommt jetzt in unser Gebäude? Müssen alle Schlösser getauscht werden? Und wer bezahlt das? '
               'Dieser Ratgeber führt dich Schritt für Schritt durch die ersten Stunden und Tage nach dem Verlust.' + AUTOR_ZEILE},
   '34dc7fa': {'_title': 'Kurzfassung + Film'},
-  'd05eab3': {'_title': 'Kurzfassung', 'title': 'Kurz gesagt: sofort melden, Schließplan prüfen, gezielt tauschen oder sperren.'},
+  'd05eab3': {'_title': 'Kurzfassung', 'title': 'Kurz gesagt: Melde den Verlust sofort und prüfe im Schließplan, welche Türen betroffen sind.'},
   '7df04ae': {'editor': p('Nach einem Schlüsselverlust müssen nur die Türen gesichert werden, die der Schlüssel tatsächlich öffnet. Welche das sind, zeigt der Schließplan. Bei elektronischen Anlagen genügt es, den Transponder zu sperren. '
               'Wer den Schaden trägt, hängt vom Verschulden und vom Versicherungsschutz ab.')},
   'd38dec5': {'editor': p('Dieser Ratgeber gibt dir einen Überblick und ersetzt keine Rechtsberatung. Stand: November 2026.')},
@@ -75,16 +79,16 @@ SPEC = {
   '43e5085': {'editor': p('Vier Schritte für die Sicherheit, zwei Fragen zu Haftung und Versicherung und ein Kapitel darüber, wie du dir das nächste Mal ersparst.')},
   'd70fb3d': {'_title': 'Checkliste', '_element_id': 'checkliste'},
   'c869af6': {'_title': 'Checkliste', 'title': 'Checkliste für die ersten 24 Stunden'},
-  '8b353e8': {'title': 'Verlust gemeldet, Zeitpunkt und Ort notiert, Hinweise auf die Firma am Schlüsselbund geprüft.'},
+  '8b353e8': {'title': 'Der Verlust ist gemeldet, und du weißt, ob am Schlüsselbund etwas auf deine Firma hinweist.'},
   '6519b8c': {'title': 'Betroffene Türen im Schließplan ermittelt, besonders sensible Bereiche zuerst gesichert.'},
-  '05ac70c': {'editor': p('Versicherung informiert, Austausch oder Sperrung beauftragt, Schließplan aktualisiert.')},
+  '05ac70c': {'editor': p('Die Versicherung ist informiert, und der Austausch der betroffenen Zylinder ist beauftragt.')},
   'f1a5d3e': {'_title': 'Passend dazu', '_element_id': 'weiterlesen'},
   'cfa4bb1': {'_title': 'Passend dazu', 'title': 'Passend dazu'},
-  '4967d0c': {'title': '<a href="/mechanische-schliessanlagen/" style="color: #FBC91B;">Mechanische Schließanlagen</a>: Schließplan, Sicherungskarte und Austausch bei Verlust.'},
-  '99ee72d': {'title': '<a href="/zutrittssystem/" style="color: #FBC91B;">Elektronische Schließanlagen</a>: verlorene Transponder sperren statt Zylinder tauschen.'},
+  '4967d0c': {'title': '<a href="/mechanische-schliessanlagen/" style="color: #FBC91B;">Mechanische Schließanlagen</a>: wie Schließplan und Sicherungskarte bei einem Verlust helfen.'},
+  '99ee72d': {'title': '<a href="/zutrittssystem/" style="color: #FBC91B;">Elektronische Schließanlagen</a>: ein verlorener Transponder wird einfach gesperrt.'},
   '8754a23': {'editor': p('<a href="/schliessanlage-hausverwaltung/">Schließanlagen für Hausverwaltungen</a>: Schlüsselverlust und Mieterwechsel im Mehrfamilienhaus.')},
   '51f3331': {'title': 'Schlüssel weg? <br><span style="font-weight: 700; ">Wir helfen dir weiter</span>'},
-  '5c65e03': {'editor': p('Wir prüfen mit dir, welche Türen betroffen sind, tauschen gezielt oder rüsten auf elektronische Zylinder um und liefern dir die Aufstellung für die Versicherung. '
+  '5c65e03': {'editor': p('Wir prüfen mit dir, welche Türen betroffen sind, und tauschen gezielt. Für die Versicherung bekommst du von uns eine Aufstellung der Kosten. '
               'Im Einsatz sind wir in ganz Norddeutschland, alle Orte findest du in der <a href="/standorte/">Übersicht unserer Standorte</a>.') + NAP},
   '7983242': {'title': 'Häufige Fragen zum <b>Schlüsselverlust im Unternehmen</b>'},
   '45eaf1f': {'title': 'Häufige Fragen zum <br><b>Schlüsselverlust im Unternehmen</b>'},

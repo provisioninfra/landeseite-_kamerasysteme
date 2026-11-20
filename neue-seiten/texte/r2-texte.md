@@ -1,6 +1,6 @@
 ## Schlüssel im Unternehmen verloren: Was jetzt zu tun ist
 
-Ein Schlüssel fehlt, und plötzlich stehen Fragen im Raum: Wer kommt jetzt in unser Gebäude? Müssen alle Schlösser getauscht werden? Und wer bezahlt das? Dieser Ratgeber führt dich Schritt für Schritt durch die ersten Stunden und Tage nach dem Verlust. Von Jannes Heino Baumann, Gründer und Geschäftsführer von ProVision Infra · Stand: November 2026
+Ein Schlüssel fehlt, und plötzlich stehen Fragen im Raum: Wer kommt jetzt in unser Gebäude? Müssen alle Schlösser getauscht werden? Und wer bezahlt das? Dieser Ratgeber führt dich Schritt für Schritt durch die ersten Stunden und Tage nach dem Verlust. Von Jannes Heino Baumann , Gründer und Geschäftsführer von ProVision Infra. Stand: November 2026
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -8,11 +8,33 @@ Sternen auf Google
 
 Sternen auf Google
 
-Kurz gesagt: sofort melden, Schließplan prüfen, gezielt tauschen oder sperren.
+Kurz gesagt: Melde den Verlust sofort und prüfe im Schließplan, welche Türen betroffen sind.
 
 Nach einem Schlüsselverlust müssen nur die Türen gesichert werden, die der Schlüssel tatsächlich öffnet. Welche das sind, zeigt der Schließplan. Bei elektronischen Anlagen genügt es, den Transponder zu sperren. Wer den Schaden trägt, hängt vom Verschulden und vom Versicherungsschutz ab.
 
 Dieser Ratgeber gibt dir einen Überblick und ersetzt keine Rechtsberatung. Stand: November 2026.
+
+Kundenstimmen und Testimonials
+
+5.0 /5.0
+
+Sterne bei Google
+
+"Hervorragende Arbeit! Fachlich kompetent, zuverlässig & ein sehr faires Preis-Leistungs-Verhältnis. Wer einen Profi für Sicherheitstechnik & Zutrittskontrolle sucht, ist hier genau richtig!"
+
+Andre Küster​ – HORNBACH Baumarkt AG​
+
+"Was ich besonders spannend finde: Für ein junges Unternehmen bringt ProVision extrem hohe Expertise & echte Erfahrungswerte mit - die Entwicklung die das Team gerade nimmt, ist wirklich beeindruckend."
+
+Pia-Theresa​ – Geschäftsführerin, Digitale Hanseaten
+
+"Anfahrt & Durchführung waren wirklich schnelle & kompetent, diese Firma ist direkt aus Bad Bevensen und ... top! Absolut empfehlenswert!"
+
+Mia Manikati​ – Hörgeräte Akustik, Inhaberin​
+
+"Super Service und sehr gutes Produkt! Obwohl wir ein vergleichsweise sehr kleiner Kunde sind, wurden wir behandelt wie ein großer. Absolute Empfehlung und gerne wieder!"
+
+Vincent Oswald​ – Inhaber / Geschäftsführer Studio Lüüd​
 
 Schlüssel verloren: Schritt für Schritt
 
@@ -20,7 +42,7 @@ Vier Schritte für die Sicherheit, zwei Fragen zu Haftung und Versicherung und e
 
 Schritt 1: Verlust sofort melden und Umstände klären
 
-Je früher der Verlust bekannt ist, desto kleiner ist das Risiko. Kläre, wann und wo der Schlüssel zuletzt da war, ob er gestohlen oder verloren wurde und ob am Bund etwas auf deine Firma hinweist, etwa ein Anhänger mit Name oder Adresse. Ein Schlüssel mit Firmenlogo ist deutlich riskanter als einer, der im See liegt.
+Je früher der Verlust bekannt ist, desto kleiner ist das Risiko. Kläre, wann der Schlüssel zuletzt da war und ob er gestohlen wurde. Wichtig ist auch, ob am Bund etwas auf deine Firma hinweist, etwa ein Anhänger mit der Adresse. Ein Schlüssel mit Firmenlogo ist deutlich riskanter als einer, der im See liegt.
 
 Kurz gesagt: Melden, aufschreiben, was bekannt ist, und keine Zeit verlieren.
 
@@ -64,55 +86,53 @@ Kurz gesagt: Dokumentierte Ausgabe, aktueller Schließplan, elektronische Zylind
 
 Checkliste für die ersten 24 Stunden
 
-Verlust gemeldet, Zeitpunkt und Ort notiert, Hinweise auf die Firma am Schlüsselbund geprüft.
+Der Verlust ist gemeldet, und du weißt, ob am Schlüsselbund etwas auf deine Firma hinweist.
 
 Betroffene Türen im Schließplan ermittelt, besonders sensible Bereiche zuerst gesichert.
 
-Versicherung informiert, Austausch oder Sperrung beauftragt, Schließplan aktualisiert.
+Die Versicherung ist informiert, und der Austausch der betroffenen Zylinder ist beauftragt.
 
 Passend dazu
 
-Mechanische Schließanlagen : Schließplan, Sicherungskarte und Austausch bei Verlust.
+Mechanische Schließanlagen : wie Schließplan und Sicherungskarte bei einem Verlust helfen.
 
-Elektronische Schließanlagen : verlorene Transponder sperren statt Zylinder tauschen.
+Elektronische Schließanlagen : ein verlorener Transponder wird einfach gesperrt.
 
 Schließanlagen für Hausverwaltungen : Schlüsselverlust und Mieterwechsel im Mehrfamilienhaus.
 
-Kundenstimmen und Testimonials
+Schlüssel weg? Wir helfen dir weiter
 
-5.0 /5.0
+Wir prüfen mit dir, welche Türen betroffen sind, und liefern dir die Aufstellung für die Versicherung.
 
-Sterne bei Google
+[Button] Unverbindliches Erstgespräch vereinbaren → /kontakt/
 
-"Hervorragende Arbeit! Fachlich kompetent, zuverlässig & ein sehr faires Preis-Leistungs-Verhältnis. Wer einen Profi für Sicherheitstechnik & Zutrittskontrolle sucht, ist hier genau richtig!"
+Videoüberwachung aus einer Hand
 
-Andre Küster​ – HORNBACH Baumarkt AG​
+Wo ein verlorener Schlüssel besonders heikel wäre, helfen Kameras zusätzlich. Wir planen beides zusammen und installieren Kamerasysteme mit Alarm aufs Handy.
 
-"Was ich besonders spannend finde: Für ein junges Unternehmen bringt ProVision extrem hohe Expertise & echte Erfahrungswerte mit - die Entwicklung die das Team gerade nimmt, ist wirklich beeindruckend."
-
-Pia-Theresa​ – Geschäftsführerin, Digitale Hanseaten
-
-"Anfahrt & Durchführung waren wirklich schnelle & kompetent, diese Firma ist direkt aus Bad Bevensen und ... top! Absolut empfehlenswert!"
-
-Mia Manikati​ – Hörgeräte Akustik, Inhaberin​
-
-"Super Service und sehr gutes Produkt! Obwohl wir ein vergleichsweise sehr kleiner Kunde sind, wurden wir behandelt wie ein großer. Absolute Empfehlung und gerne wieder!"
-
-Vincent Oswald​ – Inhaber / Geschäftsführer Studio Lüüd​
+[Button] Videoüberwachung für Unternehmen → https://provision-infra.de/kamerasysteme/
 
 Der Gründer von ProVision Infra
 
 Der Gründer von ProVision Infra
 
-Als gelernter Elektriker, ausgebildeter IT-Systemkaufmann und Berufsfeuerwehrmann in Hamburg bringt der Gründer von ProVision Infra zusätzlich Erfahrung aus dem militärischen Sicherheitsumfeld mit. Türen öffnen, Situationen schnell lösen und unter Druck Entscheidungen treffen – das gehörte lange zu seinem Alltag. Daraus entstand auch der Schritt in die Selbstständigkeit: zunächst mit einem eigenen Schlüsseldienst.
+Jannes Heino Baumann hat Elektriker gelernt, sich zum IT-Systemkaufmann ausbilden lassen und als Berufsfeuerwehrmann in Hamburg gearbeitet. Erfahrung aus dem militärischen Sicherheitsumfeld bringt er ebenfalls mit. Unter Druck schnell zu entscheiden und verschlossene Türen zu öffnen, war lange sein Alltag. Daraus wuchs der Schritt in die Selbstständigkeit, zuerst mit einem eigenen Schlüsseldienst.
 
-Dabei wurde schnell deutlich, wie viele Unternehmen beim Thema Zutritt ähnlich arbeiten: Die Schlüssel werden verteilt, weitergegeben oder nachgemacht – und erst wenn etwas schiefläuft, entstehen Aufwand und hohe Kosten. Mit der Zeit kamen immer mehr Anfragen nach digitalen Möglichkeiten. Also nicht mehr nur „Tür aufmachen“, sondern Zutritt strukturiert organisieren: Wer wann wo Zugang hat, ohne Übergaben, Nachschlüssel und unnötige Komplexität.
+Dort fiel ihm auf, wie ähnlich viele Unternehmen mit dem Thema Zutritt umgehen. Schlüssel wandern von Hand zu Hand, manche werden nachgemacht. Teuer wird das erst, wenn etwas schiefläuft. Mit der Zeit fragten immer mehr Kunden nach digitalen Möglichkeiten. Gesucht war eine klare Ordnung darüber, wer wann wohin darf, ganz ohne Schlüsselübergaben und Nachschlüssel.
 
 Genau daraus ist ProVision Infra entstanden.
 
+ProVision Infra in der Presse
+
+Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle in die Chefetage gehört und nicht zum Hausmeister. Wie wir Kunden vor teuren Schlüsselverlusten bewahren, beschreiben das Unternehmerjournal und das GEWINNERmagazin .
+
+[Button] Zum Interview → https://arbeitgebermagazin.de/provision-infra-gruender-im-interview-zutrittskontrolle-ist-keine-hausmeisterarbeit
+
+Unsere Partner
+
 Schlüssel weg? Wir helfen dir weiter
 
-Wir prüfen mit dir, welche Türen betroffen sind, tauschen gezielt oder rüsten auf elektronische Zylinder um und liefern dir die Aufstellung für die Versicherung. Im Einsatz sind wir in ganz Norddeutschland, alle Orte findest du in der Übersicht unserer Standorte . ProVision Infra GmbH Klein Hesebecker Straße 11, 29549 Bad Bevensen Telefon: 05821 4049040 E-Mail: info@provision-infra.de Mo–Do 9–18 Uhr, Fr 9–14 Uhr
+Wir prüfen mit dir, welche Türen betroffen sind, und tauschen gezielt. Für die Versicherung bekommst du von uns eine Aufstellung der Kosten. Im Einsatz sind wir in ganz Norddeutschland, alle Orte findest du in der Übersicht unserer Standorte . ProVision Infra GmbH Klein Hesebecker Straße 11, 29549 Bad Bevensen Telefon: 05821 4049040 E-Mail: info@provision-infra.de Montag bis Donnerstag 9 bis 18 Uhr, Freitag 9 bis 14 Uhr
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -127,14 +147,12 @@ Nein, nur die Zylinder, die der verlorene Schlüssel öffnet. Bei einem Generalh
 **FAQ:** Haftet der Mitarbeiter, wenn er einen Firmenschlüssel verliert?
 Das hängt vom Grad des Verschuldens ab. Bei leichter Fahrlässigkeit in der Regel nicht, bei mittlerer meist anteilig, bei grober Fahrlässigkeit oder Vorsatz in der Regel voll. Im Einzelfall entscheidet die rechtliche Prüfung.
 **FAQ:** Was kostet der Austausch nach einem Schlüsselverlust?
-Das hängt von der Zahl der betroffenen Zylinder, dem System und der Erreichbarkeit der Türen ab. Mit Schließplan lässt sich der Austausch genau eingrenzen und vorab beziffern.
+Das hängt vor allem von der Zahl der betroffenen Zylinder ab. Mit Schließplan lässt sich der Austausch genau eingrenzen und vorab beziffern.
 **FAQ:** Zahlt die Versicherung den Schlüsselverlust?
 Manchmal. Betriebliche und private Haftpflichtpolicen enthalten teilweise einen Baustein für den Verlust fremder oder beruflich genutzter Schlüssel. Prüfe die Bedingungen, bevor du den Austausch beauftragst.
 **FAQ:** Wie lange dauert der Austausch?
 Einzelne Zylinder tauschen wir meist kurzfristig. Bei Anlagen mit Sicherungskarte werden neue Zylinder beim Hersteller gefertigt; für die Übergangszeit besprechen wir mit dir eine Zwischenlösung.
 **FAQ:** Lohnt sich nach einem Verlust der Umstieg auf eine elektronische Schließanlage?
 Oft ja, vor allem bei vielen Nutzern und häufigen Wechseln. Viele Betriebe rüsten zuerst die stark genutzten Türen um. Wir rechnen dir beide Wege durch.
-
-Unsere Partner
 
 © 2026 Provision Infra GmbH. Alle Rechte vorbehalten. Klein Hesebecker Straße 11 · 29549 Bad Bevensen · Tel. 05821 4049040 · hey@provision-infra.de
