@@ -65,3 +65,21 @@ Texte zum Gegenlesen: `texte/`.
   die als Originalzitat unverändert bleibt.
 - Gründertext auf den neuen Seiten neu formuliert und mit Namen; Autorzeile der Ratgeber verlinkt auf das Interview.
 - Bilder-Slider „Technik, die wir verbauen“ auf den Schließanlagen-Seiten bleibt weg, bis eigene Fotos vorliegen.
+
+## Zweiter Textdurchgang 20.11.2026 (Werbetexter-Stil, auch Bestandsseiten)
+
+Kundenregeln: keine Gedankenstriche, kein „nicht nur … sondern auch“ und keine Kontrastschablonen („statt“, „kein X, sondern Y“),
+keine auffälligen Dreiergruppen, keine vagen Autoritäten; Kundenzitate bleiben wörtlich (Strich im Zitat 7639481c bewusst).
+
+- 8 neue Seiten: Specs überarbeitet, Gründer- und Pressetext in `gemeinsam.py`; gespeichert 20:40 bis 20:52 UTC.
+  Vor dem Speichern übernimmt `werkzeuge/kopf_uebernehmen.py` den Kopf-Container 192a273 1:1 aus dem frischen Export
+  (Menü der Parallelsitzung) und listet alle Nicht-Text-Unterschiede.
+- 18 Bestandsseiten (3316 Zutritt, 4313 Kamera, 4870 Schlachthöfe, 15 Ortsseiten) nur über Textfelder geändert:
+  `werkzeuge/texte_bestand.py ziehen|anwenden` (Abbruch, wenn der Live-Wert nicht mehr dem alten entspricht),
+  `werkzeuge/zusammen.py` (Ortsseiten = eigene Felder + gemeinsame Felder; mobile Ablauf-Zeitleiste 756a14f übernimmt die
+  neuen Desktoptexte, behebt nebenbei den falschen Kamera-Ablauf auf 4870), `werkzeuge/speichern.sh`.
+  Texte vorher/nachher: `bestand/<ID>-vorher.json` / `-nachher.json`; gespeichert 20:53 bis 21:28 UTC, alle im 1. Versuch.
+- Karriere 4408: Text steckt im HTML-Widget f5cab51; `werkzeuge/textknoten.py` ändert nur sichtbare Textknoten.
+- Befund Cache: WP Rocket baut unter /wp-content/cache/background-css/ eine Kopie der Seiten-CSS. Unter 429-Drosselung
+  entstand eine unvollständige Kopie (Kunde sah auf /mechanische-schliessanlagen/ dunkle Schrift auf Dunkelblau);
+  neu gebaut 21:21 UTC. `werkzeuge/cachecheck.sh` vergleicht Kopie und Original je Seite (Handy- und Desktop-UA).
