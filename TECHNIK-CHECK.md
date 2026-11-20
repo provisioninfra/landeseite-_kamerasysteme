@@ -1484,3 +1484,20 @@ Pillen-Zeile geändert“ → Sperre über `modified_gmt` → Speichern):**
   nach oben, Abstand bleibt. Die früheren Sprungmarken „Offene Stellen“, „Warum wir“, „Bewerbung“ stehen weiter im
   Seiteninhalt (Buttons), nur nicht mehr im Menü.
 - Gespeichert 18:56–19:46 UTC (27 Seiten) und 20:14 UTC (Karriere), alle „publish“, jede Prüfung bestanden.
+
+**Prüfung (20:30–20:45 UTC, nach Cache-Leerung, `seo/kopf_check.mjs` im Arbeitsordner):** 14 Seiten (Start, Kamera,
+Schlachthöfe, Zutrittssystem, Lüneburg, Celle, Karriere, Standorte, Ratgeber, Mechanische Schließanlagen,
+Hausverwaltungen, ein Ratgeber-Artikel, Impressum, Kontakt) bei 1920, 1366, 1180, 1024 und 390 px: auf allen
+Menüseiten dieselben sieben Punkte in einer Zeile (Höhe 53/51/47/44 px, kein Umbruch, keine JavaScript-Fehler); Handy:
+Burger-Menü mit sieben Zeilen in Poppins 12 px, Gruppen per Tipp auf- und zuklappbar (Startseite: Gruppe
+„Schließanlagen“ zeigt zuerst „Mit digitalen Schlüsseln Kosten sparen“ und „So arbeiten wir zusammen“, Kamera-Seite
+entsprechend in „Videoüberwachung“); Impressum weiter nur Logo, Kontakt ohne Kopfzeile. Am Bildschirm öffnen die
+Gruppen per Maus-Hover (Elementor/SmartMenus, `showOnClick` aus); im Prüf-Browser ohne echte Maus – und auf
+Touch-Geräten – öffnet der erste Tipp das Aufklappmenü, der zweite folgt dem Link. Aufklappmenü weiß mit der globalen
+Aufklapp-Typografie, wie auf den neuen Seiten des Vortags.
+
+**Nebenbefund Footer:** Die Footer-Menüs (Widgets a430424/59b27e3) spiegeln je Seite dasselbe WordPress-Menü wie die
+Kopfzeile; auf Startseite, Kamera-/Schlachthof- und Zutrittsseite zeigen sie jetzt die Gruppenstruktur (am Bildschirm mit
+Aufklapp-Pfeilen, auf dem Handy flach, weil das Footer-CSS vom 27.10. Gruppenüberschriften ausblendet und Unterpunkte
+zeigt), die Ortsseiten weiter ihre alten Sprungmarken-Menüs 18/19 und die neuen Seiten das flache Menü 21. Nicht Teil des
+Auftrags (Kopfmenü); Vereinheitlichung der Footer-Menüs (z. B. alle auf das flache Menü 21) als Vorschlag offen.
