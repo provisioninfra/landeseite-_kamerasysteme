@@ -1,6 +1,6 @@
 ## Schließsysteme für Unternehmen im herstellerneutralen Vergleich
 
-Transponder oder Smartphone? Kaufen oder mieten? Wer ein Schließsystem sucht, findet vor allem Prospekte, die alle dasselbe versprechen. Wir verbauen Systeme von EVVA, SimonsVoss, Keyota, Keyrent und NUKI. Welches davon zu deinem Betrieb passt, entscheiden deine Türen und deine Abläufe. Diese Empfehlung geben wir dir ehrlich und herstellerneutral.
+Transponder oder Smartphone? Kaufen oder mieten? Jeder Prospekt verspricht dir das perfekte Schließsystem. Passen wird am Ende genau eines, und welches das ist, hängt von deinen Türen und deinem Team ab. Wir verbauen EVVA, SimonsVoss, Keyota, Keyrent und NUKI und sind an keinen dieser Hersteller gebunden. Deshalb bekommst du von uns eine ehrliche Empfehlung, auch wenn sie kleiner ausfällt als gedacht.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -8,11 +8,11 @@ Sternen auf Google
 
 Sternen auf Google
 
-Das richtige Schließsystem richtet sich nach deinem Alltag im Betrieb.
+Welches Schließsystem du brauchst, verrät dein Arbeitsalltag.
 
-Ein Praxisteam mit sechs Türen braucht etwas anderes als ein Logistikbetrieb im Schichtdienst. Deshalb fragen wir zuerst, wer wann Zutritt braucht und wie schnell sich eine Berechtigung ändern muss. Ebenso wichtig ist, was das System über die Jahre kostet.
+Eine Arztpraxis mit sechs Türen tickt anders als ein Logistiker, bei dem rund um die Uhr Schichten wechseln. Darum fragen wir zuerst, wer wann wohin muss und wie schnell eine neue Berechtigung stehen soll. Danach rechnen wir mit dir aus, was das System über die gesamte Laufzeit kostet. Der Preis am Tag der Montage ist nur ein Teil dieser Rechnung.
 
-Weil wir mehrere Hersteller verbauen, müssen wir dir kein bestimmtes System verkaufen. Hier stellen wir dir die Systeme vor, mit denen wir arbeiten. Die endgültige Empfehlung bekommst du nach einer Begehung bei dir.
+Weil wir mehrere Hersteller verbauen, haben wir kein Lieblingsprodukt, das wir dir unbedingt verkaufen müssen. Auf dieser Seite findest du die Systeme, mit denen wir arbeiten, samt ihren Grenzen. Die endgültige Empfehlung bekommst du nach der Begehung bei dir vor Ort.
 
 Kundenstimmen und Testimonials
 
@@ -36,41 +36,41 @@ Mia Manikati​ – Hörgeräte Akustik, Inhaberin​
 
 Vincent Oswald​ – Inhaber / Geschäftsführer Studio Lüüd​
 
-Die Schließsysteme, die wir verbauen: kurz erklärt
+Welches System kann was? Die Schließsysteme im Überblick
 
-Die Bandbreite reicht von der klassischen Anlage mit Sicherungskarte bis zum App-Schloss mit eigenem Mobilfunk. Jede Systemfamilie hat ihre Stärken, und manche lassen sich kombinieren.
+Die Spanne reicht vom klassischen Schlüssel mit Sicherungskarte bis zum App-Schloss, das seine eigene Mobilfunkverbindung mitbringt. Jede Systemfamilie hat ihre Stärken. Viele davon lassen sich miteinander kombinieren.
 
 Mechanisch: EVVA mit Sicherungskarte
 
-Schlüssel und Zylinder kommen ganz ohne Strom aus. Der Schließplan legt fest, wer wo hineinkommt, und Nachschlüssel gibt es nur gegen Sicherungskarte. Mehr dazu auf der Seite mechanische Schließanlagen .
+Schlüssel und Zylinder funktionieren ganz ohne Strom, auch nach vielen Jahren. Wer wo hineinkommt, regelt der Schließplan. Nachschlüssel gibt es nur gegen Sicherungskarte, also nur mit deinem Okay. Mehr dazu auf der Seite mechanische Schließanlagen .
 
-Passt, wenn du wenige Türen hast und dein Team selten wechselt.
+Ideal bei wenigen Türen und einem Team, das selten wechselt.
 
 EVVA AirKey
 
-Zylinder und Wandleser öffnen per Smartphone oder Transponder. Berechtigungen verwaltest du online, auch aus der Ferne, und schickst sie direkt auf das Handy der Person.
+Die Berechtigung kommt per App aufs Smartphone, egal wo die Person gerade ist. Zylinder und Wandleser öffnen dann per Handy oder Transponder. Verwaltet wird online, auch von unterwegs.
 
-Passt für Praxen und Betriebe mit mehreren Standorten, die Zutritt aus der Ferne steuern wollen.
+Stark für Praxen und Betriebe mit mehreren Standorten, die den Zutritt aus der Ferne steuern.
 
 EVVA Xesar
 
-Elektronische Zylinder und Beschläge öffnen mit Karten oder Schlüsselanhängern, verwaltet wird alles in der Xesar-Software. Das System ist für Betriebe mit vielen Türen und klaren Zeitprofilen ausgelegt.
+Karte oder Schlüsselanhänger an den Zylinder halten, und die Tür ist offen. Wer wann wohin darf, legst du in der Xesar-Software fest, bis auf die Uhrzeit genau. Gebaut ist das System für Gebäude mit vielen Türen.
 
-Passt für den Mittelstand mit Schichtbetrieb und wechselnden Teams.
+Gemacht für den Mittelstand mit Schichtbetrieb und wechselnden Teams.
 
 SimonsVoss: System 3060, AX, MobileKey und FORTLOX
 
-System 3060 ist die kabellose Plattform für große Gebäude und wird per Software verwaltet. Digitalzylinder AX und SmartHandle AX gehören zur neuen AX-Generation und passen zu bestehenden Anlagen. Mit MobileKey wird das Smartphone zum Schlüssel, die Verwaltung läuft über eine Web-App. Bei FORTLOX steckt die Elektronik im Schlüssel, der Zylinder braucht keine Batterie.
+System 3060 ist die kabellose Plattform für große Gebäude, gesteuert über eine Software. Digitalzylinder AX und SmartHandle AX bilden die neue AX-Generation und lassen sich in bestehende Anlagen einbinden. MobileKey macht das Smartphone zum Schlüssel und läuft über eine Web-App. Bei FORTLOX sitzt die Elektronik im Schlüssel, weshalb der Zylinder ganz ohne Batterie auskommt.
 
-Passt vom kleinen Betrieb mit MobileKey bis zum großen Industriegebäude mit System 3060.
+Wächst mit: vom kleinen Betrieb mit MobileKey bis zum Industriegebäude mit System 3060.
 
-Smarte Schlösser und Miete: NUKI, Keyota, Keyrent
+Smarte Schlösser von NUKI und Keyota, Miete über Keyrent
 
-NUKI sitzt innen auf dem vorhandenen Zylinder und öffnet per App oder Keypad. Keyota bringt App-Schlösser mit eigener Mobilfunk-Bridge mit, WLAN braucht es dafür keins. Über eine Schnittstelle lässt sich Keyota etwa an Hotelsoftware anbinden. Keyrent vermietet digitale Schließsysteme.
+NUKI sitzt innen auf deinem vorhandenen Zylinder und öffnet per App oder Keypad. Keyota bringt eine eigene Mobilfunk-Bridge mit und funktioniert deshalb auch dort, wo es kein WLAN gibt. Per Schnittstelle lässt sich Keyota zum Beispiel an Hotelsoftware anbinden. Keyrent wiederum vermietet digitale Schließsysteme.
 
-Oft ist eine Kombination die beste Lösung, zum Beispiel mechanisch für Nebenräume und elektronisch für den Eingang.
+Oft gewinnt die Kombination: mechanisch im Nebenraum, elektronisch am Eingang.
 
-Passt für einzelne Türen und Ferienwohnungen, Keyrent vor allem für Baustellen.
+Richtig für einzelne Türen und Ferienwohnungen. Keyrent spielt seine Stärken auf Baustellen aus.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -84,9 +84,9 @@ Ein verlorener Transponder kostet dich einen Klick und keinen einzigen neuen Zyl
 
 Im Ernstfall siehst du sofort, welche Tür wann geöffnet wurde.
 
-Du änderst Berechtigungen am Rechner oder am Handy, wann immer es nötig ist.
+Du änderst Berechtigungen vom Schreibtisch aus oder abends ganz entspannt vom Sofa.
 
-Schlüsselbücher und Übergabeprotokolle auf Papier brauchst du nicht mehr.
+Das Schlüsselbuch in der Schreibtischschublade hat ausgedient.
 
 Mehrere Standorte verwaltest du über eine einzige Oberfläche.
 
@@ -100,21 +100,21 @@ Ein verlorener Transponder kostet dich einen Klick und keinen einzigen neuen Zyl
 
 Im Ernstfall siehst du sofort, welche Tür wann geöffnet wurde.
 
-Du änderst Berechtigungen am Rechner oder am Handy, wann immer es nötig ist.
+Du änderst Berechtigungen vom Schreibtisch aus oder abends ganz entspannt vom Sofa.
 
-Schlüsselbücher und Übergabeprotokolle auf Papier brauchst du nicht mehr.
+Das Schlüsselbuch in der Schreibtischschublade hat ausgedient.
 
 Mehrere Standorte verwaltest du über eine einzige Oberfläche.
 
 Serverraum und Personalakten bleiben den Menschen vorbehalten, die dort wirklich hineindürfen.
 
-Diese Fragen machen die Entscheidung leichter
+Diese Fragen sortieren die Auswahl für dich vor
 
-Online oder offline? Willst du Berechtigungen aus der Ferne ändern, oder reicht das Programmieren vor Ort?
+Online oder offline? Musst du Berechtigungen aus der Ferne ändern, oder reicht es, sie vor Ort zu programmieren?
 
-Smartphone oder Transponder? Entscheidend ist, wie viele Menschen in deinem Betrieb ein Diensthandy haben.
+Smartphone oder Transponder? Das klärt eine einfache Gegenfrage: Wie viele in deinem Team haben ein Diensthandy?
 
-Kaufen oder mieten? Für Baustellen lohnt sich die Miete, für dauerhafte Lösungen meist der Kauf. Wir rechnen dir beides offen durch.
+Kaufen oder mieten? Auf der Baustelle spricht vieles für die Miete, im festen Gebäude meist für den Kauf. Wir legen dir beide Rechnungen offen hin.
 
 Bevor wir ein System empfehlen, sehen wir uns an, wie dein Betrieb heute organisiert ist:
 
@@ -124,13 +124,13 @@ Wie oft ändern sich Berechtigungen?
 
 Wo soll verwaltet werden?
 
-Mit diesen Antworten steht fest, welches System zu dir passt.
+Danach ist meistens klar, welches System bei dir das Rennen macht.
 
 Welches Schließsystem passt zu welchem Betrieb?
 
-Praxis und kleines Büro: EVVA AirKey oder SimonsVoss MobileKey. Für einzelne Türen reicht oft ein NUKI.
+Praxis und kleines Büro: EVVA AirKey oder SimonsVoss MobileKey. Geht es nur um eine einzelne Tür, reicht oft schon ein NUKI.
 
-Handwerk mit festem Team: eine mechanische EVVA-Anlage, deren stark genutzte Eingänge elektronisch ergänzt werden.
+Handwerk mit festem Team: eine mechanische EVVA-Anlage, dazu elektronische Zylinder an den Eingängen, die den ganzen Tag benutzt werden.
 
 Mittelstand im Schichtbetrieb: EVVA Xesar oder SimonsVoss System 3060 mit AX-Komponenten.
 
@@ -158,9 +158,9 @@ Zugang nach Zeitplan:
 
 Dienstleister öffnen nur an den Tagen und zu den Uhrzeiten, die du festlegst.
 
-Weniger Organisation:
+Schluss mit Übergabeterminen:
 
-Schlüsselübergaben und Fahrten zur Abholung entfallen.
+Niemand fährt mehr los, nur um einen Schlüssel abzuholen oder zurückzubringen.
 
 Neue Leute ohne neue Schlüssel:
 
@@ -198,9 +198,9 @@ Zugang nach Zeitplan:
 
 Dienstleister öffnen nur an den Tagen und zu den Uhrzeiten, die du festlegst.
 
-Weniger Organisation:
+Schluss mit Übergabeterminen:
 
-Schlüsselübergaben und Fahrten zur Abholung entfallen.
+Niemand fährt mehr los, nur um einen Schlüssel abzuholen oder zurückzubringen.
 
 Neue Leute ohne neue Schlüssel:
 
@@ -244,7 +244,7 @@ Gemeinsam prüfen wir, ob alles so läuft wie vereinbart, und halten das schrift
 
 So findest du das passende Schließsystem
 
-Im Erstgespräch grenzen wir ein, welche Systeme für dich in Frage kommen. Danach entscheidest du in Ruhe.
+Im Erstgespräch streichen wir alles, was nicht zu deinem Betrieb passt. Übrig bleiben die Systeme, die sich für dich lohnen, und du entscheidest in Ruhe.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /kontakt/
 
@@ -258,15 +258,15 @@ Der Gründer von ProVision Infra
 
 Der Gründer von ProVision Infra
 
-Jannes Heino Baumann hat Elektriker gelernt, sich zum IT-Systemkaufmann ausbilden lassen und als Berufsfeuerwehrmann in Hamburg gearbeitet. Erfahrung aus dem militärischen Sicherheitsumfeld bringt er ebenfalls mit. Unter Druck schnell zu entscheiden und verschlossene Türen zu öffnen, war lange sein Alltag. Daraus wuchs der Schritt in die Selbstständigkeit, zuerst mit einem eigenen Schlüsseldienst.
+Jannes Heino Baumann kommt aus der Praxis. Gelernt hat er Elektriker, später kam die Ausbildung zum IT-Systemkaufmann dazu. Danach fuhr er als Berufsfeuerwehrmann in Hamburg Einsätze, und auch im militärischen Sicherheitsumfeld hat er gearbeitet. Bei der Feuerwehr öffnet man verschlossene Türen, wenn jede Minute zählt. Aus diesem Handwerk wurde sein erstes eigenes Unternehmen: ein Schlüsseldienst.
 
-Dort fiel ihm auf, wie ähnlich viele Unternehmen mit dem Thema Zutritt umgehen. Schlüssel wandern von Hand zu Hand, manche werden nachgemacht. Teuer wird das erst, wenn etwas schiefläuft. Mit der Zeit fragten immer mehr Kunden nach digitalen Möglichkeiten. Gesucht war eine klare Ordnung darüber, wer wann wohin darf, ganz ohne Schlüsselübergaben und Nachschlüssel.
+Dort sah er jeden Tag, wie Betriebe mit ihren Schlüsseln umgehen. Sie gehen von Hand zu Hand. Hin und wieder lässt jemand heimlich einen nachmachen. Teuer wird das an dem Tag, an dem einer fehlt. Immer mehr Kunden fragten ihn deshalb nach einer digitalen Lösung. Sie wollten auf einen Blick sehen, wer in welchen Raum darf. Übergabetermine und Nachschlüssel wollten sie sich sparen.
 
 Genau daraus ist ProVision Infra entstanden.
 
 ProVision Infra in der Presse
 
-Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle in die Chefetage gehört und nicht zum Hausmeister. Wie wir Kunden vor teuren Schlüsselverlusten bewahren, beschreiben das Unternehmerjournal und das GEWINNERmagazin .
+Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle Chefsache ist. Wie unsere Kunden mit einer digitalen Schließanlage teure Schlüsselverluste vermeiden, haben das Unternehmerjournal und das GEWINNERmagazin aufgeschrieben.
 
 [Button] Zum Interview → https://arbeitgebermagazin.de/provision-infra-gruender-im-interview-zutrittskontrolle-ist-keine-hausmeisterarbeit
 
@@ -274,7 +274,7 @@ Unsere Partner
 
 Herstellerneutrale Beratung in ganz Norddeutschland
 
-Wir beraten dich vor Ort, egal ob du in Lüneburg , Uelzen , Celle , Winsen (Luhe) oder im Wendland sitzt. Unser Firmensitz ist in Bad Bevensen im Landkreis Uelzen; alle Orte findest du in der Übersicht unserer Standorte . Montage und Service übernehmen wir selbst, für jedes der hier vorgestellten Systeme. ProVision Infra GmbH Klein Hesebecker Straße 11, 29549 Bad Bevensen Telefon: 05821 4049040 E-Mail: info@provision-infra.de Montag bis Donnerstag 9 bis 18 Uhr, Freitag 9 bis 14 Uhr
+Wir beraten dich vor Ort, egal ob du in Lüneburg , Uelzen , Celle , Winsen (Luhe) oder im Wendland sitzt. Unser Firmensitz ist in Bad Bevensen im Landkreis Uelzen; alle Orte findest du in der Übersicht unserer Standorte . Jedes System auf dieser Seite montieren und warten wir selbst. Du hast also einen Ansprechpartner, ganz gleich, wofür du dich entscheidest. ProVision Infra GmbH Klein Hesebecker Straße 11, 29549 Bad Bevensen Telefon: 05821 4049040 E-Mail: info@provision-infra.de Montag bis Donnerstag 9 bis 18 Uhr, Freitag 9 bis 14 Uhr
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -283,7 +283,7 @@ Häufige Fragen zu Schließsystemen
 Häufige Fragen zu Schließsystemen
 
 **FAQ:** Welches Schließsystem ist das beste für mein Unternehmen?
-Ein System, das für alle passt, gibt es nicht. Wichtig sind vor allem die Zahl der Türen und wie oft sich Berechtigungen ändern. Auch die Frage, ob du aus der Ferne verwalten willst, spielt mit hinein. Nach der Begehung empfehlen wir dir ein System und erklären dir, warum es zu deinem Betrieb passt.
+Das eine beste System gibt es nicht. Den Ausschlag geben die Zahl deiner Türen und wie oft sich Berechtigungen ändern. Dazu kommt die Frage, ob du aus der Ferne verwalten willst. Nach der Begehung empfehlen wir dir ein System und erklären dir, warum es zu deinem Betrieb passt.
 **FAQ:** Wie unterscheiden sich mechanische und elektronische Schließsysteme?
 Mechanische Systeme arbeiten mit Schlüssel und Zylinder, ganz ohne Strom. Elektronische Systeme öffnen per Transponder oder Smartphone, und Berechtigungen änderst du per Software. Mit „digital“ sind meist Systeme gemeint, die sich zusätzlich per App oder aus der Cloud verwalten lassen. Mehr zu den Grundlagen: mechanische Schließanlagen und elektronische Schließanlagen .
 **FAQ:** Brauchen elektronische Schließsysteme Strom oder Kabel?

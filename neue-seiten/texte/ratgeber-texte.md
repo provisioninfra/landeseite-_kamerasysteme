@@ -1,6 +1,6 @@
 ## Ratgeber Schließanlagen &amp; Videoüberwachung
 
-Was ist erlaubt, und was tust du, wenn etwas schiefgeht? Hier beantworten wir die Fragen, die uns Betriebe und Hausverwaltungen am häufigsten stellen. Verständlich geschrieben und aus unserer täglichen Arbeit in Betrieben und Wohnanlagen.
+Darf die Kamera den Hof filmen? Und was tust du, wenn der Generalschlüssel plötzlich weg ist? Solche Fragen hören wir jede Woche von Betrieben und Hausverwaltungen. Hier stehen unsere Antworten. Verständlich erklärt, mit Beispielen aus unserer Arbeit vor Ort.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -8,9 +8,9 @@ Sternen auf Google
 
 Sternen auf Google
 
-Antworten aus unserer täglichen Arbeit.
+Wissen aus der Praxis, für deine nächste Entscheidung.
 
-Wir planen und betreuen Schließanlagen und Videoüberwachung in ganz Norddeutschland. Dabei hören wir oft dieselben Fragen. Die Antworten haben wir hier aufgeschrieben, damit du dich vorab informieren kannst.
+Wir planen und betreuen Schließanlagen und Videoüberwachung in ganz Norddeutschland. Viele Fragen tauchen dabei immer wieder auf, ob in der Arztpraxis oder auf dem Logistikhof. Die Antworten haben wir aufgeschrieben, damit du gut vorbereitet ins Gespräch gehst.
 
 Unsere Ratgeber ersetzen keine Rechtsberatung. Über deinen Einzelfall sprechen wir gern unverbindlich mit dir.
 
@@ -38,29 +38,29 @@ Vincent Oswald​ – Inhaber / Geschäftsführer Studio Lüüd​
 
 Von der Frage zur Lösung
 
-Mechanische Schließanlagen : alles zu Schließplan und Sicherungskarte.
+Mechanische Schließanlagen : wie Schließplan und Sicherungskarte zusammenspielen.
 
 Elektronische Schließanlagen : Zutritt per Transponder oder Smartphone, auf Wunsch mit Service.
 
-Videoüberwachung für Unternehmen : Kameras planen, die erlaubt sind und im Ernstfall helfen.
+Videoüberwachung für Unternehmen : Kameras, die erlaubt sind und im Ernstfall verwertbare Bilder liefern.
 
 Alle Ratgeber
 
-Videoüberwachung auf dem Firmengelände: Was ist erlaubt? : was beim Hinweisschild und bei der Speicherdauer gilt.
+Videoüberwachung auf dem Firmengelände: Was ist erlaubt? : Darf die Kamera auf den Parkplatz zeigen? Was aufs Hinweisschild gehört und wie lange du speichern darfst.
 
-Schlüssel im Unternehmen verloren: Was jetzt zu tun ist : Schritt für Schritt, mit Haftung und Versicherung.
+Schlüssel im Unternehmen verloren: Was jetzt zu tun ist : Die ersten Stunden entscheiden. So begrenzt du den Schaden und klärst, wer haftet und was die Versicherung zahlt.
 
-Elektronischen Schließzylinder nachrüsten: Geht das in jede Tür? : worauf du bei Maßen und Fluchttüren achten musst.
+Elektronischen Schließzylinder nachrüsten: Geht das in jede Tür? : Meist geht es ohne Bauarbeiten. Woran du das erkennst und worauf es bei Fluchttüren ankommt.
 
 Lieber direkt mit uns sprechen?
 
-Manche Fragen lassen sich am besten bei dir vor Ort klären. Im Erstgespräch hören wir zu und sagen dir, was in deinem Fall sinnvoll ist.
+Jeder Betrieb ist anders, und manche Frage klärt sich erst mit Blick auf deine Türen und dein Gelände. Im Erstgespräch hören wir zu und sagen dir offen, was sich bei dir lohnt.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /kontakt/
 
 Videoüberwachung aus einer Hand
 
-Neben Schließanlagen installieren wir Kamerasysteme mit Alarm aufs Handy. Wie das rechtlich sauber gelingt, steht im Ratgeber zur Videoüberwachung auf dem Firmengelände.
+Neben Schließanlagen installieren wir Kamerasysteme mit Alarm aufs Handy. Wie du dabei rechtlich sauber bleibst, erklärt der Ratgeber zur Videoüberwachung auf dem Firmengelände.
 
 [Button] Videoüberwachung für Unternehmen → https://provision-infra.de/kamerasysteme/
 
@@ -68,15 +68,15 @@ Der Gründer von ProVision Infra
 
 Der Gründer von ProVision Infra
 
-Jannes Heino Baumann hat Elektriker gelernt, sich zum IT-Systemkaufmann ausbilden lassen und als Berufsfeuerwehrmann in Hamburg gearbeitet. Erfahrung aus dem militärischen Sicherheitsumfeld bringt er ebenfalls mit. Unter Druck schnell zu entscheiden und verschlossene Türen zu öffnen, war lange sein Alltag. Daraus wuchs der Schritt in die Selbstständigkeit, zuerst mit einem eigenen Schlüsseldienst.
+Jannes Heino Baumann kommt aus der Praxis. Gelernt hat er Elektriker, später kam die Ausbildung zum IT-Systemkaufmann dazu. Danach fuhr er als Berufsfeuerwehrmann in Hamburg Einsätze, und auch im militärischen Sicherheitsumfeld hat er gearbeitet. Bei der Feuerwehr öffnet man verschlossene Türen, wenn jede Minute zählt. Aus diesem Handwerk wurde sein erstes eigenes Unternehmen: ein Schlüsseldienst.
 
-Dort fiel ihm auf, wie ähnlich viele Unternehmen mit dem Thema Zutritt umgehen. Schlüssel wandern von Hand zu Hand, manche werden nachgemacht. Teuer wird das erst, wenn etwas schiefläuft. Mit der Zeit fragten immer mehr Kunden nach digitalen Möglichkeiten. Gesucht war eine klare Ordnung darüber, wer wann wohin darf, ganz ohne Schlüsselübergaben und Nachschlüssel.
+Dort sah er jeden Tag, wie Betriebe mit ihren Schlüsseln umgehen. Sie gehen von Hand zu Hand. Hin und wieder lässt jemand heimlich einen nachmachen. Teuer wird das an dem Tag, an dem einer fehlt. Immer mehr Kunden fragten ihn deshalb nach einer digitalen Lösung. Sie wollten auf einen Blick sehen, wer in welchen Raum darf. Übergabetermine und Nachschlüssel wollten sie sich sparen.
 
 Genau daraus ist ProVision Infra entstanden.
 
 ProVision Infra in der Presse
 
-Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle in die Chefetage gehört und nicht zum Hausmeister. Wie wir Kunden vor teuren Schlüsselverlusten bewahren, beschreiben das Unternehmerjournal und das GEWINNERmagazin .
+Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle Chefsache ist. Wie unsere Kunden mit einer digitalen Schließanlage teure Schlüsselverluste vermeiden, haben das Unternehmerjournal und das GEWINNERmagazin aufgeschrieben.
 
 [Button] Zum Interview → https://arbeitgebermagazin.de/provision-infra-gruender-im-interview-zutrittskontrolle-ist-keine-hausmeisterarbeit
 
@@ -84,7 +84,7 @@ Unsere Partner
 
 Lieber persönlich? Ruf uns an
 
-Manche Fragen lassen sich am besten vor Ort beantworten. Wir kommen zu dir, in ganz Norddeutschland; alle Orte findest du in der Übersicht unserer Standorte . ProVision Infra GmbH Klein Hesebecker Straße 11, 29549 Bad Bevensen Telefon: 05821 4049040 E-Mail: info@provision-infra.de Montag bis Donnerstag 9 bis 18 Uhr, Freitag 9 bis 14 Uhr
+Manches klärt sich am schnellsten bei dir vor Ort. Wir kommen überall in Norddeutschland vorbei, alle Orte findest du in der Übersicht unserer Standorte . ProVision Infra GmbH Klein Hesebecker Straße 11, 29549 Bad Bevensen Telefon: 05821 4049040 E-Mail: info@provision-infra.de Montag bis Donnerstag 9 bis 18 Uhr, Freitag 9 bis 14 Uhr
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 

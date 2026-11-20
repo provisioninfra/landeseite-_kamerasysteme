@@ -1,6 +1,6 @@
 ## Mechanische Schließanlagen für Unternehmen in Norddeutschland
 
-Zwölf Schlüssel sind im Umlauf, keiner weiß genau, wer welchen hat, und der Generalschlüssel ist mit einem ehemaligen Mitarbeiter gegangen. Spätestens dann zeigt sich, ob eine Schließanlage geplant wurde oder einfach gewachsen ist. ProVision Infra plant und betreut mechanische Schließanlagen von EVVA mit Sicherungskarte. Du bekommst einen sauberen Schließplan und geschützte Nachschlüssel. Dazu einen festen Ansprechpartner, der auch nach der Montage für dich da ist.
+Zwölf Schlüssel sind im Umlauf, und keiner weiß genau, wer welchen hat. Der Generalschlüssel? Ist mit einem ehemaligen Mitarbeiter gegangen. Spätestens jetzt zeigt sich, ob eine Schließanlage geplant wurde oder einfach gewachsen ist. ProVision Infra plant und betreut mechanische Schließanlagen von EVVA mit Sicherungskarte. Mit einem sauberen Schließplan weißt du jederzeit, wer welche Tür öffnet. Und fehlt später ein Schlüssel, rufst du genau eine Nummer an: unsere.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -10,9 +10,9 @@ Sternen auf Google
 
 Eine Schließanlage ist nur so sicher wie ihr Schließplan.
 
-In einer mechanischen Schließanlage regelt ein einziges System, wer welche Tür öffnen darf. Die Geschäftsführung kommt überall hinein, das Lagerteam in Halle und Rampe, die Reinigung nur in die Sozialräume. Jeder trägt genau einen Schlüssel. Damit das über Jahre so bleibt, braucht es einen durchdachten Schließplan und ein Profil, das sich nicht einfach kopieren lässt.
+In einer mechanischen Schließanlage regelt ein einziges System, wer welche Tür öffnen darf. Die Geschäftsführung kommt überall hinein, die Reinigungsfirma nur in die Sozialräume. Trotzdem trägt jeder nur einen Schlüssel am Bund. Damit das über Jahre so bleibt, braucht es einen durchdachten Schließplan und ein Profil, das sich nicht einfach kopieren lässt.
 
-Genau dafür sind wir da. Wir beraten dich herstellerneutral, projektieren die Anlage gemeinsam mit dir und bauen Zylinder von EVVA mit Sicherungskarte ein. Auch Nachschlüssel und spätere Erweiterungen laufen über uns. Alle Arbeiten erledigen wir selbst, Subunternehmer setzen wir nicht ein.
+Genau hier setzen wir an. Gemeinsam mit dir projektieren wir die Anlage und bauen anschließend EVVA-Zylinder mit Sicherungskarte ein. Nachschlüssel und spätere Erweiterungen bekommst du ebenfalls von uns. Alle Arbeiten erledigt unser eigenes Team, Subunternehmer setzen wir nicht ein.
 
 Kundenstimmen und Testimonials
 
@@ -38,7 +38,7 @@ Vincent Oswald​ – Inhaber / Geschäftsführer Studio Lüüd​
 
 So funktioniert eine mechanische Schließanlage: vom Schließplan bis zum Nachschlüssel
 
-Fünf Bausteine entscheiden darüber, ob deine Anlage nach Jahren noch stimmt. Fehlt einer davon, weiß irgendwann niemand mehr, welcher Schlüssel welche Tür öffnet.
+Ob deine Anlage nach Jahren noch stimmt, entscheiden fünf Bausteine. Fehlt einer davon, weiß irgendwann niemand mehr, welcher Schlüssel welche Tür öffnet.
 
 Der Schließplan
 
@@ -70,7 +70,7 @@ Kommen neue Räume oder ein zweiter Standort hinzu, wächst die Anlage über den
 
 Mechanisch arbeiten wir mit EVVA. Für elektronische Ergänzungen kommen unter anderem SimonsVoss und NUKI in Frage.
 
-Deine Anlage wächst mit deinem Betrieb, und für alles Weitere hast du einen festen Ansprechpartner.
+Deine Anlage wächst mit, und bei jeder Frage erreichst du denselben Ansprechpartner.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -94,9 +94,9 @@ Aus den Antworten entsteht ein Schließplan, der zu deinem Alltag passt.
 
 Unsere Leistungen für mechanische Schließanlagen
 
-Beratung und Planung: Wir nehmen jede Tür auf, klären mit dir die Zugänge und projektieren die Anlage passend zu Gebäude und Budget.
+Beratung und Planung: Wir nehmen jede Tür auf und klären mit dir die Zugänge. Daraus entsteht eine Anlage, die zu Gebäude und Budget passt.
 
-Schließplan: Wir legen die Schlüsselebenen fest, dokumentieren sie sauber und stimmen alles vor der Bestellung mit dir ab.
+Schließplan: Wir legen die Schlüsselebenen fest und dokumentieren sie. Bestellt wird erst, wenn du jede Zeile abgesegnet hast.
 
 Montage: Wir bauen die EVVA-Zylinder ein und prüfen jede einzelne Tür, bevor wir dir die Anlage übergeben.
 
@@ -118,7 +118,7 @@ Ablauf der Zusammenarbeit
 
 Termin vor Ort
 
-Bei dir vor Ort nehmen wir jede Tür auf, messen die Zylinder und klären die Zugänge. Den Kostenrahmen nennen wir dir noch beim Termin.
+Vor Ort nehmen wir jede Tür auf und messen die Zylinder aus. Den Kostenrahmen erfährst du noch beim Termin.
 
 Umsetzung
 
@@ -152,15 +152,15 @@ Der Gründer von ProVision Infra
 
 Der Gründer von ProVision Infra
 
-Jannes Heino Baumann hat Elektriker gelernt, sich zum IT-Systemkaufmann ausbilden lassen und als Berufsfeuerwehrmann in Hamburg gearbeitet. Erfahrung aus dem militärischen Sicherheitsumfeld bringt er ebenfalls mit. Unter Druck schnell zu entscheiden und verschlossene Türen zu öffnen, war lange sein Alltag. Daraus wuchs der Schritt in die Selbstständigkeit, zuerst mit einem eigenen Schlüsseldienst.
+Jannes Heino Baumann kommt aus der Praxis. Gelernt hat er Elektriker, später kam die Ausbildung zum IT-Systemkaufmann dazu. Danach fuhr er als Berufsfeuerwehrmann in Hamburg Einsätze, und auch im militärischen Sicherheitsumfeld hat er gearbeitet. Bei der Feuerwehr öffnet man verschlossene Türen, wenn jede Minute zählt. Aus diesem Handwerk wurde sein erstes eigenes Unternehmen: ein Schlüsseldienst.
 
-Dort fiel ihm auf, wie ähnlich viele Unternehmen mit dem Thema Zutritt umgehen. Schlüssel wandern von Hand zu Hand, manche werden nachgemacht. Teuer wird das erst, wenn etwas schiefläuft. Mit der Zeit fragten immer mehr Kunden nach digitalen Möglichkeiten. Gesucht war eine klare Ordnung darüber, wer wann wohin darf, ganz ohne Schlüsselübergaben und Nachschlüssel.
+Dort sah er jeden Tag, wie Betriebe mit ihren Schlüsseln umgehen. Sie gehen von Hand zu Hand. Hin und wieder lässt jemand heimlich einen nachmachen. Teuer wird das an dem Tag, an dem einer fehlt. Immer mehr Kunden fragten ihn deshalb nach einer digitalen Lösung. Sie wollten auf einen Blick sehen, wer in welchen Raum darf. Übergabetermine und Nachschlüssel wollten sie sich sparen.
 
 Genau daraus ist ProVision Infra entstanden.
 
 ProVision Infra in der Presse
 
-Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle in die Chefetage gehört und nicht zum Hausmeister. Wie wir Kunden vor teuren Schlüsselverlusten bewahren, beschreiben das Unternehmerjournal und das GEWINNERmagazin .
+Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle Chefsache ist. Wie unsere Kunden mit einer digitalen Schließanlage teure Schlüsselverluste vermeiden, haben das Unternehmerjournal und das GEWINNERmagazin aufgeschrieben.
 
 [Button] Zum Interview → https://arbeitgebermagazin.de/provision-infra-gruender-im-interview-zutrittskontrolle-ist-keine-hausmeisterarbeit
 
@@ -177,7 +177,7 @@ Häufige Fragen zu mechanischen Schließanlagen
 Häufige Fragen zu mechanischen Schließanlagen
 
 **FAQ:** Was kostet eine mechanische Schließanlage?
-Den Preis bestimmen vor allem die Zahl der Türen und Schlüssel sowie der Schutzgrad des Profils. Eine kleine Anlage für ein Büro kostet deutlich weniger als eine für Halle und Verwaltung mit Außentoren. Nach der Begehung bekommst du den Kostenrahmen schriftlich, ohne versteckte Posten.
+Den Preis bestimmen vor allem die Zahl der Türen und Schlüssel. Auch der Schutzgrad des Profils spielt mit hinein. Eine kleine Anlage für ein Büro kostet deutlich weniger als eine für Halle und Verwaltung mit Außentoren. Nach der Begehung bekommst du den Kostenrahmen schriftlich, ohne versteckte Posten.
 **FAQ:** Was unterscheidet Generalhauptschlüssel, Gruppenschlüssel und Einzelschlüssel?
 Mit dem Generalhauptschlüssel öffnest du jede Tür der Anlage. Ein Gruppenschlüssel ist auf einen Bereich begrenzt, etwa auf die Werkstatt. Der Einzelschlüssel passt nur zu einer Tür. Haupteingang und Tor lassen sich so einrichten, dass jeder Schlüssel sie öffnet. Welche Ebenen du brauchst, halten wir im Schließplan fest.
 **FAQ:** Wozu brauche ich eine Sicherungskarte?
@@ -195,6 +195,6 @@ Sobald du den Schließplan freigibst, fertigt der Hersteller die Anlage. Der Ein
 **FAQ:** Welche Hersteller verbaut ProVision Infra?
 Mechanische Schließanlagen bauen wir mit EVVA. Für elektronische Komponenten setzen wir auf EVVA, SimonsVoss, Keyota, Keyrent und NUKI. Welches System zu deinem Gebäude passt, entscheiden wir nach der Begehung.
 **FAQ:** Übernehmt ihr Wartung und Service für bestehende Anlagen?
-Ja. Wir warten Zylinder, ersetzen verschlissene Teile und bestellen Nachschlüssel gegen Sicherungskarte. Bei neuen Anlagen beraten wir herstellerneutral und übernehmen auf Wunsch die gesamte Projektierung.
+Ja. Wir warten Zylinder und ersetzen verschlissene Teile. Nachschlüssel bestellen wir gegen Vorlage der Sicherungskarte. Bei neuen Anlagen beraten wir herstellerneutral und übernehmen auf Wunsch die gesamte Projektierung.
 
 © 2026 Provision Infra GmbH. Alle Rechte vorbehalten. Klein Hesebecker Straße 11 · 29549 Bad Bevensen · Tel. 05821 4049040 · hey@provision-infra.de

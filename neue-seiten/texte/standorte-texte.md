@@ -1,6 +1,6 @@
 ## Unsere Standorte für Schließanlagen &amp; Videoüberwachung in Norddeutschland
 
-Von Bad Bevensen aus sichern wir Türen und Gelände in der Lüneburger Heide und entlang der Elbe, bis vor die Tore von Hamburg und Hannover. Hier findest du alle Orte, in denen wir regelmäßig Schließanlagen und Videoüberwachung planen und betreuen. Wähle deinen Ort und erfahre, worauf es dort ankommt.
+Von Bad Bevensen aus sichern wir Türen und Gelände in der Lüneburger Heide und entlang der Elbe, bis vor die Tore von Hamburg und Hannover. Hier findest du alle Orte, in denen wir regelmäßig Schließanlagen und Videoüberwachung planen und betreuen. Klick auf deinen Ort und lies, worauf es dort ankommt.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -8,9 +8,9 @@ Sternen auf Google
 
 Sternen auf Google
 
-Ein Firmensitz, ein Team, ein Ansprechpartner für den ganzen Norden.
+Ein Team aus Bad Bevensen für den ganzen Norden.
 
-ProVision Infra sitzt in Bad Bevensen im Landkreis Uelzen. Von hier aus fahren wir zu dir und montieren Schließanlagen und Kameras mit eigenem Team. Deshalb bekommst du an jedem Ort dieselbe Qualität und dieselben Ansprechpartner.
+ProVision Infra sitzt in Bad Bevensen im Landkreis Uelzen. Von hier fährt unser eigenes Team zu dir, ob nach Lüneburg oder bis ins Wendland. In Winsen sprichst du deshalb mit denselben Leuten wie in Uelzen, und die Montage übernimmt keine fremde Firma.
 
 Jeder Ort stellt eigene Anforderungen. In Celle geht es oft um Fachwerk, in Hitzacker um Ferienwohnungen. Auf den Seiten der einzelnen Orte zeigen wir dir, worauf es bei dir ankommt.
 
@@ -38,7 +38,7 @@ Vincent Oswald​ – Inhaber / Geschäftsführer Studio Lüüd​
 
 Landkreis Uelzen
 
-Uelzen : Die Kreisstadt liegt vor unserer Haustür. Hier betreuen wir Gewerbebetriebe ebenso wie Praxen.
+Uelzen : Die Kreisstadt liegt vor unserer Haustür. Gewerbebetriebe und Arztpraxen erreichen wir hier besonders schnell.
 
 Bad Bevensen : Hier sitzen wir. Für Hotels und den Handel in der Kurstadt sind wir in wenigen Minuten vor Ort.
 
@@ -60,15 +60,15 @@ Winsen (Luhe) : Zwischen Lüneburg und Hamburg schützen wir Logistikflächen mi
 
 Wendland: Landkreis Lüchow-Dannenberg
 
-Dannenberg (Elbe) : In Dannenberg und der Elbtalaue betreuen wir Praxen genauso wie landwirtschaftliche Betriebe.
+Dannenberg (Elbe) : In Dannenberg und der Elbtalaue sichern wir Arztpraxen und landwirtschaftliche Betriebe ab.
 
 Hitzacker (Elbe) : Ferienwohnungen öffnen hier per App, und Gäste brauchen keine Schlüsselübergabe mehr.
 
-Lüchow (Wendland) : In der Kreisstadt des Wendlands sorgen wir für Sicherheitstechnik in Verwaltung und Handwerk.
+Lüchow (Wendland) : In der Kreisstadt des Wendlands rüsten wir Büros und Handwerksbetriebe mit Schließanlagen und Kameras aus.
 
 Landkreise Celle und Gifhorn
 
-Celle : Vom Fachwerkhaus in der Altstadt bis zur Produktionshalle planen wir passende Lösungen für die Residenzstadt.
+Celle : In der Residenzstadt bekommen Fachwerkhäuser der Altstadt moderne Schließtechnik, und am Stadtrand sichern wir Produktionshallen.
 
 Gifhorn : Im Landkreis zwischen Heide und Wolfsburg sichern wir Betriebe mit Schließanlagen und Videoüberwachung.
 
@@ -96,9 +96,9 @@ Du erhältst ein Konzept mit Schließplan und gegebenenfalls Kamerastandorten, d
 
 Gemeinsam prüfen wir, ob alles so läuft wie vereinbart, und halten das schriftlich fest. Danach bleiben wir dein fester Ansprechpartner.
 
-So kommst du an deinem Standort zu mehr Sicherheit
+Wann können wir bei dir sein?
 
-Ruf uns an oder vereinbare ein Erstgespräch. Wir sagen dir, wann wir bei dir vor Ort sein können und was dein Projekt kostet.
+Ruf uns an oder vereinbare ein Erstgespräch. Wir nennen dir einen Termin für die Begehung und sagen dir danach klar, was dein Projekt kostet.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /kontakt/
 
@@ -112,15 +112,15 @@ Der Gründer von ProVision Infra
 
 Der Gründer von ProVision Infra
 
-Jannes Heino Baumann hat Elektriker gelernt, sich zum IT-Systemkaufmann ausbilden lassen und als Berufsfeuerwehrmann in Hamburg gearbeitet. Erfahrung aus dem militärischen Sicherheitsumfeld bringt er ebenfalls mit. Unter Druck schnell zu entscheiden und verschlossene Türen zu öffnen, war lange sein Alltag. Daraus wuchs der Schritt in die Selbstständigkeit, zuerst mit einem eigenen Schlüsseldienst.
+Jannes Heino Baumann kommt aus der Praxis. Gelernt hat er Elektriker, später kam die Ausbildung zum IT-Systemkaufmann dazu. Danach fuhr er als Berufsfeuerwehrmann in Hamburg Einsätze, und auch im militärischen Sicherheitsumfeld hat er gearbeitet. Bei der Feuerwehr öffnet man verschlossene Türen, wenn jede Minute zählt. Aus diesem Handwerk wurde sein erstes eigenes Unternehmen: ein Schlüsseldienst.
 
-Dort fiel ihm auf, wie ähnlich viele Unternehmen mit dem Thema Zutritt umgehen. Schlüssel wandern von Hand zu Hand, manche werden nachgemacht. Teuer wird das erst, wenn etwas schiefläuft. Mit der Zeit fragten immer mehr Kunden nach digitalen Möglichkeiten. Gesucht war eine klare Ordnung darüber, wer wann wohin darf, ganz ohne Schlüsselübergaben und Nachschlüssel.
+Dort sah er jeden Tag, wie Betriebe mit ihren Schlüsseln umgehen. Sie gehen von Hand zu Hand. Hin und wieder lässt jemand heimlich einen nachmachen. Teuer wird das an dem Tag, an dem einer fehlt. Immer mehr Kunden fragten ihn deshalb nach einer digitalen Lösung. Sie wollten auf einen Blick sehen, wer in welchen Raum darf. Übergabetermine und Nachschlüssel wollten sie sich sparen.
 
 Genau daraus ist ProVision Infra entstanden.
 
 ProVision Infra in der Presse
 
-Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle in die Chefetage gehört und nicht zum Hausmeister. Wie wir Kunden vor teuren Schlüsselverlusten bewahren, beschreiben das Unternehmerjournal und das GEWINNERmagazin .
+Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle Chefsache ist. Wie unsere Kunden mit einer digitalen Schließanlage teure Schlüsselverluste vermeiden, haben das Unternehmerjournal und das GEWINNERmagazin aufgeschrieben.
 
 [Button] Zum Interview → https://arbeitgebermagazin.de/provision-infra-gruender-im-interview-zutrittskontrolle-ist-keine-hausmeisterarbeit
 
@@ -128,7 +128,7 @@ Unsere Partner
 
 Unser Einsatzgebiet zwischen Hamburg und Hannover
 
-Auch in den Gemeinden rund um diese Orte sind wir für dich da, etwa in Suderburg, Altenmedingen, Amt Neuhaus, Adendorf, Munster und Soltau. Größere Projekte setzen wir in ganz Norddeutschland um, auch in Hamburg und Hannover. Was wir überall anbieten: mechanische Schließanlagen , elektronische Schließanlagen und Videoüberwachung für Unternehmen . ProVision Infra GmbH Klein Hesebecker Straße 11, 29549 Bad Bevensen Telefon: 05821 4049040 E-Mail: info@provision-infra.de Montag bis Donnerstag 9 bis 18 Uhr, Freitag 9 bis 14 Uhr
+Auch in den Gemeinden rund um diese Orte sind wir für dich da, etwa in Suderburg, Altenmedingen, Amt Neuhaus, Adendorf, Munster und Soltau. Größere Projekte setzen wir in ganz Norddeutschland um, auch in Hamburg und Hannover. An jedem Standort planen wir mechanische Schließanlagen und elektronische Schließanlagen . Dazu kommt Videoüberwachung für Unternehmen , auf Wunsch aus einer Hand mit der Zutrittskontrolle. ProVision Infra GmbH Klein Hesebecker Straße 11, 29549 Bad Bevensen Telefon: 05821 4049040 E-Mail: info@provision-infra.de Montag bis Donnerstag 9 bis 18 Uhr, Freitag 9 bis 14 Uhr
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -139,7 +139,7 @@ Häufige Fragen zu unseren Standorten
 **FAQ:** In welchen Regionen arbeitet ProVision Infra?
 Unser Firmensitz ist in Bad Bevensen im Landkreis Uelzen. Von hier aus arbeiten wir in den Landkreisen Uelzen, Lüneburg, Lüchow-Dannenberg, Celle, Gifhorn und Harburg. Darüber hinaus sind wir im gesamten Raum zwischen Hamburg und Hannover unterwegs. Alle Orte mit eigener Seite findest du weiter oben.
 **FAQ:** Kommt ihr auch zu Projekten außerhalb der aufgeführten Orte?
-Ja. Die Liste zeigt die Orte, in denen wir regelmäßig unterwegs sind. Für Schließanlagen und Videoüberwachung kommen wir auch in andere Orte in Norddeutschland. Melde dich einfach, dann sagen wir dir ehrlich, wie wir dein Projekt umsetzen können.
+Ja. Die Liste zeigt die Orte, in denen wir regelmäßig unterwegs sind. Für Schließanlagen und Videoüberwachung fahren wir auch in andere Orte in Norddeutschland. Melde dich einfach. Wir sagen dir offen, wie wir dein Projekt umsetzen können.
 **FAQ:** Habt ihr an jedem Ort ein eigenes Büro?
 Nein. Wir haben einen Firmensitz in Bad Bevensen und kommen von dort zu dir. Alle Arbeiten erledigt unser eigenes Team, und für dein Projekt hast du einen festen Ansprechpartner.
 **FAQ:** Wie schnell seid ihr vor Ort?

@@ -6,7 +6,7 @@ URL = BASE + '/mechanische-schliessanlagen/'
 def p(t): return '<p>' + t + '</p>'
 FAQ = [
  ('Was kostet eine mechanische Schließanlage?',
-  p('Den Preis bestimmen vor allem die Zahl der Türen und Schlüssel sowie der Schutzgrad des Profils. Eine kleine Anlage für ein Büro kostet deutlich weniger '
+  p('Den Preis bestimmen vor allem die Zahl der Türen und Schlüssel. Auch der Schutzgrad des Profils spielt mit hinein. Eine kleine Anlage für ein Büro kostet deutlich weniger '
     'als eine für Halle und Verwaltung mit Außentoren. Nach der Begehung bekommst du den Kostenrahmen schriftlich, ohne versteckte Posten.')),
  ('Was unterscheidet Generalhauptschlüssel, Gruppenschlüssel und Einzelschlüssel?',
   p('Mit dem Generalhauptschlüssel öffnest du jede Tür der Anlage. Ein Gruppenschlüssel ist auf einen Bereich begrenzt, etwa auf die Werkstatt. '
@@ -34,7 +34,7 @@ FAQ = [
   p('Mechanische Schließanlagen bauen wir mit EVVA. Für elektronische Komponenten setzen wir auf EVVA, SimonsVoss, Keyota, Keyrent und NUKI. '
     'Welches System zu deinem Gebäude passt, entscheiden wir nach der Begehung.')),
  ('Übernehmt ihr Wartung und Service für bestehende Anlagen?',
-  p('Ja. Wir warten Zylinder, ersetzen verschlissene Teile und bestellen Nachschlüssel gegen Sicherungskarte. Bei neuen Anlagen beraten wir herstellerneutral und übernehmen auf Wunsch die gesamte Projektierung.')),
+  p('Ja. Wir warten Zylinder und ersetzen verschlissene Teile. Nachschlüssel bestellen wir gegen Vorlage der Sicherungskarte. Bei neuen Anlagen beraten wir herstellerneutral und übernehmen auf Wunsch die gesamte Projektierung.')),
 ]
 SPEC = {
  'slug': 'mechanische-schliessanlagen', 'title': 'Mechanische Schließanlagen',
@@ -49,19 +49,19 @@ SPEC = {
  'set': {
   **GRUENDER,
   '9dcea29': {'_title': 'H1', 'title': '<span style="font-weight: 700;">Mechanische Schließanlagen</span><br>für Unternehmen in Norddeutschland'},
-  'e429076': {'_title': 'Hero-Text', 'title': 'Zwölf Schlüssel sind im Umlauf, keiner weiß genau, wer welchen hat, und der Generalschlüssel ist mit einem ehemaligen Mitarbeiter gegangen. '
-              'Spätestens dann zeigt sich, ob eine Schließanlage geplant wurde oder einfach gewachsen ist.<br><br>'
-              '<span style="font-weight: 700;">ProVision Infra plant und betreut mechanische Schließanlagen von EVVA mit Sicherungskarte. Du bekommst einen sauberen Schließplan und geschützte Nachschlüssel. '
-              'Dazu einen festen Ansprechpartner, der auch nach der Montage für dich da ist.</span>'},
+  'e429076': {'_title': 'Hero-Text', 'title': 'Zwölf Schlüssel sind im Umlauf, und keiner weiß genau, wer welchen hat. Der Generalschlüssel? Ist mit einem ehemaligen Mitarbeiter gegangen. '
+              'Spätestens jetzt zeigt sich, ob eine Schließanlage geplant wurde oder einfach gewachsen ist.<br><br>'
+              '<span style="font-weight: 700;">ProVision Infra plant und betreut mechanische Schließanlagen von EVVA mit Sicherungskarte. Mit einem sauberen Schließplan weißt du jederzeit, wer welche Tür öffnet. '
+              'Und fehlt später ein Schlüssel, rufst du genau eine Nummer an: unsere.</span>'},
   '34dc7fa': {'_title': 'Einleitung + Film'},
   'd05eab3': {'_title': 'Einleitung Überschrift', 'title': 'Eine Schließanlage ist nur so sicher wie ihr Schließplan.'},
-  '7df04ae': {'editor': p('In einer mechanischen Schließanlage regelt ein einziges System, wer welche Tür öffnen darf. Die Geschäftsführung kommt überall hinein, das Lagerteam in Halle und Rampe, '
-              'die Reinigung nur in die Sozialräume. Jeder trägt genau einen Schlüssel. Damit das über Jahre so bleibt, braucht es einen durchdachten Schließplan und ein Profil, das sich nicht einfach kopieren lässt.')},
-  'd38dec5': {'editor': p('Genau dafür sind wir da. Wir beraten dich herstellerneutral, projektieren die Anlage gemeinsam mit dir und bauen Zylinder von EVVA mit Sicherungskarte ein. '
-              'Auch Nachschlüssel und spätere Erweiterungen laufen über uns. Alle Arbeiten erledigen wir selbst, Subunternehmer setzen wir nicht ein.')},
+  '7df04ae': {'editor': p('In einer mechanischen Schließanlage regelt ein einziges System, wer welche Tür öffnen darf. Die Geschäftsführung kommt überall hinein, die Reinigungsfirma nur in die Sozialräume. '
+              'Trotzdem trägt jeder nur einen Schlüssel am Bund. Damit das über Jahre so bleibt, braucht es einen durchdachten Schließplan und ein Profil, das sich nicht einfach kopieren lässt.')},
+  'd38dec5': {'editor': p('Genau hier setzen wir an. Gemeinsam mit dir projektieren wir die Anlage und bauen anschließend EVVA-Zylinder mit Sicherungskarte ein. '
+              'Nachschlüssel und spätere Erweiterungen bekommst du ebenfalls von uns. Alle Arbeiten erledigt unser eigenes Team, Subunternehmer setzen wir nicht ein.')},
   'd7f768f': {'_title': 'Aufbau mechanische Schließanlage'},
   '74b6d54': {'_title': 'Aufbau Überschrift', 'title': 'So funktioniert eine mechanische Schließanlage: <span style="font-weight: 700; ">vom Schließplan bis zum Nachschlüssel</span>'},
-  '43e5085': {'editor': p('Fünf Bausteine entscheiden darüber, ob deine Anlage nach Jahren noch stimmt. Fehlt einer davon, weiß irgendwann niemand mehr, welcher Schlüssel welche Tür öffnet.')},
+  '43e5085': {'editor': p('Ob deine Anlage nach Jahren noch stimmt, entscheiden fünf Bausteine. Fehlt einer davon, weiß irgendwann niemand mehr, welcher Schlüssel welche Tür öffnet.')},
   '8cc96a4': {'title': 'Der Schließplan'},
   '71be80d': {'editor': p('Das Herz jeder Anlage ist eine Übersicht aller Türen und aller Schlüssel. Sie legt fest, wer wo hineinkommt, und wird vor der Bestellung mit dir abgestimmt. '
               'Jede spätere Erweiterung baut darauf auf.')},
@@ -81,7 +81,7 @@ SPEC = {
   '6414a37': {'editor': p('Kommen neue Räume oder ein zweiter Standort hinzu, wächst die Anlage über den Schließplan mit. Verschlissene Zylinder ersetzen wir bei der Wartung. '
               'Stark genutzte Eingänge kombinieren wir auf Wunsch mit <a href="/zutrittssystem/">elektronischen Zylindern</a>.')},
   'f5080c1': {'editor': p('Mechanisch arbeiten wir mit EVVA. Für elektronische Ergänzungen kommen unter anderem SimonsVoss und NUKI in Frage.')},
-  '3ac3e9e': {'editor': p('Deine Anlage wächst mit deinem Betrieb, und für alles Weitere hast du einen festen Ansprechpartner.')},
+  '3ac3e9e': {'editor': p('Deine Anlage wächst mit, und bei jeder Frage erreichst du denselben Ansprechpartner.')},
   'd70fb3d': {'_title': 'Mechanisch oder elektronisch', '_element_id': 'vergleich'},
   'c869af6': {'_title': 'Mechanisch oder elektronisch', 'title': 'Mechanisch oder elektronisch? Die Antwort hängt von deinem Betrieb ab.'},
   '8b353e8': {'title': 'Mechanisch lohnt sich bei wenigen Türen und einem festen Team. Die Anlage kommt ohne Strom und Software aus und hält bei guter Pflege viele Jahre.'},
@@ -90,8 +90,8 @@ SPEC = {
               'welche sich lohnt. Mehr dazu im <a href="/schliesssysteme/">Vergleich der Schließsysteme</a>.')},
   'f1a5d3e': {'_title': 'Leistungen', '_element_id': 'leistungen'},
   'cfa4bb1': {'_title': 'Leistungen', 'title': 'Unsere Leistungen für mechanische Schließanlagen'},
-  '4967d0c': {'title': 'Beratung und Planung: Wir nehmen jede Tür auf, klären mit dir die Zugänge und projektieren die Anlage passend zu Gebäude und Budget.'},
-  '99ee72d': {'title': 'Schließplan: Wir legen die Schlüsselebenen fest, dokumentieren sie sauber und stimmen alles vor der Bestellung mit dir ab.'},
+  '4967d0c': {'title': 'Beratung und Planung: Wir nehmen jede Tür auf und klären mit dir die Zugänge. Daraus entsteht eine Anlage, die zu Gebäude und Budget passt.'},
+  '99ee72d': {'title': 'Schließplan: Wir legen die Schlüsselebenen fest und dokumentieren sie. Bestellt wird erst, wenn du jede Zeile abgesegnet hast.'},
   '8754a23': {'editor': p('Montage: Wir bauen die EVVA-Zylinder ein und prüfen jede einzelne Tür, bevor wir dir die Anlage übergeben.')},
   '51f3331': {'title': 'Mechanische Schließanlagen <br><span style="font-weight: 700; ">in ganz Norddeutschland</span>'},
   '5c65e03': {'editor': p('Unser Firmensitz liegt in Bad Bevensen im Landkreis Uelzen. Von dort aus planen und montieren wir Schließanlagen in '
@@ -112,7 +112,7 @@ SPEC = {
  ],
  'ablauf': {
   'Erstgespräch': p('Ein kurzes Telefonat genügt für den Anfang. Wir fragen nach Türen und Nutzern und sagen dir ehrlich, ob eine mechanische Anlage reicht oder eine Kombination besser passt.'),
-  'Termin vor Ort': p('Bei dir vor Ort nehmen wir jede Tür auf, messen die Zylinder und klären die Zugänge. Den Kostenrahmen nennen wir dir noch beim Termin.'),
+  'Termin vor Ort': p('Vor Ort nehmen wir jede Tür auf und messen die Zylinder aus. Den Kostenrahmen erfährst du noch beim Termin.'),
   'Planung deines Systems': p('Du erhältst den Schließplan und ein Angebot, das zu deinem Budget passt. Gefertigt wird die Anlage bei EVVA erst, wenn du den Plan freigegeben hast.'),
   'Umsetzung': p('Wir tauschen die Zylinder Tür für Tür, bei kleineren Objekten meist an einem Tag. Dein Betrieb läuft dabei weiter, und jede Tür wird nach dem Einbau geprüft.'),
   'Übergabe & Betreuung': p('Zum Schluss bekommst du die Schlüssel samt Sicherungskarte und den dokumentierten Schließplan. Auch danach sind wir für Nachschlüssel und Wartung erreichbar.'),

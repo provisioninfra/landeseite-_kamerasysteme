@@ -30,12 +30,12 @@ ORDER = ['192a273', '0f0c707', 'd135e80', '67b8213', '34dc7fa', '7cfc047c', 'd7f
 
 # Gründertext ohne Gedankenstriche und ohne Aufzählungsketten, mit Namen
 GRUENDER = {
- 'e04b70a': {'editor': '<p>Jannes Heino Baumann hat Elektriker gelernt, sich zum IT-Systemkaufmann ausbilden lassen und als Berufsfeuerwehrmann in Hamburg gearbeitet. '
-             'Erfahrung aus dem militärischen Sicherheitsumfeld bringt er ebenfalls mit.</p>'
-             '<p>Unter Druck schnell zu entscheiden und verschlossene Türen zu öffnen, war lange sein Alltag. Daraus wuchs der Schritt in die Selbstständigkeit, zuerst mit einem eigenen Schlüsseldienst.</p>'},
- 'a1d3e7d': {'editor': '<p>Dort fiel ihm auf, wie ähnlich viele Unternehmen mit dem Thema Zutritt umgehen. Schlüssel wandern von Hand zu Hand, manche werden nachgemacht. '
-             'Teuer wird das erst, wenn etwas schiefläuft.</p>'
-             '<p>Mit der Zeit fragten immer mehr Kunden nach digitalen Möglichkeiten. Gesucht war eine klare Ordnung darüber, wer wann wohin darf, ganz ohne Schlüsselübergaben und Nachschlüssel.</p>'},
+ 'e04b70a': {'editor': '<p>Jannes Heino Baumann kommt aus der Praxis. Gelernt hat er Elektriker, später kam die Ausbildung zum IT-Systemkaufmann dazu. '
+             'Danach fuhr er als Berufsfeuerwehrmann in Hamburg Einsätze, und auch im militärischen Sicherheitsumfeld hat er gearbeitet.</p>'
+             '<p>Bei der Feuerwehr öffnet man verschlossene Türen, wenn jede Minute zählt. Aus diesem Handwerk wurde sein erstes eigenes Unternehmen: ein Schlüsseldienst.</p>'},
+ 'a1d3e7d': {'editor': '<p>Dort sah er jeden Tag, wie Betriebe mit ihren Schlüsseln umgehen. Sie gehen von Hand zu Hand. Hin und wieder lässt jemand heimlich einen nachmachen. '
+             'Teuer wird das an dem Tag, an dem einer fehlt.</p>'
+             '<p>Immer mehr Kunden fragten ihn deshalb nach einer digitalen Lösung. Sie wollten auf einen Blick sehen, wer in welchen Raum darf. Übergabetermine und Nachschlüssel wollten sie sich sparen.</p>'},
 }
 
 # Presse-Kasten: Klon des Kastens „Videoüberwachung aus einer Hand“ (b3e009b) mit neuen IDs, hinter dem Zitat bec6cfd
@@ -49,9 +49,9 @@ PRESSE = ('b3e009b', 'bec6cfd', {
   'b3e009b': {'_title': 'Presse', '_element_id': 'presse'},
   '30deaeb': {'title': 'ProVision Infra in der Presse'},
   '018167f': {'editor': '<p>Im Interview mit dem <a href="' + PRESSE_LINKS['interview'] + '" target="_blank" rel="noopener">Arbeitgebermagazin</a> erklärt Gründer Jannes Heino Baumann, '
-              'warum Zutrittskontrolle in die Chefetage gehört und nicht zum Hausmeister. Wie wir Kunden vor teuren Schlüsselverlusten bewahren, beschreiben das '
+              'warum Zutrittskontrolle Chefsache ist. Wie unsere Kunden mit einer digitalen Schließanlage teure Schlüsselverluste vermeiden, haben das '
               '<a href="' + PRESSE_LINKS['unternehmerjournal'] + '" target="_blank" rel="noopener">Unternehmerjournal</a> und das '
-              '<a href="' + PRESSE_LINKS['gewinnermagazin'] + '" target="_blank" rel="noopener">GEWINNERmagazin</a>.</p>'},
+              '<a href="' + PRESSE_LINKS['gewinnermagazin'] + '" target="_blank" rel="noopener">GEWINNERmagazin</a> aufgeschrieben.</p>'},
   'c9c0f01': {'text': 'Zum Interview', 'link': _ext(PRESSE_LINKS['interview'])},
  }, True)
 

@@ -1,6 +1,6 @@
 ## Schließanlagen für Hausverwaltungen und Mehrfamilienhäuser
 
-Ein Mieter zieht aus und gibt nur zwei von drei Schlüsseln zurück. Bei der nächsten Eigentümerversammlung fragt dann jemand, wer eigentlich noch einen Schlüssel zum Keller hat. ProVision Infra plant und betreut Schließanlagen für Wohnanlagen, mechanisch mit Sicherungskarte oder elektronisch mit Transponder. So wird ein Mieterwechsel wieder zur Formsache.
+Ein Mieter zieht aus und gibt nur zwei von drei Schlüsseln zurück. Auf der nächsten Eigentümerversammlung will dann jemand wissen, wer eigentlich noch in den Keller kommt. ProVision Infra plant und betreut Schließanlagen für Wohnanlagen, mechanisch mit Sicherungskarte oder elektronisch mit Transponder. Damit wird der nächste Mieterwechsel zur Formsache.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -8,11 +8,11 @@ Sternen auf Google
 
 Sternen auf Google
 
-Weniger Schlüsselchaos, weniger Kosten, weniger Rückfragen.
+Ein verlorener Schlüssel darf nicht das ganze Haus kosten.
 
-In einem Mehrfamilienhaus öffnen viele Schlüssel dieselben Türen, von der Haustür bis zur Tiefgarage. Ein verlorener Schlüssel betrifft deshalb alle Bewohner, und die Kosten landen schnell bei der Gemeinschaft. Eine gut geplante Schließanlage begrenzt genau dieses Risiko.
+Im Mehrfamilienhaus hängt an jedem Wohnungsschlüssel mehr als die eigene Tür. Er öffnet meist auch Haustür und Keller. Geht er verloren, sind plötzlich alle Bewohner betroffen, und die Rechnung für neue Zylinder landet bei der Gemeinschaft. Mit einem durchdachten Schließplan bleibt so ein Verlust, was er sein sollte: ein kleiner Vorfall.
 
-Wir nehmen das Objekt auf, entwerfen den Schließplan mit dir und rüsten im bewohnten Haus um, ohne dass jemand vor verschlossener Tür steht. Auch danach hast du einen festen Ansprechpartner, etwa für Mieterwechsel oder Nachschlüssel.
+Wir nehmen das Objekt auf und entwerfen den Schließplan gemeinsam mit dir. Umgerüstet wird im bewohnten Haus, und dabei steht niemand vor verschlossener Tür. Für Mieterwechsel und Nachschlüssel bleibt danach ein fester Ansprechpartner bei uns zuständig.
 
 Kundenstimmen und Testimonials
 
@@ -38,11 +38,11 @@ Vincent Oswald​ – Inhaber / Geschäftsführer Studio Lüüd​
 
 Was eine Schließanlage im Mehrfamilienhaus leisten muss
 
-Fünf Aufgaben, die in Wohnanlagen immer wieder auftauchen, und wie wir sie lösen.
+Diese fünf Situationen kennt jede Verwaltung. So bekommst du sie in den Griff.
 
 Ein Schließplan für das ganze Haus
 
-Jeder Wohnungsschlüssel öffnet die eigene Wohnung und die gemeinsamen Türen, der Hausmeister kommt in Technik- und Nebenräume, die Verwaltung behält den Überblick. Alles steht im Schließplan, den du schriftlich bekommst.
+Mieter öffnen ihre Wohnung und die gemeinsamen Türen. Der Hausmeister kommt zusätzlich in Technik- und Nebenräume. Festgehalten ist das im Schließplan, den du schriftlich bekommst und jederzeit vorzeigen kannst.
 
 Jede Ausgabe und Rückgabe lässt sich nachvollziehen, auch nach Jahren und Verwalterwechseln.
 
@@ -50,9 +50,9 @@ Mieterwechsel ohne Zylindertausch
 
 Mit elektronischen Zylindern an Haustür und Gemeinschaftstüren sperrst du alte Transponder und gibst neue aus. Bei mechanischen Anlagen tauschen wir gezielt nur den Wohnungszylinder, die gemeinsamen Türen bleiben unberührt.
 
-Mit dem Sperren des Transponders ist der Auszug erledigt. Einen Handwerkertermin braucht es dafür nicht.
+Der Auszug ist erledigt, sobald der alte Transponder gesperrt ist. Auf einen Handwerker wartest du dabei nicht.
 
-Schlüsselverlust: schnell und gezielt reagieren
+Schlüssel weg? Getauscht wird nur, was betroffen ist
 
 Geht ein Schlüssel verloren, prüfen wir anhand des Schließplans, welche Türen betroffen sind, und tauschen nur dort. Bei elektronischen Komponenten genügt das Sperren des Transponders. Nachschlüssel gibt es bei Anlagen mit Sicherungskarte nur gegen Vorlage der Karte.
 
@@ -62,15 +62,15 @@ Zeitfenster für Dienstleister
 
 Reinigung und Gartenpflege bekommen einen Transponder oder eine App-Berechtigung, die nur zu festgelegten Zeiten öffnet. Schlüssel musst du dafür nicht mehr verteilen.
 
-Kein Schlüssel muss mehr unter der Fußmatte liegen.
+Endet der Vertrag mit der Firma, endet am selben Tag auch ihr Zugang.
 
 Gemeinschaftsflächen im Blick
 
-Wo es einen berechtigten Anlass gibt, etwa wiederholte Fahrraddiebstähle, planen wir Videoüberwachung an Gemeinschaftsflächen: mit Hinweisschildern, eng begrenzten Bildausschnitten und nach Abstimmung mit der Eigentümergemeinschaft.
+Wo es einen berechtigten Anlass gibt, etwa wiederholte Fahrraddiebstähle, planen wir Videoüberwachung an Gemeinschaftsflächen. Hinweisschilder und eng begrenzte Bildausschnitte gehören dazu, und vorher stimmen wir alles mit der Eigentümergemeinschaft ab.
 
 Mechanisch arbeiten wir mit EVVA, elektronisch unter anderem mit EVVA AirKey und SimonsVoss. Die Kameras stammen von TP-Link VIGI.
 
-Türen und Kameras plant die Verwaltung so mit einem einzigen Ansprechpartner.
+Für Türen und Kameras hast du damit einen einzigen Ansprechpartner.
 
 [Button] Unverbindliches Erstgespräch vereinbaren → /anfrage-auswahl/
 
@@ -80,7 +80,7 @@ Ein Mieter zieht aus, und sein Transponder für die Haustür ist noch am selben 
 
 Der Hausmeister kommt in die Technikräume, ohne einen Generalschlüssel mit sich herumzutragen.
 
-Ein verlorener Schlüssel betrifft nur noch eine Wohnung und nicht mehr das ganze Haus.
+Ein verlorener Schlüssel betrifft nur noch eine Wohnung. Das übrige Haus bleibt sicher.
 
 Nach einem Diebstahl im Fahrradkeller weißt du sofort, wann die Tür geöffnet wurde.
 
@@ -96,7 +96,7 @@ Ein Mieter zieht aus, und sein Transponder für die Haustür ist noch am selben 
 
 Der Hausmeister kommt in die Technikräume, ohne einen Generalschlüssel mit sich herumzutragen.
 
-Ein verlorener Schlüssel betrifft nur noch eine Wohnung und nicht mehr das ganze Haus.
+Ein verlorener Schlüssel betrifft nur noch eine Wohnung. Das übrige Haus bleibt sicher.
 
 Nach einem Diebstahl im Fahrradkeller weißt du sofort, wann die Tür geöffnet wurde.
 
@@ -110,7 +110,7 @@ Heizungsraum und Dachzugang bleiben den Fachfirmen vorbehalten, die dort arbeite
 
 Welche Anlage passt zu deinem Objekt?
 
-Mechanisch: für kleine Häuser mit wenigen Parteien und seltenen Wechseln. Robust, ohne Strom, mit Sicherungskarte gegen Kopien.
+Mechanisch: ideal für kleinere Häuser mit wenigen Parteien, in denen selten jemand umzieht. Die Anlage läuft ohne Strom, und die Sicherungskarte schützt vor unerlaubten Kopien.
 
 Elektronisch: für große Wohnanlagen mit häufigen Mieterwechseln und vielen Dienstleistern. Verlorene Transponder sind mit einem Klick gesperrt.
 
@@ -132,13 +132,13 @@ Bestandsaufnahme und Planung: Wir nehmen alle Türen des Objekts auf und entwerf
 
 Unterlagen für die Eigentümerversammlung: verständliches Angebot und Varianten, die du vorlegen kannst.
 
-Umrüstung im bewohnten Haus: Gemeinschaftstüren zuerst, Wohnungen nach Absprache, Schlüsselübergabe gegen Unterschrift.
+Umrüstung im bewohnten Haus: Wir beginnen mit den Gemeinschaftstüren und tauschen die Wohnungszylinder nach Absprache. Jede Übergabe wird quittiert.
 
 Nachschlüssel und Transponder: Nachbestellung gegen Sicherungskarte, neue Transponder bei Mieterwechsel.
 
 Austausch bei Verlust: gezielt nur die betroffenen Zylinder, Schließplan wird aktualisiert.
 
-Wartung: Wir wechseln Batterien, erweitern die Anlage und helfen Verwaltung und Hausmeister schnell weiter.
+Wartung und Erweiterung: Wir wechseln Batterien und nehmen neue Türen in die Anlage auf. Ruft der Hausmeister an, bekommt er schnell Hilfe.
 
 Das heißt für dich:
 
@@ -228,11 +228,11 @@ Wir gehen mit dir oder dem Hausmeister durch das Objekt und nehmen jede Tür auf
 
 Umsetzung
 
-Wir rüsten im bewohnten Haus um, Gemeinschaftstüren zuerst, Wohnungen nach Absprache. Niemand steht vor verschlossener Tür.
+Wir rüsten im bewohnten Haus um und stimmen jeden Wohnungstermin mit den Bewohnern ab. Jede Partei bekommt ihren neuen Schlüssel oder Transponder direkt beim Termin in die Hand.
 
 Erstgespräch
 
-In einem kurzen Telefonat erzählst du uns, wie viele Parteien das Haus hat und wo es heute hakt. Du bekommst sofort eine ehrliche erste Einschätzung.
+Am Telefon erzählst du uns, wie viele Parteien das Haus hat und wo es heute hakt. Eine ehrliche erste Einschätzung bekommst du noch im selben Gespräch.
 
 Planung deines Systems
 
@@ -258,15 +258,15 @@ Der Gründer von ProVision Infra
 
 Der Gründer von ProVision Infra
 
-Jannes Heino Baumann hat Elektriker gelernt, sich zum IT-Systemkaufmann ausbilden lassen und als Berufsfeuerwehrmann in Hamburg gearbeitet. Erfahrung aus dem militärischen Sicherheitsumfeld bringt er ebenfalls mit. Unter Druck schnell zu entscheiden und verschlossene Türen zu öffnen, war lange sein Alltag. Daraus wuchs der Schritt in die Selbstständigkeit, zuerst mit einem eigenen Schlüsseldienst.
+Jannes Heino Baumann kommt aus der Praxis. Gelernt hat er Elektriker, später kam die Ausbildung zum IT-Systemkaufmann dazu. Danach fuhr er als Berufsfeuerwehrmann in Hamburg Einsätze, und auch im militärischen Sicherheitsumfeld hat er gearbeitet. Bei der Feuerwehr öffnet man verschlossene Türen, wenn jede Minute zählt. Aus diesem Handwerk wurde sein erstes eigenes Unternehmen: ein Schlüsseldienst.
 
-Dort fiel ihm auf, wie ähnlich viele Unternehmen mit dem Thema Zutritt umgehen. Schlüssel wandern von Hand zu Hand, manche werden nachgemacht. Teuer wird das erst, wenn etwas schiefläuft. Mit der Zeit fragten immer mehr Kunden nach digitalen Möglichkeiten. Gesucht war eine klare Ordnung darüber, wer wann wohin darf, ganz ohne Schlüsselübergaben und Nachschlüssel.
+Dort sah er jeden Tag, wie Betriebe mit ihren Schlüsseln umgehen. Sie gehen von Hand zu Hand. Hin und wieder lässt jemand heimlich einen nachmachen. Teuer wird das an dem Tag, an dem einer fehlt. Immer mehr Kunden fragten ihn deshalb nach einer digitalen Lösung. Sie wollten auf einen Blick sehen, wer in welchen Raum darf. Übergabetermine und Nachschlüssel wollten sie sich sparen.
 
 Genau daraus ist ProVision Infra entstanden.
 
 ProVision Infra in der Presse
 
-Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle in die Chefetage gehört und nicht zum Hausmeister. Wie wir Kunden vor teuren Schlüsselverlusten bewahren, beschreiben das Unternehmerjournal und das GEWINNERmagazin .
+Im Interview mit dem Arbeitgebermagazin erklärt Gründer Jannes Heino Baumann, warum Zutrittskontrolle Chefsache ist. Wie unsere Kunden mit einer digitalen Schließanlage teure Schlüsselverluste vermeiden, haben das Unternehmerjournal und das GEWINNERmagazin aufgeschrieben.
 
 [Button] Zum Interview → https://arbeitgebermagazin.de/provision-infra-gruender-im-interview-zutrittskontrolle-ist-keine-hausmeisterarbeit
 
@@ -283,7 +283,7 @@ Häufige Fragen zu Schließanlagen im Mehrfamilienhaus
 Häufige Fragen zu Schließanlagen im Mehrfamilienhaus
 
 **FAQ:** Was kostet eine Schließanlage für ein Mehrfamilienhaus?
-Das hängt von der Zahl der Wohnungen und Gemeinschaftstüren ab, von der Frage mechanisch oder elektronisch und davon, wie viele Schlüssel oder Transponder im Umlauf sein sollen. Nach einer Begehung bekommst du ein schriftliches Angebot, das du der Eigentümergemeinschaft oder dem Eigentümer vorlegen kannst.
+Den größten Einfluss haben die Zahl der Türen und die Entscheidung zwischen mechanisch und elektronisch. Dazu kommt, wie viele Schlüssel oder Transponder im Umlauf sein sollen. Nach der Begehung bekommst du ein schriftliches Angebot, das du direkt der Eigentümergemeinschaft oder dem Eigentümer vorlegen kannst.
 **FAQ:** Ein Mieter hat seinen Schlüssel verloren. Wer zahlt den Austausch?
 Das regeln der Mietvertrag und im Streitfall die Gerichte, und es hängt davon ab, ob der Verlust verschuldet war und ob tatsächlich ein Missbrauchsrisiko besteht. Viele private Haftpflichtversicherungen decken den Verlust fremder Schlüssel ab; ein Blick in die Police lohnt sich. Wir liefern die technische Einschätzung, welche Zylinder betroffen sind und was der Austausch kostet.
 **FAQ:** Muss bei Schlüsselverlust die ganze Schließanlage getauscht werden?
@@ -297,7 +297,7 @@ Das hängt vom Mietvertrag und von der Art der Kosten ab. Bitte lass die Umlage 
 **FAQ:** Kann ich nur die Haustür digitalisieren?
 Ja. Ein elektronischer Zylinder oder ein Wandleser an der Haustür lässt sich mit einer bestehenden mechanischen Anlage kombinieren. Dienstleister bekommen dann ein Zeitfenster, und die Wohnungsschlüssel bleiben, wie sie sind.
 **FAQ:** Ist Videoüberwachung im Mehrfamilienhaus erlaubt?
-Nur in engen Grenzen. Gemeinschaftsflächen wie Fahrradkeller oder Tiefgarage können in Frage kommen, wenn es einen berechtigten Anlass gibt, Hinweisschilder angebracht sind und die Rechte der Bewohner gewahrt bleiben. Das sollte vorher rechtlich geprüft und mit der Eigentümergemeinschaft abgestimmt werden. Mehr zur Videoüberwachung .
+Nur in engen Grenzen. Gemeinschaftsflächen wie Fahrradkeller oder Tiefgarage können in Frage kommen, wenn es einen berechtigten Anlass gibt und die Rechte der Bewohner gewahrt bleiben. Hinweisschilder sind dabei Pflicht. Das sollte vorher rechtlich geprüft und mit der Eigentümergemeinschaft abgestimmt werden. Mehr zur Videoüberwachung .
 **FAQ:** Wie läuft die Umrüstung in einem bewohnten Haus ab?
 Wir kündigen den Termin über die Verwaltung an, tauschen Gemeinschaftstüren zuerst und Wohnungstüren nach Absprache mit den Bewohnern. Neue Schlüssel oder Transponder werden gegen Unterschrift übergeben, damit du lückenlos dokumentiert hast, wer was bekommen hat.
 **FAQ:** Arbeitet ihr auch langfristig mit Hausverwaltungen zusammen?
