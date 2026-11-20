@@ -313,6 +313,14 @@ Leistungsseiten Footer“ gehören zu den Footer-Zeilen, nicht zur Kopfzeile.
 Zwei Maße der Kopfzeile bitte nicht zurückstellen: Menüpunkt-Abstand 20 px und Pillen-Innenabstand 60 px links/rechts.
 Mit den alten Werten (30 px/80 px) passen die sieben Punkte ab 1441 px Fensterbreite nicht mehr in eine Zeile.
 
+Die Footer-Menüzeile zeigt auf allen Seiten (außer Karriere mit eigenem Footer und den Rechtsseiten ohne Menüzeile)
+dasselbe Menü wie die Kopfzeile – ein Menü ändern heißt also Kopf und Footer zugleich. In der Gruppe „Schließanlagen“
+gibt es absichtlich keinen Punkt „Digitale Schließanlagen“: die Gruppe selbst führt zur Startseite.
+
+Wichtig beim Speichern in Elementor: Nach jedem Speichern einer Seite einmal in der Admin-Leiste „Cache leeren und
+vorladen“ (WP Rocket) und „Purge Varnish cache (All Pages)“ anklicken. Sonst zeigen andere Seiten kurzzeitig alte
+Verweise auf CSS-Dateien, die es nicht mehr gibt, und erscheinen ohne Gestaltung (20.11.2026 passiert).
+
 ## Nach der Veröffentlichung: Kurzer Check
 
 - Seite im **privaten Browserfenster** öffnen: Wird alles angezeigt, läuft das Video?

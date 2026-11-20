@@ -1501,3 +1501,39 @@ Kopfzeile; auf Startseite, Kamera-/Schlachthof- und Zutrittsseite zeigen sie jet
 Aufklapp-Pfeilen, auf dem Handy flach, weil das Footer-CSS vom 27.10. Gruppenüberschriften ausblendet und Unterpunkte
 zeigt), die Ortsseiten weiter ihre alten Sprungmarken-Menüs 18/19 und die neuen Seiten das flache Menü 21. Nicht Teil des
 Auftrags (Kopfmenü); Vereinheitlichung der Footer-Menüs (z. B. alle auf das flache Menü 21) als Vorschlag offen.
+
+## Footer-Menüzeile wie die Kopfzeile (20.11.2026, Entscheidung des Kunden)
+
+**Entscheidung** (Rückfragen 21:00 UTC): Footer-Menüzeile überall so wie auf der Startseite (dieselbe Gruppenstruktur wie
+das Kopfmenü, am Bildschirm mit Aufklappen, auf dem Handy flach); in der Gruppe „Schließanlagen“ entfällt überall der
+Unterpunkt „Digitale Schließanlagen“ (die Gruppe selbst führt zur Startseite); Karriere behält ihren eigenen HTML-Footer;
+Impressum/Datenschutz/AGB bleiben ohne Footer-Menüzeile.
+
+**Menüs:** „Digitale Schließanlagen“ aus allen fünf Kopfmenüs gelöscht (6, 17, 15, 20, 22; REST, 21:18 UTC). Endstand
+je Menü: Schließanlagen ▾ (Elektronische, Mechanische, Schließsysteme im Vergleich, Für Hausverwaltungen; Startseite
+zusätzlich vorn „Mit digitalen Schlüsseln Kosten sparen“ und „So arbeiten wir zusammen“), Videoüberwachung ▾ (Kamera- &
+Videosicherheit, Schlachthöfe; Kamera-Menü zusätzlich vorn „Durch Videoüberwachung teure Schäden verhindern“ und „So
+arbeiten wir zusammen“), Standorte, Ratgeber, Über uns, Komm in unser Team, FAQ.
+
+**Seiten (`tools/footer_menue.py`, Kette `wp/footer_runde.sh`):** Footer-Nav-Widgets (59b27e3 Handy senkrecht, a430424
+Bildschirm waagerecht) auf den 15 Ortsseiten (bisher Menü 18/19) und den 8 neuen Seiten (bisher Menü 21) auf das Menü
+der Kopfzeile „menue-leistungsseiten“ gestellt; Start, Kamera, Schlachthöfe und Zutrittssystem zeigten im Footer schon das
+Menü der Kopfzeile. Nebenbefund dabei: Die 13 Ortsseiten-Kopien 4735–4783 (08.11.) hatten das Steuerungs-Widget
+„Handy-Darstellung“ vom 02.11. (b1ab0ce, `tools/handy_darstellung.py`) nie bekommen – also weder das flache
+Footer-Menü noch die Querformat-Regeln (Erklärvideo nebeneinander, mitlaufende Textspalte, Türfoto ohne Mindesthöhe).
+Die Kette ergänzt es dort aus der Lüneburg-ID-Tabelle (gleiche Element-IDs, Prüfung je Seite; das erzeugte Widget ist
+byteidentisch mit dem von Lüneburg). Gespeichert: neue Seiten 21:20–21:36 UTC, Ortsseiten 21:36–22:10 UTC, 23/23 OK.
+
+**Zwischenfall WP Rocket (21:58 UTC, Meldung der Parallelsitzung):** Jedes Elementor-Speichern lässt WP Rocket seine
+Minify-/Background-CSS-Dateien (`/wp-content/cache/min/…/eael-<ID>.css`, `/wp-content/cache/background-css/…/post-<ID>.css`)
+neu erzeugen, das gecachte HTML der *anderen* Seiten verwies aber weiter auf die alten Dateinamen → 404, Seiten ohne
+Stylesheet (u. a. 5364, 4313, 3316, 4605, 5375, 5368). Sofortmaßnahme: Kette gestoppt, beide Caches geleert, Kette so
+umgebaut, dass nach jedem Speichern WP Rocket (type=all) und Varnish geleert werden; Rest der Kette damit gefahren.
+Abschlussprüfung 22:12 UTC (`seo/cache_css_404.py`): alle 31 Sitemap-Seiten mit Desktop- und Handy-UA, 186 verlinkte
+Cache-/Seiten-CSS-Dateien, alle HTTP 200, keine Fehler. **Regel für alle weiteren Speicherläufe:** nach jedem
+Elementor-Speichern beide Caches leeren (die Kettenskripte tun das jetzt), danach die 404-Prüfung.
+
+**Prüfung Footer (22:15 UTC):** Lüneburg, Celle (Kopie mit neuem Steuerungs-Widget), Standorte und Startseite am
+Bildschirm 1920 px: Footer-Zeile mit den sieben Punkten und Aufklapp-Pfeilen; Handy 390 px: flache Liste (Gruppen-
+überschriften ausgeblendet, Unterpunkte als Zeilen) wie auf der Startseite; Kopfmenü auf Celle ohne JavaScript-Fehler,
+Gruppen klappbar.
