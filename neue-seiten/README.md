@@ -102,3 +102,12 @@ Nur auf 5364 (mechanisch), 5375 (Schließsysteme) und 5379 (Hausverwaltung); Sta
   Klon des Kundenstimmen-Abschnitts 7cfc047c / Karussell 2b91cf92 (Anker #technik), Bewertungszeile entfernt, Karten = image-box
   mit Produktbild oben, Zitat-Symbol (::after Quote.svg) im Klon entfernt. Platz: direkt nach „Stell dir mal vor …“.
 - Gespeichert 11:59 bis 12:04 UTC, nach jedem Save WP Rocket und Varnish geleert, `css404.sh` ohne Befund.
+
+### Neu freigestellt (22.11.2026, 13:02 UTC)
+
+Kundenwunsch: alle Bilder perfekt freistellen. Ablauf je Bild (`werkzeuge/freistellen_*.py`):
+EDSR-Hochskalierung kleiner Vorlagen (x2/x4), Maske mit BiRefNet (rembg), Closed-Form-Matting nur im Kantenband (pymatting,
+kachelweise), Inseln/Löcher entfernen, Kontur subpixelgenau glätten (~1,2 px Übergang), Hintergrundfarbe aus Kantenpixeln
+herausrechnen (estimate_foreground_ml), vormultipliziert skalieren. Herstellerfreisteller behalten ihren Alphakanal.
+SimonsVoss AX: Spiegelung entlang der Knaufkante entfernt; Wandleser ohne EVVA-Logo. Mediathek 5772 bis 5781 (`…-freigestellt.webp`),
+Upload bei ausgeschalteter Imagify-Automatik. Die ersten Fassungen 5744 bis 5753 sind nicht mehr eingebunden.
