@@ -1,6 +1,6 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gemeinsam import NAP, ORG, BASE, VERBOTEN, ORTE_NORD, ORDER, GRUENDER, PRESSE, video_kasten, cta, analyse, stell_dir_vor, vorteile
+from gemeinsam import NAP, ORG, BASE, VERBOTEN, ORTE_NORD, ORDER, GRUENDER, PRESSE, video_kasten, cta, analyse, stell_dir_vor, vorteile, technik
 
 URL = BASE + '/mechanische-schliessanlagen/'
 def p(t): return '<p>' + t + '</p>'
@@ -155,3 +155,5 @@ SPEC['clone'] = [
    '8754a23': {'editor': p('Wartung und Erweiterung: Wir nehmen neue Türen auf und ersetzen verschlissene Zylinder. Stark genutzte Eingänge rüsten wir auf Wunsch elektronisch nach.')},
  }),
 ]
+
+SPEC['technik'] = technik()

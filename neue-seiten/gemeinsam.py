@@ -98,3 +98,43 @@ def analyse(intro, fragen, schluss, nach='d70fb3d'):
     a, b, c = fragen
     return ('25be186', nach, {'5eb986c': {'editor': '<p>' + intro + '</p>'}, '38a8d1e': {'title': a}, '12b578c': {'title': b},
                               '8b4bb3b': {'title': c}, '280fbda': {'editor': '<p>' + schluss + '</p>'}})
+
+# Slider „Technik, die wir verbauen“: Klon des Kundenstimmen-Karussells (7cfc047c / 2b91cf92) mit Produktkarten.
+# Medien-IDs und URLs stehen in technik-medien.json (nach dem Upload erzeugt).
+TECHNIK = [
+ ('evva-4ks-mechanischer-zylinder', 'EVVA 4KS',
+  'Bewährter mechanischer Zylinder für Schließanlagen mit Schließplan. Nachschlüssel gibt es nur gegen Sicherungskarte.',
+  'EVVA 4KS mechanischer Schließzylinder im Schnitt mit Schlüssel'),
+ ('evva-akura-44-mechanischer-zylinder', 'EVVA AKURA 44',
+  'Die neuere mechanische Generation von EVVA, ebenfalls mit geschütztem Schlüsselprofil.',
+  'EVVA AKURA 44 mechanischer Schließzylinder im Schnitt mit Schlüssel'),
+ ('evva-elektronischer-knaufzylinder', 'Elektronischer Zylinder von EVVA',
+  'Passt in die vorhandene Tür und öffnet mit Transponder oder Smartphone.',
+  'Elektronischer Knaufzylinder von EVVA in Messing'),
+ ('evva-xesar-komponenten', 'EVVA Xesar',
+  'Beschläge und Zylinder aus einem System, verwaltet in einer gemeinsamen Software.',
+  'EVVA Xesar Beschläge, Wandleser und elektronischer Zylinder'),
+ ('evva-wandleser-steuereinheit', 'EVVA Wandleser mit Steuereinheit',
+  'Steuert Tore und elektrische Türöffner. Die Steuereinheit sitzt geschützt auf der Innenseite.',
+  'EVVA Wandleser und offene Steuereinheit'),
+ ('simonsvoss-digitalzylinder-ax', 'SimonsVoss Digitalzylinder AX',
+  'Wird kabellos montiert und öffnet per Transponder oder Smartphone.',
+  'SimonsVoss Digitalzylinder AX'),
+ ('simonsvoss-smarthandle-ax-tuer', 'SimonsVoss SmartHandle AX',
+  'Der elektronische Beschlag ersetzt den alten Türdrücker, ganz ohne Kabel.',
+  'SimonsVoss SmartHandle AX an einer Holztür'),
+ ('simonsvoss-smarthandle-ax-langschild', 'SimonsVoss SmartHandle mit Langschild',
+  'Dieselbe Idee in der Ausführung mit langem Schild, passend für viele Bürotüren.',
+  'SimonsVoss SmartHandle mit Langschild'),
+ ('keyota-knaufzylinder', 'Keyota Smart-Zylinder',
+  'Öffnet per App. Die Bridge funkt über Mobilfunk und braucht kein WLAN vor Ort.',
+  'Keyota elektronischer Knaufzylinder'),
+ ('evva-certified-partner', 'Zertifizierter EVVA Partner',
+  'Für elektronische Schließsysteme von EVVA sind wir offiziell zertifiziert.',
+  'EVVA Certified Partner für elektronische Schließsysteme'),
+]
+def technik(nach='1a6dd74'):
+    import json, os
+    med = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'technik-medien.json'), encoding='utf-8'))
+    return {'nach': nach, 'titel': 'Technik, <span style="font-weight: 700; ">die wir verbauen</span>',
+            'karten': [(med[n]['id'], med[n]['url'], name, text, alt) for n, name, text, alt in TECHNIK]}

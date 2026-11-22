@@ -1,6 +1,6 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gemeinsam import NAP, ORG, BASE, VERBOTEN, ORTE_NORD, ORDER, GRUENDER, PRESSE, video_kasten, cta, analyse, stell_dir_vor, vorteile
+from gemeinsam import NAP, ORG, BASE, VERBOTEN, ORTE_NORD, ORDER, GRUENDER, PRESSE, video_kasten, cta, analyse, stell_dir_vor, vorteile, technik
 from gemeinsam_ablauf import ABLAUF
 
 URL = BASE + '/schliesssysteme/'
@@ -146,3 +146,5 @@ SPEC['clone'] = [
    '8754a23': {'editor': p('Baustellen und befristete Projekte: digitale Schließsysteme zur Miete von Keyrent, ganz ohne Umbau.')},
  }),
 ]
+
+SPEC['technik'] = technik()

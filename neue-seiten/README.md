@@ -92,3 +92,13 @@ seine drei Zielgruppen stehen jetzt in den Vorteile-Kacheln. Beim Speichern Kopf
 Export übernommen (`UEBERNEHMEN=192a273,9fafb57 werkzeuge/kopf_uebernehmen.py`), danach WP Rocket und Varnish komplett geleert.
 Befund: Jeder Elementor-Save lässt gecachte Seiten auf gelöschte Cache-CSS zeigen (404, Seite ohne Gestaltung). Nach Saves daher
 immer den gesamten Cache leeren und mit `werkzeuge/css404.sh <pfade>` prüfen.
+
+## Slider „Technik, die wir verbauen“ (22.11.2026)
+
+Nur auf 5364 (mechanisch), 5375 (Schließsysteme) und 5379 (Hausverwaltung); Startseite und /kamerasysteme/ laut Kunde unverändert.
+- 10 Kundenfotos (ohne das Scheunenfoto), aufbereitet mit `werkzeuge/technik_bilder.py` auf 1200×900 WebP (Freisteller transparent,
+  weiße Hintergründe freigestellt, Fotos 4:3 zugeschnitten), Ablage `technik-bilder/`, Mediathek-IDs 5744 bis 5753 in `technik-medien.json`.
+- Texte und Alternativtexte in `gemeinsam.TECHNIK`; Baustein `technik()` in den Specs, `bau.py` Schlüssel `technik`:
+  Klon des Kundenstimmen-Abschnitts 7cfc047c / Karussell 2b91cf92 (Anker #technik), Bewertungszeile entfernt, Karten = image-box
+  mit Produktbild oben, Zitat-Symbol (::after Quote.svg) im Klon entfernt. Platz: direkt nach „Stell dir mal vor …“.
+- Gespeichert 11:59 bis 12:04 UTC, nach jedem Save WP Rocket und Varnish geleert, `css404.sh` ohne Befund.

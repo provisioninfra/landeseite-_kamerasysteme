@@ -6,6 +6,7 @@ Eine Seiten-Spezifikation (Python-Modul mit SPEC-Dict) legt fest:
   clone    [(quelle_id, ziel_parent_id, nach_id, {alt_id: {setting: wert}}), ...]
   ablauf   {schritt_titel: html}               Ablauf (Computer-Widgets und Handy-Timeline)
   faq      [(frage, antwort_html), ...]        Akkordeon ed852c3 (erzeugt FAQPage-Schema)
+  technik  {'nach': id, 'titel': html, 'karten': [(media_id, url, name, text, alt)]}  Produkt-Slider
   schema   dict                                JSON-LD im Widget f058554
   menu     Menü-Slug für Kopf- und Fußnavigation
   title    WordPress-Seitentitel
@@ -72,6 +73,35 @@ def build(template_path, spec):
                     x, p = find([c], m[r]); p['elements'].remove(x)
                 continue
             x, _ = find([c], m[old]); x['settings'].update(vals)
+    # Slider „Technik, die wir verbauen“: Kundenstimmen-Abschnitt 7cfc047c klonen, Bewertungszeile entfernen, Karten neu
+    if spec.get('technik'):
+        t = spec['technik']
+        e, _ = find(els, '7cfc047c'); c = copy.deepcopy(e); m = {}; reid(c, ids, m)
+        els.insert([k['id'] for k in els].index(t['nach']) + 1, c)
+        c['settings']['_title'] = 'Technik, die wir verbauen'; c['settings']['_element_id'] = 'technik'
+        find([c], m['556df520'])[0]['settings'].update({'title': t['titel'], '_title': 'Technik'})
+        x, p = find([c], m['63020976']); p['elements'].remove(x)
+        car, _ = find([c], m['2b91cf92'])
+        vorlage = copy.deepcopy(car['elements'][0]); item0 = car['settings']['carousel_items'][0]
+        slides, items = [], []
+        for i, (mid, url, name, text, alt) in enumerate(t['karten']):
+            s = copy.deepcopy(vorlage); mm = {}; reid(s, ids, mm)
+            s['settings']['_title'] = name[:40]
+            ib, ibp = find([s], mm[m['177c18bd']]); ibp['elements'].remove(ib)
+            box, _ = find([s], mm[m['6308d31b']])
+            box['settings'].update({'image': {'id': mid, 'url': url, 'alt': alt, 'source': 'library'}, 'thumbnail_size': 'full',
+                'position': 'top', 'position_mobile': 'top', 'text_align': 'start', 'text_align_mobile': 'start',
+                'image_size': {'unit': '%', 'size': 100, 'sizes': []}, 'image_space': {'unit': 'px', 'size': 18, 'sizes': []},
+                'image_border_radius': {'unit': 'px', 'top': '16', 'right': '16', 'bottom': '16', 'left': '16', 'isLinked': True},
+                'title_text': name, 'description_text': text, 'title_bottom_space': {'unit': 'px', 'size': 8, 'sizes': []}})
+            slides.append(s)
+            it = copy.deepcopy(item0); it['slide_title'] = name[:40]; it['_id'] = '%07x' % random.randrange(16**7); items.append(it)
+        car['elements'] = slides; car['settings']['carousel_items'] = items
+        # Zitat-Symbol der Kundenstimmen (::after mit Quote.svg) und den Platz dafür entfernen
+        css = car['settings'].get('custom_css', '')
+        css2 = re.sub(r"selector \.elementor-image-box-content \{[^}]*\}\s*selector \.elementor-image-box-content::after \{[^}]*\}", '', css)
+        assert css2 != css and 'Quote.svg' not in css2
+        car['settings']['custom_css'] = css2
     # Artikel-Karten: Karte 94cb6e5 (Überschrift 8cc96a4, Text 71be80d, Kurzfassung 59a04cb) als Vorlage, übrige Karten entfernen
     if spec.get('karten'):
         cont, _ = find(els, 'c5f5120')
